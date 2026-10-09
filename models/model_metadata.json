@@ -1,0 +1,51 @@
+{
+  "created_at_utc": "2026-10-09T20:59:10.562749+00:00",
+  "algorithm": "logistic_regression",
+  "regularization_c": 0.01,
+  "training_games": 1930,
+  "first_training_season": 2019,
+  "latest_training_season": 2026,
+  "latest_training_week": 5,
+  "models": {
+    "v4_a": {
+      "file": "v4_a.joblib",
+      "features": [
+        "diff_blended_off_epa",
+        "diff_blended_def_epa",
+        "diff_v4_off_pass_epa",
+        "diff_v4_off_run_epa",
+        "diff_v4_def_pass_epa",
+        "diff_v4_def_run_epa",
+        "diff_v4_off_pass_success",
+        "diff_v4_off_run_success",
+        "diff_v4_def_pass_success_allowed",
+        "diff_v4_def_run_success_allowed"
+      ],
+      "feature_count": 10
+    },
+    "v4_qb_plus": {
+      "file": "v4_qb_plus.joblib",
+      "features": [
+        "diff_blended_off_epa",
+        "diff_blended_def_epa",
+        "diff_v4_off_pass_epa",
+        "diff_v4_off_run_epa",
+        "diff_v4_def_pass_epa",
+        "diff_v4_def_run_epa",
+        "diff_v4_off_pass_success",
+        "diff_v4_off_run_success",
+        "diff_v4_def_pass_success_allowed",
+        "diff_v4_def_run_success_allowed",
+        "diff_qb_career_completion_percentage_above_expectation",
+        "diff_qb_recent_completion_percentage_above_expectation",
+        "qb_experience_diff",
+        "home_qb_projection_missing",
+        "away_qb_projection_missing",
+        "diff_qb_recent_avg_time_to_throw",
+        "diff_qb_recent_avg_intended_air_yards",
+        "diff_qb_recent_aggressiveness"
+      ],
+      "feature_count": 18
+    }
+  }
+}

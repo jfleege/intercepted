@@ -34,6 +34,24 @@ games = (
     ])
 )
 
+# standardize historical franchise abbreviations
+TEAM_RENAMES = {
+    "OAK": "LV",
+    "SD": "LAC",
+    "STL": "LA"
+}
+
+games = games.with_columns(
+    pl.col("home_team")
+      .replace(TEAM_RENAMES)
+      .alias("home_team"),
+
+    pl.col("away_team")
+      .replace(TEAM_RENAMES)
+      .alias("away_team")
+)
+
+
 # select predictive features
 features = [
     "blended_off_epa",

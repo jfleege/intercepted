@@ -40,35 +40,65 @@ df = (
 )
 
 
-# calculate current-season statistics using only previously completed games
+# calculate play-weighted current-season EPA using only previously completed games
 groups = ["team", "season"]
 
 df = df.with_columns(
-    pl.col("prior_off_epa")
-      .cum_count()
+    #  number of games completed before this matchup
+    (
+        pl.col("game_id").cum_count().over(groups) - 1
+    ).alias("games_played_prior"),
+
+    # offensive totals from previous games only
+    pl.col("off_total_epa")
+      .cum_sum()
+      .shift(1)
       .over(groups)
-      .alias("games_played_prior"),
+      .fill_null(0)
+      .alias("prior_off_total_epa"),
 
-    (
-        pl.col("prior_off_epa")
-          .cum_sum()
-          .over(groups)
-        /
-        pl.col("prior_off_epa")
-          .cum_count()
-          .over(groups)
-    ).alias("current_off_epa"),
+    pl.col("off_plays")
+      .cum_sum()
+      .shift(1)
+      .over(groups)
+      .fill_null(0)
+      .alias("prior_off_plays"),
 
-    (
-        pl.col("prior_def_epa")
-          .cum_sum()
-          .over(groups)
-        /
-        pl.col("prior_def_epa")
-          .cum_count()
-          .over(groups)
-    ).alias("current_def_epa")
+    # defensive totals from previous games only
+    pl.col("def_total_epa")
+      .cum_sum()
+      .shift(1)
+      .over(groups)
+      .fill_null(0)
+      .alias("prior_def_total_epa"),
+
+    pl.col("def_plays")
+      .cum_sum()
+      .shift(1)
+      .over(groups)
+      .fill_null(0)
+      .alias("prior_def_plays")
 )
+
+# calculate true cumulative EPA per play
+df = df.with_columns(
+    pl.when(pl.col("prior_off_plays") > 0)
+      .then(
+          pl.col("prior_off_total_epa")
+          / pl.col("prior_off_plays")
+      )
+      .otherwise(None)
+      .alias("current_off_epa"),
+
+    pl.when(pl.col("prior_def_plays") > 0)
+      .then(
+          pl.col("prior_def_total_epa")
+          / pl.col("prior_def_plays")
+      )
+      .otherwise(None)
+      .alias("current_def_epa")
+)
+
 
 # calculate dynamic weights
 df = df.with_columns(
@@ -138,6 +168,67 @@ assert df.select(
 ).item() == df.height
 
 print("PASS: Blended statistics validated")
+
+
+
+# additional V3 validation tests
+# week 1 should contain no current-season games
+first_games = df.filter(
+    pl.col("games_played_prior") == 0
+)
+
+assert first_games.height == 32 * 8
+
+assert first_games.select(
+    (pl.col("prior_off_plays") == 0).all()
+).item()
+
+assert first_games.select(
+    (pl.col("prior_def_plays") == 0).all()
+).item()
+
+# check EPA identities for all rows with prior plays
+valid_off = df.filter(pl.col("prior_off_plays") > 0)
+
+assert valid_off.select(
+    (
+        pl.col("current_off_epa")
+        - (
+            pl.col("prior_off_total_epa")
+            / pl.col("prior_off_plays")
+        )
+    ).abs().max() < 1e-9
+).item()
+
+valid_def = df.filter(pl.col("prior_def_plays") > 0)
+
+assert valid_def.select(
+    (
+        pl.col("current_def_epa")
+        - (
+            pl.col("prior_def_total_epa")
+            / pl.col("prior_def_plays")
+        )
+    ).abs().max() < 1e-9
+).item()
+
+# verify first-game blended values equal preseason
+assert first_games.select(
+    (
+        pl.col("blended_off_epa")
+        - pl.col("preseason_off_epa")
+    ).abs().max() < 1e-9
+).item()
+
+assert first_games.select(
+    (
+        pl.col("blended_def_epa")
+        - pl.col("preseason_def_epa")
+    ).abs().max() < 1e-9
+).item()
+
+print("PASS: V3 play-weighted EPA validation")
+
 
 # inspect Dallas Cowboys in 2026
 cowboys = df.filter(

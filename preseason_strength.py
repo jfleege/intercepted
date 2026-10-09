@@ -19,13 +19,17 @@ weekly = pl.concat([
     for season in range(START_SEASON, END_SEASON)
 ])
 
+
 # aggregate each team's previous-season performance
 season_stats = (
     weekly.group_by(["team", "season"])
     .agg(
         pl.col("off_total_epa").sum().alias("total_off_epa"),
         pl.col("off_plays").sum().alias("total_off_plays"),
-        pl.col("def_epa_allowed").mean().alias("def_epa"),
+
+        pl.col("def_total_epa").sum().alias("total_def_epa"),
+        pl.col("def_plays").sum().alias("total_def_plays"),
+
         pl.col("off_success").mean().alias("off_success"),
         pl.len().alias("games_played")
     )
@@ -33,11 +37,18 @@ season_stats = (
         (
             pl.col("total_off_epa")
             / pl.col("total_off_plays")
-        ).alias("off_epa")
+        ).alias("off_epa"),
+
+        (
+            pl.col("total_def_epa")
+            / pl.col("total_def_plays")
+        ).alias("def_epa")
     )
 )
 
-# calculate league averages for each season
+
+
+# calculate play-weighted league averages
 league_stats = (
     season_stats.group_by("season")
     .agg(
@@ -46,13 +57,17 @@ league_stats = (
             / pl.col("total_off_plays").sum()
         ).alias("league_off_epa"),
 
-        pl.col("def_epa").mean().alias("league_def_epa"),
+        (
+            pl.col("total_def_epa").sum()
+            / pl.col("total_def_plays").sum()
+        ).alias("league_def_epa"),
 
         pl.col("off_success").mean().alias(
             "league_off_success"
         )
     )
 )
+
 
 # join team performance to league averages
 historical = season_stats.join(

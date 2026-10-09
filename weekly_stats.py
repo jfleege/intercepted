@@ -38,6 +38,8 @@ for season in SEASONS:
     defense = (
         plays.group_by(["game_id", "defteam"])
         .agg(
+            pl.len().alias("def_plays"),
+            pl.col("epa").sum().alias("def_total_epa"),
             pl.col("epa").mean().alias("def_epa_allowed"),
             pl.col("success").mean().alias("def_success_allowed")
         )

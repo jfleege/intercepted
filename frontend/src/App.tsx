@@ -1,6 +1,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
+import MatchupModal from "./MatchupModal";
 
 type Game = {
   game_id: string;
@@ -77,9 +78,11 @@ function percent(value: number) {
 function MatchupCard({
   game,
   model,
+  onOpen,
 }: {
   game: Game;
   model: Model;
+  onOpen: () => void;
 }) {
   const home = probability(game, model);
   const away = 1 - home;
@@ -91,7 +94,11 @@ function MatchupCard({
   const gameDate = new Date(`${game.game_date}T12:00:00`);
 
   return (
-    <article className="matchup-card">
+    <button
+        type="button"
+        className="matchup-card"
+        onClick={onOpen}
+    > 
       <div className="card-top">
         <span>
           {gameDate.toLocaleDateString("en-US", {
@@ -163,7 +170,7 @@ function MatchupCard({
           {teams[winner] ?? winner} · {percent(Math.max(home, away))}
         </strong>
       </div>
-    </article>
+    </button>
   );
 }
 
@@ -173,6 +180,7 @@ function App() {
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("date");
   const [error, setError] = useState("");
+  const [selectedGame, setSelectedGame] = useState<Game | null>(null);
 
   useEffect(() => {
     fetch(`${import.meta.env.BASE_URL}predictions.json`)
@@ -333,6 +341,7 @@ function App() {
                   key={game.game_id}
                   game={game}
                   model={model}
+                  onOpen={() => setSelectedGame(game)}
                 />
               ))}
             </div>
@@ -354,10 +363,18 @@ function App() {
             Predictions are statistical estimates, not guarantees.
             Projected quarterbacks and inputs may change before kickoff.
           </p>
-        </footer>
-      </main>
-    </div>
-  );
+          </footer>
+    </main>
+
+    {selectedGame && (
+      <MatchupModal
+        game={selectedGame}
+        model={model}
+        onClose={() => setSelectedGame(null)}
+      />
+    )}
+  </div>
+);
 }
 
 export default App;

@@ -2,6 +2,9 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import MatchupModal from "./MatchupModal";
+import logoPlayer from "./assets/player.png";
+import playerBody from "./assets/playeronly.png";
+import football from "./assets/ball.png";
 
 type Game = {
   game_id: string;
@@ -238,25 +241,40 @@ function App() {
     <div className="app">
       <header className="header">
         <div className="header-inner">
-          <div className="brand">
-            <div className="brand-icon">I.</div>
-            <span>INTERCEPTED</span>
-          </div>
+        <div className="brand-logo">
+  <div className="brand-scene">
+    <img
+      src={playerBody}
+      alt=""
+      className="brand-player-body"
+    />
+    <img
+      src={football}
+      alt=""
+      className="brand-football"
+    />
+  </div>
+
+  <span className="brand-text">
+    ntercepted
+  </span>
+</div>
+  
           <span className="header-detail">
             NFL FORECASTING LAB
           </span>
         </div>
       </header>
-
+  
       <main className="container">
         <section className="hero">
           <p className="eyebrow">
             DATA-DRIVEN FOOTBALL FORECASTS
           </p>
           <h1>
-            KNOW THE ODDS.
+            trying to know the odds
             <br />
-            <span>BEFORE KICKOFF.</span>
+            <span>before kickoff.</span>
           </h1>
           <p className="hero-description">
             NFL win probabilities powered by historical team

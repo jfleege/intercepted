@@ -974,3 +974,217 @@ button {
   font-size: 10px;
   line-height: 1.5;
 }
+
+/* intercepted logo sizing */
+.header .brand {
+  display: flex;
+  align-items: center;
+  width: auto;
+  min-width: 0;
+}
+
+/* animated logo sizing */
+.header .brand-logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0;
+  height: 65px;
+}
+
+.header .brand-scene {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  flex: 0 0 60px;
+}
+
+.header .brand-player {
+  display: block;
+  width: 60px;
+  height: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  flex: 0 0 60px;
+  object-fit: contain;
+}
+
+.header .brand-text {
+  display: inline-block;
+  color: #edf3ef;
+  font-size: 27px;
+  font-style: italic;
+  font-weight: 900;
+  letter-spacing: -0.7px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+  .header .brand-logo {
+    height: 48px;
+  }
+
+  .header .brand-player {
+    width: 44px;
+    height: 44px;
+    max-width: 44px;
+    max-height: 44px;
+    flex-basis: 44px;
+  }
+
+  .header .brand-text {
+    font-size: 21px;
+  }
+}
+
+/* tighten logo spacing */
+.header .brand-logo {
+  gap: 0;
+}
+
+.header .brand-player {
+  margin-right: -12px;
+}
+
+/* force animated logo dimensions */
+.header .brand-logo {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 0 !important;
+  height: 65px !important;
+}
+
+.header .brand-scene {
+  position: relative !important;
+  display: block !important;
+  width: 75px !important;
+  height: 65px !important;
+  min-width: 75px !important;
+  max-width: 75px !important;
+  flex: 0 0 75px !important;
+}
+
+.header .brand-scene .brand-player-body {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 75px !important;
+  height: 65px !important;
+  max-width: 75px !important;
+  max-height: 65px !important;
+  object-fit: contain !important;
+}
+
+.header .brand-scene .brand-football {
+  position: absolute !important;
+  top: -2px !important;
+  right: 3px !important;
+  left: auto !important;
+  width: 18px !important;
+  height: 18px !important;
+  max-width: 18px !important;
+  max-height: 18px !important;
+  object-fit: contain !important;
+}
+
+.header .brand-text {
+  margin-left: -30px !important;
+  font-size: 27px !important;
+}
+
+
+/* intercepted logo animation */
+.header .brand-scene {
+  overflow: visible;
+}
+
+.header .brand-player-body {
+  transform-origin: 50% 65%;
+  animation: interceptedDive 1.3s ease-out both;
+}
+
+.header .brand-football {
+  transform-origin: center;
+  animation: interceptedCatch 1.3s cubic-bezier(.2,.7,.2,1) both;
+}
+
+.header .brand-text {
+  animation: interceptedText 0.7s ease-out 0.5s both;
+}
+
+/* player leans into the catch */
+@keyframes interceptedDive {
+  0% {
+    opacity: 0;
+    transform: translate(-12px, 6px)
+      rotate(-12deg) scale(0.92);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate(3px, -3px)
+      rotate(4deg) scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0)
+      rotate(0deg) scale(1);
+  }
+}
+
+/* football flies into the hand */
+@keyframes interceptedCatch {
+  0% {
+    opacity: 0;
+    transform: translate(40px, -25px)
+      rotate(55deg) scale(0.7);
+  }
+
+  65% {
+    opacity: 1;
+    transform: translate(-3px, 2px)
+      rotate(-10deg) scale(1.08);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0, 0)
+      rotate(0deg) scale(1);
+  }
+}
+
+/* lettering appears after the catch */
+@keyframes interceptedText {
+  from {
+    opacity: 0;
+    transform: translateX(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .header .brand-player-body,
+  .header .brand-football,
+  .header .brand-text {
+    animation: none;
+  }
+}
+
+/* sportsbook logo */
+.ic-sportsbook-logo {
+  display: block;
+  width: auto;
+  height: 32px;
+  max-width: 130px;
+  object-fit: contain;
+}

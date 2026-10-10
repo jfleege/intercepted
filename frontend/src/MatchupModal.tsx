@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import PlayersToWatch from "./PlayersToWatch";
+import draftkingsLogo from "./assets/draftkings.png";
 
 export type Matchup = {
   game_id: string;
@@ -291,9 +292,18 @@ export default function MatchupModal({
               ) : odds ? (
                 <>
                   <div className="ic-odds-heading">
-                    <h3>Sportsbook lines</h3>
-                    <span>{odds.bookmaker}</span>
-                  </div>
+  <h3>Sportsbook lines</h3>
+
+  {odds.bookmaker.toLowerCase() === "draftkings" ? (
+    <img
+      src={draftkingsLogo}
+      alt="DraftKings"
+      className="ic-sportsbook-logo"
+    />
+  ) : (
+    <span>{odds.bookmaker}</span>
+  )}
+</div>
 
                   <div className="ic-odds-grid">
                     <div className="ic-odds-tile">

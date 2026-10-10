@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import PlayersToWatch from "./PlayersToWatch";
 
 export type Matchup = {
   game_id: string;
@@ -231,14 +232,14 @@ export default function MatchupModal({
           </button>
 
           <button
-            type="button"
-            role="tab"
-            aria-selected={tab === "players"}
-            className={tab === "players" ? "ic-active" : ""}
-            onClick={() => setTab("players")}
-          >
-            Players to Watch
-          </button>
+  type="button"
+  role="tab"
+  aria-selected={tab === "players"}
+  className={tab === "players" ? "ic-active" : ""}
+  onClick={() => setTab("players")}
+>
+  Players to Watch
+</button>
         </div>
 
         <div className="ic-content" role="tabpanel">
@@ -333,15 +334,9 @@ export default function MatchupModal({
             </>
           )}
 
-          {tab === "players" && (
-            <div className="ic-empty">
-              <h3>Players to Watch</h3>
-              <p>
-                Player-level analysis is coming next. We'll show
-                real usage and performance statistics here.
-              </p>
-            </div>
-          )}
+{tab === "players" && (
+  <PlayersToWatch gameId={game.game_id} />
+)}
         </div>
 
         <div className="ic-bottom">

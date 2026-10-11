@@ -1188,3 +1188,50 @@ button {
   max-width: 130px;
   object-fit: contain;
 }
+/* matchup team layout */
+.ic-teams {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.ic-team {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.ic-team-away {
+  justify-content: flex-start;
+}
+
+.ic-team-home {
+  justify-content: flex-end;
+}
+
+/* team logos */
+.ic-team-logo {
+  display: block;
+  width: 76px;
+  height: 76px;
+  flex: 0 0 76px;
+  object-fit: contain;
+}
+
+.ic-team-info {
+  min-width: 0;
+}
+
+.ic-team-away .ic-team-info {
+  text-align: left;
+}
+
+.ic-team-home .ic-team-info {
+  text-align: right;
+}
+
+.ic-at {
+  font-size: 2rem;
+  opacity: 0.7;
+}

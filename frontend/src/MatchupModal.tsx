@@ -162,29 +162,47 @@ export default function MatchupModal({
           </button>
         </div>
 
-        <div className="ic-teams">
-          <div className="ic-team">
-            <div className="ic-abbr">{game.away_team}</div>
-            <div className="ic-team-name">
-              {teamNames[game.away_team] ?? game.away_team}
-            </div>
-            <div className="ic-qb">
-              {game.away_projected_qb_name ?? "QB unavailable"}
-            </div>
-          </div>
+        
+<div className="ic-teams">
+  <div className="ic-team ic-team-away">
+    <div className="ic-team-info">
+      <div className="ic-abbr">{game.away_team}</div>
+      <div className="ic-team-name">
+        {teamNames[game.away_team] ?? game.away_team}
+      </div>
+      <div className="ic-qb">
+        {game.away_projected_qb_name ?? "QB unavailable"}
+      </div>
+    </div>
 
-          <span className="ic-at">@</span>
+    <img
+      src={`${import.meta.env.BASE_URL}logos/${game.away_team}.png`}
+      alt={`${teamNames[game.away_team] ?? game.away_team} logo`}
+      className="ic-team-logo"
+    />
+  </div>
 
-          <div className="ic-team ic-team-right">
-            <div className="ic-abbr">{game.home_team}</div>
-            <div className="ic-team-name">
-              {teamNames[game.home_team] ?? game.home_team}
-            </div>
-            <div className="ic-qb">
-              {game.home_projected_qb_name ?? "QB unavailable"}
-            </div>
-          </div>
-        </div>
+  <span className="ic-at">@</span>
+
+  <div className="ic-team ic-team-home">
+    <img
+      src={`${import.meta.env.BASE_URL}logos/${game.home_team}.png`}
+      alt={`${teamNames[game.home_team] ?? game.home_team} logo`}
+      className="ic-team-logo"
+    />
+
+    <div className="ic-team-info">
+      <div className="ic-abbr">{game.home_team}</div>
+      <div className="ic-team-name">
+        {teamNames[game.home_team] ?? game.home_team}
+      </div>
+      <div className="ic-qb">
+        {game.home_projected_qb_name ?? "QB unavailable"}
+      </div>
+    </div>
+  </div>
+</div>
+
 
         <div className="ic-probs">
           <div className={away > home ? "ic-highlight" : ""}>

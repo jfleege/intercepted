@@ -95,10 +95,6 @@ export default function ScoreTicker({ games, season, week, model, onSelect }: Pr
   if (!games.length) return null;
   return (
     <section className="score-ticker" aria-label={`Week ${week} NFL scoreboard`}>
-      <div className="score-ticker-label">
-        <strong>NFL SCORES</strong>
-        <span title={updated ? `Last checked ${updated.toLocaleString()}` : undefined}>{failed ? "Feed unavailable" : updated ? "ESPN · 60s refresh" : "Connecting…"}</span>
-      </div>
       <div className="score-ticker-window">
         <div className={`score-ticker-track${paused ? " is-paused" : ""}`} style={{ "--ticker-duration": `${Math.max(35, games.length * 6)}s` } as CSSProperties}>
           {[0, 1].map(copy => (

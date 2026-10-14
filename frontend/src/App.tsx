@@ -5,6 +5,7 @@ import MatchupModal from "./MatchupModal";
 import playerBody from "./assets/playeronly.png";
 import football from "./assets/ball.png";
 import heroPlayer from "./assets/cw.webp";
+import DashboardPlayers from "./DashboardPlayers";
 
 type Game = {
   game_id: string;
@@ -302,50 +303,46 @@ const focusedGame =
             className="forecast-section"
             id="matchups"
           >
-            <div className="section-heading">
-              <div>
-                <p className="eyebrow">THE FORECAST</p>
-                <h2>Weekly matchups</h2>
-              </div>
-              <div className="model-switch">
-                <button
-                  type="button"
-                  className={
-                    model === "v4_qb_plus" ? "active" : ""
-                  }
-                  onClick={() => setModel("v4_qb_plus")}
-                >
-                  QB+ Model
-                </button>
-                <button
-                  type="button"
-                  className={
-                    model === "v4_a" ? "active" : ""
-                  }
-                  onClick={() => setModel("v4_a")}
-                >
-                  Base Model
-                </button>
-              </div>
-            </div>
-            {/* sorting */}
-            <div className="toolbar">
-              <select
-                value={sort}
-                onChange={(event) =>
-                  setSort(event.target.value)
-                }
-                aria-label="Sort matchups"
-              >
-                <option value="date">Game date</option>
-                <option value="confidence">
-                  Highest confidence
-                </option>
-                <option value="closest">
-                  Closest matchups
-                </option>
-              </select>
-            </div>
+            
+<div className="section-heading">
+  <div>
+    <p className="eyebrow">THE FORECAST</p>
+    <h2>Weekly matchups</h2>
+  </div>
+
+  <div className="forecast-controls">
+    <select
+      className="forecast-sort"
+      value={sort}
+      onChange={(event) => setSort(event.target.value)}
+      aria-label="Sort matchups"
+    >
+      <option value="date">Game date</option>
+      <option value="confidence">Highest confidence</option>
+      <option value="closest">Closest matchups</option>
+    </select>
+
+    <div className="model-switch">
+      <button
+        type="button"
+        className={model === "v4_qb_plus" ? "active" : ""}
+        onClick={() => setModel("v4_qb_plus")}
+      >
+        QB+ Model
+      </button>
+
+      <button
+        type="button"
+        className={model === "v4_a" ? "active" : ""}
+        onClick={() => setModel("v4_a")}
+      >
+        Base Model
+      </button>
+    </div>
+  </div>
+</div>
+
+          
             {/* loading and errors */}
             {error && (
               <div className="message error">
@@ -533,27 +530,7 @@ const focusedGame =
 </section>
 {/* dashboard bottom panels */}
 <section className="dash-bottom-grid">
-  <div className="dash-bottom-panel">
-    <div className="dash-bottom-heading">
-      <div>
-        <h3>Players to Watch</h3>
-        <p>Key players for upcoming matchups</p>
-      </div>
-      <span className="dash-placeholder-tag">SOON</span>
-    </div>
-    <div className="dash-player-placeholder-grid">
-      {["Quarterback", "Running Back", "Receiver"].map(
-        (position) => (
-          <div className="dash-player-placeholder" key={position}>
-            <div className="dash-skeleton-avatar" />
-            <div className="dash-skeleton-line" />
-            <div className="dash-skeleton-line short" />
-            <span>{position}</span>
-          </div>
-        )
-      )}
-    </div>
-  </div>
+<DashboardPlayers />
   <div className="dash-bottom-panel">
     <div className="dash-bottom-heading">
       <div>

@@ -16,7 +16,7 @@ OUTPUT = (
     ROOT / "frontend" / "public" / "players_watch.json"
 )
 
-AS_OF = date(2026, 10, 9)
+AS_OF = date(2026, 10, 14)
 
 TEAM_RENAMES = {
     "OAK": "LV",

@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
-import "./DashboardLayout.cleaned.css";
+import "./DashboardLayout.css";
 import MatchupModal from "./MatchupModal";
 import playerBody from "./assets/playeronly.png";
 import football from "./assets/ball.png";
@@ -74,6 +74,148 @@ function probability(game: Game, model: Model) {
 function percent(value: number) {
   return `${(value * 100).toFixed(1)}%`;
 }
+
+
+const teamColors: Record<string, string> = {
+  ARI: "#97233F",
+  ATL: "#A71930",
+  BAL: "#5A2D81",
+  BUF: "#00338D",
+  CAR: "#0085CA",
+  CHI: "#C83803",
+  CIN: "#FB4F14",
+  CLE: "#FF3C00",
+  DAL: "#003594",
+  DEN: "#FB4F14",
+  DET: "#0076B6",
+  GB: "#203731",
+  HOU: "#03202F",
+  IND: "#002C5F",
+  JAX: "#006778",
+  KC: "#E31837",
+  LA: "#003594",
+  LAC: "#0080C6",
+  LV: "#A5ACAF",
+  MIA: "#008E97",
+  MIN: "#4F2683",
+  NE: "#002244",
+  NO: "#D3BC8D",
+  NYG: "#0B2265",
+  NYJ: "#125740",
+  PHI: "#004C54",
+  PIT: "#FFB612",
+  SEA: "#002244",
+  SF: "#AA0000",
+  TB: "#D50A0A",
+  TEN: "#4B92DB",
+  WAS: "#5A1414",
+};
+
+
+type ProbabilityWheelProps = {
+  awayTeam: string;
+  homeTeam: string;
+  homeProb: number;
+};
+
+function ProbabilityWheel({
+  awayTeam,
+  homeTeam,
+  homeProb,
+}: ProbabilityWheelProps) {
+  const awayProb = 1 - homeProb;
+  const winnerIsHome = homeProb >= 0.5;
+
+  const winnerTeam = winnerIsHome ? homeTeam : awayTeam;
+  const winnerProb = winnerIsHome ? homeProb : awayProb;
+  const winnerColor = teamColors[winnerTeam] ?? "#187be8";
+
+  const radius = 61;
+  const circumference = 2 * Math.PI * radius;
+  const coloredLength = circumference * winnerProb;
+
+  return (
+    <div className="ga-wheel-block">
+      <div className="ga-wheel-side">
+        <strong>{awayTeam}</strong>
+        <span className={winnerIsHome ? "" : "ga-favored"}>
+          {percent(awayProb)}
+        </span>
+      </div>
+
+      <div className="ga-wheel-wrap">
+        <svg
+          className="ga-prob-wheel"
+          viewBox="0 0 160 160"
+          role="img"
+          aria-label={`${awayTeam} ${percent(awayProb)}, ${homeTeam} ${percent(homeProb)}`}
+        >
+          <defs>
+            <pattern
+              id="ga-loser-stripes"
+              width="6"
+              height="6"
+              patternUnits="userSpaceOnUse"
+              patternTransform="rotate(35)"
+            >
+              <rect width="6" height="6" fill="#f5f7f5" />
+              <rect width="2" height="6" fill="#293b48" />
+            </pattern>
+          </defs>
+
+          {/* striped background ring */}
+          <circle
+            cx="80"
+            cy="80"
+            r={radius}
+            fill="none"
+            stroke="url(#ga-loser-stripes)"
+            strokeWidth="16"
+          />
+
+          {/* projected winner */}
+          <circle
+            cx="80"
+            cy="80"
+            r={radius}
+            fill="none"
+            stroke={winnerColor}
+            strokeWidth="16"
+            strokeDasharray={`${coloredLength} ${circumference}`}
+            transform={
+              winnerIsHome
+                ? "rotate(-90 80 80)"
+                : "translate(160 0) scale(-1 1) rotate(-90 80 80)"
+            }
+          />
+        </svg>
+
+        <div className="ga-wheel-center">
+          <img
+            src={`${import.meta.env.BASE_URL}logos/${awayTeam}.png`}
+            alt={awayTeam}
+          />
+
+          <div className="ga-wheel-divider" />
+
+          <img
+            src={`${import.meta.env.BASE_URL}logos/${homeTeam}.png`}
+            alt={homeTeam}
+          />
+        </div>
+      </div>
+
+      <div className="ga-wheel-side">
+        <strong>{homeTeam}</strong>
+        <span className={winnerIsHome ? "ga-favored" : ""}>
+          {percent(homeProb)}
+        </span>
+      </div>
+    </div>
+  );
+}
+
+
 function App() {
   const [data, setData] = useState<PredictionData | null>(null);
   const [model, setModel] = useState<Model>("v4_qb_plus");
@@ -443,80 +585,45 @@ const focusedGame =
             <p>Intercepted · Week {focusedGame.week}</p>
           </div>
         </div>
-        <div className="dash-analysis-teams">
-          <div>
-            <img
-              src={`${import.meta.env.BASE_URL}logos/${focusedGame.away_team}.png`}
-              alt=""
-            />
-            <strong>{focusedGame.away_team}</strong>
-          </div>
-          <span>@</span>
-          <div>
-            <img
-              src={`${import.meta.env.BASE_URL}logos/${focusedGame.home_team}.png`}
-              alt=""
-            />
-            <strong>{focusedGame.home_team}</strong>
-          </div>
-        </div>
-        <div className="dash-analysis-result">
-          <span className="dash-panel-label">
-            INTERCEPTED PREDICTION
-          </span>
-          {(() => {
-            const home = probability(focusedGame, model);
-            const winner =
-              home >= 0.5
-                ? focusedGame.home_team
-                : focusedGame.away_team;
-            return (
-              <div className="dash-analysis-winner">
-                <img
-                  src={`${import.meta.env.BASE_URL}logos/${winner}.png`}
-                  alt=""
-                />
-                <div>
-                  <strong>
-                    {teams[winner] ?? winner} Win
-                  </strong>
-                  <span>
-                    {percent(Math.max(home, 1 - home))}
-                  </span>
-                  <small>win probability</small>
-                </div>
-              </div>
-            );
-          })()}
-        </div>
-        <div className="dash-analysis-metrics">
-          <div>
-            <span>AWAY WIN</span>
-            <strong>
-              {percent(1 - probability(focusedGame, model))}
-            </strong>
-          </div>
-          <div>
-            <span>HOME WIN</span>
-            <strong>
-              {percent(probability(focusedGame, model))}
-            </strong>
-          </div>
-        </div>
-        <div className="dash-analysis-qbs">
-          <p>
-            <span>{focusedGame.away_team} QB</span>
-            <strong>
-              {focusedGame.away_projected_qb_name ?? "TBD"}
-            </strong>
-          </p>
-          <p>
-            <span>{focusedGame.home_team} QB</span>
-            <strong>
-              {focusedGame.home_projected_qb_name ?? "TBD"}
-            </strong>
-          </p>
-        </div>
+        
+<div className="dash-analysis-teams">
+  <div className="dash-analysis-team">
+    <img
+      src={`${import.meta.env.BASE_URL}logos/${focusedGame.away_team}.png`}
+      alt=""
+    />
+
+    <div className="dash-analysis-team-info">
+      <strong>{focusedGame.away_team}</strong>
+      <span>
+        {focusedGame.away_projected_qb_name ?? "QB TBD"}
+      </span>
+    </div>
+  </div>
+
+  <span className="dash-analysis-at">@</span>
+
+  <div className="dash-analysis-team">
+    <img
+      src={`${import.meta.env.BASE_URL}logos/${focusedGame.home_team}.png`}
+      alt=""
+    />
+
+    <div className="dash-analysis-team-info">
+      <strong>{focusedGame.home_team}</strong>
+      <span>
+        {focusedGame.home_projected_qb_name ?? "QB TBD"}
+      </span>
+    </div>
+  </div>
+</div>
+        
+        <ProbabilityWheel
+  awayTeam={focusedGame.away_team}
+  homeTeam={focusedGame.home_team}
+  homeProb={probability(focusedGame, model)}
+/>
+
         <button
           type="button"
           className="dash-details-button"

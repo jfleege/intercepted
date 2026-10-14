@@ -1,5 +1,6 @@
 
 import { useEffect, useState } from "react";
+import draftKingsLogo from "./assets/draftkings.png";
 
 type Game = {
   game_id: string;
@@ -181,9 +182,13 @@ export default function DashboardMarkets({
             </p>
           </div>
 
-          <span className="dm-source-tag">
-            {odds?.bookmaker ?? "MARKETS"}
-          </span>
+          <div className="dash-source-tag dash-source-tag-logo">
+  <img
+    src={draftKingsLogo}
+    alt="DraftKings"
+    className="dash-source-logo"
+  />
+</div>
         </div>
 
         {unavailable ? (

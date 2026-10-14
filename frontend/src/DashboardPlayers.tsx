@@ -1,5 +1,5 @@
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type Player = {
   player_id: string;
@@ -118,6 +118,27 @@ export default function DashboardPlayers() {
   const [data, setData] = useState<PlayerData | null>(null);
   const [error, setError] = useState("");
 
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+// scroll player cards horizontally
+const scrollPlayers = (direction: number) => {
+  const container = scrollRef.current;
+  if (!container) return;
+
+  const card = container.querySelector<HTMLElement>(
+    ".dp-player-card"
+  );
+
+  const distance = card
+    ? card.getBoundingClientRect().width + 12
+    : 200;
+
+  container.scrollBy({
+    left: direction * distance,
+    behavior: "smooth",
+  });
+};
+
   // load player data
   useEffect(() => {
     let active = true;
@@ -180,7 +201,7 @@ export default function DashboardPlayers() {
         (a, b) =>
           (b.trend_pct ?? 0) - (a.trend_pct ?? 0)
       )
-      .slice(0, 3);
+      .slice(0, 10);
   }, [data]);
 
   return (
@@ -189,14 +210,33 @@ export default function DashboardPlayers() {
         <div>
           <h3>Players to Watch</h3>
           <p>
-            Top 3 positive yardage trends · Week{" "}
-            {data?.week ?? "—"}
-          </p>
+  Top 10 positive yardage trends · Week {data?.week ?? "—"}
+</p>
         </div>
 
-        <span className="dp-week-label">
-          WEEKLY LEADERS
-        </span>
+        <div className="dp-header-controls">
+  <span className="dp-week-label">
+    TOP 10
+  </span>
+
+  <button
+    type="button"
+    className="dp-scroll-button"
+    onClick={() => scrollPlayers(-1)}
+    aria-label="Scroll players left"
+  >
+    ‹
+  </button>
+
+  <button
+    type="button"
+    className="dp-scroll-button"
+    onClick={() => scrollPlayers(1)}
+    aria-label="Scroll players right"
+  >
+    ›
+  </button>
+</div>
       </div>
 
       {!data && !error && (
@@ -219,14 +259,16 @@ export default function DashboardPlayers() {
 
       {players.length > 0 && (
         <>
-          <div className="dp-grid">
-            {players.map((player) => (
-              <PlayerCard
-                key={player.player_id}
-                player={player}
-              />
-            ))}
-          </div>
+          <div className="dp-scroll-container" ref={scrollRef}>
+  <div className="dp-grid">
+    {players.map((player) => (
+      <PlayerCard
+        key={player.player_id}
+        player={player}
+      />
+    ))}
+  </div>
+</div>
 
           <p className="dp-footnote">
             Statistics through {data?.as_of}. Trends compare

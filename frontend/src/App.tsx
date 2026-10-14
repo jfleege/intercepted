@@ -7,6 +7,7 @@ import football from "./assets/ball.png";
 import heroPlayer from "./assets/cw.webp";
 import DashboardPlayers from "./DashboardPlayers";
 import DashboardMarkets from "./DashboardMarkets";
+import ScoreTicker from "./ScoreTicker";
 
 type Game = {
   game_id: string;
@@ -402,6 +403,18 @@ const focusedGame =
     />
   </div>
 </section>
+{data && (
+  <ScoreTicker
+    games={data.games}
+    season={data.season}
+    week={data.week}
+    model={model}
+    onSelect={(gameId) => {
+      const game = data.games.find((candidate) => candidate.game_id === gameId);
+      if (game) { setFocusedGameId(gameId); setSelectedGame(game); }
+    }}
+  />
+)}
 {/* dashboard metrics */}
 <section className="dash-kpi-grid">
   {[

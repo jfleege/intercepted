@@ -1,11 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
-import "./DashboardLayout.css";
+import "./DashboardLayout.cleaned.css";
 import MatchupModal from "./MatchupModal";
 import playerBody from "./assets/playeronly.png";
 import football from "./assets/ball.png";
 import heroPlayer from "./assets/cw.webp";
 import DashboardPlayers from "./DashboardPlayers";
+import DashboardMarkets from "./DashboardMarkets";
 
 type Game = {
   game_id: string;
@@ -531,40 +532,11 @@ const focusedGame =
 {/* dashboard bottom panels */}
 <section className="dash-bottom-grid">
 <DashboardPlayers />
-  <div className="dash-bottom-panel">
-    <div className="dash-bottom-heading">
-      <div>
-        <h3>Betting & Market Insights</h3>
-        <p>Sportsbook comparisons and trends</p>
-      </div>
-      <span className="dash-placeholder-tag">SOON</span>
-    </div>
-    {["Moneyline", "Spread", "Over / Under"].map((market) => (
-      <div className="dash-insight-placeholder" key={market}>
-        <span>{market}</span>
-        <div className="dash-skeleton-line" />
-        <div className="dash-skeleton-pill" />
-      </div>
-    ))}
-  </div>
-  <div className="dash-bottom-panel">
-    <div className="dash-bottom-heading">
-      <div>
-        <h3>Model Edge</h3>
-        <p>Where our forecasts differ from Vegas</p>
-      </div>
-      <span className="dash-placeholder-tag">SOON</span>
-    </div>
-    {["Top model edge", "Second model edge"].map((label) => (
-      <div className="dash-edge-placeholder" key={label}>
-        <div>
-          <strong>{label}</strong>
-          <div className="dash-skeleton-line short" />
-        </div>
-        <div className="dash-skeleton-edge" />
-      </div>
-    ))}
-  </div>
+
+<DashboardMarkets
+  game={focusedGame}
+  model={model}
+/>
 </section>
           {/* footer */}
           <footer className="footer">

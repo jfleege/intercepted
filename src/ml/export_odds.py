@@ -1,5 +1,4 @@
 
-import csv
 import json
 import os
 from datetime import datetime
@@ -12,10 +11,7 @@ from zoneinfo import ZoneInfo
 
 # configuration
 ROOT = Path(__file__).resolve().parents[2]
-PREDICTIONS = (
-    ROOT / "data" / "predictions"
-    / "predictions_2026_week_6.csv"
-)
+PREDICTIONS = ROOT / "frontend" / "public" / "predictions.json"
 OUTPUT = ROOT / "frontend" / "public" / "odds.json"
 
 API_KEY = os.getenv("ODDS_API_KEY")
@@ -66,11 +62,10 @@ if not API_KEY:
         "Set ODDS_API_KEY before running this script."
     )
 
-with PREDICTIONS.open(newline="", encoding="utf-8") as file:
-    predictions = list(csv.DictReader(file))
+predictions = json.loads(PREDICTIONS.read_text(encoding="utf-8"))["games"]
 
 if not predictions:
-    raise ValueError("Prediction CSV is empty.")
+    raise ValueError("Prediction JSON is empty.")
 
 
 # fetch sportsbook odds
@@ -79,6 +74,7 @@ params = urlencode({
     "regions": "us",
     "markets": "h2h,spreads,totals",
     "oddsFormat": "american",
+    "bookmakers": "draftkings",
 })
 
 try:
@@ -231,3 +227,4 @@ OUTPUT.write_text(
 
 print(f"Matched {len(output)} of {len(predictions)} games.")
 print(f"SUCCESS: Saved {OUTPUT}")
+

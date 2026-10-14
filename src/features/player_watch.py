@@ -1,7 +1,9 @@
 
 import json
+from argparse import ArgumentParser
 from collections import defaultdict
 from datetime import date, datetime, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import nflreadpy as nfl
@@ -16,7 +18,13 @@ OUTPUT = (
     ROOT / "frontend" / "public" / "players_watch.json"
 )
 
-AS_OF = date(2026, 10, 9)
+parser = ArgumentParser()
+parser.add_argument(
+    "--as-of",
+    type=date.fromisoformat,
+    default=datetime.now(ZoneInfo("America/Chicago")).date(),
+)
+AS_OF = parser.parse_args().as_of
 
 TEAM_RENAMES = {
     "OAK": "LV",
@@ -436,3 +444,4 @@ headshots = sum(
 print(f"Prepared player cards for {len(selected)} teams.")
 print(f"Player headshots available: {headshots}")
 print(f"SUCCESS: Saved {OUTPUT}")
+

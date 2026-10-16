@@ -8,6 +8,7 @@ import heroPlayer from "./assets/cw.webp";
 import DashboardPlayers from "./DashboardPlayers";
 import DashboardMarkets from "./DashboardMarkets";
 import ScoreTicker from "./ScoreTicker";
+import { PerformancePage, MarketsPage } from "./ReviewPages";
 
 type Game = {
   game_id: string;
@@ -218,6 +219,12 @@ function ProbabilityWheel({
 
 
 function App() {
+  const [page, setPage] = useState(() => window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : "dashboard");
+  useEffect(() => {
+    const navigate = () => setPage(window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : "dashboard");
+    window.addEventListener("hashchange", navigate);
+    return () => window.removeEventListener("hashchange", navigate);
+  }, []);
   const [data, setData] = useState<PredictionData | null>(null);
   const [model, setModel] = useState<Model>("v4_qb_plus");
   const [search, setSearch] = useState("");
@@ -301,7 +308,7 @@ const focusedGame =
         <nav className="dash-nav" aria-label="Main navigation">
           <a
             href="#dashboard"
-            className="dash-nav-item active"
+            className={`dash-nav-item${page === "dashboard" ? " active" : ""}`}
           >
             <span className="dash-nav-icon">⌂</span>
             <span className="dash-nav-label">Dashboard</span>
@@ -313,22 +320,16 @@ const focusedGame =
             <span className="dash-nav-icon">◉</span>
             <span className="dash-nav-label">Matchups</span>
           </a>
-          <span className="dash-nav-item disabled">
-            <span className="dash-nav-icon">▥</span>
-            <span className="dash-nav-label">
-              Model Insights
-            </span>
-          </span>
+          <a href="#performance" className={`dash-nav-item${page === "performance" ? " active" : ""}`} aria-current={page === "performance" ? "page" : undefined}>
+            <span className="dash-nav-icon">▥</span><span className="dash-nav-label">Performance</span>
+          </a>
           <span className="dash-nav-item disabled">
             <span className="dash-nav-icon">⌁</span>
             <span className="dash-nav-label">Players</span>
           </span>
-          <span className="dash-nav-item disabled">
-            <span className="dash-nav-icon">↗</span>
-            <span className="dash-nav-label">
-              Betting & Markets
-            </span>
-          </span>
+          <a href="#markets" className={`dash-nav-item${page === "markets" ? " active" : ""}`} aria-current={page === "markets" ? "page" : undefined}>
+            <span className="dash-nav-icon">↗</span><span className="dash-nav-label">Markets</span>
+          </a>
         </nav>
         <div className="dash-sidebar-bottom">
           <div className="dash-side-note">
@@ -362,6 +363,7 @@ const focusedGame =
           </div>
         </div>
         <main className="container" id="dashboard">
+          {page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage /> : <>
           {/* hero */}
           <section className="hero-banner">
   <div className="hero-copy">
@@ -658,6 +660,7 @@ const focusedGame =
   model={model}
 />
 </section>
+          </>}
           {/* footer */}
           <footer className="footer">
             <div className="brand">

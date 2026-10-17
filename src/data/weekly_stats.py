@@ -3,7 +3,10 @@ import nflreadpy as nfl
 import polars as pl
 from pathlib import Path
 
-SEASONS = list(range(2018, 2027))
+from argparse import ArgumentParser
+parser = ArgumentParser()
+parser.add_argument("--seasons", nargs="+", type=int, default=list(range(2018, 2027)))
+SEASONS = parser.parse_args().seasons
 
 output = Path("data/processed")
 output.mkdir(parents=True, exist_ok=True)

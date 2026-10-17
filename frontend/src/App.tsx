@@ -383,15 +383,15 @@ const focusedGame =
     <div className="hero-stats">
       <div className="hero-stat-card">
         <span>SEASON</span>
-        <strong>2026</strong>
+        <strong>{data?.season ?? "—"}</strong>
       </div>
       <div className="hero-stat-card">
         <span>WEEK</span>
-        <strong>6</strong>
+        <strong>{data?.week ?? "—"}</strong>
       </div>
       <div className="hero-stat-card">
         <span>MATCHUPS</span>
-        <strong>14</strong>
+        <strong>{data?.count ?? "—"}</strong>
       </div>
     </div>
   </div>

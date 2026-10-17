@@ -10,7 +10,10 @@ ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_DIR = ROOT / "data" / "processed"
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
-SEASONS = list(range(2019, 2027))
+from argparse import ArgumentParser
+parser = ArgumentParser()
+parser.add_argument("--seasons", nargs="+", type=int, default=list(range(2019, 2027)))
+SEASONS = parser.parse_args().seasons
 
 TEAM_RENAMES = {
     "OAK": "LV",

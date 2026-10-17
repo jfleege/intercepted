@@ -7,6 +7,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urlencode
 from urllib.request import urlopen
 from zoneinfo import ZoneInfo
+from src.ml.refresh_markets import archive_odds
 
 
 # configuration
@@ -202,6 +203,9 @@ for game in predictions:
 
     output[game["game_id"]] = {
         "bookmaker": bookmaker["title"],
+        "bookmaker_key": bookmaker["key"],
+        "event_id": event["id"],
+        "moneyline_last_update": moneyline.get("last_update") if moneyline else None,
         "last_update": bookmaker.get("last_update"),
         "commence_time": event["commence_time"],
         "home_moneyline": get_price(home_ml),
@@ -217,6 +221,8 @@ payload = {
     "exported_at": datetime.now().astimezone().isoformat(),
     "games": output,
 }
+
+archive_odds(payload)
 
 OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 

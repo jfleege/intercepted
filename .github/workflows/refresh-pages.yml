@@ -12,6 +12,27 @@ on:
     - cron: "47 7 * * *"
   workflow_dispatch:
     inputs:
+      refresh_forecasts:
+        description: Check and generate the next weekly slate with fresh stats
+        type: boolean
+        default: false
+      paper_game:
+        description: Optional custom paper selection game ID (existing fresh quote)
+        type: string
+        default: ""
+      paper_team:
+        description: Team abbreviation for custom paper selection
+        type: string
+        default: ""
+      paper_model:
+        type: choice
+        description: Custom paper model
+        options: [v4_qb_plus, v4_a]
+        default: v4_qb_plus
+      paper_stake:
+        description: Paper units for custom selection
+        type: string
+        default: "1"
       results_only:
         description: Refresh archived forecasts and results only (no player or odds fetch)
         type: boolean
@@ -32,7 +53,7 @@ jobs:
   build:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 45
     permissions:
       contents: write
     steps:
@@ -43,9 +64,12 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install player data dependencies
-        run: python -m pip install nflreadpy==0.1.5
+        run: python -m pip install -r requirements-automation.txt
       - name: Verify results grading
         run: python -m unittest discover -s tests -v
+      - name: Advance weekly forecasts when the prior slate is complete
+        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_forecasts)
+        run: python -m src.ml.weekly_forecast
       - name: Archive forecasts and refresh final results
         run: python -m src.ml.refresh_performance --import-git-history
       - name: Refresh player cards
@@ -61,6 +85,18 @@ jobs:
           else
             python -m src.ml.export_odds
           fi
+      - name: Archive moneylines and grade paper selections
+        env:
+          PAPER_GAME: ${{ inputs.paper_game }}
+          PAPER_TEAM: ${{ inputs.paper_team }}
+          PAPER_MODEL: ${{ inputs.paper_model || 'v4_qb_plus' }}
+          PAPER_STAKE: ${{ inputs.paper_stake || '1' }}
+        run: |
+          if [ -n "$PAPER_GAME" ]; then
+            python -m src.ml.refresh_markets --record-paper "$PAPER_GAME" "$PAPER_TEAM" --model "$PAPER_MODEL" --stake "$PAPER_STAKE"
+          else
+            python -m src.ml.refresh_markets
+          fi
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -75,9 +111,9 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tracking frontend/public/performance.json
+          git add data/tracking frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/players_watch.json
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh archived forecasts and game results"
+            git commit -m "Refresh weekly forecasts, markets, and game results"
             git push origin HEAD:main
           fi
       - uses: actions/upload-pages-artifact@v3

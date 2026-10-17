@@ -1,11 +1,21 @@
 name: Refresh data and deploy Pages
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - frontend/public/predictions.json
   schedule:
     # 13:17 UTC = 8:17am CDT / 7:17am CST
     - cron: "17 13 * * *"
+    # results after overnight games; no additional odds call
+    - cron: "47 7 * * *"
   workflow_dispatch:
     inputs:
+      results_only:
+        description: Refresh archived forecasts and results only (no player or odds fetch)
+        type: boolean
+        default: false
       refresh_odds:
         description: Refresh odds (normally 3 API credits)
         type: boolean
@@ -23,17 +33,26 @@ jobs:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    permissions:
+      contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - name: Install player data dependencies
-        run: python -m pip install nflreadpy
+        run: python -m pip install nflreadpy==0.1.5
+      - name: Verify results grading
+        run: python -m unittest discover -s tests -v
+      - name: Archive forecasts and refresh final results
+        run: python -m src.ml.refresh_performance --import-git-history
       - name: Refresh player cards
+        if: inputs.results_only != true
         run: python -m src.features.player_watch
       - name: Refresh odds
-        if: github.event_name == 'schedule' || inputs.refresh_odds
+        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
@@ -52,6 +71,15 @@ jobs:
         run: |
           npm ci
           npm run build
+      - name: Persist forecast archive and results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tracking frontend/public/performance.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh archived forecasts and game results"
+            git push origin HEAD:main
+          fi
       - uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/dist

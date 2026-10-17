@@ -4,3 +4,39 @@
 .dashboard-shell .markets-page .review-table-wrap { overflow-x: auto; }
 .dashboard-shell .markets-page table th { white-space: nowrap; }
 .dashboard-shell .markets-page .review-panel-heading select { margin-left: 8px; }
+.dashboard-shell .markets-page .market-matchup-button { display: flex; flex-direction: column; gap: 5px; border: 0; padding: 0; background: transparent; color: #173e63; font: inherit; font-weight: 800; text-align: left; cursor: pointer; }
+.dashboard-shell .markets-page .market-matchup-button span { color: #196cb8; font-size: 11px; font-weight: 500; }
+.dashboard-shell .markets-page button:focus-visible { outline: 3px solid #187be8; outline-offset: 4px; }
+.dashboard-shell .markets-page .browser-ledger-note { display: flex; align-items: center; justify-content: space-between; gap: 16px; background: #e6edf0; padding: 16px; border-radius: 10px; margin-bottom: 20px; }
+.dashboard-shell .markets-page .browser-ledger-note p { font-size: 12px; line-height: 1.6; margin-bottom: 0; }
+.dashboard-shell .markets-page .browser-ledger-note button { flex-shrink: 0; border: 1px solid #173e63; padding: 10px 14px; border-radius: 8px; background: #fff; color: #173e63; cursor: pointer; }
+.dashboard-shell .moneyline-dialog { width: min(820px, calc(100vw - 28px)); max-height: calc(100dvh - 32px); padding: 0; border: 1px solid #405c74; border-radius: 18px; color: #172431; background: #f6f6ee; box-shadow: 0 24px 80px #0006; }
+.dashboard-shell .moneyline-dialog::backdrop { background: #061526b8; }
+.dashboard-shell .moneyline-dialog-content { padding: 26px; }
+.dashboard-shell .moneyline-dialog header { display: flex; gap: 14px; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.dashboard-shell .moneyline-dialog h2 { margin: 5px 0 8px; font-size: 30px; color: #172431; }
+.dashboard-shell .moneyline-dialog header p { margin: 0; font-size: 12px; color: #587187; }
+.dashboard-shell .moneyline-dialog .eyebrow { letter-spacing: 1px; font-size: 10px; }
+.dashboard-shell .moneyline-dialog button { cursor: pointer; }
+.dashboard-shell .moneyline-dialog .research-close { background: transparent; color: #172431; border: 1px solid #b9c9d2; border-radius: 50%; height: 36px; width: 36px; font-size: 25px; }
+.dashboard-shell .research-verdict { padding: 16px; border-radius: 10px; background: #e5ebee; border-left: 3px solid #71879a; }
+.dashboard-shell .research-verdict.research-positive { background: #e0efea; border-color: #23876b; }
+.dashboard-shell .research-verdict p { line-height: 1.6; font-size: 12px; margin: 8px 0 0; }
+.dashboard-shell .research-controls { display: flex; gap: 18px; flex-wrap: wrap; margin: 20px 0; }
+.dashboard-shell .research-controls label { display: flex; flex-direction: column; gap: 7px; font-size: 12px; flex: 1 1 150px; }
+.dashboard-shell .research-controls input { width: 100%; box-sizing: border-box; border: 1px solid #b6c6cf; border-radius: 7px; padding: 10px; font: inherit; color: #172431; background: white; }
+.dashboard-shell .research-candidates { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.dashboard-shell .research-candidates article { background: white; padding: 18px; border: 1px solid #cbd5d9; border-radius: 12px; }
+.dashboard-shell .research-candidate-title h3 { margin: 0 0 6px; color: #172431; }
+.dashboard-shell .research-candidate-title h3 span { float: right; }
+.dashboard-shell .research-candidate-title small { color: #637f94; }
+.dashboard-shell .research-candidates dl div { display: flex; justify-content: space-between; gap: 14px; margin: 12px 0; font-size: 12px; }
+.dashboard-shell .research-candidates dt { color: #607585; }
+.dashboard-shell .research-candidates dd { margin: 0; font-weight: 750; white-space: nowrap; }
+.dashboard-shell .research-candidates button { padding: 11px; width: 100%; border: 0; border-radius: 8px; background: #176fc8; color: white; font: inherit; font-size: 12px; }
+.dashboard-shell .research-candidates button:disabled { background: #dce4e9; color: #617687; cursor: default; }
+.dashboard-shell .research-status { font-size: 11px; min-height: 28px; line-height: 1.5; color: #526d82; }
+.dashboard-shell .research-save-status { font-size: 12px; line-height: 1.6; color: #173e63; }
+.dashboard-shell .research-method { border-top: 1px solid #cbd5d9; padding-top: 16px; font-size: 12px; line-height: 1.7; }
+.dashboard-shell .research-method summary { cursor: pointer; font-weight: 700; }
+@media (max-width:600px) { .dashboard-shell .research-candidates { grid-template-columns: 1fr; } .dashboard-shell .moneyline-dialog-content { padding: 18px; } .dashboard-shell .markets-page .browser-ledger-note { flex-direction: column; align-items: flex-start; } }

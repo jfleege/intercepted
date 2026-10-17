@@ -5,19 +5,7 @@ function Empty({ title, children }: { title: string; children: React.ReactNode }
   return <div className="review-empty"><span aria-hidden="true">◈</span><h3>{title}</h3><p>{children}</p></div>;
 }
 
-export function PerformancePage() {
-  const [mode, setMode] = useState("Saved forecasts");
-  const [model, setModel] = useState("QB+");
-  return <div className="review-page">
-    <header className="review-heading"><div><p className="eyebrow">THE TRACK RECORD</p><h1>Performance</h1><p>Every forecast. Every result. A clearer picture of the model.</p></div><span className="review-draft">LAYOUT PREVIEW</span></header>
-    <div className="review-controls"><div className="review-tabs" aria-label="Evaluation dataset">{["Saved forecasts", "Historical backtest"].map(value => <button type="button" key={value} aria-pressed={mode === value} onClick={() => setMode(value)}>{value}</button>)}</div><label>Model <select value={model} onChange={e => setModel(e.target.value)}><option>QB+</option><option>Base</option><option>Compare both</option></select></label></div>
-    <div className="review-notice">{mode === "Saved forecasts" ? "Future data: forecasts archived before kickoff, graded against final results." : "Future data: historical out-of-sample evaluation, separated from the live forecasting record."} No performance figures are connected in this draft.</div>
-    <div className="review-metrics">{[["Accuracy", "Correct picks / graded games"], ["Prediction record", "Correct · incorrect · ties"], ["Brier score", "Probability error · lower is better"], ["Log loss", "Confidence quality · lower is better"]].map(([title, note]) => <div className="review-metric" key={title}><span>{title}</span><strong>—</strong><small>{note}</small></div>)}</div>
-    <div className="review-columns"><section className="review-panel"><div className="review-panel-heading"><h2>Accuracy over time</h2><span>{model} · {mode}</span></div><Empty title="The record starts here">Weekly accuracy and cumulative accuracy will appear once results are connected. Include the number of graded games with each point.</Empty></section><section className="review-panel"><div className="review-panel-heading"><h2>Probability calibration</h2><span>Predicted vs. observed</span></div><Empty title="Does 70% mean 70%?">Compare forecast probability bins with observed win rates, sample counts, and uncertainty intervals.</Empty></section></div>
-    <section className="review-panel"><div className="review-panel-heading"><div><h2>Forecast archive</h2><p>Original pregame probabilities, preserved with model version and timestamp.</p></div><span className="review-pill">RESULTS NOT CONNECTED</span></div><div className="review-table-wrap"><table><thead><tr>{["Date / week", "Matchup", "Pregame pick", "Probability", "Final score", "Grade"].map(h => <th key={h}>{h}</th>)}</tr></thead><tbody><tr><td colSpan={6}><Empty title="No graded forecasts yet">This table will distinguish pending, correct, incorrect, tied, and cancelled games. Revised forecasts will remain separate snapshots.</Empty></td></tr></tbody></table></div></section>
-    <details className="review-method"><summary>How results will be evaluated</summary><p>Use only forecasts saved before kickoff. Keep backtests separate from live records. Exclude pending and cancelled games from accuracy; report ties separately. Show the evaluation period, model version, training cutoff, and sample size. Compare both models on the same games.</p></details>
-  </div>;
-}
+export { default as PerformancePage } from "./PerformancePage";
 
 export function MarketsPage() {
   const [category, setCategory] = useState("Game lines");

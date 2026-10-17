@@ -1,0 +1,22 @@
+.dashboard-shell .performance-page .performance-block { margin-bottom: 20px; }
+.dashboard-shell .performance-page table td { padding: 13px 12px; font-size: 12px; border-top: 1px solid #dce4e2; vertical-align: top; }
+.dashboard-shell .performance-page table td small { display: block; font-size: 10px; color: #6d8290; margin-top: 5px; line-height: 1.6; overflow-wrap: anywhere; }
+.dashboard-shell .performance-page table th { padding-top: 14px; }
+.dashboard-shell .performance-page table td details { max-width: 230px; }
+.dashboard-shell .performance-page table td summary { cursor: pointer; font-size: 11px; }
+.dashboard-shell .performance-chart { margin: 0; }
+.dashboard-shell .performance-chart svg { width: 100%; display: block; min-height: 170px; }
+.dashboard-shell .performance-chart text { font: 10px sans-serif; fill: #6d8290; }
+.dashboard-shell .performance-chart figcaption { color: #6d8290; font-size: 10px; line-height: 1.7; margin-top: 8px; }
+.dashboard-shell .performance-page .review-panel-heading select { font-size: 11px; color: #172431; background: white; padding: 7px; border: 1px solid #cbd7da; border-radius: 6px; }
+.dashboard-shell .performance-form { display: flex; flex-wrap: wrap; gap: 7px; padding: 20px 0; min-height: 150px; align-content: center; }
+.dashboard-shell .performance-form > div { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 7px; font-weight: 800; }
+.dashboard-shell .performance-form .is-correct { background: #d9ebdc; color: #286442; }
+.dashboard-shell .performance-form .is-incorrect { background: #f5dfdd; color: #9a433e; }
+.dashboard-shell .performance-grade { text-transform: capitalize; background: #e3eaf0; color: #506a80; border-radius: 6px; padding: 5px 8px; font-size: 10px; white-space: nowrap; }
+.dashboard-shell .performance-grade.grade-correct { color: #286442; background: #d9ebdc; }
+.dashboard-shell .performance-grade.grade-incorrect { color: #9a433e; background: #f5dfdd; }
+.dashboard-shell .performance-pagination { display: flex; justify-content: flex-end; align-items: center; gap: 12px; margin-top: 18px; font-size: 11px; }
+.dashboard-shell .performance-pagination button { background: #187be8; color: white; border: 0; padding: 9px 12px; border-radius: 6px; cursor: pointer; }
+.dashboard-shell .performance-pagination button:disabled { opacity: .4; cursor: default; }
+.dashboard-shell .performance-loading { color: #b5cce0; }

@@ -2,6 +2,7 @@
 import csv
 import json
 from pathlib import Path
+from src.ml.refresh_performance import archive, git, utcnow
 
 
 # configuration
@@ -74,6 +75,14 @@ OUTPUT.parent.mkdir(parents=True, exist_ok=True)
 OUTPUT.write_text(
     json.dumps(data, indent=2),
     encoding="utf-8",
+)
+
+# capture new forecasts immediately; commit data/tracking with each weekly export.
+metadata = json.loads((ROOT / "models/model_metadata.json").read_text())
+archive(
+    data, metadata, utcnow(),
+    {"kind": "local_export", "commit": git("rev-parse", "HEAD")},
+    model_hashes={name: git("hash-object", f"models/{name}.joblib") for name in ("v4_a", "v4_qb_plus")},
 )
 
 print(f"PASS: Exported {len(games)} games.")

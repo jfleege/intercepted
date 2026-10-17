@@ -48,3 +48,19 @@ Implied probability is `1 / decimal odds`. The comparison normalizes the two imp
 Final scores grade wins/losses at the original price. Under this explicitly two-way moneyline paper convention, a tie pushes and an explicitly cancelled game voids; neither produces profit. Profit is net of stake, and ROI divides profit by settled win/loss stakes, excluding pushes/voids and pending selections. These conventions do not implement every bookmaker's house rules. Corrections update derived grades, retaining original record files. Custom selections remain separate from the baseline totals. Props, spreads, totals, and parlays are outside this moneyline tracker.
 
 After merge, a scheduled run (or a manual run) must succeed to populate and deploy the new page. This PR itself does not run odds requests, merge, or deploy.
+
+## Clickable matchup research
+
+In Markets → Moneylines, click a matchup name to open the research dialog. It compares both sides using the selected V4-A or V4-QB+ model and shows:
+
+- Saved sportsbook price, model probability, and margin-free market probability.
+- Break-even probability at the actual quoted price, and expected net profit per unit: `p * decimal_odds - 1`.
+- Both sides ranked by estimated return, with an adjustable qualification threshold (default 5%). This is a research filter, not a validated strategy. The panel can explicitly show no qualifying selection.
+
+A side qualifies only with a positive estimated return meeting the threshold and a currently eligible quote. The browser rechecks quote timestamps and kickoff every ten seconds and again at save time. A historical or stale price remains visible for research but cannot create a browser selection. This feature does not add any data requests to the odds provider or change the automated baseline strategy.
+
+**Save browser paper selection** freezes team/model, stake, price, model/market probabilities, estimated return, threshold, timestamps, and both snapshot IDs in localStorage. One team/model/game can be saved once in this browser ledger; later quotes cannot replace it. These selections are not actual wagers, are not uploaded to GitHub, and have unverified browser timestamps. They remain entirely separate from the repository-backed baseline and custom records. Use the existing Actions inputs for repository-backed recording at the then-available quote; browser exports cannot be backdated into the verified ledger.
+
+Paper ledger → Browser selections shows these records and derives grades from the latest published results, including corrections, using the same win/loss/push/void convention. Its summary is separate from the baseline cards and excludes pushes, voids, and pending stakes from its ROI denominator. Export paper JSON downloads the original browser records for all models. Browser data does not sync between devices and may be lost if site storage is cleared. An unreadable or unavailable store produces an error and is not silently replaced.
+
+Frontend calculation and storage-guard tests run with `cd frontend && npm test` and in the refresh workflow before building. Player props, parlays, historical prop-line ingestion, and uncertainty/calibration-based bet sizing are not implemented by this panel.

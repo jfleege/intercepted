@@ -1,6 +1,7 @@
 import json
 import tempfile
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from src.ml.refresh_markets import archive_odds, decimal, grade, paper_record, quote_ready, refresh, summary
@@ -96,6 +97,19 @@ class MarketsTests(unittest.TestCase):
             archive({'games': [{**GAME, 'home_win_prob_v4_qb_plus': .9}]}, META, '2026-10-18T14:00:00+00:00', {'kind': 'future_revision'}, root=root)
             still = refresh(root, '2026-10-18T13:00:00+00:00')
             self.assertEqual(still['lines'][0]['probabilities']['v4_qb_plus'], .7)
+
+    def test_equal_timestamp_records_are_stable_across_reversed_directory_order(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); self.seed(root)
+            first = refresh(root, NOW)
+            original_glob = Path.glob
+            def reordered_glob(directory, pattern):
+                paths = list(original_glob(directory, pattern))
+                return iter(reversed(paths) if directory.name == 'paper' else paths)
+            with patch.object(Path, 'glob', reordered_glob):
+                reloaded = refresh(root, NOW)
+            self.assertEqual(reloaded['selections'], first['selections'])
+            self.assertEqual(len(reloaded['selections']), 2)
 
     def test_no_hindsight_or_stale_picks(self):
         with tempfile.TemporaryDirectory() as tmp:

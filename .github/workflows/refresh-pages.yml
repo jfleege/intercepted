@@ -6,6 +6,7 @@ on:
     paths:
       - frontend/public/predictions.json
       - data/inputs/qb_starters.json
+      - src/ml/refresh_markets.py
   schedule:
     # 13:17 UTC = 8:17am CDT / 7:17am CST
     - cron: "17 13 * * *"

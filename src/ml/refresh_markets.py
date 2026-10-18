@@ -153,7 +153,7 @@ def refresh(root=ROOT, now=None, custom=None):
     predictions_path = root / 'frontend/public/predictions.json'
     active_ids = [g['game_id'] for g in json.loads(predictions_path.read_text())['games']] if predictions_path.exists() else sorted(latest)
     payload = {'active_game_ids': active_ids, 'generated_at': now, 'snapshot_count': len(snapshots), 'lines': sorted(latest.values(), key=lambda l: l['kickoff']),
-               'selections': sorted(graded, key=lambda r: r['recorded_at'], reverse=True),
+               'selections': sorted(graded, key=lambda r: (stamp(r['recorded_at']), r['selection_id']), reverse=True),
                'summary': {model: summary([r for r in graded if r['model'] == model and r['kind'] == 'baseline']) for model in MODELS},
                'results': results}
     write_json(root / 'frontend/public/markets.json', payload)

@@ -4,7 +4,7 @@ export type Line = {
   bookmaker: string; home_price: number; away_price: number;
   home_market_probability: number; away_market_probability: number;
   probabilities: Record<Model, number>; observed_at: string; last_update: string;
-  can_record: boolean; odds_snapshot_id: string; forecast_snapshot_id: string;
+  forecast_observed_at?: string; can_record: boolean; odds_snapshot_id: string; forecast_snapshot_id: string;
 };
 export type GameResult = {
   home_team: string; away_team: string; status: string;

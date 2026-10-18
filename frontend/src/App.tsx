@@ -24,6 +24,8 @@ type Game = {
   home_win_prob_v4_qb_plus: number;
   away_win_prob_v4_qb_plus: number;
   qb_probability_impact: number;
+  home_qb_selection?: {status: string};
+  away_qb_selection?: {status: string};
   home_projected_qb_name?: string | null;
   away_projected_qb_name?: string | null;
 };
@@ -612,6 +614,7 @@ const focusedGame =
       <strong>{focusedGame.away_team}</strong>
       <span>
         {focusedGame.away_projected_qb_name ?? "QB TBD"}
+        <small>{focusedGame.away_qb_selection?.status === "reported_expected" ? "Expected starter" : focusedGame.away_qb_selection?.status === "confirmed" ? "Confirmed starter" : "Unconfirmed QB projection"}</small>
       </span>
     </div>
   </div>
@@ -628,6 +631,7 @@ const focusedGame =
       <strong>{focusedGame.home_team}</strong>
       <span>
         {focusedGame.home_projected_qb_name ?? "QB TBD"}
+        <small>{focusedGame.home_qb_selection?.status === "reported_expected" ? "Expected starter" : focusedGame.home_qb_selection?.status === "confirmed" ? "Confirmed starter" : "Unconfirmed QB projection"}</small>
       </span>
     </div>
   </div>

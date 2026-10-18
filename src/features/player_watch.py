@@ -7,6 +7,7 @@ from zoneinfo import ZoneInfo
 from pathlib import Path
 
 import nflreadpy as nfl
+from src.features.qb_starters import watch_players
 
 
 # configuration
@@ -371,36 +372,6 @@ for (team, player_id), records in history.items():
     })
 
 
-# choose one qb and three skill players per team
-selected = {}
-
-for team in teams:
-    candidates = by_team.get(team, [])
-
-    qbs = sorted(
-        (p for p in candidates if p["position"] == "QB"),
-        key=lambda p: (
-            p["last_game_week"],
-            p["recent_average"],
-        ),
-        reverse=True,
-    )
-
-    skill = sorted(
-        (
-            p for p in candidates
-            if p["position"] in ("RB", "WR", "TE")
-        ),
-        key=lambda p: (
-            p["last_game_week"],
-            p["recent_average"],
-        ),
-        reverse=True,
-    )
-
-    selected[team] = qbs[:1] + skill[:3]
-
-
 # generate per-matchup output
 matchup_data = {}
 
@@ -411,8 +382,8 @@ for game in games:
     matchup_data[game["game_id"]] = {
         "away_team": away,
         "home_team": home,
-        "away_players": selected.get(away, []),
-        "home_players": selected.get(home, []),
+        "away_players": watch_players(game, "away", by_team.get(away, [])),
+        "home_players": watch_players(game, "home", by_team.get(home, [])),
     }
 
 output = {
@@ -437,11 +408,12 @@ OUTPUT.write_text(
 
 headshots = sum(
     p["headshot"] is not None
-    for players in selected.values()
+    for matchup in matchup_data.values()
+    for players in (matchup["home_players"], matchup["away_players"])
     for p in players
 )
 
-print(f"Prepared player cards for {len(selected)} teams.")
+print(f"Prepared player cards for {len(teams)} teams.")
 print(f"Player headshots available: {headshots}")
 print(f"SUCCESS: Saved {OUTPUT}")
 

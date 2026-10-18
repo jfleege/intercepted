@@ -9,6 +9,9 @@ import warnings
 from src.ml.refresh_performance import ROOT, MODELS, ALIASES, archive, git, kickoff, normalize_result, stamp, utcnow, write_json
 
 
+from src.features.qb_starters import load_reports, resolve_qb, changed_report_games, merge_revisions
+
+
 class DataPending(Exception):
     """Upstream statistics have not caught up; retain the published slate."""
 
@@ -95,11 +98,8 @@ def generate(rows, games, season, week, now):
     priors = pl.DataFrame(preseason)
     ratings = {team: prepare_team_features(team, season, week, weekly, expanded, priors) for team in teams}
     histories = build_qb_snapshots(ngs, season, week)
-    primary = {}
-    # Latest prior-week primary passer is a proxy, not an injury-aware starter confirmation.
-    for qb in ngs.filter((pl.col('season') == season) & (pl.col('week') < week) & (pl.col('attempts') > 0)).sort(['week', 'attempts']).to_dicts():
-        if qb.get('player_gsis_id'):
-            primary[qb['team_abbr']] = qb
+    reports = load_reports()
+    ngs_rows = ngs.to_dicts()
     now = utcnow()  # Data downloads may cross kickoff; use the actual serving clock.
     records, matrices = [], {model: [] for model in MODELS}
     for game in games:
@@ -111,11 +111,13 @@ def generate(rows, games, season, week, now):
         features = {f'diff_{key}': ratings[h][key] - ratings[a][key] for key in ('blended_off_epa', 'blended_def_epa', *TEAM_EFFICIENCY)}
         qb_features = {}
         for side, team in [('home', h), ('away', a)]:
-            qb = primary.get(team)
-            history = histories.get(qb['player_gsis_id']) if qb else None
-            record[f'{side}_projected_qb_name'] = qb.get('player_display_name') if qb else None
+            qb = resolve_qb(game, team, ngs_rows, reports, now)
+            history = histories.get(qb['player_id'])
+            record[f'{side}_projected_qb_name'] = qb['name']
+            record[f'{side}_projected_qb_id'] = qb['player_id']
+            record[f'{side}_qb_selection'] = qb
             record[f'{side}_team_latest_week'] = ratings[team]['team_latest_week']
-            features[f'{side}_qb_projection_missing'] = float(qb is None)
+            features[f'{side}_qb_projection_missing'] = float(qb['player_id'] is None)
             qb_features[side] = history or {}
         for metric in QB_METRICS:
             for prefix in ('career', 'recent'):
@@ -152,7 +154,7 @@ def generate(rows, games, season, week, now):
     print(f'Features through Week {week - 1}; saved weights trained through {metadata["latest_training_season"]} Week {metadata["latest_training_week"]}.')
     return {'season': season, 'week': week, 'count': len(records), 'model': 'v4_qb_plus', 'generated_at': now,
             'features_through_week': week - 1, 'training_cutoff': [metadata['latest_training_season'], metadata['latest_training_week']],
-            'qb_projection_method': 'Latest prior-week primary passer; not confirmed starters', 'games': records}, metadata
+            'qb_projection_method': 'Game-specific sourced reports; otherwise unconfirmed prior-week passer', 'games': records}, metadata
 
 
 def main():
@@ -165,9 +167,13 @@ def main():
     rows = nfl.load_schedules([year - 1, year]).to_dicts()
     season, week, games = target_slate(rows, now)
     current = json.loads((ROOT / 'frontend/public/predictions.json').read_text())
-    if week is None or (not args.validate_current and (current['season'], current['week']) >= (season, week)):
-        print('Published slate is current, or regular season complete; no forecast changes.')
+    revisions = changed_report_games(current, rows, load_reports(), now)
+    is_revision = (current['season'], current['week']) == (season, week) and bool(revisions)
+    if week is None or (not args.validate_current and not is_revision and (current['season'], current['week']) >= (season, week)):
+        print('Published slate and starter reports are current; no forecast changes.')
         return
+    if is_revision:
+        games = revisions
     try:
         payload, metadata = generate(rows, games, season, week, now)
     except DataPending as error:
@@ -176,6 +182,11 @@ def main():
     if args.validate_current:
         print(f"Validated {payload['count']} future games for {season} Week {week}; no forecasts published.")
         return
+    if is_revision:
+        # Preserve the old full slate before publishing a new, timestamped revision.
+        archive(current, metadata, now, {'kind': 'before_starter_revision', 'commit': git('rev-parse', 'HEAD')},
+                model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in MODELS})
+        payload = merge_revisions(current, payload, rows, utcnow())
     archive(payload, metadata, payload['generated_at'], {'kind': 'weekly_automation', 'commit': git('rev-parse', 'HEAD')},
             model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in MODELS})
     write_json(ROOT / 'frontend/public/predictions.json', payload)

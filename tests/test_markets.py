@@ -84,6 +84,19 @@ class MarketsTests(unittest.TestCase):
             corrected = refresh(root, '2026-10-19T01:00:00+00:00')
             self.assertEqual(next(r for r in corrected['selections'] if r['kind']=='manual')['profit'], -2)
 
+    def test_revised_pregame_forecast_can_compare_existing_quote_without_rewriting_baseline(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp); self.seed(root)
+            original = refresh(root, NOW)
+            revised = {**GAME, 'home_win_prob_v4_qb_plus': .7}
+            archive({'games': [revised]}, META, '2026-10-18T12:30:00+00:00', {'kind': 'starter_revision'}, root=root)
+            changed = refresh(root, '2026-10-18T13:00:00+00:00')
+            self.assertEqual(changed['lines'][0]['probabilities']['v4_qb_plus'], .7)
+            self.assertEqual(changed['selections'], original['selections'])
+            archive({'games': [{**GAME, 'home_win_prob_v4_qb_plus': .9}]}, META, '2026-10-18T14:00:00+00:00', {'kind': 'future_revision'}, root=root)
+            still = refresh(root, '2026-10-18T13:00:00+00:00')
+            self.assertEqual(still['lines'][0]['probabilities']['v4_qb_plus'], .7)
+
     def test_no_hindsight_or_stale_picks(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp); self.seed(root)

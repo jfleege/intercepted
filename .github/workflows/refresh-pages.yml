@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - frontend/public/predictions.json
+      - data/inputs/qb_starters.json
   schedule:
     # 13:17 UTC = 8:17am CDT / 7:17am CST
     - cron: "17 13 * * *"
@@ -68,7 +69,7 @@ jobs:
       - name: Verify results grading
         run: python -m unittest discover -s tests -v
       - name: Advance weekly forecasts when the prior slate is complete
-        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_forecasts)
+        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_forecasts || github.event_name == 'push')
         run: python -m src.ml.weekly_forecast
       - name: Archive forecasts and refresh final results
         run: python -m src.ml.refresh_performance --import-git-history

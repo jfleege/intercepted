@@ -60158,6 +60158,14 @@
             "observed": 1.0,
             "predicted": 0.37861659935819264,
             "upper": 1.0
+          },
+          {
+            "bin": "70\u201380%",
+            "games": 1,
+            "lower": 0.0,
+            "observed": 0.0,
+            "predicted": 0.7261903012655885,
+            "upper": 0.7934567085261071
           }
         ],
         "rows": [
@@ -60372,21 +60380,21 @@
             "week": 6
           },
           {
-            "away_score": null,
+            "away_score": 34,
             "away_team": "HOU",
-            "brier": null,
+            "brier": 0.5273523536522061,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-18",
             "game_id": "2026_06_HOU_JAX",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 31,
             "home_team": "JAX",
             "kickoff": "2026-10-18T13:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.2953219440582564,
             "model": "v4_a",
             "model_version": "ed5b4ccf5c21",
-            "outcome": null,
+            "outcome": 0,
             "pick": "JAX",
             "probability": 0.7261903012655885,
             "provenance": {
@@ -60397,7 +60405,7 @@
             "saved_at": "2026-10-09T22:34:27-05:00",
             "season": 2026,
             "snapshot_id": "a72c51433fc63b933c86479f264997d7f6e05e60a8dd3f6cc3645f01c87b4ae9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 6
           },
@@ -60584,13 +60592,13 @@
         ],
         "summary": {
           "accuracy": 0.0,
-          "brier": 0.3861173305931768,
+          "brier": 0.45673484212269144,
           "cancelled": 0,
           "correct": 0,
-          "games": 1,
-          "incorrect": 1,
-          "log_loss": 0.9712311971157584,
-          "pending": 13,
+          "games": 2,
+          "incorrect": 2,
+          "log_loss": 1.1332765705870074,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -60604,18 +60612,29 @@
             "game_number": 1,
             "label": "SEA @ DEN",
             "log_loss": 0.9712311971157584
+          },
+          {
+            "accuracy": 0.0,
+            "brier": 0.45673484212269144,
+            "correct": false,
+            "date": "2026-10-18",
+            "game_brier": 0.5273523536522061,
+            "game_id": "2026_06_HOU_JAX",
+            "game_number": 2,
+            "label": "HOU @ JAX",
+            "log_loss": 1.1332765705870074
           }
         ],
         "weekly": [
           {
             "accuracy": 0.0,
-            "brier": 0.3861173305931768,
+            "brier": 0.45673484212269144,
             "cancelled": 0,
             "correct": 0,
-            "games": 1,
-            "incorrect": 1,
-            "log_loss": 0.9712311971157584,
-            "pending": 13,
+            "games": 2,
+            "incorrect": 2,
+            "log_loss": 1.1332765705870074,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 6
@@ -60631,6 +60650,14 @@
             "observed": 1.0,
             "predicted": 0.3682339315525769,
             "upper": 1.0
+          },
+          {
+            "bin": "70\u201380%",
+            "games": 1,
+            "lower": 0.0,
+            "observed": 0.0,
+            "predicted": 0.7418683293294771,
+            "upper": 0.7934567085261071
           }
         ],
         "rows": [
@@ -60845,21 +60872,21 @@
             "week": 6
           },
           {
-            "away_score": null,
+            "away_score": 34,
             "away_team": "HOU",
-            "brier": null,
+            "brier": 0.5503686180621095,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-18",
             "game_id": "2026_06_HOU_JAX",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 31,
             "home_team": "JAX",
             "kickoff": "2026-10-18T13:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.354285472809387,
             "model": "v4_qb_plus",
             "model_version": "ed5b4ccf5c21",
-            "outcome": null,
+            "outcome": 0,
             "pick": "JAX",
             "probability": 0.7418683293294771,
             "provenance": {
@@ -60870,7 +60897,7 @@
             "saved_at": "2026-10-09T22:34:27-05:00",
             "season": 2026,
             "snapshot_id": "a72c51433fc63b933c86479f264997d7f6e05e60a8dd3f6cc3645f01c87b4ae9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 6
           },
@@ -61057,13 +61084,13 @@
         ],
         "summary": {
           "accuracy": 0.0,
-          "brier": 0.3991283652415141,
+          "brier": 0.47474849165181177,
           "cancelled": 0,
           "correct": 0,
-          "games": 1,
-          "incorrect": 1,
-          "log_loss": 0.9990368592076352,
-          "pending": 13,
+          "games": 2,
+          "incorrect": 2,
+          "log_loss": 1.1766611660085111,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -61077,18 +61104,29 @@
             "game_number": 1,
             "label": "SEA @ DEN",
             "log_loss": 0.9990368592076352
+          },
+          {
+            "accuracy": 0.0,
+            "brier": 0.47474849165181177,
+            "correct": false,
+            "date": "2026-10-18",
+            "game_brier": 0.5503686180621095,
+            "game_id": "2026_06_HOU_JAX",
+            "game_number": 2,
+            "label": "HOU @ JAX",
+            "log_loss": 1.1766611660085111
           }
         ],
         "weekly": [
           {
             "accuracy": 0.0,
-            "brier": 0.3991283652415141,
+            "brier": 0.47474849165181177,
             "cancelled": 0,
             "correct": 0,
-            "games": 1,
-            "incorrect": 1,
-            "log_loss": 0.9990368592076352,
-            "pending": 13,
+            "games": 2,
+            "incorrect": 2,
+            "log_loss": 1.1766611660085111,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 6
@@ -61099,7 +61137,7 @@
   },
   "policy": "First verified pregame snapshot per game and model; ties excluded from binary metrics; historical experiments separate.",
   "schema_version": 1,
-  "snapshot_count": 2,
+  "snapshot_count": 3,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-10-18T16:34:39.351545+00:00"
+  "updated_at": "2026-10-18T16:58:58.879903+00:00"
 }

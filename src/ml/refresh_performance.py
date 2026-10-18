@@ -55,6 +55,13 @@ def archive(payload, metadata, observed_at, source, root=ROOT, model_hashes=None
     records = []
     for game in games:
         record = {key: game[key] for key in ("game_id", "season", "week", "game_date", "home_team", "away_team")}
+        for side in ("home", "away"):
+            if f"{side}_qb_selection" not in game:
+                continue
+            for field in ("projected_qb_name", "projected_qb_id", "qb_selection"):
+                key = f"{side}_{field}"
+                if key in game:
+                    record[key] = game[key]
         record["probabilities"] = {}
         for model in MODELS:
             p = game.get(f"home_win_prob_{model}")

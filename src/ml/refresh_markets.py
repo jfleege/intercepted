@@ -54,7 +54,7 @@ def comparison(snapshot, game_id, quote, forecast, game):
             'observed_at': snapshot['observed_at'], 'last_update': quote.get('moneyline_last_update') or quote.get('last_update'),
             'home_price': home, 'away_price': away, 'home_market_probability': hi/(hi+ai),
             'away_market_probability': ai/(hi+ai), 'probabilities': game['probabilities'],
-            'forecast_snapshot_id': forecast['snapshot_id']}
+            'forecast_snapshot_id': forecast['snapshot_id'], 'forecast_observed_at': forecast['observed_at']}
 
 
 def paper_record(line, model, team, now, stake=1, kind='baseline'):
@@ -121,7 +121,7 @@ def refresh(root=ROOT, now=None, custom=None):
         for game_id, quote in snapshot['games'].items():
             result = results.get(game_id)
             available = [(f, g) for f in forecasts for g in f['games'] if g['game_id'] == game_id
-                         and stamp(f['observed_at']) <= stamp(snapshot['observed_at'])
+                         and stamp(f['observed_at']) <= stamp(now)
                          and eligibility(f, g, result)[0] == 'verified']
             if not available:
                 continue
@@ -150,7 +150,9 @@ def refresh(root=ROOT, now=None, custom=None):
         write_json(directory / f"{record['selection_id']}.json", record)
         records[record['selection_id']] = record
     graded = [grade(r, results.get(r['game_id'])) for r in records.values()]
-    payload = {'generated_at': now, 'snapshot_count': len(snapshots), 'lines': sorted(latest.values(), key=lambda l: l['kickoff']),
+    predictions_path = root / 'frontend/public/predictions.json'
+    active_ids = [g['game_id'] for g in json.loads(predictions_path.read_text())['games']] if predictions_path.exists() else sorted(latest)
+    payload = {'active_game_ids': active_ids, 'generated_at': now, 'snapshot_count': len(snapshots), 'lines': sorted(latest.values(), key=lambda l: l['kickoff']),
                'selections': sorted(graded, key=lambda r: r['recorded_at'], reverse=True),
                'summary': {model: summary([r for r in graded if r['model'] == model and r['kind'] == 'baseline']) for model in MODELS},
                'results': results}

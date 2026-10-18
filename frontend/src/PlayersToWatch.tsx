@@ -6,6 +6,7 @@ type Player = {
   name: string;
   team: string;
   position: string;
+  qb_status?: string;
   headshot: string | null;
   stat_label: string;
   recent_average: number;
@@ -90,7 +91,7 @@ function PlayerCard({ player }: { player: Player }) {
           </div>
 
           <div className="pw-subtitle">
-            {player.team} · {player.position}
+            {player.team} · {player.position}{player.position === "QB" ? ` · ${player.qb_status === "confirmed" ? "Confirmed starter" : player.qb_status === "reported_expected" ? "Expected starter" : "Unconfirmed projection"}` : ""}
           </div>
         </div>
 
@@ -146,9 +147,6 @@ export default function PlayersToWatch({ gameId }: Props) {
   // load exported player data
   useEffect(() => {
     let active = true;
-
-    setData(null);
-    setError(null);
 
     fetch(`${import.meta.env.BASE_URL}players_watch.json`)
       .then((response) => {

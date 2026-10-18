@@ -40,3 +40,9 @@
 .dashboard-shell .research-method { border-top: 1px solid #cbd5d9; padding-top: 16px; font-size: 12px; line-height: 1.7; }
 .dashboard-shell .research-method summary { cursor: pointer; font-weight: 700; }
 @media (max-width:600px) { .dashboard-shell .research-candidates { grid-template-columns: 1fr; } .dashboard-shell .moneyline-dialog-content { padding: 18px; } .dashboard-shell .markets-page .browser-ledger-note { flex-direction: column; align-items: flex-start; } }
+
+.dashboard-shell .markets-page .moneyline-feed-note { color: #9cb2c4; font-size: 12px; line-height: 1.6; }
+.dashboard-shell .markets-page .market-saved-records { color: #172431; background: #f6f6ee; border-color: #d4dedf; }
+.dashboard-shell .markets-page .market-saved-records summary { color: #536e83; }
+.dashboard-shell .markets-page .market-saved-records label { display: block; margin: 18px 0; }
+.dashboard-shell .markets-page .market-saved-records select { margin-left: 10px; padding: 8px; border-radius: 6px; }

@@ -60169,11 +60169,11 @@
           },
           {
             "bin": "40\u201350%",
-            "games": 2,
-            "lower": 0.0,
-            "observed": 0.0,
-            "predicted": 0.4444827359469521,
-            "upper": 0.6576280471103807
+            "games": 3,
+            "lower": 0.0614903152761605,
+            "observed": 0.3333333333333333,
+            "predicted": 0.4541503601526984,
+            "upper": 0.7923450448735121
           },
           {
             "bin": "50\u201360%",
@@ -60382,21 +60382,21 @@
             "week": 6
           },
           {
-            "away_score": null,
+            "away_score": 13,
             "away_team": "DAL",
-            "brier": null,
+            "brier": 0.2772174043890203,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-18",
             "game_id": "2026_06_DAL_GB",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 23,
             "home_team": "GB",
             "kickoff": "2026-10-19T00:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.747633760557732,
             "model": "v4_a",
             "model_version": "ed5b4ccf5c21",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DAL",
             "probability": 0.47348560856419103,
             "provenance": {
@@ -60407,7 +60407,7 @@
             "saved_at": "2026-10-09T22:34:27-05:00",
             "season": 2026,
             "snapshot_id": "a72c51433fc63b933c86479f264997d7f6e05e60a8dd3f6cc3645f01c87b4ae9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 6
           },
@@ -60623,14 +60623,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.4166666666666667,
-          "brier": 0.30954946439174663,
+          "accuracy": 0.38461538461538464,
+          "brier": 0.3070623828530754,
           "cancelled": 0,
           "correct": 5,
-          "games": 12,
-          "incorrect": 7,
-          "log_loss": 0.8227653185125922,
-          "pending": 2,
+          "games": 13,
+          "incorrect": 8,
+          "log_loss": 0.8169859679006799,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -60765,18 +60765,29 @@
             "game_number": 12,
             "label": "LAC @ KC",
             "log_loss": 0.8227653185125922
+          },
+          {
+            "accuracy": 0.38461538461538464,
+            "brier": 0.3070623828530754,
+            "correct": false,
+            "date": "2026-10-18",
+            "game_brier": 0.2772174043890203,
+            "game_id": "2026_06_DAL_GB",
+            "game_number": 13,
+            "label": "DAL @ GB",
+            "log_loss": 0.8169859679006799
           }
         ],
         "weekly": [
           {
-            "accuracy": 0.4166666666666667,
-            "brier": 0.30954946439174663,
+            "accuracy": 0.38461538461538464,
+            "brier": 0.3070623828530754,
             "cancelled": 0,
             "correct": 5,
-            "games": 12,
-            "incorrect": 7,
-            "log_loss": 0.8227653185125922,
-            "pending": 2,
+            "games": 13,
+            "incorrect": 8,
+            "log_loss": 0.8169859679006799,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 6
@@ -60803,11 +60814,11 @@
           },
           {
             "bin": "40\u201350%",
-            "games": 1,
-            "lower": 0.0,
-            "observed": 0.0,
-            "predicted": 0.4529323656705348,
-            "upper": 0.7934567085261071
+            "games": 2,
+            "lower": 0.09452865480086614,
+            "observed": 0.5,
+            "predicted": 0.46274683413403517,
+            "upper": 0.9054713451991339
           },
           {
             "bin": "50\u201360%",
@@ -61016,21 +61027,21 @@
             "week": 6
           },
           {
-            "away_score": null,
+            "away_score": 13,
             "away_team": "DAL",
-            "brier": null,
+            "brier": 0.27819157951760853,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-18",
             "game_id": "2026_06_DAL_GB",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 23,
             "home_team": "GB",
             "kickoff": "2026-10-19T00:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.7495877995168033,
             "model": "v4_qb_plus",
             "model_version": "ed5b4ccf5c21",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DAL",
             "probability": 0.4725613025975355,
             "provenance": {
@@ -61041,7 +61052,7 @@
             "saved_at": "2026-10-09T22:34:27-05:00",
             "season": 2026,
             "snapshot_id": "a72c51433fc63b933c86479f264997d7f6e05e60a8dd3f6cc3645f01c87b4ae9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 6
           },
@@ -61257,14 +61268,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.3333333333333333,
-          "brier": 0.32036061112225994,
+          "accuracy": 0.3076923076923077,
+          "brier": 0.3171168394603636,
           "cancelled": 0,
           "correct": 4,
-          "games": 12,
-          "incorrect": 8,
-          "log_loss": 0.846625394803167,
-          "pending": 2,
+          "games": 13,
+          "incorrect": 9,
+          "log_loss": 0.8391609643965237,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -61399,18 +61410,29 @@
             "game_number": 12,
             "label": "LAC @ KC",
             "log_loss": 0.846625394803167
+          },
+          {
+            "accuracy": 0.3076923076923077,
+            "brier": 0.3171168394603636,
+            "correct": false,
+            "date": "2026-10-18",
+            "game_brier": 0.27819157951760853,
+            "game_id": "2026_06_DAL_GB",
+            "game_number": 13,
+            "label": "DAL @ GB",
+            "log_loss": 0.8391609643965237
           }
         ],
         "weekly": [
           {
-            "accuracy": 0.3333333333333333,
-            "brier": 0.32036061112225994,
+            "accuracy": 0.3076923076923077,
+            "brier": 0.3171168394603636,
             "cancelled": 0,
             "correct": 4,
-            "games": 12,
-            "incorrect": 8,
-            "log_loss": 0.846625394803167,
-            "pending": 2,
+            "games": 13,
+            "incorrect": 9,
+            "log_loss": 0.8391609643965237,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 6
@@ -61423,5 +61445,5 @@
   "schema_version": 1,
   "snapshot_count": 3,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-10-19T00:07:21.817024+00:00"
+  "updated_at": "2026-10-19T15:00:02.710374+00:00"
 }

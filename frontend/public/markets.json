@@ -15,7 +15,7 @@
     "2026_06_TEN_IND",
     "2026_06_WAS_SF"
   ],
-  "generated_at": "2026-10-19T00:07:23.164845+00:00",
+  "generated_at": "2026-10-19T15:00:04.202038+00:00",
   "lines": [
     {
       "away_market_probability": 0.5720596355604638,
@@ -274,7 +274,7 @@
       "away_price": -105,
       "away_team": "DAL",
       "bookmaker": "DraftKings",
-      "can_record": true,
+      "can_record": false,
       "forecast_observed_at": "2026-10-18T16:39:10.316756+00:00",
       "forecast_snapshot_id": "d031ed83e388408293ea54aac5673e08ec110e754671424abf3b1ed679f241a0",
       "game_id": "2026_06_DAL_GB",
@@ -379,16 +379,16 @@
       "week": 6
     },
     "2026_06_DAL_GB": {
-      "away_score": null,
+      "away_score": 13,
       "away_team": "DAL",
       "game_date": "2026-10-18",
       "game_id": "2026_06_DAL_GB",
-      "home_score": null,
+      "home_score": 23,
       "home_team": "GB",
       "kickoff": "2026-10-19T00:20:00+00:00",
       "season": 2026,
       "source": "nflverse schedules",
-      "status": "pending",
+      "status": "final",
       "week": 6
     },
     "2026_06_HOU_JAX": {
@@ -806,7 +806,7 @@
       "bookmaker": "DraftKings",
       "forecast_snapshot_id": "00744046585cb9947e6150b07e540327b8f4d46c327ae91396d307984cfa86c2",
       "game_id": "2026_06_DAL_GB",
-      "grade": "pending",
+      "grade": "loss",
       "home_team": "GB",
       "kickoff": "2026-10-19T00:20:00Z",
       "kind": "baseline",
@@ -814,7 +814,7 @@
       "model_probability": 0.5113835131409643,
       "odds_snapshot_id": "2e7a32ece4e69762643aee7338ecfc0d15776928b3c1ca1ed9adb957e7648181",
       "price": -102,
-      "profit": null,
+      "profit": -1,
       "recorded_at": "2026-10-17T16:28:25.609612+00:00",
       "selection_id": "98e732f0ef491ac3db8c3504b1575e91f40053fb5d225688eace56a7cb28052c",
       "stake": 1,
@@ -958,7 +958,7 @@
       "bookmaker": "DraftKings",
       "forecast_snapshot_id": "00744046585cb9947e6150b07e540327b8f4d46c327ae91396d307984cfa86c2",
       "game_id": "2026_06_DAL_GB",
-      "grade": "pending",
+      "grade": "loss",
       "home_team": "GB",
       "kickoff": "2026-10-19T00:20:00Z",
       "kind": "baseline",
@@ -966,7 +966,7 @@
       "model_probability": 0.526514391435809,
       "odds_snapshot_id": "2e7a32ece4e69762643aee7338ecfc0d15776928b3c1ca1ed9adb957e7648181",
       "price": -102,
-      "profit": null,
+      "profit": -1,
       "recorded_at": "2026-10-17T16:28:25.609612+00:00",
       "selection_id": "2f0519c22cfa08e826bbd93813c3c564f912b0156a42b934771e38098e467a39",
       "stake": 1,
@@ -995,24 +995,24 @@
   "snapshot_count": 3,
   "summary": {
     "v4_a": {
-      "losses": 6,
-      "profit": -3.60268478393151,
+      "losses": 7,
+      "profit": -4.602684783931508,
       "pushes": 0,
-      "risked_units": 11,
-      "roi": -0.32751679853922816,
+      "risked_units": 12,
+      "roi": -0.3835570653276257,
       "selections": 13,
-      "settled": 11,
+      "settled": 12,
       "voids": 0,
       "wins": 5
     },
     "v4_qb_plus": {
-      "losses": 6,
-      "profit": -3.7603424415891675,
+      "losses": 7,
+      "profit": -4.7603424415891675,
       "pushes": 0,
-      "risked_units": 11,
-      "roi": -0.34184931287174253,
+      "risked_units": 12,
+      "roi": -0.396695203465764,
       "selections": 13,
-      "settled": 11,
+      "settled": 12,
       "voids": 0,
       "wins": 5
     }

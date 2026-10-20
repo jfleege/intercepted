@@ -1,0 +1,923 @@
+{
+  "generated_at": "2026-10-20T16:50:30.167495+00:00",
+  "commit": "b3f24d53a0beb0e68dd52a2b8f36a863c4372d49",
+  "features_sha256": "15211aee96a8ffc46eccd4eaebb17c8d73477aec3c335ae538a28117dc062188",
+  "feature_columns": {
+    "QB retuned": [
+      "diff_blended_off_epa",
+      "diff_blended_def_epa",
+      "diff_v4_off_pass_epa",
+      "diff_v4_off_run_epa",
+      "diff_v4_def_pass_epa",
+      "diff_v4_def_run_epa",
+      "diff_v4_off_pass_success",
+      "diff_v4_off_run_success",
+      "diff_v4_def_pass_success_allowed",
+      "diff_v4_def_run_success_allowed",
+      "diff_qb_career_completion_percentage_above_expectation",
+      "diff_qb_recent_completion_percentage_above_expectation",
+      "qb_experience_diff",
+      "home_qb_projection_missing",
+      "away_qb_projection_missing",
+      "diff_qb_recent_avg_time_to_throw",
+      "diff_qb_recent_avg_intended_air_yards",
+      "diff_qb_recent_aggressiveness"
+    ],
+    "QB + context": [
+      "diff_blended_off_epa",
+      "diff_blended_def_epa",
+      "diff_v4_off_pass_epa",
+      "diff_v4_off_run_epa",
+      "diff_v4_def_pass_epa",
+      "diff_v4_def_run_epa",
+      "diff_v4_off_pass_success",
+      "diff_v4_off_run_success",
+      "diff_v4_def_pass_success_allowed",
+      "diff_v4_def_run_success_allowed",
+      "diff_qb_career_completion_percentage_above_expectation",
+      "diff_qb_recent_completion_percentage_above_expectation",
+      "qb_experience_diff",
+      "home_qb_projection_missing",
+      "away_qb_projection_missing",
+      "diff_qb_recent_avg_time_to_throw",
+      "diff_qb_recent_avg_intended_air_yards",
+      "diff_qb_recent_aggressiveness",
+      "rest_diff",
+      "home_short_week",
+      "away_short_week",
+      "home_extended_rest",
+      "away_extended_rest",
+      "neutral_site",
+      "division_game"
+    ],
+    "Gradient boosted": [
+      "diff_blended_off_epa",
+      "diff_blended_def_epa",
+      "diff_v4_off_pass_epa",
+      "diff_v4_off_run_epa",
+      "diff_v4_def_pass_epa",
+      "diff_v4_def_run_epa",
+      "diff_v4_off_pass_success",
+      "diff_v4_off_run_success",
+      "diff_v4_def_pass_success_allowed",
+      "diff_v4_def_run_success_allowed",
+      "diff_qb_career_completion_percentage_above_expectation",
+      "diff_qb_recent_completion_percentage_above_expectation",
+      "qb_experience_diff",
+      "home_qb_projection_missing",
+      "away_qb_projection_missing",
+      "diff_qb_recent_avg_time_to_throw",
+      "diff_qb_recent_avg_intended_air_yards",
+      "diff_qb_recent_aggressiveness",
+      "rest_diff",
+      "home_short_week",
+      "away_short_week",
+      "home_extended_rest",
+      "away_extended_rest",
+      "neutral_site",
+      "division_game"
+    ]
+  },
+  "selected_settings": {
+    "QB retuned": {
+      "C": 0.01
+    },
+    "QB + context": {
+      "C": 0.001
+    },
+    "Gradient boosted": {
+      "leaves": 3,
+      "l2": 10
+    }
+  },
+  "results": [
+    {
+      "model": "QB retuned",
+      "split": "2022",
+      "params": {
+        "C": 0.001
+      },
+      "games": 269,
+      "correct": 177,
+      "accuracy": 0.6579925650557621,
+      "brier": 0.23273473436787695,
+      "log_loss": 0.6582358822141958
+    },
+    {
+      "model": "QB retuned",
+      "split": "2023",
+      "params": {
+        "C": 0.001
+      },
+      "games": 272,
+      "correct": 172,
+      "accuracy": 0.6323529411764706,
+      "brier": 0.23303227639435262,
+      "log_loss": 0.6585397057291135
+    },
+    {
+      "model": "QB retuned",
+      "split": "2024",
+      "params": {
+        "C": 0.001
+      },
+      "games": 272,
+      "correct": 183,
+      "accuracy": 0.6727941176470589,
+      "brier": 0.2196986910111252,
+      "log_loss": 0.6309371858952576
+    },
+    {
+      "model": "QB retuned",
+      "split": "2025",
+      "params": {
+        "C": 0.01
+      },
+      "games": 271,
+      "correct": 165,
+      "accuracy": 0.6088560885608856,
+      "brier": 0.2280411821912459,
+      "log_loss": 0.6463506165070224
+    },
+    {
+      "model": "QB retuned",
+      "split": "historical_2022_2024",
+      "games": 813,
+      "correct": 532,
+      "accuracy": 0.6543665436654367,
+      "brier": 0.22847289874446355,
+      "log_loss": 0.6492043872539331
+    },
+    {
+      "model": "QB retuned",
+      "split": "training_through_2026_W5",
+      "params": {
+        "C": 0.01
+      },
+      "games": 1943,
+      "correct": 1256,
+      "accuracy": 0.6464230571281523,
+      "brier": 0.22140477646699244,
+      "log_loss": 0.6329829618856717
+    },
+    {
+      "model": "QB retuned",
+      "split": "week6_retrospective",
+      "params": {
+        "C": 0.01
+      },
+      "games": 14,
+      "correct": 7,
+      "accuracy": 0.5,
+      "brier": 0.2765053289480018,
+      "log_loss": 0.7500954919869942
+    },
+    {
+      "model": "QB + context",
+      "split": "2022",
+      "params": {
+        "C": 0.001
+      },
+      "games": 269,
+      "correct": 178,
+      "accuracy": 0.6617100371747212,
+      "brier": 0.2323360546802106,
+      "log_loss": 0.6574068858350757
+    },
+    {
+      "model": "QB + context",
+      "split": "2023",
+      "params": {
+        "C": 0.001
+      },
+      "games": 272,
+      "correct": 174,
+      "accuracy": 0.6397058823529411,
+      "brier": 0.2333717662427393,
+      "log_loss": 0.6592053070389701
+    },
+    {
+      "model": "QB + context",
+      "split": "2024",
+      "params": {
+        "C": 0.001
+      },
+      "games": 272,
+      "correct": 181,
+      "accuracy": 0.6654411764705882,
+      "brier": 0.22124680485657428,
+      "log_loss": 0.6340922817779334
+    },
+    {
+      "model": "QB + context",
+      "split": "2025",
+      "params": {
+        "C": 0.01
+      },
+      "games": 271,
+      "correct": 163,
+      "accuracy": 0.6014760147601476,
+      "brier": 0.22831429357962657,
+      "log_loss": 0.6466443033656305
+    },
+    {
+      "model": "QB + context",
+      "split": "historical_2022_2024",
+      "games": 813,
+      "correct": 533,
+      "accuracy": 0.6555965559655597,
+      "brier": 0.22897250928412047,
+      "log_loss": 0.650208359714432
+    },
+    {
+      "model": "QB + context",
+      "split": "training_through_2026_W5",
+      "params": {
+        "C": 0.001
+      },
+      "games": 1943,
+      "correct": 1245,
+      "accuracy": 0.6407617086978898,
+      "brier": 0.22558378233871096,
+      "log_loss": 0.6426660542315943
+    },
+    {
+      "model": "QB + context",
+      "split": "week6_retrospective",
+      "params": {
+        "C": 0.001
+      },
+      "games": 14,
+      "correct": 6,
+      "accuracy": 0.42857142857142855,
+      "brier": 0.25994293650907135,
+      "log_loss": 0.7129035782447267
+    },
+    {
+      "model": "Gradient boosted",
+      "split": "2022",
+      "params": {
+        "leaves": 3,
+        "l2": 10
+      },
+      "games": 269,
+      "correct": 166,
+      "accuracy": 0.6171003717472119,
+      "brier": 0.22989846634146927,
+      "log_loss": 0.6524254740368032
+    },
+    {
+      "model": "Gradient boosted",
+      "split": "2023",
+      "params": {
+        "leaves": 3,
+        "l2": 10
+      },
+      "games": 272,
+      "correct": 165,
+      "accuracy": 0.6066176470588235,
+      "brier": 0.24074784508721314,
+      "log_loss": 0.6776918156434397
+    },
+    {
+      "model": "Gradient boosted",
+      "split": "2024",
+      "params": {
+        "leaves": 3,
+        "l2": 10
+      },
+      "games": 272,
+      "correct": 182,
+      "accuracy": 0.6691176470588235,
+      "brier": 0.21618043102986495,
+      "log_loss": 0.6213020334854623
+    },
+    {
+      "model": "Gradient boosted",
+      "split": "2025",
+      "params": {
+        "leaves": 3,
+        "l2": 10
+      },
+      "games": 271,
+      "correct": 166,
+      "accuracy": 0.6125461254612546,
+      "brier": 0.23469982350058363,
+      "log_loss": 0.6602377522375958
+    },
+    {
+      "model": "Gradient boosted",
+      "split": "historical_2022_2024",
+      "games": 813,
+      "correct": 513,
+      "accuracy": 0.6309963099630996,
+      "brier": 0.2289387190033216,
+      "log_loss": 0.6504659034181568
+    },
+    {
+      "model": "Gradient boosted",
+      "split": "training_through_2026_W5",
+      "params": {
+        "leaves": 3,
+        "l2": 10
+      },
+      "games": 1943,
+      "correct": 1298,
+      "accuracy": 0.6680391147709728,
+      "brier": 0.21073761870864005,
+      "log_loss": 0.6092484291847009
+    },
+    {
+      "model": "Gradient boosted",
+      "split": "week6_retrospective",
+      "params": {
+        "leaves": 3,
+        "l2": 10
+      },
+      "games": 14,
+      "correct": 8,
+      "accuracy": 0.5714285714285714,
+      "brier": 0.26448655426697437,
+      "log_loss": 0.7246874792908359
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "split": "week6_retrospective",
+      "games": 14,
+      "correct": 7,
+      "accuracy": 0.5,
+      "brier": 0.27653077850252716,
+      "log_loss": 0.7508643887913501
+    }
+  ],
+  "predictions": [
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_ARI_LA",
+      "home_team": "LA",
+      "away_team": "ARI",
+      "home_win": 0,
+      "home_probability": 0.7602723616905132,
+      "pick": "LA",
+      "correct": false
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_BAL_CLE",
+      "home_team": "CLE",
+      "away_team": "BAL",
+      "home_win": 1,
+      "home_probability": 0.2681401610329751,
+      "pick": "BAL",
+      "correct": false
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_BUF_LV",
+      "home_team": "LV",
+      "away_team": "BUF",
+      "home_win": 0,
+      "home_probability": 0.30457027013677107,
+      "pick": "BUF",
+      "correct": true
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_CAR_PHI",
+      "home_team": "PHI",
+      "away_team": "CAR",
+      "home_win": 0,
+      "home_probability": 0.40360372347587203,
+      "pick": "CAR",
+      "correct": true
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_CHI_ATL",
+      "home_team": "ATL",
+      "away_team": "CHI",
+      "home_win": 0,
+      "home_probability": 0.53190322737627,
+      "pick": "ATL",
+      "correct": false
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_DAL_GB",
+      "home_team": "GB",
+      "away_team": "DAL",
+      "home_win": 1,
+      "home_probability": 0.5296223607137831,
+      "pick": "GB",
+      "correct": true
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_HOU_JAX",
+      "home_team": "JAX",
+      "away_team": "HOU",
+      "home_win": 0,
+      "home_probability": 0.6983728627323837,
+      "pick": "JAX",
+      "correct": false
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_LAC_KC",
+      "home_team": "KC",
+      "away_team": "LAC",
+      "home_win": 1,
+      "home_probability": 0.7839482420572204,
+      "pick": "KC",
+      "correct": true
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_NO_NYG",
+      "home_team": "NYG",
+      "away_team": "NO",
+      "home_win": 0,
+      "home_probability": 0.569896491569286,
+      "pick": "NYG",
+      "correct": false
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_NYJ_NE",
+      "home_team": "NE",
+      "away_team": "NYJ",
+      "home_win": 1,
+      "home_probability": 0.6794792026680627,
+      "pick": "NE",
+      "correct": true
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_PIT_TB",
+      "home_team": "TB",
+      "away_team": "PIT",
+      "home_win": 0,
+      "home_probability": 0.4729899266830073,
+      "pick": "PIT",
+      "correct": true
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_SEA_DEN",
+      "home_team": "DEN",
+      "away_team": "SEA",
+      "home_win": 1,
+      "home_probability": 0.44358430076837096,
+      "pick": "SEA",
+      "correct": false
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_TEN_IND",
+      "home_team": "IND",
+      "away_team": "TEN",
+      "home_win": 0,
+      "home_probability": 0.6847103872614609,
+      "pick": "IND",
+      "correct": false
+    },
+    {
+      "model": "QB retuned",
+      "game_id": "2026_06_WAS_SF",
+      "home_team": "SF",
+      "away_team": "WAS",
+      "home_win": 1,
+      "home_probability": 0.8168560405447596,
+      "pick": "SF",
+      "correct": true
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_ARI_LA",
+      "home_team": "LA",
+      "away_team": "ARI",
+      "home_win": 0,
+      "home_probability": 0.6897718290003769,
+      "pick": "LA",
+      "correct": false
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_BAL_CLE",
+      "home_team": "CLE",
+      "away_team": "BAL",
+      "home_win": 1,
+      "home_probability": 0.3525719251051701,
+      "pick": "BAL",
+      "correct": false
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_BUF_LV",
+      "home_team": "LV",
+      "away_team": "BUF",
+      "home_win": 0,
+      "home_probability": 0.37181823889405125,
+      "pick": "BUF",
+      "correct": true
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_CAR_PHI",
+      "home_team": "PHI",
+      "away_team": "CAR",
+      "home_win": 0,
+      "home_probability": 0.42634636092207334,
+      "pick": "CAR",
+      "correct": true
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_CHI_ATL",
+      "home_team": "ATL",
+      "away_team": "CHI",
+      "home_win": 0,
+      "home_probability": 0.5328721922536025,
+      "pick": "ATL",
+      "correct": false
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_DAL_GB",
+      "home_team": "GB",
+      "away_team": "DAL",
+      "home_win": 1,
+      "home_probability": 0.5213498139485737,
+      "pick": "GB",
+      "correct": true
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_HOU_JAX",
+      "home_team": "JAX",
+      "away_team": "HOU",
+      "home_win": 0,
+      "home_probability": 0.609056353203198,
+      "pick": "JAX",
+      "correct": false
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_LAC_KC",
+      "home_team": "KC",
+      "away_team": "LAC",
+      "home_win": 1,
+      "home_probability": 0.7133416296912594,
+      "pick": "KC",
+      "correct": true
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_NO_NYG",
+      "home_team": "NYG",
+      "away_team": "NO",
+      "home_win": 0,
+      "home_probability": 0.559403052660223,
+      "pick": "NYG",
+      "correct": false
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_NYJ_NE",
+      "home_team": "NE",
+      "away_team": "NYJ",
+      "home_win": 1,
+      "home_probability": 0.6424962735500476,
+      "pick": "NE",
+      "correct": true
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_PIT_TB",
+      "home_team": "TB",
+      "away_team": "PIT",
+      "home_win": 0,
+      "home_probability": 0.5051103109800769,
+      "pick": "TB",
+      "correct": false
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_SEA_DEN",
+      "home_team": "DEN",
+      "away_team": "SEA",
+      "home_win": 1,
+      "home_probability": 0.48173900209442055,
+      "pick": "SEA",
+      "correct": false
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_TEN_IND",
+      "home_team": "IND",
+      "away_team": "TEN",
+      "home_win": 0,
+      "home_probability": 0.645654238039253,
+      "pick": "IND",
+      "correct": false
+    },
+    {
+      "model": "QB + context",
+      "game_id": "2026_06_WAS_SF",
+      "home_team": "SF",
+      "away_team": "WAS",
+      "home_win": 1,
+      "home_probability": 0.7230335922002283,
+      "pick": "SF",
+      "correct": true
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_ARI_LA",
+      "home_team": "LA",
+      "away_team": "ARI",
+      "home_win": 0,
+      "home_probability": 0.7331046990818136,
+      "pick": "LA",
+      "correct": false
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_BAL_CLE",
+      "home_team": "CLE",
+      "away_team": "BAL",
+      "home_win": 1,
+      "home_probability": 0.3614056862653504,
+      "pick": "BAL",
+      "correct": false
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_BUF_LV",
+      "home_team": "LV",
+      "away_team": "BUF",
+      "home_win": 0,
+      "home_probability": 0.40031284901438585,
+      "pick": "BUF",
+      "correct": true
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_CAR_PHI",
+      "home_team": "PHI",
+      "away_team": "CAR",
+      "home_win": 0,
+      "home_probability": 0.4105631799390807,
+      "pick": "CAR",
+      "correct": true
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_CHI_ATL",
+      "home_team": "ATL",
+      "away_team": "CHI",
+      "home_win": 0,
+      "home_probability": 0.47454207026666045,
+      "pick": "CHI",
+      "correct": true
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_DAL_GB",
+      "home_team": "GB",
+      "away_team": "DAL",
+      "home_win": 1,
+      "home_probability": 0.4831596575134707,
+      "pick": "DAL",
+      "correct": false
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_HOU_JAX",
+      "home_team": "JAX",
+      "away_team": "HOU",
+      "home_win": 0,
+      "home_probability": 0.7332854278877684,
+      "pick": "JAX",
+      "correct": false
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_LAC_KC",
+      "home_team": "KC",
+      "away_team": "LAC",
+      "home_win": 1,
+      "home_probability": 0.7881126412824614,
+      "pick": "KC",
+      "correct": true
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_NO_NYG",
+      "home_team": "NYG",
+      "away_team": "NO",
+      "home_win": 0,
+      "home_probability": 0.57576533607767,
+      "pick": "NYG",
+      "correct": false
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_NYJ_NE",
+      "home_team": "NE",
+      "away_team": "NYJ",
+      "home_win": 1,
+      "home_probability": 0.7538774384276146,
+      "pick": "NE",
+      "correct": true
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_PIT_TB",
+      "home_team": "TB",
+      "away_team": "PIT",
+      "home_win": 0,
+      "home_probability": 0.4026133098403509,
+      "pick": "PIT",
+      "correct": true
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_SEA_DEN",
+      "home_team": "DEN",
+      "away_team": "SEA",
+      "home_win": 1,
+      "home_probability": 0.5090025239044365,
+      "pick": "DEN",
+      "correct": true
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_TEN_IND",
+      "home_team": "IND",
+      "away_team": "TEN",
+      "home_win": 0,
+      "home_probability": 0.7049085655104097,
+      "pick": "IND",
+      "correct": false
+    },
+    {
+      "model": "Gradient boosted",
+      "game_id": "2026_06_WAS_SF",
+      "home_team": "SF",
+      "away_team": "WAS",
+      "home_win": 1,
+      "home_probability": 0.7516412858341306,
+      "pick": "SF",
+      "correct": true
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_ARI_LA",
+      "home_team": "LA",
+      "away_team": "ARI",
+      "home_win": 0,
+      "home_probability": 0.7562930553614283,
+      "pick": "LA",
+      "correct": false
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_BAL_CLE",
+      "home_team": "CLE",
+      "away_team": "BAL",
+      "home_win": 1,
+      "home_probability": 0.25678263277776553,
+      "pick": "BAL",
+      "correct": false
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_BUF_LV",
+      "home_team": "LV",
+      "away_team": "BUF",
+      "home_win": 0,
+      "home_probability": 0.30125053257560347,
+      "pick": "BUF",
+      "correct": true
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_CAR_PHI",
+      "home_team": "PHI",
+      "away_team": "CAR",
+      "home_win": 0,
+      "home_probability": 0.3875642138440128,
+      "pick": "CAR",
+      "correct": true
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_CHI_ATL",
+      "home_team": "ATL",
+      "away_team": "CHI",
+      "home_win": 0,
+      "home_probability": 0.5639073847948302,
+      "pick": "ATL",
+      "correct": false
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_DAL_GB",
+      "home_team": "GB",
+      "away_team": "DAL",
+      "home_win": 1,
+      "home_probability": 0.5489298611526692,
+      "pick": "GB",
+      "correct": true
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_HOU_JAX",
+      "home_team": "JAX",
+      "away_team": "HOU",
+      "home_win": 0,
+      "home_probability": 0.6953523708745094,
+      "pick": "JAX",
+      "correct": false
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_LAC_KC",
+      "home_team": "KC",
+      "away_team": "LAC",
+      "home_win": 1,
+      "home_probability": 0.7815954997536,
+      "pick": "KC",
+      "correct": true
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_NO_NYG",
+      "home_team": "NYG",
+      "away_team": "NO",
+      "home_win": 0,
+      "home_probability": 0.5675013535551855,
+      "pick": "NYG",
+      "correct": false
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_NYJ_NE",
+      "home_team": "NE",
+      "away_team": "NYJ",
+      "home_win": 1,
+      "home_probability": 0.6645932749197002,
+      "pick": "NE",
+      "correct": true
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_PIT_TB",
+      "home_team": "TB",
+      "away_team": "PIT",
+      "home_win": 0,
+      "home_probability": 0.4683840890982098,
+      "pick": "PIT",
+      "correct": true
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_SEA_DEN",
+      "home_team": "DEN",
+      "away_team": "SEA",
+      "home_win": 1,
+      "home_probability": 0.448717429702479,
+      "pick": "SEA",
+      "correct": false
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_TEN_IND",
+      "home_team": "IND",
+      "away_team": "TEN",
+      "home_win": 0,
+      "home_probability": 0.6746772772251408,
+      "pick": "IND",
+      "correct": false
+    },
+    {
+      "model": "Production QB+ rebuilt inputs",
+      "game_id": "2026_06_WAS_SF",
+      "home_team": "SF",
+      "away_team": "WAS",
+      "home_win": 1,
+      "home_probability": 0.798978886859296,
+      "pick": "SF",
+      "correct": true
+    }
+  ],
+  "limitations": [
+    "Retrospective Week 6 reconstruction, not forecasts actually issued before kickoff.",
+    "Upstream historical statistics may have been corrected since the games.",
+    "QB selection uses previous-game passer proxy consistently; sourced starter overrides are not applied.",
+    "Week 6 outcomes are used only for grading, never fitting or selecting settings.",
+    "2022-2024 has been used for prior model research; 2025 and future prospective weeks matter too.",
+    "No guarantee that any model exceeds 66.3%; do not merge based on training accuracy."
+  ]
+}

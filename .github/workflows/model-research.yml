@@ -1,0 +1,48 @@
+name: Week 6 model research
+on:
+  push:
+    branches: [codex/week6-model-comparison]
+    paths:
+      - 'src/ml/model_comparison*.py'
+      - 'src/features/research_qb_proxy.py'
+      - '.github/workflows/model-research.yml'
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements-automation.txt
+      - run: pip install -r requirements-automation.txt
+      - name: Rebuild historical nflverse inputs
+        run: |
+          python -m src.data.weekly_stats
+          python -m src.features.expanded_team_stats
+          python -m src.features.rolling_stats
+          python -m src.features.preseason_strength
+          python -m src.features.blended_features
+          python -m src.features.matchup_features_v2
+          python -m src.features.pregame_features_v4
+          python -m src.features.game_context
+          python -m src.features.qb_stats
+          python -m src.features.research_qb_proxy
+          python -m src.features.qb_matchup_features
+      - name: Compare three models with temporal holdouts
+        run: python -m src.ml.model_comparison
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: week6-model-research
+          path: research/week6/
+          if-no-files-found: warn
+          retention-days: 30

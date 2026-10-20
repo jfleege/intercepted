@@ -156,7 +156,7 @@ def generate(rows, games, season, week, now):
     records = [r for r in records if stamp(starts[r['game_id']]) > stamp(now)]
     if not records:
         raise DataPending('All remaining games reached kickoff during processing')
-    print(f'Features through Week {week - 1}; saved weights trained through {metadata["latest_training_season"]} Week {metadata["latest_training_week"]}.')
+    print(f"Features through Week {week - 1}; training cutoffs: " + str({m: (model_metadata(metadata, m)['latest_training_season'], model_metadata(metadata, m)['latest_training_week']) for m in models}))
     return {'season': season, 'week': week, 'count': len(records), 'model': 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus', 'models': list(models), 'generated_at': now,
             'features_through_week': week - 1, 'training_cutoff': [metadata['latest_training_season'], metadata['latest_training_week']],
             'qb_projection_method': 'Game-specific sourced reports; otherwise unconfirmed prior-week passer', 'games': records}, metadata

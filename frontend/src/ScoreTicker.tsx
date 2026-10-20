@@ -1,3 +1,5 @@
+import { probability } from "./predictionModels";
+import type { Model } from "./predictionModels";
 import { useEffect, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import "./ScoreTicker.css";
@@ -9,6 +11,8 @@ type Forecast = {
   away_team: string;
   home_win_prob_v4_a: number;
   home_win_prob_v4_qb_plus: number;
+  home_win_prob_v5_qb_plus?: number;
+  home_win_prob_v5_boosted?: number;
 };
 type Competitor = { homeAway: string; score?: string; team: { abbreviation: string } };
 type ScoreEvent = {
@@ -21,7 +25,7 @@ type Props = {
   games: Forecast[];
   season: number;
   week: number;
-  model: "v4_a" | "v4_qb_plus";
+  model: Model;
   onSelect: (gameId: string) => void;
 };
 
@@ -87,7 +91,7 @@ export default function ScoreTicker({ games, season, week, model, onSelect }: Pr
         weekday: "short", hour: "numeric", minute: "2-digit", timeZoneName: "short",
       }).format(new Date(event.date)) : event.status.type.shortDetail;
     } else if (!failed && !updated) status = "LOADING SCORES";
-    const homeProb = model === "v4_a" ? game.home_win_prob_v4_a : game.home_win_prob_v4_qb_plus;
+    const homeProb = probability(game, model);
     return { game, status, live: state === "in" && !failed, homeScore: score("home"), awayScore: score("away"),
       pick: homeProb >= 0.5 ? game.home_team : game.away_team, probability: Math.max(homeProb, 1 - homeProb) };
   }), [games, feed, model, failed, updated]);

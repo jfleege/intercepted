@@ -1,4 +1,5 @@
-export type Model = "v4_a" | "v4_qb_plus";
+import type { Model } from "./predictionModels.ts";
+export type { Model } from "./predictionModels.ts";
 export type Line = {
   game_id: string; home_team: string; away_team: string; kickoff: string;
   bookmaker: string; home_price: number; away_price: number;
@@ -45,8 +46,10 @@ export function freshQuote(line: Line, now: number): boolean {
 
 export function candidates(line: Line, model: Model, threshold: number, now: number): Candidate[] {
   if (!Number.isFinite(threshold) || threshold < 0 || threshold > 1) throw Error("Invalid qualification threshold");
+  const saved = line.probabilities[model];
+  if (typeof saved !== "number" || !Number.isFinite(saved)) return [];
   return [true, false].map(home => {
-    const probability = home ? line.probabilities[model] : 1 - line.probabilities[model];
+    const probability = home ? saved : 1 - saved;
     const price = home ? line.home_price : line.away_price;
     const ev = expectedReturn(probability, price);
     return {team: home ? line.home_team : line.away_team, price, probability,
@@ -90,7 +93,7 @@ export function parseBrowserLedger(raw: string | null): BrowserSelection[] {
     if (!r || typeof r !== "object") return false;
     const textFields: (keyof BrowserSelection)[] = ["selection_id", "game_id", "home_team", "away_team", "team", "bookmaker", "odds_snapshot_id", "forecast_snapshot_id"];
     if (!textFields.every(k => typeof r[k] === "string" && Boolean(r[k]))) return false;
-    if (r.kind !== "browser" || !["v4_a", "v4_qb_plus"].includes(r.model) || ![r.home_team,r.away_team].includes(r.team)) return false;
+    if (r.kind !== "browser" || !["v4_a", "v4_qb_plus", "v5_qb_plus", "v5_boosted"].includes(r.model) || ![r.home_team,r.away_team].includes(r.team)) return false;
     const nums = [r.stake, r.price, r.model_probability, r.market_probability, r.expected_return, r.qualification_threshold];
     if (!nums.every(n => typeof n === "number" && Number.isFinite(n)) || r.stake <= 0 || Math.abs(r.price) < 100) return false;
     if (![r.model_probability,r.market_probability,r.qualification_threshold].every(p => p >= 0 && p <= 1)) return false;

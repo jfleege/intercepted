@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import "./ReviewPages.css";
 import "./PerformancePage.css";
 
-type Model = "v4_qb_plus" | "v4_a";
+import type { Model } from "./predictionModels";
+import { MODEL_LABELS, MODEL_ORDER } from "./predictionModels";
 type Row = {
   game_id: string; game_date: string; season: number; week: number;
   home_team: string; away_team: string; probability: number; pick: string;
@@ -14,8 +15,8 @@ type Summary = { games: number; correct: number; incorrect: number; ties: number
 type Point = { game_number: number; game_id: string; label: string; date: string; correct: boolean; game_brier: number; accuracy: number; brier: number; log_loss: number };
 type Dataset = { rows: Row[]; summary: Summary; trend: Point[]; weekly: (Summary & { season: number; week: number })[]; calibration: { bin: string; games: number; predicted: number; observed: number; lower: number; upper: number }[] };
 type Payload = { schema_version: number; updated_at: string; snapshot_count: number; datasets: Record<string, Record<Model, Dataset>> };
-const names: Record<Model, string> = { v4_qb_plus: "QB+", v4_a: "Base" };
-const models: Model[] = ["v4_qb_plus", "v4_a"];
+const names = MODEL_LABELS;
+const models = MODEL_ORDER;
 const pct = (value: number | null) => value === null ? "—" : `${(value * 100).toFixed(1)}%`;
 const decimal = (value: number | null) => value === null ? "—" : value.toFixed(4);
 function Empty({ children }: { children: React.ReactNode }) { return <div className="review-empty"><h3>No graded games yet</h3><p>{children}</p></div>; }
@@ -42,7 +43,7 @@ export default function PerformancePage() {
   const [error, setError] = useState("");
   const [attempt, setAttempt] = useState(0);
   const [dataset, setDataset] = useState("verified");
-  const [model, setModel] = useState<Model | "compare">("v4_qb_plus");
+  const [model, setModel] = useState<Model | "compare">("v5_qb_plus");
   const [metric, setMetric] = useState<"accuracy" | "brier">("accuracy");
   const [page, setPage] = useState(0);
   useEffect(() => {
@@ -66,7 +67,7 @@ export default function PerformancePage() {
   };
   return <div className="review-page performance-page">
     <header className="review-heading"><div><p className="eyebrow">THE TRACK RECORD</p><h1>Performance</h1><p>Original forecasts. Final results. A record that grows with every game.</p></div><span className="review-draft">{payload ? `${payload.snapshot_count} ARCHIVED SNAPSHOTS` : "RESULTS TRACKER"}</span></header>
-    <div className="review-controls"><div className="review-tabs" aria-label="Evaluation dataset">{[["verified", "Verified pregame"], ["retrospective", "Late / unverified"], ["backtest", "Historical backtest"]].map(([value, label]) => <button type="button" key={value} aria-pressed={dataset === value} onClick={() => { setDataset(value); setPage(0); }}>{label}</button>)}</div><label>Model <select value={model} onChange={e => { setModel(e.target.value as Model | "compare"); setPage(0); }}><option value="v4_qb_plus">QB+</option><option value="v4_a">Base</option><option value="compare">Compare both</option></select></label></div>
+    <div className="review-controls"><div className="review-tabs" aria-label="Evaluation dataset">{[["verified", "Verified pregame"], ["retrospective", "Late / unverified"], ["backtest", "Historical backtest"]].map(([value, label]) => <button type="button" key={value} aria-pressed={dataset === value} onClick={() => { setDataset(value); setPage(0); }}>{label}</button>)}</div><label>Model <select value={model} onChange={e => { setModel(e.target.value as Model | "compare"); setPage(0); }}>{models.map(m => <option key={m} value={m}>{names[m]}</option>)}<option value="compare">Compare original QB+ / Base</option></select></label></div>
     <div className="review-notice">{descriptions[dataset]} {payload && <span>Updated {new Date(payload.updated_at).toLocaleString()}.</span>}</div>
     {error && <div className="review-notice" role="alert">{error} <button type="button" onClick={() => { setError(""); setAttempt(v => v + 1); }}>Retry loading</button></div>}
     {!payload && !error && <p className="performance-loading" role="status">Loading archived forecasts and results…</p>}

@@ -1,3 +1,5 @@
+import { probability, MODEL_LABELS } from "./predictionModels";
+import type { Model } from "./predictionModels";
 
 import { useEffect, useState } from "react";
 import draftKingsLogo from "./assets/draftkings.png";
@@ -8,9 +10,11 @@ type Game = {
   away_team: string;
   home_win_prob_v4_a: number;
   home_win_prob_v4_qb_plus: number;
+  home_win_prob_v5_qb_plus?: number;
+  home_win_prob_v5_boosted?: number;
 };
 
-type Model = "v4_a" | "v4_qb_plus";
+
 
 type GameOdds = {
   bookmaker: string;
@@ -95,11 +99,7 @@ export default function DashboardMarkets({
     ? data.games[game.game_id] ?? null
     : null;
 
-  const homeModel = game
-    ? model === "v4_a"
-      ? game.home_win_prob_v4_a
-      : game.home_win_prob_v4_qb_plus
-    : null;
+  const homeModel = game ? probability(game, model) : null;
 
   const awayModel =
     homeModel === null ? null : 1 - homeModel;
@@ -257,7 +257,7 @@ export default function DashboardMarkets({
           </div>
 
           <span className="dm-source-tag">
-            {model === "v4_qb_plus" ? "QB+" : "BASE"}
+            {MODEL_LABELS[model]}
           </span>
         </div>
 

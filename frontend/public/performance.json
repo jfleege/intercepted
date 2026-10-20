@@ -60198,6 +60198,14 @@
             "observed": 0.3333333333333333,
             "predicted": 0.7396115430352727,
             "upper": 0.7923450448735121
+          },
+          {
+            "bin": "80\u201390%",
+            "games": 1,
+            "lower": 0.20654329147389294,
+            "observed": 1.0,
+            "predicted": 0.8192490717005141,
+            "upper": 1.0
           }
         ],
         "rows": [
@@ -60592,21 +60600,21 @@
             "week": 6
           },
           {
-            "away_score": null,
+            "away_score": 17,
             "away_team": "WAS",
-            "brier": null,
+            "brier": 0.032670898081125894,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-19",
             "game_id": "2026_06_WAS_SF",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 23,
             "home_team": "SF",
             "kickoff": "2026-10-20T00:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.19936712451277896,
             "model": "v4_a",
             "model_version": "ed5b4ccf5c21",
-            "outcome": null,
+            "outcome": 1,
             "pick": "SF",
             "probability": 0.8192490717005141,
             "provenance": {
@@ -60617,20 +60625,20 @@
             "saved_at": "2026-10-09T22:34:27-05:00",
             "season": 2026,
             "snapshot_id": "a72c51433fc63b933c86479f264997d7f6e05e60a8dd3f6cc3645f01c87b4ae9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 6
           }
         ],
         "summary": {
-          "accuracy": 0.38461538461538464,
-          "brier": 0.3070623828530754,
+          "accuracy": 0.42857142857142855,
+          "brier": 0.2874629910836504,
           "cancelled": 0,
-          "correct": 5,
-          "games": 13,
+          "correct": 6,
+          "games": 14,
           "incorrect": 8,
-          "log_loss": 0.8169859679006799,
-          "pending": 1,
+          "log_loss": 0.7728703362301156,
+          "pending": 0,
           "ties": 0
         },
         "trend": [
@@ -60776,18 +60784,29 @@
             "game_number": 13,
             "label": "DAL @ GB",
             "log_loss": 0.8169859679006799
+          },
+          {
+            "accuracy": 0.42857142857142855,
+            "brier": 0.2874629910836504,
+            "correct": true,
+            "date": "2026-10-19",
+            "game_brier": 0.032670898081125894,
+            "game_id": "2026_06_WAS_SF",
+            "game_number": 14,
+            "label": "WAS @ SF",
+            "log_loss": 0.7728703362301156
           }
         ],
         "weekly": [
           {
-            "accuracy": 0.38461538461538464,
-            "brier": 0.3070623828530754,
+            "accuracy": 0.42857142857142855,
+            "brier": 0.2874629910836504,
             "cancelled": 0,
-            "correct": 5,
-            "games": 13,
+            "correct": 6,
+            "games": 14,
             "incorrect": 8,
-            "log_loss": 0.8169859679006799,
-            "pending": 1,
+            "log_loss": 0.7728703362301156,
+            "pending": 0,
             "season": 2026,
             "ties": 0,
             "week": 6
@@ -60843,6 +60862,14 @@
             "observed": 0.3333333333333333,
             "predicted": 0.7466048584160975,
             "upper": 0.7923450448735121
+          },
+          {
+            "bin": "80\u201390%",
+            "games": 1,
+            "lower": 0.20654329147389294,
+            "observed": 1.0,
+            "predicted": 0.890937726138606,
+            "upper": 1.0
           }
         ],
         "rows": [
@@ -61237,21 +61264,21 @@
             "week": 6
           },
           {
-            "away_score": null,
+            "away_score": 17,
             "away_team": "WAS",
-            "brier": null,
+            "brier": 0.011894579579817705,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-19",
             "game_id": "2026_06_WAS_SF",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 23,
             "home_team": "SF",
             "kickoff": "2026-10-20T00:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.11548074605422436,
             "model": "v4_qb_plus",
             "model_version": "ed5b4ccf5c21",
-            "outcome": null,
+            "outcome": 1,
             "pick": "SF",
             "probability": 0.890937726138606,
             "provenance": {
@@ -61262,20 +61289,20 @@
             "saved_at": "2026-10-09T22:34:27-05:00",
             "season": 2026,
             "snapshot_id": "a72c51433fc63b933c86479f264997d7f6e05e60a8dd3f6cc3645f01c87b4ae9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 6
           }
         ],
         "summary": {
-          "accuracy": 0.3076923076923077,
-          "brier": 0.3171168394603636,
+          "accuracy": 0.35714285714285715,
+          "brier": 0.2953152494688961,
           "cancelled": 0,
-          "correct": 4,
-          "games": 13,
+          "correct": 5,
+          "games": 14,
           "incorrect": 9,
-          "log_loss": 0.8391609643965237,
-          "pending": 1,
+          "log_loss": 0.7874695202292166,
+          "pending": 0,
           "ties": 0
         },
         "trend": [
@@ -61421,18 +61448,29 @@
             "game_number": 13,
             "label": "DAL @ GB",
             "log_loss": 0.8391609643965237
+          },
+          {
+            "accuracy": 0.35714285714285715,
+            "brier": 0.2953152494688961,
+            "correct": true,
+            "date": "2026-10-19",
+            "game_brier": 0.011894579579817705,
+            "game_id": "2026_06_WAS_SF",
+            "game_number": 14,
+            "label": "WAS @ SF",
+            "log_loss": 0.7874695202292166
           }
         ],
         "weekly": [
           {
-            "accuracy": 0.3076923076923077,
-            "brier": 0.3171168394603636,
+            "accuracy": 0.35714285714285715,
+            "brier": 0.2953152494688961,
             "cancelled": 0,
-            "correct": 4,
-            "games": 13,
+            "correct": 5,
+            "games": 14,
             "incorrect": 9,
-            "log_loss": 0.8391609643965237,
-            "pending": 1,
+            "log_loss": 0.7874695202292166,
+            "pending": 0,
             "season": 2026,
             "ties": 0,
             "week": 6
@@ -61445,5 +61483,5 @@
   "schema_version": 1,
   "snapshot_count": 3,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-10-19T19:21:48.208344+00:00"
+  "updated_at": "2026-10-20T13:01:55.076155+00:00"
 }

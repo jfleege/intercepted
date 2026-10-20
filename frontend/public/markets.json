@@ -15,7 +15,7 @@
     "2026_06_TEN_IND",
     "2026_06_WAS_SF"
   ],
-  "generated_at": "2026-10-19T19:21:49.881058+00:00",
+  "generated_at": "2026-10-20T13:01:56.025706+00:00",
   "lines": [
     {
       "away_market_probability": 0.5720596355604638,
@@ -295,7 +295,7 @@
       "away_price": 300,
       "away_team": "WAS",
       "bookmaker": "DraftKings",
-      "can_record": true,
+      "can_record": false,
       "forecast_observed_at": "2026-10-18T16:39:10.316756+00:00",
       "forecast_snapshot_id": "d031ed83e388408293ea54aac5673e08ec110e754671424abf3b1ed679f241a0",
       "game_id": "2026_06_WAS_SF",
@@ -483,16 +483,16 @@
       "week": 6
     },
     "2026_06_WAS_SF": {
-      "away_score": null,
+      "away_score": 17,
       "away_team": "WAS",
       "game_date": "2026-10-19",
       "game_id": "2026_06_WAS_SF",
-      "home_score": null,
+      "home_score": 23,
       "home_team": "SF",
       "kickoff": "2026-10-20T00:15:00+00:00",
       "season": 2026,
       "source": "nflverse schedules",
-      "status": "pending",
+      "status": "final",
       "week": 6
     }
   },
@@ -673,7 +673,7 @@
       "bookmaker": "DraftKings",
       "forecast_snapshot_id": "00744046585cb9947e6150b07e540327b8f4d46c327ae91396d307984cfa86c2",
       "game_id": "2026_06_WAS_SF",
-      "grade": "pending",
+      "grade": "win",
       "home_team": "SF",
       "kickoff": "2026-10-20T00:15:00Z",
       "kind": "baseline",
@@ -681,7 +681,7 @@
       "model_probability": 0.806209000435246,
       "odds_snapshot_id": "2e7a32ece4e69762643aee7338ecfc0d15776928b3c1ca1ed9adb957e7648181",
       "price": -425,
-      "profit": null,
+      "profit": 0.23529411764705888,
       "recorded_at": "2026-10-17T16:28:25.609612+00:00",
       "selection_id": "b8d2ff9c41c4f1f903cb84f83090f14c04cfcd9647d6712e6407a47e754c8b96",
       "stake": 1,
@@ -863,7 +863,7 @@
       "bookmaker": "DraftKings",
       "forecast_snapshot_id": "00744046585cb9947e6150b07e540327b8f4d46c327ae91396d307984cfa86c2",
       "game_id": "2026_06_WAS_SF",
-      "grade": "pending",
+      "grade": "win",
       "home_team": "SF",
       "kickoff": "2026-10-20T00:15:00Z",
       "kind": "baseline",
@@ -871,7 +871,7 @@
       "model_probability": 0.8192490717005141,
       "odds_snapshot_id": "2e7a32ece4e69762643aee7338ecfc0d15776928b3c1ca1ed9adb957e7648181",
       "price": -425,
-      "profit": null,
+      "profit": 0.23529411764705888,
       "recorded_at": "2026-10-17T16:28:25.609612+00:00",
       "selection_id": "67bb4e54904a410b8d121585609e505a79e34cce6c96a64449be688c73d5fba6",
       "stake": 1,
@@ -996,25 +996,25 @@
   "summary": {
     "v4_a": {
       "losses": 7,
-      "profit": -4.602684783931508,
+      "profit": -4.36739066628445,
       "pushes": 0,
-      "risked_units": 12,
-      "roi": -0.3835570653276257,
+      "risked_units": 13,
+      "roi": -0.3359531281757269,
       "selections": 13,
-      "settled": 12,
+      "settled": 13,
       "voids": 0,
-      "wins": 5
+      "wins": 6
     },
     "v4_qb_plus": {
       "losses": 7,
-      "profit": -4.7603424415891675,
+      "profit": -4.5250483239421095,
       "pushes": 0,
-      "risked_units": 12,
-      "roi": -0.396695203465764,
+      "risked_units": 13,
+      "roi": -0.3480806403032392,
       "selections": 13,
-      "settled": 12,
+      "settled": 13,
       "voids": 0,
-      "wins": 5
+      "wins": 6
     }
   }
 }

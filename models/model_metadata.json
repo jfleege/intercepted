@@ -1,14 +1,12 @@
 {
-  "created_at_utc": "2026-10-09T20:59:10.562749+00:00",
   "algorithm": "logistic_regression",
-  "regularization_c": 0.01,
-  "training_games": 1930,
+  "created_at_utc": "2026-10-09T20:59:10.562749+00:00",
   "first_training_season": 2019,
   "latest_training_season": 2026,
   "latest_training_week": 5,
   "models": {
     "v4_a": {
-      "file": "v4_a.joblib",
+      "feature_count": 10,
       "features": [
         "diff_blended_off_epa",
         "diff_blended_def_epa",
@@ -21,10 +19,10 @@
         "diff_v4_def_pass_success_allowed",
         "diff_v4_def_run_success_allowed"
       ],
-      "feature_count": 10
+      "file": "v4_a.joblib"
     },
     "v4_qb_plus": {
-      "file": "v4_qb_plus.joblib",
+      "feature_count": 18,
       "features": [
         "diff_blended_off_epa",
         "diff_blended_def_epa",
@@ -45,7 +43,117 @@
         "diff_qb_recent_avg_intended_air_yards",
         "diff_qb_recent_aggressiveness"
       ],
-      "feature_count": 18
+      "file": "v4_qb_plus.joblib"
+    },
+    "v5_boosted": {
+      "algorithm": "HistGradientBoostingClassifier",
+      "created_at_utc": "2026-10-20T17:14:31.751692+00:00",
+      "feature_count": 25,
+      "features": [
+        "diff_blended_off_epa",
+        "diff_blended_def_epa",
+        "diff_v4_off_pass_epa",
+        "diff_v4_off_run_epa",
+        "diff_v4_def_pass_epa",
+        "diff_v4_def_run_epa",
+        "diff_v4_off_pass_success",
+        "diff_v4_off_run_success",
+        "diff_v4_def_pass_success_allowed",
+        "diff_v4_def_run_success_allowed",
+        "diff_qb_career_completion_percentage_above_expectation",
+        "diff_qb_recent_completion_percentage_above_expectation",
+        "qb_experience_diff",
+        "home_qb_projection_missing",
+        "away_qb_projection_missing",
+        "diff_qb_recent_avg_time_to_throw",
+        "diff_qb_recent_avg_intended_air_yards",
+        "diff_qb_recent_aggressiveness",
+        "rest_diff",
+        "home_short_week",
+        "away_short_week",
+        "home_extended_rest",
+        "away_extended_rest",
+        "neutral_site",
+        "division_game"
+      ],
+      "file": "v5_boosted.joblib",
+      "latest_training_season": 2026,
+      "latest_training_week": 6,
+      "parameters_source": "Week 6 research; settings selected from seasons through 2025",
+      "purpose": "Prospective challenger; not validated as more accurate",
+      "settings": {
+        "categorical_features": "from_dtype",
+        "class_weight": null,
+        "early_stopping": false,
+        "interaction_cst": null,
+        "l2_regularization": 10.0,
+        "learning_rate": 0.05,
+        "loss": "log_loss",
+        "max_bins": 255,
+        "max_depth": null,
+        "max_features": 1.0,
+        "max_iter": 150,
+        "max_leaf_nodes": 3,
+        "min_samples_leaf": 30,
+        "monotonic_cst": null,
+        "n_iter_no_change": 10,
+        "random_state": 42,
+        "scoring": "loss",
+        "tol": 1e-07,
+        "validation_fraction": 0.1,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "training_games": 1957
+    },
+    "v5_qb_plus": {
+      "algorithm": "LogisticRegression",
+      "created_at_utc": "2026-10-20T17:14:31.577735+00:00",
+      "feature_count": 18,
+      "features": [
+        "diff_blended_off_epa",
+        "diff_blended_def_epa",
+        "diff_v4_off_pass_epa",
+        "diff_v4_off_run_epa",
+        "diff_v4_def_pass_epa",
+        "diff_v4_def_run_epa",
+        "diff_v4_off_pass_success",
+        "diff_v4_off_run_success",
+        "diff_v4_def_pass_success_allowed",
+        "diff_v4_def_run_success_allowed",
+        "diff_qb_career_completion_percentage_above_expectation",
+        "diff_qb_recent_completion_percentage_above_expectation",
+        "qb_experience_diff",
+        "home_qb_projection_missing",
+        "away_qb_projection_missing",
+        "diff_qb_recent_avg_time_to_throw",
+        "diff_qb_recent_avg_intended_air_yards",
+        "diff_qb_recent_aggressiveness"
+      ],
+      "file": "v5_qb_plus.joblib",
+      "latest_training_season": 2026,
+      "latest_training_week": 6,
+      "parameters_source": "Week 6 research; settings selected from seasons through 2025",
+      "purpose": "Prospective challenger; not validated as more accurate",
+      "settings": {
+        "C": 0.01,
+        "class_weight": null,
+        "dual": false,
+        "fit_intercept": true,
+        "intercept_scaling": 1,
+        "l1_ratio": 0.0,
+        "max_iter": 2000,
+        "n_jobs": null,
+        "penalty": "deprecated",
+        "random_state": 42,
+        "solver": "lbfgs",
+        "tol": 0.0001,
+        "verbose": 0,
+        "warm_start": false
+      },
+      "training_games": 1957
     }
-  }
+  },
+  "regularization_c": 0.01,
+  "training_games": 1930
 }

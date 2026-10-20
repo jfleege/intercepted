@@ -1,0 +1,32 @@
+{
+  "labels": {
+    "v4_a": "Base",
+    "v4_qb_plus": "QB+ (original)",
+    "v5_boosted": "Gradient Boosted",
+    "v5_qb_plus": "Updated QB+"
+  },
+  "weeks": [
+    {
+      "count": 14,
+      "file": "predictions/2026-week-7.json",
+      "models": [
+        "v4_a",
+        "v4_qb_plus",
+        "v5_qb_plus",
+        "v5_boosted"
+      ],
+      "season": 2026,
+      "week": 7
+    },
+    {
+      "count": 14,
+      "file": "predictions/2026-week-6.json",
+      "models": [
+        "v4_a",
+        "v4_qb_plus"
+      ],
+      "season": 2026,
+      "week": 6
+    }
+  ]
+}

@@ -621,7 +621,7 @@ const focusedGame =
                     <><strong>{game.result.away_score}–{game.result.home_score}</strong><small>
                     {game.result.home_score === game.result.away_score ? "Tie" :
                       (winner === (Number(game.result.home_score) > Number(game.result.away_score) ? game.home_team : game.away_team) ? "Correct" : "Incorrect")}</small></> :
-                    game.result?.status ?? "Pending"}</td>
+                    game.result?.status ?? "Pending"}</td>}
                 </tr>
               );
             })}

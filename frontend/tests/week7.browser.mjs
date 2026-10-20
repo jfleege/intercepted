@@ -15,10 +15,14 @@ try {
   const errors = [];
   page.on("pageerror", error => errors.push(error.message));
   await page.route("**/site.api.espn.com/**", route=>route.fulfill({json:{events:[]}}));
+  const predictions = await (await fetch(origin + "predictions.json")).json();
+  const first = [...predictions.games].sort((a,b)=>a.game_date.localeCompare(b.game_date)||a.game_id.localeCompare(b.game_id))[0];
   await page.goto(origin);
   await page.getByRole("button",{name:"Updated QB+", exact:true}).waitFor();
   await page.getByRole("button",{name:"Gradient Boosted",exact:true}).click();
   assert.equal(await page.getByRole("button",{name:"Gradient Boosted",exact:true}).getAttribute("aria-pressed"),"true");
+  await page.waitForFunction(expected => document.querySelector(".dash-prob-pill")?.textContent === expected,
+    (Math.max(first.home_win_prob_v5_boosted,1-first.home_win_prob_v5_boosted)*100).toFixed(1)+"%");
   await page.getByRole("button",{name:"Base",exact:true}).click();
   await page.getByLabel("Prediction week").selectOption("2026-6");
   await page.getByText("Saved pregame forecasts", {exact:false}).waitFor();

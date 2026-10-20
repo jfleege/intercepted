@@ -55,6 +55,6 @@ The branch-only **Week 6 model research** Actions workflow rebuilds the input ta
 
 Verified run (including coverage gates): https://github.com/jfleege/intercepted/actions/runs/39460860204
 
-Feature matrix SHA-256: `686d44c98f39c88dafb7c83bffbdd928c9b69c13ff3091affba552fbd7616095`.
+Feature matrix SHA-256: `15211aee96a8ffc46eccd4eaebb17c8d73477aec3c335ae538a28117dc062188`.
 
 No merge or production replacement is recommended on this evidence. Keep these candidates for research and measure the strongest candidate prospectively across additional weeks.

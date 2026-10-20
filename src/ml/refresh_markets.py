@@ -58,7 +58,7 @@ def comparison(snapshot, game_id, quote, forecast, game):
 
 
 def paper_record(line, model, team, now, stake=1, kind='baseline'):
-    if team not in (line['home_team'], line['away_team']) or model not in MODELS:
+    if team not in (line['home_team'], line['away_team']) or model not in line['probabilities'] or model not in MODELS:
         raise ValueError('Invalid paper selection')
     if not math.isfinite(stake) or stake <= 0:
         raise ValueError('Stake must be positive paper units')
@@ -122,10 +122,12 @@ def refresh(root=ROOT, now=None, custom=None):
             result = results.get(game_id)
             available = [(f, g) for f in forecasts for g in f['games'] if g['game_id'] == game_id
                          and stamp(f['observed_at']) <= stamp(now)
-                         and eligibility(f, g, result)[0] == 'verified']
+                         and any(eligibility(f, g, result, model)[0] == 'verified' for model in g['probabilities'])]
             if not available:
                 continue
             forecast, game = available[-1]
+            game = {**game, 'probabilities': {model: p for model, p in game['probabilities'].items()
+                    if eligibility(forecast, game, result, model)[0] == 'verified'}}
             try:
                 line = comparison(snapshot, game_id, quote, forecast, game)
             except (KeyError, ValueError):
@@ -136,7 +138,9 @@ def refresh(root=ROOT, now=None, custom=None):
     for line in latest.values():
         if not line['can_record']:
             continue
-        for model in MODELS:
+        for model in line['probabilities']:
+            if model not in MODELS:
+                continue
             team = line['home_team'] if line['probabilities'][model] >= .5 else line['away_team']
             record = paper_record(line, model, team, now)
             if record['selection_id'] not in records:

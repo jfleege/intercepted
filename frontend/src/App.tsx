@@ -1,6 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import "./DashboardLayout.css";
+import { probability, availableModels, MODEL_LABELS } from "./predictionModels";
+import type { Model } from "./predictionModels";
+import "./PredictionHistory.css";
 import MatchupModal from "./MatchupModal";
 import playerBody from "./assets/playeronly.png";
 import football from "./assets/ball.png";
@@ -11,6 +14,9 @@ import ScoreTicker from "./ScoreTicker";
 import { PerformancePage, MarketsPage } from "./ReviewPages";
 
 type Game = {
+  home_win_prob_v5_qb_plus?: number;
+  home_win_prob_v5_boosted?: number;
+  result?: {status: string; home_score: number | null; away_score: number | null};
   game_id: string;
   season: number;
   week: number;
@@ -33,9 +39,11 @@ type PredictionData = {
   season: number;
   week: number;
   count: number;
+  archived?: boolean;
+  policy?: string;
   games: Game[];
 };
-type Model = "v4_qb_plus" | "v4_a";
+type WeekEntry = {season: number; week: number; file: string; count: number};
 const teams: Record<string, string> = {
   ARI: "Cardinals",
   ATL: "Falcons",
@@ -70,11 +78,6 @@ const teams: Record<string, string> = {
   TEN: "Titans",
   WAS: "Commanders",
 };
-function probability(game: Game, model: Model) {
-  return model === "v4_a"
-    ? game.home_win_prob_v4_a
-    : game.home_win_prob_v4_qb_plus;
-}
 function percent(value: number) {
   return `${(value * 100).toFixed(1)}%`;
 }
@@ -227,8 +230,15 @@ function App() {
     window.addEventListener("hashchange", navigate);
     return () => window.removeEventListener("hashchange", navigate);
   }, []);
-  const [data, setData] = useState<PredictionData | null>(null);
-  const [model, setModel] = useState<Model>("v4_qb_plus");
+  const [currentData, setCurrentData] = useState<PredictionData | null>(null);
+  const [archivedData, setArchivedData] = useState<Record<string, PredictionData>>({});
+  const [weeks, setWeeks] = useState<WeekEntry[]>([]);
+  const [selectedWeek, setSelectedWeek] = useState("current");
+  const [preferredModel, setModel] = useState<Model>("v5_qb_plus");
+  const data = selectedWeek === "current" ? currentData : archivedData[selectedWeek] ?? null;
+  const archived = selectedWeek !== "current";
+  const modelOptions = availableModels(data?.games ?? [], archived);
+  const model: Model = modelOptions.includes(preferredModel) ? preferredModel : modelOptions[0] ?? "v4_a";
   const [search, setSearch] = useState("");
   const [sort, setSort] = useState("date");
   const [error, setError] = useState("");
@@ -243,12 +253,33 @@ function App() {
         return response.json();
       })
       .then((result: PredictionData) => {
-        setData(result);
+        setCurrentData(result);
       })
       .catch((err) => {
         setError(err.message);
       });
   }, []);
+  useEffect(() => {
+    let active = true;
+    fetch(`${import.meta.env.BASE_URL}prediction_weeks.json`)
+      .then(r => { if (!r.ok) throw Error("Archive index unavailable"); return r.json(); })
+      .then((value: {weeks: WeekEntry[]}) => { if (active) setWeeks(value.weeks); })
+      .catch(() => { /* Current predictions remain usable if no archive has been exported. */ });
+    return () => { active = false; };
+  }, []);
+  useEffect(() => {
+    if (selectedWeek === "current" || archivedData[selectedWeek]) return;
+    const entry = weeks.find(w => `${w.season}-${w.week}` === selectedWeek);
+    if (!entry || !/^predictions\/\d{4}-week-\d{1,2}\.json$/.test(entry.file)) return;
+    const controller = new AbortController();
+    fetch(`${import.meta.env.BASE_URL}${entry.file}`, {signal: controller.signal})
+      .then(r => { if (!r.ok) throw Error("Saved week unavailable"); return r.json(); })
+      .then((value: PredictionData) => {
+        if (!controller.signal.aborted) setArchivedData(previous => ({...previous, [selectedWeek]: value}));
+      })
+      .catch((reason: Error) => { if (!controller.signal.aborted) setError(reason.message); });
+    return () => controller.abort();
+  }, [selectedWeek, weeks, archivedData]);
   const games = useMemo(() => {
     if (!data) return [];
     const query = search.toLowerCase().trim();
@@ -407,7 +438,7 @@ const focusedGame =
     />
   </div>
 </section>
-{data && (
+{data && !archived && (
   <ScoreTicker
     games={data.games}
     season={data.season}
@@ -471,6 +502,15 @@ const focusedGame =
   </div>
 
   <div className="forecast-controls">
+    <label className="prediction-week-label">Prediction week
+      <select className="forecast-sort" value={selectedWeek} onChange={event => {
+        setSelectedWeek(event.target.value); setSelectedGame(null); setFocusedGameId(null); setError("");
+      }}>
+        <option value="current">Current · {currentData?.season ?? "—"} Week {currentData?.week ?? "—"}</option>
+        {weeks.filter(w => w.season !== currentData?.season || w.week !== currentData?.week).map(w =>
+          <option key={`${w.season}-${w.week}`} value={`${w.season}-${w.week}`}>{w.season} · Week {w.week} (saved)</option>)}
+      </select>
+    </label>
     <select
       className="forecast-sort"
       value={sort}
@@ -482,27 +522,16 @@ const focusedGame =
       <option value="closest">Closest matchups</option>
     </select>
 
-    <div className="model-switch">
-      <button
-        type="button"
-        className={model === "v4_qb_plus" ? "active" : ""}
-        onClick={() => setModel("v4_qb_plus")}
-      >
-        QB+ Model
-      </button>
-
-      <button
-        type="button"
-        className={model === "v4_a" ? "active" : ""}
-        onClick={() => setModel("v4_a")}
-      >
-        Base Model
-      </button>
+    <div className="model-switch" aria-label="Forecast model">
+      {modelOptions.map(option => <button key={option} type="button"
+        className={model === option ? "active" : ""} aria-pressed={model === option}
+        onClick={() => setModel(option)}>{MODEL_LABELS[option]}</button>)}
     </div>
   </div>
 </div>
 
           
+            {archived && <p className="prediction-history-note">Saved pregame forecasts · {data?.policy ?? "Loading saved week…"} Models created later are unavailable for this week.</p>}
             {/* loading and errors */}
             {error && (
               <div className="message error">
@@ -533,6 +562,7 @@ const focusedGame =
               <th>MATCHUP</th>
               <th>INTERCEPTED PICK</th>
               <th>WIN PROB.</th>
+              {archived && <th>RESULT</th>}
             </tr>
           </thead>
           <tbody>
@@ -587,6 +617,11 @@ const focusedGame =
                       {percent(Math.max(home, away))}
                     </span>
                   </td>
+                  {archived && <td>{game.result?.status === "final" ?
+                    <><strong>{game.result.away_score}–{game.result.home_score}</strong><small>
+                    {game.result.home_score === game.result.away_score ? "Tie" :
+                      (winner === (Number(game.result.home_score) > Number(game.result.away_score) ? game.home_team : game.away_team) ? "Correct" : "Incorrect")}</small></> :
+                    game.result?.status ?? "Pending"}</td>}
                 </tr>
               );
             })}
@@ -656,14 +691,14 @@ const focusedGame =
 )}
 </section>
 {/* dashboard bottom panels */}
-<section className="dash-bottom-grid">
+{!archived && <section className="dash-bottom-grid">
 <DashboardPlayers />
 
 <DashboardMarkets
   game={focusedGame}
   model={model}
 />
-</section>
+</section>}
           </>}
           {/* footer */}
           <footer className="footer">
@@ -682,6 +717,7 @@ const focusedGame =
         {selectedGame && (
           <MatchupModal
             game={selectedGame}
+            archived={archived}
             model={model}
             onClose={() => setSelectedGame(null)}
           />

@@ -1,3 +1,5 @@
+import { probability, MODEL_LABELS } from "./predictionModels";
+import type { Model } from "./predictionModels";
 
 import { useEffect, useState } from "react";
 import PlayersToWatch from "./PlayersToWatch";
@@ -10,6 +12,8 @@ export type Matchup = {
   away_team: string;
   home_win_prob_v4_a: number;
   home_win_prob_v4_qb_plus: number;
+  home_win_prob_v5_qb_plus?: number;
+  home_win_prob_v5_boosted?: number;
   home_projected_qb_name?: string | null;
   away_projected_qb_name?: string | null;
 };
@@ -33,7 +37,8 @@ type Tab = "overview" | "odds" | "players";
 
 type Props = {
   game: Matchup;
-  model: "v4_a" | "v4_qb_plus";
+  model: Model;
+  archived?: boolean;
   onClose: () => void;
 };
 
@@ -62,6 +67,7 @@ const oddsText = (value: number | null | undefined) => {
 export default function MatchupModal({
   game,
   model,
+  archived = false,
   onClose,
 }: Props) {
   const [tab, setTab] = useState<Tab>("overview");
@@ -84,6 +90,7 @@ export default function MatchupModal({
   // load odds snapshot
   useEffect(() => {
     let active = true;
+    if (archived) return;
 
     fetch(`${import.meta.env.BASE_URL}odds.json`)
       .then((response) => {
@@ -105,12 +112,9 @@ export default function MatchupModal({
     return () => {
       active = false;
     };
-  }, [game.game_id]);
+  }, [game.game_id, archived]);
 
-  const home =
-    model === "v4_a"
-      ? game.home_win_prob_v4_a
-      : game.home_win_prob_v4_qb_plus;
+  const home = probability(game, model);
 
   const away = 1 - home;
 
@@ -118,10 +122,6 @@ export default function MatchupModal({
     home >= 0.5 ? game.home_team : game.away_team;
 
   const winnerProbability = Math.max(home, away);
-
-  const difference =
-    (game.home_win_prob_v4_qb_plus -
-      game.home_win_prob_v4_a) * 100;
 
   const gameDate = new Date(
     `${game.game_date}T12:00:00`
@@ -245,6 +245,7 @@ export default function MatchupModal({
             role="tab"
             aria-selected={tab === "odds"}
             className={tab === "odds" ? "ic-active" : ""}
+            disabled={archived}
             onClick={() => setTab("odds")}
           >
             Vegas Odds
@@ -255,6 +256,7 @@ export default function MatchupModal({
   role="tab"
   aria-selected={tab === "players"}
   className={tab === "players" ? "ic-active" : ""}
+  disabled={archived}
   onClick={() => setTab("players")}
 >
   Players to Watch
@@ -262,6 +264,7 @@ export default function MatchupModal({
         </div>
 
         <div className="ic-content" role="tabpanel">
+          {archived && <p className="ic-footnote">Archived prediction. Current player cards and sportsbook lines are not shown for past weeks.</p>}
           {tab === "overview" && (
             <div className="ic-info-grid">
               <div className="ic-panel">
@@ -283,21 +286,11 @@ export default function MatchupModal({
 
               <div className="ic-panel">
                 <h3>Model comparison</h3>
-                <div className="ic-row">
-                  <span>Base model</span>
-                  <strong>{pct(game.home_win_prob_v4_a)}</strong>
-                </div>
-                <div className="ic-row">
-                  <span>QB+ model</span>
-                  <strong>{pct(game.home_win_prob_v4_qb_plus)}</strong>
-                </div>
-                <div className="ic-row">
-                  <span>Difference</span>
-                  <strong>
-                    {difference > 0 ? "+" : ""}
-                    {difference.toFixed(1)} pp
-                  </strong>
-                </div>
+                {(["v5_qb_plus", "v5_boosted", "v4_a", "v4_qb_plus"] as Model[]).map(option => {
+                  const p = game[("home_win_prob_" + option) as keyof Matchup];
+                  return typeof p === "number" ? <div className="ic-row" key={option}>
+                    <span>{MODEL_LABELS[option]}</span><strong>{pct(p)}</strong></div> : null;
+                })}
                 <p>Comparison uses home-win probabilities.</p>
               </div>
             </div>

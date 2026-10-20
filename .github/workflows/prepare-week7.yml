@@ -1,0 +1,93 @@
+name: Prepare Week 7 models and history
+on:
+  push:
+    branches: [codex/week7-models-history]
+    paths:
+      - 'src/**'
+      - 'tests/**'
+      - 'scripts/**'
+      - 'frontend/src/**'
+      - 'frontend/tests/**'
+      - '.github/workflows/prepare-week7.yml'
+permissions:
+  contents: read
+concurrency:
+  group: week7-review
+  cancel-in-progress: false
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    env:
+      PYTHONUNBUFFERED: '1'
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-automation.txt
+      - name: Rebuild training inputs and fit frozen candidate settings
+        run: |
+          python -m src.data.weekly_stats
+          python -m src.features.expanded_team_stats
+          python -m src.features.rolling_stats
+          python -m src.features.preseason_strength
+          python -m src.features.blended_features
+          python -m src.features.matchup_features_v2
+          python -m src.features.pregame_features_v4
+          python -m src.features.game_context
+          python -m src.features.qb_stats
+          python -m src.features.training_qb_proxy
+          python -m src.features.qb_matchup_features
+          python -m src.ml.train_candidates
+      - name: Test historical compatibility and grading
+        run: python -m unittest discover -s tests -v
+      - name: Prepare Week 7 and navigable history without odds requests
+        run: |
+          python -m src.ml.weekly_forecast
+          python -m src.ml.refresh_performance --import-git-history
+          python -m src.ml.export_prediction_history
+          python -m src.features.player_watch
+          python -m src.ml.refresh_markets
+          python -m scripts.check_week7
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Test and build UI
+        working-directory: frontend
+        run: |
+          npm ci
+          npm test
+          npm run build
+      - name: Chromium interaction checks
+        working-directory: frontend
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+          node tests/week7.browser.mjs
+      - name: Save prepared models and forecasts on review branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add models data/tracking frontend/public/predictions.json frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/markets.json frontend/public/players_watch.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Prepare fitted Week 7 models and archived prediction weeks"
+            git push origin HEAD:codex/week7-models-history
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: week7-review
+          path: |
+            frontend/qa/
+            frontend/dist/
+            models/week7_training_report.json
+          retention-days: 30

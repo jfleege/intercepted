@@ -1,3 +1,4 @@
+import { MODEL_LABELS, MODEL_ORDER } from "./predictionModels";
 import { useEffect, useState } from "react";
 import "./ReviewPages.css";
 import "./MarketsPage.css";
@@ -16,7 +17,7 @@ const date = (s:string) => new Date(s).toLocaleString();
 export default function MarketsPage() {
   const [data,setData] = useState<Data|null>(null);
   const [error,setError] = useState(false);
-  const [model,setModel] = useState<Model>("v4_qb_plus");
+  const [model,setModel] = useState<Model>("v5_qb_plus");
   const [kind,setKind] = useState("baseline");
   const [selected,setSelected] = useState<string|null>(null);
   const [now,setNow] = useState(()=>Date.now());
@@ -62,7 +63,7 @@ export default function MarketsPage() {
   const activeLine=data?.lines.find(l=>l.game_id===selected);
   return <div className="review-page markets-page">
     <header className="review-heading"><div><p className="eyebrow">GAME LINES</p><h1>Markets</h1><p>Moneylines for the current slate. Select a matchup to explore it.</p></div></header>
-    <div className="review-controls"><p className="moneyline-feed-note">DraftKings · daily snapshots</p><label>Research model <select value={model} onChange={e=>setModel(e.target.value as Model)}><option value="v4_qb_plus">V4-QB+</option><option value="v4_a">V4-A</option></select></label></div>
+    <div className="review-controls"><p className="moneyline-feed-note">DraftKings · daily snapshots</p><label>Research model <select value={model} onChange={e=>setModel(e.target.value as Model)}>{MODEL_ORDER.map(m => <option key={m} value={m}>{MODEL_LABELS[m]}</option>)}</select></label></div>
     {error ? <div className="review-empty">Markets data is unavailable. Run the refresh workflow after merging this change.</div> : !data ? <div className="review-empty">Loading saved moneylines…</div> : <>
       <section className="review-panel"><div className="review-table-wrap"><table><thead><tr>{["Matchup","Kickoff","Away moneyline","Home moneyline","Status"].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>
       {lines.map(line=><tr key={line.game_id}>

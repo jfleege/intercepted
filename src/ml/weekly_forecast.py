@@ -10,6 +10,8 @@ from src.ml.refresh_performance import ROOT, MODELS, ALIASES, archive, git, kick
 
 
 from src.features.qb_starters import load_reports, resolve_qb, changed_report_games, merge_revisions
+from src.ml.model_registry import available_models, model_metadata
+from src.features.model_context import context_features
 
 
 class DataPending(Exception):
@@ -65,9 +67,10 @@ def generate(rows, games, season, week, now):
     from src.features.upcoming_features import prepare_team_features, build_qb_snapshots, TEAM_EFFICIENCY, QB_METRICS
 
     metadata = json.loads((ROOT / 'models/model_metadata.json').read_text())
-    if (metadata['latest_training_season'], metadata['latest_training_week']) >= (season, week):
+    models = available_models(metadata)
+    if any((model_metadata(metadata, m)['latest_training_season'], model_metadata(metadata, m)['latest_training_week']) >= (season, week) for m in models):
         raise ValueError('Model training cutoff must precede the target week')
-    if stamp(metadata['created_at_utc']) > stamp(now):
+    if any(stamp(model_metadata(metadata, m)['created_at_utc']) > stamp(now) for m in models):
         raise ValueError('Model creation time is in the future')
     # Existing aggregators preserve the trained feature definitions; only two seasons need PBP.
     years = [season - 1, season] if week > 1 else [season - 1]
@@ -101,7 +104,7 @@ def generate(rows, games, season, week, now):
     reports = load_reports()
     ngs_rows = ngs.to_dicts()
     now = utcnow()  # Data downloads may cross kickoff; use the actual serving clock.
-    records, matrices = [], {model: [] for model in MODELS}
+    records, matrices = [], {model: [] for model in models}
     for game in games:
         start = kickoff(game)
         if not start or stamp(start) <= stamp(now):
@@ -109,6 +112,7 @@ def generate(rows, games, season, week, now):
         h, a = (ALIASES.get(game[f'{s}_team'], game[f'{s}_team']) for s in ('home', 'away'))
         record = dict(game_id=game['game_id'], season=season, week=week, game_date=str(game['gameday'])[:10], home_team=h, away_team=a)
         features = {f'diff_{key}': ratings[h][key] - ratings[a][key] for key in ('blended_off_epa', 'blended_def_epa', *TEAM_EFFICIENCY)}
+        features.update(context_features(game, rows))
         qb_features = {}
         for side, team in [('home', h), ('away', a)]:
             qb = resolve_qb(game, team, ngs_rows, reports, now)
@@ -124,12 +128,12 @@ def generate(rows, games, season, week, now):
                 key = f'qb_{prefix}_{metric}'
                 features[f'diff_{key}'] = qb_features['home'].get(key, np.nan) - qb_features['away'].get(key, np.nan)
         features['qb_experience_diff'] = np.log1p(qb_features['home'].get('qb_career_attempts', np.nan)) - np.log1p(qb_features['away'].get('qb_career_attempts', np.nan))
-        for model in MODELS:
+        for model in models:
             matrices[model].append([features[col] for col in metadata['models'][model]['features']])
         records.append(record)
     if not records:
         raise DataPending('No games with future, confirmed kickoff times')
-    for model in MODELS:
+    for model in models:
         matrix = np.array(matrices[model], dtype=float)
         if np.isinf(matrix).any() or (model == 'v4_a' and not np.isfinite(matrix).all()):
             raise ValueError('Invalid feature values')
@@ -144,16 +148,17 @@ def generate(rows, games, season, week, now):
             record[f'home_win_prob_{model}'] = float(p)
             record[f'away_win_prob_{model}'] = float(1 - p)
     for r in records:
-        p = r['home_win_prob_v4_qb_plus']
+        primary = 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus'
+        p = r[f'home_win_prob_{primary}']
         r.update(qb_probability_impact=p - r['home_win_prob_v4_a'], predicted_winner=r['home_team'] if p >= .5 else r['away_team'], predicted_winner_probability=max(p, 1-p))
     now = utcnow()
     starts = {g['game_id']: kickoff(g) for g in games}
     records = [r for r in records if stamp(starts[r['game_id']]) > stamp(now)]
     if not records:
         raise DataPending('All remaining games reached kickoff during processing')
-    print(f'Features through Week {week - 1}; saved weights trained through {metadata["latest_training_season"]} Week {metadata["latest_training_week"]}.')
-    return {'season': season, 'week': week, 'count': len(records), 'model': 'v4_qb_plus', 'generated_at': now,
-            'features_through_week': week - 1, 'training_cutoff': [metadata['latest_training_season'], metadata['latest_training_week']],
+    print(f"Features through Week {week - 1}; training cutoffs: " + str({m: (model_metadata(metadata, m)['latest_training_season'], model_metadata(metadata, m)['latest_training_week']) for m in models}))
+    return {'season': season, 'week': week, 'count': len(records), 'model': 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus', 'models': list(models), 'generated_at': now,
+            'features_through_week': week - 1, 'training_cutoff': [model_metadata(metadata, 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus')['latest_training_season'], model_metadata(metadata, 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus')['latest_training_week']],
             'qb_projection_method': 'Game-specific sourced reports; otherwise unconfirmed prior-week passer', 'games': records}, metadata
 
 
@@ -168,6 +173,11 @@ def main():
     season, week, games = target_slate(rows, now)
     current = json.loads((ROOT / 'frontend/public/predictions.json').read_text())
     revisions = changed_report_games(current, rows, load_reports(), now)
+    configured = available_models(json.loads((ROOT / 'models/model_metadata.json').read_text()))
+    upgrade = (current['season'], current['week']) == (season, week) and any(
+        f'home_win_prob_{m}' not in g for g in current['games'] for m in configured)
+    if upgrade:
+        revisions = [g for g in games if kickoff(g) and stamp(kickoff(g)) > stamp(now)]
     is_revision = (current['season'], current['week']) == (season, week) and bool(revisions)
     if week is None or (not args.validate_current and not is_revision and (current['season'], current['week']) >= (season, week)):
         print('Published slate and starter reports are current; no forecast changes.')
@@ -185,10 +195,10 @@ def main():
     if is_revision:
         # Preserve the old full slate before publishing a new, timestamped revision.
         archive(current, metadata, now, {'kind': 'before_starter_revision', 'commit': git('rev-parse', 'HEAD')},
-                model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in MODELS})
+                model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in available_models(metadata)})
         payload = merge_revisions(current, payload, rows, utcnow())
     archive(payload, metadata, payload['generated_at'], {'kind': 'weekly_automation', 'commit': git('rev-parse', 'HEAD')},
-            model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in MODELS})
+            model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in available_models(metadata)})
     write_json(ROOT / 'frontend/public/predictions.json', payload)
     print(f"Published {payload['count']} forecasts for {season} Week {week}.")
 

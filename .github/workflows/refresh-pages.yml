@@ -7,6 +7,10 @@ on:
       - frontend/public/predictions.json
       - data/inputs/qb_starters.json
       - src/ml/refresh_markets.py
+      - src/ml/weekly_forecast.py
+      - src/ml/export_prediction_history.py
+      - models/model_metadata.json
+      - frontend/src/**
   schedule:
     # 13:17 UTC = 8:17am CDT / 7:17am CST
     - cron: "17 13 * * *"
@@ -29,7 +33,7 @@ on:
       paper_model:
         type: choice
         description: Custom paper model
-        options: [v4_qb_plus, v4_a]
+        options: [v5_qb_plus, v5_boosted, v4_a, v4_qb_plus]
         default: v4_qb_plus
       paper_stake:
         description: Paper units for custom selection
@@ -74,6 +78,8 @@ jobs:
         run: python -m src.ml.weekly_forecast
       - name: Archive forecasts and refresh final results
         run: python -m src.ml.refresh_performance --import-git-history
+      - name: Export browsable prediction weeks
+        run: python -m src.ml.export_prediction_history
       - name: Refresh player cards
         if: inputs.results_only != true
         run: python -m src.features.player_watch
@@ -114,7 +120,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/tracking frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/players_watch.json
+          git add data/tracking frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/players_watch.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh weekly forecasts, markets, and game results"
             git push origin HEAD:main

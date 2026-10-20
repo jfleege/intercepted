@@ -12,7 +12,7 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parents[2]
-MODELS = ("v4_a", "v4_qb_plus")
+from src.ml.model_registry import MODELS, model_metadata
 PREDICTIONS = "frontend/public/predictions.json"
 METADATA = "models/model_metadata.json"
 ALIASES = {"LAR": "LA", "WSH": "WAS", "JAC": "JAX", "OAK": "LV", "SD": "LAC", "STL": "LA"}
@@ -64,6 +64,8 @@ def archive(payload, metadata, observed_at, source, root=ROOT, model_hashes=None
                     record[key] = game[key]
         record["probabilities"] = {}
         for model in MODELS:
+            if model not in ("v4_a", "v4_qb_plus") and f"home_win_prob_{model}" not in game:
+                continue
             p = game.get(f"home_win_prob_{model}")
             if isinstance(p, bool) or not isinstance(p, (int, float)) or not math.isfinite(p) or not 0 <= p <= 1:
                 raise ValueError(f"Invalid probability: {game['game_id']} {model}")
@@ -106,7 +108,7 @@ def import_git_history(root=ROOT):
             payload = json.loads(git("show", f"{revision}:{PREDICTIONS}", root=root))
             metadata = json.loads(git("show", f"{revision}:{METADATA}", root=root))
             observed = git("show", "-s", "--format=%cI", revision, root=root)
-            hashes = {model: git("rev-parse", f"{revision}:models/{model}.joblib", root=root) for model in MODELS}
+            hashes = {model: git("rev-parse", f"{revision}:models/{model}.joblib", root=root) for model in MODELS if model in metadata.get("models", {})}
             archive(payload, metadata, observed, {"kind": "git_commit", "commit": revision,
                     "note": "Repository commit time is evidence of saved bytes, not independent timestamp certification."}, root, hashes)
         except (subprocess.CalledProcessError, ValueError, KeyError) as error:
@@ -142,12 +144,12 @@ def normalize_result(row, now):
             "away_score": int(away) if state == "final" else None, "source": "nflverse schedules"}
 
 
-def eligibility(snapshot, game, result):
+def eligibility(snapshot, game, result, model=None):
     if not result or not result.get("kickoff"):
         return "unverified", "Kickoff time unavailable"
     if (game["home_team"], game["away_team"]) != (result["home_team"], result["away_team"]):
         raise ValueError(f"Team identity mismatch for {game['game_id']}")
-    metadata = snapshot["model_identity"]["metadata"]
+    metadata = model_metadata(snapshot["model_identity"]["metadata"], model) if model else snapshot["model_identity"]["metadata"]
     cutoff = (metadata.get("latest_training_season", 9999), metadata.get("latest_training_week", 9999))
     if cutoff >= (game["season"], game["week"]):
         return "unverified", "Training cutoff reaches target week"
@@ -160,14 +162,14 @@ def eligibility(snapshot, game, result):
 
 
 def graded_row(snapshot, game, result, model):
-    eligible, reason = eligibility(snapshot, game, result)
+    eligible, reason = eligibility(snapshot, game, result, model)
     p = game["probabilities"][model]
     status = result["status"] if result else "pending"
     tied = status == "final" and result["home_score"] == result["away_score"]
     y = int(result["home_score"] > result["away_score"]) if status == "final" and not tied else None
     correct = ((p >= .5) == bool(y)) if y is not None else None
     clipped = min(1 - 1e-15, max(1e-15, p))
-    metadata = snapshot["model_identity"]["metadata"]
+    metadata = model_metadata(snapshot["model_identity"]["metadata"], model)
     return {**{key: game[key] for key in ("game_id", "season", "week", "game_date", "home_team", "away_team")},
             "model": model, "model_version": digest(snapshot["model_identity"])[:12],
             "training_cutoff": f"{metadata.get('latest_training_season')} W{metadata.get('latest_training_week')}",
@@ -236,6 +238,8 @@ def backtest(root=ROOT):
         seen.add(source["game_id"])
         season, week = int(source["season"]), int(source["week"])
         for model in MODELS:
+            if f"prob_{model}" not in source:
+                continue
             p, y = float(source[f"prob_{model}"]), int(source["home_win"])
             if not 0 <= p <= 1 or y not in (0, 1):
                 raise ValueError("Invalid backtest row")
@@ -257,7 +261,9 @@ def build_export(snapshots, results, root=ROOT):
     all_rows = []
     for snapshot in snapshots:
         for game in snapshot["games"]:
-            for model in MODELS:
+            for model in game["probabilities"]:
+                if model not in MODELS:
+                    continue
                 all_rows.append(graded_row(snapshot, game, results.get(game["game_id"]), model))
     chosen = {}
     for row in sorted(all_rows, key=lambda r: (stamp(r["saved_at"]), r["snapshot_id"])):
@@ -284,7 +290,7 @@ def main():
     if args.import_git_history:
         import_git_history()
     metadata = json.loads((ROOT / METADATA).read_text())
-    hashes = {model: git("hash-object", f"models/{model}.joblib") for model in MODELS}
+    hashes = {model: git("hash-object", f"models/{model}.joblib") for model in MODELS if model in metadata.get("models", {})}
     archive(json.loads((ROOT / PREDICTIONS).read_text()), metadata, utcnow(), {"kind": "refresh", "commit": git("rev-parse", "HEAD")}, model_hashes=hashes)
     snapshots = [json.loads(p.read_text()) for p in sorted((ROOT / "data/tracking/forecasts").glob("*.json"))]
     ids = {g["game_id"] for s in snapshots for g in s["games"]}

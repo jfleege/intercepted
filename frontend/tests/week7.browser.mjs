@@ -38,7 +38,14 @@ try {
   await page.screenshot({path:"qa/week7-desktop.png",fullPage:true});
   await page.setViewportSize({width:375,height:900});
   await page.screenshot({path:"qa/week7-mobile.png",fullPage:true});
-  assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth > window.innerWidth),false);
+  const overflow = await page.evaluate(()=>({
+    viewport:window.innerWidth, document:document.documentElement.scrollWidth,
+    elements:[...document.querySelectorAll("body *")].filter(el=>{
+      const r=el.getBoundingClientRect();return r.right>window.innerWidth+1 && getComputedStyle(el).position!=="absolute";
+    }).slice(0,15).map(el=>({tag:el.tagName,class:el.className,right:el.getBoundingClientRect().right}))
+  }));
+  console.log("Mobile width check",JSON.stringify(overflow));
+  assert.equal(overflow.document > overflow.viewport,false);
   await page.getByRole("link",{name:"Performance",exact:false}).click();
   await page.getByLabel("Model",{exact:true}).selectOption("v5_boosted");
   await page.getByRole("heading",{name:"Performance",exact:true}).waitFor();

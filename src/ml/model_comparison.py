@@ -23,6 +23,25 @@ context_cols = ["rest_diff", "home_short_week", "away_short_week",
                 "home_extended_rest", "away_extended_rest", "neutral_site", "division_game"]
 context = pl.read_parquet(ROOT / "data/processed/game_context_2019_2026.parquet")
 df = df.join(context.select("game_id", *context_cols), on="game_id", how="left", validate="1:1")
+
+# Coverage and label parity gates: never silently compare an easier subset.
+reference = pl.read_csv(ROOT / "data/diagnostics/qb_experiments_predictions.csv")
+historical = df.filter(pl.col("season").is_between(2022, 2024))
+assert set(historical["game_id"]) == set(reference["game_id"]), "Historical benchmark game set changed"
+matched = historical.select("game_id", "home_win").join(
+    reference.select("game_id", pl.col("home_win").alias("reference_win")), on="game_id", validate="1:1")
+assert matched.filter(pl.col("home_win") != pl.col("reference_win")).is_empty(), "Historical outcome changed"
+tracked = json.loads((ROOT / "data/tracking/results.json").read_text())["games"]
+week6_results = {k: r for k, r in tracked.items() if r["season"] == 2026 and r["week"] == 6}
+assert len(week6_results) == 14 and all(r["status"] == "final" for r in week6_results.values())
+expected = {k for k, r in week6_results.items() if r["home_score"] != r["away_score"]}
+heldout = df.filter((pl.col("season") == 2026) & (pl.col("week") == 6))
+assert set(heldout["game_id"]) == expected, "Incomplete Week 6 feature coverage"
+for r in heldout.select("game_id", "home_win").to_dicts():
+    outcome = week6_results[r["game_id"]]
+    assert r["home_win"] == int(outcome["home_score"] > outcome["away_score"])
+print("PASS: historical benchmark IDs/outcomes match; all 14 Week 6 games covered.")
+
 base = MODEL_COLUMNS["v4_qb_plus"]
 columns = {"QB retuned": base, "QB + context": base + context_cols, "Gradient boosted": base + context_cols}
 grids = {

@@ -83,8 +83,9 @@ try {
   const overshoot=await page.locator('.ud-probability-fill').first().evaluate(async e=>{const a=e.getAnimations()[0];a.pause();a.currentTime=585;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));const scale=new DOMMatrixReadOnly(getComputedStyle(e).transform).m22;a.play();await a.finished;return scale;});
   assert.ok(overshoot>1,'Winning bars must visibly overshoot before settling');
   assert.equal(await page.locator('.ud-probability-fill').first().evaluate(e=>getComputedStyle(e).transform),'matrix(1, 0, 0, 1, 0, 0)');
+  await page.locator('.ud-winner-arc').evaluate(async e=>{await Promise.all(e.getAnimations().map(a=>a.finished));});
   const arc=await page.locator('.ud-winner-arc').evaluate(e=>({expected:parseFloat(e.style.getPropertyValue('--ud-arc')),actual:parseFloat(getComputedStyle(e).strokeDasharray)}));
-  assert.ok(Math.abs(arc.expected-arc.actual)<.01);
+  assert.ok(Math.abs(arc.expected-arc.actual)<.01,JSON.stringify(arc));
   await page.locator('a[href="#performance"]').click();
   await page.locator('.performance-page .review-draft').filter({hasText:'ARCHIVED SNAPSHOTS'}).waitFor();
   await page.locator('a[href="#markets"]').click();

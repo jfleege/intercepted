@@ -2,7 +2,7 @@ import { filterGames } from "./matchupFilters";
 import { useEffect, useState } from "react";
 import "./App.css";
 import "./DashboardLayout.css";
-import { probability, availableModels, MODEL_LABELS } from "./predictionModels";
+import { availableModels, MODEL_LABELS } from "./predictionModels";
 import type { Model } from "./predictionModels";
 import "./PredictionHistory.css";
 import MatchupModal from "./MatchupModal";
@@ -15,14 +15,11 @@ import ScoreTicker from "./ScoreTicker";
 import DashboardMetrics from "./DashboardMetrics";
 import PerformancePage from "./PerformancePage";
 import MarketsPage from "./MarketsPage";
-import ProbabilityWheel from "./ProbabilityWheel";
-import { TEAM_NAMES } from "./teams";
+import WeeklyMatchups from "./WeeklyMatchups";
+import "./UnifiedDashboard.css";
 
 import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};
-function percent(value: number) {
-  return `${(value * 100).toFixed(1)}%`;
-}
 
 function App() {
   const [page, setPage] = useState(() => window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : "dashboard");
@@ -87,7 +84,7 @@ const focusedGame =
   games[0] ??
   null;
   return (
-    <div className="app dashboard-shell">
+    <div className={`app dashboard-shell${page === "dashboard" ? " unified-dashboard" : ""}`}>
       {/* sidebar */}
       <aside className="dash-sidebar">
         <div className="dash-brand">
@@ -168,47 +165,13 @@ const focusedGame =
         </div>
         <main className="container" id="dashboard">
           {page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage /> : <>
-          {/* hero */}
-          <section className="hero-banner">
-  <div className="hero-copy">
-    <p className="hero-eyebrow">NFL INSIGHTS. SMARTER PICKS.</p>
-
-    <h1 className="hero-title">
-      Turn Data
-      <br />
-      Into an <span>Edge.</span>
-    </h1>
-
-    <p className="hero-description">
-      NFL win probabilities powered by historical team performance,
-      advanced efficiency metrics, and quarterback analytics.
-    </p>
-
-    <div className="hero-stats">
-      <div className="hero-stat-card">
-        <span>SEASON</span>
-        <strong>{data?.season ?? "—"}</strong>
-      </div>
-      <div className="hero-stat-card">
-        <span>WEEK</span>
-        <strong>{data?.week ?? "—"}</strong>
-      </div>
-      <div className="hero-stat-card">
-        <span>MATCHUPS</span>
-        <strong>{data?.count ?? "—"}</strong>
-      </div>
-    </div>
-  </div>
-
-  <div className="hero-visual">
-    <div className="hero-visual-glow" />
-    <img
-      src={heroPlayer}
-      alt="Quarterback hero"
-      className="hero-player-image"
-    />
-  </div>
-</section>
+          <section className="ud-hero">
+            <div className="ud-hero-copy"><p className="ud-eyebrow">NFL INSIGHTS. SMARTER PICKS.</p><h1>Turn data<br/>into an <em>edge.</em></h1><p>Every matchup. Every model. A clearer picture of the week ahead.</p>
+              <div className="ud-hero-meta"><span><b>{data?.week ?? '—'}</b> WEEK</span><span><b>{data?.count ?? '—'}</b> MATCHUPS</span><span><b>{modelOptions.length}</b> ACTIVE MODELS</span></div>
+            </div>
+            <img className="ud-hero-photo" src={heroPlayer} alt="Caleb Williams"/>
+            <div className="ud-hero-stamp">THE WEEK AHEAD<small>NFL / {data?.season ?? '—'}</small></div>
+          </section>
 {data && (
   <ScoreTicker
     games={data.games}
@@ -225,11 +188,11 @@ const focusedGame =
 <DashboardMetrics data={data} />
           {/* predictions */}
           <section
-            className="forecast-section"
+            className="forecast-section ud-forecast"
             id="matchups"
           >
             
-<div className="section-heading">
+<div className="ud-section-heading">
   <div>
     <p className="eyebrow">THE FORECAST</p>
     <h2>Weekly matchups</h2>
@@ -277,155 +240,11 @@ const focusedGame =
                 Loading predictions...
               </div>
             )}
-            {/* matchup cards */}
-{data && games.length > 0 && (
-  <div className="dash-analysis-grid">
-    <section className="dash-panel">
-      <div className="dash-panel-heading">
-        <div>
-          <h3>Week {data.week} Matchups</h3>
-          <p>{games.length} games · NFL {data.season}</p>
-        </div>
-        <span className="dash-panel-label">PREDICTIONS</span>
-      </div>
-      <div className="dash-table-scroll">
-        <table className="dash-matchup-table">
-          <thead>
-            <tr>
-              <th>DATE</th>
-              <th>MATCHUP</th>
-              <th>INTERCEPTED PICK</th>
-              <th>WIN PROB.</th>
-              {archived && <th>RESULT</th>}
-            </tr>
-          </thead>
-          <tbody>
-            {games.map((game) => {
-              const home = probability(game, model);
-              const away = 1 - home;
-              const winner =
-                home >= 0.5 ? game.home_team : game.away_team;
-              const selected =
-                focusedGame?.game_id === game.game_id;
-              const date = new Date(
-                `${game.game_date}T12:00:00`
-              );
-              return (
-                <tr
-                  key={game.game_id}
-                  className={selected ? "dash-row-active" : ""}
-                  onClick={() => setFocusedGameId(game.game_id)}
-                >
-                  <td>
-                    {date.toLocaleDateString("en-US", {
-                      month: "short",
-                      day: "numeric",
-                    })}
-                  </td>
-                  <td>
-                    <div className="dash-matchup-teams">
-                      <img
-                        src={`${import.meta.env.BASE_URL}logos/${game.away_team}.png`}
-                        alt=""
-                      />
-                      <strong>{game.away_team}</strong>
-                      <span>@</span>
-                      <img
-                        src={`${import.meta.env.BASE_URL}logos/${game.home_team}.png`}
-                        alt=""
-                      />
-                      <strong>{game.home_team}</strong>
-                    </div>
-                  </td>
-                  <td>
-                    <div className="dash-pick">
-                      <img
-                        src={`${import.meta.env.BASE_URL}logos/${winner}.png`}
-                        alt=""
-                      />
-                      <span>{TEAM_NAMES[winner] ?? winner}</span>
-                    </div>
-                  </td>
-                  <td>
-                    <span className="dash-prob-pill">
-                      {percent(Math.max(home, away))}
-                    </span>
-                  </td>
-                  {archived && <td>{game.result?.status === "final" ?
-                    <><strong>{game.result.away_score}–{game.result.home_score}</strong><small>
-                    {game.result.home_score === game.result.away_score ? "Tie" :
-                      (winner === (Number(game.result.home_score) > Number(game.result.away_score) ? game.home_team : game.away_team) ? "Correct" : "Incorrect")}</small></> :
-                    game.result?.status ?? "Pending"}</td>}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </div>
-    </section>
-    {focusedGame && (
-      <section className="dash-panel dash-game-analysis">
-        <div className="dash-panel-heading">
-          <div>
-            <h3>Game Analysis</h3>
-            <p>Intercepted · Week {focusedGame.week}</p>
-          </div>
-        </div>
-        
-<div className="dash-analysis-teams">
-  <div className="dash-analysis-team">
-    <img
-      src={`${import.meta.env.BASE_URL}logos/${focusedGame.away_team}.png`}
-      alt=""
-    />
-
-    <div className="dash-analysis-team-info">
-      <strong>{focusedGame.away_team}</strong>
-      <span>
-        {focusedGame.away_projected_qb_name ?? "QB TBD"}
-        <small>{focusedGame.away_qb_selection?.status === "reported_expected" ? "Expected starter" : focusedGame.away_qb_selection?.status === "confirmed" ? "Confirmed starter" : "Unconfirmed QB projection"}</small>
-      </span>
-    </div>
-  </div>
-
-  <span className="dash-analysis-at">@</span>
-
-  <div className="dash-analysis-team">
-    <img
-      src={`${import.meta.env.BASE_URL}logos/${focusedGame.home_team}.png`}
-      alt=""
-    />
-
-    <div className="dash-analysis-team-info">
-      <strong>{focusedGame.home_team}</strong>
-      <span>
-        {focusedGame.home_projected_qb_name ?? "QB TBD"}
-        <small>{focusedGame.home_qb_selection?.status === "reported_expected" ? "Expected starter" : focusedGame.home_qb_selection?.status === "confirmed" ? "Confirmed starter" : "Unconfirmed QB projection"}</small>
-      </span>
-    </div>
-  </div>
-</div>
-        
-        <ProbabilityWheel
-  awayTeam={focusedGame.away_team}
-  homeTeam={focusedGame.home_team}
-  homeProb={probability(focusedGame, model)}
-/>
-
-        <button
-          type="button"
-          className="dash-details-button"
-          onClick={() => setSelectedGame(focusedGame)}
-        >
-          Full matchup analysis →
-        </button>
-      </section>
-    )}
-  </div>
-)}
+            {data && games.length > 0 && <WeeklyMatchups games={games} focusedGame={focusedGame} model={model} archived={archived} onFocus={setFocusedGameId} onAnalysis={setSelectedGame}/>}
+            {data && !games.length && <p className="ud-empty">No matchups match your search.</p>}
 </section>
 {/* dashboard bottom panels */}
-{!archived && <section className="dash-bottom-grid">
+{!archived && <section className="ud-bottom-grid">
 <DashboardPlayers />
 
 <DashboardMarkets

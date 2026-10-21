@@ -11,7 +11,7 @@ const errors=[];
 const properties=['display','position','width','height','min-width','max-width','padding','margin','gap','grid-template-columns','flex-direction','flex-wrap','align-items','justify-content','color','background-color','background-image','font-family','font-size','font-weight','line-height','letter-spacing','border','border-radius','box-shadow','opacity','overflow-x','overflow-y','transform','inset'];
 async function settle(page){
   await page.waitForLoadState('networkidle');
-  await page.evaluate(async()=>{await document.fonts.ready; await Promise.all([...document.images].map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.onload=img.onerror=resolve;})));});
+  await page.evaluate(async()=>{await document.fonts.ready; for(const img of document.images)img.loading='eager'; await Promise.all([...document.images].map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.onload=img.onerror=resolve;})));});
 }
 async function state(page){
   return page.evaluate(({properties,origin})=>[...document.querySelectorAll('.dashboard-shell, .dashboard-shell *')].map(el=>{
@@ -31,7 +31,7 @@ async function compare(pages,label,width){
   const shots=await Promise.all(pages.map((page,i)=>page.screenshot({path:`${output}/${width}-${label}-${i?'after':'before'}.png`,fullPage:true,animations:'disabled'})));
   const [a,b]=shots.map(buffer=>pngjs.PNG.sync.read(buffer));
   assert.equal(b.width,a.width);assert.equal(b.height,a.height);
-  let changed=0;for(let i=0;i<a.data.length;i+=4)if(!a.data.subarray(i,i+4).equals(b.data.subarray(i,i+4)))changed++;
+  let changed=0;for(let i=0;i<a.data.length;i+=4)if(a.data[i]!==b.data[i]||a.data[i+1]!==b.data[i+1]||a.data[i+2]!==b.data[i+2]||a.data[i+3]!==b.data[i+3])changed++;
   assert.equal(changed,0,`Pixels changed: ${label} at ${width}px (${changed})`);
   console.log(`PASS: ${width}px ${label}, identical DOM/layout and ${a.width}x${a.height} pixels.`);
 }

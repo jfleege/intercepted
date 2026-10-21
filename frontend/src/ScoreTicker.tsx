@@ -1,18 +1,14 @@
 import { probability } from "./predictionModels";
-import type { Model } from "./predictionModels";
+import type { Model, PredictionFields } from "./predictionModels";
 import { useEffect, useMemo, useState } from "react";
 import type { CSSProperties } from "react";
 import "./ScoreTicker.css";
 
-type Forecast = {
+type Forecast = PredictionFields & {
   game_id: string;
   game_date: string;
   home_team: string;
   away_team: string;
-  home_win_prob_v4_a: number;
-  home_win_prob_v4_qb_plus: number;
-  home_win_prob_v5_qb_plus?: number;
-  home_win_prob_v5_boosted?: number;
 };
 type Competitor = { homeAway: string; score?: string; team: { abbreviation: string } };
 type ScoreEvent = {
@@ -21,6 +17,7 @@ type ScoreEvent = {
   status: { type: { state: string; completed: boolean; shortDetail: string } };
 };
 type Scoreboard = { events: ScoreEvent[] };
+type ScoreState = { season: number; week: number; events: ScoreEvent[]; updated: Date | null; failed: boolean };
 type Props = {
   games: Forecast[];
   season: number;
@@ -29,6 +26,8 @@ type Props = {
   onSelect: (gameId: string) => void;
 };
 
+const EMPTY_EVENTS: ScoreEvent[] = [];
+
 const aliases: Record<string, string> = { LAR: "LA", WSH: "WAS", JAC: "JAX" };
 const normalize = (team: string) => aliases[team] ?? team;
 const localDate = (value: string) => new Intl.DateTimeFormat("en-CA", {
@@ -36,18 +35,17 @@ const localDate = (value: string) => new Intl.DateTimeFormat("en-CA", {
 }).format(new Date(value));
 
 export default function ScoreTicker({ games, season, week, model, onSelect }: Props) {
-  const [feed, setFeed] = useState<ScoreEvent[]>([]);
-  const [updated, setUpdated] = useState<Date | null>(null);
-  const [failed, setFailed] = useState(false);
+  const [scores, setScores] = useState<ScoreState | null>(null);
+  const current = scores?.season === season && scores.week === week ? scores : null;
+  const feed = current?.events ?? EMPTY_EVENTS;
+  const updated = current?.updated ?? null;
+  const failed = current?.failed ?? false;
   const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     let active = true;
     let busy = false;
     let controller: AbortController | undefined;
-    setFeed([]);
-    setUpdated(null);
-    setFailed(false);
     async function refresh() {
       if (busy || document.hidden) return;
       busy = true;
@@ -61,9 +59,13 @@ export default function ScoreTicker({ games, season, week, model, onSelect }: Pr
         if (!response.ok) throw new Error("Score feed unavailable");
         const result: Scoreboard = await response.json();
         if (!Array.isArray(result.events)) throw new Error("Invalid scoreboard");
-        if (active) { setFeed(result.events); setUpdated(new Date()); setFailed(false); }
+        if (active) setScores({season, week, events: result.events, updated: new Date(), failed: false});
       } catch {
-        if (active) setFailed(true);
+        if (active) setScores(previous => {
+          const sameWeek = previous?.season === season && previous.week === week;
+          return {season, week, events: sameWeek ? previous.events : [],
+            updated: sameWeek ? previous.updated : null, failed: true};
+        });
       } finally { window.clearTimeout(timeout); busy = false; }
     }
     void refresh();

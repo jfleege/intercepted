@@ -2,8 +2,6 @@
 
 /* existing appearance preserved; market cards use compact spacing */
 
-
-
 .dashboard-shell {
   --dash-blue: #4da3ff;
   --dash-lime: #c9f35a;
@@ -266,29 +264,19 @@
   color: #061626;
 }
 
-.dashboard-shell .team-abbr,
-
-  .dashboard-shell .team-name,
+.dashboard-shell .team-name,
 
   .dashboard-shell .card-footer strong {
   color: #152231;
 }
 
-.dashboard-shell .card-top,
+.dashboard-shell .card-footer span,
 
-  .dashboard-shell .qb-name,
-
-  .dashboard-shell .card-footer span,
-
-  .dashboard-shell .probabilities span,
-
-  .dashboard-shell .probability-title {
+  .dashboard-shell .probabilities span {
   color: #657783;
 }
 
-.dashboard-shell .probabilities strong.favored,
-
-  .dashboard-shell .prediction-label {
+.dashboard-shell .probabilities strong.favored {
   color: #187be8;
 }
 
@@ -491,96 +479,6 @@
   color: #97a4a8;
 }
 
-.dash-analysis-result {
-  margin-top: 15px;
-  padding: 22px;
-  border: 1px solid #e6eae7;
-  border-radius: 12px;
-}
-
-.dash-analysis-winner {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-top: 16px;
-}
-
-.dash-analysis-winner img {
-  width: 65px;
-  height: 65px;
-  object-fit: contain;
-}
-
-.dash-analysis-winner div {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  column-gap: 10px;
-}
-
-.dash-analysis-winner strong {
-  width: 100%;
-  font-size: 22px;
-  color: #182734;
-}
-
-.dash-analysis-winner span {
-  font-size: 36px;
-  font-weight: 900;
-  color: #187be8;
-}
-
-.dash-analysis-winner small {
-  color: #7b8a92;
-}
-
-.dash-analysis-metrics {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin-top: 12px;
-}
-
-.dash-analysis-metrics > div {
-  padding: 18px;
-  border-radius: 12px;
-  background: #f5f7f5;
-}
-
-.dash-analysis-metrics span,
-
-  .dash-analysis-metrics strong {
-  display: block;
-}
-
-.dash-analysis-metrics span {
-  font-size: 10px;
-  font-weight: 800;
-  color: #8b9aa0;
-}
-
-.dash-analysis-metrics strong {
-  margin-top: 8px;
-  font-size: 24px;
-  color: #187be8;
-}
-
-.dash-analysis-qbs {
-  margin-top: 20px;
-}
-
-.dash-analysis-qbs p {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 12px;
-  color: #788994;
-}
-
-.dash-analysis-qbs strong {
-  color: #233541;
-}
-
 .dash-details-button {
   width: 100%;
   padding: 14px;
@@ -780,31 +678,6 @@
 
 .dashboard-shell .dash-game-analysis .dash-panel-heading {
   margin-bottom: 12px;
-}
-
-.dashboard-shell .dash-analysis-teams {
-  padding: 10px;
-}
-
-.dashboard-shell .dash-analysis-result {
-  padding: 14px;
-  margin-top: 10px;
-}
-
-.dashboard-shell .dash-analysis-metrics {
-  margin-top: 8px;
-}
-
-.dashboard-shell .dash-analysis-metrics > div {
-  padding: 12px;
-}
-
-.dashboard-shell .dash-analysis-qbs {
-  margin-top: 10px;
-}
-
-.dashboard-shell .dash-details-button {
-  margin-top: auto;
 }
 
 .hero-banner {
@@ -1575,10 +1448,6 @@
     align-items: flex-start;
   }
 
-  .dashboard-shell .matchup-grid {
-    grid-template-columns: 1fr;
-  }
-
   .dash-panel {
     padding: 14px;
   }
@@ -1621,56 +1490,8 @@
 }
 
 /* compact game prediction section */
-.dashboard-shell .dash-analysis-result {
-  padding: 12px 16px;
-  margin-top: 8px;
-}
-
-.dashboard-shell .dash-analysis-winner {
-  gap: 12px;
-  margin-top: 8px;
-}
-
-.dashboard-shell .dash-analysis-winner img {
-  width: 44px;
-  height: 44px;
-}
-
-.dashboard-shell .dash-analysis-winner strong {
-  font-size: 17px;
-  line-height: 1.2;
-}
-
-.dashboard-shell .dash-analysis-winner span {
-  font-size: 27px;
-  line-height: 1.1;
-}
-
-.dashboard-shell .dash-analysis-winner small {
-  font-size: 11px;
-}
 
 /* tighten spacing above quarterbacks */
-.dashboard-shell .dash-analysis-metrics {
-  margin-top: 8px;
-}
-
-.dashboard-shell .dash-analysis-metrics > div {
-  padding: 9px 12px;
-}
-
-.dashboard-shell .dash-analysis-metrics strong {
-  margin-top: 4px;
-  font-size: 21px;
-}
-
-.dashboard-shell .dash-analysis-qbs {
-  margin-top: 8px;
-}
-
-.dashboard-shell .dash-analysis-qbs p {
-  margin: 6px 0;
-}
 
 /* teams with quarterback names */
 .dashboard-shell .dash-analysis-teams {
@@ -1735,7 +1556,6 @@
     height: 38px;
   }
 }
-
 
 /* horizontally scrollable players */
 .dp-panel {
@@ -1845,97 +1665,9 @@
   object-fit: contain;
 }
 
-
 /* circular win probability */
-.dashboard-shell .dash-probability-wheel-panel {
-  display: grid;
-  grid-template-columns: 1fr 125px 1fr;
-  align-items: center;
-  justify-items: center;
-  gap: 12px;
-  margin-top: 10px;
-  padding: 12px;
-  background: #f5f7f5;
-  border-radius: 12px;
-}
-
-.dashboard-shell .dash-probability-wheel {
-  width: 125px;
-  height: 125px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  transform: rotate(-90deg);
-}
-
-.dashboard-shell .dash-wheel-center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
-  width: 91px;
-  height: 91px;
-  border-radius: 50%;
-  background: #f5f7f5;
-  transform: rotate(90deg);
-}
-
-.dashboard-shell .dash-wheel-center strong {
-  color: #172431;
-  font-size: 20px;
-  font-weight: 900;
-}
-
-.dashboard-shell .dash-wheel-center span {
-  color: #86959a;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 1px;
-}
-
-.dashboard-shell .dash-wheel-team {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.dashboard-shell .dash-wheel-team strong {
-  color: #172431;
-  font-size: 14px;
-}
-
-.dashboard-shell .dash-wheel-team span {
-  color: #187be8;
-  font-size: 19px;
-  font-weight: 900;
-}
 
 @media (max-width: 650px) {
-  .dashboard-shell .dash-probability-wheel-panel {
-    grid-template-columns: 1fr 95px 1fr;
-    gap: 5px;
-    padding: 10px 5px;
-  }
-
-  .dashboard-shell .dash-probability-wheel {
-    width: 95px;
-    height: 95px;
-  }
-
-  .dashboard-shell .dash-wheel-center {
-    width: 69px;
-    height: 69px;
-  }
-
-  .dashboard-shell .dash-wheel-center strong {
-    font-size: 15px;
-  }
-
-  .dashboard-shell .dash-wheel-team span {
-    font-size: 15px;
-  }
 }
 
 .ga-wheel-block {
@@ -1970,143 +1702,21 @@
   pointer-events: none;
 }
 
-.ga-wheel-team {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.ga-wheel-logo {
-  width: 56px;
-  height: 56px;
-  object-fit: contain;
-}
-
 .ga-wheel-divider {
   width: 1px;
   height: 72px;
   background: #cfd6dc;
 }
 
-.ga-wheel-legend {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.ga-wheel-legend-row {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #e3e7ea;
-}
-
-.ga-wheel-legend-team {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: #6f8190;
-  letter-spacing: 0.06em;
-}
-
-.ga-wheel-legend-pct {
-  font-size: 1.35rem;
-  font-weight: 800;
-}
-
-.ga-wheel-legend-pct.is-loser {
-  color: #8fa0ad;
-}
-
-.ga-wheel-legend-pct.is-winner {
-  color: #2d7ff9;
-}
-
-.dash-prediction-main {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.dash-prediction-kicker {
-  font-size: 0.95rem;
-  font-weight: 800;
-  letter-spacing: 0.2em;
-  color: #708496;
-}
-
-.dash-prediction-title-row {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.dash-prediction-title-logo {
-  width: 52px;
-  height: 52px;
-  object-fit: contain;
-  flex: 0 0 52px;
-}
-
-.dash-prediction-title-row h4 {
-  margin: 0;
-  font-size: 2.1rem;
-  line-height: 1;
-  font-weight: 800;
-  color: #1a2a3a;
-}
-
-.dash-prediction-prob-row {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.dash-prediction-prob-row strong {
-  font-size: 4rem;
-  line-height: 0.95;
-  font-weight: 800;
-  color: #2a7be4;
-}
-
-.dash-prediction-prob-row span {
-  font-size: 1.45rem;
-  color: #7d8d99;
-}
-
 /* compact prediction logo */
-.dashboard-shell .dash-analysis-winner img {
-  width: 42px;
-  height: 42px;
-  flex: 0 0 42px;
-  object-fit: contain;
-}
-
-.dashboard-shell .dash-analysis-winner {
-  gap: 12px;
-}
-
 
 /* fix probability wheel sizing */
 .dashboard-shell .ga-wheel-block {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 130px minmax(0, 1fr);
-  align-items: center;
-  justify-items: center;
-  gap: 12px;
   width: 100%;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #f5f7f5;
-  border-radius: 12px;
 }
 
 /* control wheel dimensions */
 .dashboard-shell .ga-wheel-wrap {
-  position: relative;
   width: 130px;
   height: 130px;
   min-width: 130px;
@@ -2115,62 +1725,27 @@
 }
 
 .dashboard-shell .ga-prob-wheel {
-  display: block;
   width: 130px;
   height: 130px;
   max-width: 130px;
-  max-height: 130px;
 }
 
 /* logos inside wheel */
-.dashboard-shell .ga-wheel-center {
-  position: absolute;
-  inset: 23px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
-  align-items: center;
-  justify-items: center;
-  gap: 3px;
-  pointer-events: none;
-}
-
-.dashboard-shell .ga-wheel-center img {
-  display: block;
-  width: 34px;
-  height: 34px;
-  max-width: 34px;
-  max-height: 34px;
-  object-fit: contain;
-}
-
-.dashboard-shell .ga-wheel-divider {
-  width: 1px;
-  height: 38px;
-  background: #cbd5d9;
-}
 
 /* percentages beside wheel */
 .dashboard-shell .ga-wheel-side {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 5px;
   min-width: 0;
 }
 
 .dashboard-shell .ga-wheel-side strong {
   display: block;
-  color: #172431;
-  font-size: 13px;
   font-weight: 800;
 }
 
 .dashboard-shell .ga-wheel-side span {
   display: block;
   color: #82929d;
-  font-size: 17px;
-  font-weight: 850;
 }
 
 .dashboard-shell .ga-wheel-side .ga-favored {
@@ -2179,54 +1754,20 @@
 
 /* smaller screens */
 @media (max-width: 650px) {
-  .dashboard-shell .ga-wheel-block {
-    grid-template-columns: minmax(0, 1fr) 105px minmax(0, 1fr);
-    gap: 5px;
-  }
-
-  .dashboard-shell .ga-wheel-wrap,
-  .dashboard-shell .ga-prob-wheel {
-    width: 105px;
-    height: 105px;
-    min-width: 105px;
-    max-width: 105px;
-  }
-
-  .dashboard-shell .ga-wheel-center {
-    inset: 20px;
-  }
-
-  .dashboard-shell .ga-wheel-center img {
-    width: 25px;
-    height: 25px;
-  }
-
-  .dashboard-shell .ga-wheel-side span {
-    font-size: 14px;
-  }
 }
 
 /* compact game analysis wheel */
 .dashboard-shell .ga-wheel-block {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 145px minmax(0, 1fr);
   align-items: center;
   justify-items: center;
   gap: 12px;
   margin-top: 12px;
-  padding: 16px 20px;
   background: #f5f7f5;
   border-radius: 12px;
 }
 
 /* fixed wheel size */
-.dashboard-shell .ga-wheel-wrap,
-.dashboard-shell .ga-prob-wheel {
-  width: 145px;
-  height: 145px;
-  min-width: 145px;
-  max-width: 145px;
-}
 
 .dashboard-shell .ga-wheel-wrap {
   position: relative;
@@ -2239,33 +1780,21 @@
 /* force logos into center of wheel */
 .dashboard-shell .ga-wheel-center {
   position: absolute;
-  inset: 32px;
-  display: grid;
   grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
-  align-items: center;
   justify-items: center;
-  gap: 4px;
-  padding: 0;
-  width: auto;
-  height: auto;
   pointer-events: none;
 }
 
 .dashboard-shell .ga-wheel-center img {
   position: static;
   display: block;
-  width: 32px;
-  height: 32px;
   min-width: 0;
-  max-width: 32px;
-  max-height: 32px;
   object-fit: contain;
   transform: none;
 }
 
 .dashboard-shell .ga-wheel-divider {
   width: 1px;
-  height: 36px;
   background: #cbd5d9;
 }
 
@@ -2278,20 +1807,16 @@
 }
 
 .dashboard-shell .ga-wheel-side strong {
-  font-size: 13px;
   color: #172431;
 }
 
 .dashboard-shell .ga-wheel-side span {
-  font-size: 18px;
   font-weight: 850;
 }
 
 @media (max-width: 650px) {
   .dashboard-shell .ga-wheel-block {
     grid-template-columns: minmax(0, 1fr) 110px minmax(0, 1fr);
-    gap: 5px;
-    padding: 12px 6px;
   }
 
   .dashboard-shell .ga-wheel-wrap,
@@ -2330,28 +1855,8 @@
   max-width: var(--wheel-size);
 }
 
-.dashboard-shell .ga-wheel-center {
-  inset: 22%;
-  gap: 6px;
-}
-
-.dashboard-shell .ga-wheel-center img {
-  width: 46px;
-  height: 46px;
-  max-width: 46px;
-  max-height: 46px;
-}
-
-.dashboard-shell .ga-wheel-divider {
-  height: 48px;
-}
-
 .dashboard-shell .ga-wheel-side strong {
   font-size: 15px;
-}
-
-.dashboard-shell .ga-wheel-side span {
-  font-size: 24px;
 }
 
 @media (max-width: 650px) {
@@ -2362,17 +1867,6 @@
   }
 }
 
-  .dashboard-shell .ga-wheel-center img {
-    width: 34px;
-    height: 34px;
-    max-width: 34px;
-    max-height: 34px;
-  }
-
-  .dashboard-shell .ga-wheel-divider {
-    height: 36px;
-  }
-
   .dashboard-shell .ga-wheel-side span {
     font-size: 18px;
   }
@@ -2381,11 +1875,11 @@
     grid-template-columns:
       minmax(0, 1fr) var(--wheel-size, 180px) minmax(0, 1fr);
   }
-  
+
   .dashboard-shell .ga-prob-wheel {
     max-height: var(--wheel-size, 180px);
   }
-  
+
   .dashboard-shell .ga-wheel-center {
     inset: 0;
     width: auto;
@@ -2396,7 +1890,7 @@
     justify-content: center;
     gap: 8px;
   }
-  
+
   .dashboard-shell .ga-wheel-center img {
     width: 32px;
     height: 32px;
@@ -2404,7 +1898,7 @@
     max-height: 32px;
     flex: 0 0 32px;
   }
-  
+
   .dashboard-shell .ga-wheel-divider {
     height: 32px;
     flex: 0 0 1px;

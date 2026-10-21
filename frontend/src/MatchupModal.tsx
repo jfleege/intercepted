@@ -1,19 +1,16 @@
+import { TEAM_NAMES } from "./teams";
 import { probability, MODEL_LABELS } from "./predictionModels";
-import type { Model } from "./predictionModels";
+import type { Model, PredictionFields } from "./predictionModels";
 
 import { useEffect, useState } from "react";
 import PlayersToWatch from "./PlayersToWatch";
 import draftkingsLogo from "./assets/draftkings.png";
 
-export type Matchup = {
+export type Matchup = PredictionFields & {
   game_id: string;
   game_date: string;
   home_team: string;
   away_team: string;
-  home_win_prob_v4_a: number;
-  home_win_prob_v4_qb_plus: number;
-  home_win_prob_v5_qb_plus?: number;
-  home_win_prob_v5_boosted?: number;
   home_projected_qb_name?: string | null;
   away_projected_qb_name?: string | null;
 };
@@ -40,20 +37,6 @@ type Props = {
   model: Model;
   archived?: boolean;
   onClose: () => void;
-};
-
-const teamNames: Record<string, string> = {
-  ARI: "Cardinals", ATL: "Falcons", BAL: "Ravens",
-  BUF: "Bills", CAR: "Panthers", CHI: "Bears",
-  CIN: "Bengals", CLE: "Browns", DAL: "Cowboys",
-  DEN: "Broncos", DET: "Lions", GB: "Packers",
-  HOU: "Texans", IND: "Colts", JAX: "Jaguars",
-  KC: "Chiefs", LA: "Rams", LAC: "Chargers",
-  LV: "Raiders", MIA: "Dolphins", MIN: "Vikings",
-  NE: "Patriots", NO: "Saints", NYG: "Giants",
-  NYJ: "Jets", PHI: "Eagles", PIT: "Steelers",
-  SEA: "Seahawks", SF: "49ers", TB: "Buccaneers",
-  TEN: "Titans", WAS: "Commanders",
 };
 
 const pct = (value: number) =>
@@ -168,7 +151,7 @@ export default function MatchupModal({
     <div className="ic-team-info">
       <div className="ic-abbr">{game.away_team}</div>
       <div className="ic-team-name">
-        {teamNames[game.away_team] ?? game.away_team}
+        {TEAM_NAMES[game.away_team] ?? game.away_team}
       </div>
       <div className="ic-qb">
         {game.away_projected_qb_name ?? "QB unavailable"}
@@ -177,7 +160,7 @@ export default function MatchupModal({
 
     <img
       src={`${import.meta.env.BASE_URL}logos/${game.away_team}.png`}
-      alt={`${teamNames[game.away_team] ?? game.away_team} logo`}
+      alt={`${TEAM_NAMES[game.away_team] ?? game.away_team} logo`}
       className="ic-team-logo"
     />
   </div>
@@ -187,14 +170,14 @@ export default function MatchupModal({
   <div className="ic-team ic-team-home">
     <img
       src={`${import.meta.env.BASE_URL}logos/${game.home_team}.png`}
-      alt={`${teamNames[game.home_team] ?? game.home_team} logo`}
+      alt={`${TEAM_NAMES[game.home_team] ?? game.home_team} logo`}
       className="ic-team-logo"
     />
 
     <div className="ic-team-info">
       <div className="ic-abbr">{game.home_team}</div>
       <div className="ic-team-name">
-        {teamNames[game.home_team] ?? game.home_team}
+        {TEAM_NAMES[game.home_team] ?? game.home_team}
       </div>
       <div className="ic-qb">
         {game.home_projected_qb_name ?? "QB unavailable"}
@@ -225,7 +208,7 @@ export default function MatchupModal({
         <div className="ic-winner">
           <span>Projected winner</span>
           <strong>
-            {teamNames[winner] ?? winner} · {pct(winnerProbability)}
+            {TEAM_NAMES[winner] ?? winner} · {pct(winnerProbability)}
           </strong>
         </div>
 

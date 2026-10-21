@@ -1,59 +1,29 @@
-.dashboard-shell .score-ticker { display: flex; align-items: stretch; min-width: 0; height: 68px; margin: 16px 0 20px; overflow: hidden; border: 1px solid #dce3e5; border-radius: 12px; background: #f5f7f5; color: #172431; }
-.dashboard-shell .score-ticker-label { flex: 0 0 145px; display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 0 16px; background: #112638; color: white; z-index: 1; }
-.dashboard-shell .score-ticker-label strong { font-size: 12px; letter-spacing: 1px; }
-.dashboard-shell .score-ticker-label span { font-size: 10px; color: #b6cad6; }
-.dashboard-shell .score-ticker-window { flex: 1; min-width: 0; overflow: hidden; }
-.dashboard-shell .score-ticker-track { display: flex; width: max-content; height: 100%; animation: scoreTickerScroll var(--ticker-duration, 80s) linear infinite; }
-.dashboard-shell .score-ticker-group { display: flex; flex-shrink: 0; }
-.dashboard-shell .score-ticker-game { flex: 0 0 300px; width: 300px; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 8px 20px; border: 0; border-right: 1px solid #dce3e5; border-radius: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
-.dashboard-shell .score-ticker-game:hover { background: #eaf0f4; }
-.dashboard-shell .score-ticker-game:focus-visible { outline: 2px solid #187be8; outline-offset: -3px; }
-.dashboard-shell .score-ticker-matchup { display: flex; align-items: center; gap: 8px; font-size: 12px; white-space: nowrap; }
-.dashboard-shell .score-ticker-matchup img { width: 24px; height: 24px; object-fit: contain; flex: 0 0 24px; }
-.dashboard-shell .score-ticker-matchup strong { font-size: 15px; font-variant-numeric: tabular-nums; }
-.dashboard-shell .score-ticker-at { color: #83939d; font-size: 11px; }
-.dashboard-shell .score-ticker-detail { display: flex; justify-content: space-between; gap: 10px; color: #657b8b; font-size: 9px; white-space: nowrap; }
-.dashboard-shell .score-ticker-live { color: #187be8; font-weight: 800; }
-.dashboard-shell .score-ticker-pause { flex: 0 0 36px; border: 0; border-left: 1px solid #dce3e5; background: #f5f7f5; color: #172431; cursor: pointer; }
-.dashboard-shell .score-ticker:hover .score-ticker-track,
-.dashboard-shell .score-ticker:focus-within .score-ticker-track,
-.dashboard-shell .score-ticker-track.is-paused { animation-play-state: paused; }
-@keyframes scoreTickerScroll { to { transform: translateX(-50%); } }
-@media (max-width: 650px) {
-  .dashboard-shell .score-ticker-label { flex-basis: 105px; padding: 0 10px; }
-  .dashboard-shell .score-ticker-label strong { font-size: 10px; }
-  .dashboard-shell .score-ticker-label span { font-size: 8px; }
-  .dashboard-shell .score-ticker-game { flex-basis: 280px; width: 280px; padding: 8px 12px; }
-}
-@media (prefers-reduced-motion: reduce) {
-  .dashboard-shell .score-ticker-track { animation: none; }
-  .dashboard-shell .score-ticker-window { overflow-x: auto; }
-  .dashboard-shell .score-ticker-group[aria-hidden="true"] { display: none; }
-  .dashboard-shell .score-ticker-pause { display: none; }
-}
-
-/* Center ticker matchups and strengthen separators */
-.dashboard-shell .score-ticker-game {
-  align-items: center;
-  padding: 8px 16px;
-  box-sizing: border-box;
-  border-right: 2px solid #a9bac5;
-}
-
-.dashboard-shell .score-ticker-matchup {
-  width: 100%;
-  justify-content: center;
-  gap: 8px;
-}
-
-.dashboard-shell .score-ticker-detail {
-  width: 100%;
-  justify-content: center;
-  gap: 12px;
-  text-align: center;
-}
-
-.dashboard-shell .score-ticker-detail > span + span {
-  padding-left: 12px;
-  border-left: 1px solid #a9bac5;
+.dashboard-shell .score-ticker { display:flex; align-items:stretch; min-width:0; height:116px; margin:18px 0; overflow:hidden; border:1px solid #344b58; border-radius:12px; background:linear-gradient(110deg,#142630,#0e1c25); color:#edf5fa; box-shadow:inset 0 1px 0 #ffffff08,0 6px 18px #00000014; }
+.dashboard-shell .score-ticker-label { flex:0 0 92px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:6px; border-right:1px solid #344b58; }
+.dashboard-shell .score-ticker-label strong { font:650 11px ui-monospace,monospace; letter-spacing:1px; }
+.dashboard-shell .score-ticker-label > span { font:8px ui-monospace,monospace; color:#819ba9; letter-spacing:.7px; }
+.dashboard-shell .score-ticker-window { display:flex; flex:1; min-width:0; overflow-x:auto; scrollbar-width:none; scroll-snap-type:x proximity; overscroll-behavior-x:contain; }
+.dashboard-shell .score-ticker-window::-webkit-scrollbar { display:none; }
+.dashboard-shell .score-ticker-game { flex:0 0 174px; width:174px; display:flex; flex-direction:column; justify-content:center; gap:8px; padding:13px 18px 10px; box-sizing:border-box; border:0; border-right:1px solid #344b58; border-radius:0; background:transparent; color:inherit; text-align:left; cursor:pointer; scroll-snap-align:start; position:relative; }
+.dashboard-shell .score-ticker-game:hover { background:#76cfff0b; }
+.dashboard-shell .score-ticker-game.is-selected { background:linear-gradient(110deg,#65caff0d,#65caff04); box-shadow:inset 0 0 0 2px #78d4ff,inset 0 0 24px #65caff0b; border-radius:7px; }
+.dashboard-shell .score-ticker-game:focus-visible,.dashboard-shell .score-ticker-arrow:focus-visible,.dashboard-shell .score-ticker-pause:focus-visible { outline:2px solid #a5e3ff; outline-offset:-4px; }
+.dashboard-shell .score-ticker-team { display:grid; grid-template-columns:27px 1fr auto; align-items:center; gap:9px; width:100%; font:500 13px ui-monospace,monospace; letter-spacing:.5px; }
+.dashboard-shell .score-ticker-team img { width:27px; height:23px; object-fit:contain; }
+.dashboard-shell .score-ticker-team b { font-weight:550; }
+.dashboard-shell .score-ticker-team strong { font-weight:750; font-variant-numeric:tabular-nums; }
+.dashboard-shell .score-ticker-status { display:block; width:100%; margin-top:1px; color:#96b2c3; font:500 9px/1.4 ui-monospace,monospace; text-align:center; text-transform:uppercase; white-space:nowrap; }
+.dashboard-shell .score-ticker-status.is-live { color:#70dbb1; }
+.dashboard-shell .score-ticker-controls { display:flex; flex-direction:column; justify-content:center; align-items:center; flex:0 0 38px; border-left:1px solid #344b58; }
+.dashboard-shell .score-ticker-arrow,.dashboard-shell .score-ticker-pause { display:grid; place-items:center; width:32px; height:32px; padding:0; border:0; border-radius:5px; background:transparent; color:#a8c3d3; font:18px ui-monospace,monospace; cursor:pointer; }
+.dashboard-shell .score-ticker-arrow:hover,.dashboard-shell .score-ticker-pause:hover { background:#76cfff16; color:#e0f5ff; }
+.dashboard-shell .score-ticker-pause { font-size:12px; }
+@media(max-width:650px) {
+ .dashboard-shell .score-ticker { height:112px; }
+ .dashboard-shell .score-ticker-label { flex-basis:64px; }
+ .dashboard-shell .score-ticker-label strong { font-size:10px; }
+ .dashboard-shell .score-ticker-label > span { font-size:7px; }
+ .dashboard-shell .score-ticker-game { flex-basis:148px; width:148px; padding:12px 14px 9px; }
+ .dashboard-shell .score-ticker-team { grid-template-columns:24px 1fr auto; gap:7px; font-size:12px; }
+ .dashboard-shell .score-ticker-controls { flex-basis:32px; }
 }

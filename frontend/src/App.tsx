@@ -12,6 +12,7 @@ import heroPlayer from "./assets/cw.webp";
 import DashboardPlayers from "./DashboardPlayers";
 import DashboardMarkets from "./DashboardMarkets";
 import ScoreTicker from "./ScoreTicker";
+import DashboardMetrics from "./DashboardMetrics";
 import PerformancePage from "./PerformancePage";
 import MarketsPage from "./MarketsPage";
 import ProbabilityWheel from "./ProbabilityWheel";
@@ -208,57 +209,20 @@ const focusedGame =
     />
   </div>
 </section>
-{data && !archived && (
+{data && (
   <ScoreTicker
     games={data.games}
     season={data.season}
     week={data.week}
     model={model}
+    activeGameId={focusedGame?.game_id}
     onSelect={(gameId) => {
       const game = data.games.find((candidate) => candidate.game_id === gameId);
       if (game) { setFocusedGameId(gameId); setSelectedGame(game); }
     }}
   />
 )}
-{/* dashboard metrics */}
-<section className="dash-kpi-grid">
-  {[
-    {
-      icon: "◎",
-      label: "Model Accuracy",
-      value: "—",
-      detail: "Historical performance",
-    },
-    {
-      icon: "◈",
-      label: "Prediction Record",
-      value: "—",
-      detail: "Correct vs. incorrect",
-    },
-    {
-      icon: "↗",
-      label: "Model vs. Vegas",
-      value: "—",
-      detail: "Market comparison",
-    },
-    {
-      icon: "▥",
-      label: "Games Forecasted",
-      value: data?.count?.toString() ?? "—",
-      detail: `Week ${data?.week ?? "—"} · ${data?.season ?? "—"}`,
-    },
-  ].map((metric) => (
-    <div className="dash-kpi-card" key={metric.label}>
-      <div className="dash-kpi-icon">{metric.icon}</div>
-      <div className="dash-kpi-content">
-        <span>{metric.label}</span>
-        <strong>{metric.value}</strong>
-        <small>{metric.detail}</small>
-      </div>
-      <span className="dash-placeholder-tag">SOON</span>
-    </div>
-  ))}
-</section>
+<DashboardMetrics data={data} />
           {/* predictions */}
           <section
             className="forecast-section"

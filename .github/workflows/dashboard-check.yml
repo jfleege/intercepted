@@ -1,0 +1,39 @@
+name: Check dashboard scorecards
+on:
+  push:
+    branches: [codex/dashboard-scorecards]
+permissions:
+  contents: read
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check frontend
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run lint
+          npm test
+          npm run build
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+      - name: Check dashboard in browser
+        working-directory: frontend
+        run: |
+          npx vite preview --host 127.0.0.1 --port 4174 >/tmp/dashboard-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/dashboard.browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dashboard-preview
+          path: frontend/qa/dashboard/
+          retention-days: 14

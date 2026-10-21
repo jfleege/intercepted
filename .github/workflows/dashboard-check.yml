@@ -1,7 +1,7 @@
-name: Check dashboard scorecards
+name: Check dashboard layouts
 on:
   push:
-    branches: [codex/dashboard-scorecards]
+    branches: [codex/dashboard-scorecards, codex/unified-dashboard]
 permissions:
   contents: read
 jobs:
@@ -31,9 +31,10 @@ jobs:
             sleep 1
           done
           node tests/dashboard.browser.mjs
+          node tests/unified.browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: dashboard-preview
-          path: frontend/qa/dashboard/
+          path: frontend/qa/
           retention-days: 14

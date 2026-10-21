@@ -96,19 +96,11 @@ function PlayerCard({ player }: { player: Player }) {
         </span>
       </div>
 
-      <div className="dp-player-footer">
-        <div>
-          <span>Season avg.</span>
-          <strong>{player.season_average.toFixed(1)}</strong>
-        </div>
-
-        <div>
-          <span>Trend</span>
-          <strong className={`dp-trend ${trendClass}`}>
-            {trendText}
-          </strong>
-        </div>
+      <div className="ud-player-comparison" aria-label={`Season average ${player.season_average.toFixed(1)}, last ${player.games_sampled} average ${player.recent_average.toFixed(1)} ${player.stat_label} per game`}>
+        <div><span>Season</span><i style={{width:`${Math.max(0, player.season_average) / Math.max(1, player.season_average, player.recent_average) * 100}%`}}/><b>{player.season_average.toFixed(1)}</b></div>
+        <div><span>Last {player.games_sampled}</span><i className="ud-recent" style={{width:`${Math.max(0, player.recent_average) / Math.max(1, player.season_average, player.recent_average) * 100}%`}}/><b>{player.recent_average.toFixed(1)}</b></div>
       </div>
+      <div className="ud-player-trend"><span>Change vs. season average</span><strong className={`dp-trend ${trendClass}`}>{trendText}</strong></div>
     </article>
   );
 }
@@ -135,7 +127,7 @@ const scrollPlayers = (direction: number) => {
 
   container.scrollBy({
     left: direction * distance,
-    behavior: "smooth",
+    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
   });
 };
 
@@ -208,7 +200,7 @@ const scrollPlayers = (direction: number) => {
     <section className="dash-bottom-panel dp-panel">
       <div className="dash-bottom-heading">
         <div>
-          <h3>Players to Watch</h3>
+          <p className="ud-eyebrow">FORM WATCH</p><h3>Players to Watch</h3>
           <p>
   Top 10 positive yardage trends · Week {data?.week ?? "—"}
 </p>

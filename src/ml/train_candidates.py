@@ -9,7 +9,9 @@ from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import HistGradientBoostingClassifier
-from src.ml.candidate_training_data import df, MODEL_COLUMNS, ROOT
+from src.ml.training_data import load_training_data, MODEL_COLUMNS, ROOT
+
+df = load_training_data()
 from src.features.model_context import CONTEXT_COLUMNS
 from src.ml.refresh_performance import write_json
 

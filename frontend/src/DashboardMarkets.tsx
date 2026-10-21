@@ -1,17 +1,13 @@
 import { probability, MODEL_LABELS } from "./predictionModels";
-import type { Model } from "./predictionModels";
+import type { Model, PredictionFields } from "./predictionModels";
 
 import { useEffect, useState } from "react";
 import draftKingsLogo from "./assets/draftkings.png";
 
-type Game = {
+type Game = PredictionFields & {
   game_id: string;
   home_team: string;
   away_team: string;
-  home_win_prob_v4_a: number;
-  home_win_prob_v4_qb_plus: number;
-  home_win_prob_v5_qb_plus?: number;
-  home_win_prob_v5_boosted?: number;
 };
 
 

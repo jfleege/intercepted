@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState } from "react";
+import { filterGames } from "./matchupFilters";
+import { useEffect, useState } from "react";
 import "./App.css";
 import "./DashboardLayout.css";
 import { probability, availableModels, MODEL_LABELS } from "./predictionModels";
@@ -11,217 +12,16 @@ import heroPlayer from "./assets/cw.webp";
 import DashboardPlayers from "./DashboardPlayers";
 import DashboardMarkets from "./DashboardMarkets";
 import ScoreTicker from "./ScoreTicker";
-import { PerformancePage, MarketsPage } from "./ReviewPages";
+import PerformancePage from "./PerformancePage";
+import MarketsPage from "./MarketsPage";
+import ProbabilityWheel from "./ProbabilityWheel";
+import { TEAM_NAMES } from "./teams";
 
-type Game = {
-  home_win_prob_v5_qb_plus?: number;
-  home_win_prob_v5_boosted?: number;
-  result?: {status: string; home_score: number | null; away_score: number | null};
-  game_id: string;
-  season: number;
-  week: number;
-  game_date: string;
-  home_team: string;
-  away_team: string;
-  predicted_winner: string;
-  predicted_winner_probability: number;
-  home_win_prob_v4_a: number;
-  away_win_prob_v4_a: number;
-  home_win_prob_v4_qb_plus: number;
-  away_win_prob_v4_qb_plus: number;
-  qb_probability_impact: number;
-  home_qb_selection?: {status: string};
-  away_qb_selection?: {status: string};
-  home_projected_qb_name?: string | null;
-  away_projected_qb_name?: string | null;
-};
-type PredictionData = {
-  season: number;
-  week: number;
-  count: number;
-  archived?: boolean;
-  policy?: string;
-  games: Game[];
-};
+import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};
-const teams: Record<string, string> = {
-  ARI: "Cardinals",
-  ATL: "Falcons",
-  BAL: "Ravens",
-  BUF: "Bills",
-  CAR: "Panthers",
-  CHI: "Bears",
-  CIN: "Bengals",
-  CLE: "Browns",
-  DAL: "Cowboys",
-  DEN: "Broncos",
-  DET: "Lions",
-  GB: "Packers",
-  HOU: "Texans",
-  IND: "Colts",
-  JAX: "Jaguars",
-  KC: "Chiefs",
-  LA: "Rams",
-  LAC: "Chargers",
-  LV: "Raiders",
-  MIA: "Dolphins",
-  MIN: "Vikings",
-  NE: "Patriots",
-  NO: "Saints",
-  NYG: "Giants",
-  NYJ: "Jets",
-  PHI: "Eagles",
-  PIT: "Steelers",
-  SEA: "Seahawks",
-  SF: "49ers",
-  TB: "Buccaneers",
-  TEN: "Titans",
-  WAS: "Commanders",
-};
 function percent(value: number) {
   return `${(value * 100).toFixed(1)}%`;
 }
-
-
-const teamColors: Record<string, string> = {
-  ARI: "#97233F",
-  ATL: "#A71930",
-  BAL: "#5A2D81",
-  BUF: "#00338D",
-  CAR: "#0085CA",
-  CHI: "#C83803",
-  CIN: "#FB4F14",
-  CLE: "#FF3C00",
-  DAL: "#003594",
-  DEN: "#FB4F14",
-  DET: "#0076B6",
-  GB: "#203731",
-  HOU: "#03202F",
-  IND: "#002C5F",
-  JAX: "#006778",
-  KC: "#E31837",
-  LA: "#003594",
-  LAC: "#0080C6",
-  LV: "#A5ACAF",
-  MIA: "#008E97",
-  MIN: "#4F2683",
-  NE: "#002244",
-  NO: "#D3BC8D",
-  NYG: "#0B2265",
-  NYJ: "#125740",
-  PHI: "#004C54",
-  PIT: "#FFB612",
-  SEA: "#002244",
-  SF: "#AA0000",
-  TB: "#D50A0A",
-  TEN: "#4B92DB",
-  WAS: "#5A1414",
-};
-
-
-type ProbabilityWheelProps = {
-  awayTeam: string;
-  homeTeam: string;
-  homeProb: number;
-};
-
-function ProbabilityWheel({
-  awayTeam,
-  homeTeam,
-  homeProb,
-}: ProbabilityWheelProps) {
-  const awayProb = 1 - homeProb;
-  const winnerIsHome = homeProb >= 0.5;
-
-  const winnerTeam = winnerIsHome ? homeTeam : awayTeam;
-  const winnerProb = winnerIsHome ? homeProb : awayProb;
-  const winnerColor = teamColors[winnerTeam] ?? "#187be8";
-
-  const radius = 61;
-  const circumference = 2 * Math.PI * radius;
-  const coloredLength = circumference * winnerProb;
-
-  return (
-    <div className="ga-wheel-block">
-      <div className="ga-wheel-side">
-        <strong>{awayTeam}</strong>
-        <span className={winnerIsHome ? "" : "ga-favored"}>
-          {percent(awayProb)}
-        </span>
-      </div>
-
-      <div className="ga-wheel-wrap">
-        <svg
-          className="ga-prob-wheel"
-          viewBox="0 0 160 160"
-          role="img"
-          aria-label={`${awayTeam} ${percent(awayProb)}, ${homeTeam} ${percent(homeProb)}`}
-        >
-          <defs>
-            <pattern
-              id="ga-loser-stripes"
-              width="6"
-              height="6"
-              patternUnits="userSpaceOnUse"
-              patternTransform="rotate(35)"
-            >
-              <rect width="6" height="6" fill="#f5f7f5" />
-              <rect width="2" height="6" fill="#293b48" />
-            </pattern>
-          </defs>
-
-          {/* striped background ring */}
-          <circle
-            cx="80"
-            cy="80"
-            r={radius}
-            fill="none"
-            stroke="url(#ga-loser-stripes)"
-            strokeWidth="16"
-          />
-
-          {/* projected winner */}
-          <circle
-            cx="80"
-            cy="80"
-            r={radius}
-            fill="none"
-            stroke={winnerColor}
-            strokeWidth="16"
-            strokeDasharray={`${coloredLength} ${circumference}`}
-            transform={
-              winnerIsHome
-                ? "rotate(-90 80 80)"
-                : "translate(160 0) scale(-1 1) rotate(-90 80 80)"
-            }
-          />
-        </svg>
-
-        <div className="ga-wheel-center">
-          <img
-            src={`${import.meta.env.BASE_URL}logos/${awayTeam}.png`}
-            alt={awayTeam}
-          />
-
-          <div className="ga-wheel-divider" />
-
-          <img
-            src={`${import.meta.env.BASE_URL}logos/${homeTeam}.png`}
-            alt={homeTeam}
-          />
-        </div>
-      </div>
-
-      <div className="ga-wheel-side">
-        <strong>{homeTeam}</strong>
-        <span className={winnerIsHome ? "ga-favored" : ""}>
-          {percent(homeProb)}
-        </span>
-      </div>
-    </div>
-  );
-}
-
 
 function App() {
   const [page, setPage] = useState(() => window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : "dashboard");
@@ -280,37 +80,7 @@ function App() {
       .catch((reason: Error) => { if (!controller.signal.aborted) setError(reason.message); });
     return () => controller.abort();
   }, [selectedWeek, weeks, archivedData]);
-  const games = useMemo(() => {
-    if (!data) return [];
-    const query = search.toLowerCase().trim();
-    const filtered = data.games.filter((game) => {
-      const names = [
-        game.home_team,
-        game.away_team,
-        teams[game.home_team],
-        teams[game.away_team],
-      ]
-        .join(" ")
-        .toLowerCase();
-      return names.includes(query);
-    });
-    return filtered.sort((a, b) => {
-      if (sort === "confidence") {
-        const confidenceA = Math.abs(probability(a, model) - 0.5);
-        const confidenceB = Math.abs(probability(b, model) - 0.5);
-        return confidenceB - confidenceA;
-      }
-      if (sort === "closest") {
-        const differenceA = Math.abs(probability(a, model) - 0.5);
-        const differenceB = Math.abs(probability(b, model) - 0.5);
-        return differenceA - differenceB;
-      }
-      return (
-        a.game_date.localeCompare(b.game_date) ||
-        a.game_id.localeCompare(b.game_id)
-      );
-    });
-  }, [data, model, search, sort]);
+  const games = filterGames(data?.games ?? [], model, search, sort);
 const focusedGame =
   games.find((game) => game.game_id === focusedGameId) ??
   games[0] ??
@@ -609,7 +379,7 @@ const focusedGame =
                         src={`${import.meta.env.BASE_URL}logos/${winner}.png`}
                         alt=""
                       />
-                      <span>{teams[winner] ?? winner}</span>
+                      <span>{TEAM_NAMES[winner] ?? winner}</span>
                     </div>
                   </td>
                   <td>

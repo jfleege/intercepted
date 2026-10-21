@@ -2,8 +2,6 @@
 
 /* existing appearance preserved; market cards use compact spacing */
 
-
-
 .dashboard-shell {
   --dash-blue: #4da3ff;
   --dash-lime: #c9f35a;
@@ -780,31 +778,6 @@
 
 .dashboard-shell .dash-game-analysis .dash-panel-heading {
   margin-bottom: 12px;
-}
-
-.dashboard-shell .dash-analysis-teams {
-  padding: 10px;
-}
-
-.dashboard-shell .dash-analysis-result {
-  padding: 14px;
-  margin-top: 10px;
-}
-
-.dashboard-shell .dash-analysis-metrics {
-  margin-top: 8px;
-}
-
-.dashboard-shell .dash-analysis-metrics > div {
-  padding: 12px;
-}
-
-.dashboard-shell .dash-analysis-qbs {
-  margin-top: 10px;
-}
-
-.dashboard-shell .dash-details-button {
-  margin-top: auto;
 }
 
 .hero-banner {
@@ -1627,13 +1600,7 @@
 }
 
 .dashboard-shell .dash-analysis-winner {
-  gap: 12px;
   margin-top: 8px;
-}
-
-.dashboard-shell .dash-analysis-winner img {
-  width: 44px;
-  height: 44px;
 }
 
 .dashboard-shell .dash-analysis-winner strong {
@@ -1735,7 +1702,6 @@
     height: 38px;
   }
 }
-
 
 /* horizontally scrollable players */
 .dp-panel {
@@ -1844,7 +1810,6 @@
   height: auto;
   object-fit: contain;
 }
-
 
 /* circular win probability */
 .dashboard-shell .dash-probability-wheel-panel {
@@ -2089,24 +2054,13 @@
   gap: 12px;
 }
 
-
 /* fix probability wheel sizing */
 .dashboard-shell .ga-wheel-block {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 130px minmax(0, 1fr);
-  align-items: center;
-  justify-items: center;
-  gap: 12px;
   width: 100%;
-  margin-top: 10px;
-  padding: 8px 12px;
-  background: #f5f7f5;
-  border-radius: 12px;
 }
 
 /* control wheel dimensions */
 .dashboard-shell .ga-wheel-wrap {
-  position: relative;
   width: 130px;
   height: 130px;
   min-width: 130px;
@@ -2115,62 +2069,27 @@
 }
 
 .dashboard-shell .ga-prob-wheel {
-  display: block;
   width: 130px;
   height: 130px;
   max-width: 130px;
-  max-height: 130px;
 }
 
 /* logos inside wheel */
-.dashboard-shell .ga-wheel-center {
-  position: absolute;
-  inset: 23px;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
-  align-items: center;
-  justify-items: center;
-  gap: 3px;
-  pointer-events: none;
-}
-
-.dashboard-shell .ga-wheel-center img {
-  display: block;
-  width: 34px;
-  height: 34px;
-  max-width: 34px;
-  max-height: 34px;
-  object-fit: contain;
-}
-
-.dashboard-shell .ga-wheel-divider {
-  width: 1px;
-  height: 38px;
-  background: #cbd5d9;
-}
 
 /* percentages beside wheel */
 .dashboard-shell .ga-wheel-side {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  gap: 5px;
   min-width: 0;
 }
 
 .dashboard-shell .ga-wheel-side strong {
   display: block;
-  color: #172431;
-  font-size: 13px;
   font-weight: 800;
 }
 
 .dashboard-shell .ga-wheel-side span {
   display: block;
   color: #82929d;
-  font-size: 17px;
-  font-weight: 850;
 }
 
 .dashboard-shell .ga-wheel-side .ga-favored {
@@ -2179,54 +2098,20 @@
 
 /* smaller screens */
 @media (max-width: 650px) {
-  .dashboard-shell .ga-wheel-block {
-    grid-template-columns: minmax(0, 1fr) 105px minmax(0, 1fr);
-    gap: 5px;
-  }
-
-  .dashboard-shell .ga-wheel-wrap,
-  .dashboard-shell .ga-prob-wheel {
-    width: 105px;
-    height: 105px;
-    min-width: 105px;
-    max-width: 105px;
-  }
-
-  .dashboard-shell .ga-wheel-center {
-    inset: 20px;
-  }
-
-  .dashboard-shell .ga-wheel-center img {
-    width: 25px;
-    height: 25px;
-  }
-
-  .dashboard-shell .ga-wheel-side span {
-    font-size: 14px;
-  }
 }
 
 /* compact game analysis wheel */
 .dashboard-shell .ga-wheel-block {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 145px minmax(0, 1fr);
   align-items: center;
   justify-items: center;
   gap: 12px;
   margin-top: 12px;
-  padding: 16px 20px;
   background: #f5f7f5;
   border-radius: 12px;
 }
 
 /* fixed wheel size */
-.dashboard-shell .ga-wheel-wrap,
-.dashboard-shell .ga-prob-wheel {
-  width: 145px;
-  height: 145px;
-  min-width: 145px;
-  max-width: 145px;
-}
 
 .dashboard-shell .ga-wheel-wrap {
   position: relative;
@@ -2239,33 +2124,21 @@
 /* force logos into center of wheel */
 .dashboard-shell .ga-wheel-center {
   position: absolute;
-  inset: 32px;
-  display: grid;
   grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
-  align-items: center;
   justify-items: center;
-  gap: 4px;
-  padding: 0;
-  width: auto;
-  height: auto;
   pointer-events: none;
 }
 
 .dashboard-shell .ga-wheel-center img {
   position: static;
   display: block;
-  width: 32px;
-  height: 32px;
   min-width: 0;
-  max-width: 32px;
-  max-height: 32px;
   object-fit: contain;
   transform: none;
 }
 
 .dashboard-shell .ga-wheel-divider {
   width: 1px;
-  height: 36px;
   background: #cbd5d9;
 }
 
@@ -2278,20 +2151,16 @@
 }
 
 .dashboard-shell .ga-wheel-side strong {
-  font-size: 13px;
   color: #172431;
 }
 
 .dashboard-shell .ga-wheel-side span {
-  font-size: 18px;
   font-weight: 850;
 }
 
 @media (max-width: 650px) {
   .dashboard-shell .ga-wheel-block {
     grid-template-columns: minmax(0, 1fr) 110px minmax(0, 1fr);
-    gap: 5px;
-    padding: 12px 6px;
   }
 
   .dashboard-shell .ga-wheel-wrap,
@@ -2330,28 +2199,8 @@
   max-width: var(--wheel-size);
 }
 
-.dashboard-shell .ga-wheel-center {
-  inset: 22%;
-  gap: 6px;
-}
-
-.dashboard-shell .ga-wheel-center img {
-  width: 46px;
-  height: 46px;
-  max-width: 46px;
-  max-height: 46px;
-}
-
-.dashboard-shell .ga-wheel-divider {
-  height: 48px;
-}
-
 .dashboard-shell .ga-wheel-side strong {
   font-size: 15px;
-}
-
-.dashboard-shell .ga-wheel-side span {
-  font-size: 24px;
 }
 
 @media (max-width: 650px) {
@@ -2362,17 +2211,6 @@
   }
 }
 
-  .dashboard-shell .ga-wheel-center img {
-    width: 34px;
-    height: 34px;
-    max-width: 34px;
-    max-height: 34px;
-  }
-
-  .dashboard-shell .ga-wheel-divider {
-    height: 36px;
-  }
-
   .dashboard-shell .ga-wheel-side span {
     font-size: 18px;
   }
@@ -2381,11 +2219,11 @@
     grid-template-columns:
       minmax(0, 1fr) var(--wheel-size, 180px) minmax(0, 1fr);
   }
-  
+
   .dashboard-shell .ga-prob-wheel {
     max-height: var(--wheel-size, 180px);
   }
-  
+
   .dashboard-shell .ga-wheel-center {
     inset: 0;
     width: auto;
@@ -2396,7 +2234,7 @@
     justify-content: center;
     gap: 8px;
   }
-  
+
   .dashboard-shell .ga-wheel-center img {
     width: 32px;
     height: 32px;
@@ -2404,7 +2242,7 @@
     max-height: 32px;
     flex: 0 0 32px;
   }
-  
+
   .dashboard-shell .ga-wheel-divider {
     height: 32px;
     flex: 0 0 1px;

@@ -67,12 +67,12 @@ try{
   await Promise.all(pages.map(p=>p.getByLabel('Prediction week').selectOption('2026-6')));
   await Promise.all(pages.map(p=>p.getByRole('button',{name:'QB+ (original)',exact:true}).waitFor()));
   await compare(pages,'week6-archive',width);
-  await Promise.all(pages.map(p=>p.getByRole('link',{name:'Performance',exact:false}).click()));
+  await Promise.all(pages.map(p=>p.locator('a[href="#performance"]').click()));
   await compare(pages,'performance',width);
   await Promise.all(pages.map(p=>p.getByRole('button',{name:'Historical backtest',exact:true}).click()));
   await Promise.all(pages.map(p=>p.getByLabel('Model',{exact:true}).selectOption('compare')));
   await compare(pages,'historical-performance',width);
-  await Promise.all(pages.map(p=>p.getByRole('link',{name:'Markets',exact:false}).click()));
+  await Promise.all(pages.map(p=>p.locator('a[href="#markets"]').click()));
   await compare(pages,'markets',width);
   await Promise.all(contexts.map(c=>c.close()));
  }

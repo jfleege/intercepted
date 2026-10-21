@@ -8,7 +8,11 @@ export default function ProbabilityWheel({ awayTeam, homeTeam, homeProb }: {
   const awayProb = 1 - homeProb, winnerIsHome = homeProb >= .5;
   const winner = winnerIsHome ? homeTeam : awayTeam;
   const winnerProb = Math.max(homeProb, awayProb);
-  const color = TEAM_COLORS[winner] ?? '#80d5ff';
+  const primary = TEAM_COLORS[winner] ?? '#80d5ff';
+  const [red, green, blue] = [1, 3, 5].map(start => parseInt(primary.slice(start,start+2),16));
+  // Lift dark team colors against the dark panel while preserving the team's hue.
+  const color = (red * .299 + green * .587 + blue * .114) < 100
+    ? `color-mix(in srgb, ${primary} 60%, white)` : primary;
   const circumference = 2 * Math.PI * 61;
   const side = (team: string, p: number, favored: boolean) => <div className={`ud-wheel-side${favored ? ' is-favored' : ''}`}>
     <div className="ud-probability-column" aria-hidden="true"><span className="ud-probability-fill" style={{height:`${p*100}%`,backgroundColor:favored ? color : undefined}}/></div>

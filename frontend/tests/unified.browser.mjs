@@ -27,13 +27,17 @@ try {
   assert.ok((await page.locator('.ud-hero h1').evaluate(e=>getComputedStyle(e).fontFamily)).includes('Barlow Condensed'));
   assert.ok((await page.locator('.pulse-value').first().evaluate(e=>getComputedStyle(e).fontFamily)).includes('Barlow'));
   assert.ok(await page.evaluate(()=>document.fonts.check('600 16px Barlow')&&document.fonts.check('600 16px "Barlow Condensed"')));
+  await page.screenshot({path:`qa/unified/${width}-initial.png`,fullPage:true});
   for(const index of [1,4]){
-   const game=data.games[index];
-   await page.locator('.ud-game').nth(index).click();
+   const row=page.locator('.ud-game').nth(index);
+   const label=await row.getAttribute('aria-label');
+   const game=data.games.find(g=>label.startsWith(`${g.away_team} at ${g.home_team}.`));
+   assert.ok(game);
+   await row.click();
    await page.waitForFunction(title=>document.querySelector('.ud-focus h3')?.textContent===title,`${game.away_team} at ${game.home_team}`);
    assert.equal(await page.locator('.ud-game.is-selected').count(),1);
-   const label=await page.locator('.ud-wheel').getAttribute('aria-label');
-   assert.ok(label.includes(`${(game.home_win_prob_v5_qb_plus*100).toFixed(1)}%`));
+   const wheelLabel=await page.locator('.ud-wheel').getAttribute('aria-label');
+   assert.ok(wheelLabel.includes(`${(game.home_win_prob_v5_qb_plus*100).toFixed(1)}%`));
    const fill=await page.locator('.ud-probability-fill').evaluateAll(els=>els.map(e=>getComputedStyle(e).animationName));
    assert.deepEqual(fill,['none','none']);
   }

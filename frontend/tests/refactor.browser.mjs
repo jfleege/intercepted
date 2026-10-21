@@ -10,6 +10,8 @@ await mkdir(output,{recursive:true});
 const errors=[];
 const properties=['display','position','width','height','min-width','max-width','padding','margin','gap','grid-template-columns','flex-direction','flex-wrap','align-items','justify-content','color','background-color','background-image','font-family','font-size','font-weight','line-height','letter-spacing','border','border-radius','box-shadow','opacity','overflow-x','overflow-y','transform','inset'];
 async function settle(page){
+  if(page.url().endsWith('#performance'))await page.locator('.performance-page .review-draft').filter({hasText:'ARCHIVED SNAPSHOTS'}).waitFor();
+  if(page.url().endsWith('#markets'))await page.getByText('Loading saved moneylines…',{exact:true}).waitFor({state:'hidden'});
   await page.waitForLoadState('networkidle');
   await page.evaluate(async()=>{await document.fonts.ready; for(const img of document.images)img.loading='eager'; await Promise.all([...document.images].map(img=>img.complete?Promise.resolve():new Promise(resolve=>{img.onload=img.onerror=resolve;})));});
 }

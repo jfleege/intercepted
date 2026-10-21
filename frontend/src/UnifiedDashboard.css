@@ -43,7 +43,7 @@
 .dashboard-shell .ud-panel-heading > span:not(.ud-tag) { color:var(--ud-muted); font-size:10px; letter-spacing:.7px; }
 .dashboard-shell .ud-panel-heading .ud-eyebrow { display:block; margin:0 0 5px; }
 .dashboard-shell .ud-tag { display:inline-flex; flex-shrink:0; color:var(--ud-blue); border:1px solid #456b80; border-radius:5px; padding:5px 7px; background:#153243; font-size:11px; }
-.dashboard-shell .ud-game-list { padding:5px 10px; max-height:560px; overflow-y:auto; scrollbar-color:#3f6276 #102632; scrollbar-width:thin; }
+.dashboard-shell .ud-game-list { padding:5px 10px; max-height:440px; overflow-y:auto; scrollbar-color:#3f6276 #102632; scrollbar-width:thin; }
 .dashboard-shell .ud-game { display:grid; grid-template-columns:minmax(0,1fr) 118px; align-items:center; gap:13px; width:100%; padding:14px 11px; text-align:left; color:var(--ud-text); background:transparent; border:0; border-bottom:1px solid #29414e; border-radius:0; cursor:pointer; }
 .dashboard-shell .ud-game:last-child { border-bottom:0; }
 .dashboard-shell .ud-game:hover { background:#1b394955; }

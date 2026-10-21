@@ -41,7 +41,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
   const status = failed ? 'Results unavailable' : !ready ? 'Loading verified record…' : `${record.graded} graded · ${record.pending} pending${record.excluded ? ` · ${record.excluded} ties/voids` : ''}`;
   return <section className="season-pulse" aria-label="Dashboard season metrics">
     <div className="pulse-heading"><span>SEASON PULSE <b> / {data?.season ?? '—'}</b></span>
-      <label>Record model <select value={recordModel} onChange={event => setRecordModel(event.target.value as Model)}>{MODEL_ORDER.map(model => <option key={model} value={model}>{MODEL_LABELS[model]}</option>)}</select></label>
+      <label>Record model <select aria-label="Record model" value={recordModel} onChange={event => setRecordModel(event.target.value as Model)}>{MODEL_ORDER.map(model => <option key={model} value={model}>{MODEL_LABELS[model]}</option>)}</select></label>
     </div>
     <div className="pulse-grid">
       <article className="pulse-card">

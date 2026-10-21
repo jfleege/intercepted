@@ -37,6 +37,7 @@ try {
   await page.locator('.score-ticker-game').nth(2).click();await page.getByRole('button',{name:'Close matchup'}).waitFor();
   await page.getByRole('button',{name:'Close matchup'}).click();
   assert.equal(await page.locator('.score-ticker-game.is-selected').getAttribute('aria-current'),'true');
+  await page.screenshot({path:`qa/dashboard/${width}-initial.png`,fullPage:true});
   await page.getByLabel('Record model',{exact:true}).selectOption('v5_qb_plus');
   await page.waitForFunction(()=>document.querySelector('.pulse-value')?.textContent==='—');
   assert.equal(await cards.first().getByText('No graded games yet',{exact:true}).count(),1);

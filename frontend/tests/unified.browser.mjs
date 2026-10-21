@@ -86,9 +86,9 @@ try {
   await page.locator('.ud-winner-arc').evaluate(async e=>{await Promise.all(e.getAnimations().map(a=>a.finished));});
   const arc=await page.locator('.ud-winner-arc').evaluate(e=>({expected:parseFloat(e.style.getPropertyValue('--ud-arc')),actual:parseFloat(getComputedStyle(e).strokeDasharray)}));
   assert.ok(Math.abs(arc.expected-arc.actual)<.01,JSON.stringify(arc));
-  await page.locator('a[href="#performance"]').click();
+  await page.locator('.dash-nav a[href="#performance"]').click();
   await page.locator('.performance-page .review-draft').filter({hasText:'ARCHIVED SNAPSHOTS'}).waitFor();
-  await page.locator('a[href="#markets"]').click();
+  await page.locator('.dash-nav a[href="#markets"]').click();
   await page.getByText('Loading saved moneylines…',{exact:true}).waitFor({state:'hidden'});
   await context.close();console.log(`PASS ${width}px: real fonts, photos/PNG, matchup selection, probabilities, bounce/reduced motion, markets, archives, filters, no overflow.`);
  }

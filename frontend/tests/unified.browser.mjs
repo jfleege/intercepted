@@ -53,7 +53,7 @@ try {
   const values=await page.locator('.ud-game-probability b').allTextContents();
   assert.deepEqual(values,values.toSorted((a,b)=>parseFloat(b)-parseFloat(a)));
   await page.getByLabel('Sort matchups').selectOption('date');
-  await page.getByLabel('Search teams or matchups').fill('Chicago');
+  await page.getByLabel('Search teams or matchups').fill('Bears');
   assert.equal(await page.locator('.ud-game').count(),1);
   await page.getByLabel('Search teams or matchups').fill('xyznoresult');
   assert.equal(await page.getByText('No matchups match your search.',{exact:true}).count(),1);

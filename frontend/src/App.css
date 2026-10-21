@@ -36,15 +36,6 @@ button {
   background: #101818;
 }
 
-.header-inner {
-  max-width: 1250px;
-  margin: auto;
-  padding: 20px 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .brand {
   display: flex;
   align-items: center;
@@ -65,15 +56,10 @@ button {
   font-weight: 900;
 }
 
-.header-detail,
 .eyebrow {
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 2px;
-}
-
-.header-detail {
-  color: #8b9c92;
 }
 
 .eyebrow {
@@ -179,71 +165,11 @@ button {
   color: #081829;
 }
 
-.toolbar {
-  display: flex;
-  gap: 12px;
-  margin-bottom: 22px;
-}
-
-.toolbar input,
-.toolbar select {
-  background: #18211f;
-  color: #edf3ef;
-  padding: 13px 16px;
-  border: 1px solid #30403a;
-  border-radius: 8px;
-  outline: none;
-}
-
-.toolbar input {
-  flex: 1;
-}
-
-.toolbar select {
-  min-width: 190px;
-}
-
-.toolbar input:focus,
-.toolbar select:focus {
-  border-color: #4da3ff;
-}
-
-.matchup-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.matchup-card {
-  background: #192321;
-  border: 1px solid #31413b;
-  border-radius: 12px;
-  padding: 24px;
-  transition: border-color 0.2s;
-}
-
-.matchup-card:hover {
-  border-color: #70baff;
-}
-
-.card-top,
 .card-footer {
   display: flex;
   justify-content: space-between;
   gap: 12px;
   align-items: center;
-}
-
-.card-top {
-  font-size: 11px;
-  color: #96a99f;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.prediction-label {
-  color: #4da3ff;
 }
 
 .teams {
@@ -254,32 +180,10 @@ button {
   padding: 29px 0;
 }
 
-.team-right {
-  text-align: right;
-}
-
-.team-abbr {
-  font-size: 36px;
-  font-weight: 900;
-  letter-spacing: -1px;
-}
-
 .team-name {
   font-weight: 700;
   font-size: 14px;
   margin-top: 3px;
-}
-
-.qb-name {
-  font-size: 11px;
-  color: #8fa39a;
-  margin-top: 9px;
-}
-
-.versus {
-  font-size: 18px;
-  color: #788e82;
-  text-align: center;
 }
 
 .probabilities {
@@ -305,38 +209,11 @@ button {
   color: #4da3ff;
 }
 
-.probabilities span,
-.probability-title {
+.probabilities span {
   font-size: 10px;
   color: #8fa39a;
   letter-spacing: 1px;
   font-weight: 800;
-}
-
-.probability-title {
-  text-align: center;
-}
-
-.probability-right {
-  text-align: right;
-}
-
-.probability-bar {
-  width: 100%;
-  height: 9px;
-  display: flex;
-  overflow: hidden;
-  border-radius: 3px;
-  background: #465c53;
-}
-
-.away-bar {
-  background: #4da3ff;
-}
-
-.home-bar {
-  flex: 1;
-  background: #465c53;
 }
 
 .card-footer {
@@ -382,9 +259,6 @@ button {
 }
 
 @media (max-width: 800px) {
-  .matchup-grid {
-    grid-template-columns: 1fr;
-  }
 
   .section-heading,
   .footer {
@@ -402,14 +276,6 @@ button {
     padding: 0 16px;
   }
 
-  .header-inner {
-    padding: 16px;
-  }
-
-  .header-detail {
-    display: none;
-  }
-
   .hero h1 {
     letter-spacing: -1.5px;
   }
@@ -423,26 +289,9 @@ button {
     min-width: 0;
     padding: 13px;
   }
-
-  .toolbar {
-    flex-direction: column;
-  }
-
-  .toolbar select {
-    width: 100%;
-  }
-
-  .matchup-card {
-    padding: 18px;
-  }
-
-  .team-abbr {
-    font-size: 29px;
-  }
 }
 
   /* team names */
-.team-abbr,
 .team-name {
   color: #edf3ef;
 }
@@ -519,10 +368,6 @@ button {
 
 .ic-teams {
   margin: 32px 0;
-}
-
-.ic-team-right {
-  text-align: right;
 }
 
 .ic-abbr {
@@ -870,11 +715,6 @@ button {
   justify-content: space-between;
 }
 
-.pw-stats .pw-stat-label {
-  color: #edf3ef;
-  font-size: 12px;
-}
-
 @media (max-width: 600px) {
   .pw-grid {
     grid-template-columns: 1fr;
@@ -882,8 +722,7 @@ button {
 }
 
 /* center both teams */
-.teams .team,
-.teams .team-right {
+.teams .team {
   text-align: center;
 }
 

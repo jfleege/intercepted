@@ -8,6 +8,7 @@ from pathlib import Path
 
 import nflreadpy as nfl
 from src.features.qb_starters import watch_players
+from src.features.defense_rankings import build_defense_rankings
 
 
 # configuration
@@ -394,6 +395,7 @@ output = {
         timezone.utc
     ).isoformat(),
     "games": matchup_data,
+    "defense_rankings": build_defense_rankings(stats.to_dicts(), schedule.to_dicts(), season, week, AS_OF, team_col),
 }
 
 OUTPUT.parent.mkdir(

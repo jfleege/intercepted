@@ -26,11 +26,23 @@ type MatchupPlayers = {
   home_players: Player[];
 };
 
+type DefenseRank = {
+  overall_rank: number | null;
+  pass_rank: number | null;
+  rush_rank: number | null;
+  points_allowed_per_game: number | null;
+  pass_yards_allowed_per_game: number | null;
+  rush_yards_allowed_per_game: number | null;
+  games: number;
+  through_week: number;
+};
+
 type PlayerData = {
   season: number;
   week: number;
   as_of: string;
   games: Record<string, MatchupPlayers>;
+  defense_rankings?: { league_size: number; teams: Record<string, DefenseRank> };
 };
 
 // player image with initials fallback
@@ -65,7 +77,16 @@ function PlayerHeadshot({ player }: { player: Player }) {
 }
 
 // compact player card
-function PlayerCard({ player, week }: { player: WeeklyPlayer; week: number }) {
+function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlayer; week: number; defense?: DefenseRank; leagueSize?: number }) {
+  const rushing = player.position === "RB";
+  const yardageRank = rushing ? defense?.rush_rank : defense?.pass_rank;
+  const yards = rushing ? defense?.rush_yards_allowed_per_game : defense?.pass_yards_allowed_per_game;
+  const overallDescription = defense?.overall_rank != null
+    ? `${player.opponent} scoring defense: rank ${defense.overall_rank} of ${leagueSize}, ${defense.points_allowed_per_game} points allowed per game, through Week ${defense.through_week}.`
+    : "Scoring-defense rank unavailable.";
+  const yardageDescription = yardageRank != null
+    ? `${player.opponent} ${rushing ? "rush" : "pass"} defense: rank ${yardageRank} of ${leagueSize}, ${yards} gross yards allowed per game. Rank 1 allows the fewest.`
+    : "Yardage-defense rank unavailable.";
   const trend = player.trend_pct;
 
   const trendText =
@@ -92,12 +113,18 @@ function PlayerCard({ player, week }: { player: WeeklyPlayer; week: number }) {
           <strong title={player.name}>{player.name}</strong>
           <small>{player.team}</small>
         </div>
+        <div className="dp-player-context">
         <div className="dp-player-opponent" aria-label={`Week ${week}: ${player.team} ${player.isHome ? "hosts" : "at"} ${player.opponent}`}>
           <span>Week {week}</span>
           <strong>
             <img src={`${import.meta.env.BASE_URL}logos/${player.opponent}.png`} alt="" loading="lazy" />
             <small>{player.isHome ? "vs" : "at"}</small> {player.opponent}
           </strong>
+        </div>
+        <div className="dp-defense-ranks">
+          <span title={overallDescription} aria-label={overallDescription}>DEF <b>{defense?.overall_rank != null ? `#${defense.overall_rank}` : "—"}</b></span>
+          <span title={yardageDescription} aria-label={yardageDescription}>{rushing ? "RUSH" : "PASS"} <b>{yardageRank != null ? `#${yardageRank}` : "—"}</b></span>
+        </div>
         </div>
       </div>
 
@@ -270,6 +297,8 @@ const scrollPlayers = (direction: number) => {
         key={player.player_id}
         player={player}
         week={data!.week}
+        defense={data?.defense_rankings?.teams[player.opponent]}
+        leagueSize={data?.defense_rankings?.league_size}
       />
     ))}
   </div>
@@ -277,7 +306,7 @@ const scrollPlayers = (direction: number) => {
 
           <p className="dp-footnote">
             Statistics through {data?.as_of}. Trends compare
-            recent yardage with season averages.
+            recent yardage with season averages. Opponent defense ranks use points allowed/game; pass and rush ranks use gross yards allowed/game. #1 allows the fewest; completed prior weeks only.
           </p>
         </>
       )}

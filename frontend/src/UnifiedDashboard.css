@@ -96,6 +96,10 @@
 .dashboard-shell .ud-bottom-grid .dp-headshot { width:55px; height:60px; flex-basis:55px; object-fit:cover; object-position:top; border-radius:8px; background:#274252; }
 .dashboard-shell .ud-bottom-grid .dp-headshot-fallback { color:var(--ud-text); }
 .dashboard-shell .ud-bottom-grid .dp-player-identity { min-width:0; }
+.dashboard-shell .dp-player-context { flex:0 0 auto; display:flex; flex-direction:column; align-items:flex-end; gap:7px; margin-left:auto; }
+.dashboard-shell .dp-defense-ranks { display:flex; flex-direction:column; gap:4px; align-self:stretch; padding:0 4px; color:var(--ud-muted); font-size:9px; letter-spacing:.4px; }
+.dashboard-shell .dp-defense-ranks > span { display:flex; justify-content:space-between; gap:7px; }
+.dashboard-shell .dp-defense-ranks b { color:var(--ud-blue); font-size:11px; font-weight:600; }
 .dashboard-shell .dp-player-opponent { flex:0 0 auto; align-self:flex-start; display:flex; flex-direction:column; align-items:flex-end; gap:6px; margin-left:auto; padding:7px 8px; border:1px solid var(--ud-border); border-radius:7px; background:#102632; }
 .dashboard-shell .dp-player-opponent > span { color:var(--ud-muted); font-size:9px; line-height:1; letter-spacing:.8px; text-transform:uppercase; }
 .dashboard-shell .dp-player-opponent strong { display:flex; align-items:center; gap:4px; color:var(--ud-text); font-size:12px; font-weight:600; white-space:nowrap; }
@@ -124,6 +128,12 @@
 .dashboard-shell .ud-moneyline > span { display:flex; align-items:center; gap:7px; font-size:14px; font-weight:600; }
 .dashboard-shell .ud-moneyline img { width:27px; height:25px; object-fit:contain; }
 .dashboard-shell .ud-moneyline strong { color:var(--ud-blue); font-size:24px; font-weight:600; }
+.dashboard-shell .ud-market-lines { margin-top:13px; }
+.dashboard-shell .ud-market-line { display:grid; grid-template-columns:minmax(70px,1fr) 1fr 1fr; gap:10px; align-items:center; padding:11px 0; border-bottom:1px solid #29414e; font-size:12px; }
+.dashboard-shell .ud-market-line > span { color:var(--ud-muted); }
+.dashboard-shell .ud-market-line > strong { color:var(--ud-text); font-weight:600; text-align:right; white-space:nowrap; }
+.dashboard-shell .ud-market-line b { color:var(--ud-blue); font-weight:600; margin-left:4px; }
+.dashboard-shell .ud-market-total > strong { grid-column:2 / 4; color:var(--ud-blue); }
 .dashboard-shell .ud-market-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:9px; border-top:1px solid var(--ud-border); margin-top:17px; padding-top:13px; color:var(--ud-muted); font-size:11px; }
 .dashboard-shell .ud-market-footer a { color:var(--ud-blue); }
 .dashboard-shell .ud-model-votes { padding:6px 19px 12px; }

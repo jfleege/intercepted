@@ -14,6 +14,11 @@ type Player = {
   games_sampled: number;
 };
 
+type WeeklyPlayer = Player & {
+  opponent: string;
+  isHome: boolean;
+};
+
 type MatchupPlayers = {
   away_team: string;
   home_team: string;
@@ -60,7 +65,7 @@ function PlayerHeadshot({ player }: { player: Player }) {
 }
 
 // compact player card
-function PlayerCard({ player }: { player: Player }) {
+function PlayerCard({ player, week }: { player: WeeklyPlayer; week: number }) {
   const trend = player.trend_pct;
 
   const trendText =
@@ -86,6 +91,13 @@ function PlayerCard({ player }: { player: Player }) {
           <span className="dp-position">{player.position}</span>
           <strong title={player.name}>{player.name}</strong>
           <small>{player.team}</small>
+        </div>
+        <div className="dp-player-opponent" aria-label={`Week ${week}: ${player.team} ${player.isHome ? "hosts" : "at"} ${player.opponent}`}>
+          <span>Week {week}</span>
+          <strong>
+            <img src={`${import.meta.env.BASE_URL}logos/${player.opponent}.png`} alt="" loading="lazy" />
+            <small>{player.isHome ? "vs" : "at"}</small> {player.opponent}
+          </strong>
         </div>
       </div>
 
@@ -164,10 +176,10 @@ const scrollPlayers = (direction: number) => {
     if (!data) return [];
 
     // collect players from every matchup
-    const allPlayers = Object.values(data.games).flatMap(
+    const allPlayers: WeeklyPlayer[] = Object.values(data.games).flatMap(
       (matchup) => [
-        ...matchup.away_players,
-        ...matchup.home_players,
+        ...matchup.away_players.map((player) => ({ ...player, opponent: matchup.home_team, isHome: false })),
+        ...matchup.home_players.map((player) => ({ ...player, opponent: matchup.away_team, isHome: true })),
       ]
     );
 
@@ -181,7 +193,7 @@ const scrollPlayers = (direction: number) => {
       ).values()
     );
 
-    // select the three highest positive yardage trends
+    // select the ten highest positive yardage trends
     return uniquePlayers
       .filter(
         (player) =>
@@ -257,6 +269,7 @@ const scrollPlayers = (direction: number) => {
       <PlayerCard
         key={player.player_id}
         player={player}
+        week={data!.week}
       />
     ))}
   </div>

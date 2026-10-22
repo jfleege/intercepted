@@ -29,11 +29,11 @@
 .dashboard-shell .ud-section-heading { display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:14px; margin-bottom:14px; }
 .dashboard-shell .ud-section-heading h2 { color:var(--ud-text); font:600 30px/1.1 'Barlow Condensed',sans-serif; margin:0; }
 .dashboard-shell .ud-section-heading .eyebrow { color:var(--ud-blue); font-size:11px; margin:0 0 5px; }
-.dashboard-shell .ud-forecast .forecast-controls { display:flex; justify-content:flex-end; flex-wrap:wrap; align-items:flex-end; gap:8px; }
+.dashboard-shell .ud-forecast .forecast-controls { --ud-control-height:38px; display:flex; justify-content:flex-end; flex-wrap:wrap; align-items:flex-end; gap:8px; }
 .dashboard-shell .ud-forecast .prediction-week-label { color:var(--ud-muted); font-size:11px; }
-.dashboard-shell .ud-forecast .forecast-sort { color:var(--ud-text); background:#102632; border:1px solid var(--ud-border); padding:9px 10px; border-radius:6px; font-size:12px; max-width:100%; }
-.dashboard-shell .ud-forecast .model-switch { display:flex; flex-wrap:wrap; padding:3px; gap:3px; border:1px solid var(--ud-border); border-radius:7px; background:#102632; }
-.dashboard-shell .ud-forecast .model-switch button { color:var(--ud-muted); font-size:12px; padding:8px 10px; border-radius:5px; background:transparent; }
+.dashboard-shell .ud-forecast .forecast-sort { color:var(--ud-text); background:#102632; border:1px solid var(--ud-border); height:var(--ud-control-height); min-height:var(--ud-control-height); box-sizing:border-box; padding:0 32px 0 10px; border-radius:6px; font-size:12px; line-height:14px; max-width:100%; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23a5bdcc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; }
+.dashboard-shell .ud-forecast .model-switch { display:flex; flex-wrap:wrap; align-items:center; min-height:var(--ud-control-height); box-sizing:border-box; padding:3px; gap:3px; border:1px solid var(--ud-border); border-radius:7px; background:#102632; }
+.dashboard-shell .ud-forecast .model-switch button { color:var(--ud-muted); font-size:12px; height:30px; box-sizing:border-box; line-height:14px; padding:0 10px; border-radius:5px; background:transparent; }
 .dashboard-shell .ud-forecast .model-switch button.active { background:var(--ud-blue); color:#102532; }
 .dashboard-shell .ud-matchup-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; align-items:stretch; }
 .dashboard-shell .ud-panel { min-width:0; color:var(--ud-text); border:1px solid var(--ud-border); border-radius:11px; background:linear-gradient(120deg,#142934,#101f29); overflow:hidden; }
@@ -99,6 +99,11 @@
 .dashboard-shell .ud-bottom-grid .dp-headshot { width:55px; height:60px; flex-basis:55px; object-fit:cover; object-position:top; border-radius:8px; background:#274252; }
 .dashboard-shell .ud-bottom-grid .dp-headshot-fallback { color:var(--ud-text); }
 .dashboard-shell .ud-bottom-grid .dp-player-identity { min-width:0; }
+.dashboard-shell .dp-player-opponent { flex:0 0 auto; align-self:flex-start; display:flex; flex-direction:column; align-items:flex-end; gap:6px; margin-left:auto; padding:7px 8px; border:1px solid var(--ud-border); border-radius:7px; background:#102632; }
+.dashboard-shell .dp-player-opponent > span { color:var(--ud-muted); font-size:9px; line-height:1; letter-spacing:.8px; text-transform:uppercase; }
+.dashboard-shell .dp-player-opponent strong { display:flex; align-items:center; gap:4px; color:var(--ud-text); font-size:12px; font-weight:600; white-space:nowrap; }
+.dashboard-shell .dp-player-opponent img { width:22px; height:22px; object-fit:contain; }
+.dashboard-shell .dp-player-opponent small { color:var(--ud-muted); font-size:10px; font-weight:400; }
 .dashboard-shell .ud-bottom-grid .dp-player-identity strong { color:var(--ud-text); font:600 20px/1.2 'Barlow Condensed',sans-serif; white-space:normal; }
 .dashboard-shell .ud-bottom-grid .dp-position { color:var(--ud-blue); background:#244555; font-size:10px; }
 .dashboard-shell .ud-bottom-grid .dp-player-identity small { color:var(--ud-muted); }
@@ -168,7 +173,7 @@
  .dashboard-shell .ud-section-heading h2 { font-size:28px; }
  .dashboard-shell .ud-forecast .forecast-controls { justify-content:flex-start; width:100%; }
  .dashboard-shell .ud-forecast .model-switch { width:100%; }
- .dashboard-shell .ud-forecast .model-switch button { flex:1; padding:8px 6px; font-size:11px; }
+ .dashboard-shell .ud-forecast .model-switch button { flex:1; padding:0 6px; font-size:11px; }
  .dashboard-shell .ud-forecast .prediction-week-label { max-width:100%; }
  .dashboard-shell .ud-forecast .forecast-sort { font-size:12px; }
  .dashboard-shell .ud-game-list { padding:5px 8px; }

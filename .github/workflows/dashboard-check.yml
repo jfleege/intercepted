@@ -1,7 +1,7 @@
 name: Check dashboard layouts
 on:
   push:
-    branches: [codex/dashboard-scorecards, codex/unified-dashboard, codex/smooth-dashboard-motion]
+    branches: [codex/dashboard-scorecards, codex/unified-dashboard, codex/smooth-dashboard-motion, codex/compact-controls-player-context]
 permissions:
   contents: read
 jobs:

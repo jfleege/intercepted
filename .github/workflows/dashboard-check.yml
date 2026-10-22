@@ -1,7 +1,7 @@
 name: Check dashboard layouts
 on:
   push:
-    branches: [codex/dashboard-scorecards, codex/unified-dashboard, codex/smooth-dashboard-motion, codex/compact-controls-player-context, codex/animated-hero-playbook]
+    branches: [codex/dashboard-scorecards, codex/unified-dashboard, codex/smooth-dashboard-motion, codex/compact-controls-player-context, codex/animated-hero-playbook, codex/defense-ranks-market-detail]
 permissions:
   contents: read
 jobs:
@@ -10,6 +10,18 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        if: github.ref == 'refs/heads/codex/defense-ranks-market-detail'
+        with:
+          python-version: '3.12'
+      - name: Verify defense rankings and refresh their saved export
+        if: github.ref == 'refs/heads/codex/defense-ranks-market-detail'
+        run: |
+          python -m unittest discover -s tests -p test_defense_rankings.py -v
+          python -m pip install nflreadpy==0.1.5 polars==2.0.0
+          python -m src.features.player_watch
+          mkdir -p frontend/qa/data
+          cp frontend/public/players_watch.json frontend/qa/data/players_watch.json
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -43,6 +55,7 @@ jobs:
           node tests/unified.browser.mjs
           node tests/motion.browser.mjs
           node tests/playbook.browser.mjs
+          node tests/defense-markets.browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

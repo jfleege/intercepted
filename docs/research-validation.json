@@ -1,0 +1,227 @@
+{
+  "policy": "Fixed configurations; fit 2018\u20132023, calibrate 2024, test 2025. Test-year features use only earlier games. This is a retrospective development benchmark, not a prospective live record.",
+  "scoring": {
+    "baseline_mae": 7.529,
+    "beats_baseline": true,
+    "games": 272,
+    "interval_80_coverage": 0.8051,
+    "interval_radius": 12.48,
+    "mae": 7.498,
+    "margin": {
+      "baseline_mae": 10.178,
+      "beats_baseline": false,
+      "interval_80_coverage": 0.8051,
+      "mae": 10.361
+    },
+    "samples": 544,
+    "total": {
+      "baseline_mae": 10.906,
+      "beats_baseline": true,
+      "interval_80_coverage": 0.7831,
+      "mae": 10.587
+    }
+  },
+  "touchdowns": {
+    "any_td": {
+      "baseline_brier": 0.1409,
+      "baseline_log_loss": 0.4457,
+      "beats_baseline": true,
+      "brier": 0.1375,
+      "events": 1061,
+      "log_loss": 0.4357,
+      "reliability": [
+        {
+          "mean_probability": 0.0764,
+          "observed_rate": 0.0527,
+          "range": [
+            0.0,
+            0.1
+          ],
+          "samples": 1252
+        },
+        {
+          "mean_probability": 0.1422,
+          "observed_rate": 0.1331,
+          "range": [
+            0.1,
+            0.2
+          ],
+          "samples": 2404
+        },
+        {
+          "mean_probability": 0.2428,
+          "observed_rate": 0.2664,
+          "range": [
+            0.2,
+            0.3
+          ],
+          "samples": 1021
+        },
+        {
+          "mean_probability": 0.3404,
+          "observed_rate": 0.3708,
+          "range": [
+            0.3,
+            0.4
+          ],
+          "samples": 561
+        },
+        {
+          "mean_probability": 0.4426,
+          "observed_rate": 0.3705,
+          "range": [
+            0.4,
+            0.5
+          ],
+          "samples": 224
+        },
+        {
+          "mean_probability": 0.5444,
+          "observed_rate": 0.4754,
+          "range": [
+            0.5,
+            0.6
+          ],
+          "samples": 122
+        },
+        {
+          "mean_probability": 0.6453,
+          "observed_rate": 0.5,
+          "range": [
+            0.6,
+            0.7
+          ],
+          "samples": 80
+        },
+        {
+          "mean_probability": 0.7371,
+          "observed_rate": 0.6364,
+          "range": [
+            0.7,
+            0.8
+          ],
+          "samples": 22
+        }
+      ],
+      "samples": 5686
+    },
+    "pass_td": {
+      "baseline_brier": 0.201,
+      "baseline_log_loss": 0.5914,
+      "beats_baseline": true,
+      "brier": 0.1884,
+      "events": 417,
+      "log_loss": 0.5615,
+      "reliability": [
+        {
+          "mean_probability": 0.1763,
+          "observed_rate": 0.3333,
+          "range": [
+            0.1,
+            0.2
+          ],
+          "samples": 3
+        },
+        {
+          "mean_probability": 0.2699,
+          "observed_rate": 0.15,
+          "range": [
+            0.2,
+            0.3
+          ],
+          "samples": 20
+        },
+        {
+          "mean_probability": 0.3505,
+          "observed_rate": 0.25,
+          "range": [
+            0.3,
+            0.4
+          ],
+          "samples": 44
+        },
+        {
+          "mean_probability": 0.4492,
+          "observed_rate": 0.4815,
+          "range": [
+            0.4,
+            0.5
+          ],
+          "samples": 27
+        },
+        {
+          "mean_probability": 0.5558,
+          "observed_rate": 0.5893,
+          "range": [
+            0.5,
+            0.6
+          ],
+          "samples": 56
+        },
+        {
+          "mean_probability": 0.6515,
+          "observed_rate": 0.6214,
+          "range": [
+            0.6,
+            0.7
+          ],
+          "samples": 103
+        },
+        {
+          "mean_probability": 0.7534,
+          "observed_rate": 0.7647,
+          "range": [
+            0.7,
+            0.8
+          ],
+          "samples": 170
+        },
+        {
+          "mean_probability": 0.8435,
+          "observed_rate": 0.8115,
+          "range": [
+            0.8,
+            0.9
+          ],
+          "samples": 191
+        },
+        {
+          "mean_probability": 0.9095,
+          "observed_rate": 0.875,
+          "range": [
+            0.9,
+            1.0
+          ],
+          "samples": 8
+        }
+      ],
+      "samples": 622
+    }
+  },
+  "yardage": {
+    "passing": {
+      "baseline_mae": 74.001,
+      "beats_baseline": true,
+      "interval_80_coverage": 0.8055,
+      "interval_radius": 100.81,
+      "mae": 65.002,
+      "samples": 622
+    },
+    "receiving": {
+      "baseline_mae": 19.766,
+      "beats_baseline": true,
+      "interval_80_coverage": 0.8141,
+      "interval_radius": 29.75,
+      "mae": 18.85,
+      "samples": 3588
+    },
+    "rushing": {
+      "baseline_mae": 20.825,
+      "beats_baseline": true,
+      "interval_80_coverage": 0.8205,
+      "interval_radius": 32.75,
+      "mae": 19.758,
+      "samples": 1476
+    }
+  }
+}

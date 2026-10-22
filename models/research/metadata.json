@@ -1,0 +1,466 @@
+{
+  "created_at": "2026-10-22T06:42:21.793108+00:00",
+  "models": {
+    "anytime_td": {
+      "calibration_cutoff": [
+        2026,
+        6
+      ],
+      "calibration_samples": 1892,
+      "features": [
+        "recent_yards",
+        "season_yards",
+        "last10_yards",
+        "recent_usage",
+        "season_usage",
+        "yards_per_opportunity",
+        "recent_any_td",
+        "recent_pass_td",
+        "season_any_td",
+        "season_pass_td",
+        "appearances",
+        "season_appearances",
+        "opp_pass",
+        "opp_rush",
+        "opp_points",
+        "team_points",
+        "home",
+        "rest",
+        "week",
+        "is_qb",
+        "is_rb",
+        "is_wr",
+        "is_te"
+      ],
+      "method": "standardized logistic regression + held-out sigmoid calibration",
+      "sha256": "91c40869e9dfdce341f210567110b3380cca89c58671011be74a445dcface424",
+      "training_cutoff": [
+        2025,
+        18
+      ],
+      "training_samples": 41529
+    },
+    "passing_td": {
+      "calibration_cutoff": [
+        2026,
+        6
+      ],
+      "calibration_samples": 204,
+      "features": [
+        "recent_yards",
+        "season_yards",
+        "last10_yards",
+        "recent_usage",
+        "season_usage",
+        "yards_per_opportunity",
+        "recent_any_td",
+        "recent_pass_td",
+        "season_any_td",
+        "season_pass_td",
+        "appearances",
+        "season_appearances",
+        "opp_pass",
+        "opp_rush",
+        "opp_points",
+        "team_points",
+        "home",
+        "rest",
+        "week",
+        "is_qb",
+        "is_rb",
+        "is_wr",
+        "is_te"
+      ],
+      "method": "standardized logistic regression + held-out sigmoid calibration",
+      "sha256": "96da32a155a30782327b9f44783204e7b858b3be4cdb592aed7ac6b1623abe7a",
+      "training_cutoff": [
+        2025,
+        18
+      ],
+      "training_samples": 4614
+    },
+    "passing_yards": {
+      "calibration_cutoff": [
+        2026,
+        6
+      ],
+      "calibration_samples": 204,
+      "features": [
+        "recent_yards",
+        "season_yards",
+        "last10_yards",
+        "recent_usage",
+        "season_usage",
+        "yards_per_opportunity",
+        "recent_any_td",
+        "recent_pass_td",
+        "season_any_td",
+        "season_pass_td",
+        "appearances",
+        "season_appearances",
+        "opp_pass",
+        "opp_rush",
+        "opp_points",
+        "team_points",
+        "home",
+        "rest",
+        "week",
+        "is_qb",
+        "is_rb",
+        "is_wr",
+        "is_te"
+      ],
+      "method": "histogram gradient boosting + held-out absolute-residual intervals",
+      "sha256": "32d92d41104f717044084f5b14bab759c5f968c20b23c8fdf30526afdcde7d80",
+      "training_cutoff": [
+        2025,
+        18
+      ],
+      "training_samples": 4614
+    },
+    "receiving_yards": {
+      "calibration_cutoff": [
+        2026,
+        6
+      ],
+      "calibration_samples": 1210,
+      "features": [
+        "recent_yards",
+        "season_yards",
+        "last10_yards",
+        "recent_usage",
+        "season_usage",
+        "yards_per_opportunity",
+        "recent_any_td",
+        "recent_pass_td",
+        "season_any_td",
+        "season_pass_td",
+        "appearances",
+        "season_appearances",
+        "opp_pass",
+        "opp_rush",
+        "opp_points",
+        "team_points",
+        "home",
+        "rest",
+        "week",
+        "is_qb",
+        "is_rb",
+        "is_wr",
+        "is_te"
+      ],
+      "method": "histogram gradient boosting + held-out absolute-residual intervals",
+      "sha256": "e82caa6b1f27faf6ad2ae94766c128d549412c34869bbb63b3e2b9910e1dc745",
+      "training_cutoff": [
+        2025,
+        18
+      ],
+      "training_samples": 26009
+    },
+    "rushing_yards": {
+      "calibration_cutoff": [
+        2026,
+        6
+      ],
+      "calibration_samples": 478,
+      "features": [
+        "recent_yards",
+        "season_yards",
+        "last10_yards",
+        "recent_usage",
+        "season_usage",
+        "yards_per_opportunity",
+        "recent_any_td",
+        "recent_pass_td",
+        "season_any_td",
+        "season_pass_td",
+        "appearances",
+        "season_appearances",
+        "opp_pass",
+        "opp_rush",
+        "opp_points",
+        "team_points",
+        "home",
+        "rest",
+        "week",
+        "is_qb",
+        "is_rb",
+        "is_wr",
+        "is_te"
+      ],
+      "method": "histogram gradient boosting + held-out absolute-residual intervals",
+      "sha256": "8835fbe74c67b70c0d052da47c33df92d11a3841e9934be9e50ba216bdb0d7d1",
+      "training_cutoff": [
+        2025,
+        18
+      ],
+      "training_samples": 10906
+    },
+    "scoring": {
+      "calibration_cutoff": [
+        2026,
+        6
+      ],
+      "calibration_samples": 186,
+      "features": [
+        "own_points_recent",
+        "own_points_season",
+        "opp_points_recent",
+        "opp_points_season",
+        "own_pass",
+        "own_rush",
+        "opp_pass",
+        "opp_rush",
+        "home",
+        "rest",
+        "opp_rest",
+        "season_games",
+        "week"
+      ],
+      "method": "histogram gradient boosting + held-out absolute-residual intervals",
+      "sha256": "21dd20ddf00f91ad848051b9bc68e7adbbe09f9c649627961d363ce68596dcf2",
+      "training_cutoff": [
+        2025,
+        18
+      ],
+      "training_samples": 4254
+    }
+  },
+  "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
+  "source_sha256": {
+    "pbp_current": "8c12bc30a7e17f2b17a106b62241b4a984b32fac0b377bd123e55a5de58b4717",
+    "players_current": "34628515f129776fa39a69754861c8c7c824224c92fe69437d656f6d17cca84d",
+    "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
+    "schedules_current": "e879e7fd0c4802ab782faae132ca421f501b69ee2e6533ef20c8c31081b0eb9c",
+    "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
+  },
+  "status": "experimental",
+  "validation": {
+    "policy": "Fixed configurations; fit 2018\u20132023, calibrate 2024, test 2025. Test-year features use only earlier games. This is a retrospective development benchmark, not a prospective live record.",
+    "scoring": {
+      "baseline_mae": 7.529,
+      "beats_baseline": true,
+      "games": 272,
+      "interval_80_coverage": 0.8051,
+      "interval_radius": 12.48,
+      "mae": 7.498,
+      "margin": {
+        "baseline_mae": 10.178,
+        "beats_baseline": false,
+        "interval_80_coverage": 0.8051,
+        "mae": 10.361
+      },
+      "samples": 544,
+      "total": {
+        "baseline_mae": 10.906,
+        "beats_baseline": true,
+        "interval_80_coverage": 0.7831,
+        "mae": 10.587
+      }
+    },
+    "touchdowns": {
+      "any_td": {
+        "baseline_brier": 0.1409,
+        "baseline_log_loss": 0.4457,
+        "beats_baseline": true,
+        "brier": 0.1375,
+        "events": 1061,
+        "log_loss": 0.4357,
+        "reliability": [
+          {
+            "mean_probability": 0.0764,
+            "observed_rate": 0.0527,
+            "range": [
+              0.0,
+              0.1
+            ],
+            "samples": 1252
+          },
+          {
+            "mean_probability": 0.1422,
+            "observed_rate": 0.1331,
+            "range": [
+              0.1,
+              0.2
+            ],
+            "samples": 2404
+          },
+          {
+            "mean_probability": 0.2428,
+            "observed_rate": 0.2664,
+            "range": [
+              0.2,
+              0.3
+            ],
+            "samples": 1021
+          },
+          {
+            "mean_probability": 0.3404,
+            "observed_rate": 0.3708,
+            "range": [
+              0.3,
+              0.4
+            ],
+            "samples": 561
+          },
+          {
+            "mean_probability": 0.4426,
+            "observed_rate": 0.3705,
+            "range": [
+              0.4,
+              0.5
+            ],
+            "samples": 224
+          },
+          {
+            "mean_probability": 0.5444,
+            "observed_rate": 0.4754,
+            "range": [
+              0.5,
+              0.6
+            ],
+            "samples": 122
+          },
+          {
+            "mean_probability": 0.6453,
+            "observed_rate": 0.5,
+            "range": [
+              0.6,
+              0.7
+            ],
+            "samples": 80
+          },
+          {
+            "mean_probability": 0.7371,
+            "observed_rate": 0.6364,
+            "range": [
+              0.7,
+              0.8
+            ],
+            "samples": 22
+          }
+        ],
+        "samples": 5686
+      },
+      "pass_td": {
+        "baseline_brier": 0.201,
+        "baseline_log_loss": 0.5914,
+        "beats_baseline": true,
+        "brier": 0.1884,
+        "events": 417,
+        "log_loss": 0.5615,
+        "reliability": [
+          {
+            "mean_probability": 0.1763,
+            "observed_rate": 0.3333,
+            "range": [
+              0.1,
+              0.2
+            ],
+            "samples": 3
+          },
+          {
+            "mean_probability": 0.2699,
+            "observed_rate": 0.15,
+            "range": [
+              0.2,
+              0.3
+            ],
+            "samples": 20
+          },
+          {
+            "mean_probability": 0.3505,
+            "observed_rate": 0.25,
+            "range": [
+              0.3,
+              0.4
+            ],
+            "samples": 44
+          },
+          {
+            "mean_probability": 0.4492,
+            "observed_rate": 0.4815,
+            "range": [
+              0.4,
+              0.5
+            ],
+            "samples": 27
+          },
+          {
+            "mean_probability": 0.5558,
+            "observed_rate": 0.5893,
+            "range": [
+              0.5,
+              0.6
+            ],
+            "samples": 56
+          },
+          {
+            "mean_probability": 0.6515,
+            "observed_rate": 0.6214,
+            "range": [
+              0.6,
+              0.7
+            ],
+            "samples": 103
+          },
+          {
+            "mean_probability": 0.7534,
+            "observed_rate": 0.7647,
+            "range": [
+              0.7,
+              0.8
+            ],
+            "samples": 170
+          },
+          {
+            "mean_probability": 0.8435,
+            "observed_rate": 0.8115,
+            "range": [
+              0.8,
+              0.9
+            ],
+            "samples": 191
+          },
+          {
+            "mean_probability": 0.9095,
+            "observed_rate": 0.875,
+            "range": [
+              0.9,
+              1.0
+            ],
+            "samples": 8
+          }
+        ],
+        "samples": 622
+      }
+    },
+    "yardage": {
+      "passing": {
+        "baseline_mae": 74.001,
+        "beats_baseline": true,
+        "interval_80_coverage": 0.8055,
+        "interval_radius": 100.81,
+        "mae": 65.002,
+        "samples": 622
+      },
+      "receiving": {
+        "baseline_mae": 19.766,
+        "beats_baseline": true,
+        "interval_80_coverage": 0.8141,
+        "interval_radius": 29.75,
+        "mae": 18.85,
+        "samples": 3588
+      },
+      "rushing": {
+        "baseline_mae": 20.825,
+        "beats_baseline": true,
+        "interval_80_coverage": 0.8205,
+        "interval_radius": 32.75,
+        "mae": 19.758,
+        "samples": 1476
+      }
+    }
+  },
+  "version": "4407254781897e09"
+}

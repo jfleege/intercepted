@@ -4,6 +4,7 @@ import {mkdir,readFile} from 'node:fs/promises';
 import {chromium} from 'playwright';
 const origin='http://127.0.0.1:4174/intercepted/';
 const data=JSON.parse(await readFile('public/predictions.json','utf8'));
+const playerData=JSON.parse(await readFile('public/players_watch.json','utf8'));
 const browser=await chromium.launch({executablePath:process.env.CHROME_BIN || undefined});const errors=[];
 await mkdir('qa/unified',{recursive:true});
 try {
@@ -25,6 +26,18 @@ try {
   assert.equal(await page.locator('.ud-draftkings-logo').getAttribute('alt'),'DraftKings');
   assert.ok((await page.locator('.dp-headshot').first().getAttribute('src')).startsWith('https://'));
   assert.equal(await page.locator('.dp-player-card').count(),10);
+  const controlHeights=await page.locator('.ud-forecast .forecast-sort,.ud-forecast .model-switch').evaluateAll(els=>els.map(e=>e.getBoundingClientRect().height));
+  assert.ok(controlHeights.every(h=>Math.abs(h-38)<1),`Controls must share the compact model selector height: ${controlHeights}`);
+  for(const card of await page.locator('.dp-player-card').all()){
+   const name=await card.locator('.dp-player-identity strong').textContent();
+   const matchup=Object.values(playerData.games).find(g=>[...g.away_players,...g.home_players].some(p=>p.name===name));
+   const home=matchup.home_players.some(p=>p.name===name);
+   const opponent=home?matchup.away_team:matchup.home_team;
+   assert.equal(await card.locator('.dp-player-opponent').getAttribute('aria-label'),`Week ${playerData.week}: ${home?matchup.home_team:matchup.away_team} ${home?'hosts':'at'} ${opponent}`);
+   assert.ok((await card.locator('.dp-player-opponent img').getAttribute('src')).endsWith(`/logos/${opponent}.png`));
+   const fits=await card.evaluate(e=>{const identity=e.querySelector('.dp-player-identity').getBoundingClientRect(),badge=e.querySelector('.dp-player-opponent').getBoundingClientRect(),photo=e.querySelector('.dp-headshot').getBoundingClientRect();return identity.width>=65&&identity.right<=badge.left&&badge.top>=photo.top&&badge.bottom<=photo.bottom+1;});
+   assert.ok(fits,`${name}: matchup badge must fit beside the name and photo at ${width}px`);
+  }
   assert.ok((await page.locator('.ud-hero h1').evaluate(e=>getComputedStyle(e).fontFamily)).includes('Barlow Condensed'));
   assert.ok((await page.locator('.pulse-value').first().evaluate(e=>getComputedStyle(e).fontFamily)).includes('Barlow'));
   assert.ok(await page.evaluate(()=>document.fonts.check('600 16px Barlow')&&document.fonts.check('600 16px "Barlow Condensed"')));
@@ -70,6 +83,8 @@ try {
   assert.ok(await page.locator('.ud-game,.ud-focus,.dp-player-card,.ud-market-panel,.ud-model-panel').evaluateAll(els=>els.every(e=>e.scrollWidth<=e.clientWidth+1)),'Panels must not overflow');
   await page.screenshot({path:`qa/unified/${width}-dashboard.png`,fullPage:true});
   await page.locator('.ud-matchup-grid').screenshot({path:`qa/unified/${width}-matchups.png`});
+  await page.locator('.dp-panel').screenshot({path:`qa/unified/${width}-players.png`});
+  await page.locator('.ud-section-heading').screenshot({path:`qa/unified/${width}-controls.png`});
   await page.getByLabel('Prediction week').selectOption('2026-6');
   await page.getByRole('button',{name:'QB+ (original)',exact:true}).waitFor();
   await page.locator('.ud-result').first().waitFor();

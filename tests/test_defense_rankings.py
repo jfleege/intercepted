@@ -46,6 +46,11 @@ class DefenseRankTests(unittest.TestCase):
         zero = self.rank([game(1)], [stats('B', 1, 0, 0)])['teams']['A']
         self.assertEqual((zero['pass_yards_allowed_per_game'], zero['rush_yards_allowed_per_game']), (0, 0))
 
+    def test_shared_ranks_skip_places_and_incomplete_league_has_no_yardage_rank(self):
+        result = self.rank([game(1, 'A', 'B', 10, 10), game(2, 'C', 'A', 10, 20)], [stats('B', 1, 50, 25)])
+        self.assertEqual([result['teams'][t]['overall_rank'] for t in 'ABC'], [1, 1, 3])
+        self.assertTrue(all(t['pass_rank'] is None for t in result['teams'].values()))
+
     def test_player_rows_sum_and_postseason_ignored(self):
         result = self.rank([game(1)], [stats('B', 1, 100, 20), stats('B', 1, 0, 50), stats('B', 1, 900, 900, season_type='POST')])['teams']['A']
         self.assertEqual((result['pass_yards_allowed_per_game'], result['rush_yards_allowed_per_game']), (100, 70))

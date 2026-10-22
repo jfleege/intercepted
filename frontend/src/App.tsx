@@ -166,7 +166,7 @@ const focusedGame =
         <main className="container" id="dashboard">
           {page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage /> : <>
           <section className="ud-hero">
-            <div className="ud-hero-copy"><p className="ud-eyebrow">NFL INSIGHTS. SMARTER PICKS.</p><h1>Turn data<br/>into an <em>edge.</em></h1><p>Every matchup. Every model. A clearer picture of the week ahead.</p>
+            <div className="ud-hero-copy"><p className="ud-eyebrow">NFL ANALYTICS FROM EVERY ANGLE.</p><h1>EVERY MATCHUP<br/>MORE <em>PERSPECTIVE.</em></h1><p>Explore statistical model predictions, analyze player trends, and track performance—all in one place.</p>
               <div className="ud-hero-meta"><span><b>{data?.week ?? '—'}</b> WEEK</span><span><b>{data?.count ?? '—'}</b> MATCHUPS</span><span><b>{modelOptions.length}</b> ACTIVE MODELS</span></div>
             </div>
             <img className="ud-hero-photo" src={heroPlayer} alt="Caleb Williams"/>

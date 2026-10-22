@@ -2,12 +2,16 @@ import { TEAM_NAMES } from "./teams";
 import { probability, MODEL_LABELS } from "./predictionModels";
 import type { Model, PredictionFields } from "./predictionModels";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import MatchupProjections from "./MatchupProjections";
+import "./MatchupReport.css";
 import PlayersToWatch from "./PlayersToWatch";
 import draftkingsLogo from "./assets/draftkings.png";
 
 export type Matchup = PredictionFields & {
   game_id: string;
+  season: number;
+  week: number;
   game_date: string;
   home_team: string;
   away_team: string;
@@ -30,7 +34,7 @@ type OddsData = {
   games: Record<string, GameOdds>;
 };
 
-type Tab = "overview" | "odds" | "players";
+type Tab = "overview" | "odds" | "players" | "periods";
 
 type Props = {
   game: Matchup;
@@ -57,10 +61,25 @@ export default function MatchupModal({
   const [odds, setOdds] = useState<GameOdds | null>(null);
   const [oddsLoading, setOddsLoading] = useState(true);
 
-  // close with escape
+  const dialog = useRef<HTMLElement>(null);
+  useEffect(() => {
+    const prior = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    dialog.current?.querySelector<HTMLButtonElement>('.ic-close')?.focus();
+    return () => {document.body.style.overflow = previousOverflow; prior?.focus();};
+  }, []);
+
+  // close with escape; trap keyboard focus inside the report.
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") onClose();
+      if (event.key === "Tab") {
+        const controls = [...(dialog.current?.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], input, select, summary, [tabindex="0"]') ?? [])].filter(e => e.tabIndex >= 0 && e.getClientRects().length > 0);
+        const first = controls[0], last = controls.at(-1);
+        if (event.shiftKey && document.activeElement === first) {event.preventDefault(); last?.focus();}
+        if (!event.shiftKey && document.activeElement === last) {event.preventDefault(); first?.focus();}
+      }
     };
 
     document.addEventListener("keydown", handleKey);
@@ -121,6 +140,7 @@ export default function MatchupModal({
       onMouseDown={onClose}
     >
       <section
+        ref={dialog}
         className="ic-dialog"
         role="dialog"
         aria-modal="true"
@@ -201,8 +221,8 @@ export default function MatchupModal({
           </div>
         </div>
 
-        <div className="ic-bar">
-          <div style={{ width: `${away * 100}%` }} />
+        <div className="ic-bar" style={{background: home >= away ? '#80d5ff' : '#53768b'}} aria-label={`${game.away_team} ${pct(away)}, ${game.home_team} ${pct(home)}`}>
+          <div style={{ width: `${away * 100}%`, background: away > home ? '#80d5ff' : '#53768b' }} />
         </div>
 
         <div className="ic-winner">
@@ -212,7 +232,13 @@ export default function MatchupModal({
           </strong>
         </div>
 
-        <div className="ic-tabs" role="tablist" aria-label="Matchup details">
+        <div className="ic-tabs" role="tablist" aria-label="Matchup details" onKeyDown={event => {
+          if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+          const tabs = [...event.currentTarget.querySelectorAll<HTMLButtonElement>('[role="tab"]:not(:disabled)')];
+          const index = tabs.indexOf(document.activeElement as HTMLButtonElement);
+          const next = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1 : (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+          event.preventDefault(); tabs[next]?.focus(); tabs[next]?.click();
+        }}>
           <button
             type="button"
             role="tab"
@@ -220,8 +246,9 @@ export default function MatchupModal({
             className={tab === "overview" ? "ic-active" : ""}
             onClick={() => setTab("overview")}
           >
-            Overview
+            Projections
           </button>
+          <button type="button" role="tab" aria-selected={tab === "periods"} className={tab === "periods" ? "ic-active" : ""} onClick={() => setTab("periods")}>Quarter & half</button>
 
           <button
             type="button"
@@ -247,37 +274,12 @@ export default function MatchupModal({
         </div>
 
         <div className="ic-content" role="tabpanel">
-          {archived && <p className="ic-footnote">Archived prediction. Current player cards and sportsbook lines are not shown for past weeks.</p>}
-          {tab === "overview" && (
-            <div className="ic-info-grid">
-              <div className="ic-panel">
-                <h3>Projected quarterbacks</h3>
-                <div className="ic-row">
-                  <span>{game.away_team}</span>
-                  <strong>
-                    {game.away_projected_qb_name ?? "Unavailable"}
-                  </strong>
-                </div>
-                <div className="ic-row">
-                  <span>{game.home_team}</span>
-                  <strong>
-                    {game.home_projected_qb_name ?? "Unavailable"}
-                  </strong>
-                </div>
-                <p>Projections are based on recent primary passers.</p>
-              </div>
-
-              <div className="ic-panel">
-                <h3>Model comparison</h3>
-                {(["v5_qb_plus", "v5_boosted", "v4_a", "v4_qb_plus"] as Model[]).map(option => {
-                  const p = game[("home_win_prob_" + option) as keyof Matchup];
-                  return typeof p === "number" ? <div className="ic-row" key={option}>
-                    <span>{MODEL_LABELS[option]}</span><strong>{pct(p)}</strong></div> : null;
-                })}
-                <p>Comparison uses home-win probabilities.</p>
-              </div>
-            </div>
-          )}
+          {archived && <p className="ic-footnote">Archived prediction. Research is shown only when a saved pregame snapshot exists for this week; current player cards and sportsbook lines are excluded.</p>}
+          {(tab === "overview" || tab === "periods") && <MatchupProjections game={game} mode={tab === "periods" ? "periods" : "forecasts"}/>}
+          {tab === "overview" && <details className="mr-method ic-model-details"><summary>Compare saved winner models</summary>{(["v5_qb_plus", "v5_boosted", "v4_a", "v4_qb_plus"] as Model[]).map(option => {
+            const p = game[("home_win_prob_" + option) as keyof Matchup];
+            return typeof p === "number" ? <div className="ic-row" key={option}><span>{MODEL_LABELS[option]}</span><strong>{game.home_team} {pct(p)} · {game.away_team} {pct(1 - p)}</strong></div> : null;
+          })}</details>}
 
           {tab === "odds" && (
             <>

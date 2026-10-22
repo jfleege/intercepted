@@ -1,7 +1,7 @@
 name: Check dashboard layouts
 on:
   push:
-    branches: [codex/dashboard-scorecards, codex/unified-dashboard, codex/smooth-dashboard-motion, codex/compact-controls-player-context]
+    branches: [codex/dashboard-scorecards, codex/unified-dashboard, codex/smooth-dashboard-motion, codex/compact-controls-player-context, codex/animated-hero-playbook]
 permissions:
   contents: read
 jobs:
@@ -42,6 +42,7 @@ jobs:
           node tests/dashboard.browser.mjs
           node tests/unified.browser.mjs
           node tests/motion.browser.mjs
+          node tests/playbook.browser.mjs
       - uses: actions/upload-artifact@v4
         if: always()
         with:

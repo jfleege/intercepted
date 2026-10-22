@@ -64,6 +64,7 @@ try {
   await page.getByRole('button',{name:'Scroll players left'}).click();
   await page.waitForFunction(()=>document.querySelector('.dp-scroll-container').scrollLeft===0);
   await page.evaluate(async()=>{for(const img of document.images)img.loading='eager';await Promise.all([...document.images].map(i=>i.complete?Promise.resolve():new Promise(r=>{i.onload=i.onerror=r;})));window.scrollTo(0,0);});
+  if(width>850){const rects=await page.locator('.ud-slate,.ud-focus').evaluateAll(els=>els.map(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height})));assert.ok(Math.abs(rects[0].width-rects[1].width)<1);assert.ok(Math.abs(rects[0].height-rects[1].height)<1);}
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Page must not overflow');
   assert.ok(await page.locator('.ud-game,.ud-focus,.dp-player-card,.ud-market-panel,.ud-model-panel').evaluateAll(els=>els.every(e=>e.scrollWidth<=e.clientWidth+1)),'Panels must not overflow');
   await page.screenshot({path:`qa/unified/${width}-dashboard.png`,fullPage:true});
@@ -86,6 +87,8 @@ try {
   await page.locator('.ud-winner-arc').evaluate(async e=>{await Promise.all(e.getAnimations().map(a=>a.finished));});
   const arc=await page.locator('.ud-winner-arc').evaluate(e=>({expected:parseFloat(e.style.getPropertyValue('--ud-arc')),actual:parseFloat(getComputedStyle(e).strokeDasharray)}));
   assert.ok(Math.abs(arc.expected-arc.actual)<.01,JSON.stringify(arc));
+  const offsets=await page.locator('.ud-winner-arc').evaluate(async e=>{const a=e.getAnimations()[0];a.pause();const values=[];for(const time of [0,100,250,450,650]){a.currentTime=time;await new Promise(r=>requestAnimationFrame(r));values.push(parseFloat(getComputedStyle(e).strokeDashoffset));}a.finish();return values;});
+  assert.ok(offsets[0]>0);assert.equal(offsets.at(-1),0);assert.ok(offsets.every((n,i)=>n>=0&&(!i||n<=offsets[i-1])),'Ring must sweep smoothly without reversal or overshoot');
   await page.locator('.dash-nav a[href="#performance"]').click();
   await page.locator('.performance-page .review-draft').filter({hasText:'ARCHIVED SNAPSHOTS'}).waitFor();
   await page.locator('.dash-nav a[href="#markets"]').click();

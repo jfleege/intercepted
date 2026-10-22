@@ -43,26 +43,61 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
   const failed = current?.failed ?? false;
   const [paused, setPaused] = useState(false);
   const scroller = useRef<HTMLDivElement>(null);
+  const track = useRef<HTMLDivElement>(null);
+  const motion = useRef({direction: 1, holdUntil: 0});
   const move = (direction: number) => {
     const element = scroller.current;
     if (!element) return;
+    motion.current = {direction, holdUntil: performance.now() + 1800};
+    if (track.current) track.current.style.transform = '';
     const width = element.querySelector('button')?.getBoundingClientRect().width ?? 174;
     const max = element.scrollWidth - element.clientWidth;
-    const next = element.scrollLeft + direction * width;
-    const left = next > max + 1 ? 0 : next < -1 ? max : Math.min(next, max);
-    element.scrollTo({ left, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+    element.scrollTo({left: Math.max(0, Math.min(element.scrollLeft + direction * width, max)),
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
   };
   useEffect(() => {
-    if (paused) return;
-    const timer = window.setInterval(() => {
-      const element = scroller.current;
-      if (!element || document.hidden || element.matches(':hover, :focus-within') || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const width = element.querySelector('button')?.getBoundingClientRect().width ?? 174;
-      const max = element.scrollWidth - element.clientWidth;
-      element.scrollTo({ left: element.scrollLeft >= max - 1 ? 0 : Math.min(element.scrollLeft + width, max), behavior: 'smooth' });
-    }, 6000);
-    return () => window.clearInterval(timer);
-  }, [paused, season, week]);
+    const element = scroller.current, content = track.current;
+    if (!element || !content || paused) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let frame = 0, last = 0, position = element.scrollLeft, velocity = 0;
+    const hold = () => {motion.current.holdUntil = performance.now() + 1800;};
+    function glide(time: number) {
+      const elapsed = last ? Math.min(time - last, 64) : 0;
+      last = time;
+      const interacting = element!.closest('.score-ticker')?.matches(':hover, :focus-within');
+      if (document.hidden || reduce.matches || interacting || time < motion.current.holdUntil) {
+        position = element!.scrollLeft;
+        velocity = 0;
+        content!.style.transform = '';
+      } else {
+        const max = Math.max(0, content!.offsetWidth - element!.clientWidth);
+        position = Math.max(0, Math.min(position, max));
+        const direction = motion.current.direction;
+        const distance = direction > 0 ? max - position : position;
+        const target = direction * 24 * Math.min(1, Math.sqrt(Math.max(distance, 1) / 48));
+        velocity += (target - velocity) * (1 - Math.exp(-elapsed / 220));
+        position += velocity * elapsed / 1000;
+        if (position >= max || position <= 0) {
+          position = Math.max(0, Math.min(position, max));
+          motion.current.direction = position >= max ? -1 : 1;
+          motion.current.holdUntil = time + 900;
+          velocity = 0;
+        }
+        element!.scrollLeft = position;
+        // Native scroll positions can round to whole pixels. Keep the fractional
+        // remainder on a composited layer for a smooth, subpixel glide.
+        content!.style.transform = `translate3d(${element!.scrollLeft - position}px, 0, 0)`;
+      }
+      frame = requestAnimationFrame(glide);
+    }
+    for (const event of ['wheel', 'pointerdown', 'touchmove', 'keydown']) element.addEventListener(event, hold, {passive:true});
+    frame = requestAnimationFrame(glide);
+    return () => {
+      cancelAnimationFrame(frame);
+      content.style.transform = '';
+      for (const event of ['wheel', 'pointerdown', 'touchmove', 'keydown']) element.removeEventListener(event, hold);
+    };
+  }, [paused, season, week, games.length]);
 
 
   useEffect(() => {
@@ -131,6 +166,7 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
         <button type="button" className="score-ticker-arrow" onClick={() => move(-1)} aria-label="Previous score matchups">←</button>
       </div>
       <div className="score-ticker-window" ref={scroller}>
+        <div className="score-ticker-glide" ref={track}>
         {items.map(item => (
           <button type="button" className={`score-ticker-game${activeGameId === item.game.game_id ? ' is-selected' : ''}`} key={item.game.game_id}
             onClick={() => onSelect(item.game.game_id)} aria-current={activeGameId === item.game.game_id ? 'true' : undefined}
@@ -140,6 +176,7 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
             <span className={`score-ticker-status${item.live ? ' is-live' : ''}`}>{item.live && '● '}{item.status}</span>
           </button>
         ))}
+        </div>
       </div>
       <div className="score-ticker-controls">
         <button type="button" className="score-ticker-arrow" onClick={() => move(1)} aria-label="Next score matchups">→</button>

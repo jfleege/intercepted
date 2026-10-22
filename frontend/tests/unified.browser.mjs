@@ -1,9 +1,10 @@
+import process from 'node:process';
 import assert from 'node:assert/strict';
 import {mkdir,readFile} from 'node:fs/promises';
 import {chromium} from 'playwright';
 const origin='http://127.0.0.1:4174/intercepted/';
 const data=JSON.parse(await readFile('public/predictions.json','utf8'));
-const browser=await chromium.launch();const errors=[];
+const browser=await chromium.launch({executablePath:process.env.CHROME_BIN || undefined});const errors=[];
 await mkdir('qa/unified',{recursive:true});
 try {
  for(const width of [375,650,900,1440]){

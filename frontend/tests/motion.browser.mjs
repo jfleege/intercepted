@@ -1,6 +1,7 @@
+import process from 'node:process';
 import assert from 'node:assert/strict';
 import {chromium} from 'playwright';
-const browser=await chromium.launch();
+const browser=await chromium.launch({executablePath:process.env.CHROME_BIN || undefined});
 try {
  const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'no-preference'});
  await page.route('**/*',route=>route.request().url().startsWith('http://127.0.0.1:4174')?route.continue():route.fulfill(route.request().resourceType()==='image'?{contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"/>'}:{json:{events:[]}}));

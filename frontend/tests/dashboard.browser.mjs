@@ -1,3 +1,4 @@
+import process from 'node:process';
 import assert from 'node:assert/strict';
 import {mkdir,readFile} from 'node:fs/promises';
 import {chromium} from 'playwright';
@@ -9,7 +10,7 @@ const graded=rows.filter(r=>['correct','incorrect'].includes(r.grade));
 const expectedAccuracy=graded.length?`${(graded.filter(r=>r.grade==='correct').length/graded.length*100).toFixed(1)}%`:'—';
 const events=forecasts.games.map((game,i)=>({date:`${game.game_date}T17:00:00Z`,competitions:[{competitors:[{homeAway:'home',score:'27',team:{abbreviation:game.home_team}},{homeAway:'away',score:'21',team:{abbreviation:game.away_team}}]}],status:{type:{state:i===0?'post':i===1?'in':'pre',completed:i===0,shortDetail:i===0?'Final':'Q3 8:12'}}}));
 await mkdir('qa/dashboard',{recursive:true});
-const browser=await chromium.launch();const errors=[];
+const browser=await chromium.launch({executablePath:process.env.CHROME_BIN || undefined});const errors=[];
 try {
  for(const width of [375,650,900,1440]){
   const context=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce',timezoneId:'America/Chicago'});

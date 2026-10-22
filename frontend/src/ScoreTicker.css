@@ -2,9 +2,10 @@
 .dashboard-shell .score-ticker-label { flex:0 0 92px; display:flex; flex-direction:column; justify-content:center; align-items:center; gap:6px; border-right:1px solid #344b58; }
 .dashboard-shell .score-ticker-label strong { font:650 11px ui-monospace,monospace; letter-spacing:1px; }
 .dashboard-shell .score-ticker-label > span { font:8px ui-monospace,monospace; color:#819ba9; letter-spacing:.7px; }
-.dashboard-shell .score-ticker-window { display:flex; flex:1; min-width:0; overflow-x:auto; scrollbar-width:none; scroll-snap-type:x proximity; overscroll-behavior-x:contain; }
+.dashboard-shell .score-ticker-window { display:block; flex:1; min-width:0; overflow-x:auto; scrollbar-width:none; overscroll-behavior-x:contain; }
+.dashboard-shell .score-ticker-glide { display:flex; width:max-content; height:100%; will-change:transform; }
 .dashboard-shell .score-ticker-window::-webkit-scrollbar { display:none; }
-.dashboard-shell .score-ticker-game { flex:0 0 174px; width:174px; display:flex; flex-direction:column; justify-content:center; gap:8px; padding:13px 18px 10px; box-sizing:border-box; border:0; border-right:1px solid #344b58; border-radius:0; background:transparent; color:inherit; text-align:left; cursor:pointer; scroll-snap-align:start; position:relative; }
+.dashboard-shell .score-ticker-game { flex:0 0 174px; width:174px; display:flex; flex-direction:column; justify-content:center; gap:8px; padding:13px 18px 10px; box-sizing:border-box; border:0; border-right:1px solid #344b58; border-radius:0; background:transparent; color:inherit; text-align:left; cursor:pointer; position:relative; }
 .dashboard-shell .score-ticker-game:hover { background:#76cfff0b; }
 .dashboard-shell .score-ticker-game.is-selected { background:linear-gradient(110deg,#65caff0d,#65caff04); box-shadow:inset 0 0 0 2px #78d4ff,inset 0 0 24px #65caff0b; border-radius:7px; }
 .dashboard-shell .score-ticker-game:focus-visible,.dashboard-shell .score-ticker-arrow:focus-visible,.dashboard-shell .score-ticker-pause:focus-visible { outline:2px solid #a5e3ff; outline-offset:-4px; }

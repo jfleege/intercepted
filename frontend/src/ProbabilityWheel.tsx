@@ -25,7 +25,7 @@ export default function ProbabilityWheel({ awayTeam, homeTeam, homeProb }: {
         <circle cx="80" cy="80" r="61" fill="none" stroke="#35505f" strokeWidth="15"/>
         <circle className="ud-winner-arc" cx="80" cy="80" r="61" fill="none" stroke={color} strokeWidth="15"
           strokeDasharray={`${winnerProb*circumference} ${circumference}`}
-          style={{'--ud-arc':winnerProb*circumference,'--ud-circumference':circumference} as CSSProperties}
+          style={{'--ud-arc':winnerProb*circumference} as CSSProperties}
           transform={winnerIsHome ? 'rotate(-90 80 80)' : 'translate(160 0) scale(-1 1) rotate(-90 80 80)'}/>
       </svg>
       <div className="ud-wheel-logos"><img src={`${import.meta.env.BASE_URL}logos/${awayTeam}.png`} alt={awayTeam}/><span/><img src={`${import.meta.env.BASE_URL}logos/${homeTeam}.png`} alt={homeTeam}/></div>

@@ -8,7 +8,7 @@ import "./PredictionHistory.css";
 import MatchupModal from "./MatchupModal";
 import playerBody from "./assets/playeronly.png";
 import football from "./assets/ball.png";
-import heroPlayer from "./assets/cw.webp";
+import HeroPlaybook from "./HeroPlaybook";
 import DashboardPlayers from "./DashboardPlayers";
 import DashboardMarkets from "./DashboardMarkets";
 import ScoreTicker from "./ScoreTicker";
@@ -17,6 +17,7 @@ import PerformancePage from "./PerformancePage";
 import MarketsPage from "./MarketsPage";
 import WeeklyMatchups from "./WeeklyMatchups";
 import "./UnifiedDashboard.css";
+import "./HeroPlaybook.css";
 
 import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};
@@ -169,8 +170,7 @@ const focusedGame =
             <div className="ud-hero-copy"><p className="ud-eyebrow">NFL ANALYTICS FROM EVERY ANGLE.</p><h1>EVERY MATCHUP<br/>MORE <em>PERSPECTIVE.</em></h1><p>Explore statistical model predictions, analyze player trends, and track performance—all in one place.</p>
               <div className="ud-hero-meta"><span><b>{data?.week ?? '—'}</b> WEEK</span><span><b>{data?.count ?? '—'}</b> MATCHUPS</span><span><b>{modelOptions.length}</b> ACTIVE MODELS</span></div>
             </div>
-            <img className="ud-hero-photo" src={heroPlayer} alt="Caleb Williams"/>
-            <div className="ud-hero-stamp">THE WEEK AHEAD<small>NFL / {data?.season ?? '—'}</small></div>
+            <HeroPlaybook games={data?.games ?? []} model={model} archived={archived} season={data?.season} week={data?.week}/>
           </section>
 {data && (
   <ScoreTicker

@@ -5,7 +5,7 @@ export type WatchPlayer = {
 export type WatchProjection = {
   player_id: string; team: string; opponent: string; position: string; status: string;
   stat?: string; expected_yards?: number; range_80?: number[];
-  anytime_td_probability?: number;
+  anytime_td_probability?: number; passing_td_probability?: number;
 };
 export type WatchReport = {
   season: number; week: number;
@@ -44,4 +44,10 @@ export function rankWatchPlayers<T extends WatchPlayer>(data: {season: number; w
     : unique.filter(p => p.trend_pct !== null && Number.isFinite(p.trend_pct) && p.trend_pct > 0)
       .sort((a,b) => b.trend_pct! - a.trend_pct! || a.player_id.localeCompare(b.player_id));
   return { players: ranked.slice(0,10), blended, eligible: eligible.length, total: unique.length };
+}
+
+export function watchTouchdown(position: string, projection?: WatchProjection) {
+  const probability = position === 'QB' ? projection?.passing_td_probability : projection?.anytime_td_probability;
+  return {label: position === 'QB' ? '1+ passing TD' : '1+ rush/receiving TD',
+    probability: typeof probability === 'number' && Number.isFinite(probability) && probability >= 0 && probability <= 1 ? probability : null};
 }

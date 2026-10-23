@@ -21,6 +21,10 @@ try {
   for(const card of await panel.locator('.dp-player-card').all()){
    const name=await card.locator('.dp-player-identity strong').textContent();
    const p=Object.values(report.games).flatMap(g=>g.players).find(p=>p.name===name);
+   const td=p.position==='QB'?p.passing_td_probability:p.anytime_td_probability;
+   assert.equal(await card.locator('.dp-touchdown-stat strong').textContent(),`${(td*100).toFixed(1)}%`);
+   assert.equal(await card.locator('.dp-touchdown-stat span').textContent(),p.position==='QB'?'1+ passing TD':'1+ rush/receiving TD');
+   assert.ok(await card.evaluate(e=>{const a=e.querySelector('.dp-player-stat').getBoundingClientRect(),b=e.querySelector('.dp-touchdown-stat').getBoundingClientRect();return a.right<=b.left&&a.top<b.bottom&&b.top<a.bottom;}),'TD probability sits beside yardage without overlap');
    assert.ok(p);assert.equal(await card.locator('.dp-player-stat strong').textContent(),p.expected_yards.toFixed(1));
    assert.equal(await card.locator('.ud-player-comparison > div').count(),3);
   }

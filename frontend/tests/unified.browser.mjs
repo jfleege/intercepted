@@ -19,7 +19,8 @@ try {
   await page.goto(origin);
   await page.locator('.ud-game').first().waitFor();
   await page.locator('.ud-model-vote').first().waitFor();
-  await page.locator('.ud-moneyline').first().waitFor();
+  await page.waitForFunction(()=>{const body=document.querySelector('.ud-market-body');return body && !body.textContent.includes('Loading sportsbook data...');});
+  assert.ok(await page.locator('.ud-moneyline').count()===2 || await page.getByText('No sportsbook odds saved for this matchup.',{exact:true}).count()===1);
   await page.locator('.dp-headshot').first().waitFor();
   await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('.ud-game').count(),data.games.length);

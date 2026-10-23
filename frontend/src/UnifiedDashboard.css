@@ -203,3 +203,10 @@
 .dashboard-shell .dp-ranking-select select { height:30px; max-width:100%; padding:0 8px; color:var(--ud-text); background:#183443; border:1px solid var(--ud-border); border-radius:7px; font:500 12px Barlow,sans-serif; }
 .dashboard-shell .dp-projection-range, .dashboard-shell .dp-projection-status { color:var(--ud-muted); font-size:11px; line-height:1.5; }
 .dashboard-shell .ud-player-comparison .ud-projected { background:#64d8ba; }
+
+.dashboard-shell .dp-projection-summary { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:20px; }
+.dashboard-shell .dp-projection-summary .dp-player-stat { margin:0; min-width:0; }
+.dashboard-shell .dp-touchdown-stat { display:flex; flex-direction:column; align-items:flex-end; gap:4px; flex:0 0 auto; text-align:right; }
+.dashboard-shell .dp-touchdown-stat strong { color:#64d8ba; font:600 26px/1.1 Barlow,sans-serif; }
+.dashboard-shell .dp-touchdown-stat span { color:var(--ud-text); font-size:11px; }
+.dashboard-shell .dp-touchdown-stat small { color:var(--ud-muted); font-size:10px; }

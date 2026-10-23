@@ -1,7 +1,7 @@
 name: Check projected player watch
 on:
   push:
-    branches: [codex/projected-player-watch]
+    branches: [codex/projected-player-watch, codex/player-watch-touchdowns]
 permissions:
   contents: read
 jobs:

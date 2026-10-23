@@ -1,6 +1,6 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { rankWatchPlayers } from "./playerWatchRanking";
+import { rankWatchPlayers, watchTouchdown } from "./playerWatchRanking";
 import type { WatchProjection, WatchReport } from "./playerWatchRanking";
 
 type Player = {
@@ -92,6 +92,7 @@ function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlaye
     : "Yardage-defense rank unavailable.";
   const trend = player.trend_pct;
   const projection = player.projection;
+  const touchdown = watchTouchdown(player.position, projection);
   const scale = Math.max(1, player.season_average, player.recent_average, projection?.expected_yards ?? 0);
 
   const trendText =
@@ -133,13 +134,15 @@ function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlaye
         </div>
       </div>
 
-      <div className="dp-player-stat">
+      <div className="dp-projection-summary"><div className="dp-player-stat">
         <strong>{(projection?.expected_yards ?? player.recent_average).toFixed(1)}</strong>
         <span>
           {projection ? "Projected" : `Last ${player.games_sampled}`} · {player.stat_label}{projection ? "" : "/game"}
         </span>
       </div>
 
+      {projection && <div className="dp-touchdown-stat"><strong>{touchdown.probability === null ? "—" : `${(touchdown.probability * 100).toFixed(1)}%`}</strong><span>{touchdown.label}</span><small>{touchdown.probability === null ? "Unavailable" : "Model probability"}</small></div>}
+      </div>
       {projection && <p className="dp-projection-range">80% range {projection.range_80![0].toFixed(1)}–{projection.range_80![1].toFixed(1)} yards · experimental</p>}
       <div className="ud-player-comparison" aria-label={`Season average ${player.season_average.toFixed(1)}, last ${player.games_sampled} average ${player.recent_average.toFixed(1)} ${player.stat_label} per game`}>
         <div><span>Season</span><i style={{width:`${Math.max(0, player.season_average) / scale * 100}%`}}/><b>{player.season_average.toFixed(1)}</b></div>

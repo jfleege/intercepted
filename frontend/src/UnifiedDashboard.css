@@ -84,7 +84,7 @@
 .dashboard-shell .ud-details-button { display:flex; align-items:center; justify-content:space-between; width:calc(100% - 38px); margin:0 19px; padding:12px 14px; background:var(--ud-blue); color:#0c2231; border:0; border-radius:6px; font-size:13px; font-weight:600; cursor:pointer; }
 .dashboard-shell .ud-empty { color:var(--ud-muted); font-size:13px; line-height:1.5; }
 .dashboard-shell .ud-bottom-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
-.dashboard-shell .ud-bottom-grid .dp-panel { grid-column:1/-1; background:transparent; border:0; box-shadow:none; padding:0; color:var(--ud-text); overflow:hidden; }
+.dashboard-shell .ud-bottom-grid .dp-panel { grid-column:1/-1; background:transparent; border:0; box-shadow:none; padding:0; color:var(--ud-text); overflow:visible; border-radius:0; }
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading h3 { color:var(--ud-text); font:600 28px/1.1 'Barlow Condensed',sans-serif; }
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading p { color:var(--ud-muted); font-size:12px; }
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading .ud-eyebrow { color:var(--ud-blue); font-size:11px; margin:0 0 5px; }
@@ -196,3 +196,10 @@
 @media(prefers-reduced-motion:reduce) {
  .dashboard-shell .ud-probability-fill,.dashboard-shell .ud-winner-arc,.dashboard-shell .ud-selected-fill { animation:none; }
 }
+
+/* Keep the section header outside the carousel's clipping area. */
+.dashboard-shell .ud-bottom-grid .dp-panel > .dash-bottom-heading { padding:4px 2px; flex-wrap:wrap; }
+.dashboard-shell .dp-header-controls { flex-wrap:wrap; }
+.dashboard-shell .dp-ranking-select select { height:30px; max-width:100%; padding:0 8px; color:var(--ud-text); background:#183443; border:1px solid var(--ud-border); border-radius:7px; font:500 12px Barlow,sans-serif; }
+.dashboard-shell .dp-projection-range, .dashboard-shell .dp-projection-status { color:var(--ud-muted); font-size:11px; line-height:1.5; }
+.dashboard-shell .ud-player-comparison .ud-projected { background:#64d8ba; }

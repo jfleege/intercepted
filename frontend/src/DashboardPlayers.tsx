@@ -1,5 +1,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { rankWatchPlayers } from "./playerWatchRanking";
+import type { WatchProjection, WatchReport } from "./playerWatchRanking";
 
 type Player = {
   player_id: string;
@@ -17,6 +19,7 @@ type Player = {
 type WeeklyPlayer = Player & {
   opponent: string;
   isHome: boolean;
+  projection?: WatchProjection;
 };
 
 type MatchupPlayers = {
@@ -88,6 +91,8 @@ function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlaye
     ? `${player.opponent} ${rushing ? "rush" : "pass"} defense: rank ${yardageRank} of ${leagueSize}, ${yards} gross yards allowed per game. Rank 1 allows the fewest.`
     : "Yardage-defense rank unavailable.";
   const trend = player.trend_pct;
+  const projection = player.projection;
+  const scale = Math.max(1, player.season_average, player.recent_average, projection?.expected_yards ?? 0);
 
   const trendText =
     trend === null
@@ -129,15 +134,17 @@ function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlaye
       </div>
 
       <div className="dp-player-stat">
-        <strong>{player.recent_average.toFixed(1)}</strong>
+        <strong>{(projection?.expected_yards ?? player.recent_average).toFixed(1)}</strong>
         <span>
-          Last {player.games_sampled} · {player.stat_label}/game
+          {projection ? "Projected" : `Last ${player.games_sampled}`} · {player.stat_label}{projection ? "" : "/game"}
         </span>
       </div>
 
+      {projection && <p className="dp-projection-range">80% range {projection.range_80![0].toFixed(1)}–{projection.range_80![1].toFixed(1)} yards · experimental</p>}
       <div className="ud-player-comparison" aria-label={`Season average ${player.season_average.toFixed(1)}, last ${player.games_sampled} average ${player.recent_average.toFixed(1)} ${player.stat_label} per game`}>
-        <div><span>Season</span><i style={{width:`${Math.max(0, player.season_average) / Math.max(1, player.season_average, player.recent_average) * 100}%`}}/><b>{player.season_average.toFixed(1)}</b></div>
-        <div><span>Last {player.games_sampled}</span><i className="ud-recent" style={{width:`${Math.max(0, player.recent_average) / Math.max(1, player.season_average, player.recent_average) * 100}%`}}/><b>{player.recent_average.toFixed(1)}</b></div>
+        <div><span>Season</span><i style={{width:`${Math.max(0, player.season_average) / scale * 100}%`}}/><b>{player.season_average.toFixed(1)}</b></div>
+        <div><span>Last {player.games_sampled}</span><i className="ud-recent" style={{width:`${Math.max(0, player.recent_average) / scale * 100}%`}}/><b>{player.recent_average.toFixed(1)}</b></div>
+        {projection && <div><span>Projected</span><i className="ud-projected" style={{width:`${projection.expected_yards! / scale * 100}%`}}/><b>{projection.expected_yards!.toFixed(1)}</b></div>}
       </div>
       <div className="ud-player-trend"><span>Change vs. season average</span><strong className={`dp-trend ${trendClass}`}>{trendText}</strong></div>
     </article>
@@ -148,6 +155,9 @@ function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlaye
 export default function DashboardPlayers() {
   const [data, setData] = useState<PlayerData | null>(null);
   const [error, setError] = useState("");
+  const [report, setReport] = useState<WatchReport | null>(null);
+  const [mode, setMode] = useState<"blend" | "form">("blend");
+  const [reportLoading, setReportLoading] = useState(false);
 
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -184,6 +194,7 @@ const scrollPlayers = (direction: number) => {
       })
       .then((result: PlayerData) => {
         if (active) {
+          setReportLoading(true);
           setData(result);
         }
       })
@@ -198,54 +209,32 @@ const scrollPlayers = (direction: number) => {
     };
   }, []);
 
-  // rank players across all weekly matchups
-  const players = useMemo(() => {
-    if (!data) return [];
-
-    // collect players from every matchup
-    const allPlayers: WeeklyPlayer[] = Object.values(data.games).flatMap(
-      (matchup) => [
-        ...matchup.away_players.map((player) => ({ ...player, opponent: matchup.home_team, isHome: false })),
-        ...matchup.home_players.map((player) => ({ ...player, opponent: matchup.away_team, isHome: true })),
-      ]
-    );
-
-    // remove duplicate players
-    const uniquePlayers = Array.from(
-      new Map(
-        allPlayers.map((player) => [
-          player.player_id,
-          player,
-        ])
-      ).values()
-    );
-
-    // select the ten highest positive yardage trends
-    return uniquePlayers
-      .filter(
-        (player) =>
-          player.trend_pct !== null &&
-          Number.isFinite(player.trend_pct) &&
-          player.trend_pct > 0
-      )
-      .sort(
-        (a, b) =>
-          (b.trend_pct ?? 0) - (a.trend_pct ?? 0)
-      )
-      .slice(0, 10);
+  useEffect(() => {
+    if (!data) return;
+    const controller = new AbortController();
+    fetch(`${import.meta.env.BASE_URL}research/${data.season}-week-${data.week}.json`, {signal: controller.signal})
+      .then(response => { if (!response.ok) throw new Error("Projections unavailable"); return response.json(); })
+      .then((result: WatchReport) => { if (!controller.signal.aborted) setReport(result); })
+      .catch(() => { if (!controller.signal.aborted) setReport(null); })
+      .finally(() => { if (!controller.signal.aborted) setReportLoading(false); });
+    return () => controller.abort();
   }, [data]);
+
+  const ranking = useMemo(() => data ? rankWatchPlayers(data, report, mode) : {players: [], blended: false, eligible: 0, total: 0}, [data, report, mode]);
+  const {players} = ranking;
 
   return (
     <section className="dash-bottom-panel dp-panel">
       <div className="dash-bottom-heading">
         <div>
-          <p className="ud-eyebrow">FORM WATCH</p><h3>Players to Watch</h3>
+          <p className="ud-eyebrow">PROJECTION + FORM</p><h3>Players to Watch</h3>
           <p>
-  Top 10 positive yardage trends · Week {data?.week ?? "—"}
+  {ranking.blended ? "Top 10 · projections + recent form" : "Top 10 · positive yardage trends"} · Week {data?.week ?? "—"}
 </p>
         </div>
 
         <div className="dp-header-controls">
+  <label className="dp-ranking-select"><span className="sr-only">Player ranking</span><select aria-label="Player ranking" value={mode} onChange={event => {setMode(event.target.value as "blend" | "form"); scrollRef.current?.scrollTo({left:0});}}><option value="blend">Projection + form</option><option value="form">Recent form</option></select></label>
   <span className="dp-week-label">
     TOP 10
   </span>
@@ -270,6 +259,7 @@ const scrollPlayers = (direction: number) => {
 </div>
       </div>
 
+      {data && mode === "blend" && !ranking.blended && <p className="dp-projection-status" role="status">{reportLoading ? "Loading projections; showing recent form." : "Matching projections unavailable; showing recent form."}</p>}
       {!data && !error && (
         <div className="dp-empty">
           Loading player statistics...
@@ -305,6 +295,7 @@ const scrollPlayers = (direction: number) => {
 </div>
 
           <p className="dp-footnote">
+            {ranking.blended && <>Ranked equally by projected yardage and recent improvement within position, among {ranking.eligible} tracked players. Experimental estimates, conditional on appearing. </>}
             Statistics through {data?.as_of}. Trends compare
             recent yardage with season averages. Opponent defense ranks use points allowed/game; pass and rush ranks use gross yards allowed/game. #1 allows the fewest; completed prior weeks only.
           </p>

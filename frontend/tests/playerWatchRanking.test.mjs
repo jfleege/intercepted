@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {rankWatchPlayers} from '../src/playerWatchRanking.ts';
+import {rankWatchPlayers,watchTouchdown} from '../src/playerWatchRanking.ts';
 const player=(id, position='WR', recent=60, season=50)=>({player_id:id,name:id,team:'NE',position,recent_average:recent,season_average:season,trend_pct:(recent/season-1)*100});
 const data=(players)=>({season:2026,week:7,games:{game:{away_team:'NE',home_team:'CHI',away_players:players,home_players:[]}}});
 const report=(players)=>({season:2026,week:7,games:{game:{players:players.map(([id,yards,position='WR'])=>({player_id:id,position,team:'NE',opponent:'CHI',status:'available',stat:position==='QB'?'passing':'receiving',expected_yards:yards,range_80:[0,yards+30]}))}}});
@@ -27,4 +27,13 @@ test('deduplicates players, caps at ten and permits projected players with negat
  assert.equal(result.total,12);assert.equal(result.players.length,10);
  assert.equal(new Set(result.players.map(p=>p.player_id)).size,10);
  assert.equal(rankWatchPlayers(data(players),null,'form').players.length,0);
+});
+
+test('TD probability uses the correct event and never substitutes passing for scoring',()=>{
+ const p={passing_td_probability:.81,anytime_td_probability:.12};
+ assert.deepEqual(watchTouchdown('QB',p),{label:'1+ passing TD',probability:.81});
+ assert.deepEqual(watchTouchdown('WR',p),{label:'1+ rush/receiving TD',probability:.12});
+ assert.equal(watchTouchdown('QB',{anytime_td_probability:.3}).probability,null);
+ for(const value of [NaN,Infinity,-.1,1.1,null]) assert.equal(watchTouchdown('RB',{anytime_td_probability:value}).probability,null);
+ assert.equal(watchTouchdown('RB',{anytime_td_probability:0}).probability,0);
 });

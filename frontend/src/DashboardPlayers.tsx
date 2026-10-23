@@ -295,7 +295,7 @@ const scrollPlayers = (direction: number) => {
 </div>
 
           <p className="dp-footnote">
-            {ranking.blended && <>Ranking: 50% projected yardage percentile + 50% recent improvement percentile, within position, among {ranking.eligible} tracked players with matching projections. Improvement uses a position-specific yardage floor to limit small-average effects. This is a watchlist heuristic, not a validated performance score. Projections are conditional on appearing. </>}
+            {ranking.blended && <>Ranked equally by projected yardage and recent improvement within position, among {ranking.eligible} tracked players. Experimental estimates, conditional on appearing. </>}
             Statistics through {data?.as_of}. Trends compare
             recent yardage with season averages. Opponent defense ranks use points allowed/game; pass and rush ranks use gross yards allowed/game. #1 allows the fewest; completed prior weeks only.
           </p>

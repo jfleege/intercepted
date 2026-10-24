@@ -102,6 +102,7 @@ jobs:
         run: python -m src.ml.refresh_research
       - name: Export team efficiency and ranking movement
         if: inputs.results_only != true
+        continue-on-error: true
         run: python -m src.ml.export_team_insights
       - name: Refresh odds
         if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)

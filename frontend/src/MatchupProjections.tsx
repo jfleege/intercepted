@@ -8,7 +8,7 @@ type PlayerProjection = {
 type Period = { period: string; games: number; recent_games: number; points_for: number; points_against: number; recent_points_for: number; off_epa_per_play: number | null; success_rate: number | null };
 type TeamPeriods = { games: number; summary: Period[]; history: { game_id: string; week: number; opponent: string; overtime_points_for: number; periods: { period: string; points_for: number }[] }[] };
 type Metric = { mae: number; baseline_mae: number; interval_80_coverage?: number };
-type Report = {
+export type Report = {
   season: number; week: number; features_through_week: number;
   games: Record<string, { model_version: string; generated_at: string; kickoff: string; players: PlayerProjection[]; scoring: {
     away: {team: string; expected_points: number; range_80: number[]}; home: {team: string; expected_points: number; range_80: number[]};
@@ -36,7 +36,7 @@ function ProjectionCard({ player }: {player: PlayerProjection}) {
   </article>;
 }
 
-export default function MatchupProjections({ game, mode = 'forecasts' }: {game: {game_id: string; season: number; week: number; away_team: string; home_team: string}; mode?: 'forecasts' | 'periods'}) {
+export default function MatchupProjections({ game, mode = 'forecasts' }: {game: {game_id: string; season: number; week: number; away_team: string; home_team: string}; mode?: 'forecasts' | 'periods' | 'players'}) {
   const [report, setReport] = useState<Report | null>(null);
   const [failed, setFailed] = useState(false);
   const [period, setPeriod] = useState('quarters');
@@ -73,9 +73,10 @@ export default function MatchupProjections({ game, mode = 'forecasts' }: {game: 
   }
   const lineage = report.model_versions[prediction.model_version];
   return <div className="mr-report">
-    <div className="mr-section-title"><div><p className="ic-eyebrow">BEYOND THE WINNER</p><h3>Scoring & player projections</h3><p>Experimental models · pregame inputs through Week {report.features_through_week}</p></div><span className="mr-badge">RESEARCH v1</span></div>
+    {mode !== 'players' && <><div className="mr-section-title"><div><p className="ic-eyebrow">BEYOND THE WINNER</p><h3>Scoring & player projections</h3><p>Experimental models · pregame inputs through Week {report.features_through_week}</p></div><span className="mr-badge">RESEARCH v1</span></div>
     <div className="mr-score-grid">{(['away', 'home'] as const).map(s => <section className="mr-score-card" key={s}><span><img src={`${import.meta.env.BASE_URL}logos/${scoring[s].team}.png`} alt=""/>{scoring[s].team} expected points</span><strong>{scoring[s].expected_points.toFixed(1)}</strong><small>80% range {range(scoring[s].range_80)}</small></section>)}<section className="mr-score-card"><span>Expected game total</span><strong>{scoring.total.toFixed(1)}</strong><small>80% range {range(scoring.total_range_80)}</small></section><section className="mr-score-card"><span>{game.home_team} scoring margin</span><strong>{signed(scoring.home_margin)}</strong><small>80% range {range(scoring.margin_range_80)}</small></section></div>
     <p className="mr-muted">Expected points are averages, not an exact score prediction. Positive home margin means {game.home_team} scores more. {report.validation.scoring.margin.mae >= report.validation.scoring.margin.baseline_mae ? "Margin error did not beat the baseline in the 2025 benchmark." : "See the validation details for benchmark errors."}</p>
+    </>}
     <div className="mr-section-title"><div><h3>Individual player outlook</h3><p>Yardage and touchdown probabilities, conditional on appearing. These models do not predict player availability.</p></div></div>
     <div className="mr-player-grid">{prediction.players.map(p => <ProjectionCard player={p} key={p.player_id}/>)}</div>
     <p className="mr-muted">Rush/receiving TD excludes passing touchdowns and return scores. “1+ passing TD” is a separate quarterback event. Estimates are not player-prop prices or parlay probabilities.</p>

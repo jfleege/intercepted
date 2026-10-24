@@ -16,6 +16,7 @@ import DashboardMetrics from "./DashboardMetrics";
 import PerformancePage from "./PerformancePage";
 import MarketsPage from "./MarketsPage";
 import WeeklyMatchups from "./WeeklyMatchups";
+import MatchupsPage from "./MatchupsPage";
 import "./UnifiedDashboard.css";
 import "./HeroPlaybook.css";
 
@@ -23,9 +24,9 @@ import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};
 
 function App() {
-  const [page, setPage] = useState(() => window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : "dashboard");
+  const [page, setPage] = useState(() => window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : window.location.hash === "#matchups" ? "matchups" : "dashboard");
   useEffect(() => {
-    const navigate = () => setPage(window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : "dashboard");
+    const navigate = () => setPage(window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : window.location.hash === "#matchups" ? "matchups" : "dashboard");
     window.addEventListener("hashchange", navigate);
     return () => window.removeEventListener("hashchange", navigate);
   }, []);
@@ -84,8 +85,19 @@ const focusedGame =
   games.find((game) => game.game_id === focusedGameId) ??
   games[0] ??
   null;
+  const weekControl = (
+    <label className="prediction-week-label">Prediction week
+      <select className="forecast-sort" value={selectedWeek} onChange={event => {
+        setSelectedWeek(event.target.value); setSelectedGame(null); setFocusedGameId(null); setError("");
+      }}>
+        <option value="current">Current · {currentData?.season ?? "—"} Week {currentData?.week ?? "—"}</option>
+        {weeks.filter(w => w.season !== currentData?.season || w.week !== currentData?.week).map(w =>
+          <option key={`${w.season}-${w.week}`} value={`${w.season}-${w.week}`}>{w.season} · Week {w.week} (saved)</option>)}
+      </select>
+    </label>
+  );
   return (
-    <div className={`app dashboard-shell${page === "dashboard" ? " unified-dashboard" : ""}`}>
+    <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups") ? " unified-dashboard" : ""}`}>
       {/* sidebar */}
       <aside className="dash-sidebar">
         <div className="dash-brand">
@@ -117,7 +129,7 @@ const focusedGame =
           </a>
           <a
             href="#matchups"
-            className="dash-nav-item"
+            className={`dash-nav-item${page === "matchups" ? " active" : ""}`} aria-current={page === "matchups" ? "page" : undefined}
           >
             <span className="dash-nav-icon">◉</span>
             <span className="dash-nav-label">Matchups</span>
@@ -165,7 +177,7 @@ const focusedGame =
           </div>
         </div>
         <main className="container" id="dashboard">
-          {page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage /> : <>
+          {page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage /> : page === "matchups" ? <MatchupsPage data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/> : <>
           <section className="ud-hero">
             <div className="ud-hero-copy"><p className="ud-eyebrow">NFL ANALYTICS FROM EVERY ANGLE.</p><h1>EVERY MATCHUP<br/>MORE <em>PERSPECTIVE.</em></h1><p>Explore statistical model predictions, analyze player trends, and track performance—all in one place.</p>
               <div className="ud-hero-meta"><span><b>{data?.week ?? '—'}</b> WEEK</span><span><b>{data?.count ?? '—'}</b> MATCHUPS</span><span><b>{modelOptions.length}</b> ACTIVE MODELS</span></div>
@@ -189,7 +201,7 @@ const focusedGame =
           {/* predictions */}
           <section
             className="forecast-section ud-forecast"
-            id="matchups"
+            id="weekly-matchups"
           >
             
 <div className="ud-section-heading">
@@ -199,15 +211,7 @@ const focusedGame =
   </div>
 
   <div className="forecast-controls">
-    <label className="prediction-week-label">Prediction week
-      <select className="forecast-sort" value={selectedWeek} onChange={event => {
-        setSelectedWeek(event.target.value); setSelectedGame(null); setFocusedGameId(null); setError("");
-      }}>
-        <option value="current">Current · {currentData?.season ?? "—"} Week {currentData?.week ?? "—"}</option>
-        {weeks.filter(w => w.season !== currentData?.season || w.week !== currentData?.week).map(w =>
-          <option key={`${w.season}-${w.week}`} value={`${w.season}-${w.week}`}>{w.season} · Week {w.week} (saved)</option>)}
-      </select>
-    </label>
+    {weekControl}
     <select
       className="forecast-sort"
       value={sort}

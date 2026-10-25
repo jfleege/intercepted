@@ -5,7 +5,7 @@ import subprocess
 from collections import defaultdict
 from statistics import mean
 from src.ml.refresh_performance import ROOT, stamp, digest, git, write_json, utcnow, kickoff, normalize_result
-from src.ml.projection_features import team_name, num
+from src.ml.projection_features import team_name
 
 POLICY = {'label': 'Provisional review heuristic, not a statistical significance test', 'relative_error': .10,
           'minimum': {'winners': 100, 'scoring': 100, 'yardage': 300, 'touchdowns': 500},
@@ -37,6 +37,8 @@ def eligible(payload, game, observed):
     try:
         version = payload['model_versions'][game['model_version']]
         target = (payload['season'], payload['week'])
+        if not version.get('models'):
+            return False, 'Missing model cutoff metadata'
         if any(tuple(m['training_cutoff']) >= target or tuple(m['calibration_cutoff']) >= target
                or tuple(m['training_cutoff']) >= tuple(m['calibration_cutoff']) for m in version['models'].values()):
             return False, 'Model cutoffs do not precede forecast week'
@@ -256,6 +258,9 @@ def main():
     # Preserve source observations as evidence; a missing row after it was graded cannot erase a result silently.
     revisions_path=ROOT/'data/tracking/research_results.json'
     history=json.loads(revisions_path.read_text()) if revisions_path.exists() else {'records':{},'revisions':[]}
+    current_keys={digest([r['game_id'],r['family'],r['target'],r['subject']]) for r in records}
+    if any(key not in current_keys and (r['status']=='graded' or r['eligibility']=='verified') for key,r in history['records'].items()):
+        raise ValueError('Previously saved research record disappeared; retaining prior export')
     for r in records:
         key=digest([r['game_id'],r['family'],r['target'],r['subject']]);previous=history['records'].get(key)
         if previous and previous['eligibility']=='verified' and previous['snapshot_id']!=r['snapshot_id']:

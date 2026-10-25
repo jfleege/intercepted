@@ -38,7 +38,7 @@ try{
   await page.getByRole('button',{name:'Overview',exact:true}).click();await page.getByRole('button',{name:'Verified pregame',exact:true}).click();
   // Faulted research endpoint must keep winner records reachable.
   await page.route('**/research_performance.json',r=>r.fulfill({status:503,body:''}));await page.reload();await page.getByRole('alert').waitFor();
-  await page.getByRole('button',{name:'Winners',exact:true}).click();await page.locator('.review-metric strong').first().waitFor();
+  await page.getByRole('button',{name:'Winners',exact:true}).click();await page.locator('.performance-page .review-draft').filter({hasText:'ARCHIVED SNAPSHOTS'}).waitFor();
   assert.equal(await page.locator('.review-metric strong').first().textContent(),pct(legacy.datasets.verified.v5_qb_plus.summary.accuracy));
   await page.close();console.log(`PASS ${width}: real metric values, families/targets/versions, dataset isolation, preserved winner records, error fallback, dark styling and no overflow`);
  }

@@ -97,7 +97,7 @@ const focusedGame =
     </label>
   );
   return (
-    <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups") ? " unified-dashboard" : ""}`}>
+    <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups" || page === "performance") ? " unified-dashboard" : ""}`}>
       {/* sidebar */}
       <aside className="dash-sidebar">
         <div className="dash-brand">

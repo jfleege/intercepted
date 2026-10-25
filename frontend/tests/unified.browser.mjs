@@ -107,6 +107,8 @@ try {
   const offsets=await page.locator('.ud-winner-arc').evaluate(async e=>{const a=e.getAnimations()[0];a.pause();const values=[];for(const time of [0,100,250,450,650]){a.currentTime=time;await new Promise(r=>requestAnimationFrame(r));values.push(parseFloat(getComputedStyle(e).strokeDashoffset));}a.finish();return values;});
   assert.ok(offsets[0]>0);assert.equal(offsets.at(-1),0);assert.ok(offsets.every((n,i)=>n>=0&&(!i||n<=offsets[i-1])),'Ring must sweep smoothly without reversal or overshoot');
   await page.locator('.dash-nav a[href="#performance"]').click();
+  await page.locator('.ph-page').waitFor();
+  await page.getByRole('button',{name:'Winners',exact:true}).click();
   await page.locator('.performance-page .review-draft').filter({hasText:'ARCHIVED SNAPSHOTS'}).waitFor();
   await page.locator('.dash-nav a[href="#markets"]').click();
   await page.getByText('Loading saved moneylines…',{exact:true}).waitFor({state:'hidden'});

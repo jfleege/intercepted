@@ -155,7 +155,7 @@ def export(reuse=False, force=False):
             team, opponent = game[f'{side}_team'], game[f'{other_side}_team']
             x = score_features(summaries[team], summaries[opponent], side == 'home', week)
             pred = float(predict_regression(fitted['scoring'], [{'x': x}])[0])
-            sides[side] = {'team': team, 'expected_points': round(pred, 1), 'range_80': [round(max(0, pred - fitted['scoring']['radius']), 1), round(pred + fitted['scoring']['radius'], 1)]}
+            sides[side] = {'team': team, 'expected_points': round(pred, 1), 'baseline_points': round((summaries[team]['points_recent'] + summaries[opponent]['allowed_recent']) / 2, 4), 'range_80': [round(max(0, pred - fitted['scoring']['radius']), 1), round(pred + fitted['scoring']['radius'], 1)]}
         h, a = sides['home']['expected_points'], sides['away']['expected_points']
         margin, total = h - a, h + a
         cards = []
@@ -174,12 +174,15 @@ def export(reuse=False, force=False):
                     yardage_model = fitted[f'{KINDS[position]}_yards']
                     y = float(predict_regression(yardage_model, [{'x': x}])[0])
                     card.update(stat=KINDS[position], expected_yards=round(y, 1), range_80=[round(y - yardage_model['radius'], 1), round(y + yardage_model['radius'], 1)],
-                                recent_yards=round(x['recent_yards'], 1), anytime_td_probability=round(float(predict_event(fitted['anytime_td'], [{'x': x}])[0]), 4))
+                                recent_yards=round(x['recent_yards'], 1), baseline_anytime_td_probability=round(x['season_any_td'], 6), anytime_td_probability=round(float(predict_event(fitted['anytime_td'], [{'x': x}])[0]), 4))
                     if position == 'QB':
+                        card['baseline_passing_td_probability'] = round(x['season_pass_td'], 6)
                         card['passing_td_probability'] = round(float(predict_event(fitted['passing_td'], [{'x': x}])[0]), 4)
                 cards.append(card)
         games[game['game_id']] = {'game_id': game['game_id'], 'model_version': version, 'generated_at': generated_at, 'kickoff': kickoff(source),
                                   'scoring': {**sides, 'home_margin': round(margin, 1), 'total': round(total, 1),
+                                              'baseline_total': sides['home']['baseline_points'] + sides['away']['baseline_points'],
+                                              'baseline_home_margin': sides['home']['baseline_points'] - sides['away']['baseline_points'],
                                               'margin_range_80': [round(margin - score_widths['margin'], 1), round(margin + score_widths['margin'], 1)],
                                               'total_range_80': [round(max(0, total - score_widths['total']), 1), round(total + score_widths['total'], 1)]}, 'players': cards}
     if not games:

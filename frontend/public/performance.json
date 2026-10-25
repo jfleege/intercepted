@@ -60237,11 +60237,11 @@
           },
           {
             "bin": "40\u201350%",
-            "games": 3,
-            "lower": 0.0614903152761605,
-            "observed": 0.3333333333333333,
-            "predicted": 0.4541503601526984,
-            "upper": 0.7923450448735121
+            "games": 4,
+            "lower": 0.045586062644636216,
+            "observed": 0.25,
+            "predicted": 0.4528251408090805,
+            "upper": 0.6993639475573634
           },
           {
             "bin": "50\u201360%",
@@ -60988,21 +60988,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 16,
             "away_team": "PIT",
-            "brier": null,
+            "brier": 0.20146585819028165,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-25",
             "game_id": "2026_07_PIT_NO",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 10,
             "home_team": "NO",
             "kickoff": "2026-10-25T13:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.5957473361322237,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "PIT",
             "probability": 0.4488494827782267,
             "provenance": {
@@ -61012,7 +61012,7 @@
             "saved_at": "2026-10-20T17:14:36.177176+00:00",
             "season": 2026,
             "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 7
           },
@@ -61105,14 +61105,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.4666666666666667,
-          "brier": 0.28483105564517486,
+          "accuracy": 0.5,
+          "brier": 0.279620730804244,
           "cancelled": 0,
-          "correct": 7,
-          "games": 15,
+          "correct": 8,
+          "games": 16,
           "incorrect": 8,
-          "log_loss": 0.7672866523251519,
-          "pending": 13,
+          "log_loss": 0.7565654450630939,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -61280,6 +61280,17 @@
             "game_number": 15,
             "label": "NE @ CHI",
             "log_loss": 0.7672866523251519
+          },
+          {
+            "accuracy": 0.5,
+            "brier": 0.279620730804244,
+            "correct": true,
+            "date": "2026-10-25",
+            "game_brier": 0.20146585819028165,
+            "game_id": "2026_07_PIT_NO",
+            "game_number": 16,
+            "label": "PIT @ NO",
+            "log_loss": 0.7565654450630939
           }
         ],
         "weekly": [
@@ -61298,13 +61309,13 @@
           },
           {
             "accuracy": 1.0,
-            "brier": 0.24798395950651658,
+            "brier": 0.22472490884839913,
             "cancelled": 0,
-            "correct": 1,
-            "games": 1,
+            "correct": 2,
+            "games": 2,
             "incorrect": 0,
-            "log_loss": 0.6891150776556613,
-            "pending": 13,
+            "log_loss": 0.6424312068939425,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 7
@@ -61323,11 +61334,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 2,
-            "lower": 0.09452865480086614,
-            "observed": 0.5,
-            "predicted": 0.3531195337033075,
-            "upper": 0.9054713451991339
+            "games": 3,
+            "lower": 0.0614903152761605,
+            "observed": 0.3333333333333333,
+            "predicted": 0.36086709401972933,
+            "upper": 0.7923450448735121
           },
           {
             "bin": "40\u201350%",
@@ -62082,21 +62093,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 16,
             "away_team": "PIT",
-            "brier": null,
+            "brier": 0.14164851661818936,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-25",
             "game_id": "2026_07_PIT_NO",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 10,
             "home_team": "NO",
             "kickoff": "2026-10-25T13:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.47218555135155743,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "PIT",
             "probability": 0.3763622146525729,
             "provenance": {
@@ -62106,7 +62117,7 @@
             "saved_at": "2026-10-20T17:14:36.177176+00:00",
             "season": 2026,
             "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 7
           },
@@ -62199,14 +62210,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.4,
-          "brier": 0.2881075690512842,
+          "accuracy": 0.4375,
+          "brier": 0.27895387827421575,
           "cancelled": 0,
-          "correct": 6,
-          "games": 15,
+          "correct": 7,
+          "games": 16,
           "incorrect": 9,
-          "log_loss": 0.7727587149616366,
-          "pending": 13,
+          "log_loss": 0.7539728922360067,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -62374,6 +62385,17 @@
             "game_number": 15,
             "label": "NE @ CHI",
             "log_loss": 0.7727587149616366
+          },
+          {
+            "accuracy": 0.4375,
+            "brier": 0.27895387827421575,
+            "correct": true,
+            "date": "2026-10-25",
+            "game_brier": 0.14164851661818936,
+            "game_id": "2026_07_PIT_NO",
+            "game_number": 16,
+            "label": "PIT @ NO",
+            "log_loss": 0.7539728922360067
           }
         ],
         "weekly": [
@@ -62392,13 +62414,13 @@
           },
           {
             "accuracy": 1.0,
-            "brier": 0.1872000432047174,
+            "brier": 0.16442427991145336,
             "cancelled": 0,
-            "correct": 1,
-            "games": 1,
+            "correct": 2,
+            "games": 2,
             "incorrect": 0,
-            "log_loss": 0.5668074412155193,
-            "pending": 13,
+            "log_loss": 0.5194964962835383,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 7
@@ -62407,6 +62429,14 @@
       },
       "v5_boosted": {
         "calibration": [
+          {
+            "bin": "30\u201340%",
+            "games": 1,
+            "lower": 0.0,
+            "observed": 0.0,
+            "predicted": 0.36704324216291667,
+            "upper": 0.7934567085261071
+          },
           {
             "bin": "40\u201350%",
             "games": 1,
@@ -62708,21 +62738,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 16,
             "away_team": "PIT",
-            "brier": null,
+            "brier": 0.1347207416174655,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-25",
             "game_id": "2026_07_PIT_NO",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 10,
             "home_team": "NO",
             "kickoff": "2026-10-25T13:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4573531722249845,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "PIT",
             "probability": 0.36704324216291667,
             "provenance": {
@@ -62732,7 +62762,7 @@
             "saved_at": "2026-10-20T17:14:36.177176+00:00",
             "season": 2026,
             "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 7
           },
@@ -62825,14 +62855,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.0,
-          "brier": 0.2837669310888779,
+          "accuracy": 0.5,
+          "brier": 0.2092438363531717,
           "cancelled": 0,
-          "correct": 0,
-          "games": 1,
+          "correct": 1,
+          "games": 2,
           "incorrect": 1,
-          "log_loss": 0.7607790911893307,
-          "pending": 13,
+          "log_loss": 0.6090661317071576,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -62846,18 +62876,29 @@
             "game_number": 1,
             "label": "NE @ CHI",
             "log_loss": 0.7607790911893307
+          },
+          {
+            "accuracy": 0.5,
+            "brier": 0.2092438363531717,
+            "correct": true,
+            "date": "2026-10-25",
+            "game_brier": 0.1347207416174655,
+            "game_id": "2026_07_PIT_NO",
+            "game_number": 2,
+            "label": "PIT @ NO",
+            "log_loss": 0.6090661317071576
           }
         ],
         "weekly": [
           {
-            "accuracy": 0.0,
-            "brier": 0.2837669310888779,
+            "accuracy": 0.5,
+            "brier": 0.2092438363531717,
             "cancelled": 0,
-            "correct": 0,
-            "games": 1,
+            "correct": 1,
+            "games": 2,
             "incorrect": 1,
-            "log_loss": 0.7607790911893307,
-            "pending": 13,
+            "log_loss": 0.6090661317071576,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 7
@@ -62866,6 +62907,14 @@
       },
       "v5_qb_plus": {
         "calibration": [
+          {
+            "bin": "40\u201350%",
+            "games": 1,
+            "lower": 0.0,
+            "observed": 0.0,
+            "predicted": 0.40033982335842044,
+            "upper": 0.7934567085261071
+          },
           {
             "bin": "50\u201360%",
             "games": 1,
@@ -63167,21 +63216,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 16,
             "away_team": "PIT",
-            "brier": null,
+            "brier": 0.1602719741666513,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-25",
             "game_id": "2026_07_PIT_NO",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 10,
             "home_team": "NO",
             "kickoff": "2026-10-25T13:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.5113921564793811,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "PIT",
             "probability": 0.40033982335842044,
             "provenance": {
@@ -63191,7 +63240,7 @@
             "saved_at": "2026-10-20T17:14:36.177176+00:00",
             "season": 2026,
             "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 7
           },
@@ -63285,13 +63334,13 @@
         ],
         "summary": {
           "accuracy": 1.0,
-          "brier": 0.19007975229612248,
+          "brier": 0.1751758632313869,
           "cancelled": 0,
-          "correct": 1,
-          "games": 1,
+          "correct": 2,
+          "games": 2,
           "incorrect": 0,
-          "log_loss": 0.5726679906431184,
-          "pending": 13,
+          "log_loss": 0.5420300735612498,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -63305,18 +63354,29 @@
             "game_number": 1,
             "label": "NE @ CHI",
             "log_loss": 0.5726679906431184
+          },
+          {
+            "accuracy": 1.0,
+            "brier": 0.1751758632313869,
+            "correct": true,
+            "date": "2026-10-25",
+            "game_brier": 0.1602719741666513,
+            "game_id": "2026_07_PIT_NO",
+            "game_number": 2,
+            "label": "PIT @ NO",
+            "log_loss": 0.5420300735612498
           }
         ],
         "weekly": [
           {
             "accuracy": 1.0,
-            "brier": 0.19007975229612248,
+            "brier": 0.1751758632313869,
             "cancelled": 0,
-            "correct": 1,
-            "games": 1,
+            "correct": 2,
+            "games": 2,
             "incorrect": 0,
-            "log_loss": 0.5726679906431184,
-            "pending": 13,
+            "log_loss": 0.5420300735612498,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 7
@@ -63329,5 +63389,5 @@
   "schema_version": 1,
   "snapshot_count": 4,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-10-25T12:46:55.759559+00:00"
+  "updated_at": "2026-10-25T17:04:47.526114+00:00"
 }

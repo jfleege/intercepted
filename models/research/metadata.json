@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-10-22T06:42:21.793108+00:00",
+  "created_at": "2026-10-25T20:24:57.642228+00:00",
   "models": {
     "anytime_td": {
       "calibration_cutoff": [
@@ -33,7 +33,7 @@
         "is_te"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "91c40869e9dfdce341f210567110b3380cca89c58671011be74a445dcface424",
+      "sha256": "dd15674b655d4092ab2ecbde0aaf9831b88019dea71289aac90f5010c3c6b2aa",
       "training_cutoff": [
         2025,
         18
@@ -72,7 +72,7 @@
         "is_te"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "96da32a155a30782327b9f44783204e7b858b3be4cdb592aed7ac6b1623abe7a",
+      "sha256": "4d86cecc67aaf7e660a2b161f5cf04c583f049e8434b2e77bcc9add7b1821efe",
       "training_cutoff": [
         2025,
         18
@@ -228,10 +228,10 @@
   },
   "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
   "source_sha256": {
-    "pbp_current": "8c12bc30a7e17f2b17a106b62241b4a984b32fac0b377bd123e55a5de58b4717",
-    "players_current": "34628515f129776fa39a69754861c8c7c824224c92fe69437d656f6d17cca84d",
+    "pbp_current": "229ead7ddc879f786898061a3d2d6e70763da3aec887644a4e9dd566cb34e67b",
+    "players_current": "d788c3f95984432c5e1212636a324eabad0a913975af2d4097e39c458e9cddf1",
     "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
-    "schedules_current": "e879e7fd0c4802ab782faae132ca421f501b69ee2e6533ef20c8c31081b0eb9c",
+    "schedules_current": "f6619fb4ca7f0a056a0df12f5c6a05a8bf741fda4be8ac1eac4317beabc2af47",
     "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
   },
   "status": "experimental",
@@ -462,5 +462,5 @@
       }
     }
   },
-  "version": "4407254781897e09"
+  "version": "b405dd4a7c2d6789"
 }

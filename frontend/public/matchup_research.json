@@ -383,12 +383,14 @@
     },
     "2026_07_DAL_PHI": {
       "game_id": "2026_07_DAL_PHI",
-      "generated_at": "2026-10-22T06:42:30.213254+00:00",
+      "generated_at": "2026-10-25T20:25:07.997000+00:00",
       "kickoff": "2026-10-27T00:15:00+00:00",
-      "model_version": "4407254781897e09",
+      "model_version": "b405dd4a7c2d6789",
       "players": [
         {
           "anytime_td_probability": 0.2029,
+          "baseline_anytime_td_probability": 0.066667,
+          "baseline_passing_td_probability": 0.769231,
           "conditional_on": "Appearing in the game",
           "expected_yards": 244.0,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/yvscmqq1qki8zfsemmcd",
@@ -409,6 +411,7 @@
         },
         {
           "anytime_td_probability": 0.2551,
+          "baseline_anytime_td_probability": 0.2,
           "conditional_on": "Appearing in the game",
           "expected_yards": 65.9,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/cbpyykoguf7rsxezqzvk",
@@ -428,6 +431,7 @@
         },
         {
           "anytime_td_probability": 0.3458,
+          "baseline_anytime_td_probability": 0.266667,
           "conditional_on": "Appearing in the game",
           "expected_yards": 71.5,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/mbblzwtynxr15ovzkevi",
@@ -447,6 +451,7 @@
         },
         {
           "anytime_td_probability": 0.2422,
+          "baseline_anytime_td_probability": 0.266667,
           "conditional_on": "Appearing in the game",
           "expected_yards": 45.8,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/tqwq3cgpqu7j9hzoyicx",
@@ -466,6 +471,8 @@
         },
         {
           "anytime_td_probability": 0.1478,
+          "baseline_anytime_td_probability": 0.083333,
+          "baseline_passing_td_probability": 0.6,
           "conditional_on": "Appearing in the game",
           "expected_yards": 162.3,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/oveivzhzv13jrfvkp8zg",
@@ -486,6 +493,7 @@
         },
         {
           "anytime_td_probability": 0.3284,
+          "baseline_anytime_td_probability": 0.266667,
           "conditional_on": "Appearing in the game",
           "expected_yards": 60.6,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/k724kq3hyv7jc0y9s03x",
@@ -505,6 +513,7 @@
         },
         {
           "anytime_td_probability": 0.236,
+          "baseline_anytime_td_probability": 0.266667,
           "conditional_on": "Appearing in the game",
           "expected_yards": 26.4,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/pe71oe4eoyyfnq80fkxc",
@@ -524,6 +533,7 @@
         },
         {
           "anytime_td_probability": 0.2172,
+          "baseline_anytime_td_probability": 0.2,
           "conditional_on": "Appearing in the game",
           "expected_yards": 42.2,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/v1lt8kpvkn0qw5elyaoz",
@@ -544,6 +554,7 @@
       ],
       "scoring": {
         "away": {
+          "baseline_points": 24.6,
           "expected_points": 22.2,
           "range_80": [
             10.1,
@@ -551,7 +562,10 @@
           ],
           "team": "DAL"
         },
+        "baseline_home_margin": -3.3000000000000007,
+        "baseline_total": 45.900000000000006,
         "home": {
+          "baseline_points": 21.3,
           "expected_points": 20.3,
           "range_80": [
             8.3,
@@ -1143,12 +1157,14 @@
     },
     "2026_07_KC_SEA": {
       "game_id": "2026_07_KC_SEA",
-      "generated_at": "2026-10-22T06:42:30.213254+00:00",
+      "generated_at": "2026-10-25T20:25:07.997000+00:00",
       "kickoff": "2026-10-26T00:20:00+00:00",
-      "model_version": "4407254781897e09",
+      "model_version": "b405dd4a7c2d6789",
       "players": [
         {
           "anytime_td_probability": 0.151,
+          "baseline_anytime_td_probability": 0.2,
+          "baseline_passing_td_probability": 0.615385,
           "conditional_on": "Appearing in the game",
           "expected_yards": 209.4,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/wdckwtob1lybvkmxnf7p",
@@ -1169,6 +1185,7 @@
         },
         {
           "anytime_td_probability": 0.564,
+          "baseline_anytime_td_probability": 0.4,
           "conditional_on": "Appearing in the game",
           "expected_yards": 79.0,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/vk6nruaqdewdglofcwwg",
@@ -1188,6 +1205,7 @@
         },
         {
           "anytime_td_probability": 0.1511,
+          "baseline_anytime_td_probability": 0.133333,
           "conditional_on": "Appearing in the game",
           "expected_yards": 35.0,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/u6fmnffwteccoxn3uguq",
@@ -1207,6 +1225,7 @@
         },
         {
           "anytime_td_probability": 0.1824,
+          "baseline_anytime_td_probability": 0.2,
           "conditional_on": "Appearing in the game",
           "expected_yards": 37.5,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/dpxovcfku6ud2aohgf6a",
@@ -1226,6 +1245,8 @@
         },
         {
           "anytime_td_probability": 0.1179,
+          "baseline_anytime_td_probability": 0.066667,
+          "baseline_passing_td_probability": 0.615385,
           "conditional_on": "Appearing in the game",
           "expected_yards": 238.1,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/fyay8vruj0cqmhopufzk",
@@ -1246,6 +1267,7 @@
         },
         {
           "anytime_td_probability": 0.4242,
+          "baseline_anytime_td_probability": 0.4,
           "conditional_on": "Appearing in the game",
           "expected_yards": 76.6,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/yx1xjrupbqdknnjaq4a6",
@@ -1265,6 +1287,7 @@
         },
         {
           "anytime_td_probability": 0.3426,
+          "baseline_anytime_td_probability": 0.2,
           "conditional_on": "Appearing in the game",
           "expected_yards": 52.1,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/uorruvczsxzvffpbxu8z",
@@ -1284,6 +1307,7 @@
         },
         {
           "anytime_td_probability": 0.1553,
+          "baseline_anytime_td_probability": 0.133333,
           "conditional_on": "Appearing in the game",
           "expected_yards": 31.2,
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/ku2naisfbxmzgagxojnm",
@@ -1304,6 +1328,7 @@
       ],
       "scoring": {
         "away": {
+          "baseline_points": 25.2,
           "expected_points": 20.7,
           "range_80": [
             8.6,
@@ -1311,7 +1336,10 @@
           ],
           "team": "KC"
         },
+        "baseline_home_margin": -3.3999999999999986,
+        "baseline_total": 47.0,
         "home": {
+          "baseline_points": 21.8,
           "expected_points": 20.9,
           "range_80": [
             8.8,
@@ -2654,8 +2682,8 @@
       }
     }
   },
-  "generated_at": "2026-10-22T06:42:30.213254+00:00",
-  "input_fingerprint": "b249d3805afe1cb5960d19ac79f483151207c0f4945fc77f4b00da9965f7ff73",
+  "generated_at": "2026-10-25T20:25:07.997000+00:00",
+  "input_fingerprint": "274d081f568c020cb2d27ea3a67251cf5bfedcadfe1cd46c0d1e072335f3c640",
   "model_versions": {
     "4407254781897e09": {
       "created_at": "2026-10-22T06:42:21.793108+00:00",
@@ -2891,6 +2919,244 @@
         "players_current": "34628515f129776fa39a69754861c8c7c824224c92fe69437d656f6d17cca84d",
         "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
         "schedules_current": "e879e7fd0c4802ab782faae132ca421f501b69ee2e6533ef20c8c31081b0eb9c",
+        "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
+      },
+      "status": "experimental"
+    },
+    "b405dd4a7c2d6789": {
+      "created_at": "2026-10-25T20:24:57.642228+00:00",
+      "models": {
+        "anytime_td": {
+          "calibration_cutoff": [
+            2026,
+            6
+          ],
+          "calibration_samples": 1892,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "standardized logistic regression + held-out sigmoid calibration",
+          "sha256": "dd15674b655d4092ab2ecbde0aaf9831b88019dea71289aac90f5010c3c6b2aa",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 41529
+        },
+        "passing_td": {
+          "calibration_cutoff": [
+            2026,
+            6
+          ],
+          "calibration_samples": 204,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "standardized logistic regression + held-out sigmoid calibration",
+          "sha256": "4d86cecc67aaf7e660a2b161f5cf04c583f049e8434b2e77bcc9add7b1821efe",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 4614
+        },
+        "passing_yards": {
+          "calibration_cutoff": [
+            2026,
+            6
+          ],
+          "calibration_samples": 204,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "histogram gradient boosting + held-out absolute-residual intervals",
+          "sha256": "32d92d41104f717044084f5b14bab759c5f968c20b23c8fdf30526afdcde7d80",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 4614
+        },
+        "receiving_yards": {
+          "calibration_cutoff": [
+            2026,
+            6
+          ],
+          "calibration_samples": 1210,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "histogram gradient boosting + held-out absolute-residual intervals",
+          "sha256": "e82caa6b1f27faf6ad2ae94766c128d549412c34869bbb63b3e2b9910e1dc745",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 26009
+        },
+        "rushing_yards": {
+          "calibration_cutoff": [
+            2026,
+            6
+          ],
+          "calibration_samples": 478,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "histogram gradient boosting + held-out absolute-residual intervals",
+          "sha256": "8835fbe74c67b70c0d052da47c33df92d11a3841e9934be9e50ba216bdb0d7d1",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 10906
+        },
+        "scoring": {
+          "calibration_cutoff": [
+            2026,
+            6
+          ],
+          "calibration_samples": 186,
+          "features": [
+            "own_points_recent",
+            "own_points_season",
+            "opp_points_recent",
+            "opp_points_season",
+            "own_pass",
+            "own_rush",
+            "opp_pass",
+            "opp_rush",
+            "home",
+            "rest",
+            "opp_rest",
+            "season_games",
+            "week"
+          ],
+          "method": "histogram gradient boosting + held-out absolute-residual intervals",
+          "sha256": "21dd20ddf00f91ad848051b9bc68e7adbbe09f9c649627961d363ce68596dcf2",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 4254
+        }
+      },
+      "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
+      "source_sha256": {
+        "pbp_current": "229ead7ddc879f786898061a3d2d6e70763da3aec887644a4e9dd566cb34e67b",
+        "players_current": "d788c3f95984432c5e1212636a324eabad0a913975af2d4097e39c458e9cddf1",
+        "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
+        "schedules_current": "f6619fb4ca7f0a056a0df12f5c6a05a8bf741fda4be8ac1eac4317beabc2af47",
         "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
       },
       "status": "experimental"

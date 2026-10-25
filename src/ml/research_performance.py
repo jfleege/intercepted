@@ -179,7 +179,7 @@ def health(rows, family, mixed=False):
     bad=[w['model_error']>0 and w['model_error']>=w['baseline_error']*(1+POLICY['relative_error']) for w in base['windows']]
     if len(bad)==2 and all(bad):status,reason='review','Error exceeds baseline by at least 10% in two separate windows. Investigate before changing models.'
     elif base['windows'][0]['model_error']>base['windows'][0]['baseline_error']:status,reason='watch','Latest completed window is worse than its paired baseline.'
-    elif len(windows)<2:status,reason='sample_building','First window is complete; waiting for a second independent window.'
+    elif len(windows)<2:status,reason='sample_building','First window is complete; waiting for a second non-overlapping window.'
     else:status,reason='monitoring','No error-based review flag in the latest two windows.'
     return {**base,'status':status,'reason':reason}
 

@@ -10,7 +10,7 @@ The first eligible pregame estimate per game, target and player/team is frozen. 
 
 Outcomes use final nflverse schedules and regular-season weekly player stats, joined by season, week, team and player ID. Missing player-stat rows remain **ungraded**, not zero and not confirmed DNP. Duplicate identity rows fail. Passing TD means the QB throws one or more TDs; scoring TD means one or more rushing/receiving TDs, excluding passing and return scores. Ties can grade points/margin/player forecasts but do not enter binary winner records. Corrections regrade original predictions and append revisions; disappearing graded outcomes fail rather than silently erasing results.
 
-`research_evidence.json` preserves first observations; `research_results.json` keeps current grades and revisions. The public `research_performance.json` derives from this evidence and is refreshed by the existing Pages workflow, including results-only runs. No paid odds request or model retraining is added by grading.
+`research_evidence.json` preserves first observations; `research_results.json` keeps current grades and revisions. The public `research_performance.json` derives from this evidence and is refreshed by the existing Pages workflow, including results-only runs. Source errors preserve the previous research export while allowing the existing dashboard refresh to continue. No paid odds request or model retraining is added by grading.
 
 ## Baselines
 

@@ -106,6 +106,7 @@ jobs:
         continue-on-error: true
         run: python -m src.ml.export_team_insights
       - name: Grade original research forecasts
+        continue-on-error: true
         run: python -m src.ml.research_performance
       - name: Refresh odds
         if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)

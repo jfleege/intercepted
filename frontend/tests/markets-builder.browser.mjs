@@ -22,6 +22,10 @@ try{
   await page.getByRole('button',{name:'Save research draft',exact:true}).click();
   const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('intercepted.projection-slips.v1')));assert.equal(saved[0].kind,'unverified_research_draft');assert.equal(saved[0].joint_probability,null);assert.equal(saved[0].combined_price,350);
   assert.equal(await page.evaluate(()=>localStorage.getItem('intercepted.moneyline-paper.v1')),null);
+  await page.locator('.mb-slip details summary').click();await page.locator('.mb-saved').first().click();assert.equal(await page.getByLabel('Manual combined American price').inputValue(),'');
+  const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Export drafts',exact:true}).click();const downloaded=await downloadPromise;const exported=JSON.parse(await readFile(await downloaded.path(),'utf8'));assert.equal(exported[0].kind,'unverified_research_draft');assert.equal(exported[0].joint_probability,null);
+  if(width<=760){await page.locator('.mb-mobile-slip').click();await page.getByLabel('Paper stake ($)').waitFor({state:'visible'});await page.locator('.mb-mobile-back').click();}
+  await page.getByLabel('Manual combined American price').fill('+350');
   await page.locator('.mb-games button').nth(1).click();await page.getByRole('button',{name:'Player yards',exact:true}).click();
   const game=data.games[0],eligible=research.games[game.game_id].players.filter(p=>p.status==='available'&&Number.isFinite(p.expected_yards));assert.equal(await page.locator('.mb-offer').count(),eligible.length);
   const card=page.locator('.mb-offer').first();assert.ok((await card.locator('.mb-headshot').getAttribute('src')).startsWith('https://'));
@@ -30,6 +34,7 @@ try{
   await card.getByRole('button').click();assert.equal(await page.getByLabel('Manual combined American price').inputValue(),'');
   await page.getByRole('button',{name:'Winners',exact:true}).click();await page.getByRole('button',{name:'Clear slip',exact:true}).click();
   await page.locator('.mb-offer').nth(0).getByRole('button').click();await page.locator('.mb-offer').nth(1).getByRole('button').click();assert.equal(await page.locator('.mb-slip-leg').count(),1);
+  await page.getByLabel('Manual combined American price').fill('+200');await page.locator('.mb-slip-leg button').click();await page.locator('.mb-offer').nth(1).getByRole('button').click();assert.equal(await page.getByLabel('Manual combined American price').inputValue(),'');
   await page.getByRole('button',{name:'Touchdowns',exact:true}).click();assert.ok(await page.locator('[role="meter"]').count()>0);
   await page.getByRole('button',{name:'All markets',exact:true}).click();
   await page.evaluate(()=>document.fonts.ready);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${width} overflow`);
@@ -38,6 +43,7 @@ try{
   await page.locator('.mb-games button').first().click();await page.getByRole('button',{name:'Higher · ≥65%',exact:true}).click();
   assert.ok(await page.locator('[role="meter"]').evaluateAll(els=>els.every(e=>Number(e.getAttribute('aria-valuenow'))>=65)));
   await page.screenshot({path:`qa/markets/${width}-all-teams.png`,fullPage:true});
+  await page.locator('.mb-archive>summary').click();await page.locator('.mb-archive .markets-page table').first().waitFor();assert.ok(await page.locator('.mb-archive .market-saved-records').count());await page.locator('.mb-archive>summary').click();
   await context.close();console.log(`PASS ${width}px builder, per-game player coverage, cross-game combinations, probability profiles, quote invalidation, storage separation, no overflow`);
  }
  const context=await browser.newContext();const page=await context.newPage();await page.addInitScript(()=>localStorage.setItem('intercepted.projection-slips.v1','broken'));

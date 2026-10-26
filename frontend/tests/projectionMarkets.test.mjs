@@ -41,3 +41,7 @@ test('stale or mismatched quotes cannot imply expected value',()=>{
  assert.ok(offers.filter(o=>o.category==='moneyline').every(o=>estimatedEV(o,now)===null));
  const leg={...offers[0],probability:.7,price:100,quoteFresh:true,kickoff:new Date(now+3600000).toISOString()};assert.ok(Math.abs(estimatedEV(leg,now)-.4)<1e-9);assert.equal(estimatedEV({...leg,quoteFresh:false},now),null);assert.equal(estimatedEV(leg,now+3600000),null);
 });
+test('a price without its saved line cannot attach to a generated projection guide',()=>{
+ const missing=structuredClone(odds);for(const q of Object.values(missing.games)){q.over_under=null;q.home_spread=null;q.away_spread=null;q.over_price=-110;q.home_spread_price=-110;}
+ const guides=buildOffers(data,research,missing,[],'v5_qb_plus',now).filter(o=>['spread','total'].includes(o.category));assert.ok(guides.length);assert.ok(guides.every(o=>o.custom&&o.price===null&&!o.quoteFresh));
+});

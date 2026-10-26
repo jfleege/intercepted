@@ -1,88 +1,54 @@
-import { MODEL_LABELS, MODEL_ORDER } from "./predictionModels";
-import { useEffect, useState } from "react";
-import "./ReviewPages.css";
-import "./MarketsPage.css";
-import MatchupResearch from "./MatchupResearch";
-import { PAPER_STORAGE_KEY, appendBrowserSelection, freshQuote, gradeBrowserSelection, makeBrowserSelection, parseBrowserLedger } from "./marketResearch";
-import type { BrowserSelection, GameResult, Line, Model } from "./marketResearch";
-
-type Selection = {selection_id:string;game_id:string;team:string;model:Model;kind:string;stake:number;price:number;bookmaker:string;recorded_at:string;grade:string;profit:number|null};
-type Summary = {selections:number;settled:number;wins:number;losses:number;pushes:number;voids:number;profit:number;roi:number|null};
-type Data = {active_game_ids?:string[];generated_at:string;snapshot_count:number;lines:Line[];selections:Selection[];summary:Record<Model,Summary>;results:Record<string,GameResult>};
-const pct = (n:number) => `${(n*100).toFixed(1)}%`;
-const price = (n:number) => n > 0 ? `+${n}` : `${n}`;
-const units = (n:number) => `${n > 0 ? "+" : ""}${n.toFixed(2)}u`;
-const date = (s:string) => new Date(s).toLocaleString();
-
-export default function MarketsPage() {
-  const [data,setData] = useState<Data|null>(null);
-  const [error,setError] = useState(false);
-  const [model,setModel] = useState<Model>("v5_qb_plus");
-  const [kind,setKind] = useState("baseline");
-  const [selected,setSelected] = useState<string|null>(null);
-  const [now,setNow] = useState(()=>Date.now());
-  const [browser,setBrowser] = useState<{records:BrowserSelection[];error:string}>(()=>{
-    try {return {records:parseBrowserLedger(localStorage.getItem(PAPER_STORAGE_KEY)),error:""};}
-    catch {return {records:[],error:"Browser storage is unavailable or unreadable. Existing storage has not been changed."};}
-  });
-  useEffect(()=>{
-    const clock=window.setInterval(()=>setNow(Date.now()),10000);
-    function sync(e:StorageEvent) {
-      if(e.key!==PAPER_STORAGE_KEY&&e.key!==null)return;
-      try {setBrowser({records:parseBrowserLedger(localStorage.getItem(PAPER_STORAGE_KEY)),error:""});}
-      catch {setBrowser(previous=>({...previous,error:"Could not read updated browser paper storage."}));}
-    }
-    window.addEventListener("storage",sync);
-    return ()=>{clearInterval(clock);window.removeEventListener("storage",sync);};
-  },[]);
-  function savePaper(team:string,stake:number,threshold:number) {
-    const line=data?.lines.find(l=>l.game_id===selected);
-    if(!line)return "The quote is no longer available.";
-    try {
-      const record=makeBrowserSelection(line,model,team,stake,threshold,Date.now());
-      const updated=appendBrowserSelection(parseBrowserLedger(localStorage.getItem(PAPER_STORAGE_KEY)),record);
-      localStorage.setItem(PAPER_STORAGE_KEY,JSON.stringify(updated));
-      setBrowser({records:updated,error:""});
-      return "Saved in this browser. Find it under Saved paper records → Browser selections.";
-    } catch(error) {return error instanceof Error ? error.message : "Could not save; browser storage may be unavailable.";}
-  }
-  function exportPaper() {
-    const payload={schema_version:1,source:"unverified browser paper ledger",exported_at:new Date().toISOString(),records:browser.records};
-    const url=URL.createObjectURL(new Blob([JSON.stringify(payload,null,2)],{type:"application/json"}));
-    const link=document.createElement("a");link.href=url;link.download="intercepted-browser-paper.json";link.click();
-    window.setTimeout(()=>URL.revokeObjectURL(url),1000);
-  }
-  useEffect(() => {const controller = new AbortController();fetch(`${import.meta.env.BASE_URL}markets.json`,{signal:controller.signal,cache:"no-cache"}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(setData).catch(e=>{if(e.name!=="AbortError")setError(true);});return ()=>controller.abort();},[]);
-  const selections = data?.selections.filter(s=>s.model===model&&s.kind===kind) ?? [];
-  const summary = data?.summary[model];
-  const browserRows=browser.records.filter(r=>r.model===model).map(r=>({...r,...gradeBrowserSelection(r,data?.results?.[r.game_id])}));
-  const displayed=kind==="browser" ? browserRows : selections;
-  const localProfit=browserRows.reduce((sum,r)=>sum+(r.profit??0),0);
-  const localRisk=browserRows.reduce((sum,r)=>sum+(["win","loss"].includes(r.grade)?r.stake:0),0);
-  const lines=data?.lines.filter(l=>!data.active_game_ids||data.active_game_ids.includes(l.game_id))??[];
-  const activeLine=data?.lines.find(l=>l.game_id===selected);
-  return <div className="review-page markets-page">
-    <header className="review-heading"><div><p className="eyebrow">GAME LINES</p><h1>Markets</h1><p>Moneylines for the current slate. Select a matchup to explore it.</p></div></header>
-    <div className="review-controls"><p className="moneyline-feed-note">DraftKings · daily snapshots</p><label>Research model <select value={model} onChange={e=>setModel(e.target.value as Model)}>{MODEL_ORDER.map(m => <option key={m} value={m}>{MODEL_LABELS[m]}</option>)}</select></label></div>
-    {error ? <div className="review-empty">Markets data is unavailable. Run the refresh workflow after merging this change.</div> : !data ? <div className="review-empty">Loading saved moneylines…</div> : <>
-      <section className="review-panel"><div className="review-table-wrap"><table><thead><tr>{["Matchup","Kickoff","Away moneyline","Home moneyline","Status"].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>
-      {lines.map(line=><tr key={line.game_id}>
-        <td><button type="button" className="market-matchup-button" onClick={()=>setSelected(line.game_id)} aria-haspopup="dialog">{line.away_team} @ {line.home_team}<span>View matchup ↗</span></button></td>
-        <td>{date(line.kickoff)}</td><td><strong>{line.away_team}</strong> {price(line.away_price)}</td><td><strong>{line.home_team}</strong> {price(line.home_price)}</td>
-        <td title={`Collected ${date(line.observed_at)}; book updated ${date(line.last_update)}`}>{freshQuote(line,now)?"Pregame":"Historical / stale"}</td>
-      </tr>)}
-      {!lines.length&&<tr><td colSpan={5}>Moneylines will appear after a fresh odds snapshot is available.</td></tr>}
-      </tbody></table></div></section>
-      <p className="moneyline-feed-note">Updated {date(data.generated_at)}. Prices are saved snapshots.</p>
-      {activeLine&&<MatchupResearch key={`${activeLine.game_id}:${model}`} line={activeLine} model={model} now={now} records={browser.records} onClose={()=>setSelected(null)} onSave={savePaper}/>}
-      <details className="review-method market-saved-records"><summary>Saved paper records</summary>
-        <p>Research records only. Browser selections stay on this device; repository records are saved through the refresh workflow. These are separate from real wagers.</p>
-        <label>Record <select value={kind} onChange={e=>setKind(e.target.value)}><option value="baseline">Model baseline</option><option value="manual">Repository custom selections</option><option value="browser">Browser selections</option></select></label>
-        {kind==="baseline"&&summary&&<p>{summary.wins} wins · {summary.losses} losses · {summary.pushes} pushes · {summary.voids} voids · net {units(summary.profit)} · ROI {summary.roi==null?"—":pct(summary.roi)}</p>}
-        {kind==="browser"&&<div className="browser-ledger-note"><div><strong>Unverified browser paper record</strong><p>{browserRows.length} selections · net {units(localProfit)} · ROI {localRisk?pct(localProfit/localRisk):"—"}. Grades use published final scores. Export all models before clearing browser data.</p></div><button type="button" onClick={exportPaper} disabled={!browser.records.length}>Export paper JSON</button></div>}
-        {browser.error&&<p role="alert">{browser.error}</p>}
-        <div className="review-table-wrap"><table><thead><tr>{["Game / recorded","Selection","Price","Stake","Grade","Profit"].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>{displayed.map(s=><tr key={s.selection_id}><td>{s.game_id}<small>{date(s.recorded_at)}</small></td><td>{s.team}</td><td>{price(s.price)}</td><td>{s.stake}u</td><td>{s.grade}</td><td>{s.profit==null?"—":units(s.profit)}</td></tr>)}{!displayed.length&&<tr><td colSpan={6}>No selections recorded for this model and record type.</td></tr>}</tbody></table></div>
-      </details>
-    </>}
-  </div>;
+import { useEffect, useMemo, useState } from 'react';
+import MoneylineArchive from './MoneylineArchive';
+import draftkings from './assets/draftkings.png';
+import { availableModels, MODEL_LABELS } from './predictionModels';
+import { buildOffers, DRAFT_KEY, editTarget, makeDraft, profile, readDrafts, researchCombinations, selectLeg, signature, slipAmounts, upcoming } from './projectionMarkets';
+import type { Draft, Game, Model, Odds, Offer, Profile, Research } from './projectionMarkets';
+import type { PredictionData } from './forecastTypes';
+import type { Line } from './marketResearch';
+import './MarketsBuilder.css';
+const pct=(p:number|null)=>p===null?'Unavailable':`${(p*100).toFixed(1)}%`;
+const price=(p:number|null)=>p===null?'Needs quote':`${p>0?'+':''}${p}`;
+const logo=(team:string)=>`${import.meta.env.BASE_URL}logos/${team}.png`;
+function Team({team}:{team:string}){return <><img className="mb-logo" src={logo(team)} alt=""/>{team}</>;}
+function download(drafts:Draft[]){const url=URL.createObjectURL(new Blob([JSON.stringify(drafts,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='intercepted-research-drafts.json';a.click();URL.revokeObjectURL(url);}
+export default function MarketsPage({search=''}:{search?:string}){
+ const [data,setData]=useState<PredictionData|null>(null),[research,setResearch]=useState<Research|null>(null),[odds,setOdds]=useState<Odds|null>(null),[lines,setLines]=useState<Line[]>([]),[error,setError]=useState('');
+ const [game,setGame]=useState('all'),[category,setCategory]=useState('all'),[risk,setRisk]=useState<Profile>('all'),[model,setModel]=useState<Model>('v5_qb_plus');
+ const [legs,setLegs]=useState<Offer[]>([]),[edits,setEdits]=useState<Record<string,Offer>>({}),[stake,setStake]=useState('10'),[manual,setManual]=useState<{signature:string;price:string}|null>(null),[notice,setNotice]=useState('');
+ const [factor,setFactor]=useState<'higher'|'even'|'longer'|'agreement'>('higher'),[count,setCount]=useState(2),[now,setNow]=useState(Date.now);
+ const [storage]=useState(()=>{try{return {drafts:readDrafts(localStorage.getItem(DRAFT_KEY)),error:''};}catch{return {drafts:[],error:'Draft storage is unavailable or unreadable. Existing data is preserved.'};}});
+ const [drafts,setDrafts]=useState<Draft[]>(storage.drafts);
+ useEffect(()=>{const timer=setInterval(()=>setNow(Date.now()),10000);return()=>clearInterval(timer);},[]);
+ useEffect(()=>{let active=true;const base=import.meta.env.BASE_URL;const get=async(path:string)=>{const response=await fetch(`${base}${path}`);if(!response.ok)throw Error(path);return response.json();};
+ get('predictions.json').then(async(d:PredictionData)=>{const results=await Promise.allSettled([get(`research/${d.season}-week-${d.week}.json`),get('odds.json'),get('markets.json')]);if(!active)return;setData(d);if(results[0].status==='fulfilled')setResearch(results[0].value);if(results[1].status==='fulfilled')setOdds(results[1].value);if(results[2].status==='fulfilled')setLines(results[2].value.lines??[]);if(results.some(r=>r.status==='rejected'))setError('Some saved research or quotes are unavailable. Only available inputs are shown.');}).catch(()=>{if(active)setError('Unable to load the saved slate.');});return()=>{active=false;};},[]);
+ const offers=useMemo(()=>data?buildOffers(data,research,odds,lines,model,now):[],[data,research,odds,lines,model,now]);
+ const shown=offers.map(o=>edits[o.id]??o).filter(o=>(game==='all'||o.game_id===game)&&(category==='all'||o.category===category)&&(risk==='all'||profile(o.probability)===risk)&&`${o.name} ${o.matchup} ${o.market}`.toLowerCase().includes(search.toLowerCase()));
+ const combo=researchCombinations(offers,factor,count,now),amounts=slipAmounts(legs,Number(stake),manual);
+ function save(){try{if(storage.error)throw Error(storage.error);const next=[makeDraft(legs,Number(stake),manual,Date.now()),...readDrafts(localStorage.getItem(DRAFT_KEY))];localStorage.setItem(DRAFT_KEY,JSON.stringify(next));setDrafts(next);setNotice('Research draft saved on this browser.');}catch(e){setNotice(e instanceof Error?e.message:'Unable to save draft.');}}
+ function target(o:Offer,value:string,direction:'over'|'under'){if(value.trim()===''||!Number.isFinite(Number(value))||Number(value)<0)return;const updated=editTarget(o,Number(value),direction);setEdits(e=>({...e,[o.id]:updated}));setLegs(ls=>ls.map(l=>l.id===o.id?updated:l));}
+ return <div className="mb-page">
+ <header className="mb-heading"><div><span className="mb-eyebrow">PROJECTION LAB / MARKETS</span><h1>Build a smarter game plan.</h1><p>Explore player projections, compare probability profiles, and assemble research slips.</p></div><div className="mb-book"><img src={draftkings} alt="DraftKings"/><small>Saved quotes · no live wagering</small></div></header>
+ {error&&<p role="status" className="mb-warning">{error}</p>}{!data&&!error&&<p>Loading saved projections…</p>}
+ {data&&<><div className="mb-slate"><strong>{data.season} / WEEK {data.week}</strong><span>{data.games.length} games · {offers.filter(o=>o.category==='yardage').length} tracked player projections</span><span>Saved inputs · refreshed with the site data</span></div>
+ <nav className="mb-games" aria-label="Game selection"><button className={game==='all'?'active':''} onClick={()=>setGame('all')}>All Teams <small>Cross-game builder</small></button>{data.games.map((g:Game)=><button key={g.game_id} className={game===g.game_id?'active':''} onClick={()=>setGame(g.game_id)}><span><Team team={g.away_team}/> @ <Team team={g.home_team}/></span><small>{g.game_date}</small></button>)}</nav>
+ <div className="mb-layout"><section className="mb-main">
+ {game==='all'&&<section className="mb-panel mb-combinations"><div className="mb-section-title"><div><span className="mb-eyebrow">CROSS-GAME IDEAS</span><h2>Research combinations</h2></div><span className="mb-badge">One leg per game</span></div><div className="mb-controls"><label>Selection factor<select value={factor} onChange={e=>setFactor(e.target.value as typeof factor)}><option value="higher">Higher model probability ≥65%</option><option value="even">Near even · 45–55%</option><option value="longer">Longer shot · below 45%</option><option value="agreement">Winner-model agreement</option></select></label><label>Legs<select value={count} onChange={e=>setCount(Number(e.target.value))}>{[2,3,4].map(n=><option key={n}>{n}</option>)}</select></label></div>
+ {combo.length?<><div className="mb-combo-legs">{combo.map(o=><div key={o.id}><small>{o.matchup}</small><strong>{o.name} · {o.market}</strong><span>{pct(o.probability)} model probability · {price(o.price)}</span></div>)}</div><button className="mb-primary" onClick={()=>{setLegs(combo);setManual(null);}}>Use this research combination</button></>:<p className="mb-empty">Not enough upcoming games with known probabilities for this combination. Try another factor or fewer legs.</p>}
+ <p className="mb-note">Ranks model estimates, not expected value. Individual probabilities do not establish a parlay’s probability. Correlation and combined sportsbook pricing still need evaluation.</p></section>}
+ <section className="mb-panel"><div className="mb-section-title"><div><span className="mb-eyebrow">EXPLORE THE SLATE</span><h2>{game==='all'?'All teams, all available projections':offers.find(o=>o.game_id===game)?.matchup}</h2></div><label>Winner model<select value={model} onChange={e=>{setModel(e.target.value as Model);setEdits({});}}>{availableModels(data.games,true).map(m=><option key={m} value={m}>{MODEL_LABELS[m]}</option>)}</select></label></div>
+ <div className="mb-filters" aria-label="Probability profile">{([['all','All profiles'],['higher','Higher · ≥65%'],['even','Near even · 45–55%'],['longer','Longer · <45%'],['unscored','Projection guides']] as [Profile,string][]).map(([key,label])=><button key={key} className={risk===key?'active':''} onClick={()=>setRisk(key)}>{label}</button>)}</div>
+ <div className="mb-filters" aria-label="Market type">{[['all','All markets'],['moneyline','Winners'],['yardage','Player yards'],['touchdown','Touchdowns'],['total','Game totals'],['spread','Spreads']].map(([key,label])=><button key={key} className={category===key?'active':''} onClick={()=>setCategory(key)}>{label}</button>)}</div>
+ <p className="mb-note">Higher probability is not a guarantee or a value rating. Yardage targets are editable research guides; only tracked players with available forecasts appear. TD estimates are conditional on appearing.</p>
+ <div className="mb-offers">{shown.map(o=><article className="mb-offer" key={o.id}><div className="mb-offer-top">{o.headshot?<img className="mb-headshot" src={o.headshot} alt=""/>:o.team?<img className="mb-headshot mb-team" src={logo(o.team)} alt=""/>:null}<div><small>{o.matchup} · {o.category}</small><h3>{o.name}</h3></div><span className={`mb-status ${upcoming(o,now)?'':'historical'}`}>{upcoming(o,now)?'Upcoming':'Historical / time unknown'}</span></div><strong className="mb-market">{o.market}</strong>
+ {(o.category==='yardage'||o.category==='total')&&<div className="mb-target"><select aria-label={`${o.name} target direction`} value={o.direction} onChange={e=>target(o,String(o.line),e.target.value as 'over'|'under')}><option value="over">Over</option><option value="under">Under</option></select><input aria-label={`${o.name} target`} type="number" min="0" step="0.5" value={o.line??''} onChange={e=>target(o,e.target.value,o.direction as 'over'|'under')}/><small>{o.custom?'Custom guide · not a book line':'Saved book line'}</small></div>}
+ <div className="mb-metrics"><div><small>{o.prediction===null?'MODEL PROBABILITY':'PROJECTED '+(o.category==='yardage'?'YARDS':o.category==='spread'?'MARGIN':'POINTS')}</small><b>{o.prediction===null?pct(o.probability):o.prediction.toFixed(1)}</b>{o.range&&<span>80% outcome range {o.range.map(n=>n.toFixed(1)).join('–')}</span>}</div><div><small>SAVED PRICE</small><b>{price(o.price)}</b><span>{o.price===null?'No priced market available':o.quoteFresh?'Recent saved quote':'Stale / unverified quote'}</span></div></div>
+ {o.probability!==null?<><div className="mb-meter" role="meter" aria-label={`${o.name} model probability`} aria-valuemin={0} aria-valuemax={100} aria-valuenow={o.probability*100}><i style={{width:`${o.probability*100}%`}}/></div>{o.agreement&&<small>{o.agreement} · range {Math.min(...o.modelRange!)*100|0}–{Math.max(...o.modelRange!)*100|0}%</small>}</>:<p className="mb-note">Target hit probability unavailable — a projected mean is not a hit rate.</p>}
+ <p className="mb-source">{o.source}<br/>{o.forecastAt?`Forecast ${new Date(o.forecastAt).toLocaleString()}`:'Saved forecast timestamp unavailable'}</p><button className={legs.some(l=>l.id===o.id)?'mb-selected':'mb-add'} onClick={()=>setLegs(ls=>selectLeg(ls,o))}>{legs.some(l=>l.id===o.id)?'Selected · replace selection':'+ Add to research slip'}</button></article>)}</div>{!shown.length&&<p className="mb-empty">No available projections match these filters.</p>}
+ </section></section>
+ <aside className="mb-panel mb-slip"><span className="mb-eyebrow">PAPER BUILDER</span><h2>Your research slip <span>{legs.length}</span></h2><p className="mb-note">Unverified research draft. No bet is placed. Alternative selections on the same market replace each other.</p>{!legs.length&&<p className="mb-empty">Choose player or game options to begin.</p>}{legs.map(o=><div className="mb-slip-leg" key={o.id}><button aria-label={`Remove ${o.name} ${o.market}`} onClick={()=>setLegs(ls=>ls.filter(l=>l.id!==o.id))}>×</button><small>{o.matchup}</small><strong>{o.name}</strong><span>{o.market}</span><small>{pct(o.probability)} model probability · {price(o.price)}</small><small>{o.source}</small>{!upcoming(o,now)&&<em>Historical / kickoff unavailable</em>}</div>)}
+ <label>Paper stake ($)<input type="number" min="0.01" step="0.01" value={stake} onChange={e=>setStake(e.target.value)}/></label><label>Manual combined American price<input placeholder="e.g. +350" value={manual?.signature===signature(legs)?manual.price:''} onChange={e=>setManual({signature:signature(legs),price:e.target.value})}/></label><p className="mb-note">Enter the exact combined quote yourself. Unverified; cleared when selections change. Standalone odds are never multiplied.</p><dl><div><dt>Joint hit probability</dt><dd>Unavailable</dd></div><div><dt>Illustrative profit</dt><dd>{amounts.profit===null?'Needs combined quote':`$${amounts.profit.toFixed(2)}`}</dd></div><div><dt>Return incl. stake</dt><dd>{amounts.total===null?'—':`$${amounts.total.toFixed(2)}`}</dd></div></dl><button className="mb-primary" disabled={!legs.length||!!storage.error} onClick={save}>Save research draft</button>{legs.length>0&&<button className="mb-clear" onClick={()=>{setLegs([]);setManual(null);}}>Clear slip</button>}{(notice||storage.error)&&<p role="status">{notice||storage.error}</p>}
+ <details><summary>Saved research drafts ({drafts.length})</summary>{drafts.map(d=><button className="mb-saved" key={d.id} onClick={()=>{setLegs(d.legs);setStake(String(d.stake));setManual(null);setNotice('Loaded saved snapshot. Re-enter a current combined quote.');}}>{d.legs.length} legs · {new Date(d.saved_at).toLocaleString()}<small>Unverified research draft</small></button>)}<button onClick={()=>download(drafts)}>Export drafts</button></details></aside></div></>}
+ <details className="mb-archive"><summary>Moneyline research & existing paper records</summary><MoneylineArchive/></details>
+ </div>;
 }

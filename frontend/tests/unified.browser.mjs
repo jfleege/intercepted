@@ -111,7 +111,7 @@ try {
   await page.getByRole('button',{name:'Winners',exact:true}).click();
   await page.locator('.performance-page .review-draft').filter({hasText:'ARCHIVED SNAPSHOTS'}).waitFor();
   await page.locator('.dash-nav a[href="#markets"]').click();
-  await page.getByText('Loading saved moneylines…',{exact:true}).waitFor({state:'hidden'});
+  await page.locator('.mb-slate').waitFor();
   await context.close();console.log(`PASS ${width}px: real fonts, photos/PNG, matchup selection, probabilities, bounce/reduced motion, markets, archives, filters, no overflow.`);
  }
  assert.deepEqual(errors,[]);console.log('PASS: no browser errors.');

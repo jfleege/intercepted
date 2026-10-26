@@ -97,7 +97,7 @@ const focusedGame =
     </label>
   );
   return (
-    <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups" || page === "performance") ? " unified-dashboard" : ""}`}>
+    <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups" || page === "performance" || page === "markets") ? " unified-dashboard" : ""}`}>
       {/* sidebar */}
       <aside className="dash-sidebar">
         <div className="dash-brand">
@@ -177,7 +177,7 @@ const focusedGame =
           </div>
         </div>
         <main className="container" id="dashboard">
-          {page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage /> : page === "matchups" ? <MatchupsPage data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/> : <>
+          {page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage search={search} /> : page === "matchups" ? <MatchupsPage data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/> : <>
           <section className="ud-hero">
             <div className="ud-hero-copy"><p className="ud-eyebrow">NFL ANALYTICS FROM EVERY ANGLE.</p><h1>EVERY MATCHUP<br/>MORE <em>PERSPECTIVE.</em></h1><p>Explore statistical model predictions, analyze player trends, and track performance—all in one place.</p>
               <div className="ud-hero-meta"><span><b>{data?.week ?? '—'}</b> WEEK</span><span><b>{data?.count ?? '—'}</b> MATCHUPS</span><span><b>{modelOptions.length}</b> ACTIVE MODELS</span></div>

@@ -7,7 +7,7 @@ export type PlayerForecast={player_id:string;name:string;team:string;opponent:st
 export type Research={season:number;week:number;games:Record<string,{kickoff:string;generated_at:string;model_version:string;players:PlayerForecast[];scoring:{away:{team:string;expected_points:number};home:{team:string;expected_points:number};total:number;home_margin:number;total_range_80:number[];margin_range_80:number[]}}>};
 export type Quote={bookmaker:string;commence_time:string;last_update:string|null;moneyline_last_update?:string;spreads_last_update?:string;totals_last_update?:string;home_moneyline:number|null;away_moneyline:number|null;home_spread:number|null;away_spread:number|null;home_spread_price?:number;away_spread_price?:number;over_under:number|null;over_price?:number;under_price?:number};
 export type Odds={exported_at:string;games:Record<string,Quote>};
-export type Offer={id:string;contract:string;game_id:string;matchup:string;team:string;name:string;headshot:string|null;bookmaker:string|null;category:'moneyline'|'yardage'|'touchdown'|'total'|'spread';market:string;target:string;direction:'over'|'under'|'yes'|'win';line:number|null;custom:boolean;prediction:number|null;range:number[]|null;probability:number|null;price:number|null;quoteFresh:boolean;quoteAt:string|null;kickoff:string|null;source:string;modelVersion:string;modelRange:number[]|null;agreement:string|null;forecastAt:string|null};
+export type Offer={id:string;contract:string;game_id:string;matchup:string;team:string;name:string;headshot:string|null;bookmaker:string|null;category:'moneyline'|'yardage'|'touchdown'|'total'|'spread';market:string;target:string;direction:'over'|'under'|'yes'|'win';line:number|null;custom:boolean;prediction:number|null;range:number[]|null;probability:number|null;price:number|null;quoteFresh:boolean;quoteAt:string|null;quoteMarketAt?:string|null;quoteEventId?:string|null;quotePlayer?:string|null;kickoff:string|null;source:string;modelVersion:string;modelRange:number[]|null;agreement:string|null;forecastAt:string|null};
 export type Profile='all'|'higher'|'even'|'longer'|'unscored';
 export const DRAFT_KEY='intercepted.projection-slips.v1';
 export type Draft={schema_version:1;id:string;saved_at:string;kind:'unverified_research_draft';stake:number;legs:Offer[];combined_price:number|null;quote_source:'manual_unverified'|'saved_single'|'unavailable';joint_probability:null};
@@ -68,10 +68,10 @@ export function buildOffers(data:PredictionData,research:Research|null,odds:Odds
 }
 export function editTarget(offer:Offer,line:number,direction:'over'|'under'):Offer{
  if(!finite(line)||line<0||!['yardage','total'].includes(offer.category))throw Error('Enter a nonnegative numeric target.');
- return {...offer,line,direction,custom:true,market:`${direction==='over'?'Over':'Under'} ${line} ${offer.category==='yardage'?`${offer.target} yards`:'points'}`,probability:null,price:null,quoteAt:null,quoteFresh:false};
+ return {...offer,line,direction,custom:true,market:`${direction==='over'?'Over':'Under'} ${line} ${offer.category==='yardage'?`${offer.target} yards`:'points'}`,probability:null,price:null,quoteAt:null,quoteMarketAt:null,quoteEventId:null,quotePlayer:null,quoteFresh:false};
 }
 export function selectLeg(legs:Offer[],offer:Offer){return [...legs.filter(l=>l.contract!==offer.contract),{...offer}];}
-export function signature(legs:Offer[]){return JSON.stringify(legs.map(l=>[l.id,l.direction,l.line,l.modelVersion,l.probability,l.price,l.quoteAt]).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))));}
+export function signature(legs:Offer[]){return JSON.stringify(legs.map(l=>[l.id,l.direction,l.line,l.modelVersion,l.probability,l.price,l.quoteAt,l.quoteMarketAt,l.quoteEventId]).sort((a,b)=>String(a[0]).localeCompare(String(b[0]))));}
 export function slipAmounts(legs:Offer[],stake:number,manual:{signature:string;price:string}|null){
  if(!finite(stake)||stake<=0)return {price:null,profit:null,total:null,source:'unavailable' as const};
  const price=manual?.signature===signature(legs)&&manual.price.trim()!==''&&validPrice(Number(manual.price))?Number(manual.price):null;
@@ -95,3 +95,27 @@ export function makeDraft(legs:Offer[],stake:number,manual:{signature:string;pri
 }
 export function estimatedEV(offer:Offer,now:number){return offer.probability!=null&&validPrice(offer.price)&&offer.quoteFresh&&upcoming(offer,now)?offer.probability*decimalOdds(offer.price)-1:null;}
 export type { Game, Model };
+
+export type PropOutcome={name:string;description:string;price:number;point?:number};
+export type PropQuotes={schema_version:1;season:number|null;week:number|null;exported_at:string|null;status:string;games:Record<string,{event_id?:string;home_team:string;away_team:string;kickoff:string;observed_at:string;bookmaker:string;markets:{key:string;last_update:string;outcomes:PropOutcome[]}[]}>};
+export type OddsUsage={schema_version:1;remaining:number|null;used:number|null;last_cost:number|null;observed_at:string;request_kind:string};
+const playerKey=(name:string)=>name.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/\b(jr|sr|ii|iii|iv)\.?$/,'').replace(/[^a-z0-9]/g,'');
+/** Match only exact normalized identities in the same game; no fuzzy name or threshold matching. */
+export function pricedOffers(offers:Offer[],quotes:PropQuotes|null,research:Research|null,slate:{season:number;week:number},now:number):Offer[]{
+ if(!quotes||quotes.schema_version!==1||quotes.season!==slate.season||quotes.week!==slate.week||research?.season!==slate.season||research.week!==slate.week)return offers;
+ return offers.flatMap(o=>{
+  if(o.category!=='yardage'&&o.target!=='scoring_td')return [o];
+  const q=quotes.games[o.game_id],players=research.games[o.game_id]?.players??[];
+  if(!q||q.bookmaker!=='DraftKings'||`${q.away_team} @ ${q.home_team}`!==o.matchup||!o.kickoff||Date.parse(q.kickoff)!==Date.parse(o.kickoff))return [o];
+  const person=players.find(p=>o.id===`${o.game_id}:${p.player_id}:${o.category==='yardage'?'yards':'scoring_td'}`);
+  if(!person||players.filter(p=>playerKey(p.name)===playerKey(person.name)).length!==1)return [o];
+  const key=o.target==='scoring_td'?'player_anytime_td':({passing:'player_pass_yds',rushing:'player_rush_yds',receiving:'player_reception_yds'} as Record<string,string>)[o.target];
+  const markets=q.markets.filter(m=>m.key===key);if(markets.length!==1)return [o];const market=markets[0];
+  const matches=market.outcomes.filter(p=>typeof p.description==='string'&&playerKey(p.description)===playerKey(person.name)&&validPrice(p.price)&&(o.target==='scoring_td'?p.name==='Yes':['Over','Under'].includes(p.name)&&finite(p.point)&&p.point>=0));
+  const unique=matches.filter(p=>matches.filter(other=>other.name===p.name&&other.point===p.point).length===1);
+  if(!unique.length)return [o];
+  const observed=Date.parse(q.observed_at),updated=Date.parse(market.last_update),kickoff=Date.parse(q.kickoff);
+  const fresh=[observed,updated,kickoff,now].every(Number.isFinite)&&updated<=observed&&observed<=now&&now<kickoff&&now-observed<=86400000&&now-updated<=86400000&&Date.parse(o.forecastAt??'')<=now&&Date.parse(o.forecastAt??'')<kickoff;
+  return unique.map(p=>o.target==='scoring_td'?{...o,price:p.price,bookmaker:q.bookmaker,custom:false,quoteAt:q.observed_at,quoteMarketAt:market.last_update,quoteEventId:q.event_id??null,quotePlayer:p.description,quoteFresh:fresh}:{...o,id:`${o.id}:book:${p.name}:${p.point}`,direction:p.name.toLowerCase() as 'over'|'under',line:p.point!,custom:false,market:`${p.name} ${p.point} ${o.target} yards`,probability:null,price:p.price,bookmaker:q.bookmaker,quoteAt:q.observed_at,quoteMarketAt:market.last_update,quoteEventId:q.event_id??null,quotePlayer:p.description,quoteFresh:fresh});
+ });
+}

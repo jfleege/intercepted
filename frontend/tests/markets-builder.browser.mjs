@@ -28,7 +28,7 @@ try{
   if(width<=760){await page.locator('.mb-mobile-slip').click();await page.getByLabel('Paper stake ($)').waitFor({state:'visible'});await page.locator('.mb-mobile-back').click();}
   await page.getByLabel('Manual combined American price').fill('+350');
   await page.locator('.mb-games button').nth(1).click();await page.getByRole('button',{name:'Player yards',exact:true}).click();
-  const game=data.games[0],eligible=research.games[game.game_id].players.filter(p=>p.status==='available'&&Number.isFinite(p.expected_yards));assert.equal(await page.locator('.mb-offer').count(),eligible.length);
+  const game=data.games[0],eligible=research.games[game.game_id].players.filter(p=>p.status==='available'&&Number.isFinite(p.expected_yards));assert.deepEqual(new Set(await page.locator('.mb-offer h3').allTextContents()),new Set(eligible.map(p=>p.name)));assert.ok(await page.locator('.mb-offer').count()>=eligible.length);
   const card=page.locator('.mb-offer').first();assert.ok((await card.locator('.mb-headshot').getAttribute('src')).startsWith('https://'));
   assert.ok((await card.textContent()).includes('Target hit probability unavailable'));
   await card.locator('input').fill('55.5');assert.ok((await card.locator('.mb-market').textContent()).includes('55.5'));

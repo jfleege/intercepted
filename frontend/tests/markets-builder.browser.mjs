@@ -22,6 +22,7 @@ try{
   await page.getByRole('button',{name:'Save research draft',exact:true}).click();
   const saved=await page.evaluate(()=>JSON.parse(localStorage.getItem('intercepted.projection-slips.v1')));assert.equal(saved[0].kind,'unverified_research_draft');assert.equal(saved[0].joint_probability,null);assert.equal(saved[0].combined_price,350);
   assert.equal(await page.evaluate(()=>localStorage.getItem('intercepted.moneyline-paper.v1')),null);
+  if(width>760)assert.ok(await page.locator('.mb-slip').evaluate(e=>e.clientHeight<=innerHeight-40));
   await page.locator('.mb-slip details summary').click();await page.locator('.mb-saved').first().click();assert.equal(await page.getByLabel('Manual combined American price').inputValue(),'');
   const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Export drafts',exact:true}).click();const downloaded=await downloadPromise;const exported=JSON.parse(await readFile(await downloaded.path(),'utf8'));assert.equal(exported[0].kind,'unverified_research_draft');assert.equal(exported[0].joint_probability,null);
   if(width<=760){await page.locator('.mb-mobile-slip').click();await page.getByLabel('Paper stake ($)').waitFor({state:'visible'});await page.locator('.mb-mobile-back').click();}

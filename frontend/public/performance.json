@@ -60229,11 +60229,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 2,
-            "lower": 0.09452865480086614,
-            "observed": 0.5,
-            "predicted": 0.35555507417738186,
-            "upper": 0.9054713451991339
+            "games": 3,
+            "lower": 0.2076549551264879,
+            "observed": 0.6666666666666666,
+            "predicted": 0.3692495444835111,
+            "upper": 0.9385096847238394
           },
           {
             "bin": "40\u201350%",
@@ -60872,21 +60872,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 3,
             "away_team": "KC",
-            "brier": null,
+            "brier": 0.36404511766752784,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-25",
             "game_id": "2026_07_KC_SEA",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 20,
             "home_team": "SEA",
             "kickoff": "2026-10-26T00:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.9247300300456079,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "KC",
             "probability": 0.39663848509576966,
             "provenance": {
@@ -60896,7 +60896,7 @@
             "saved_at": "2026-10-20T17:14:36.177176+00:00",
             "season": 2026,
             "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 7
           },
@@ -61105,14 +61105,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.46153846153846156,
-          "brier": 0.2897938685149296,
+          "accuracy": 0.4444444444444444,
+          "brier": 0.29254391477984065,
           "cancelled": 0,
           "correct": 12,
-          "games": 26,
-          "incorrect": 14,
-          "log_loss": 0.7773463631246754,
-          "pending": 2,
+          "games": 27,
+          "incorrect": 15,
+          "log_loss": 0.7828050174550804,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -61401,6 +61401,17 @@
             "game_number": 26,
             "label": "LA @ LV",
             "log_loss": 0.7773463631246754
+          },
+          {
+            "accuracy": 0.4444444444444444,
+            "brier": 0.29254391477984065,
+            "correct": false,
+            "date": "2026-10-25",
+            "game_brier": 0.36404511766752784,
+            "game_id": "2026_07_KC_SEA",
+            "game_number": 27,
+            "label": "KC @ SEA",
+            "log_loss": 0.7828050174550804
           }
         ],
         "weekly": [
@@ -61418,14 +61429,14 @@
             "week": 6
           },
           {
-            "accuracy": 0.5,
-            "brier": 0.2925132255180886,
+            "accuracy": 0.46153846153846156,
+            "brier": 0.2980156787603532,
             "cancelled": 0,
             "correct": 6,
-            "games": 12,
-            "incorrect": 6,
-            "log_loss": 0.782568394501662,
-            "pending": 2,
+            "games": 13,
+            "incorrect": 7,
+            "log_loss": 0.7935039049281195,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 7
@@ -61444,11 +61455,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 3,
-            "lower": 0.0614903152761605,
-            "observed": 0.3333333333333333,
-            "predicted": 0.36086709401972933,
-            "upper": 0.7923450448735121
+            "games": 4,
+            "lower": 0.15003570882017148,
+            "observed": 0.5,
+            "predicted": 0.36311888291494615,
+            "upper": 0.8499642911798285
           },
           {
             "bin": "40\u201350%",
@@ -62087,21 +62098,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 3,
             "away_team": "KC",
-            "brier": null,
+            "brier": 0.39705846131641115,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-25",
             "game_id": "2026_07_KC_SEA",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 20,
             "home_team": "SEA",
             "kickoff": "2026-10-26T00:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.9945921970557193,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "KC",
             "probability": 0.3698742496005967,
             "provenance": {
@@ -62111,7 +62122,7 @@
             "saved_at": "2026-10-20T17:14:36.177176+00:00",
             "season": 2026,
             "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 7
           },
@@ -62320,14 +62331,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.46153846153846156,
-          "brier": 0.2919220544230385,
+          "accuracy": 0.4444444444444444,
+          "brier": 0.2958159954190893,
           "cancelled": 0,
           "correct": 12,
-          "games": 26,
-          "incorrect": 14,
-          "log_loss": 0.7832782865443902,
-          "pending": 2,
+          "games": 27,
+          "incorrect": 15,
+          "log_loss": 0.7911047276744395,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -62616,6 +62627,17 @@
             "game_number": 26,
             "label": "LA @ LV",
             "log_loss": 0.7832782865443902
+          },
+          {
+            "accuracy": 0.4444444444444444,
+            "brier": 0.2958159954190893,
+            "correct": false,
+            "date": "2026-10-25",
+            "game_brier": 0.39705846131641115,
+            "game_id": "2026_07_KC_SEA",
+            "game_number": 27,
+            "label": "KC @ SEA",
+            "log_loss": 0.7911047276744395
           }
         ],
         "weekly": [
@@ -62633,14 +62655,14 @@
             "week": 6
           },
           {
-            "accuracy": 0.5833333333333334,
-            "brier": 0.28796332686953796,
+            "accuracy": 0.5384615384615384,
+            "brier": 0.2963552602885282,
             "cancelled": 0,
             "correct": 7,
-            "games": 12,
-            "incorrect": 5,
-            "log_loss": 0.7783885139120928,
-            "pending": 2,
+            "games": 13,
+            "incorrect": 6,
+            "log_loss": 0.7950195664616027,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 7
@@ -62659,11 +62681,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 2,
-            "lower": 0.0,
-            "observed": 0.0,
-            "predicted": 0.3618901476885661,
-            "upper": 0.6576280471103807
+            "games": 3,
+            "lower": 0.0614903152761605,
+            "observed": 0.3333333333333333,
+            "predicted": 0.3585852213155782,
+            "upper": 0.7923450448735121
           },
           {
             "bin": "40\u201350%",
@@ -62874,21 +62896,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 3,
             "away_team": "KC",
-            "brier": null,
+            "brier": 0.41993592294050275,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-25",
             "game_id": "2026_07_KC_SEA",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 20,
             "home_team": "SEA",
             "kickoff": "2026-10-26T00:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.044194081486989,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "KC",
             "probability": 0.3519753685696024,
             "provenance": {
@@ -62898,7 +62920,7 @@
             "saved_at": "2026-10-20T17:14:36.177176+00:00",
             "season": 2026,
             "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 7
           },
@@ -63107,14 +63129,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.4166666666666667,
-          "brier": 0.3138504480271069,
+          "accuracy": 0.38461538461538464,
+          "brier": 0.3220108691742912,
           "cancelled": 0,
           "correct": 5,
-          "games": 12,
-          "incorrect": 7,
-          "log_loss": 0.8352655448729579,
-          "pending": 2,
+          "games": 13,
+          "incorrect": 8,
+          "log_loss": 0.8513369707663448,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -63249,18 +63271,29 @@
             "game_number": 12,
             "label": "LA @ LV",
             "log_loss": 0.8352655448729579
+          },
+          {
+            "accuracy": 0.38461538461538464,
+            "brier": 0.3220108691742912,
+            "correct": false,
+            "date": "2026-10-25",
+            "game_brier": 0.41993592294050275,
+            "game_id": "2026_07_KC_SEA",
+            "game_number": 13,
+            "label": "KC @ SEA",
+            "log_loss": 0.8513369707663448
           }
         ],
         "weekly": [
           {
-            "accuracy": 0.4166666666666667,
-            "brier": 0.3138504480271069,
+            "accuracy": 0.38461538461538464,
+            "brier": 0.3220108691742912,
             "cancelled": 0,
             "correct": 5,
-            "games": 12,
-            "incorrect": 7,
-            "log_loss": 0.8352655448729579,
-            "pending": 2,
+            "games": 13,
+            "incorrect": 8,
+            "log_loss": 0.8513369707663448,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 7
@@ -63279,11 +63312,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 1,
-            "lower": 0.0,
-            "observed": 0.0,
-            "predicted": 0.3075438314687117,
-            "upper": 0.7934567085261071
+            "games": 2,
+            "lower": 0.09452865480086614,
+            "observed": 0.5,
+            "predicted": 0.3497583562653864,
+            "upper": 0.9054713451991339
           },
           {
             "bin": "40\u201350%",
@@ -63494,21 +63527,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 3,
             "away_team": "KC",
-            "brier": null,
+            "brier": 0.3696969773639704,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-25",
             "game_id": "2026_07_KC_SEA",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 20,
             "home_team": "SEA",
             "kickoff": "2026-10-26T00:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.9365626225489174,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "KC",
             "probability": 0.3919728810620612,
             "provenance": {
@@ -63518,7 +63551,7 @@
             "saved_at": "2026-10-20T17:14:36.177176+00:00",
             "season": 2026,
             "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 7
           },
@@ -63727,14 +63760,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5833333333333334,
-          "brier": 0.2935512505131979,
+          "accuracy": 0.5384615384615384,
+          "brier": 0.2994086141171035,
           "cancelled": 0,
           "correct": 7,
-          "games": 12,
-          "incorrect": 5,
-          "log_loss": 0.7908876480940705,
-          "pending": 2,
+          "games": 13,
+          "incorrect": 6,
+          "log_loss": 0.802093415359828,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -63869,18 +63902,29 @@
             "game_number": 12,
             "label": "LA @ LV",
             "log_loss": 0.7908876480940705
+          },
+          {
+            "accuracy": 0.5384615384615384,
+            "brier": 0.2994086141171035,
+            "correct": false,
+            "date": "2026-10-25",
+            "game_brier": 0.3696969773639704,
+            "game_id": "2026_07_KC_SEA",
+            "game_number": 13,
+            "label": "KC @ SEA",
+            "log_loss": 0.802093415359828
           }
         ],
         "weekly": [
           {
-            "accuracy": 0.5833333333333334,
-            "brier": 0.2935512505131979,
+            "accuracy": 0.5384615384615384,
+            "brier": 0.2994086141171035,
             "cancelled": 0,
             "correct": 7,
-            "games": 12,
-            "incorrect": 5,
-            "log_loss": 0.7908876480940705,
-            "pending": 2,
+            "games": 13,
+            "incorrect": 6,
+            "log_loss": 0.802093415359828,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 7
@@ -63893,5 +63937,5 @@
   "schema_version": 1,
   "snapshot_count": 4,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-10-26T00:35:48.925752+00:00"
+  "updated_at": "2026-10-26T14:35:14.808240+00:00"
 }

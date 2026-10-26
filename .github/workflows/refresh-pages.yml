@@ -16,6 +16,9 @@ on:
       - src/features/quarter_trends.py
       - models/model_metadata.json
       - frontend/src/**
+      - src/ml/refresh_props.py
+      - src/ml/odds_client.py
+      - src/ml/export_odds.py
   schedule:
     # 13:17 UTC = 8:17am CDT / 7:17am CST
     - cron: "17 13 * * *"
@@ -46,6 +49,10 @@ on:
         default: "1"
       results_only:
         description: Refresh archived forecasts and results only (no player or odds fetch)
+        type: boolean
+        default: false
+      refresh_props:
+        description: Fetch uncached player props (64-credit slate cap, 100-credit reserve)
         type: boolean
         default: false
       refresh_odds:
@@ -118,6 +125,28 @@ jobs:
           else
             python -m src.ml.export_odds
           fi
+      - name: Cache player prop quotes within the free-plan budget
+        id: props
+        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_props)
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          REFRESH_PROPS_NOW: ${{ inputs.refresh_props && '1' || '0' }}
+        run: |
+          if [ "$REFRESH_PROPS_NOW" = "1" ]; then
+            python -m src.ml.refresh_props --now
+          else
+            python -m src.ml.refresh_props
+          fi
+      - name: Persist quota reservations and cached prop prices before building
+        if: always() && steps.props.outcome != 'skipped'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/player_props.json frontend/public/odds_usage.json data/tracking/prop_refresh_state.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Cache player prop quotes and API quota usage"
+            git push origin HEAD:main
+          fi
       - name: Archive moneylines and grade paper selections
         env:
           PAPER_GAME: ${{ inputs.paper_game }}
@@ -145,7 +174,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add frontend/public/research_performance.json frontend/public/team_insights data/tracking frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/players_watch.json frontend/public/matchup_research.json frontend/public/research models/research docs/research-validation.json
+          git add frontend/public/research_performance.json frontend/public/team_insights data/tracking frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/odds_usage.json frontend/public/player_props.json frontend/public/players_watch.json frontend/public/matchup_research.json frontend/public/research models/research docs/research-validation.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh weekly forecasts, markets, and game results"
             git push origin HEAD:main

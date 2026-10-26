@@ -84,6 +84,7 @@ class PropTests(unittest.TestCase):
         self.assertEqual(client.calls,[])
     def test_unknown_returned_cost_stops_further_calls(self):
         client=FakeClient(last_cost=None); self.assertEqual(refresh(self.root,client,NOW)['status'],'usage_unverified')
+        again=FakeClient(); self.assertEqual(refresh(self.root,again,NOW)['status'],'usage_unverified'); self.assertEqual(again.calls,[])
     def test_headers_are_saved_without_credentials_and_missing_headers_stay_unknown(self):
         saved=record_usage({'x-requests-remaining':'455','x-requests-used':'45','x-requests-last':'0'},'balance',self.root,NOW)
         self.assertEqual(saved['remaining'],455); self.assertEqual(saved['last_cost'],0)

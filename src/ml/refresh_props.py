@@ -99,6 +99,8 @@ def refresh(root=ROOT, client=None, now=None, allow_early=False):
     if state.get('schema_version') != 1 or not isinstance(state.get('attempts'), dict):
         raise ValueError('Prop quota ledger is unreadable; no requests made.')
     attempts = state['attempts']
+    if state.get('blocked_reason') == 'usage_unverified':
+        return {'status': 'usage_unverified'}
     # Validate the ledger before spending credits, including reservations made before a failed request.
     if any(not isinstance(a, dict) or a.get('reserved') != 4 or not isinstance(a.get('month'), str)
            or not isinstance(a.get('slate'), str) or not re.fullmatch(r'\d{4}-\d{2}', a['month'])
@@ -155,6 +157,7 @@ def refresh(root=ROOT, client=None, now=None, allow_early=False):
             output['status'] = 'cached'
             if not isinstance(usage.get('last_cost'), int) or isinstance(usage.get('last_cost'), bool) or not 0 <= usage['last_cost'] <= 4:
                 output['status'] = 'usage_unverified'
+                state['blocked_reason'] = 'usage_unverified'
                 break
         except (OddsError, ValueError, TypeError):
             attempt['status'] = 'failed'

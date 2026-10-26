@@ -1,0 +1,25 @@
+name: Check cached player prop quotes
+on:
+  push:
+    branches: [codex/cached-player-prop-quotes]
+permissions:
+  contents: read
+jobs:
+  props:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read current quota without requesting odds
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+        run: python -m src.ml.odds_client --status
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: odds-quota-status
+          path: frontend/public/odds_usage.json
+          retention-days: 14

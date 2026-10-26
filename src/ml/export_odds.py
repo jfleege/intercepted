@@ -8,6 +8,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 from zoneinfo import ZoneInfo
 from src.ml.refresh_markets import archive_odds
+from src.ml.odds_client import TEAMS, record_usage
 
 
 # configuration
@@ -21,40 +22,7 @@ API_URL = (
     "/v4/sports/americanfootball_nfl/odds/"
 )
 
-TEAMS = {
-    "ARI": "Arizona Cardinals",
-    "ATL": "Atlanta Falcons",
-    "BAL": "Baltimore Ravens",
-    "BUF": "Buffalo Bills",
-    "CAR": "Carolina Panthers",
-    "CHI": "Chicago Bears",
-    "CIN": "Cincinnati Bengals",
-    "CLE": "Cleveland Browns",
-    "DAL": "Dallas Cowboys",
-    "DEN": "Denver Broncos",
-    "DET": "Detroit Lions",
-    "GB": "Green Bay Packers",
-    "HOU": "Houston Texans",
-    "IND": "Indianapolis Colts",
-    "JAX": "Jacksonville Jaguars",
-    "KC": "Kansas City Chiefs",
-    "LA": "Los Angeles Rams",
-    "LAC": "Los Angeles Chargers",
-    "LV": "Las Vegas Raiders",
-    "MIA": "Miami Dolphins",
-    "MIN": "Minnesota Vikings",
-    "NE": "New England Patriots",
-    "NO": "New Orleans Saints",
-    "NYG": "New York Giants",
-    "NYJ": "New York Jets",
-    "PHI": "Philadelphia Eagles",
-    "PIT": "Pittsburgh Steelers",
-    "SEA": "Seattle Seahawks",
-    "SF": "San Francisco 49ers",
-    "TB": "Tampa Bay Buccaneers",
-    "TEN": "Tennessee Titans",
-    "WAS": "Washington Commanders",
-}
+
 
 
 # load scheduled predictions
@@ -80,6 +48,7 @@ params = urlencode({
 
 try:
     with urlopen(f"{API_URL}?{params}", timeout=30) as response:
+        record_usage(response.headers, "game_odds")
         events = json.load(response)
 
         print(

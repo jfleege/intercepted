@@ -34,14 +34,14 @@ export default function WeeklyMatchups({ games, focusedGame, model, archived, on
             <span><span className="ud-game-teams"><img src={logo(game.away_team)} alt=""/><b>{game.away_team}</b><i>at</i><img src={logo(game.home_team)} alt=""/><b>{game.home_team}</b></span>
               <span className="ud-game-date">{new Date(`${game.game_date}T12:00:00`).toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'})}{archived ? <Result game={game} winner={winner}/> : ' · Pregame'}</span>
             </span>
-            <span className="ud-game-probability"><span><small>{winner} PICK</small><b>{pct(chance)}</b></span><span className="ud-chance-track"><span key={active ? `${game.game_id}-${model}` : 'idle'} className={active ? 'ud-selected-fill' : ''} style={{width:`${chance*100}%`}}/></span></span>
+            <span className="ud-game-probability"><span><small>{winner} PICK</small><b>{pct(chance)}</b></span><span className="ud-chance-track"><span className={active ? 'ud-selected-fill' : ''} style={{width:`${chance*100}%`}}/></span></span>
           </button>;
         })}
       </div>
     </section>
     {focusedGame && <section className="ud-panel ud-focus" aria-label="Selected matchup analysis">
       <div className="ud-panel-heading"><div><span className="ud-eyebrow">MATCHUP FOCUS</span><h3>{focusedGame.away_team} at {focusedGame.home_team}</h3><p>Week {focusedGame.week} · {MODEL_LABELS[model]}</p></div><span className="ud-tag">{agreeing} / {savedModels.length} models</span></div>
-      <ProbabilityWheel key={`${focusedGame.game_id}-${model}`} awayTeam={focusedGame.away_team} homeTeam={focusedGame.home_team} homeProb={focusedProbability}/>
+      <ProbabilityWheel awayTeam={focusedGame.away_team} homeTeam={focusedGame.home_team} homeProb={focusedProbability}/>
       <p className="ud-projected-winner">Projected winner <strong>{focusedWinner ? TEAM_NAMES[focusedWinner] ?? focusedWinner : '—'}</strong></p>
       <div className="ud-projected-qbs"><div><span>{focusedGame.away_team} projected QB</span><strong>{focusedGame.away_projected_qb_name ?? 'QB TBD'}</strong><small>{qbStatus(focusedGame.away_qb_selection?.status)}</small></div><div><span>{focusedGame.home_team} projected QB</span><strong>{focusedGame.home_projected_qb_name ?? 'QB TBD'}</strong><small>{qbStatus(focusedGame.home_qb_selection?.status)}</small></div></div>
       <button type="button" className="ud-details-button" onClick={() => onAnalysis(focusedGame)}>Full matchup analysis <span aria-hidden="true">→</span></button>

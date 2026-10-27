@@ -1,3 +1,4 @@
+import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useId, useState } from 'react';
 import { MODEL_LABELS, MODEL_ORDER } from './predictionModels';
 import type { Model } from './predictionModels';
@@ -26,7 +27,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
   const [recordModel, setRecordModel] = useState<Model>('v4_qb_plus');
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}performance.json`, { signal: controller.signal, cache: 'no-cache' })
+    fetchSnapshot(`${import.meta.env.BASE_URL}performance.json`, { signal: controller.signal, cache: 'no-cache' })
       .then(response => { if (!response.ok) throw Error('Results unavailable'); return response.json(); })
       .then((value: PerformanceFeed) => {
         if (value.schema_version !== 1 || !value.datasets?.verified) throw Error('Unsupported results');
@@ -51,7 +52,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
           <div className="pulse-visual"><AccuracyChart values={record.trend}/><span>Cumulative · game by game</span></div>
         </div>
         <div className="pulse-card-foot"><span>{status}</span>{record.delta !== null && <span className={record.delta >= 0 ? 'pulse-positive' : 'pulse-negative'}>{record.delta >= 0 ? '+' : ''}{(record.delta * 100).toFixed(1)} pp vs prior graded week</span>}</div>
-        {record.form.length > 0 && <div className="pulse-form" aria-label="Last 14 graded results">{record.form.map(row => <span key={row.gameId} className={row.correct ? 'won' : 'lost'} title={`${row.gameId}: ${row.correct ? 'Correct' : 'Incorrect'}`}><span className="sr-only">{row.gameId}: </span>{row.correct ? 'W' : 'L'}</span>)}</div>}
+        <div className="pulse-form" aria-label="Last 14 graded results">{record.form.map(row => <span key={row.gameId} className={row.correct ? 'won' : 'lost'} title={`${row.gameId}: ${row.correct ? 'Correct' : 'Incorrect'}`}><span className="sr-only">{row.gameId}: </span>{row.correct ? 'W' : 'L'}</span>)}</div>
       </article>
       <article className="pulse-card">
         <div className="pulse-card-top"><h3>Forecasts this season</h3><span className="pulse-badge">THROUGH W{data?.week ?? '—'}</span></div>

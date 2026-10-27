@@ -1,3 +1,4 @@
+import { usePageActive } from "./pageActivity";
 import { probability } from "./predictionModels";
 import type { Model, PredictionFields } from "./predictionModels";
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -38,6 +39,7 @@ const localDate = (value: string) => new Intl.DateTimeFormat("en-CA", {
 }).format(new Date(value));
 
 export default function ScoreTicker({ games, season, week, model, activeGameId, onSelect }: Props) {
+  const pageActive = usePageActive();
   const [scores, setScores] = useState<ScoreState | null>(null);
   const current = scores?.season === season && scores.week === week ? scores : null;
   const feed = current?.events ?? EMPTY_EVENTS;
@@ -59,7 +61,7 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
   };
   useEffect(() => {
     const element = scroller.current, content = track.current;
-    if (!element || !content || paused) return;
+    if (!element || !content || paused || !pageActive) return;
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
     let frame = 0, last = 0, position = element.scrollLeft, velocity = 0;
     const hold = () => {motion.current.holdUntil = performance.now() + 1800;};
@@ -99,10 +101,11 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
       content.style.transform = '';
       for (const event of ['wheel', 'pointerdown', 'touchmove', 'keydown']) element.removeEventListener(event, hold);
     };
-  }, [paused, season, week, games.length]);
+  }, [paused, season, week, games.length, pageActive]);
 
 
   useEffect(() => {
+    if (!pageActive) return;
     let active = true;
     let busy = false;
     let controller: AbortController | undefined;
@@ -133,7 +136,7 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
     const resume = () => { if (!document.hidden) void refresh(); };
     document.addEventListener("visibilitychange", resume);
     return () => { active = false; controller?.abort(); window.clearInterval(timer); document.removeEventListener("visibilitychange", resume); };
-  }, [season, week]);
+  }, [season, week, pageActive]);
 
   const items = useMemo(() => games.map(game => {
     const event = feed.find(event => {

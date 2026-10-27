@@ -1,3 +1,4 @@
+import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useState } from "react";
 import "./ReviewPages.css";
 import "./PerformancePage.css";
@@ -48,7 +49,7 @@ export default function PerformancePage() {
   const [page, setPage] = useState(0);
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}performance.json`, { signal: controller.signal, cache: "no-cache" })
+    fetchSnapshot(`${import.meta.env.BASE_URL}performance.json`, { signal: controller.signal, cache: "no-cache" })
       .then(response => { if (!response.ok) throw new Error("Performance data has not been published yet. Run the results refresh after merging."); return response.json(); })
       .then((result: Payload) => { if (result.schema_version !== 1 || !result.datasets?.verified) throw new Error("Unsupported performance data format"); setPayload(result); })
       .catch((e: Error) => { if (!controller.signal.aborted) setError(e.message); });

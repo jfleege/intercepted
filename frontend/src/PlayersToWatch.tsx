@@ -1,3 +1,4 @@
+import { fetchSnapshot } from "./snapshotCache";
 
 import { useEffect, useState } from "react";
 
@@ -148,7 +149,7 @@ export default function PlayersToWatch({ gameId }: Props) {
   useEffect(() => {
     let active = true;
 
-    fetch(`${import.meta.env.BASE_URL}players_watch.json`)
+    fetchSnapshot(`${import.meta.env.BASE_URL}players_watch.json`)
       .then((response) => {
         if (!response.ok) {
           throw new Error(

@@ -1,8 +1,9 @@
+import { fetchSnapshot } from "./snapshotCache";
 import { TEAM_NAMES } from "./teams";
 import { probability, MODEL_LABELS } from "./predictionModels";
 import type { Model, PredictionFields } from "./predictionModels";
 
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import MatchupProjections from "./MatchupProjections";
 import "./MatchupReport.css";
 import PlayersToWatch from "./PlayersToWatch";
@@ -61,19 +62,28 @@ export default function MatchupModal({
   const [odds, setOdds] = useState<GameOdds | null>(null);
   const [oddsLoading, setOddsLoading] = useState(true);
 
+  const [closing, setClosing] = useState(false);
+  const closeTimer = useRef<number | null>(null);
+  const close = useCallback(() => {
+    if (closeTimer.current !== null) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {onClose(); return;}
+    setClosing(true);
+    closeTimer.current = window.setTimeout(onClose, 180);
+  }, [onClose]);
+  useEffect(() => () => {if(closeTimer.current !== null) window.clearTimeout(closeTimer.current);}, []);
   const dialog = useRef<HTMLElement>(null);
   useEffect(() => {
     const prior = document.activeElement as HTMLElement | null;
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     dialog.current?.querySelector<HTMLButtonElement>('.ic-close')?.focus();
-    return () => {document.body.style.overflow = previousOverflow; prior?.focus();};
+    return () => {document.body.style.overflow = previousOverflow; queueMicrotask(() => prior?.isConnected && prior.focus());};
   }, []);
 
   // close with escape; trap keyboard focus inside the report.
   useEffect(() => {
     const handleKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") onClose();
+      if (event.key === "Escape") close();
       if (event.key === "Tab") {
         const controls = [...(dialog.current?.querySelectorAll<HTMLElement>('button:not(:disabled), a[href], input, select, summary, [tabindex="0"]') ?? [])].filter(e => e.tabIndex >= 0 && e.getClientRects().length > 0);
         const first = controls[0], last = controls.at(-1);
@@ -87,14 +97,14 @@ export default function MatchupModal({
     return () => {
       document.removeEventListener("keydown", handleKey);
     };
-  }, [onClose]);
+  }, [close]);
 
   // load odds snapshot
   useEffect(() => {
     let active = true;
     if (archived) return;
 
-    fetch(`${import.meta.env.BASE_URL}odds.json`)
+    fetchSnapshot(`${import.meta.env.BASE_URL}odds.json`)
       .then((response) => {
         if (!response.ok) throw new Error("Odds unavailable");
         return response.json();
@@ -136,8 +146,8 @@ export default function MatchupModal({
 
   return (
     <div
-      className="ic-overlay"
-      onMouseDown={onClose}
+      className={`ic-overlay${closing ? " is-closing" : ""}`}
+      onMouseDown={close}
     >
       <section
         ref={dialog}
@@ -158,7 +168,7 @@ export default function MatchupModal({
           <button
             type="button"
             className="ic-close"
-            onClick={onClose}
+            onClick={close}
             aria-label="Close matchup"
           >
             ×

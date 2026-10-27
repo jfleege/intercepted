@@ -1,3 +1,4 @@
+import { fetchSnapshot } from "./snapshotCache";
 import { MODEL_LABELS, MODEL_ORDER } from "./predictionModels";
 import { useEffect, useState } from "react";
 import "./ReviewPages.css";
@@ -52,7 +53,7 @@ export default function MarketsPage() {
     const link=document.createElement("a");link.href=url;link.download="intercepted-browser-paper.json";link.click();
     window.setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
-  useEffect(() => {const controller = new AbortController();fetch(`${import.meta.env.BASE_URL}markets.json`,{signal:controller.signal,cache:"no-cache"}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(setData).catch(e=>{if(e.name!=="AbortError")setError(true);});return ()=>controller.abort();},[]);
+  useEffect(() => {const controller = new AbortController();fetchSnapshot(`${import.meta.env.BASE_URL}markets.json`,{signal:controller.signal,cache:"no-cache"}).then(r=>{if(!r.ok)throw Error();return r.json();}).then(setData).catch(e=>{if(e.name!=="AbortError")setError(true);});return ()=>controller.abort();},[]);
   const selections = data?.selections.filter(s=>s.model===model&&s.kind===kind) ?? [];
   const summary = data?.summary[model];
   const browserRows=browser.records.filter(r=>r.model===model).map(r=>({...r,...gradeBrowserSelection(r,data?.results?.[r.game_id])}));

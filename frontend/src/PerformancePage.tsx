@@ -1,3 +1,6 @@
+import { usePageActive } from "./pageActivity";
+import LoadingSurface from "./LoadingSurface";
+import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useRef, useState } from 'react';
 import WinnerPerformance from './WinnerPerformance';
 import { MODEL_LABELS } from './predictionModels';
@@ -44,8 +47,9 @@ function HealthPanel({groups}:{groups:Group[]}){
 }
 function BenchmarkView({data}:{data:Benchmark|null}){if(!data)return <Empty>No research benchmark export is available.</Empty>;const rows=[['Team points',data.scoring.mae,data.scoring.baseline_mae,'MAE'],['Game total',data.scoring.total.mae,data.scoring.total.baseline_mae,'MAE'],['Home margin',data.scoring.margin.mae,data.scoring.margin.baseline_mae,'MAE'],...Object.entries(data.yardage).map(([n,m])=>[name(n),m.mae,m.baseline_mae,'MAE']),...Object.entries(data.touchdowns).map(([n,m])=>[name(n),m.brier,m.baseline_brier,'Brier'])];return <section className="ph-panel"><h2>Retrospective research benchmark</h2><p className="ph-muted">Fit 2018–2023 · calibrate 2024 · test 2025. Separate from live pregame records; no health alerts or fabricated game-level charts.</p><div className="ph-table-wrap"><table><thead><tr><th>Forecast</th><th>Model error</th><th>Baseline error</th><th>Measure</th></tr></thead><tbody>{rows.map(r=><tr key={String(r[0])}><td>{String(r[0])}</td><td>{number(Number(r[1]),3)}</td><td>{number(Number(r[2]),3)}</td><td>{r[3]}</td></tr>)}</tbody></table></div></section>;}
 export default function PerformancePage(){
+ const pageActive = usePageActive();
  const [payload,setPayload]=useState<Payload|null>(null),[error,setError]=useState(''),[attempt,setAttempt]=useState(0),[family,setFamily]=useState<Family>('all'),[dataset,setDataset]=useState('verified'),[version,setVersion]=useState('all'),[target,setTarget]=useState('total'),[page,setPage]=useState(0);
- useEffect(()=>{const controller=new AbortController();fetch(`${import.meta.env.BASE_URL}research_performance.json`,{signal:controller.signal,cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('The extended report has not been published. Winner records remain available under Winners.');return r.json();}).then((p:Payload)=>{if(p.schema_version!==1||!p.datasets?.verified)throw Error('Unsupported model report format');setPayload(p);}).catch((e:Error)=>{if(!controller.signal.aborted)setError(e.message);});return()=>controller.abort();},[attempt]);
+ useEffect(()=>{if(!pageActive)return;const controller=new AbortController();fetchSnapshot(`${import.meta.env.BASE_URL}research_performance.json`,{signal:controller.signal,cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('The extended report has not been published. Winner records remain available under Winners.');return r.json();}).then((p:Payload)=>{if(p.schema_version!==1||!p.datasets?.verified)throw Error('Unsupported model report format');setPayload(p);}).catch((e:Error)=>{if(!controller.signal.aborted)setError(e.message);});return()=>controller.abort();},[attempt,pageActive]);
  const content=payload?.datasets[dataset],rows=content?.rows??[],all=content?.groups??[];
  const familyGroups=all.filter(g=>g.version==='all'&&(family==='all'||g.family===family));
  const versions=[...new Set(all.filter(g=>g.version!=='all'&&(family==='all'||g.family===family)).map(g=>g.version))];
@@ -57,6 +61,7 @@ export default function PerformancePage(){
  const displayRows=rows.filter(r=>(family==='all'||r.family===family)&&(currentVersion==='all'||r.version===currentVersion)&&(family==='all'||family==='winners'||r.target===activeTarget));
  const selectedRows=(t:string)=>rows.filter(r=>r.target===t&&(currentVersion==='all'||r.version===currentVersion));
  const healthGroups=family==='all'?['winner:v5_qb_plus','total','margin','passing','rushing','receiving','any_td','pass_td'].map(group).filter((g):g is Group=>!!g):familyGroups.map(g=>group(g.target)).filter((g):g is Group=>!!g);
+ if(!payload&&!error)return <div className="ph-page"><header className="ph-heading"><div><p className="ud-eyebrow">THE MODEL REPORT CARD</p><h1>Every forecast. Accounted for.</h1><p>Original predictions, actual outcomes, and signals worth investigating.</p></div></header><LoadingSurface label="Loading model performance"/></div>;
  const changeFamily=(f:Family)=>{setFamily(f);setVersion('all');setPage(0);};
  return <div className="ph-page"><header className="ph-heading"><div><p className="ud-eyebrow">THE MODEL REPORT CARD</p><h1>Every forecast. Accounted for.</h1><p>Original predictions, actual outcomes, and signals worth investigating.</p></div><span className="ph-badge">{payload?new Date(payload.updated_at).toLocaleString():'MODEL EVALUATION'}</span></header>
  <div className="ph-toolbar"><div className="ph-family" aria-label="Forecast family">{([['all','Overview'],['winners','Winners'],['scoring','Scoring'],['yardage','Player yards'],['touchdowns','Touchdowns']] as [Family,string][]).map(([v,label])=><button type="button" key={v} aria-pressed={family===v} onClick={()=>changeFamily(v)}>{label}</button>)}</div></div>

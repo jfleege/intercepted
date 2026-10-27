@@ -8,6 +8,7 @@ on:
       - data/inputs/qb_starters.json
       - src/ml/refresh_markets.py
       - src/ml/weekly_forecast.py
+      - src/ml/refresh_status.py
       - src/ml/export_prediction_history.py
       - src/ml/projection_features.py
       - src/ml/projection_models.py
@@ -88,16 +89,25 @@ jobs:
           python-version: "3.12"
       - name: Install player data dependencies
         run: python -m pip install -r requirements-automation.txt
+      - name: Start refresh status record
+        env:
+          STATUS_MODE: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && github.event.schedule == '47 7 * * *')) && 'results' || 'full' }}
+        run: python -m src.ml.refresh_status start --mode "$STATUS_MODE"
       - name: Verify results grading
+        id: verify
         run: python -m unittest discover -s tests -v
       - name: Advance weekly forecasts when the prior slate is complete
+        id: forecast
         if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_forecasts || github.event_name == 'push')
         run: python -m src.ml.weekly_forecast
       - name: Archive forecasts and refresh final results
+        id: results
         run: python -m src.ml.refresh_performance --import-git-history
       - name: Export browsable prediction weeks
+        id: history
         run: python -m src.ml.export_prediction_history
       - name: Refresh player cards
+        id: players
         if: inputs.results_only != true
         run: python -m src.features.player_watch
       - uses: actions/cache@v4
@@ -107,6 +117,7 @@ jobs:
           key: research-sources-${{ runner.os }}-${{ hashFiles('src/ml/projection_features.py', 'src/ml/refresh_research.py') }}
           restore-keys: research-sources-${{ runner.os }}-
       - name: Refresh experimental matchup projections and period trends
+        id: research
         if: inputs.results_only != true
         continue-on-error: true
         env:
@@ -114,17 +125,21 @@ jobs:
           OPENBLAS_NUM_THREADS: '2'
         run: python -m src.ml.refresh_research
       - name: Export team efficiency and ranking movement
+        id: teams
         if: inputs.results_only != true
         continue-on-error: true
         run: python -m src.ml.export_team_insights
       - name: Export player directory, history and usage
+        id: directory
         continue-on-error: true
         if: inputs.results_only != true
         run: python -m src.features.player_intelligence
       - name: Grade original research forecasts
+        id: research_results
         continue-on-error: true
         run: python -m src.ml.research_performance
       - name: Refresh odds
+        id: odds
         if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
@@ -157,6 +172,7 @@ jobs:
             git push origin HEAD:main
           fi
       - name: Archive moneylines and grade paper selections
+        id: markets
         env:
           PAPER_GAME: ${{ inputs.paper_game }}
           PAPER_TEAM: ${{ inputs.paper_team }}
@@ -167,6 +183,25 @@ jobs:
             python -m src.ml.refresh_markets --record-paper "$PAPER_GAME" "$PAPER_TEAM" --model "$PAPER_MODEL" --stake "$PAPER_STAKE"
           else
             python -m src.ml.refresh_markets
+          fi
+      - name: Export refresh status and source timestamps
+        if: always()
+        env:
+          REFRESH_OUTCOMES: >-
+            {"verify":"${{ steps.verify.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
+        run: python -m src.ml.refresh_status finish
+      - name: Persist refresh status evidence
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add frontend/public/refresh_status.json
+          if [ -f data/tracking/forecast_refresh_status.json ]; then
+            git add data/tracking/forecast_refresh_status.json
+          fi
+          if ! git diff --cached --quiet; then
+            git commit -m "Record refresh status and data freshness"
+            git push origin HEAD:main
           fi
       - uses: actions/setup-node@v4
         with:

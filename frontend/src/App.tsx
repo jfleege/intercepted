@@ -11,6 +11,7 @@ import PlayersPage from "./PlayersPage";
 import DashboardPlayers from "./DashboardPlayers";
 import DashboardMarkets from "./DashboardMarkets";
 import ScoreTicker from "./ScoreTicker";
+import RefreshStatus from "./RefreshStatus";
 import DashboardMetrics from "./DashboardMetrics";
 import PerformancePage from "./PerformancePage";
 import MarketsPage from "./MarketsPage";
@@ -161,6 +162,7 @@ const focusedGame =
           </div>
         </div>
         <main className="container" id="dashboard">
+          <RefreshStatus season={currentData?.season} week={currentData?.week}/>
           {page === "players" ? <PlayersPage search={search} onSearch={setSearch}/> : page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage search={search} /> : page === "matchups" ? <MatchupsPage data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/> : <>
           <section className="ud-hero">
             <div className="ud-hero-copy"><p className="ud-eyebrow">NFL ANALYTICS FROM EVERY ANGLE.</p><h1>EVERY MATCHUP<br/>MORE <em>PERSPECTIVE.</em></h1><p>Explore statistical model predictions, analyze player trends, and track performance—all in one place.</p>

@@ -2,9 +2,9 @@
   "active_season": 2026,
   "active_week": 7,
   "attempt": {
-    "completed_at": "2026-10-27T03:42:15.551510+00:00",
+    "completed_at": "2026-10-27T04:37:43.403022+00:00",
     "mode": "full",
-    "started_at": "2026-10-27T03:42:01.101478+00:00",
+    "started_at": "2026-10-27T04:37:30.213638+00:00",
     "state": "success",
     "steps": {
       "directory": "success",
@@ -24,17 +24,17 @@
   "forecast_check": {
     "active_season": 2026,
     "active_week": 7,
-    "checked_at": "2026-10-27T03:42:07.029724+00:00",
-    "message": "team coverage incomplete: 756/758 team-games",
+    "checked_at": "2026-10-27T04:37:35.525181+00:00",
+    "message": "QB statistics missing 3 completed team-weeks",
     "state": "waiting_stats",
     "target_season": 2026,
     "target_week": 8
   },
   "last_results_refresh_at": null,
-  "last_successful_refresh_at": "2026-10-27T03:42:15.551510+00:00",
+  "last_successful_refresh_at": "2026-10-27T04:37:43.403022+00:00",
   "next_forecast_check_at": "2026-10-27T13:17:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-10-27T03:42:15.551510+00:00",
+  "snapshot_at": "2026-10-27T04:37:43.403022+00:00",
   "sources": [
     {
       "features_through_week": 6,
@@ -49,7 +49,7 @@
       "label": "Player cards",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-10-27T03:42:09.624281+00:00",
+      "updated_at": "2026-10-27T04:37:37.763327+00:00",
       "week": 7
     },
     {
@@ -58,7 +58,7 @@
       "refresh_outcome": "success",
       "season": 2026,
       "through_week": 6,
-      "updated_at": "2026-10-27T03:42:14.162082+00:00",
+      "updated_at": "2026-10-27T04:37:42.198235+00:00",
       "week": 7
     },
     {
@@ -74,13 +74,13 @@
       "id": "results",
       "label": "Game results",
       "refresh_outcome": "success",
-      "updated_at": "2026-10-27T03:42:08.076915+00:00"
+      "updated_at": "2026-10-27T04:37:36.410775+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
       "refresh_outcome": "success",
-      "updated_at": "2026-10-27T03:42:14.757283+00:00"
+      "updated_at": "2026-10-27T04:37:42.678989+00:00"
     },
     {
       "id": "odds",
@@ -97,5 +97,5 @@
       "week": 7
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/40445580982"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/40450725325"
 }

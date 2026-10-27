@@ -12,6 +12,7 @@ from src.ml.refresh_performance import ROOT, MODELS, ALIASES, archive, git, kick
 from src.features.qb_starters import load_reports, resolve_qb, changed_report_games, merge_revisions
 from src.ml.model_registry import available_models, model_metadata
 from src.features.model_context import context_features
+from src.ml.refresh_status import forecast_check
 
 
 class DataPending(Exception):
@@ -180,6 +181,13 @@ def main():
         revisions = [g for g in games if kickoff(g) and stamp(kickoff(g)) > stamp(now)]
     is_revision = (current['season'], current['week']) == (season, week) and bool(revisions)
     if week is None or (not args.validate_current and not is_revision and (current['season'], current['week']) >= (season, week)):
+        if not args.validate_current:
+            remaining = sum(normalize_result(g, now)['status'] not in ('final', 'cancelled') for g in games)
+            state = 'season_complete' if week is None else 'waiting_games' if remaining else 'current'
+            message = ('Regular-season slate complete.' if week is None else
+                       f'{remaining} game(s) still awaiting final results in Week {week}.' if remaining else
+                       'Published forecast slate is current.')
+            forecast_check(current, season, week, state, message, now)
         print('Published slate and starter reports are current; no forecast changes.')
         return
     if is_revision:
@@ -187,6 +195,8 @@ def main():
     try:
         payload, metadata = generate(rows, games, season, week, now)
     except DataPending as error:
+        if not args.validate_current:
+            forecast_check(current, season, week, 'waiting_stats', str(error), utcnow())
         print(f'::warning::Weekly forecasts waiting for data: {error}. Existing predictions retained.')
         return
     if args.validate_current:
@@ -200,6 +210,7 @@ def main():
     archive(payload, metadata, payload['generated_at'], {'kind': 'weekly_automation', 'commit': git('rev-parse', 'HEAD')},
             model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in available_models(metadata)})
     write_json(ROOT / 'frontend/public/predictions.json', payload)
+    forecast_check(payload, season, week, 'current', 'Published forecast slate is current.', utcnow())
     print(f"Published {payload['count']} forecasts for {season} Week {week}.")
 
 

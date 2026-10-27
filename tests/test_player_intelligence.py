@@ -12,7 +12,7 @@ class IntelligenceTests(unittest.TestCase):
  def test_periods_exclude_penalties_kneels_spikes_and_keep_overtime_separate(self):
   rows=[{'game_id':GAME['game_id'],'qtr':q} for q in [1,2,3,4]]
   run={'game_id':GAME['game_id'],'qtr':1,'rusher_player_id':'p1','rush_attempt':1}
-  rows += [run,{**run,'qtr':5},{**run,'no_play':1},{**run,'qb_kneel':1},{**run,'qb_spike':1}]
+  rows += [run,{**run,'qtr':5},{**run,'no_play':1},{**run,'play_type':'no_play'},{**run,'qb_kneel':1},{**run,'qb_spike':1}]
   result=periods(rows,[GAME])[(GAME['game_id'],'p1')];self.assertEqual([r['carries'] for r in result],[1,0,0,0,1])
   self.assertEqual(periods([run],[GAME]),{})
  def test_receiver_targets_receptions_and_touches_are_distinct(self):

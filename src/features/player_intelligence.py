@@ -15,7 +15,7 @@ def periods(rows, games):
         gid, q = r.get('game_id'), r.get('qtr')
         if gid not in allowed or q not in (1,2,3,4,5): continue
         quarters[gid].add(q)
-        if r.get('no_play') == 1 or r.get('qb_kneel') == 1 or r.get('qb_spike') == 1: continue
+        if r.get('play_type') == 'no_play' or r.get('no_play') == 1 or r.get('qb_kneel') == 1 or r.get('qb_spike') == 1: continue
         for field, flag, index in [('passer_player_id','pass_attempt',0),('rusher_player_id','rush_attempt',1),('receiver_player_id','pass_attempt',2)]:
             pid = r.get(field)
             if pid and r.get(flag) == 1:
@@ -63,7 +63,7 @@ def main():
     import polars as pl
     data=json.loads((ROOT/'frontend/public/predictions.json').read_text()); season=data['season']
     path=ROOT/f'data/raw/research/pbp-{season}.parquet'
-    required={'passer_player_id','rusher_player_id','receiver_player_id','pass_attempt','rush_attempt','complete_pass','no_play','qb_kneel','qb_spike'}
+    required={'passer_player_id','rusher_player_id','receiver_player_id','pass_attempt','rush_attempt','complete_pass','play_type','qb_kneel','qb_spike'}
     cached=pl.read_parquet(path) if path.exists() else None
     pbp=cached if cached is not None and required.issubset(cached.columns) else nfl.load_pbp(season)
     result=build(data,nfl.load_player_stats(seasons=season,summary_level='week').to_dicts(),nfl.load_schedules(season).to_dicts(),nfl.load_players().to_dicts(),pbp.select(['game_id','qtr',*sorted(required)]).to_dicts(),utcnow())

@@ -25,7 +25,7 @@ try{
   if(width>760)assert.ok(await page.locator('.mb-slip').evaluate(e=>e.clientHeight<=innerHeight-40));
   await page.locator('.mb-slip details summary').click();await page.locator('.mb-saved').first().click();assert.equal(await page.getByLabel('Manual combined American price').inputValue(),'');
   const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'Export drafts',exact:true}).click();const downloaded=await downloadPromise;const exported=JSON.parse(await readFile(await downloaded.path(),'utf8'));assert.equal(exported[0].kind,'unverified_research_draft');assert.equal(exported[0].joint_probability,null);
-  if(width<=760){await page.locator('.mb-mobile-slip').click();await page.getByLabel('Paper stake ($)').waitFor({state:'visible'});await page.locator('.mb-mobile-back').click();}
+  if(width<=760){await page.locator('.mb-mobile-slip').click();await page.getByLabel('Paper stake ($)').waitFor({state:'visible'});await page.locator('.mb-mobile-back').click();await page.locator('#mb-explore').waitFor({state:'visible'});}
   await page.getByLabel('Manual combined American price').fill('+350');
   await page.getByLabel('Market game',{exact:true}).selectOption(data.games[0].game_id);await page.getByRole('button',{name:'Player yards',exact:true}).click();
   const game=data.games[0],eligible=research.games[game.game_id].players.filter(p=>p.status==='available'&&Number.isFinite(p.expected_yards));assert.deepEqual(new Set(await page.locator('.mb-offer h3').allTextContents()),new Set(eligible.map(p=>p.name)));assert.ok(await page.locator('.mb-offer').count()>=eligible.length);

@@ -42,10 +42,11 @@ jobs:
             if curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
             sleep 1
           done
-          node tests/interface-polish.browser.mjs
-          node tests/markets-builder.browser.mjs
-          node tests/players-page.browser.mjs
-          node tests/unified.browser.mjs
+          failed=0
+          for check in interface-polish markets-builder players-page unified; do
+            node "tests/$check.browser.mjs" || failed=1
+          done
+          exit "$failed"
       - uses: actions/upload-artifact@v4
         if: always()
         with:

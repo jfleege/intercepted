@@ -6,11 +6,12 @@ import process from 'node:process';
 const origin='http://127.0.0.1:4174/intercepted/';
 const slate=JSON.parse(await readFile('public/predictions.json','utf8'));
 const browser=await chromium.launch({executablePath:process.env.CHROME_BIN||undefined});
+let activePage;
 const errors=[],reports=[];await mkdir('qa/polish',{recursive:true});
 try{
  for(const width of [375,650,900,1440]){
   const context=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'});
-  const page=await context.newPage(),requests=new Map();page.on('pageerror',e=>errors.push(e.message));
+  const page=await context.newPage(),requests=new Map();activePage=page;page.on('pageerror',e=>errors.push(e.message));
   await page.addInitScript(()=>{window.layoutShift=0;new PerformanceObserver(list=>{for(const e of list.getEntries())if(!e.hadRecentInput)window.layoutShift+=e.value;}).observe({type:'layout-shift',buffered:true});});
   await page.route('**/*',async route=>{
    const req=route.request(),url=req.url();if(url.startsWith('http://127.0.0.1:4174')){
@@ -50,7 +51,7 @@ try{
   await markets.locator('.mb-advanced>summary').click();await markets.getByLabel('Probability profile',{exact:true}).selectOption('unscored');
   await page.locator('.dash-nav a[href="#players"]').click();
   assert.equal(await players.getByLabel('Player team',{exact:true}).inputValue(),'CHI');assert.equal(await players.getByRole('button',{name:'QB',exact:true}).getAttribute('aria-pressed'),'true');
-  await page.waitForTimeout(100);assert.ok(Math.abs(await page.evaluate(()=>scrollY)-savedScroll)<20);
+  await page.waitForTimeout(100);assert.ok(Math.abs(await page.evaluate(()=>scrollY)-savedScroll)<20,`Scroll restoration: saved ${savedScroll}, actual ${await page.evaluate(()=>scrollY)}`);
   assert.equal(requests.get('player_intelligence.json'),1);
   await page.locator('.dash-nav a[href="#markets"]').click();assert.equal(await markets.getByLabel('Market game',{exact:true}).inputValue(),slate.games[0].game_id);assert.equal(await markets.getByLabel('Probability profile',{exact:true}).inputValue(),'unscored');
   assert.equal(await markets.getByLabel('Manual combined American price',{exact:true}).inputValue(),'+350');
@@ -73,4 +74,4 @@ try{
   await context.close();console.log(`PASS ${width}px cache/state/scroll, loading, controls, validation, modal, metadata/404, motion, accessibility`);
  }
  assert.deepEqual(errors,[]);
-}finally{await writeFile('qa/polish/report.json',JSON.stringify(reports,null,2));await browser.close();}
+}finally{if(activePage&&!activePage.isClosed())await activePage.screenshot({path:'qa/polish/failure.png'});await writeFile('qa/polish/report.json',JSON.stringify(reports,null,2));await browser.close();}

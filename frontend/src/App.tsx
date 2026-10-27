@@ -1,6 +1,6 @@
 import { fetchSnapshot } from "./snapshotCache";
 import { filterGames } from "./matchupFilters";
-import { lazy, memo, useEffect, useRef, useState } from "react";
+import { lazy, memo, useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 import "./DashboardLayout.css";
 import { availableModels, MODEL_LABELS } from "./predictionModels";
@@ -39,12 +39,20 @@ function App() {
       setVisited(previous => new Set([...previous, next]));
       setPage(next); setSelectedGame(null);
     };
+    const previousRestoration = window.history.scrollRestoration;
+    window.history.scrollRestoration = 'manual';
     window.addEventListener("hashchange", navigate);
-    return () => window.removeEventListener("hashchange", navigate);
+    return () => {window.removeEventListener("hashchange", navigate);window.history.scrollRestoration=previousRestoration;};
   }, []);
   useEffect(() => {
     const labels: Record<string,string> = {dashboard:'',players:'Players',performance:'Performance',markets:'Markets',matchups:'Matchups'};
     document.title = labels[page] ? `${labels[page]} | Intercepted` : 'Intercepted';
+    const nav=document.querySelector<HTMLElement>('.dash-nav');
+    const current=nav?.querySelector<HTMLElement>('[aria-current="page"]');
+    if(nav&&current&&nav.scrollWidth>nav.clientWidth){
+      const bounds=current.getBoundingClientRect(),rail=nav.getBoundingClientRect();
+      if(bounds.left<rail.left||bounds.right>rail.right)nav.scrollTo({left:nav.scrollLeft+bounds.left-rail.left-8,behavior:'instant'});
+    }
   }, [page]);
   const [currentData, setCurrentData] = useState<PredictionData | null>(null);
   const [archivedData, setArchivedData] = useState<Record<string, PredictionData>>({});
@@ -57,6 +65,7 @@ function App() {
   const model: Model = modelOptions.includes(preferredModel) ? preferredModel : modelOptions[0] ?? "v4_a";
   const [searches, setSearches] = useState<Record<string, string>>({});
   const search = searches[page] ?? '';
+  const setPlayerSearch = useCallback((value: string) => setSearches(previous => ({...previous, players: value})), []);
   const setSearch = (value: string) => setSearches(previous => ({...previous, [pageRef.current]: value}));
   const [sort, setSort] = useState("date");
   const [error, setError] = useState("");
@@ -115,7 +124,7 @@ const focusedGame =
   );
   return (
     <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups" || page === "performance" || page === "markets" || page === "players") ? " unified-dashboard" : ""}`}>
-      <a className="skip-link" href="#page-content">Skip to content</a>
+      <a className="skip-link" href="#page-content" onClick={event=>{event.preventDefault();document.getElementById("page-content")?.focus();}}>Skip to content</a>
       {/* sidebar */}
       <aside className="dash-sidebar" inert={!!selectedGame}>
         <div className="dash-brand">
@@ -181,7 +190,7 @@ const focusedGame =
         <main className="container" id="dashboard" inert={!!selectedGame}>
           <div id="page-content" tabIndex={-1}/>
           <RefreshStatus season={currentData?.season} week={currentData?.week}/>
-          {visited.has('players') && <PagePanel active={page === 'players'} name="players"><RetainedPlayers search={searches.players ?? ''} onSearch={value => setSearches(previous => ({...previous, players: value}))}/></PagePanel>}
+          {visited.has('players') && <PagePanel active={page === 'players'} name="players"><RetainedPlayers search={searches.players ?? ''} onSearch={setPlayerSearch}/></PagePanel>}
           {visited.has('performance') && <PagePanel active={page === 'performance'} name="performance"><RetainedPerformance/></PagePanel>}
           {visited.has('markets') && <PagePanel active={page === 'markets'} name="markets"><RetainedMarkets search={searches.markets ?? ''}/></PagePanel>}
           {visited.has('matchups') && <PagePanel active={page === 'matchups'} name="matchups"><RetainedMatchups data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/></PagePanel>}
@@ -192,7 +201,7 @@ const focusedGame =
             </div>
             <HeroPlaybook games={data?.games ?? []} model={model} archived={archived} season={data?.season} week={data?.week}/>
           </section>
-{data && (
+{data ? (
   <ScoreTicker
     games={data.games}
     season={data.season}
@@ -204,7 +213,7 @@ const focusedGame =
       if (game) { setFocusedGameId(gameId); setSelectedGame(game); }
     }}
   />
-)}
+) : <div className="score-ticker score-ticker-placeholder" role="status" aria-label="Loading scoreboard"><span>Loading scoreboard…</span></div>}
 <DashboardMetrics data={data} />
           {/* predictions */}
           <section

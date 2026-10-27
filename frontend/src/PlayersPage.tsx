@@ -1,7 +1,7 @@
 import { usePageActive } from "./pageActivity";
 import LoadingSurface from "./LoadingSurface";
 import { fetchSnapshot } from "./snapshotCache";
-import { useEffect, useRef, useState } from 'react';
+import { useDeferredValue, useEffect, useMemo, useRef, useState } from 'react';
 import { rankWatchPlayers } from './playerWatchRanking';
 import { average, directory, filteredPlayers, kind, numeric, playerGrades, reliability, windowHistory, yardage } from './playerIntelligence';
 import type { Appearance, Directory, Grade, Player, WatchData } from './playerIntelligence';
@@ -26,11 +26,12 @@ export default function PlayersPage({search,onSearch}:{search:string;onSearch:(q
  const pageActive = usePageActive();
  const [slate,setSlate]=useState<PredictionData|null>(null),[history,setHistory]=useState<Directory|null>(null),[watch,setWatch]=useState<WatchData|null>(null),[report,setReport]=useState<Research|null>(null),[grades,setGrades]=useState<Grade[]>([]),[message,setMessage]=useState(''),[error,setError]=useState(''),[retry,setRetry]=useState(0);
  const query=search,setQuery=onSearch;
+ const deferredQuery=useDeferredValue(query);
  const [team,setTeam]=useState('all'),[position,setPosition]=useState('all'),[sort,setSort]=useState('watch'),[selected,setSelected]=useState(''),[window,setWindow]=useState('5'),[tab,setTab]=useState('overview'),[version,setVersion]=useState('all'),[compare,setCompare]=useState<string[]>([]),[showTen,setShowTen]=useState(false);
  const profile=useRef<HTMLElement>(null);
  useEffect(()=>{if(!pageActive)return;const controller=new AbortController();const get=async(path:string)=>{const r=await fetchSnapshot(`${import.meta.env.BASE_URL}${path}`,{signal:controller.signal});if(!r.ok)throw Error(path);return r.json();};get('predictions.json').then(async(d:PredictionData)=>{const items=await Promise.allSettled([get('player_intelligence.json'),get('players_watch.json'),get(`research/${d.season}-week-${d.week}.json`),get('research_performance.json')]);if(controller.signal.aborted)return;setSlate(d);setHistory(items[0].status==='fulfilled'?items[0].value:null);setWatch(items[1].status==='fulfilled'?items[1].value:null);setReport(items[2].status==='fulfilled'?items[2].value:null);setGrades(items[3].status==='fulfilled'?items[3].value.datasets?.verified?.rows??[]:[]);setError(items.some(i=>i.status==='rejected')?'Some player data is unavailable. Available projections and history remain accessible.':'');}).catch(()=>{if(!controller.signal.aborted)setError('Unable to load the player slate. Please retry.');});return()=>controller.abort();},[retry,pageActive]);
- const watchRanking=slate&&watch?.season===slate.season&&watch.week===slate.week?rankWatchPlayers(watch,report,'blend'):null;const ranked=watchRanking?.players.map(p=>p.player_id)??[];
- const players=slate?directory(slate,history,watch,report,ranked):[];const filtered=filteredPlayers(players,query,team,position,sort);const active=filtered.find(p=>p.player_id===selected)??filtered[0];const top=players.filter(p=>p.watchRank).sort((a,b)=>a.watchRank!-b.watchRank!);
+ const watchRanking=useMemo(()=>slate&&watch?.season===slate.season&&watch.week===slate.week?rankWatchPlayers(watch,report,'blend'):null,[slate,watch,report]);
+ const players=useMemo(()=>slate?directory(slate,history,watch,report,watchRanking?.players.map(p=>p.player_id)??[]):[],[slate,history,watch,report,watchRanking]);const filtered=filteredPlayers(players,deferredQuery,team,position,sort);const active=filtered.find(p=>p.player_id===selected)??filtered[0];const top=players.filter(p=>p.watchRank).sort((a,b)=>a.watchRank!-b.watchRank!);
  const recent=active?windowHistory(active,window):[],allGrades=active&&slate?playerGrades(active,grades,slate.season,slate.week):[];
  const versions=[...new Set(allGrades.map(r=>r.version))],activeVersion=versions.includes(version)?version:'all',versionRows=allGrades.filter(r=>activeVersion==='all'||r.version===activeVersion).sort((a,b)=>a.week-b.week),rows=window==='season'?versionRows:versionRows.slice(-Number(window)),health=reliability(rows);
  const field=active?`${kind(active.position)}_yards`:'rushing_yards';const recentAvg=active?average(recent.map(h=>yardage(active,h))):null;

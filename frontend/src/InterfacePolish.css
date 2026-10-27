@@ -13,3 +13,6 @@ html{scrollbar-gutter:stable;scroll-padding-top:24px}.page-panel[hidden]{display
 
 .dashboard-shell :where(strong,b){font-variant-numeric:tabular-nums}
 @media(max-width:650px){.dashboard-shell .dash-sidebar{position:sticky;top:0;z-index:50;background:#081721;box-shadow:0 3px 12px #0002}}
+.dashboard-shell .score-ticker-placeholder{align-items:center;padding:0 24px;color:#a9bfd1;font-size:12px}.dashboard-shell .pulse-form{min-height:17px}
+@media(min-width:651px) and (max-width:1100px){.dashboard-shell .pulse-form{min-height:37px}}
+@media(min-width:851px) and (max-width:1100px){.dashboard-shell .ud-bottom-grid .dp-headshot{width:48px;flex-basis:48px}.dashboard-shell .ud-bottom-grid .dp-player-top{gap:7px}}

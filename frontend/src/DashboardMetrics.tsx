@@ -52,7 +52,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
           <div className="pulse-visual"><AccuracyChart values={record.trend}/><span>Cumulative · game by game</span></div>
         </div>
         <div className="pulse-card-foot"><span>{status}</span>{record.delta !== null && <span className={record.delta >= 0 ? 'pulse-positive' : 'pulse-negative'}>{record.delta >= 0 ? '+' : ''}{(record.delta * 100).toFixed(1)} pp vs prior graded week</span>}</div>
-        {record.form.length > 0 && <div className="pulse-form" aria-label="Last 14 graded results">{record.form.map(row => <span key={row.gameId} className={row.correct ? 'won' : 'lost'} title={`${row.gameId}: ${row.correct ? 'Correct' : 'Incorrect'}`}><span className="sr-only">{row.gameId}: </span>{row.correct ? 'W' : 'L'}</span>)}</div>}
+        <div className="pulse-form" aria-label="Last 14 graded results">{record.form.map(row => <span key={row.gameId} className={row.correct ? 'won' : 'lost'} title={`${row.gameId}: ${row.correct ? 'Correct' : 'Incorrect'}`}><span className="sr-only">{row.gameId}: </span>{row.correct ? 'W' : 'L'}</span>)}</div>
       </article>
       <article className="pulse-card">
         <div className="pulse-card-top"><h3>Forecasts this season</h3><span className="pulse-badge">THROUGH W{data?.week ?? '—'}</span></div>

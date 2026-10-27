@@ -12,7 +12,7 @@ try{
  for(const width of [375,650,900,1440]){
   const context=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'});
   const page=await context.newPage(),requests=new Map();activePage=page;page.on('pageerror',e=>errors.push(e.message));
-  await page.addInitScript(()=>{window.layoutShift=0;new PerformanceObserver(list=>{for(const e of list.getEntries())if(!e.hadRecentInput)window.layoutShift+=e.value;}).observe({type:'layout-shift',buffered:true});});
+  await page.addInitScript(()=>{window.layoutShift=0;window.layoutSources=[];new PerformanceObserver(list=>{for(const e of list.getEntries())if(!e.hadRecentInput){window.layoutShift+=e.value;window.layoutSources.push({value:e.value,nodes:e.sources.map(s=>s.node?.className)});}}).observe({type:'layout-shift',buffered:true});});
   await page.route('**/*',async route=>{
    const req=route.request(),url=req.url();if(url.startsWith('http://127.0.0.1:4174')){
     const name=new URL(url).pathname.split('/').at(-1);requests.set(name,(requests.get(name)||0)+1);
@@ -23,7 +23,7 @@ try{
    return route.fulfill({json:{events:[]}});
   });
   await page.goto(origin);await page.locator('.ud-game').first().waitFor();await page.locator('.dp-player-card').first().waitFor();await page.evaluate(()=>document.fonts.ready);
-  const navigation=await page.evaluate(()=>{const n=performance.getEntriesByType('navigation')[0];return {domContentLoadedMs:n.domContentLoadedEventEnd,startupJsBytes:performance.getEntriesByType('resource').filter(r=>r.name.endsWith('.js')).reduce((a,r)=>a+r.decodedBodySize,0),layoutShift:window.layoutShift};});
+  const navigation=await page.evaluate(()=>{const n=performance.getEntriesByType('navigation')[0];return {domContentLoadedMs:n.domContentLoadedEventEnd,startupJsBytes:performance.getEntriesByType('resource').filter(r=>r.name.endsWith('.js')).reduce((a,r)=>a+r.decodedBodySize,0),layoutShift:window.layoutShift,layoutSources:window.layoutSources};});
   assert.ok(navigation.startupJsBytes<350000,`Initial JS budget exceeded: ${navigation.startupJsBytes}`);
   assert.equal(requests.get('predictions.json'),1);assert.equal(requests.get('players_watch.json'),1);
   assert.equal(await page.title(),'Intercepted');assert.ok(await page.locator('meta[name="description"]').getAttribute('content'));

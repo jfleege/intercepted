@@ -6,8 +6,6 @@ import { availableModels, MODEL_LABELS } from "./predictionModels";
 import type { Model } from "./predictionModels";
 import "./PredictionHistory.css";
 import MatchupModal from "./MatchupModal";
-import playerBody from "./assets/playeronly.png";
-import football from "./assets/ball.png";
 import HeroPlaybook from "./HeroPlaybook";
 import PlayersPage from "./PlayersPage";
 import DashboardPlayers from "./DashboardPlayers";
@@ -20,6 +18,7 @@ import WeeklyMatchups from "./WeeklyMatchups";
 import MatchupsPage from "./MatchupsPage";
 import "./UnifiedDashboard.css";
 import "./HeroPlaybook.css";
+import "./Brand.css";
 
 import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};
@@ -102,23 +101,10 @@ const focusedGame =
       {/* sidebar */}
       <aside className="dash-sidebar">
         <div className="dash-brand">
-          <div className="brand-logo">
-            <div className="brand-scene">
-              <img
-                src={playerBody}
-                alt=""
-                className="brand-player-body"
-              />
-              <img
-                src={football}
-                alt=""
-                className="brand-football"
-              />
-            </div>
-            <span className="brand-text">
-              ntercepted
-            </span>
-          </div>
+          <a className="intercepted-brand" href="#dashboard" aria-label="Intercepted dashboard">
+            <img className="intercepted-logo" src={`${import.meta.env.BASE_URL}brand/intercepted-logo.svg`} alt="Intercepted"/>
+            <img className="intercepted-icon" src={`${import.meta.env.BASE_URL}brand/intercepted-icon.svg`} alt=""/>
+          </a>
         </div>
         <nav className="dash-nav" aria-label="Main navigation">
           <a
@@ -257,10 +243,7 @@ const focusedGame =
           </>}
           {/* footer */}
           <footer className="footer">
-            <div className="brand">
-              <div className="brand-icon">I.</div>
-              <span>INTERCEPTED</span>
-            </div>
+            <a className="intercepted-footer-brand" href="#dashboard" aria-label="Intercepted dashboard"><img src={`${import.meta.env.BASE_URL}brand/intercepted-logo.svg`} alt="Intercepted"/></a>
             <p>
               Predictions are statistical estimates, not
               guarantees. Projected quarterbacks and inputs

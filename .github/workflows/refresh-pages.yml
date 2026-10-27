@@ -16,6 +16,10 @@ on:
       - src/features/quarter_trends.py
       - models/model_metadata.json
       - frontend/src/**
+      - frontend/public/brand/**
+      - frontend/public/favicon.svg
+      - frontend/public/favicon.ico
+      - frontend/index.html
       - src/ml/refresh_props.py
       - src/ml/odds_client.py
       - src/ml/export_odds.py

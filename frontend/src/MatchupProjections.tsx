@@ -1,3 +1,4 @@
+import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useState } from 'react';
 
 type PlayerProjection = {
@@ -44,7 +45,7 @@ export default function MatchupProjections({ game, mode = 'forecasts' }: {game: 
   const file = `${game.season}-week-${game.week}`;
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}research/${file}.json`, {signal: controller.signal})
+    fetchSnapshot(`${import.meta.env.BASE_URL}research/${file}.json`, {signal: controller.signal})
       .then(r => {if (!r.ok) throw Error('No research snapshot'); return r.json();})
       .then((data: Report) => {if (!controller.signal.aborted && data.season === game.season && data.week === game.week && data.games[game.game_id]) {setReport(data); setFailed(false);} else if (!controller.signal.aborted) setFailed(true);})
       .catch(() => {if (!controller.signal.aborted) setFailed(true);});

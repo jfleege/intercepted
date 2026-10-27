@@ -1,3 +1,4 @@
+import { fetchSnapshot } from "./snapshotCache";
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { rankWatchPlayers, watchTouchdown } from "./playerWatchRanking";
@@ -187,7 +188,7 @@ const scrollPlayers = (direction: number) => {
   useEffect(() => {
     let active = true;
 
-    fetch(`${import.meta.env.BASE_URL}players_watch.json`)
+    fetchSnapshot(`${import.meta.env.BASE_URL}players_watch.json`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Player data unavailable");
@@ -215,7 +216,7 @@ const scrollPlayers = (direction: number) => {
   useEffect(() => {
     if (!data) return;
     const controller = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}research/${data.season}-week-${data.week}.json`, {signal: controller.signal})
+    fetchSnapshot(`${import.meta.env.BASE_URL}research/${data.season}-week-${data.week}.json`, {signal: controller.signal})
       .then(response => { if (!response.ok) throw new Error("Projections unavailable"); return response.json(); })
       .then((result: WatchReport) => { if (!controller.signal.aborted) setReport(result); })
       .catch(() => { if (!controller.signal.aborted) setReport(null); })

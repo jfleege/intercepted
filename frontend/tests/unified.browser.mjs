@@ -93,26 +93,23 @@ try {
   assert.equal(await page.getByRole('button',{name:'Gradient Boosted',exact:true}).count(),0);
   await page.getByLabel('Prediction week').selectOption('current');
   await page.getByRole('button',{name:'Updated QB+',exact:true}).waitFor();
-  // Regular-motion selection: animate from empty, overshoot, and settle at the exact saved probability.
+  // Charts retain their nodes and interpolate real value changes without replaying an entrance.
   await page.emulateMedia({reducedMotion:'no-preference'});
+  const arcNode=await page.locator('.ud-winner-arc').elementHandle();
   await page.locator('.ud-game').nth(1).click();
-  assert.equal(await page.locator('.ud-probability-fill').first().evaluate(e=>getComputedStyle(e).animationName),'udBarRise');
-  assert.equal(await page.locator('.ud-winner-arc').evaluate(e=>getComputedStyle(e).animationName),'udRingGrow');
-  const overshoot=await page.locator('.ud-probability-fill').first().evaluate(async e=>{const a=e.getAnimations()[0];a.pause();a.currentTime=585;await new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r)));const scale=new DOMMatrixReadOnly(getComputedStyle(e).transform).m22;a.play();await a.finished;return scale;});
-  assert.ok(overshoot>1,'Winning bars must visibly overshoot before settling');
-  assert.equal(await page.locator('.ud-probability-fill').first().evaluate(e=>getComputedStyle(e).transform),'matrix(1, 0, 0, 1, 0, 0)');
-  await page.locator('.ud-winner-arc').evaluate(async e=>{await Promise.all(e.getAnimations().map(a=>a.finished));});
+  assert.ok(await page.locator('.ud-winner-arc').evaluate((e,prior)=>e===prior,arcNode));
+  assert.equal(await page.locator('.ud-probability-fill').first().evaluate(e=>getComputedStyle(e).animationName),'none');
+  assert.ok((await page.locator('.ud-winner-arc').evaluate(e=>getComputedStyle(e).transitionProperty)).includes('stroke-dasharray'));
+  await page.waitForTimeout(260);
   const arc=await page.locator('.ud-winner-arc').evaluate(e=>({expected:parseFloat(e.style.getPropertyValue('--ud-arc')),actual:parseFloat(getComputedStyle(e).strokeDasharray)}));
   assert.ok(Math.abs(arc.expected-arc.actual)<.01,JSON.stringify(arc));
-  const offsets=await page.locator('.ud-winner-arc').evaluate(async e=>{const a=e.getAnimations()[0];a.pause();const values=[];for(const time of [0,100,250,450,650]){a.currentTime=time;await new Promise(r=>requestAnimationFrame(r));values.push(parseFloat(getComputedStyle(e).strokeDashoffset));}a.finish();return values;});
-  assert.ok(offsets[0]>0);assert.equal(offsets.at(-1),0);assert.ok(offsets.every((n,i)=>n>=0&&(!i||n<=offsets[i-1])),'Ring must sweep smoothly without reversal or overshoot');
   await page.locator('.dash-nav a[href="#performance"]').click();
   await page.locator('.ph-page').waitFor();
   await page.getByRole('button',{name:'Winners',exact:true}).click();
   await page.locator('.performance-page .review-draft').filter({hasText:'ARCHIVED SNAPSHOTS'}).waitFor();
   await page.locator('.dash-nav a[href="#markets"]').click();
   await page.locator('.mb-slate').waitFor();
-  await context.close();console.log(`PASS ${width}px: real fonts, photos/PNG, matchup selection, probabilities, bounce/reduced motion, markets, archives, filters, no overflow.`);
+  await context.close();console.log(`PASS ${width}px: real fonts, photos/PNG, matchup selection, probabilities, value transitions/reduced motion, markets, archives, filters, no overflow.`);
  }
  assert.deepEqual(errors,[]);console.log('PASS: no browser errors.');
 }finally{await browser.close();}

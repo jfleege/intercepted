@@ -1,3 +1,5 @@
+import { usePageActive } from "./pageActivity";
+import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useRef, useState } from 'react';
 import type { CSSProperties } from 'react';
 import type { Game } from './forecastTypes';
@@ -33,6 +35,7 @@ const ease = (n: number) => n * n * (3 - 2 * n);
 export default function HeroPlaybook({ games, model, archived, season, week }: {
   games: Game[]; model: Model; archived: boolean; season?: number; week?: number;
 }) {
+  const pageActive = usePageActive();
   const root = useRef<HTMLDivElement>(null);
   const routes = useRef<(SVGPathElement | null)[][]>([]);
   const markers = useRef<(SVGGElement | null)[]>([]);
@@ -60,7 +63,7 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
   useEffect(() => {
     if (archived) return;
     const controller = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}players_watch.json`, { signal: controller.signal })
+    fetchSnapshot(`${import.meta.env.BASE_URL}players_watch.json`, { signal: controller.signal })
       .then(r => { if (!r.ok) throw Error('Unavailable'); return r.json(); })
       .then((data: PlayerExport) => { if (!controller.signal.aborted) setPlayers(data); })
       .catch(() => { /* Matchup forecasts and the decorative playbook remain available. */ });
@@ -89,6 +92,7 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
         markers.current[i]?.setAttribute('transform', `translate(${point.x} ${point.y})`);
       });
     };
+    if (!pageActive) return;
     draw();
     if (paused || reduced || hidden || !visible) return;
     const tick = (now: number) => {
@@ -101,7 +105,7 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [cycle, playIndex, paused, reduced, hidden, visible]);
+  }, [cycle, playIndex, paused, reduced, hidden, visible, pageActive]);
 
   const game = games.length ? games[cycle % games.length] : null;
   const home = game ? probability(game, model) : null;

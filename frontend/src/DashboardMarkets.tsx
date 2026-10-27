@@ -1,3 +1,4 @@
+import { fetchSnapshot } from "./snapshotCache";
 import { availableModels, probability, MODEL_LABELS } from './predictionModels';
 import type { Model, PredictionFields } from './predictionModels';
 import { useEffect, useState } from 'react';
@@ -13,7 +14,7 @@ export default function DashboardMarkets({game, model, showModelPicks = true}: {
   const [error, setError] = useState('');
   useEffect(() => {
     let active = true;
-    fetch(`${import.meta.env.BASE_URL}odds.json`).then(response => {
+    fetchSnapshot(`${import.meta.env.BASE_URL}odds.json`).then(response => {
       if (!response.ok) throw Error('Sportsbook data unavailable');
       return response.json();
     }).then((result: OddsData) => { if (active) setData(result); })

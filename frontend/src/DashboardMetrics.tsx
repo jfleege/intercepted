@@ -1,3 +1,4 @@
+import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useId, useState } from 'react';
 import { MODEL_LABELS, MODEL_ORDER } from './predictionModels';
 import type { Model } from './predictionModels';
@@ -26,7 +27,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
   const [recordModel, setRecordModel] = useState<Model>('v4_qb_plus');
   useEffect(() => {
     const controller = new AbortController();
-    fetch(`${import.meta.env.BASE_URL}performance.json`, { signal: controller.signal, cache: 'no-cache' })
+    fetchSnapshot(`${import.meta.env.BASE_URL}performance.json`, { signal: controller.signal, cache: 'no-cache' })
       .then(response => { if (!response.ok) throw Error('Results unavailable'); return response.json(); })
       .then((value: PerformanceFeed) => {
         if (value.schema_version !== 1 || !value.datasets?.verified) throw Error('Unsupported results');

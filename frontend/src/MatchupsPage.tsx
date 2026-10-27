@@ -1,3 +1,6 @@
+import LoadingSurface from "./LoadingSurface";
+import { usePageActive } from "./pageActivity";
+import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import type { Game, PredictionData } from './forecastTypes';
@@ -47,15 +50,16 @@ function FormChart({a,h,teams}: {a?: Team; h?: Team; teams: string[]}) {
   return <><svg className="mx-line-chart" viewBox="0 0 400 180" role="img" aria-label={`Offensive EPA per play over up to six prior games: ${teams.join(' and ')}. Exact values are in the table.`}>{[low,0,high].map((v,i)=><g key={i}><line x1="45" x2="375" y1={y(v)} y2={y(v)}/><text x="39" y={y(v)+4} textAnchor="end">{v.toFixed(2)}</text></g>)}{series.map((rows,i)=><g key={teams[i]}><polyline className={`mx-line-${i}`} points={rows.filter(r=>r.off_epa!=null).map(r=>`${x(r.week)},${y(r.off_epa!)}`).join(' ')}/>{rows.filter(r=>r.off_epa!=null).map(r=><circle key={r.week} className={`mx-series-${i}`} cx={x(r.week)} cy={y(r.off_epa!)} r="3"><title>{teams[i]} Week {r.week}: {r.off_epa}</title></circle>)}</g>)}{weeks.map(w=><text key={w} x={x(w)} y="165" textAnchor="middle">W{w}</text>)}</svg><details className="mx-details"><summary>Game-by-game values</summary><table><thead><tr><th>Week</th>{teams.map(t=><th key={t}>{t} EPA/play</th>)}</tr></thead><tbody>{weeks.map(w=><tr key={w}><td>{w}</td>{series.map((s,i)=><td key={teams[i]}>{format(s.find(r=>r.week===w)?.off_epa,3)}</td>)}</tr>)}</tbody></table></details></>;
 }
 export default function MatchupsPage({data,games,game,model,onSelect,weekControl,error}: {data: PredictionData | null; games: Game[]; game: Game | null; model: Model; onSelect:(id:string)=>void; weekControl: ReactNode; error:string}) {
+  const pageActive = usePageActive();
   const [insights,setInsights]=useState<Insights|null>(null);
   const [report,setReport]=useState<Report|null>(null);
   const [period,setPeriod]=useState<'quarters'|'halves'>('quarters');
   const [loading,setLoading]=useState(true);
   const key=data?`${data.season}-week-${data.week}`:'';
   useEffect(()=>{
-    if(!key)return;
+    if(!key||!pageActive)return;
     const controller=new AbortController();
-    const get=(path:string)=>fetch(`${import.meta.env.BASE_URL}${path}`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Unavailable');return r.json();});
+    const get=(path:string)=>fetchSnapshot(`${import.meta.env.BASE_URL}${path}`,{signal:controller.signal}).then(r=>{if(!r.ok)throw Error('Unavailable');return r.json();});
     Promise.allSettled([get(`team_insights/${key}.json`),get(`research/${key}.json`)]).then(results=>{
       if(controller.signal.aborted)return;
       const same=(v:{season:number;week:number})=>`${v.season}-week-${v.week}`===key;
@@ -63,10 +67,10 @@ export default function MatchupsPage({data,games,game,model,onSelect,weekControl
       setReport(results[1].status==='fulfilled'&&same(results[1].value)?results[1].value:null);
       setLoading(false);
     });return()=>controller.abort();
-  },[key]);
+  },[key,pageActive]);
   const matching=insights&&data&&insights.season===data.season&&insights.week===data.week?insights:null;
   const research=report&&data&&report.season===data.season&&report.week===data.week?report:null;
-  if(!data)return <section className="mx-page"><h1>Matchups</h1><p>{error||'Loading forecasts…'}</p></section>;
+  if(!data)return <section className="mx-page"><h1>Matchups</h1>{error?<p>{error}</p>:<LoadingSurface label="Loading matchups" kind="matchups"/>}</section>;
   const teams=game?[game.away_team,game.home_team]:[];
   const a=matching?.teams[teams[0]],h=matching?.teams[teams[1]];
   const score=game?research?.games[game.game_id]?.scoring:null;

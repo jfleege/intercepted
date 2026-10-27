@@ -9,6 +9,7 @@ import MatchupModal from "./MatchupModal";
 import playerBody from "./assets/playeronly.png";
 import football from "./assets/ball.png";
 import HeroPlaybook from "./HeroPlaybook";
+import PlayersPage from "./PlayersPage";
 import DashboardPlayers from "./DashboardPlayers";
 import DashboardMarkets from "./DashboardMarkets";
 import ScoreTicker from "./ScoreTicker";
@@ -24,9 +25,9 @@ import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};
 
 function App() {
-  const [page, setPage] = useState(() => window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : window.location.hash === "#matchups" ? "matchups" : "dashboard");
+  const [page, setPage] = useState(() => window.location.hash === "#players" ? "players" : window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : window.location.hash === "#matchups" ? "matchups" : "dashboard");
   useEffect(() => {
-    const navigate = () => setPage(window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : window.location.hash === "#matchups" ? "matchups" : "dashboard");
+    const navigate = () => setPage(window.location.hash === "#players" ? "players" : window.location.hash === "#performance" ? "performance" : window.location.hash === "#markets" ? "markets" : window.location.hash === "#matchups" ? "matchups" : "dashboard");
     window.addEventListener("hashchange", navigate);
     return () => window.removeEventListener("hashchange", navigate);
   }, []);
@@ -97,7 +98,7 @@ const focusedGame =
     </label>
   );
   return (
-    <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups" || page === "performance" || page === "markets") ? " unified-dashboard" : ""}`}>
+    <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups" || page === "performance" || page === "markets" || page === "players") ? " unified-dashboard" : ""}`}>
       {/* sidebar */}
       <aside className="dash-sidebar">
         <div className="dash-brand">
@@ -137,10 +138,7 @@ const focusedGame =
           <a href="#performance" className={`dash-nav-item${page === "performance" ? " active" : ""}`} aria-current={page === "performance" ? "page" : undefined}>
             <span className="dash-nav-icon">▥</span><span className="dash-nav-label">Performance</span>
           </a>
-          <span className="dash-nav-item disabled">
-            <span className="dash-nav-icon">⌁</span>
-            <span className="dash-nav-label">Players</span>
-          </span>
+          <a href="#players" className={`dash-nav-item${page === "players" ? " active" : ""}`} aria-current={page === "players" ? "page" : undefined}><span className="dash-nav-icon">⌁</span><span className="dash-nav-label">Players</span></a>
           <a href="#markets" className={`dash-nav-item${page === "markets" ? " active" : ""}`} aria-current={page === "markets" ? "page" : undefined}>
             <span className="dash-nav-icon">↗</span><span className="dash-nav-label">Markets</span>
           </a>
@@ -162,7 +160,7 @@ const focusedGame =
           <input
             className="dash-search"
             type="search"
-            placeholder="Search teams or matchups..."
+            placeholder={page === "players" ? "Search players..." : "Search teams or matchups..."}
             aria-label="Search teams or matchups"
             value={search}
             onChange={(event) => setSearch(event.target.value)}
@@ -177,7 +175,7 @@ const focusedGame =
           </div>
         </div>
         <main className="container" id="dashboard">
-          {page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage search={search} /> : page === "matchups" ? <MatchupsPage data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/> : <>
+          {page === "players" ? <PlayersPage search={search} onSearch={setSearch}/> : page === "performance" ? <PerformancePage /> : page === "markets" ? <MarketsPage search={search} /> : page === "matchups" ? <MatchupsPage data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/> : <>
           <section className="ud-hero">
             <div className="ud-hero-copy"><p className="ud-eyebrow">NFL ANALYTICS FROM EVERY ANGLE.</p><h1>EVERY MATCHUP<br/>MORE <em>PERSPECTIVE.</em></h1><p>Explore statistical model predictions, analyze player trends, and track performance—all in one place.</p>
               <div className="ud-hero-meta"><span><b>{data?.week ?? '—'}</b> WEEK</span><span><b>{data?.count ?? '—'}</b> MATCHUPS</span><span><b>{modelOptions.length}</b> ACTIVE MODELS</span></div>

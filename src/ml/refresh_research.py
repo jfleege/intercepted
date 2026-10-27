@@ -46,7 +46,7 @@ def sources(season, reuse=False):
         paths[f'{name}_current'] = current
     pbp_path = cache / f'pbp-{season}.parquet'
     if not pbp_path.exists() or not reuse:
-        columns = ['game_id', 'season', 'week', 'season_type', 'qtr', 'total_home_score', 'total_away_score', 'posteam', 'defteam', 'play_type', 'epa', 'success']
+        columns = ['game_id', 'season', 'week', 'season_type', 'qtr', 'total_home_score', 'total_away_score', 'posteam', 'defteam', 'play_type', 'epa', 'success', 'passer_player_id', 'rusher_player_id', 'receiver_player_id', 'pass_attempt', 'rush_attempt', 'complete_pass', 'qb_kneel', 'qb_spike']
         nfl.load_pbp(season).select(columns).write_parquet(pbp_path)
     output['pbp'] = pl.read_parquet(pbp_path)
     paths['pbp_current'] = pbp_path

@@ -43,7 +43,7 @@ jobs:
             sleep 1
           done
           failed=0
-          for check in interface-polish markets-builder players-page unified; do
+          for check in interface-polish markets-builder prop-quotes players-page unified; do
             node "tests/$check.browser.mjs" || failed=1
           done
           exit "$failed"

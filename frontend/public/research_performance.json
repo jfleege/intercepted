@@ -237,32 +237,32 @@
           "accuracy": null,
           "baseline_error": null,
           "baseline_samples": 0,
-          "bias": -0.176923076923077,
+          "bias": 0.42499999999999993,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8461538461538461,
-          "error": 7.923076923076923,
+          "coverage": 0.8214285714285714,
+          "error": 7.946428571428572,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
           "paired_error": null,
-          "range_samples": 26,
-          "range_width": 24.076923076923077,
-          "rmse": 9.347438974639813,
-          "samples": 26,
+          "range_samples": 28,
+          "range_width": 24.07857142857143,
+          "rmse": 9.49035224395205,
+          "samples": 28,
           "target": "team_points",
           "trend": [
             {
@@ -472,6 +472,22 @@
               "loss": 7.923076923076921,
               "n": 26,
               "prediction": 20.9
+            },
+            {
+              "actual": 38,
+              "date": "2026-10-26",
+              "label": "DAL points",
+              "loss": 8.214814814814813,
+              "n": 27,
+              "prediction": 22.2
+            },
+            {
+              "actual": 21,
+              "date": "2026-10-26",
+              "label": "PHI points",
+              "loss": 7.946428571428569,
+              "n": 28,
+              "prediction": 20.3
             }
           ],
           "version": "all",
@@ -483,32 +499,32 @@
           "accuracy": null,
           "baseline_error": null,
           "baseline_samples": 0,
-          "bias": -0.176923076923077,
+          "bias": 0.42499999999999993,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8461538461538461,
-          "error": 7.923076923076923,
+          "coverage": 0.8214285714285714,
+          "error": 7.946428571428572,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
           "paired_error": null,
-          "range_samples": 26,
-          "range_width": 24.076923076923077,
-          "rmse": 9.347438974639813,
-          "samples": 26,
+          "range_samples": 28,
+          "range_width": 24.07857142857143,
+          "rmse": 9.49035224395205,
+          "samples": 28,
           "target": "team_points",
           "trend": [
             {
@@ -718,6 +734,22 @@
               "loss": 7.923076923076921,
               "n": 26,
               "prediction": 20.9
+            },
+            {
+              "actual": 38,
+              "date": "2026-10-26",
+              "label": "DAL points",
+              "loss": 8.214814814814813,
+              "n": 27,
+              "prediction": 22.2
+            },
+            {
+              "actual": 21,
+              "date": "2026-10-26",
+              "label": "PHI points",
+              "loss": 7.946428571428569,
+              "n": 28,
+              "prediction": 20.3
             }
           ],
           "version": "4407254781897e09",
@@ -729,32 +761,32 @@
           "accuracy": null,
           "baseline_error": null,
           "baseline_samples": 0,
-          "bias": -0.353846153846154,
+          "bias": 0.8499999999999999,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8461538461538461,
-          "error": 10.338461538461539,
+          "coverage": 0.8571428571428571,
+          "error": 10.77857142857143,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
           "paired_error": null,
-          "range_samples": 13,
+          "range_samples": 14,
           "range_width": 34.2,
-          "rmse": 12.15546727260555,
-          "samples": 13,
+          "rmse": 12.51590416801188,
+          "samples": 14,
           "target": "total",
           "trend": [
             {
@@ -860,6 +892,14 @@
               "loss": 10.338461538461539,
               "n": 13,
               "prediction": 41.6
+            },
+            {
+              "actual": 59,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI total",
+              "loss": 10.778571428571428,
+              "n": 14,
+              "prediction": 42.5
             }
           ],
           "version": "all",
@@ -871,32 +911,32 @@
           "accuracy": null,
           "baseline_error": null,
           "baseline_samples": 0,
-          "bias": -0.353846153846154,
+          "bias": 0.8499999999999999,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8461538461538461,
-          "error": 10.338461538461539,
+          "coverage": 0.8571428571428571,
+          "error": 10.77857142857143,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
           "paired_error": null,
-          "range_samples": 13,
+          "range_samples": 14,
           "range_width": 34.2,
-          "rmse": 12.15546727260555,
-          "samples": 13,
+          "rmse": 12.51590416801188,
+          "samples": 14,
           "target": "total",
           "trend": [
             {
@@ -1002,6 +1042,14 @@
               "loss": 10.338461538461539,
               "n": 13,
               "prediction": 41.6
+            },
+            {
+              "actual": 59,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI total",
+              "loss": 10.778571428571428,
+              "n": 14,
+              "prediction": 42.5
             }
           ],
           "version": "4407254781897e09",
@@ -1013,32 +1061,32 @@
           "accuracy": null,
           "baseline_error": null,
           "baseline_samples": 0,
-          "bias": -5.7846153846153845,
+          "bias": -6.449999999999999,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8461538461538461,
-          "error": 11.215384615384615,
+          "coverage": 0.8571428571428571,
+          "error": 11.492857142857142,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
           "paired_error": null,
-          "range_samples": 13,
+          "range_samples": 14,
           "range_width": 33.6,
-          "rmse": 14.203629005401291,
-          "samples": 13,
+          "rmse": 14.269522967299421,
+          "samples": 14,
           "target": "margin",
           "trend": [
             {
@@ -1144,6 +1192,14 @@
               "loss": 11.215384615384616,
               "n": 13,
               "prediction": 0.2
+            },
+            {
+              "actual": -17,
+              "date": "2026-10-26",
+              "label": "PHI margin",
+              "loss": 11.492857142857144,
+              "n": 14,
+              "prediction": -1.9
             }
           ],
           "version": "all",
@@ -1155,32 +1211,32 @@
           "accuracy": null,
           "baseline_error": null,
           "baseline_samples": 0,
-          "bias": -5.7846153846153845,
+          "bias": -6.449999999999999,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8461538461538461,
-          "error": 11.215384615384615,
+          "coverage": 0.8571428571428571,
+          "error": 11.492857142857142,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
           "paired_error": null,
-          "range_samples": 13,
+          "range_samples": 14,
           "range_width": 33.6,
-          "rmse": 14.203629005401291,
-          "samples": 13,
+          "rmse": 14.269522967299421,
+          "samples": 14,
           "target": "margin",
           "trend": [
             {
@@ -1286,6 +1342,14 @@
               "loss": 11.215384615384616,
               "n": 13,
               "prediction": 0.2
+            },
+            {
+              "actual": -17,
+              "date": "2026-10-26",
+              "label": "PHI margin",
+              "loss": 11.492857142857144,
+              "n": 14,
+              "prediction": -1.9
             }
           ],
           "version": "4407254781897e09",
@@ -1301,8 +1365,8 @@
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 0,
-            "pending": 2,
+            "missing_stats": 2,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": 0.8846153846153846,
@@ -1547,8 +1611,8 @@
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 0,
-            "pending": 2,
+            "missing_stats": 2,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": 0.8846153846153846,
@@ -1850,8 +1914,8 @@
           ],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 1,
-            "pending": 8,
+            "missing_stats": 9,
+            "pending": 0,
             "unavailable": 1
           },
           "coverage": null,
@@ -2761,8 +2825,8 @@
           ],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 1,
-            "pending": 8,
+            "missing_stats": 9,
+            "pending": 0,
             "unavailable": 1
           },
           "coverage": null,
@@ -3656,8 +3720,8 @@
           ],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 0,
-            "pending": 2,
+            "missing_stats": 2,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
@@ -3943,8 +4007,8 @@
           ],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 0,
-            "pending": 2,
+            "missing_stats": 2,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
@@ -4189,8 +4253,8 @@
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 1,
-            "pending": 6,
+            "missing_stats": 7,
+            "pending": 0,
             "unavailable": 1
           },
           "coverage": 0.5892857142857143,
@@ -4675,8 +4739,8 @@
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 1,
-            "pending": 6,
+            "missing_stats": 7,
+            "pending": 0,
             "unavailable": 1
           },
           "coverage": 0.5892857142857143,
@@ -5550,10 +5614,10 @@
           ]
         },
         {
-          "accuracy": 0.4444444444444444,
+          "accuracy": 0.4642857142857143,
           "baseline_error": 0.25,
-          "baseline_samples": 27,
-          "bias": -0.1302070534283026,
+          "baseline_samples": 28,
+          "bias": -0.13954510448853408,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -5565,11 +5629,11 @@
             },
             {
               "bin": "30\u201340%",
-              "lower": 0.2076549551264879,
-              "observed": 0.6666666666666666,
-              "predicted": 0.36924954448351116,
-              "samples": 3,
-              "upper": 0.9385096847238394
+              "lower": 0.15003570882017148,
+              "observed": 0.5,
+              "predicted": 0.3748552791413293,
+              "samples": 4,
+              "upper": 0.8499642911798285
             },
             {
               "bin": "40\u201350%",
@@ -5615,27 +5679,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.29254391477984065,
+          "error": 0.2875747511816071,
           "family": "winners",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 27,
+            "samples": 28,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.7828050174550804,
-          "paired_error": 0.29254391477984065,
+          "log_loss": 0.7725991905089682,
+          "paired_error": 0.2875747511816071,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.540873289024186,
-          "samples": 27,
+          "rmse": 0.5362599660440887,
+          "samples": 28,
           "target": "winner:v4_a",
           "trend": [
             {
@@ -5853,6 +5917,14 @@
               "loss": 0.2925439147798406,
               "n": 27,
               "prediction": 0.39663848509576966
+            },
+            {
+              "actual": 0,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI",
+              "loss": 0.287574751181607,
+              "n": 28,
+              "prediction": 0.3916724831147838
             }
           ],
           "version": "all",
@@ -6069,10 +6141,10 @@
           ]
         },
         {
-          "accuracy": 0.46153846153846156,
+          "accuracy": 0.5,
           "baseline_error": 0.25,
-          "baseline_samples": 13,
-          "bias": -0.1301183759343549,
+          "baseline_samples": 14,
+          "bias": -0.1488008121615284,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -6084,11 +6156,11 @@
             },
             {
               "bin": "30\u201340%",
-              "lower": 0.20654329147389294,
-              "observed": 1,
-              "predicted": 0.39663848509576966,
-              "samples": 1,
-              "upper": 1
+              "lower": 0.09452865480086614,
+              "observed": 0.5,
+              "predicted": 0.39415548410527673,
+              "samples": 2,
+              "upper": 0.9054713451991339
             },
             {
               "bin": "40\u201350%",
@@ -6118,27 +6190,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2980156787603532,
+          "error": 0.28768651127956374,
           "family": "winners",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.7935039049281195,
-          "paired_error": 0.2980156787603532,
+          "log_loss": 0.772328044787821,
+          "paired_error": 0.28768651127956374,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5459081230027203,
-          "samples": 13,
+          "rmse": 0.5363641592048854,
+          "samples": 14,
           "target": "winner:v4_a",
           "trend": [
             {
@@ -6244,6 +6316,14 @@
               "loss": 0.2980156787603532,
               "n": 13,
               "prediction": 0.39663848509576966
+            },
+            {
+              "actual": 0,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI",
+              "loss": 0.28768651127956374,
+              "n": 14,
+              "prediction": 0.3916724831147838
             }
           ],
           "version": "ac161c2fa5d3",
@@ -6252,10 +6332,10 @@
           ]
         },
         {
-          "accuracy": 0.4444444444444444,
+          "accuracy": 0.4642857142857143,
           "baseline_error": 0.25,
-          "baseline_samples": 27,
-          "bias": -0.13585351687786276,
+          "baseline_samples": 28,
+          "bias": -0.14314069365741935,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -6267,11 +6347,11 @@
             },
             {
               "bin": "30\u201340%",
-              "lower": 0.15003570882017148,
-              "observed": 0.5,
-              "predicted": 0.36311888291494615,
-              "samples": 4,
-              "upper": 0.8499642911798285
+              "lower": 0.1176182311592533,
+              "observed": 0.4,
+              "predicted": 0.35847399967304633,
+              "samples": 5,
+              "upper": 0.769280067791163
             },
             {
               "bin": "40\u201350%",
@@ -6317,27 +6397,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2958159954190893,
+          "error": 0.2893771473147283,
           "family": "winners",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 27,
+            "samples": 28,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.7911047276744394,
-          "paired_error": 0.2958159954190893,
+          "log_loss": 0.7776851144651021,
+          "paired_error": 0.2893771473147283,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5438896904879603,
-          "samples": 27,
+          "rmse": 0.5379378656636176,
+          "samples": 28,
           "target": "winner:v4_qb_plus",
           "trend": [
             {
@@ -6555,6 +6635,14 @@
               "loss": 0.2958159954190893,
               "n": 27,
               "prediction": 0.3698742496005967
+            },
+            {
+              "actual": 0,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI",
+              "loss": 0.2893771473147283,
+              "n": 28,
+              "prediction": 0.33989446670544693
             }
           ],
           "version": "all",
@@ -6771,10 +6859,10 @@
           ]
         },
         {
-          "accuracy": 0.5384615384615384,
+          "accuracy": 0.5714285714285714,
           "baseline_error": 0.25,
-          "baseline_samples": 13,
-          "bias": -0.13556023132525158,
+          "baseline_samples": 14,
+          "bias": -0.1501555338524084,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -6786,11 +6874,11 @@
             },
             {
               "bin": "30\u201340%",
-              "lower": 0.09452865480086614,
-              "observed": 0.5,
-              "predicted": 0.3731182321265848,
-              "samples": 2,
-              "upper": 0.9054713451991339
+              "lower": 0.0614903152761605,
+              "observed": 0.3333333333333333,
+              "predicted": 0.36204364365287217,
+              "samples": 3,
+              "upper": 0.7923450448735121
             },
             {
               "bin": "40\u201350%",
@@ -6828,27 +6916,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2963552602885282,
+          "error": 0.2834390451605605,
           "family": "winners",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.7950195664616025,
-          "paired_error": 0.2963552602885282,
+          "log_loss": 0.7679007087009878,
+          "paired_error": 0.2834390451605605,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5443852131427968,
-          "samples": 13,
+          "rmse": 0.5323899371330759,
+          "samples": 14,
           "target": "winner:v4_qb_plus",
           "trend": [
             {
@@ -6954,6 +7042,14 @@
               "loss": 0.29635526028852816,
               "n": 13,
               "prediction": 0.3698742496005967
+            },
+            {
+              "actual": 0,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI",
+              "loss": 0.28343904516056045,
+              "n": 14,
+              "prediction": 0.33989446670544693
             }
           ],
           "version": "ac161c2fa5d3",
@@ -6962,10 +7058,10 @@
           ]
         },
         {
-          "accuracy": 0.38461538461538464,
+          "accuracy": 0.42857142857142855,
           "baseline_error": 0.25,
-          "baseline_samples": 13,
-          "bias": -0.1148303170631812,
+          "baseline_samples": 14,
+          "bias": -0.13700350864081792,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -6985,11 +7081,11 @@
             },
             {
               "bin": "40\u201350%",
-              "lower": 0.09452865480086614,
-              "observed": 0.5,
-              "predicted": 0.4451843119808423,
-              "samples": 2,
-              "upper": 0.9054713451991339
+              "lower": 0.0614903152761605,
+              "observed": 0.3333333333333333,
+              "predicted": 0.43854120770392657,
+              "samples": 3,
+              "upper": 0.7923450448735121
             },
             {
               "bin": "50\u201360%",
@@ -7019,27 +7115,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.32201086917429117,
+          "error": 0.3119273652548523,
           "family": "winners",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.851336970766345,
-          "paired_error": 0.32201086917429117,
+          "log_loss": 0.8300863880924969,
+          "paired_error": 0.3119273652548523,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5674600154850482,
-          "samples": 13,
+          "rmse": 0.5585045794394637,
+          "samples": 14,
           "target": "winner:v5_boosted",
           "trend": [
             {
@@ -7145,6 +7241,14 @@
               "loss": 0.3220108691742912,
               "n": 13,
               "prediction": 0.3519753685696024
+            },
+            {
+              "actual": 0,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI",
+              "loss": 0.3119273652548524,
+              "n": 14,
+              "prediction": 0.42525499915009524
             }
           ],
           "version": "all",
@@ -7153,10 +7257,10 @@
           ]
         },
         {
-          "accuracy": 0.38461538461538464,
+          "accuracy": 0.42857142857142855,
           "baseline_error": 0.25,
-          "baseline_samples": 13,
-          "bias": -0.1148303170631812,
+          "baseline_samples": 14,
+          "bias": -0.13700350864081792,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -7176,11 +7280,11 @@
             },
             {
               "bin": "40\u201350%",
-              "lower": 0.09452865480086614,
-              "observed": 0.5,
-              "predicted": 0.4451843119808423,
-              "samples": 2,
-              "upper": 0.9054713451991339
+              "lower": 0.0614903152761605,
+              "observed": 0.3333333333333333,
+              "predicted": 0.43854120770392657,
+              "samples": 3,
+              "upper": 0.7923450448735121
             },
             {
               "bin": "50\u201360%",
@@ -7210,27 +7314,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.32201086917429117,
+          "error": 0.3119273652548523,
           "family": "winners",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.851336970766345,
-          "paired_error": 0.32201086917429117,
+          "log_loss": 0.8300863880924969,
+          "paired_error": 0.3119273652548523,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5674600154850482,
-          "samples": 13,
+          "rmse": 0.5585045794394637,
+          "samples": 14,
           "target": "winner:v5_boosted",
           "trend": [
             {
@@ -7336,6 +7440,14 @@
               "loss": 0.3220108691742912,
               "n": 13,
               "prediction": 0.3519753685696024
+            },
+            {
+              "actual": 0,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI",
+              "loss": 0.3119273652548524,
+              "n": 14,
+              "prediction": 0.42525499915009524
             }
           ],
           "version": "ac161c2fa5d3",
@@ -7344,10 +7456,10 @@
           ]
         },
         {
-          "accuracy": 0.5384615384615384,
+          "accuracy": 0.5714285714285714,
           "baseline_error": 0.25,
-          "baseline_samples": 13,
-          "bias": -0.14078346819024412,
+          "baseline_samples": 14,
+          "bias": -0.15427183341691797,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -7359,11 +7471,11 @@
             },
             {
               "bin": "30\u201340%",
-              "lower": 0.09452865480086614,
-              "observed": 0.5,
-              "predicted": 0.3497583562653864,
-              "samples": 2,
-              "upper": 0.9054713451991339
+              "lower": 0.0614903152761605,
+              "observed": 0.3333333333333333,
+              "predicted": 0.3430457646314837,
+              "samples": 3,
+              "upper": 0.7923450448735121
             },
             {
               "bin": "40\u201350%",
@@ -7401,27 +7513,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2994086141171035,
+          "error": 0.2857829793700625,
           "family": "winners",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.8020934153598279,
-          "paired_error": 0.2994086141171035,
+          "log_loss": 0.7733661307205788,
+          "paired_error": 0.2857829793700625,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5471824322080374,
-          "samples": 13,
+          "rmse": 0.5345867369941594,
+          "samples": 14,
           "target": "winner:v5_qb_plus",
           "trend": [
             {
@@ -7527,6 +7639,14 @@
               "loss": 0.29940861411710357,
               "n": 13,
               "prediction": 0.3919728810620612
+            },
+            {
+              "actual": 0,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI",
+              "loss": 0.28578297937006253,
+              "n": 14,
+              "prediction": 0.32962058136367817
             }
           ],
           "version": "all",
@@ -7535,10 +7655,10 @@
           ]
         },
         {
-          "accuracy": 0.5384615384615384,
+          "accuracy": 0.5714285714285714,
           "baseline_error": 0.25,
-          "baseline_samples": 13,
-          "bias": -0.14078346819024412,
+          "baseline_samples": 14,
+          "bias": -0.15427183341691797,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -7550,11 +7670,11 @@
             },
             {
               "bin": "30\u201340%",
-              "lower": 0.09452865480086614,
-              "observed": 0.5,
-              "predicted": 0.3497583562653864,
-              "samples": 2,
-              "upper": 0.9054713451991339
+              "lower": 0.0614903152761605,
+              "observed": 0.3333333333333333,
+              "predicted": 0.3430457646314837,
+              "samples": 3,
+              "upper": 0.7923450448735121
             },
             {
               "bin": "40\u201350%",
@@ -7592,27 +7712,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2994086141171035,
+          "error": 0.2857829793700625,
           "family": "winners",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.8020934153598279,
-          "paired_error": 0.2994086141171035,
+          "log_loss": 0.7733661307205788,
+          "paired_error": 0.2857829793700625,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5471824322080374,
-          "samples": 13,
+          "rmse": 0.5345867369941594,
+          "samples": 14,
           "target": "winner:v5_qb_plus",
           "trend": [
             {
@@ -7718,6 +7838,14 @@
               "loss": 0.29940861411710357,
               "n": 13,
               "prediction": 0.3919728810620612
+            },
+            {
+              "actual": 0,
+              "date": "2026-10-26",
+              "label": "DAL @ PHI",
+              "loss": 0.28578297937006253,
+              "n": 14,
+              "prediction": 0.32962058136367817
             }
           ],
           "version": "ac161c2fa5d3",
@@ -20629,7 +20757,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0033077",
           "target": "any_td",
           "team": "DAL",
@@ -20661,7 +20789,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0036358",
           "target": "any_td",
           "team": "DAL",
@@ -20693,7 +20821,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0036912",
           "target": "any_td",
           "team": "PHI",
@@ -20725,7 +20853,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0037247",
           "target": "any_td",
           "team": "DAL",
@@ -20757,7 +20885,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0038393",
           "target": "any_td",
           "team": "PHI",
@@ -20789,7 +20917,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0038400",
           "target": "any_td",
           "team": "PHI",
@@ -20821,7 +20949,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0039410",
           "target": "any_td",
           "team": "DAL",
@@ -20853,7 +20981,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0040024",
           "target": "any_td",
           "team": "PHI",
@@ -20861,22 +20989,22 @@
           "week": 7
         },
         {
-          "actual": null,
+          "actual": -17,
           "away_team": "DAL",
           "baseline": null,
           "baseline_loss": null,
           "date": "2026-10-26",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -15.1,
           "family": "scoring",
           "game_id": "2026_07_DAL_PHI",
           "generated_at": "2026-10-22T06:42:30.213254+00:00",
           "home_team": "PHI",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-10-27T00:15:00+00:00",
           "label": "PHI margin",
-          "loss": null,
+          "loss": 15.1,
           "prediction": -1.9,
           "range": [
             -18.7,
@@ -20885,7 +21013,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "margin",
           "version": "4407254781897e09",
@@ -20916,7 +21044,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0033077",
           "target": "pass_td",
           "team": "DAL",
@@ -20948,7 +21076,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0038400",
           "target": "pass_td",
           "team": "PHI",
@@ -20983,7 +21111,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0033077",
           "target": "passing",
           "team": "DAL",
@@ -21018,7 +21146,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0038400",
           "target": "passing",
           "team": "PHI",
@@ -21053,7 +21181,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0036358",
           "target": "receiving",
           "team": "DAL",
@@ -21088,7 +21216,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0036912",
           "target": "receiving",
           "team": "PHI",
@@ -21123,7 +21251,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0037247",
           "target": "receiving",
           "team": "DAL",
@@ -21158,7 +21286,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0038393",
           "target": "receiving",
           "team": "PHI",
@@ -21193,7 +21321,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0039410",
           "target": "receiving",
           "team": "DAL",
@@ -21228,7 +21356,7 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0040024",
           "target": "receiving",
           "team": "PHI",
@@ -21236,22 +21364,22 @@
           "week": 7
         },
         {
-          "actual": null,
+          "actual": 38,
           "away_team": "DAL",
           "baseline": null,
           "baseline_loss": null,
           "date": "2026-10-26",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 15.8,
           "family": "scoring",
           "game_id": "2026_07_DAL_PHI",
           "generated_at": "2026-10-22T06:42:30.213254+00:00",
           "home_team": "PHI",
-          "inside_range": null,
+          "inside_range": false,
           "kickoff": "2026-10-27T00:15:00+00:00",
           "label": "DAL points",
-          "loss": null,
+          "loss": 15.8,
           "prediction": 22.2,
           "range": [
             10.1,
@@ -21260,29 +21388,29 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "graded",
           "subject": "away",
           "target": "team_points",
           "version": "4407254781897e09",
           "week": 7
         },
         {
-          "actual": null,
+          "actual": 21,
           "away_team": "DAL",
           "baseline": null,
           "baseline_loss": null,
           "date": "2026-10-26",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 0.6999999999999993,
           "family": "scoring",
           "game_id": "2026_07_DAL_PHI",
           "generated_at": "2026-10-22T06:42:30.213254+00:00",
           "home_team": "PHI",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-10-27T00:15:00+00:00",
           "label": "PHI points",
-          "loss": null,
+          "loss": 0.6999999999999993,
           "prediction": 20.3,
           "range": [
             8.3,
@@ -21291,29 +21419,29 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "graded",
           "subject": "home",
           "target": "team_points",
           "version": "4407254781897e09",
           "week": 7
         },
         {
-          "actual": null,
+          "actual": 59,
           "away_team": "DAL",
           "baseline": null,
           "baseline_loss": null,
           "date": "2026-10-26",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 16.5,
           "family": "scoring",
           "game_id": "2026_07_DAL_PHI",
           "generated_at": "2026-10-22T06:42:30.213254+00:00",
           "home_team": "PHI",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-10-27T00:15:00+00:00",
           "label": "DAL @ PHI total",
-          "loss": null,
+          "loss": 16.5,
           "prediction": 42.5,
           "range": [
             25.4,
@@ -21322,37 +21450,37 @@
           "saved_at": "2026-10-22T01:45:05-05:00",
           "season": 2026,
           "snapshot_id": "7b9070539556a72ee0a866299004ae9b28999db692232d73d0a09dc78fe24581",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "total",
           "version": "4407254781897e09",
           "week": 7
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 0,
+          "away_score": 38,
           "away_team": "DAL",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.1534073340293006,
           "date": "2026-10-26",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": -0.3916724831147838,
           "family": "winners",
           "game_date": "2026-10-26",
           "game_id": "2026_07_DAL_PHI",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 21,
           "home_team": "PHI",
           "inside_range": null,
           "kickoff": "2026-10-27T00:15:00+00:00",
           "label": "DAL @ PHI",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.49704186296394026,
+          "loss": 0.1534073340293006,
           "model": "v4_a",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 0,
           "pick": "DAL",
           "prediction": 0.3916724831147838,
           "probability": 0.3916724831147838,
@@ -21364,7 +21492,7 @@
           "saved_at": "2026-10-20T17:14:36.177176+00:00",
           "season": 2026,
           "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v4_a",
           "training_cutoff": "2026 W5",
@@ -21372,30 +21500,30 @@
           "week": 7
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 0,
+          "away_score": 38,
           "away_team": "DAL",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.11552824849698017,
           "date": "2026-10-26",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": -0.33989446670544693,
           "family": "winners",
           "game_date": "2026-10-26",
           "game_id": "2026_07_DAL_PHI",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 21,
           "home_team": "PHI",
           "inside_range": null,
           "kickoff": "2026-10-27T00:15:00+00:00",
           "label": "DAL @ PHI",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.4153555578129962,
+          "loss": 0.11552824849698017,
           "model": "v4_qb_plus",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 0,
           "pick": "DAL",
           "prediction": 0.33989446670544693,
           "probability": 0.33989446670544693,
@@ -21407,7 +21535,7 @@
           "saved_at": "2026-10-20T17:14:36.177176+00:00",
           "season": 2026,
           "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v4_qb_plus",
           "training_cutoff": "2026 W5",
@@ -21415,30 +21543,30 @@
           "week": 7
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 0,
+          "away_score": 38,
           "away_team": "DAL",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.1808418143021475,
           "date": "2026-10-26",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": -0.42525499915009524,
           "family": "winners",
           "game_date": "2026-10-26",
           "game_id": "2026_07_DAL_PHI",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 21,
           "home_team": "PHI",
           "inside_range": null,
           "kickoff": "2026-10-27T00:15:00+00:00",
           "label": "DAL @ PHI",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.5538288133324721,
+          "loss": 0.1808418143021475,
           "model": "v5_boosted",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 0,
           "pick": "DAL",
           "prediction": 0.42525499915009524,
           "probability": 0.42525499915009524,
@@ -21450,7 +21578,7 @@
           "saved_at": "2026-10-20T17:14:36.177176+00:00",
           "season": 2026,
           "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v5_boosted",
           "training_cutoff": "2026 W6",
@@ -21458,30 +21586,30 @@
           "week": 7
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 0,
+          "away_score": 38,
           "away_team": "DAL",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.10864972765852918,
           "date": "2026-10-26",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": -0.32962058136367817,
           "family": "winners",
           "game_date": "2026-10-26",
           "game_id": "2026_07_DAL_PHI",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 21,
           "home_team": "PHI",
           "inside_range": null,
           "kickoff": "2026-10-27T00:15:00+00:00",
           "label": "DAL @ PHI",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.39991143041034044,
+          "loss": 0.10864972765852918,
           "model": "v5_qb_plus",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 0,
           "pick": "DAL",
           "prediction": 0.32962058136367817,
           "probability": 0.32962058136367817,
@@ -21493,7 +21621,7 @@
           "saved_at": "2026-10-20T17:14:36.177176+00:00",
           "season": 2026,
           "snapshot_id": "1d67f1be401f9f4f84028110a643c3889e2588c09492a90a0f18fcff36cb86e9",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v5_qb_plus",
           "training_cutoff": "2026 W6",
@@ -21517,5 +21645,5 @@
     "windows": 2
   },
   "schema_version": 1,
-  "updated_at": "2026-10-27T02:43:49.037526+00:00"
+  "updated_at": "2026-10-27T03:42:14.757283+00:00"
 }

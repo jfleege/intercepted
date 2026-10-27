@@ -1,6 +1,6 @@
 export type PossessionCompetition = {
   situation?: { possession?: string | number | null };
-  competitors: { id?: string; homeAway: string; team: { id?: string; abbreviation: string } }[];
+  competitors: { id?: string; score?: string; homeAway: string; team: { id?: string; abbreviation: string } }[];
 };
 // Use the provider's explicit possession ID, never the last play or field position.
 export function possessionSide(competition: PossessionCompetition | undefined, state: string | undefined, completed: boolean | undefined, failed: boolean): 'home' | 'away' | null {

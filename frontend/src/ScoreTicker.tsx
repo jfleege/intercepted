@@ -2,6 +2,8 @@ import { probability } from "./predictionModels";
 import type { Model, PredictionFields } from "./predictionModels";
 import { useEffect, useMemo, useRef, useState } from "react";
 import "./ScoreTicker.css";
+import { possessionSide } from "./livePossession";
+import type { PossessionCompetition } from "./livePossession";
 
 type Forecast = PredictionFields & {
   game_id: string;
@@ -10,10 +12,10 @@ type Forecast = PredictionFields & {
   away_team: string;
   result?: { status: string; home_score: number | null; away_score: number | null };
 };
-type Competitor = { homeAway: string; score?: string; team: { abbreviation: string } };
+type Competitor = { id?: string; homeAway: string; score?: string; team: { id?: string; abbreviation: string } };
 type ScoreEvent = {
   date: string;
-  competitions: { competitors: Competitor[] }[];
+  competitions: (PossessionCompetition & { competitors: Competitor[] })[];
   status: { type: { state: string; completed: boolean; shortDetail: string } };
 };
 type Scoreboard = { events: ScoreEvent[] };
@@ -155,7 +157,7 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
     } else if (!failed && !updated) status = "LOADING SCORES";
     if (!started && savedFinal) status = 'FINAL · SAVED';
     const homeProb = probability(game, model);
-    return { game, status, live: state === "in" && !failed, homeScore: score("home"), awayScore: score("away"),
+    return { game, status, possession: possessionSide(event?.competitions?.[0], state, event?.status?.type?.completed, failed), live: state === "in" && !failed, homeScore: score("home"), awayScore: score("away"),
       pick: homeProb >= 0.5 ? game.home_team : game.away_team, probability: Math.max(homeProb, 1 - homeProb) };
   }), [games, feed, model, failed, updated]);
 
@@ -170,9 +172,9 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
         {items.map(item => (
           <button type="button" className={`score-ticker-game${activeGameId === item.game.game_id ? ' is-selected' : ''}`} key={item.game.game_id}
             onClick={() => onSelect(item.game.game_id)} aria-current={activeGameId === item.game.game_id ? 'true' : undefined}
-            aria-label={`${item.game.away_team} ${item.awayScore}, ${item.game.home_team} ${item.homeScore}. ${item.status}. Pregame pick ${item.pick} ${(item.probability * 100).toFixed(1)} percent. Open matchup analysis.`}>
-            <span className="score-ticker-team"><img src={`${import.meta.env.BASE_URL}logos/${item.game.away_team}.png`} alt=""/><b>{item.game.away_team}</b><strong>{item.awayScore}</strong></span>
-            <span className="score-ticker-team"><img src={`${import.meta.env.BASE_URL}logos/${item.game.home_team}.png`} alt=""/><b>{item.game.home_team}</b><strong>{item.homeScore}</strong></span>
+            aria-label={`${item.game.away_team} ${item.awayScore}, ${item.game.home_team} ${item.homeScore}. ${item.status}.${item.possession ? ` ${item.game[item.possession === 'home' ? 'home_team' : 'away_team']} has possession.` : ''} Pregame pick ${item.pick} ${(item.probability * 100).toFixed(1)} percent. Open matchup analysis.`}>
+            <span className="score-ticker-team"><img src={`${import.meta.env.BASE_URL}logos/${item.game.away_team}.png`} alt=""/><b>{item.game.away_team}{item.possession === "away" && <span className="score-ticker-possession" aria-hidden="true">🏈</span>}</b><strong>{item.awayScore}</strong></span>
+            <span className="score-ticker-team"><img src={`${import.meta.env.BASE_URL}logos/${item.game.home_team}.png`} alt=""/><b>{item.game.home_team}{item.possession === "home" && <span className="score-ticker-possession" aria-hidden="true">🏈</span>}</b><strong>{item.homeScore}</strong></span>
             <span className={`score-ticker-status${item.live ? ' is-live' : ''}`}>{item.live && '● '}{item.status}</span>
           </button>
         ))}

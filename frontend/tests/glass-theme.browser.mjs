@@ -51,13 +51,13 @@ try {
    const panel=page.locator(`[data-page="${route}"]`);await panel.locator(selector).first().waitFor();
    await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),`${route} overflow at ${width}`);
-   await page.screenshot({path:`qa/glass/${width}-${route}.png`,fullPage:true});
+   await page.screenshot({path:`qa/glass/${width}-${route}.png`});
    const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();
    reports.push({width,page:route,violations:audit.violations});
   }
   await context.close();console.log(`PASS glass ${width}px: matched skeletons, reduced motion, original hero, all pages, modal, no overflow.`);
  }
  assert.deepEqual(errors,[]);
- const critical=reports.flatMap(r=>r.violations.filter(v=>v.impact==='critical').map(v=>({width:r.width,page:r.page,id:v.id})));
- assert.deepEqual(critical,[]);
+ const violations=reports.flatMap(r=>r.violations.map(v=>({width:r.width,page:r.page,id:v.id,impact:v.impact})));
+ assert.deepEqual(violations,[]);
 }finally{await writeFile('qa/glass/accessibility.json',JSON.stringify(reports,null,2));await browser.close();}

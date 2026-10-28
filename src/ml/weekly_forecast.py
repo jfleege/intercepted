@@ -201,7 +201,7 @@ def main():
             message = ('Regular-season slate complete.' if week is None else
                        f'{remaining} game(s) still awaiting final results in Week {week}.' if remaining else
                        'Published forecast slate is current.')
-            if current.get('qb_coverage', {}).get('limited_inputs'):
+            if week is not None and current.get('qb_coverage', {}).get('limited_inputs'):
                 state, message = 'current_limited_qb', coverage_message(current)
             forecast_check(current, season, week, state, message, now)
         print('Published slate and starter reports are current; no forecast changes.')

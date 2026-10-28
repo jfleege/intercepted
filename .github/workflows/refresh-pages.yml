@@ -27,6 +27,8 @@ on:
       - src/ml/odds_client.py
       - src/ml/export_odds.py
       - src/features/player_intelligence.py
+      - src/features/qb_coverage.py
+      - src/features/qb_starters.py
   schedule:
     # 13:17 UTC = 8:17am CDT / 7:17am CST
     - cron: "17 13 * * *"

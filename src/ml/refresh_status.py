@@ -19,7 +19,6 @@ SOURCES = (
     ('research_results', 'Projection results', 'research_performance.json', 'updated_at'),
     ('insights', 'Forecast context & checks', 'forecast_insights.json', 'exported_at'),
     ('odds', 'Sportsbook lines', 'odds.json', 'exported_at'),
-    ('props', 'Player prop quotes', 'player_props.json', 'exported_at'),
 )
 
 

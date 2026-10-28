@@ -67,7 +67,7 @@ on:
         type: boolean
         default: false
       refresh_props:
-        description: Fetch uncached player props (64-credit slate cap, 100-credit reserve)
+        description: Legacy prop cache only (unused by Markets; budgets still enforced)
         type: boolean
         default: false
       refresh_odds:
@@ -184,9 +184,9 @@ jobs:
           else
             python -m src.ml.export_odds
           fi
-      - name: Cache player prop quotes within the free-plan budget
+      - name: Legacy player prop cache (explicit manual request only)
         id: props
-        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_props)
+        if: inputs.results_only != true && inputs.refresh_props == true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           REFRESH_PROPS_NOW: ${{ inputs.refresh_props && '1' || '0' }}

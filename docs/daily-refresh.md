@@ -25,3 +25,7 @@ Tuesday noon makes **no additional Odds API requests**. The existing morning odd
 To run the same archive/check sequence manually: **Actions → Refresh data and deploy Pages → Run workflow** on `main`, enable **refresh_forecasts**, and leave **refresh_odds** / **refresh_props** unchecked. The separate **results_only** input refreshes archived records without requesting a new forecast slate. No workflow run places real wagers.
 
 Game winner forecasts use saved model weights with fresh eligible inputs; a weekly check is not an automatic retraining of those weights. The existing experimental projection pipeline keeps its own versioning and archive rules.
+
+## Markets likelihood workspace
+
+Markets now uses forecasts only (see `likelihood-markets.md`). The daily morning game-odds refresh still supplies matchup/dashboard quotes. Player-prop fetching is no longer automatic; the legacy explicit manual input remains subject to its existing fail-closed quota limits. Tuesday/overnight/deployment runs add no paid requests. Old prop cache and quota records remain committed for provenance, but are not an active source in the data-status panel.

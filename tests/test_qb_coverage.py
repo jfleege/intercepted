@@ -61,6 +61,12 @@ class QbCoverageTests(unittest.TestCase):
         qb=resolve_qb(NEXT,'TB',NGS,{NEXT['game_id']:{'TB':report}},NOW,evidence)
         self.assertEqual(qb['player_id'],'daniels')
         self.assertNotIn('ngs_coverage_note',qb)
+        mayfield={**report,'name':'Baker Mayfield','player_id':'baker'}
+        known=resolve_qb(NEXT,'TB',NGS,{NEXT['game_id']:{'TB':mayfield}},NOW,evidence)
+        self.assertEqual(known['status'],'reported_expected')
+        self.assertEqual(known['source'],mayfield['source'])
+        self.assertEqual(known['ngs_through_week'],3)
+        self.assertEqual(known['ngs_exclusion']['attempts'],11)
 
     def test_historical_low_volume_gap_does_not_block_next_week_again(self):
         evidence=self.exclusions()

@@ -30,6 +30,20 @@ def current_report(game, team, reports, now):
     return report
 
 
+def annotate_ngs_limit(selection, history, exclusions, team, season, week):
+    omissions = [r for r in exclusions if r['team'] == team and r['season'] == season and r['week'] < week and r['player_id'] == selection['player_id']]
+    available = [r for r in history if r['player_gsis_id'] == selection['player_id']]
+    if not omissions or not available:
+        return selection
+    omission = max(omissions, key=lambda r: (r['season'],r['week']))
+    latest = max(available, key=lambda r: (r['season'],r['week']))
+    if (latest['season'], latest['week']) >= (omission['season'], omission['week']):
+        return selection
+    return {**selection, 'ngs_through_season': latest['season'], 'ngs_through_week': latest['week'],
+            'ngs_exclusion': dict(omission),
+            'ngs_coverage_note': f"Low-volume Week {omission['week']} NGS omitted; using this QB's available tracking history through {latest['season']} Week {latest['week']}"}
+
+
 def resolve_qb(game, team, ngs_rows, reports, now, coverage_exclusions=()):
     season, week = game['season'], game['week']
     history = [r for r in ngs_rows if r.get('player_gsis_id') and (r.get('attempts') or 0) > 0
@@ -44,8 +58,8 @@ def resolve_qb(game, team, ngs_rows, reports, now, coverage_exclusions=()):
         player_id = ids.pop()
         if report.get('player_id') and report['player_id'] != player_id:
             raise ValueError('Starter report player ID and name disagree')
-        return {'player_id': player_id, 'name': report['name'], 'status': report['status'],
-                'source': report['source'], 'observed_at': report['observed_at']}
+        return annotate_ngs_limit({'player_id': player_id, 'name': report['name'], 'status': report['status'],
+                'source': report['source'], 'observed_at': report['observed_at']}, history, coverage_exclusions, team, season, week)
     candidates = [r for r in history if r['season'] == season and ALIASES.get(r['team_abbr'], r['team_abbr']) == team]
     omissions = [r for r in coverage_exclusions if r['team'] == team and r['season'] == season and r['week'] < week]
     latest_omission = max(omissions, key=lambda r: r['week']) if omissions else None

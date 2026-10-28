@@ -27,7 +27,7 @@ export default function RefreshStatus({season, week}: {season?: number; week?: n
   const matches = status && status.active_season === season && status.active_week === week;
   const summary = statusSummary(matches ? status : null, now);
   const next = status ? nextCheck(status, now) : null;
-  return <details className={`refresh-status is-${summary.tone}`}>
+  return <details id="refresh-status" className={`refresh-status is-${summary.tone}`}>
     <summary>
       <span className="refresh-status-slate">ACTIVE SLATE <b>{season ?? '—'} · Week {week ?? '—'}</b></span>
       <span className="refresh-status-state"><i aria-hidden="true"/>{summary.label}</span>

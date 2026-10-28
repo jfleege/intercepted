@@ -27,7 +27,7 @@ try{
    return route.fulfill({json:{events:[]}});
   });
   await page.goto(origin);await page.getByText('Current slate · limited QB tracking',{exact:true}).waitFor();
-  await page.locator('.ud-game').filter({hasText:'TB'}).click();await page.locator('.ud-focus .qb-coverage-note').waitFor();
+  await page.locator(`.ud-game[aria-label^="${game.away_team} at ${game.home_team}."]`).click();await page.locator('.ud-focus .qb-coverage-note').waitFor();
   assert.ok((await page.locator('.ud-projected-qbs').textContent()).includes('Baker Mayfield'));
   await page.getByRole('button',{name:'Full matchup analysis',exact:false}).click();await page.getByRole('dialog').getByText(note,{exact:true}).waitFor();
   assert.ok(await page.getByRole('dialog').evaluate(e=>e.scrollWidth<=e.clientWidth+1));

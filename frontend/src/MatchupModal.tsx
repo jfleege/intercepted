@@ -236,7 +236,7 @@ export default function MatchupModal({
           </div>
         </div>
 
-        <div className="ic-bar" style={{background: home >= away ? '#80d5ff' : '#53768b'}} aria-label={`${game.away_team} ${pct(away)}, ${game.home_team} ${pct(home)}`}>
+        <div className="ic-bar" role="img" style={{background: home >= away ? '#80d5ff' : '#53768b'}} aria-label={`${game.away_team} ${pct(away)}, ${game.home_team} ${pct(home)}`}>
           <div style={{ width: `${away * 100}%`, background: away > home ? '#80d5ff' : '#53768b' }} />
         </div>
 

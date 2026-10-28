@@ -17,7 +17,6 @@ try{
   const groups=payload.datasets.verified.groups.filter(g=>g.version==='all');const g=t=>groups.find(g=>g.target===t);
   assert.deepEqual(await page.locator('.ph-kpi strong').allTextContents(),[pct((g('winner:v5_qb_plus')??g('winner:v4_qb_plus'))?.accuracy),fmt(g('total')?.error,1),fmt(g('receiving')?.error,1),fmt(g('any_td')?.error,4)]);
   assert.equal(await page.locator('.ph-health-item').count(),['winner:v5_qb_plus','total','margin','passing','rushing','receiving','any_td','pass_td'].filter(t=>g(t)).length);
-  const bg=await page.locator('.ph-panel').first().evaluate(e=>getComputedStyle(e).backgroundColor);assert.equal(bg,'rgb(16, 38, 49)');
   await page.screenshot({path:`qa/performance/${width}-overview.png`,fullPage:true});
   await page.getByRole('button',{name:'Scoring',exact:true}).click();await page.getByLabel('Research forecast',{exact:true}).selectOption('margin');
   assert.equal(await page.locator('.ph-kpi strong').nth(1).textContent(),fmt(g('margin')?.error,1));

@@ -20,6 +20,7 @@ import "./UnifiedDashboard.css";
 import "./HeroPlaybook.css";
 import "./Brand.css";
 import "./InterfacePolish.css";
+import "./GlassTheme.css";
 
 import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};

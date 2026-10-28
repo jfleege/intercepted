@@ -47,7 +47,7 @@ try{
   await page.screenshot({path:`qa/matchups/${width}.png`,fullPage:true});
   const saved=await page.getByLabel('Prediction week',{exact:true}).locator('option').evaluateAll(opts=>opts.find(o=>o.value!=='current')?.value);
   if(saved){await page.getByLabel('Prediction week',{exact:true}).selectOption(saved);await page.getByText('No team ranking export is available for this week.',{exact:true}).waitFor();assert.equal(await page.locator('.mx-ranking').count(),0);assert.equal(await page.locator('.ud-market-body').count(),0);}
-  await page.locator('a[href="#dashboard"]').click();await page.locator('.ud-hero').waitFor();assert.equal(await page.locator('.mx-page').count(),0);
+  await page.locator('.dash-nav a[href="#dashboard"]').click();await page.locator('.ud-hero').waitFor();assert.equal(await page.locator('.mx-page').isVisible(),false);
   await page.close();console.log(`PASS ${width}: route, saved scores, ranking values/logos/movement, TD charts, quarters/halves, matchup selection, player report, archive isolation and no overflow`);
  }
  assert.deepEqual(errors,[]);

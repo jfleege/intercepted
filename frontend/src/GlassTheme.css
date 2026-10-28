@@ -1,0 +1,237 @@
+/* Intercepted materials. Layout, data, and the animated hero playbook stay intact. */
+.dashboard-shell.unified-dashboard {
+  --ud-panel: #101f2e;
+  --ud-muted: #b1c5d4;
+  --ud-border: #a4d5ec26;
+  --glass-surface: linear-gradient(135deg, #172d40ed, #0c1b2af7);
+  --glass-edge: #b6def530;
+  --glass-shadow: inset 0 1px 0 #e6f6ff09, 0 8px 24px #02091426;
+  --glass-inset: inset 0 2px 5px #02091455, 0 1px 0 #d9f1ff08;
+  background: radial-gradient(ellipse at 72% 0, #12405b38, transparent 45%), #080f1b;
+  color-scheme: dark;
+}
+
+/* Blur belongs on the navigation and modal veil, not on every chart/card. */
+.dashboard-shell.unified-dashboard .dash-sidebar {
+  background: #091320f2;
+  border-color: var(--ud-border);
+  box-shadow: 1px 0 0 #ffffff03;
+}
+.dashboard-shell.unified-dashboard .dash-nav-item {
+  border-radius: 12px;
+  color: #b1c5d4;
+}
+.dashboard-shell.unified-dashboard .dash-nav-item.active {
+  color: #b5efff;
+  border-color: #7adfff4d;
+  background: linear-gradient(120deg, #144055bb, #132e43aa);
+  box-shadow: inset 0 1px 0 #d0f3ff12, 0 3px 10px #0002;
+}
+.dashboard-shell.unified-dashboard .dash-side-note {
+  background: linear-gradient(135deg, #142c3d88, #0b1a28bb);
+  border-color: var(--ud-border);
+  box-shadow: inset 0 1px 0 #ffffff08;
+}
+.dashboard-shell.unified-dashboard .dash-side-note strong { color: #93dff5; }
+.dashboard-shell.unified-dashboard .dash-search {
+  background: #071420d9;
+  border-color: var(--glass-edge);
+  box-shadow: var(--glass-inset);
+}
+.dashboard-shell.unified-dashboard .dash-search::placeholder { color: #a3b8c9; }
+.dashboard-shell.unified-dashboard .dash-search:focus {
+  border-color: #80d5ff99;
+  box-shadow: var(--glass-inset), 0 0 0 3px #80d5ff14;
+}
+.dashboard-shell.unified-dashboard :is(.dash-week, .dash-season) {
+  border-color: var(--ud-border);
+  background: #142a3c88;
+  box-shadow: inset 0 1px 0 #ffffff08;
+}
+
+/* Only the hero's outer material changes; its dimensions and animation are untouched. */
+.dashboard-shell.unified-dashboard .ud-hero {
+  background: radial-gradient(ellipse at 86% 54%, #24577355, transparent 65%), linear-gradient(110deg, #102638f2, #0d1e2bf5);
+  border-color: var(--glass-edge);
+  border-radius: 18px;
+  box-shadow: var(--glass-shadow);
+}
+.dashboard-shell.unified-dashboard :is(.ud-panel, .pulse-card, .pi-panel, .mx-panel, .ph-panel, .mb-panel, .review-panel, .review-metric, .review-method) {
+  background: var(--glass-surface);
+  border-color: var(--glass-edge);
+  border-radius: 16px;
+  box-shadow: var(--glass-shadow);
+}
+.dashboard-shell.unified-dashboard .ud-bottom-grid .dp-player-card {
+  background: var(--glass-surface);
+  border-color: var(--glass-edge);
+  border-radius: 14px;
+  /* Carousel clipping stays clean at the first/last card. */
+  box-shadow: inset 0 1px 0 #e6f6ff09;
+}
+.dashboard-shell.unified-dashboard :is(.mb-offer, .mr-player, .mr-panel, .mr-score-card, .mr-method, .ic-panel, .ic-odds-tile) {
+  background: linear-gradient(135deg, #142a3bdb, #0c1c2be8);
+  border-color: var(--ud-border);
+  box-shadow: inset 0 1px 0 #ffffff07;
+}
+.dashboard-shell.unified-dashboard .refresh-status {
+  background: linear-gradient(110deg, #142b3bd9, #0d1e2be8);
+  border-color: var(--ud-border);
+  border-radius: 12px;
+  box-shadow: inset 0 1px 0 #ffffff08;
+}
+.dashboard-shell.unified-dashboard .score-ticker {
+  background: #0d1c2ad9;
+  border-color: var(--ud-border);
+  box-shadow: inset 0 1px 0 #ffffff06;
+}
+.dashboard-shell.unified-dashboard .ud-game { border-bottom-color: #a4d5ec16; }
+.dashboard-shell.unified-dashboard .ud-game.is-selected {
+  background: linear-gradient(105deg, #194256a8, #122d40a8);
+  border-radius: 9px;
+  box-shadow: inset 3px 0 0 #80d5ff, inset 0 1px 0 #b8ecff12;
+}
+.dashboard-shell.unified-dashboard :is(.ud-tag, .dp-week-label, .pi-badge, .ph-badge) {
+  background: #17374b80;
+  border-color: #9acfe936;
+}
+.dashboard-shell.unified-dashboard :is(.ud-moneyline, .dp-player-opponent) {
+  background: #091b2b99;
+  border-color: var(--ud-border);
+  box-shadow: var(--glass-inset);
+}
+
+/* Shared recessed control trays retain all existing choices and responsive sizing. */
+.dashboard-shell.unified-dashboard :is(.ud-forecast .model-switch, .pi-positions, .ph-family, .ph-sources, .mb-view-switch, .mr-toggle) {
+  background: #061421b8;
+  border-color: var(--ud-border);
+  box-shadow: var(--glass-inset);
+  border-radius: 10px;
+}
+.dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) :is(input:not([type=checkbox]), select),
+.dashboard-shell.unified-dashboard .ud-forecast .forecast-sort,
+.dashboard-shell.unified-dashboard .pulse-heading select {
+  background-color: #091827ed;
+  border-color: var(--glass-edge);
+  box-shadow: var(--glass-inset);
+  border-radius: 8px;
+}
+.dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) button:where(:not([aria-pressed=true]):not(.active):not(.mb-primary):not(.mb-mobile-slip):not(.mb-selected):not(:disabled)) {
+  background-color: #132c3eb3;
+  border-color: var(--glass-edge);
+  box-shadow: inset 0 1px 0 #d5efff08, 0 2px 5px #0002;
+}
+.dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) button[aria-pressed=true],
+.dashboard-shell.unified-dashboard .mb-page button.active,
+.dashboard-shell.unified-dashboard .ud-forecast .model-switch button.active,
+.dashboard-shell.unified-dashboard .ic-tabs button.ic-active,
+.dashboard-shell.unified-dashboard .mr-toggle button[aria-pressed=true] {
+  color: #c6f4ff;
+  background: linear-gradient(135deg, #24536bed, #153b51ed);
+  border-color: #80d5ff80;
+  box-shadow: inset 0 1px 0 #d9f6ff24, 0 2px 5px #0003;
+}
+.dashboard-shell.unified-dashboard .mb-page .mb-selected {
+  background: linear-gradient(135deg, #154540, #102f33);
+  border-color: #79dbb866;
+}
+.dashboard-shell.unified-dashboard .ud-details-button {
+  background: linear-gradient(135deg, #a0e4ff, #78cde9);
+  box-shadow: inset 0 1px 0 #ffffff66, 0 3px 10px #0002;
+  border-radius: 9px;
+}
+.dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) :is(input, select)[aria-invalid=true] { border-color: #e5a293; }
+.dashboard-shell.unified-dashboard :is(button, a, summary, input, select):focus-visible {
+  outline: 2px solid #9ce5ff;
+  outline-offset: 3px;
+}
+.dashboard-shell.unified-dashboard .ud-game:focus-visible { outline-offset: -3px; }
+
+.dashboard-shell.unified-dashboard .ic-overlay { background: #020914ba; }
+.dashboard-shell.unified-dashboard .ic-dialog {
+  background: linear-gradient(135deg, #172d40fa, #0a1928fc);
+  border-color: #b6def547;
+  border-radius: 18px;
+  box-shadow: inset 0 1px 0 #e6f6ff14, 0 28px 90px #0009;
+}
+.dashboard-shell.unified-dashboard .ic-header {
+  background: #112637f5;
+  border-bottom-color: var(--ud-border);
+}
+.dashboard-shell.unified-dashboard .ic-tabs {
+  background: #071522b8;
+  border-color: var(--ud-border);
+  box-shadow: var(--glass-inset);
+}
+@supports ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .dashboard-shell.unified-dashboard .dash-sidebar {
+    background: #091320df;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+  }
+  .dashboard-shell.unified-dashboard .ic-overlay {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+  }
+}
+@media (hover: hover) {
+  .dashboard-shell.unified-dashboard .dash-nav-item:hover { background-color: #1a354866; color: #effaff; }
+  .dashboard-shell.unified-dashboard .ud-game:not(.is-selected):hover { background: #21425755; }
+  .dashboard-shell.unified-dashboard .mb-offer:hover { border-color: #80d5ff66; }
+  .dashboard-shell.unified-dashboard .ud-details-button:hover { box-shadow: inset 0 1px 0 #ffffff88, 0 4px 16px #67cfff26; }
+}
+
+/* Short data arrival; no delayed cards, bouncing charts, or changes to the hero timeline. */
+.dashboard-shell.unified-dashboard .ud-matchup-grid { animation: glass-content-in 220ms var(--ease-ui); }
+@keyframes glass-content-in { from { opacity: .45; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+/* One shimmer per loading region, rather than one composited animation per placeholder. */
+.dashboard-shell.unified-dashboard .loading-surface { position: relative; isolation: isolate; }
+.dashboard-shell.unified-dashboard .loading-surface::after {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: linear-gradient(105deg, transparent 30%, #b2e6ff09 48%, transparent 66%);
+  background-size: 220% 100%;
+  animation: glass-loading 1.8s ease-in-out infinite;
+}
+@keyframes glass-loading { from { background-position: 140% 0; } to { background-position: -120% 0; } }
+.dashboard-shell.unified-dashboard .loading-card {
+  background: var(--glass-surface); border-color: var(--ud-border); border-radius: 16px;
+  box-shadow: inset 0 1px 0 #ffffff08;
+}
+.dashboard-shell.unified-dashboard :is(.loading-card i, .loading-card > span, .loading-filter) { background: #213b4e; }
+.loading-matchup-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.dashboard-shell.unified-dashboard .loading-matchups { min-height: 0; padding: 0; }
+.loading-slate, .loading-focus { min-width: 0; border: 1px solid var(--ud-border); border-radius: 16px; background: var(--glass-surface); padding: 19px; }
+.loading-matchup-grid :is(i,b) { display: block; height: 12px; border-radius: 5px; background: #213b4e; }
+.loading-slate-heading { display: grid; gap: 10px; padding-bottom: 20px; }
+.loading-slate-heading i:first-child { width: 48%; height: 20px; }
+.loading-slate-heading i:last-child { width: 65%; height: 9px; }
+.loading-game { display: flex; align-items: center; gap: 12px; padding: 17px 0; border-top: 1px solid var(--ud-border); }
+.loading-game > span { width: 28px; height: 28px; flex-shrink: 0; background: #213b4e; border-radius: 50%; }
+.loading-game > div { display: grid; gap: 10px; flex: 1; }
+.loading-game i:first-child { width: 70%; }
+.loading-game i:last-child { width: 50%; height: 8px; }
+.loading-game > b { width: 23%; height: 8px; }
+.loading-focus { display: flex; flex-direction: column; gap: 12px; }
+.loading-focus > i:first-child { width: 30%; height: 10px; }
+.loading-focus > i:nth-child(2) { width: 48%; height: 22px; }
+.loading-focus .loading-wheel { width: 142px; height: 142px; align-self: center; border: 13px solid #213b4e; border-radius: 50%; box-sizing: border-box; margin: 16px 0; }
+.loading-qbs { display: flex; justify-content: space-between; gap: 24px; margin-top: auto; padding: 16px 0; border-top: 1px solid var(--ud-border); }
+.loading-qbs > i { width: 40%; height: 25px; }
+.loading-focus > b { height: 40px; }
+@media (max-width: 850px) { .loading-matchup-grid { grid-template-columns: 1fr; } }
+@media (max-width: 650px) {
+  .dashboard-shell.unified-dashboard .dash-sidebar { box-shadow: 0 4px 16px #0003; }
+  .dashboard-shell.unified-dashboard .ic-dialog { border-radius: 14px; }
+  .loading-slate, .loading-focus { padding: 16px; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .dashboard-shell.unified-dashboard .dash-sidebar,
+  .dashboard-shell.unified-dashboard .ic-header { background: #0d1c2b; -webkit-backdrop-filter: none; backdrop-filter: none; }
+  .dashboard-shell.unified-dashboard .ic-overlay { background: #020914ed; -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dashboard-shell.unified-dashboard .ud-matchup-grid,
+  .dashboard-shell.unified-dashboard .loading-surface::after { animation: none; }
+  .dashboard-shell.unified-dashboard .loading-surface::after { display: none; }
+}

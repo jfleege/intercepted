@@ -20,7 +20,8 @@ const browser=await chromium.launch({executablePath:process.env.CHROME_BIN||unde
 await mkdir('qa/insights',{recursive:true});
 try {
  for(const width of [375,650,900,1440]) {
-  const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});page.on('pageerror',e=>errors.push(e.message));
+  const browserContext=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'});
+  const page=await browserContext.newPage();page.on('pageerror',e=>errors.push(e.message));
   await page.clock.install({time:new Date(now)});
   await page.route('**/*',r=>{const req=r.request();if(req.url().startsWith('http://127.0.0.1:4174'))return req.url().endsWith('/forecast_insights.json')?r.fulfill({json:fixture}):r.continue();return r.fulfill(req.resourceType()==='image'?{contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg"/>'}:{json:{events:[]}});});
   await page.goto(base);await page.locator('.ud-game').first().waitFor();await page.locator('.dp-player-card').first().waitFor();
@@ -55,7 +56,7 @@ try {
   await monitoring.screenshot({path:`qa/insights/${width}-monitor-fixture.png`});
   const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();audits.push({width,violations:result.violations});assert.deepEqual(result.violations.map(v=>v.id),[]);
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
-  await page.close();console.log(`PASS insights ${width}px fixture: source-bound context, out exclusion/disabled edited offers, usage, changes/filter/deltas, calibration windows, no overflow and zero accessibility violations.`);
+  await browserContext.close();console.log(`PASS insights ${width}px fixture: source-bound context, out exclusion/disabled edited offers, usage, changes/filter/deltas, calibration windows, no overflow and zero accessibility violations.`);
  }
  const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
  await page.route('**/forecast_insights.json',r=>r.fulfill({status:503,body:'unavailable'}));

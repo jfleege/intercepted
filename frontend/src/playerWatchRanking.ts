@@ -21,7 +21,7 @@ function percentile(value: number, values: number[]) {
   if (values.length === 1) return .5;
   return (values.filter(v => v < value).length + (values.filter(v => v === value).length - 1) / 2) / (values.length - 1);
 }
-export function rankWatchPlayers<T extends WatchPlayer>(data: {season: number; week: number; games: Record<string, WatchMatchup<T>>}, report: WatchReport | null, mode: 'blend' | 'form') {
+export function rankWatchPlayers<T extends WatchPlayer>(data: {season: number; week: number; games: Record<string, WatchMatchup<T>>}, report: WatchReport | null, mode: 'blend' | 'form', excludedIds: string[] = []) {
   const matches = report?.season === data.season && report.week === data.week;
   const all = Object.entries(data.games).flatMap(([id, game]) => {
     const projections = matches ? report.games[id]?.players ?? [] : [];
@@ -33,7 +33,7 @@ export function rankWatchPlayers<T extends WatchPlayer>(data: {season: number; w
       return { ...player, opponent, isHome: side === 'home', projection: valid ? p : undefined };
     }));
   });
-  const unique: RankedPlayer<T>[] = Array.from(new Map(all.map(p => [p.player_id, p])).values());
+  const unique: RankedPlayer<T>[] = Array.from(new Map(all.map(p => [p.player_id, p])).values()).filter(p => !excludedIds.includes(p.player_id));
   const eligible = unique.filter(p => p.projection && Number.isFinite(p.recent_average) && Number.isFinite(p.season_average));
   const blended = mode === 'blend' && eligible.length > 0;
   const lift = (p: T) => (p.recent_average - p.season_average) / Math.max(floors[p.position] ?? 20, p.season_average);

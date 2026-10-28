@@ -1,0 +1,68 @@
+import {chromium} from 'playwright';
+import AxeBuilder from '@axe-core/playwright';
+import assert from 'node:assert/strict';
+import {readFile,mkdir,writeFile} from 'node:fs/promises';
+import process from 'node:process';
+import {rankWatchPlayers} from '../src/playerWatchRanking.ts';
+const base='http://127.0.0.1:4174/intercepted/';
+const read=async f=>JSON.parse(await readFile(`public/${f}.json`,'utf8'));
+const [slate,report,watch,source]=await Promise.all(['predictions','matchup_research','players_watch','forecast_insights'].map(read));
+const candidate=rankWatchPlayers(watch,report,'blend').players.find(p=>source.players.some(c=>c.player_id===p.player_id&&c.usage.estimate!==null));
+assert.ok(candidate);const context=source.players.find(c=>c.player_id===candidate.player_id);
+const fixture=structuredClone(source),now=Date.parse(source.exported_at),at=source.exported_at;
+const player=fixture.players.find(c=>c.player_id===candidate.player_id);
+player.availability={...player.availability,status:'Out',blocked:true,observed_at:at};
+player.starter={...player.starter,status:'listed_first_unit',rank:1,updated_at:at};
+fixture.changes=[{id:'fixture-yards',season:slate.season,week:slate.week,game_id:context.game_id,matchup:`${context.team} @ ${context.opponent}`,field:`${candidate.player_id}:expected_yards`,label:`${candidate.name} · expected yards`,player_id:candidate.player_id,unit:'yards',before:100,after:130,delta:30,previous_observed_at:new Date(now-3600000).toISOString(),observed_at:at,source_at:at,reasons:['Browser fixture only; no production forecast is changed.']}];
+fixture.monitoring.alerts=[{id:'fixture-monitor',severity:'review',message:'Fixture calibration review signal.'}];
+fixture.monitoring.calibration=[{target:'winner:v5_qb_plus',version:'fixture-test-only',family:'winners',samples:200,minimum:100,status:'review',windows:[0,1].map(i=>({samples:100,predicted:.65,observed:.5,gap:.15,ece:.15,start:`2026-0${8-i}-01`,end:`2026-0${8-i}-20`}))}];
+const browser=await chromium.launch({executablePath:process.env.CHROME_BIN||undefined}),errors=[],audits=[];
+await mkdir('qa/insights',{recursive:true});
+try {
+ for(const width of [375,650,900,1440]) {
+  const browserContext=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'});
+  const page=await browserContext.newPage();page.on('pageerror',e=>errors.push(e.message));
+  await page.clock.install({time:new Date(now)});
+  await page.route('**/*',r=>{const req=r.request();if(req.url().startsWith('http://127.0.0.1:4174'))return req.url().endsWith('/forecast_insights.json')?r.fulfill({json:fixture}):r.continue();return r.fulfill(req.resourceType()==='image'?{contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg"/>'}:{json:{events:[]}});});
+  await page.goto(base);await page.locator('.ud-game').first().waitFor();await page.locator('.dp-player-card').first().waitFor();
+  await page.locator('.fi-updates').first().locator('summary').first().click();await page.locator('.fi-change').first().waitFor();
+  assert.equal(await page.locator('.fi-change-value b').first().textContent(),'+30.0 yd');
+  await page.getByLabel('Forecast change type',{exact:true}).selectOption('td');assert.equal(await page.locator('.fi-change').count(),0);
+  await page.getByLabel('Forecast change type',{exact:true}).selectOption('yards');assert.equal(await page.locator('.fi-change').count(),1);
+  await page.locator('.fi-updates').first().screenshot({path:`qa/insights/${width}-changes-fixture.png`});
+  assert.ok(!(await page.locator('.dp-player-identity strong').allTextContents()).includes(candidate.name));
+  await page.locator('.dash-nav a[href="#players"]').click();await page.locator('.pi-player-row').first().waitFor();
+  await page.getByLabel('Search players',{exact:true}).fill(candidate.name);
+  await page.waitForFunction(name=>document.querySelector('.pi-identity h2')?.textContent.includes(name),candidate.name);
+  const panel=page.locator('.fi-player-context');await panel.waitFor();
+  assert.equal(await panel.getByText('Reported out',{exact:true}).count(),1);
+  assert.equal(await panel.getByText('Depth-chart first unit',{exact:true}).count(),1);
+  assert.ok((await panel.textContent()).includes(player.usage.estimate.toFixed(1)));
+  await panel.screenshot({path:`qa/insights/${width}-player-fixture.png`});
+  await page.locator('.pi-more > summary').click();await page.getByLabel('Player availability',{exact:true}).selectOption('exclude_out');
+  assert.equal(await page.locator('.pi-player-row').count(),0);
+  await page.getByLabel('Player availability',{exact:true}).selectOption('all');await page.locator('.pi-player-row').first().waitFor();
+  await page.locator('.dash-nav a[href="#markets"]').click();await page.locator('.mb-offer').first().waitFor();
+  await page.getByLabel('Market game',{exact:true}).selectOption(player.game_id);await page.getByRole('button',{name:'Player yards',exact:true}).click();
+  await page.getByLabel('Search teams or matchups',{exact:true}).fill(candidate.name);
+  const offer=page.locator('.mb-offer').filter({has:page.getByRole('heading',{name:candidate.name,exact:true})}).first();await offer.waitFor();
+  assert.ok(await offer.getByRole('button',{name:'Reported out · selection unavailable',exact:true}).isDisabled());
+  const input=offer.locator('.mb-target input');if(await input.count()){await input.fill('55.5');assert.ok(await offer.getByRole('button',{name:'Reported out · selection unavailable',exact:true}).isDisabled());}
+  await offer.screenshot({path:`qa/insights/${width}-out-market-fixture.png`});
+  await page.locator('.dash-nav a[href="#performance"]').click();await page.locator('.fi-monitor').waitFor();
+  const monitoring=page.locator('.fi-monitor');await monitoring.getByText('Probability calibration drift',{exact:true}).click();
+  assert.ok((await monitoring.textContent()).includes('Automatic retraining is off'));
+  assert.equal(await monitoring.locator('.fi-cal-window b').first().textContent(),'15.0 pp');
+  await monitoring.screenshot({path:`qa/insights/${width}-monitor-fixture.png`});
+  const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();audits.push({width,violations:result.violations});assert.deepEqual(result.violations.map(v=>v.id),[]);
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
+  await browserContext.close();console.log(`PASS insights ${width}px fixture: source-bound context, out exclusion/disabled edited offers, usage, changes/filter/deltas, calibration windows, no overflow and zero accessibility violations.`);
+ }
+ const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'reduce'});
+ await page.route('**/forecast_insights.json',r=>r.fulfill({status:503,body:'unavailable'}));
+ await page.route('https://**/*',r=>r.fulfill(r.request().resourceType()==='image'?{contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg"/>'}:{json:{events:[]}}));
+ await page.goto(base+'#players');await page.locator('.pi-player-row').first().waitFor();await page.locator('.fi-player-context').waitFor();
+ assert.ok((await page.locator('.fi-player-context').textContent()).includes('Availability unknown'));assert.ok(await page.locator('.pi-player-row').count()>0);
+ await page.close();assert.deepEqual(errors,[]);
+ console.log('PASS unavailable context keeps forecasts accessible and never treats missing reports as healthy/out.');
+}finally{await writeFile('qa/insights/accessibility.json',JSON.stringify(audits,null,2));await browser.close();}

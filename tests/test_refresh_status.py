@@ -6,7 +6,7 @@ from src.ml.refresh_status import start, finish, forecast_check, next_check, nex
 from src.ml.refresh_performance import write_json
 
 NOW = '2026-10-27T13:30:00+00:00'
-GOOD = {key: 'success' for key in ('verify', 'forecast', 'results', 'history', 'players', 'research', 'teams', 'directory', 'research_results', 'markets')}
+GOOD = {key: 'success' for key in ('verify', 'forecast', 'results', 'history', 'players', 'research', 'teams', 'directory', 'research_results', 'insights', 'markets')}
 
 class RefreshStatusTests(unittest.TestCase):
     def setUp(self):
@@ -40,7 +40,7 @@ class RefreshStatusTests(unittest.TestCase):
             self.assertEqual(value['attempt']['state'], 'partial')
     def test_results_only_does_not_claim_full_refresh_and_skipped_odds_is_fine(self):
         start('results', NOW, self.root)
-        value = finish(NOW, {k: 'success' for k in ('verify', 'results', 'history', 'research_results', 'markets')}, self.root)
+        value = finish(NOW, {k: 'success' for k in ('verify', 'results', 'history', 'research_results', 'insights', 'markets')}, self.root)
         self.assertIsNone(value['last_successful_refresh_at'])
         self.assertEqual(value['last_results_refresh_at'], NOW)
         start('full', NOW, self.root)

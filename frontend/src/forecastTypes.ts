@@ -20,6 +20,7 @@ export type Game = PredictionFields & {
   away_projected_qb_name?: string | null;
 };
 export type PredictionData = {
+  generated_at?: string;
   season: number;
   week: number;
   count: number;

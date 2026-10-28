@@ -42,10 +42,11 @@ def main():
     assert 'data/tracking' in archive and 'frontend/public/predictions' in archive
     cases = [
         ('Tuesday noon', 'schedule', '0 12 * * 2', {}, (True, True, False, False)),
-        ('Daily morning', 'schedule', '17 13 * * *', {}, (False, True, True, True)),
+        ('Daily morning', 'schedule', '17 13 * * *', {}, (False, True, True, False)),
         ('Overnight', 'schedule', '47 7 * * *', {}, (False, False, False, False)),
         ('Manual forecast', 'workflow_dispatch', None, {'refresh_forecasts': True}, (True, True, False, False)),
         ('Results-only wins', 'workflow_dispatch', None, {'results_only': True, 'refresh_forecasts': True, 'refresh_odds': True, 'refresh_props': True}, (False, False, False, False)),
+        ('Manual legacy props', 'workflow_dispatch', None, {'refresh_props': True}, (False, False, False, True)),
         ('Push deployment', 'push', None, {}, (False, True, False, False)),
     ]
     for label, event, cron, inputs, expected in cases:

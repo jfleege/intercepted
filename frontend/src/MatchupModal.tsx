@@ -1,4 +1,5 @@
 import { fetchSnapshot } from "./snapshotCache";
+import type { QbSelection } from "./forecastTypes";
 import { TEAM_NAMES } from "./teams";
 import { probability, MODEL_LABELS } from "./predictionModels";
 import type { Model, PredictionFields } from "./predictionModels";
@@ -16,6 +17,8 @@ export type Matchup = PredictionFields & {
   game_date: string;
   home_team: string;
   away_team: string;
+  home_qb_selection?: QbSelection;
+  away_qb_selection?: QbSelection;
   home_projected_qb_name?: string | null;
   away_projected_qb_name?: string | null;
 };
@@ -185,6 +188,7 @@ export default function MatchupModal({
       </div>
       <div className="ic-qb">
         {game.away_projected_qb_name ?? "QB unavailable"}
+        {game.away_qb_selection?.ngs_coverage_note && <small className="qb-coverage-note">{game.away_qb_selection.ngs_coverage_note}</small>}
       </div>
     </div>
 
@@ -211,6 +215,7 @@ export default function MatchupModal({
       </div>
       <div className="ic-qb">
         {game.home_projected_qb_name ?? "QB unavailable"}
+        {game.home_qb_selection?.ngs_coverage_note && <small className="qb-coverage-note">{game.home_qb_selection.ngs_coverage_note}</small>}
       </div>
     </div>
   </div>

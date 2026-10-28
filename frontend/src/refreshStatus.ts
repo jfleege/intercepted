@@ -28,6 +28,7 @@ export function statusSummary(status: RefreshStatus | null, now: number) {
   if (!check || check.active_season !== status.active_season || check.active_week !== status.active_week) return {tone: 'muted', label: 'Weekly check not yet recorded'};
   const checked = validDate(check.checked_at);
   if (checked === null || checked > now + 5 * 60_000 || now - checked > 30 * 3_600_000) return {tone: 'warning', label: 'Weekly check needs an update'};
+  if (check.state === 'current_limited_qb') return {tone: 'warning', label: 'Current slate · limited QB tracking'};
   if (check.state === 'waiting_stats') return {tone: 'warning', label: `Waiting for Week ${check.target_week ?? '—'} stats`};
   if (check.state === 'waiting_games') return {tone: 'good', label: 'Current slate · awaiting final games'};
   if (check.state === 'season_complete') return {tone: 'muted', label: 'Regular season complete'};

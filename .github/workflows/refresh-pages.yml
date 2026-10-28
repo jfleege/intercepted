@@ -9,6 +9,7 @@ on:
       - src/ml/refresh_markets.py
       - src/ml/weekly_forecast.py
       - src/ml/refresh_status.py
+      - .github/workflows/refresh-pages.yml
       - src/ml/export_prediction_history.py
       - src/ml/projection_features.py
       - src/ml/projection_models.py
@@ -31,6 +32,9 @@ on:
     - cron: "17 13 * * *"
     # results after overnight games; no additional odds call
     - cron: "47 7 * * *"
+    # Weekly archive + rollover retry, fixed at noon Chicago time across DST.
+    - cron: "0 12 * * 2"
+      timezone: "America/Chicago"
   workflow_dispatch:
     inputs:
       refresh_forecasts:
@@ -97,9 +101,22 @@ jobs:
       - name: Verify results grading
         id: verify
         run: python -m unittest discover -s tests -v
+      - name: Archive the published slate before the Tuesday rollover check
+        id: pre_rollover
+        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '0 12 * * 2') || inputs.refresh_forecasts)
+        run: |
+          python -m src.ml.refresh_performance --import-git-history
+          python -m src.ml.export_prediction_history
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/tracking frontend/public/performance.json frontend/public/predictions frontend/public/prediction_weeks.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Archive published forecasts and final results before rollover"
+            git push origin HEAD:main
+          fi
       - name: Advance weekly forecasts when the prior slate is complete
         id: forecast
-        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_forecasts || github.event_name == 'push')
+        if: inputs.results_only != true && ((github.event_name == 'schedule' && (github.event.schedule == '17 13 * * *' || github.event.schedule == '0 12 * * 2')) || inputs.refresh_forecasts || github.event_name == 'push')
         run: python -m src.ml.weekly_forecast
       - name: Archive forecasts and refresh final results
         id: results
@@ -189,7 +206,7 @@ jobs:
         if: always()
         env:
           REFRESH_OUTCOMES: >-
-            {"verify":"${{ steps.verify.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
+            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
         run: python -m src.ml.refresh_status finish
       - name: Persist refresh status evidence
         if: always()

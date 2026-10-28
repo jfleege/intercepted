@@ -13,6 +13,7 @@ from src.features.qb_starters import load_reports, resolve_qb, changed_report_ga
 from src.ml.model_registry import available_models, model_metadata
 from src.features.model_context import context_features
 from src.ml.refresh_status import forecast_check
+from src.features.qb_coverage import missing_ngs_weeks, low_volume_exclusions, coverage_message, coverage_metadata
 
 
 class DataPending(Exception):
@@ -30,7 +31,7 @@ def target_slate(rows, now):
     return season, None, []
 
 
-def check_coverage(rows, weekly, expanded, ngs, season, week, now):
+def check_coverage(rows, weekly, expanded, ngs, season, week, now, boxscores=None):
     """Require every expected historical team-game, not merely a latest-week maximum."""
     expected = set()
     for row in rows:
@@ -48,15 +49,16 @@ def check_coverage(rows, weekly, expanded, ngs, season, week, now):
                   if x['season'] == season - 1 or (x['season'] == season and x['week'] < week)]
         if len(actual) != len(set(actual)) or set(actual) != expected:
             raise DataPending(f"{label} coverage incomplete: {len(set(actual) & expected)}/{len(expected)} team-games")
-    # NGS does not include a schedule game ID. Check a primary passer for every team-week.
-    expected_qb = {(r['season'], r['week'], ALIASES.get(r[f'{side}_team'], r[f'{side}_team']))
-                   for r in rows for side in ('home', 'away')
-                   if r.get('game_type') == 'REG' and r['season'] == season and r['week'] < week
-                   and normalize_result(r, now)['status'] == 'final'}
-    actual_qb = {(r['season'], r['week'], ALIASES.get(r['team_abbr'], r['team_abbr']))
-                 for r in ngs.to_dicts() if r.get('attempts', 0) > 0 and r.get('player_gsis_id')}
-    if not expected_qb.issubset(actual_qb):
-        raise DataPending(f"QB statistics missing {len(expected_qb - actual_qb)} completed team-weeks")
+    missing = missing_ngs_weeks(rows, ngs.to_dicts(), season, week, now)
+    if not missing:
+        return []
+    labels = ', '.join(f'{team} {year} Week {prior_week}' for year, prior_week, team in missing)
+    if boxscores is None:
+        raise DataPending(f'QB statistics missing: {labels}')
+    try:
+        return low_volume_exclusions(missing, rows, ngs.to_dicts(), *boxscores, season, week, now)
+    except ValueError as error:
+        raise DataPending(f'QB statistics missing: {labels}. {error}') from error
 
 
 def generate(rows, games, season, week, now):
@@ -86,7 +88,13 @@ def generate(rows, games, season, week, now):
     if 'season_type' in ngs.columns:
         ngs = ngs.filter(pl.col('season_type').is_in(['REG', 'REGULAR']))
     ngs = ngs.filter(pl.col('week').is_between(1, 18)).with_columns(pl.col('team_abbr').replace(ALIASES))
-    check_coverage(rows, weekly, expanded, ngs, season, week, now)
+    boxscores = None
+    if missing_ngs_weeks(rows, ngs.to_dicts(), season, week, now):
+        try:
+            boxscores = (nfl.load_player_stats([season]).to_dicts(), nfl.load_team_stats([season]).to_dicts())
+        except Exception as error:
+            raise DataPending('Cannot reconcile missing NGS with completed-game box scores') from error
+    coverage_exclusions = check_coverage(rows, weekly, expanded, ngs, season, week, now, boxscores)
     previous = weekly.filter(pl.col('season') == season - 1)
     teams = sorted({ALIASES.get(g[f'{side}_team'], g[f'{side}_team']) for g in games for side in ('home', 'away')})
     preseason = []
@@ -102,6 +110,11 @@ def generate(rows, games, season, week, now):
     priors = pl.DataFrame(preseason)
     ratings = {team: prepare_team_features(team, season, week, weekly, expanded, priors) for team in teams}
     histories = build_qb_snapshots(ngs, season, week)
+    for exclusion in coverage_exclusions:
+        snapshot = histories.get(exclusion['player_id'])
+        if not snapshot or not all(math.isfinite(value) for value in snapshot.values()):
+            raise DataPending(f"{exclusion['team']}: identified QB does not have usable saved NGS features")
+        print(f"::notice::Qualified NGS omission: {exclusion['team']} Week {exclusion['week']}, {exclusion['name']} ({exclusion['attempts']} attempts).")
     reports = load_reports()
     ngs_rows = ngs.to_dicts()
     now = utcnow()  # Data downloads may cross kickoff; use the actual serving clock.
@@ -116,7 +129,7 @@ def generate(rows, games, season, week, now):
         features.update(context_features(game, rows))
         qb_features = {}
         for side, team in [('home', h), ('away', a)]:
-            qb = resolve_qb(game, team, ngs_rows, reports, now)
+            qb = resolve_qb(game, team, ngs_rows, reports, now, coverage_exclusions)
             history = histories.get(qb['player_id'])
             record[f'{side}_projected_qb_name'] = qb['name']
             record[f'{side}_projected_qb_id'] = qb['player_id']
@@ -160,7 +173,8 @@ def generate(rows, games, season, week, now):
     print(f"Features through Week {week - 1}; training cutoffs: " + str({m: (model_metadata(metadata, m)['latest_training_season'], model_metadata(metadata, m)['latest_training_week']) for m in models}))
     return {'season': season, 'week': week, 'count': len(records), 'model': 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus', 'models': list(models), 'generated_at': now,
             'features_through_week': week - 1, 'training_cutoff': [model_metadata(metadata, 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus')['latest_training_season'], model_metadata(metadata, 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus')['latest_training_week']],
-            'qb_projection_method': 'Game-specific sourced reports; otherwise unconfirmed prior-week passer', 'games': records}, metadata
+            'qb_projection_method': 'Game-specific sourced reports; otherwise an unconfirmed prior-game passer with reconciled low-volume exclusions',
+            'qb_coverage': coverage_metadata(records, coverage_exclusions), 'games': records}, metadata
 
 
 def main():
@@ -187,6 +201,8 @@ def main():
             message = ('Regular-season slate complete.' if week is None else
                        f'{remaining} game(s) still awaiting final results in Week {week}.' if remaining else
                        'Published forecast slate is current.')
+            if week is not None and current.get('qb_coverage', {}).get('limited_inputs'):
+                state, message = 'current_limited_qb', coverage_message(current)
             forecast_check(current, season, week, state, message, now)
         print('Published slate and starter reports are current; no forecast changes.')
         return
@@ -210,7 +226,7 @@ def main():
     archive(payload, metadata, payload['generated_at'], {'kind': 'weekly_automation', 'commit': git('rev-parse', 'HEAD')},
             model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in available_models(metadata)})
     write_json(ROOT / 'frontend/public/predictions.json', payload)
-    forecast_check(payload, season, week, 'current', 'Published forecast slate is current.', utcnow())
+    forecast_check(payload, season, week, 'current_limited_qb' if payload.get('qb_coverage', {}).get('limited_inputs') else 'current', coverage_message(payload), utcnow())
     print(f"Published {payload['count']} forecasts for {season} Week {week}.")
 
 

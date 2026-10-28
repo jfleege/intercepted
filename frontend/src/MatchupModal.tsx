@@ -1,4 +1,5 @@
 import { fetchSnapshot } from "./snapshotCache";
+import type { QbSelection } from "./forecastTypes";
 import { TEAM_NAMES } from "./teams";
 import { probability, MODEL_LABELS } from "./predictionModels";
 import type { Model, PredictionFields } from "./predictionModels";
@@ -16,6 +17,8 @@ export type Matchup = PredictionFields & {
   game_date: string;
   home_team: string;
   away_team: string;
+  home_qb_selection?: QbSelection;
+  away_qb_selection?: QbSelection;
   home_projected_qb_name?: string | null;
   away_projected_qb_name?: string | null;
 };
@@ -215,6 +218,8 @@ export default function MatchupModal({
     </div>
   </div>
 </div>
+
+{(['away','home'] as const).map(side=>game[`${side}_qb_selection`]?.ngs_coverage_note && <p className="qb-coverage-note ic-coverage-note" key={side}><strong>{game[`${side}_team`]} tracking inputs</strong><span>{game[`${side}_qb_selection`]?.ngs_coverage_note}</span></p>)}
 
 
         <div className="ic-probs">

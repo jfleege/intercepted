@@ -30,7 +30,21 @@ def current_report(game, team, reports, now):
     return report
 
 
-def resolve_qb(game, team, ngs_rows, reports, now):
+def annotate_ngs_limit(selection, history, exclusions, team, season, week):
+    omissions = [r for r in exclusions if r['team'] == team and r['season'] == season and r['week'] < week and r['player_id'] == selection['player_id']]
+    available = [r for r in history if r['player_gsis_id'] == selection['player_id']]
+    if not omissions or not available:
+        return selection
+    omission = max(omissions, key=lambda r: (r['season'],r['week']))
+    latest = max(available, key=lambda r: (r['season'],r['week']))
+    if (latest['season'], latest['week']) >= (omission['season'], omission['week']):
+        return selection
+    return {**selection, 'ngs_through_season': latest['season'], 'ngs_through_week': latest['week'],
+            'ngs_exclusion': dict(omission),
+            'ngs_coverage_note': f"Low-volume Week {omission['week']} NGS omitted; using this QB's available tracking history through {latest['season']} Week {latest['week']}"}
+
+
+def resolve_qb(game, team, ngs_rows, reports, now, coverage_exclusions=()):
     season, week = game['season'], game['week']
     history = [r for r in ngs_rows if r.get('player_gsis_id') and (r.get('attempts') or 0) > 0
                and (r['season'] < season or (r['season'] == season and r['week'] < week))]
@@ -44,9 +58,22 @@ def resolve_qb(game, team, ngs_rows, reports, now):
         player_id = ids.pop()
         if report.get('player_id') and report['player_id'] != player_id:
             raise ValueError('Starter report player ID and name disagree')
-        return {'player_id': player_id, 'name': report['name'], 'status': report['status'],
-                'source': report['source'], 'observed_at': report['observed_at']}
+        return annotate_ngs_limit({'player_id': player_id, 'name': report['name'], 'status': report['status'],
+                'source': report['source'], 'observed_at': report['observed_at']}, history, coverage_exclusions, team, season, week)
     candidates = [r for r in history if r['season'] == season and ALIASES.get(r['team_abbr'], r['team_abbr']) == team]
+    omissions = [r for r in coverage_exclusions if r['team'] == team and r['season'] == season and r['week'] < week]
+    latest_omission = max(omissions, key=lambda r: r['week']) if omissions else None
+    if latest_omission and latest_omission['week'] > max((r['week'] for r in candidates), default=0):
+        historical = [r for r in history if r['player_gsis_id'] == latest_omission['player_id']]
+        if not historical:
+            raise ValueError('Qualified NGS exclusion has no matching player history')
+        latest_stats = max(historical, key=lambda r: (r['season'], r['week']))
+        return {'player_id': latest_omission['player_id'], 'name': latest_omission['name'], 'status': 'unconfirmed_proxy',
+                'source': 'Latest completed-game primary passer: reconciled player/team box score and schedule QB ID; not a starter announcement',
+                'observed_at': now, 'selection_method': 'completed_box_score', 'previous_game_id': latest_omission['game_id'],
+                'ngs_through_season': latest_stats['season'], 'ngs_through_week': latest_stats['week'],
+                'ngs_exclusion': dict(latest_omission),
+                'ngs_coverage_note': f"Low-volume Week {latest_omission['week']} NGS omitted; using this QB's available tracking history through {latest_stats['season']} Week {latest_stats['week']}"}
     if not candidates:
         return {'player_id': None, 'name': None, 'status': 'unknown', 'source': 'No prior-week passer', 'observed_at': now}
     row = max(candidates, key=lambda r: (r['week'], r['attempts'], r['player_gsis_id']))
@@ -78,6 +105,9 @@ def merge_revisions(current, regenerated, schedules, now):
                    if g['game_id'] in by_id and kickoff(by_id[g['game_id']]) and stamp(kickoff(by_id[g['game_id']])) > stamp(now)}
     result = {**current, 'generated_at': now, 'revision_reason': 'Sourced QB starter update',
               'games': [replacement.get(g['game_id'], g) for g in current['games']]}
+    if 'qb_coverage' in current or 'qb_coverage' in regenerated:
+        from src.features.qb_coverage import coverage_metadata
+        result['qb_coverage'] = coverage_metadata(result['games'], regenerated.get('qb_coverage', {}).get('exclusions', []))
     result['count'] = len(result['games'])
     return result
 

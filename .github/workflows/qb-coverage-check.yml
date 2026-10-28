@@ -1,0 +1,52 @@
+name: Check low-volume QB tracking coverage
+on:
+  push:
+    branches: [codex/qb-coverage-fallback]
+permissions:
+  contents: read
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate strict coverage and returning-QB selection
+        run: |
+          python -m pip install -r requirements-automation.txt
+          python -m unittest discover -s tests -v
+          python -m scripts.validate_qb_coverage_source
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Validate frontend
+        working-directory: frontend
+        run: |
+          npm ci --no-audit --no-fund --prefer-offline
+          npm run lint
+          npm test
+          npm run build
+          npm install --no-save --package-lock=false --no-audit --no-fund playwright
+      - name: Check QB input disclosure at mobile and desktop sizes
+        working-directory: frontend
+        run: |
+          export CHROME_BIN="$(command -v google-chrome)"
+          npx vite preview --host 127.0.0.1 --port 4174 >/tmp/qb-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/qb-coverage.browser.mjs
+          node tests/unified.browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: qb-coverage-validation
+          path: |
+            qa/qb-coverage/
+            frontend/qa/
+          retention-days: 14

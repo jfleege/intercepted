@@ -9,6 +9,7 @@ test('waiting stats and stale or failed refreshes use distinct evidence',()=>{
  assert.match(statusSummary({...base,attempt:{steps:{research:'failure'}}},now).label,/did not complete/);
  assert.match(statusSummary({...base,last_successful_refresh_at:'2026-10-25T13:00:00Z'},now).label,/overdue/);
  assert.match(statusSummary({...base,sources:[{id:'research',season:2026,week:6}]},now).label,/different week/);
+ assert.equal(statusSummary({...base,forecast_check:{...base.forecast_check,state:'current_limited_qb'}},now).label,'Current slate · limited QB tracking');
  assert.equal(statusSummary(null,now).tone,'muted');
  assert.equal(statusSummary({...base,snapshot_at:'invalid'},now).tone,'muted');
  assert.equal(statusSummary({...base,snapshot_at:'2026-11-01T00:00:00Z'},now).tone,'muted');

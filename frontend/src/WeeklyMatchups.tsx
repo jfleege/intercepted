@@ -44,6 +44,7 @@ export default function WeeklyMatchups({ games, focusedGame, model, archived, on
       <ProbabilityWheel awayTeam={focusedGame.away_team} homeTeam={focusedGame.home_team} homeProb={focusedProbability}/>
       <p className="ud-projected-winner">Projected winner <strong>{focusedWinner ? TEAM_NAMES[focusedWinner] ?? focusedWinner : '—'}</strong></p>
       <div className="ud-projected-qbs"><div><span>{focusedGame.away_team} projected QB</span><strong>{focusedGame.away_projected_qb_name ?? 'QB TBD'}</strong><small>{qbStatus(focusedGame.away_qb_selection?.status)}</small></div><div><span>{focusedGame.home_team} projected QB</span><strong>{focusedGame.home_projected_qb_name ?? 'QB TBD'}</strong><small>{qbStatus(focusedGame.home_qb_selection?.status)}</small></div></div>
+      {(['away','home'] as const).map(side=>focusedGame[`${side}_qb_selection`]?.ngs_coverage_note&&<p className="qb-coverage-note ud-coverage-note" key={side}><strong>{focusedGame[`${side}_team`]} tracking inputs</strong><span>{focusedGame[`${side}_qb_selection`]?.ngs_coverage_note}</span></p>)}
       <button type="button" className="ud-details-button" onClick={() => onAnalysis(focusedGame)}>Full matchup analysis <span aria-hidden="true">→</span></button>
     </section>}
   </div>;

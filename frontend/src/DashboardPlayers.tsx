@@ -1,5 +1,5 @@
 import {useForecastInsights} from './forecastInsightsStore';
-import {availabilityLabel,findContext,reportedOut} from './forecastInsights';
+import {availabilityLabel,findContext,reportedOut,starterLabel} from './forecastInsights';
 import { fetchSnapshot } from "./snapshotCache";
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -154,7 +154,7 @@ function PlayerCard({ player, week, season, gameId, defense, leagueSize }: { pla
         <div><span>Last {player.games_sampled}</span><i className="ud-recent" style={{width:`${Math.max(0, player.recent_average) / scale * 100}%`}}/><b>{player.recent_average.toFixed(1)}</b></div>
         {projection && <div><span>Projected</span><i className="ud-projected" style={{width:`${projection.expected_yards! / scale * 100}%`}}/><b>{projection.expected_yards!.toFixed(1)}</b></div>}
       </div>
-      <p className="fi-availability-note">{availabilityLabel(context,insights.now)}{context?.usage.estimate!=null && context.kickoff && insights.now<Date.parse(context.kickoff) && ` · Usage baseline ${context.usage.estimate.toFixed(1)} ${context.usage.field}`}</p>
+      <p className="fi-availability-note">{availabilityLabel(context,insights.now)} · {starterLabel(context,insights.now)}{context?.usage.estimate!=null && context.kickoff && insights.now<Date.parse(context.kickoff) && ` · Usage baseline ${context.usage.estimate.toFixed(1)} ${context.usage.field}`}</p>
       <div className="ud-player-trend"><span>Change vs. season average</span><strong className={`dp-trend ${trendClass}`}>{trendText}</strong></div>
     </article>
   );

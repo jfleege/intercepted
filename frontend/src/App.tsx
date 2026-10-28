@@ -13,6 +13,7 @@ import DashboardMarkets from "./DashboardMarkets";
 import ScoreTicker from "./ScoreTicker";
 import RefreshStatus from "./RefreshStatus";
 import PagePanel from "./PagePanel";
+import SiteFooter from "./SiteFooter";
 import LoadingSurface from "./LoadingSurface";
 import DashboardMetrics from "./DashboardMetrics";
 import WeeklyMatchups from "./WeeklyMatchups";
@@ -26,7 +27,9 @@ import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};
 
 const RetainedPlayers = memo(lazy(() => import("./PlayersPage"))), RetainedPerformance = memo(lazy(() => import("./PerformancePage"))), RetainedMarkets = memo(lazy(() => import("./MarketsPage"))), RetainedMatchups = memo(lazy(() => import("./MatchupsPage")));
-const routeNames = ['dashboard', 'matchups', 'performance', 'players', 'markets'];
+const infoPages = ['methodology', 'privacy', 'terms'] as const;
+const RetainedSiteInfo = memo(lazy(() => import('./SiteInfoPages')));
+const routeNames = ['dashboard', 'matchups', 'performance', 'players', 'markets', ...infoPages];
 const route = () => routeNames.includes(window.location.hash.slice(1)) ? window.location.hash.slice(1) : 'dashboard';
 function App() {
   const [page, setPage] = useState(route);
@@ -46,7 +49,7 @@ function App() {
     return () => {window.removeEventListener("hashchange", navigate);window.history.scrollRestoration=previousRestoration;};
   }, []);
   useEffect(() => {
-    const labels: Record<string,string> = {dashboard:'',players:'Players',performance:'Performance',markets:'Markets',matchups:'Matchups'};
+    const labels: Record<string,string> = {dashboard:'',players:'Players',performance:'Performance',markets:'Markets',matchups:'Matchups',methodology:'Models & data sources',privacy:'Privacy',terms:'Terms'};
     document.title = labels[page] ? `${labels[page]} | Intercepted` : 'Intercepted';
     const nav=document.querySelector<HTMLElement>('.dash-nav');
     const current=nav?.querySelector<HTMLElement>('[aria-current="page"]');
@@ -124,7 +127,7 @@ const focusedGame =
     </label>
   );
   return (
-    <div className={`app dashboard-shell${(page === "dashboard" || page === "matchups" || page === "performance" || page === "markets" || page === "players") ? " unified-dashboard" : ""}`}>
+    <div className="app dashboard-shell unified-dashboard">
       <a className="skip-link" href="#page-content" onClick={event=>{event.preventDefault();document.getElementById("page-content")?.focus();}}>Skip to content</a>
       {/* sidebar */}
       <aside className="dash-sidebar" inert={!!selectedGame}>
@@ -171,14 +174,14 @@ const focusedGame =
       <div className="dash-workspace">
         {/* top navigation */}
         <div className="dash-topbar" inert={!!selectedGame}>
-          <input
+          {infoPages.some(name => name === page) ? <span className="info-topbar-title">About Intercepted</span> : <input
             className="dash-search"
             type="search"
             placeholder={page === "players" ? "Search players..." : "Search teams or matchups..."}
             aria-label={page === "players" ? "Search players or teams" : "Search teams or matchups"}
             value={search}
             onChange={(event) => setSearch(event.target.value)}
-          />
+          />}
           <div className="dash-topbar-right">
             <span className="dash-week">
               Week {data?.week ?? "—"}
@@ -191,6 +194,7 @@ const focusedGame =
         <main className="container" id="dashboard" inert={!!selectedGame}>
           <div id="page-content" tabIndex={-1}/>
           <RefreshStatus season={currentData?.season} week={currentData?.week}/>
+          {infoPages.filter(name => visited.has(name)).map(name => <PagePanel active={page === name} name={name} key={name}><RetainedSiteInfo page={name}/></PagePanel>)}
           {visited.has('players') && <PagePanel active={page === 'players'} name="players"><RetainedPlayers search={searches.players ?? ''} onSearch={setPlayerSearch}/></PagePanel>}
           {visited.has('performance') && <PagePanel active={page === 'performance'} name="performance"><RetainedPerformance/></PagePanel>}
           {visited.has('markets') && <PagePanel active={page === 'markets'} name="markets"><RetainedMarkets search={searches.markets ?? ''}/></PagePanel>}
@@ -273,16 +277,8 @@ const focusedGame =
 />
 </section>}
           </PagePanel>}
-          {/* footer */}
-          <footer className="footer">
-            <a className="intercepted-footer-brand" href="#dashboard" aria-label="Intercepted dashboard"><img src={`${import.meta.env.BASE_URL}brand/intercepted-logo.svg`} alt="Intercepted"/></a>
-            <p>
-              Predictions are statistical estimates, not
-              guarantees. Projected quarterbacks and inputs
-              may change before kickoff.
-            </p>
-          </footer>
         </main>
+        <SiteFooter inert={!!selectedGame}/>
         {/* matchup popup */}
         {selectedGame && (
           <MatchupModal

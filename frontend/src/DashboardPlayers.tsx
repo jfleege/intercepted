@@ -1,3 +1,5 @@
+import {useForecastInsights} from './forecastInsightsStore';
+import {availabilityLabel,findContext,reportedOut} from './forecastInsights';
 import { fetchSnapshot } from "./snapshotCache";
 
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -81,7 +83,9 @@ function PlayerHeadshot({ player }: { player: Player }) {
 }
 
 // compact player card
-function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlayer; week: number; defense?: DefenseRank; leagueSize?: number }) {
+function PlayerCard({ player, week, season, gameId, defense, leagueSize }: { player: WeeklyPlayer; week: number; season:number; gameId:string; defense?: DefenseRank; leagueSize?: number }) {
+  const insights=useForecastInsights();
+  const context=findContext(insights.data,{season,week},player.player_id,gameId,player.team,player.opponent,insights.now);
   const rushing = player.position === "RB";
   const yardageRank = rushing ? defense?.rush_rank : defense?.pass_rank;
   const yards = rushing ? defense?.rush_yards_allowed_per_game : defense?.pass_yards_allowed_per_game;
@@ -150,6 +154,7 @@ function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlaye
         <div><span>Last {player.games_sampled}</span><i className="ud-recent" style={{width:`${Math.max(0, player.recent_average) / scale * 100}%`}}/><b>{player.recent_average.toFixed(1)}</b></div>
         {projection && <div><span>Projected</span><i className="ud-projected" style={{width:`${projection.expected_yards! / scale * 100}%`}}/><b>{projection.expected_yards!.toFixed(1)}</b></div>}
       </div>
+      <p className="fi-availability-note">{availabilityLabel(context,insights.now)}{context?.usage.estimate!=null && context.kickoff && insights.now<Date.parse(context.kickoff) && ` · Usage baseline ${context.usage.estimate.toFixed(1)} ${context.usage.field}`}</p>
       <div className="ud-player-trend"><span>Change vs. season average</span><strong className={`dp-trend ${trendClass}`}>{trendText}</strong></div>
     </article>
   );
@@ -157,6 +162,7 @@ function PlayerCard({ player, week, defense, leagueSize }: { player: WeeklyPlaye
 
 // weekly player trend leaderboard
 export default function DashboardPlayers() {
+  const insights=useForecastInsights();
   const [data, setData] = useState<PlayerData | null>(null);
   const [error, setError] = useState("");
   const [report, setReport] = useState<WatchReport | null>(null);
@@ -224,7 +230,7 @@ const scrollPlayers = (direction: number) => {
     return () => controller.abort();
   }, [data]);
 
-  const ranking = useMemo(() => data ? rankWatchPlayers(data, report, mode) : {players: [], blended: false, eligible: 0, total: 0}, [data, report, mode]);
+  const ranking = useMemo(() => data ? rankWatchPlayers(data, report, mode, Object.entries(data.games).flatMap(([gid,g])=>([...g.away_players,...g.home_players]).filter(p=>reportedOut(findContext(insights.data,data,p.player_id,gid,p.team,p.team===g.home_team?g.away_team:g.home_team,insights.now),insights.now)).map(p=>p.player_id))) : {players: [], blended: false, eligible: 0, total: 0}, [data, report, mode, insights.data, insights.now]);
   const {players} = ranking;
 
   return (
@@ -291,6 +297,8 @@ const scrollPlayers = (direction: number) => {
         key={player.player_id}
         player={player}
         week={data!.week}
+        season={data!.season}
+        gameId={Object.keys(data!.games).find(gid=>[...data!.games[gid].away_players,...data!.games[gid].home_players].some(p=>p.player_id===player.player_id))??''}
         defense={data?.defense_rankings?.teams[player.opponent]}
         leagueSize={data?.defense_rankings?.league_size}
       />
@@ -300,7 +308,7 @@ const scrollPlayers = (direction: number) => {
 
           <p className="dp-footnote">
             {ranking.blended && <>Ranked equally by projected yardage and recent improvement within position, among {ranking.eligible} tracked players. Experimental estimates, conditional on appearing. </>}
-            Statistics through {data?.as_of}. Trends compare
+            Fresh current-week reported-out players are excluded; unknown status is not healthy clearance. Statistics through {data?.as_of}. Trends compare
             recent yardage with season averages. Opponent defense ranks use points allowed/game; pass and rush ranks use gross yards allowed/game. #1 allows the fewest; completed prior weeks only.
           </p>
         </>

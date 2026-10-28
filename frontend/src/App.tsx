@@ -14,6 +14,8 @@ import ScoreTicker from "./ScoreTicker";
 import RefreshStatus from "./RefreshStatus";
 import PagePanel from "./PagePanel";
 import SiteFooter from "./SiteFooter";
+import {ForecastInsightsProvider} from "./ForecastInsightsContext";
+import {ForecastChanges} from "./ForecastInsightPanels";
 import LoadingSurface from "./LoadingSurface";
 import DashboardMetrics from "./DashboardMetrics";
 import WeeklyMatchups from "./WeeklyMatchups";
@@ -127,7 +129,7 @@ const focusedGame =
     </label>
   );
   return (
-    <div className="app dashboard-shell unified-dashboard">
+    <ForecastInsightsProvider><div className="app dashboard-shell unified-dashboard">
       <a className="skip-link" href="#page-content" onClick={event=>{event.preventDefault();document.getElementById("page-content")?.focus();}}>Skip to content</a>
       {/* sidebar */}
       <aside className="dash-sidebar" inert={!!selectedGame}>
@@ -220,6 +222,7 @@ const focusedGame =
   />
 ) : <div className="score-ticker score-ticker-placeholder" role="status" aria-label="Loading scoreboard"><span>Loading scoreboard…</span></div>}
 <DashboardMetrics data={data} />
+{!archived && <ForecastChanges season={data?.season} week={data?.week}/>}
           {/* predictions */}
           <section
             className="forecast-section ud-forecast"
@@ -289,7 +292,7 @@ const focusedGame =
           />
         )}
       </div>
-    </div>
+    </div></ForecastInsightsProvider>
   );
 }
 export default App;

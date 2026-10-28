@@ -7,7 +7,7 @@ export type PlayerForecast={player_id:string;name:string;team:string;opponent:st
 export type Research={season:number;week:number;games:Record<string,{kickoff:string;generated_at:string;model_version:string;players:PlayerForecast[];scoring:{away:{team:string;expected_points:number};home:{team:string;expected_points:number};total:number;home_margin:number;total_range_80:number[];margin_range_80:number[]}}>};
 export type Quote={bookmaker:string;commence_time:string;last_update:string|null;moneyline_last_update?:string;spreads_last_update?:string;totals_last_update?:string;home_moneyline:number|null;away_moneyline:number|null;home_spread:number|null;away_spread:number|null;home_spread_price?:number;away_spread_price?:number;over_under:number|null;over_price?:number;under_price?:number};
 export type Odds={exported_at:string;games:Record<string,Quote>};
-export type Offer={id:string;contract:string;game_id:string;matchup:string;team:string;name:string;headshot:string|null;bookmaker:string|null;category:'moneyline'|'yardage'|'touchdown'|'total'|'spread';market:string;target:string;direction:'over'|'under'|'yes'|'win';line:number|null;custom:boolean;prediction:number|null;range:number[]|null;probability:number|null;price:number|null;quoteFresh:boolean;quoteAt:string|null;quoteMarketAt?:string|null;quoteEventId?:string|null;quotePlayer?:string|null;kickoff:string|null;source:string;modelVersion:string;modelRange:number[]|null;agreement:string|null;forecastAt:string|null};
+export type Offer={id:string;player_id?:string;contract:string;game_id:string;matchup:string;team:string;name:string;headshot:string|null;bookmaker:string|null;category:'moneyline'|'yardage'|'touchdown'|'total'|'spread';market:string;target:string;direction:'over'|'under'|'yes'|'win';line:number|null;custom:boolean;prediction:number|null;range:number[]|null;probability:number|null;price:number|null;quoteFresh:boolean;quoteAt:string|null;quoteMarketAt?:string|null;quoteEventId?:string|null;quotePlayer?:string|null;kickoff:string|null;source:string;modelVersion:string;modelRange:number[]|null;agreement:string|null;forecastAt:string|null};
 export type Profile='all'|'higher'|'even'|'longer'|'unscored';
 export const DRAFT_KEY='intercepted.projection-slips.v1';
 export type Draft={schema_version:1;id:string;saved_at:string;kind:'unverified_research_draft';stake:number;legs:Offer[];combined_price:number|null;quote_source:'manual_unverified'|'saved_single'|'unavailable';joint_probability:null};
@@ -45,7 +45,7 @@ export function buildOffers(data:PredictionData,research:Research|null,odds:Odds
   for(const p of report.players){
    const opponent=p.team===game.home_team?game.away_team:p.team===game.away_team?game.home_team:null;
    if(p.status!=='available'||p.opponent!==opponent||!opponent)continue;
-   const player={...base,team:p.team,name:p.name,headshot:p.headshot??null,source:'Player yardage model · conditional on appearing'};
+   const player={...base,player_id:p.player_id,team:p.team,name:p.name,headshot:p.headshot??null,source:'Player yardage model · conditional on appearing'};
    if(finite(p.expected_yards)&&['passing','rushing','receiving'].includes(p.stat??'')){
     const target=Math.max(0,Math.floor(p.expected_yards/10)*10);
     result.push({...player,id:`${game.game_id}:${p.player_id}:yards`,contract:`${game.game_id}:${p.player_id}:yards`,category:'yardage',target:p.stat!,market:`Over ${target} ${p.stat} yards`,direction:'over',line:target,custom:true,prediction:p.expected_yards,range:validRange(p.range_80)?p.range_80:null});

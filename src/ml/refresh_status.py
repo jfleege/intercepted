@@ -17,6 +17,7 @@ SOURCES = (
     ('research', 'Matchup projections', 'matchup_research.json', 'generated_at'),
     ('results', 'Game results', 'performance.json', 'updated_at'),
     ('research_results', 'Projection results', 'research_performance.json', 'updated_at'),
+    ('insights', 'Forecast context & checks', 'forecast_insights.json', 'exported_at'),
     ('odds', 'Sportsbook lines', 'odds.json', 'exported_at'),
     ('props', 'Player prop quotes', 'player_props.json', 'exported_at'),
 )
@@ -67,8 +68,8 @@ def finish(now, outcomes=None, root=ROOT):
     attempt = previous.get('attempt', {})
     mode = attempt.get('mode', 'snapshot')
     outcomes = outcomes or {}
-    required = ('verify', 'results', 'history', 'players', 'research', 'teams', 'directory', 'research_results', 'markets')
-    results_required = ('verify', 'results', 'history', 'research_results', 'markets')
+    required = ('verify', 'results', 'history', 'players', 'research', 'teams', 'directory', 'research_results', 'insights', 'markets')
+    results_required = ('verify', 'results', 'history', 'research_results', 'insights', 'markets')
     expected = results_required if mode == 'results' else required
     failed = [key for key, value in outcomes.items() if value in ('failure', 'cancelled')]
     complete = mode in ('full', 'results') and all(outcomes.get(key) == 'success' for key in expected)

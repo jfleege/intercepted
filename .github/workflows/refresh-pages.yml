@@ -27,6 +27,8 @@ on:
       - src/ml/odds_client.py
       - src/ml/export_odds.py
       - src/features/player_intelligence.py
+      - src/features/player_context.py
+      - src/ml/forecast_insights.py
       - src/features/qb_coverage.py
       - src/features/qb_starters.py
   schedule:
@@ -158,6 +160,19 @@ jobs:
         id: research_results
         continue-on-error: true
         run: python -m src.ml.research_performance
+      - name: Observe forecast changes and monitor input/model quality
+        id: insights
+        continue-on-error: true
+        env:
+          RESULTS_CONTEXT_ONLY: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && github.event.schedule == '47 7 * * *')) && '1' || '0' }}
+          FORECAST_INPUT_OUTCOMES: >-
+            {"forecast":"${{ steps.forecast.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}"}
+        run: |
+          if [ "$RESULTS_CONTEXT_ONLY" = "1" ]; then
+            python -m src.ml.forecast_insights --results-only
+          else
+            python -m src.ml.forecast_insights
+          fi
       - name: Refresh odds
         id: odds
         if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)
@@ -208,7 +223,7 @@ jobs:
         if: always()
         env:
           REFRESH_OUTCOMES: >-
-            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
+            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}","insights":"${{ steps.insights.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
         run: python -m src.ml.refresh_status finish
       - name: Persist refresh status evidence
         if: always()
@@ -216,6 +231,9 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add frontend/public/refresh_status.json
+          if [ -f frontend/public/forecast_insights.json ]; then
+            git add frontend/public/forecast_insights.json data/tracking/forecast_insights
+          fi
           if [ -f data/tracking/forecast_refresh_status.json ]; then
             git add data/tracking/forecast_refresh_status.json
           fi
@@ -238,7 +256,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add frontend/public/research_performance.json frontend/public/team_insights data/tracking frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/odds_usage.json frontend/public/player_props.json frontend/public/players_watch.json frontend/public/player_intelligence.json frontend/public/matchup_research.json frontend/public/research models/research docs/research-validation.json
+          git add frontend/public/forecast_insights.json frontend/public/research_performance.json frontend/public/team_insights data/tracking frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/odds_usage.json frontend/public/player_props.json frontend/public/players_watch.json frontend/public/player_intelligence.json frontend/public/matchup_research.json frontend/public/research models/research docs/research-validation.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh weekly forecasts, markets, and game results"
             git push origin HEAD:main

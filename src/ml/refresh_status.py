@@ -4,6 +4,7 @@ import json
 import os
 from datetime import timedelta
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 from src.ml.refresh_performance import ROOT, stamp, utcnow, write_json
 
@@ -29,10 +30,21 @@ def read(path):
         return {}
 
 
+def next_weekly_refresh(now):
+    current = stamp(now)
+    local = current.astimezone(ZoneInfo('America/Chicago'))
+    target = (local + timedelta(days=(1 - local.weekday()) % 7)).replace(hour=12, minute=0, second=0, microsecond=0)
+    if target <= local:
+        target += timedelta(days=7)
+    return stamp(target).isoformat()
+
+
 def next_check(now):
     current = stamp(now)
-    target = current.replace(hour=13, minute=17, second=0, microsecond=0)
-    return (target if target > current else target + timedelta(days=1)).isoformat()
+    morning = current.replace(hour=13, minute=17, second=0, microsecond=0)
+    if morning <= current:
+        morning += timedelta(days=1)
+    return min(morning, stamp(next_weekly_refresh(now))).isoformat()
 
 
 def forecast_check(current, season, week, state, message, now, root=ROOT):
@@ -81,7 +93,8 @@ def finish(now, outcomes=None, root=ROOT):
         'last_successful_refresh_at': previous.get('last_successful_refresh_at'),
         'last_results_refresh_at': previous.get('last_results_refresh_at'),
         'attempt': attempt, 'forecast_check': read(root / CHECK) or None,
-        'next_forecast_check_at': next_check(now), 'sources': sources,
+        'next_forecast_check_at': next_check(now),
+        'next_weekly_refresh_at': next_weekly_refresh(now), 'sources': sources,
     }
     run_id = os.environ.get('GITHUB_RUN_ID', '')
     if run_id.isdigit():

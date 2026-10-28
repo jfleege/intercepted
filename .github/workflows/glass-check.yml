@@ -1,0 +1,45 @@
+name: Check glass interface styling
+on:
+  push:
+    branches: [codex/glass-interface]
+permissions:
+  contents: read
+jobs:
+  interface:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Validate frontend
+        working-directory: frontend
+        run: |
+          npm ci --no-audit --no-fund --prefer-offline
+          npm run lint
+          npm test
+          npm run build
+          npm install --no-save --package-lock=false --no-audit --no-fund playwright @axe-core/playwright
+      - name: Check materials and existing interactions
+        working-directory: frontend
+        run: |
+          export CHROME_BIN="$(command -v google-chrome)"
+          npx vite preview --host 127.0.0.1 --port 4174 >/tmp/glass-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
+            sleep 1
+          done
+          failed=0
+          for check in glass-theme playbook unified interface-polish markets-builder prop-quotes players-page matchups-page performance-hub; do
+            node "tests/$check.browser.mjs" || failed=1
+          done
+          exit "$failed"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: glass-interface-preview
+          path: frontend/qa/
+          retention-days: 14

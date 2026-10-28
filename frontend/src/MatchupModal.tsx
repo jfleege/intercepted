@@ -188,7 +188,6 @@ export default function MatchupModal({
       </div>
       <div className="ic-qb">
         {game.away_projected_qb_name ?? "QB unavailable"}
-        {game.away_qb_selection?.ngs_coverage_note && <small className="qb-coverage-note">{game.away_qb_selection.ngs_coverage_note}</small>}
       </div>
     </div>
 
@@ -215,11 +214,12 @@ export default function MatchupModal({
       </div>
       <div className="ic-qb">
         {game.home_projected_qb_name ?? "QB unavailable"}
-        {game.home_qb_selection?.ngs_coverage_note && <small className="qb-coverage-note">{game.home_qb_selection.ngs_coverage_note}</small>}
       </div>
     </div>
   </div>
 </div>
+
+{(['away','home'] as const).map(side=>game[`${side}_qb_selection`]?.ngs_coverage_note && <p className="qb-coverage-note ic-coverage-note" key={side}><strong>{game[`${side}_team`]} tracking inputs</strong><span>{game[`${side}_qb_selection`]?.ngs_coverage_note}</span></p>)}
 
 
         <div className="ic-probs">

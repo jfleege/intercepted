@@ -116,7 +116,7 @@
   box-shadow: var(--glass-inset);
   border-radius: 8px;
 }
-.dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) button:not([aria-pressed=true]):not(.active):not(.mb-primary):not(.mb-mobile-slip):not(.mb-selected):not(:disabled) {
+.dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) button:where(:not([aria-pressed=true]):not(.active):not(.mb-primary):not(.mb-mobile-slip):not(.mb-selected):not(:disabled)) {
   background-color: #132c3eb3;
   border-color: var(--glass-edge);
   box-shadow: inset 0 1px 0 #d5efff08, 0 2px 5px #0002;
@@ -140,7 +140,7 @@
   box-shadow: inset 0 1px 0 #ffffff66, 0 3px 10px #0002;
   border-radius: 9px;
 }
-.dashboard-shell.unified-dashboard :is(input, select)[aria-invalid=true] { border-color: #e5a293; }
+.dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) :is(input, select)[aria-invalid=true] { border-color: #e5a293; }
 .dashboard-shell.unified-dashboard :is(button, a, summary, input, select):focus-visible {
   outline: 2px solid #9ce5ff;
   outline-offset: 3px;

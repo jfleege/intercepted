@@ -41,7 +41,7 @@ def run(cache):
  for row in rows:
   raw=lookup[(row['player_id'],row['season'],row['week'])]
   g=schedule_by_id[row['game_id']]
-  role=roles.lookup(raw.get('team',raw.get('recent_team')),row['player_id'],kickoff(g))
+  role=roles.lookup(raw.get('team',raw.get('recent_team')),row['player_id'],kickoff(g),row['position'])
   row['role_x']={**row['x'],'depth_rank':role['rank']} if role else None
  fitted={};validation=[];role_fitted={};role_thresholds={}
  for kind in THRESHOLDS:
@@ -104,11 +104,13 @@ def run(cache):
     contexts_for=[c for c in contexts.get('players',[]) if c['game_id']==gid and c['player_id']==player['player_id']]
     from src.features.player_context import within
     c=contexts_for[0] if len(contexts_for)==1 else None
-    out=bool(c and contexts.get('season')==slate['season'] and contexts.get('week')==slate['week'] and c['availability']['status']=='Out' and c['availability']['blocked'] and within(c['availability'].get('observed_at'),now))
+    if c and (c.get('team')!=team or c.get('opponent')!=opp or not c.get('kickoff') or stamp(c['kickoff'])!=stamp(kickoff(g))):c=None
+    out=bool(c and contexts.get('season')==slate['season'] and contexts.get('week')==slate['week'] and within(contexts.get('exported_at'),now) and c['availability']['status']=='Out' and c['availability']['blocked'] and within(c['availability'].get('observed_at'),now))
     model=fitted.get((kind,'usage'))
     role_model=role_fitted.get(kind)
-    role_current=bool(c and contexts.get('season')==slate['season'] and contexts.get('week')==slate['week'] and c.get('team')==team and c.get('opponent')==opp and c.get('kickoff')==kickoff(g) and within(contexts.get('exported_at'),now) and within(c['starter'].get('updated_at'),now) and c['starter'].get('rank') is not None)
-    role_x={**x,'depth_rank':c['starter']['rank']} if role_current else None
+    role_current=bool(c and contexts.get('season')==slate['season'] and contexts.get('week')==slate['week'] and c.get('team')==team and c.get('opponent')==opp and stamp(c.get('kickoff'))==stamp(kickoff(g)) and within(contexts.get('exported_at'),now) and within(c['starter'].get('updated_at'),now) and (c['starter'].get('rank') is not None or c['starter'].get('status')=='confirmed'))
+    role_rank=1 if role_current and c['starter'].get('status')=='confirmed' else c['starter']['rank'] if role_current else None
+    role_x={**x,'depth_rank':role_rank} if role_current else None
     role_usage=float(predict_regression(role_model,[{'x':role_x}])[0]) if role_model and role_x else None
     thresholds=[]
     for threshold in THRESHOLDS[kind]:
@@ -118,7 +120,7 @@ def run(cache):
      elif m:thresholds.append({'threshold':threshold,'probability':round(float(predict_event(m,[{'x':x}])[0]),6),'basis':'conditional_baseline'})
     # Separate classifiers can cross; withhold incoherent curves rather than silently repair them.
     if any(b['probability']>a['probability'] for a,b in zip(thresholds,thresholds[1:])):thresholds=[]
-    output.append({'game_id':gid,'player_id':player['player_id'],'team':team,'opponent':opp,'kickoff':kickoff(g),'kind':kind,'usage_field':USAGE[kind], 'usage':0 if out else round(role_usage,1) if role_usage is not None else round(float(predict_regression(model,[{'x':x}])[0]),1) if model else None,'usage_status':'reported_out' if out else 'role_aware_conditional' if role_usage is not None else 'conditional_model' if model else 'baseline_not_beaten','baseline_usage':x['recent_usage'],'thresholds':[] if out else thresholds,'role_adjustment':'Timestamped depth-rank model passed development gate' if role_usage is not None else 'Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained', 'role_rank':c['starter']['rank'] if role_current else None})
+    output.append({'game_id':gid,'player_id':player['player_id'],'team':team,'opponent':opp,'kickoff':kickoff(g),'kind':kind,'usage_field':USAGE[kind], 'usage':0 if out else round(role_usage,1) if role_usage is not None else round(float(predict_regression(model,[{'x':x}])[0]),1) if model else None,'usage_status':'reported_out' if out else 'role_aware_conditional' if role_usage is not None else 'conditional_model' if model else 'baseline_not_beaten','baseline_usage':x['recent_usage'],'thresholds':[] if out else thresholds,'role_adjustment':'Timestamped depth-rank model passed development gate' if role_usage is not None else 'Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained', 'role_rank':role_rank})
  report={'schema_version':1,'season':slate['season'],'week':slate['week'],'generated_at':now,'version':'player-extensions:'+hashlib.sha256(Path(__file__).read_bytes()+(ROOT/'src/features/pregame_roles.py').read_bytes()+(ROOT/'src/ml/projection_models.py').read_bytes()+json.dumps(validation,sort_keys=True).encode()).hexdigest()[:16],'policy':'Experimental conditional-on-appearing estimates. Fit through 2023; calibrate 2024; evaluate 2025. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.','validation':validation,'players':output}
  write_json(ROOT/'frontend/public/player_extensions.json',report)
  print(json.dumps({'players':len(output),'validation':validation},indent=2))

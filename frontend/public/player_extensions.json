@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T22:45:16.270175+00:00",
+  "generated_at": "2026-10-29T22:47:52.662984+00:00",
   "players": [
     {
       "baseline_usage": 39.0,
@@ -50,7 +50,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.887783,
+          "probability": 0.878365,
           "threshold": 25
         },
         {
@@ -74,7 +74,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.5,
+      "usage": 7.3,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -91,7 +91,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.903094,
+          "probability": 0.895706,
           "threshold": 25
         },
         {
@@ -115,7 +115,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.7,
+      "usage": 7.8,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -132,7 +132,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.735515,
+          "probability": 0.716288,
           "threshold": 25
         },
         {
@@ -156,7 +156,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.2,
+      "usage": 5.8,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -209,7 +209,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.913146,
+          "probability": 0.904421,
           "threshold": 25
         },
         {
@@ -244,23 +244,23 @@
       "kind": "rushing",
       "opponent": "GB",
       "player_id": "00-0036555",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "CAR",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.899407,
+          "probability": 0.90548,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.610231,
+          "probability": 0.629375,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.501628,
+          "basis": "role_aware",
+          "probability": 0.442417,
           "threshold": 60
         },
         {
@@ -269,14 +269,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.094204,
+          "basis": "conditional_baseline",
+          "probability": 0.128949,
           "threshold": 100
         }
       ],
-      "usage": 14.4,
+      "usage": 13.0,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 7.0,
@@ -291,7 +291,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.756501,
+          "probability": 0.74936,
           "threshold": 25
         },
         {
@@ -315,7 +315,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.5,
+      "usage": 6.0,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -362,23 +362,23 @@
       "kind": "rushing",
       "opponent": "BAL",
       "player_id": "00-0037248",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "BUF",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.953166,
+          "probability": 0.95742,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.744766,
+          "probability": 0.756071,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.70494,
+          "basis": "role_aware",
+          "probability": 0.629934,
           "threshold": 60
         },
         {
@@ -387,14 +387,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.211937,
+          "basis": "conditional_baseline",
+          "probability": 0.295451,
           "threshold": 100
         }
       ],
-      "usage": 17.4,
+      "usage": 13.8,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.666666666666667,
@@ -409,7 +409,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.718371,
+          "probability": 0.699998,
           "threshold": 25
         },
         {
@@ -433,7 +433,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.1,
+      "usage": 6.0,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -450,7 +450,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.599678,
+          "probability": 0.582958,
           "threshold": 25
         },
         {
@@ -474,7 +474,7 @@
           "threshold": 100
         }
       ],
-      "usage": 3.2,
+      "usage": 3.1,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -506,7 +506,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.93919,
+          "probability": 0.939419,
           "threshold": 25
         },
         {
@@ -530,7 +530,7 @@
           "threshold": 100
         }
       ],
-      "usage": 8.8,
+      "usage": 8.9,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -541,23 +541,23 @@
       "kind": "rushing",
       "opponent": "BUF",
       "player_id": "00-0032764",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "BAL",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.965231,
+          "probability": 0.957785,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.745172,
+          "probability": 0.719789,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.730592,
+          "basis": "role_aware",
+          "probability": 0.634447,
           "threshold": 60
         },
         {
@@ -566,14 +566,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.161907,
+          "basis": "conditional_baseline",
+          "probability": 0.315193,
           "threshold": 100
         }
       ],
-      "usage": 19.1,
+      "usage": 14.7,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 3.3333333333333335,
@@ -588,7 +588,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.423447,
+          "probability": 0.386932,
           "threshold": 25
         },
         {
@@ -612,7 +612,7 @@
           "threshold": 100
         }
       ],
-      "usage": 2.3,
+      "usage": 2.5,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -665,7 +665,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.91509,
+          "probability": 0.902593,
           "threshold": 25
         },
         {
@@ -689,7 +689,7 @@
           "threshold": 100
         }
       ],
-      "usage": 7.6,
+      "usage": 8.4,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -706,7 +706,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.87223,
+          "probability": 0.862517,
           "threshold": 25
         },
         {
@@ -730,7 +730,7 @@
           "threshold": 100
         }
       ],
-      "usage": 7.7,
+      "usage": 8.5,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -747,7 +747,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.515961,
+          "probability": 0.482557,
           "threshold": 25
         },
         {
@@ -771,7 +771,7 @@
           "threshold": 100
         }
       ],
-      "usage": 3.1,
+      "usage": 2.9,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -818,13 +818,13 @@
       "kind": "rushing",
       "opponent": "CIN",
       "player_id": "00-0035261",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "TEN",
       "thresholds": [],
-      "usage": 17.7,
+      "usage": 14.4,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.333333333333333,
@@ -839,7 +839,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.840985,
+          "probability": 0.829918,
           "threshold": 25
         },
         {
@@ -863,7 +863,7 @@
           "threshold": 100
         }
       ],
-      "usage": 8.6,
+      "usage": 8.3,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -880,7 +880,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.662236,
+          "probability": 0.639488,
           "threshold": 25
         },
         {
@@ -904,7 +904,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.3,
+      "usage": 6.2,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -957,7 +957,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.918547,
+          "probability": 0.905873,
           "threshold": 25
         },
         {
@@ -981,7 +981,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.2,
+      "usage": 6.1,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -992,23 +992,23 @@
       "kind": "rushing",
       "opponent": "ARI",
       "player_id": "00-0036997",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "DAL",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.925508,
+          "probability": 0.920286,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.701491,
+          "probability": 0.703604,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.544469,
+          "basis": "role_aware",
+          "probability": 0.617959,
           "threshold": 60
         },
         {
@@ -1017,14 +1017,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.213883,
+          "basis": "conditional_baseline",
+          "probability": 0.183946,
           "threshold": 100
         }
       ],
-      "usage": 16.7,
+      "usage": 16.1,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.666666666666667,
@@ -1039,7 +1039,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.738644,
+          "probability": 0.70765,
           "threshold": 25
         },
         {
@@ -1063,7 +1063,7 @@
           "threshold": 100
         }
       ],
-      "usage": 3.3,
+      "usage": 3.8,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1116,7 +1116,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.905889,
+          "probability": 0.893102,
           "threshold": 25
         },
         {
@@ -1140,7 +1140,7 @@
           "threshold": 100
         }
       ],
-      "usage": 8.9,
+      "usage": 8.8,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1151,13 +1151,13 @@
       "kind": "rushing",
       "opponent": "DAL",
       "player_id": "00-0037157",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 3,
       "team": "ARI",
       "thresholds": [],
-      "usage": 8.8,
+      "usage": 3.7,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 7.333333333333333,
@@ -1172,7 +1172,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.706144,
+          "probability": 0.651293,
           "threshold": 25
         },
         {
@@ -1196,7 +1196,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.0,
+      "usage": 4.9,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1243,23 +1243,23 @@
       "kind": "rushing",
       "opponent": "MIN",
       "player_id": "00-0039139",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "DET",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.956246,
+          "probability": 0.962126,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.814909,
+          "probability": 0.833268,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.795372,
+          "basis": "role_aware",
+          "probability": 0.725323,
           "threshold": 60
         },
         {
@@ -1268,14 +1268,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.157637,
+          "basis": "conditional_baseline",
+          "probability": 0.379284,
           "threshold": 100
         }
       ],
-      "usage": 16.8,
+      "usage": 17.2,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 11.0,
@@ -1290,7 +1290,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.945637,
+          "probability": 0.941693,
           "threshold": 25
         },
         {
@@ -1314,7 +1314,7 @@
           "threshold": 100
         }
       ],
-      "usage": 9.3,
+      "usage": 10.1,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1331,7 +1331,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.798915,
+          "probability": 0.772097,
           "threshold": 25
         },
         {
@@ -1355,7 +1355,7 @@
           "threshold": 100
         }
       ],
-      "usage": 7.7,
+      "usage": 8.0,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1381,13 +1381,13 @@
       "kind": "rushing",
       "opponent": "DET",
       "player_id": "00-0033293",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 2,
       "team": "MIN",
       "thresholds": [],
-      "usage": 13.9,
+      "usage": 12.6,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 14.666666666666666,
@@ -1396,23 +1396,23 @@
       "kind": "rushing",
       "opponent": "DET",
       "player_id": "00-0037525",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "MIN",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.817733,
+          "probability": 0.803669,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.441516,
+          "probability": 0.427708,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.28179,
+          "basis": "role_aware",
+          "probability": 0.284818,
           "threshold": 60
         },
         {
@@ -1421,14 +1421,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.077915,
+          "basis": "conditional_baseline",
+          "probability": 0.068031,
           "threshold": 100
         }
       ],
-      "usage": 12.1,
+      "usage": 13.8,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.0,
@@ -1443,7 +1443,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.666367,
+          "probability": 0.64486,
           "threshold": 25
         },
         {
@@ -1467,7 +1467,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.6,
+      "usage": 7.1,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1520,7 +1520,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.699178,
+          "probability": 0.695826,
           "threshold": 25
         },
         {
@@ -1544,7 +1544,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.6,
+      "usage": 5.1,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1561,7 +1561,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.887572,
+          "probability": 0.888639,
           "threshold": 25
         },
         {
@@ -1585,7 +1585,7 @@
           "threshold": 100
         }
       ],
-      "usage": 8.5,
+      "usage": 8.6,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1596,23 +1596,23 @@
       "kind": "rushing",
       "opponent": "IND",
       "player_id": "00-0040719",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "JAX",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.862133,
+          "probability": 0.846485,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.671153,
+          "probability": 0.653326,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.440833,
+          "basis": "role_aware",
+          "probability": 0.557046,
           "threshold": 60
         },
         {
@@ -1621,14 +1621,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.137447,
+          "basis": "conditional_baseline",
+          "probability": 0.134348,
           "threshold": 100
         }
       ],
-      "usage": 14.3,
+      "usage": 14.1,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 36.0,
@@ -1652,23 +1652,23 @@
       "kind": "rushing",
       "opponent": "JAX",
       "player_id": "00-0036223",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "IND",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.934589,
+          "probability": 0.927848,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.607492,
+          "probability": 0.585465,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.466724,
+          "basis": "role_aware",
+          "probability": 0.413829,
           "threshold": 60
         },
         {
@@ -1677,14 +1677,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.084785,
+          "basis": "conditional_baseline",
+          "probability": 0.131797,
           "threshold": 100
         }
       ],
-      "usage": 14.9,
+      "usage": 14.1,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 7.666666666666667,
@@ -1699,7 +1699,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.729647,
+          "probability": 0.70994,
           "threshold": 25
         },
         {
@@ -1723,7 +1723,7 @@
           "threshold": 100
         }
       ],
-      "usage": 7.3,
+      "usage": 6.6,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1740,7 +1740,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.760693,
+          "probability": 0.755171,
           "threshold": 25
         },
         {
@@ -1764,7 +1764,7 @@
           "threshold": 100
         }
       ],
-      "usage": 7.5,
+      "usage": 7.3,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1811,13 +1811,13 @@
       "kind": "rushing",
       "opponent": "LV",
       "player_id": "00-0039794",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 2,
       "team": "NYJ",
       "thresholds": [],
-      "usage": 15.6,
+      "usage": 10.4,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.666666666666667,
@@ -1832,7 +1832,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.825913,
+          "probability": 0.818761,
           "threshold": 25
         },
         {
@@ -1856,7 +1856,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.9,
+      "usage": 6.2,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1909,7 +1909,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.857017,
+          "probability": 0.851817,
           "threshold": 25
         },
         {
@@ -1933,7 +1933,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.6,
+      "usage": 7.0,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1950,7 +1950,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.856877,
+          "probability": 0.835234,
           "threshold": 25
         },
         {
@@ -1974,7 +1974,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.3,
+      "usage": 7.4,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1991,7 +1991,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.619837,
+          "probability": 0.569488,
           "threshold": 25
         },
         {
@@ -2015,7 +2015,7 @@
           "threshold": 100
         }
       ],
-      "usage": 4.9,
+      "usage": 4.7,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -2062,23 +2062,23 @@
       "kind": "rushing",
       "opponent": "CLE",
       "player_id": "00-0037228",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "PIT",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.909457,
+          "probability": 0.927613,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.64765,
+          "probability": 0.667063,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.60867,
+          "basis": "role_aware",
+          "probability": 0.492575,
           "threshold": 60
         },
         {
@@ -2087,14 +2087,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.131516,
+          "basis": "conditional_baseline",
+          "probability": 0.199983,
           "threshold": 100
         }
       ],
-      "usage": 15.0,
+      "usage": 18.9,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 8.666666666666666,
@@ -2109,7 +2109,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.758449,
+          "probability": 0.749532,
           "threshold": 25
         },
         {
@@ -2133,7 +2133,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.2,
+      "usage": 4.9,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -2150,7 +2150,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.862363,
+          "probability": 0.851576,
           "threshold": 25
         },
         {
@@ -2174,7 +2174,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.3,
+      "usage": 5.7,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -2221,23 +2221,23 @@
       "kind": "rushing",
       "opponent": "PIT",
       "player_id": "00-0040784",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "CLE",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.866944,
+          "probability": 0.877472,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.533137,
+          "probability": 0.519054,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.35245,
+          "basis": "role_aware",
+          "probability": 0.303021,
           "threshold": 60
         },
         {
@@ -2246,14 +2246,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.072095,
+          "basis": "conditional_baseline",
+          "probability": 0.086468,
           "threshold": 100
         }
       ],
-      "usage": 14.2,
+      "usage": 12.1,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.666666666666667,
@@ -2268,7 +2268,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.738628,
+          "probability": 0.726556,
           "threshold": 25
         },
         {
@@ -2309,7 +2309,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.496479,
+          "probability": 0.448645,
           "threshold": 25
         },
         {
@@ -2333,7 +2333,7 @@
           "threshold": 100
         }
       ],
-      "usage": 2.6,
+      "usage": 2.7,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -2359,23 +2359,23 @@
       "kind": "rushing",
       "opponent": "ATL",
       "player_id": "00-0039361",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "TB",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.944032,
+          "probability": 0.949094,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.706985,
+          "probability": 0.705076,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.689502,
+          "basis": "role_aware",
+          "probability": 0.534162,
           "threshold": 60
         },
         {
@@ -2384,14 +2384,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.178211,
+          "basis": "conditional_baseline",
+          "probability": 0.272996,
           "threshold": 100
         }
       ],
-      "usage": 16.4,
+      "usage": 15.5,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.666666666666667,
@@ -2400,13 +2400,39 @@
       "kind": "rushing",
       "opponent": "ATL",
       "player_id": "00-0036919",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 2,
       "team": "TB",
-      "thresholds": [],
-      "usage": 6.0,
+      "thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.385763,
+          "threshold": 25
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.160267,
+          "threshold": 50
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.111713,
+          "threshold": 60
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.034475,
+          "threshold": 75
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.013887,
+          "threshold": 100
+        }
+      ],
+      "usage": 6.2,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 2.0,
@@ -2421,7 +2447,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.422964,
+          "probability": 0.387045,
           "threshold": 25
         },
         {
@@ -2445,7 +2471,7 @@
           "threshold": 100
         }
       ],
-      "usage": 2.9,
+      "usage": 3.0,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -2498,7 +2524,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.915047,
+          "probability": 0.91216,
           "threshold": 25
         },
         {
@@ -2522,7 +2548,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.6,
+      "usage": 7.1,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -2533,23 +2559,23 @@
       "kind": "rushing",
       "opponent": "TB",
       "player_id": "00-0038542",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "ATL",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.941317,
+          "probability": 0.935705,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.705483,
+          "probability": 0.686405,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.596961,
+          "basis": "role_aware",
+          "probability": 0.543539,
           "threshold": 60
         },
         {
@@ -2558,14 +2584,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.103335,
+          "basis": "conditional_baseline",
+          "probability": 0.202387,
           "threshold": 100
         }
       ],
-      "usage": 15.2,
+      "usage": 14.8,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 4.0,
@@ -2580,7 +2606,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.583551,
+          "probability": 0.562755,
           "threshold": 25
         },
         {
@@ -2604,7 +2630,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.1,
+      "usage": 4.9,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -2657,7 +2683,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.97641,
+          "probability": 0.976742,
           "threshold": 25
         },
         {
@@ -2681,7 +2707,7 @@
           "threshold": 100
         }
       ],
-      "usage": 9.2,
+      "usage": 10.2,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -2692,23 +2718,23 @@
       "kind": "rushing",
       "opponent": "LAC",
       "player_id": "00-0037840",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "LA",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.892912,
+          "probability": 0.908181,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.650311,
+          "probability": 0.668819,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.485269,
+          "basis": "role_aware",
+          "probability": 0.535538,
           "threshold": 60
         },
         {
@@ -2717,14 +2743,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.148535,
+          "basis": "conditional_baseline",
+          "probability": 0.144853,
           "threshold": 100
         }
       ],
-      "usage": 14.0,
+      "usage": 17.6,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 10.333333333333334,
@@ -2733,23 +2759,23 @@
       "kind": "rushing",
       "opponent": "LAC",
       "player_id": "00-0039738",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 2,
       "team": "LA",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.668604,
+          "probability": 0.697301,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.327905,
+          "probability": 0.341814,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.238865,
+          "basis": "role_aware",
+          "probability": 0.21986,
           "threshold": 60
         },
         {
@@ -2758,14 +2784,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.08526,
+          "basis": "conditional_baseline",
+          "probability": 0.055904,
           "threshold": 100
         }
       ],
-      "usage": 9.9,
+      "usage": 11.8,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 30.666666666666668,
@@ -2816,7 +2842,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.547428,
+          "probability": 0.522868,
           "threshold": 25
         },
         {
@@ -2851,39 +2877,13 @@
       "kind": "rushing",
       "opponent": "LA",
       "player_id": "00-0039391",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 3,
       "team": "LAC",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.274463,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.095283,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.088845,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.057689,
-          "threshold": 75
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.020074,
-          "threshold": 100
-        }
-      ],
-      "usage": 6.9,
+      "thresholds": [],
+      "usage": 4.9,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 10.0,
@@ -2892,23 +2892,23 @@
       "kind": "rushing",
       "opponent": "LA",
       "player_id": "00-0040666",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "LAC",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.796043,
+          "probability": 0.765601,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.563294,
+          "probability": 0.516573,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.254899,
+          "basis": "role_aware",
+          "probability": 0.376848,
           "threshold": 60
         },
         {
@@ -2917,14 +2917,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.059074,
+          "basis": "conditional_baseline",
+          "probability": 0.074444,
           "threshold": 100
         }
       ],
-      "usage": 12.4,
+      "usage": 10.5,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 27.666666666666668,
@@ -2969,23 +2969,23 @@
       "kind": "rushing",
       "opponent": "KC",
       "player_id": "00-0036158",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "DEN",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.839591,
+          "probability": 0.883315,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.469176,
+          "probability": 0.485976,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.284082,
+          "basis": "role_aware",
+          "probability": 0.297708,
           "threshold": 60
         },
         {
@@ -2994,14 +2994,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.094518,
+          "basis": "conditional_baseline",
+          "probability": 0.070282,
           "threshold": 100
         }
       ],
-      "usage": 12.3,
+      "usage": 14.1,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.333333333333333,
@@ -3016,7 +3016,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.696843,
+          "probability": 0.688654,
           "threshold": 25
         },
         {
@@ -3040,7 +3040,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.6,
+      "usage": 7.0,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3087,13 +3087,13 @@
       "kind": "rushing",
       "opponent": "DEN",
       "player_id": "00-0038134",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "KC",
       "thresholds": [],
-      "usage": 19.0,
+      "usage": 17.5,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.666666666666667,
@@ -3108,7 +3108,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.648606,
+          "probability": 0.613162,
           "threshold": 25
         },
         {
@@ -3132,7 +3132,7 @@
           "threshold": 100
         }
       ],
-      "usage": 7.6,
+      "usage": 7.5,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3149,7 +3149,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.390944,
+          "probability": 0.328778,
           "threshold": 25
         },
         {
@@ -3173,7 +3173,7 @@
           "threshold": 100
         }
       ],
-      "usage": 3.3,
+      "usage": 3.0,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3220,23 +3220,23 @@
       "kind": "rushing",
       "opponent": "NE",
       "player_id": "00-0040198",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "MIA",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.853759,
+          "probability": 0.857686,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.583905,
+          "probability": 0.574957,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.394763,
+          "basis": "role_aware",
+          "probability": 0.378096,
           "threshold": 60
         },
         {
@@ -3245,14 +3245,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.091468,
+          "basis": "conditional_baseline",
+          "probability": 0.118447,
           "threshold": 100
         }
       ],
-      "usage": 14.3,
+      "usage": 15.4,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.666666666666667,
@@ -3267,7 +3267,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.594184,
+          "probability": 0.594707,
           "threshold": 25
         },
         {
@@ -3291,7 +3291,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.2,
+      "usage": 5.4,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3344,7 +3344,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.66564,
+          "probability": 0.6266,
           "threshold": 25
         },
         {
@@ -3368,7 +3368,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.2,
+      "usage": 5.5,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3385,7 +3385,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.678236,
+          "probability": 0.639194,
           "threshold": 25
         },
         {
@@ -3409,7 +3409,7 @@
           "threshold": 100
         }
       ],
-      "usage": 4.6,
+      "usage": 4.7,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3426,7 +3426,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.483634,
+          "probability": 0.459771,
           "threshold": 25
         },
         {
@@ -3450,7 +3450,7 @@
           "threshold": 100
         }
       ],
-      "usage": 3.0,
+      "usage": 3.3,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3500,34 +3500,8 @@
       "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 7,
       "team": "WAS",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.481126,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.393842,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.286487,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.163024,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.063856,
-          "threshold": 100
-        }
-      ],
-      "usage": 4.4,
+      "thresholds": [],
+      "usage": 3.7,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3544,7 +3518,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.424554,
+          "probability": 0.391334,
           "threshold": 25
         },
         {
@@ -3568,7 +3542,7 @@
           "threshold": 100
         }
       ],
-      "usage": 4.0,
+      "usage": 3.8,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3585,7 +3559,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.542104,
+          "probability": 0.521125,
           "threshold": 25
         },
         {
@@ -3635,23 +3609,23 @@
       "kind": "rushing",
       "opponent": "WAS",
       "player_id": "00-0034844",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "PHI",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.78608,
+          "probability": 0.777632,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.392593,
+          "probability": 0.377333,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.202597,
+          "basis": "role_aware",
+          "probability": 0.271222,
           "threshold": 60
         },
         {
@@ -3660,14 +3634,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.07386,
+          "basis": "conditional_baseline",
+          "probability": 0.048468,
           "threshold": 100
         }
       ],
-      "usage": 11.4,
+      "usage": 13.2,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 8.0,
@@ -3682,7 +3656,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.720645,
+          "probability": 0.707338,
           "threshold": 25
         },
         {
@@ -3706,7 +3680,7 @@
           "threshold": 100
         }
       ],
-      "usage": 6.5,
+      "usage": 6.2,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3723,7 +3697,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.652123,
+          "probability": 0.629374,
           "threshold": 25
         },
         {
@@ -3747,7 +3721,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.1,
+      "usage": 4.3,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3779,7 +3753,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.973548,
+          "probability": 0.973466,
           "threshold": 25
         },
         {
@@ -3814,23 +3788,23 @@
       "kind": "rushing",
       "opponent": "CHI",
       "player_id": "00-0038797",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "SEA",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.900947,
+          "probability": 0.918315,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.615925,
+          "probability": 0.627312,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.477113,
+          "basis": "role_aware",
+          "probability": 0.45193,
           "threshold": 60
         },
         {
@@ -3839,14 +3813,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.134922,
+          "basis": "conditional_baseline",
+          "probability": 0.131253,
           "threshold": 100
         }
       ],
-      "usage": 14.3,
+      "usage": 11.9,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.0,
@@ -3861,7 +3835,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.512692,
+          "probability": 0.500742,
           "threshold": 25
         },
         {
@@ -3885,7 +3859,7 @@
           "threshold": 100
         }
       ],
-      "usage": 5.2,
+      "usage": 4.9,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -3938,7 +3912,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.822185,
+          "probability": 0.810616,
           "threshold": 25
         },
         {
@@ -3973,23 +3947,23 @@
       "kind": "rushing",
       "opponent": "SEA",
       "player_id": "00-0036275",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_rank": 1,
       "team": "CHI",
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.879494,
+          "probability": 0.906009,
           "threshold": 25
         },
         {
           "basis": "role_aware",
-          "probability": 0.592056,
+          "probability": 0.627552,
           "threshold": 50
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.319103,
+          "basis": "role_aware",
+          "probability": 0.390502,
           "threshold": 60
         },
         {
@@ -3998,14 +3972,14 @@
           "threshold": 75
         },
         {
-          "basis": "role_aware",
-          "probability": 0.067079,
+          "basis": "conditional_baseline",
+          "probability": 0.067814,
           "threshold": 100
         }
       ],
-      "usage": 13.4,
+      "usage": 15.5,
       "usage_field": "carries",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 8.0,
@@ -4020,7 +3994,7 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.66029,
+          "probability": 0.660887,
           "threshold": 25
         },
         {
@@ -4044,7 +4018,7 @@
           "threshold": 100
         }
       ],
-      "usage": 4.9,
+      "usage": 5.1,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     }
@@ -4150,15 +4124,15 @@
       "target": "usage"
     },
     {
-      "baseline_mae": 3.9676290463692037,
+      "baseline_mae": 3.7570621468926553,
       "calibration": "2025 W13\u201318",
       "evaluation": "2026 completed weeks; development gate, not prospective validation",
       "fit": "2025 through W12",
       "kind": "rushing",
-      "mae": 3.8041653904850876,
-      "promoted": false,
-      "regular_usage_mae": 3.7688596491201065,
-      "samples": 381,
+      "mae": 3.4684603094383686,
+      "promoted": true,
+      "regular_usage_mae": 3.4872095107855094,
+      "samples": 531,
       "target": "role_usage"
     },
     {
@@ -4170,12 +4144,12 @@
       "target": 25
     },
     {
-      "baseline_brier": 0.24552049154422578,
-      "brier": 0.1547597643798086,
+      "baseline_brier": 0.2500814664161811,
+      "brier": 0.14977739904067489,
       "kind": "rushing",
       "promoted": true,
-      "regular_brier": 0.1594856995090271,
-      "samples": 381,
+      "regular_brier": 0.15651102960738114,
+      "samples": 531,
       "target": "role_threshold_25"
     },
     {
@@ -4187,12 +4161,12 @@
       "target": 50
     },
     {
-      "baseline_brier": 0.2224820881975917,
-      "brier": 0.1572935130297043,
+      "baseline_brier": 0.2035884533898305,
+      "brier": 0.13983937202656005,
       "kind": "rushing",
       "promoted": true,
-      "regular_brier": 0.15980487845538277,
-      "samples": 381,
+      "regular_brier": 0.1447550859083767,
+      "samples": 531,
       "target": "role_threshold_50"
     },
     {
@@ -4204,12 +4178,12 @@
       "target": 60
     },
     {
-      "baseline_brier": 0.19281473773700702,
-      "brier": 0.14626368592038755,
+      "baseline_brier": 0.170324982896363,
+      "brier": 0.12476058278674376,
       "kind": "rushing",
-      "promoted": false,
-      "regular_brier": 0.1460481157335441,
-      "samples": 381,
+      "promoted": true,
+      "regular_brier": 0.12703423204709033,
+      "samples": 531,
       "target": "role_threshold_60"
     },
     {
@@ -4221,12 +4195,12 @@
       "target": 75
     },
     {
-      "baseline_brier": 0.1466382923188002,
-      "brier": 0.12882168084209822,
+      "baseline_brier": 0.1226523519684815,
+      "brier": 0.10435630425368142,
       "kind": "rushing",
       "promoted": false,
-      "regular_brier": 0.12305000829827253,
-      "samples": 381,
+      "regular_brier": 0.10118560123084333,
+      "samples": 531,
       "target": "role_threshold_75"
     },
     {
@@ -4238,12 +4212,12 @@
       "target": 100
     },
     {
-      "baseline_brier": 0.08128947721114081,
-      "brier": 0.07696802450180151,
+      "baseline_brier": 0.06320216292041843,
+      "brier": 0.059150754192842964,
       "kind": "rushing",
-      "promoted": true,
-      "regular_brier": 0.0770818543718277,
-      "samples": 381,
+      "promoted": false,
+      "regular_brier": 0.059140652847874856,
+      "samples": 531,
       "target": "role_threshold_100"
     },
     {
@@ -4255,15 +4229,15 @@
       "target": "usage"
     },
     {
-      "baseline_mae": 2.0201149425287355,
+      "baseline_mae": 1.9024273011295363,
       "calibration": "2025 W13\u201318",
       "evaluation": "2026 completed weeks; development gate, not prospective validation",
       "fit": "2025 through W12",
       "kind": "receiving",
-      "mae": 1.8502458900377803,
+      "mae": 1.7791496459477434,
       "promoted": true,
-      "regular_usage_mae": 1.9040829830827029,
-      "samples": 1044,
+      "regular_usage_mae": 1.823720704239394,
+      "samples": 1387,
       "target": "role_usage"
     },
     {
@@ -4275,12 +4249,12 @@
       "target": 25
     },
     {
-      "baseline_brier": 0.24952626911468914,
-      "brier": 0.1727683836588802,
+      "baseline_brier": 0.24444055726040168,
+      "brier": 0.1667041987306813,
       "kind": "receiving",
       "promoted": true,
-      "regular_brier": 0.1744244425841282,
-      "samples": 1044,
+      "regular_brier": 0.16975629415339405,
+      "samples": 1387,
       "target": "role_threshold_25"
     },
     {
@@ -4292,12 +4266,12 @@
       "target": 50
     },
     {
-      "baseline_brier": 0.19165712940732244,
-      "brier": 0.15005526946146855,
+      "baseline_brier": 0.17576468388250457,
+      "brier": 0.13676550787752634,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.14459403621557856,
-      "samples": 1044,
+      "regular_brier": 0.13369384616519497,
+      "samples": 1387,
       "target": "role_threshold_50"
     },
     {
@@ -4309,12 +4283,12 @@
       "target": 60
     },
     {
-      "baseline_brier": 0.16032317244790023,
-      "brier": 0.12877834537945188,
+      "baseline_brier": 0.1447625851079148,
+      "brier": 0.11525679002729275,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.12569158531201327,
-      "samples": 1044,
+      "regular_brier": 0.1139750957774882,
+      "samples": 1387,
       "target": "role_threshold_60"
     },
     {
@@ -4326,12 +4300,12 @@
       "target": 75
     },
     {
-      "baseline_brier": 0.10999587908366563,
-      "brier": 0.09349714137085073,
+      "baseline_brier": 0.09730097430547555,
+      "brier": 0.08198100403108723,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.09192914402325582,
-      "samples": 1044,
+      "regular_brier": 0.08059112796417287,
+      "samples": 1387,
       "target": "role_threshold_75"
     },
     {
@@ -4343,15 +4317,15 @@
       "target": 100
     },
     {
-      "baseline_brier": 0.05350494435805535,
-      "brier": 0.04665409798304987,
+      "baseline_brier": 0.04343041237043576,
+      "brier": 0.037692288270439266,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.046061831179075335,
-      "samples": 1044,
+      "regular_brier": 0.03748011862899375,
+      "samples": 1387,
       "target": "role_threshold_100"
     }
   ],
-  "version": "player-extensions:f600f913efe9dda6",
+  "version": "player-extensions:4b51eedb93486740",
   "week": 8
 }

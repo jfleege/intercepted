@@ -6,5 +6,5 @@
 .fi-impact-summary span { color:var(--ud-muted); font-size:11px; }
 .fi-impact-summary b { color:var(--ud-text); font-size:18px; margin-right:4px; font-variant-numeric:tabular-nums; }
 .fi-impact-note { color:var(--ud-muted); font-size:11px; line-height:1.7; border-left:2px solid #538ca4; padding:4px 0 4px 12px; }
-.fi-change-kind { display:inline-block; color:#8edce9; font-size:10px; margin:7px 0 0; }
+.fi-change-kind { display:block; color:#8edce9; font-size:10px; margin:7px 0 0; }
 @media(max-width:650px) { .fi-change { grid-template-columns:1fr; }.fi-change-value { text-align:left; }.fi-cal-window { grid-template-columns:1fr 1fr 55px; }.fi-updates > summary { padding:15px; }.fi-content { padding:0 15px 15px; }.dashboard-shell .fi-panel :is(button,select,summary) { min-height:44px; }.fi-alerts li { align-items:flex-start; flex-wrap:wrap; } }

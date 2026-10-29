@@ -29,6 +29,8 @@ on:
       - src/features/player_intelligence.py
       - src/features/player_context.py
       - src/ml/forecast_insights.py
+      - src/ml/player_extensions.py
+      - src/features/pregame_roles.py
       - src/features/qb_coverage.py
       - src/features/qb_starters.py
   schedule:

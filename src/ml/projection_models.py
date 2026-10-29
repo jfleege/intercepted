@@ -78,15 +78,16 @@ def logits(probabilities):
     return np.log(p / (1 - p)).reshape(-1, 1)
 
 
-def fit_event(train, calibration, target):
+def fit_event(train, calibration, target, columns=None):
+    columns = columns or PLAYER_FEATURES
     model = make_pipeline(StandardScaler(), LogisticRegression(C=.1, max_iter=1000, random_state=42))
-    model.fit(matrix(train, PLAYER_FEATURES), [r[target] for r in train])
+    model.fit(matrix(train, columns), [r[target] for r in train])
     y = np.array([r[target] for r in calibration])
     if len(set(y)) < 2:
         raise ValueError('Both event classes required for chronological calibration')
     calibration_model = LogisticRegression(C=1, max_iter=1000, random_state=42)
-    calibration_model.fit(logits(model.predict_proba(matrix(calibration, PLAYER_FEATURES))[:, 1]), y)
-    return {'model': model, 'calibrator': calibration_model, 'columns': PLAYER_FEATURES, 'target': target}
+    calibration_model.fit(logits(model.predict_proba(matrix(calibration, columns))[:, 1]), y)
+    return {'model': model, 'calibrator': calibration_model, 'columns': columns, 'target': target}
 
 
 def predict_event(fitted, rows):

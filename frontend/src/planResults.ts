@@ -2,10 +2,10 @@ import type { Offer } from './projectionMarkets';
 export type Actual = {game_id:string; player_id?:string; family:string; target:string; actual:number|null; status:string; team?:string; home_team?:string; away_team?:string; home_score?:number; away_score?:number};
 export function gradeSelection(offer:Offer, savedAt:string, rows:Actual[]) {
  const start=Date.parse(offer.kickoff??'');
- if(!Number.isFinite(start)||!Number.isFinite(Date.parse(savedAt))||Date.parse(savedAt)>=start) return {status:'unverified',actual:null};
+ if(!Number.isFinite(start)||!Number.isFinite(Date.parse(savedAt))||Date.parse(savedAt)>=start||!Number.isFinite(Date.parse(offer.forecastAt??''))||Date.parse(offer.forecastAt!)>=start||Date.parse(offer.forecastAt!)>Date.parse(savedAt)) return {status:'unverified',actual:null};
  const candidates=rows.filter(r=>r.game_id===offer.game_id && r.status==='graded' && typeof r.actual==='number' && Number.isFinite(r.actual));
  let values:number[]=[];
- if(offer.category==='moneyline')values=candidates.filter(r=>r.family==='winners' && r.home_team && r.away_team).map(r=>r.home_score!==undefined&&r.home_score===r.away_score?.valueOf()? .5 : offer.team===r.home_team?r.actual!:1-r.actual!);
+ if(offer.category==='moneyline')values=candidates.filter(r=>r.family==='winners' && r.home_team && r.away_team && [r.home_team,r.away_team].includes(offer.team)).map(r=>r.home_score!==undefined&&r.home_score===r.away_score?.valueOf()? .5 : offer.team===r.home_team?r.actual!:1-r.actual!);
  if(offer.category==='yardage')values=candidates.filter(r=>r.family==='yardage'&&r.player_id===offer.player_id&&r.target===offer.target).map(r=>r.actual!);
  if(offer.category==='touchdown')values=candidates.filter(r=>r.family==='touchdowns'&&r.player_id===offer.player_id&&r.target===(offer.target==='passing_td'?'pass_td':'any_td')).map(r=>r.actual!);
  if(offer.category==='spread')values=candidates.filter(r=>r.family==='scoring'&&r.target==='margin').map(r=>offer.team===r.home_team?r.actual!:-r.actual!);

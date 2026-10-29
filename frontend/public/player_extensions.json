@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T22:32:27.124260+00:00",
+  "generated_at": "2026-10-29T22:45:16.270175+00:00",
   "players": [
     {
       "baseline_usage": 39.0,
@@ -8,29 +8,34 @@
       "kind": "passing",
       "opponent": "CAR",
       "player_id": "00-0036264",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "GB",
       "thresholds": [
         {
-          "probability": 0.932089,
+          "basis": "role_aware",
+          "probability": 0.857866,
           "threshold": 150
         },
         {
-          "probability": 0.773495,
+          "basis": "role_aware",
+          "probability": 0.729862,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.498861,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.217254,
           "threshold": 300
         }
       ],
-      "usage": 33.6,
+      "usage": 30.8,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 10.666666666666666,
@@ -39,33 +44,39 @@
       "kind": "receiving",
       "opponent": "CAR",
       "player_id": "00-0040667",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "GB",
       "thresholds": [
         {
-          "probability": 0.921128,
+          "basis": "role_aware",
+          "probability": 0.887783,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.707114,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.591965,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.411194,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.17329,
           "threshold": 100
         }
       ],
-      "usage": 8.2,
+      "usage": 6.5,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 8.0,
@@ -74,33 +85,39 @@
       "kind": "receiving",
       "opponent": "CAR",
       "player_id": "00-0038124",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "GB",
       "thresholds": [
         {
-          "probability": 0.918674,
+          "basis": "role_aware",
+          "probability": 0.903094,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.716205,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.597984,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.44613,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.2099,
           "threshold": 100
         }
       ],
-      "usage": 7.6,
+      "usage": 6.7,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.333333333333333,
@@ -109,33 +126,39 @@
       "kind": "receiving",
       "opponent": "CAR",
       "player_id": "00-0038996",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "GB",
       "thresholds": [
         {
-          "probability": 0.77293,
+          "basis": "role_aware",
+          "probability": 0.735515,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.40583,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.276696,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.158221,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.061641,
           "threshold": 100
         }
       ],
-      "usage": 5.8,
+      "usage": 6.2,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 35.666666666666664,
@@ -144,29 +167,34 @@
       "kind": "passing",
       "opponent": "GB",
       "player_id": "00-0039150",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "CAR",
       "thresholds": [
         {
-          "probability": 0.889174,
+          "basis": "role_aware",
+          "probability": 0.779898,
           "threshold": 150
         },
         {
-          "probability": 0.708968,
+          "basis": "role_aware",
+          "probability": 0.708469,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.405251,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.185867,
           "threshold": 300
         }
       ],
-      "usage": 31.6,
+      "usage": 32.7,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 10.333333333333334,
@@ -175,33 +203,39 @@
       "kind": "receiving",
       "opponent": "GB",
       "player_id": "00-0040124",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "CAR",
       "thresholds": [
         {
-          "probability": 0.915628,
+          "basis": "role_aware",
+          "probability": 0.913146,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.696869,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.59063,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.392339,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.156316,
           "threshold": 100
         }
       ],
-      "usage": 7.9,
+      "usage": 6.8,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 18.333333333333332,
@@ -210,27 +244,33 @@
       "kind": "rushing",
       "opponent": "GB",
       "player_id": "00-0036555",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "CAR",
       "thresholds": [
         {
-          "probability": 0.874668,
+          "basis": "role_aware",
+          "probability": 0.899407,
           "threshold": 25
         },
         {
-          "probability": 0.635441,
+          "basis": "role_aware",
+          "probability": 0.610231,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.501628,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.299001,
           "threshold": 75
         },
         {
-          "probability": 0.128949,
+          "basis": "role_aware",
+          "probability": 0.094204,
           "threshold": 100
         }
       ],
@@ -245,33 +285,39 @@
       "kind": "receiving",
       "opponent": "GB",
       "player_id": "00-0039491",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "CAR",
       "thresholds": [
         {
-          "probability": 0.818975,
+          "basis": "role_aware",
+          "probability": 0.756501,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.533203,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.413942,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.272343,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.110447,
           "threshold": 100
         }
       ],
-      "usage": 7.0,
+      "usage": 5.5,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 28.333333333333332,
@@ -280,29 +326,34 @@
       "kind": "passing",
       "opponent": "BAL",
       "player_id": "00-0034857",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "BUF",
       "thresholds": [
         {
-          "probability": 0.885449,
+          "basis": "role_aware",
+          "probability": 0.829616,
           "threshold": 150
         },
         {
-          "probability": 0.677774,
+          "basis": "role_aware",
+          "probability": 0.778434,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.389108,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.17957,
           "threshold": 300
         }
       ],
-      "usage": 32.8,
+      "usage": 28.6,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 19.666666666666668,
@@ -311,27 +362,33 @@
       "kind": "rushing",
       "opponent": "BAL",
       "player_id": "00-0037248",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "BUF",
       "thresholds": [
         {
-          "probability": 0.955074,
+          "basis": "role_aware",
+          "probability": 0.953166,
           "threshold": 25
         },
         {
-          "probability": 0.827937,
+          "basis": "role_aware",
+          "probability": 0.744766,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.70494,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.534588,
           "threshold": 75
         },
         {
-          "probability": 0.295451,
+          "basis": "role_aware",
+          "probability": 0.211937,
           "threshold": 100
         }
       ],
@@ -346,33 +403,39 @@
       "kind": "receiving",
       "opponent": "BAL",
       "player_id": "00-0037261",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "BUF",
       "thresholds": [
         {
-          "probability": 0.682428,
+          "basis": "role_aware",
+          "probability": 0.718371,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.374365,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.27641,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.15373,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.066997,
           "threshold": 100
         }
       ],
-      "usage": 5.5,
+      "usage": 6.1,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.0,
@@ -381,33 +444,39 @@
       "kind": "receiving",
       "opponent": "BAL",
       "player_id": "00-0039901",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 3,
       "team": "BUF",
       "thresholds": [
         {
-          "probability": 0.641548,
+          "basis": "role_aware",
+          "probability": 0.599678,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.304146,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.216496,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.13303,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.067333,
           "threshold": 100
         }
       ],
-      "usage": 4.9,
+      "usage": 3.2,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 32.333333333333336,
@@ -416,29 +485,13 @@
       "kind": "passing",
       "opponent": "BUF",
       "player_id": "00-0035993",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "BAL",
-      "thresholds": [
-        {
-          "probability": 0.763316,
-          "threshold": 150
-        },
-        {
-          "probability": 0.538395,
-          "threshold": 200
-        },
-        {
-          "probability": 0.295812,
-          "threshold": 250
-        },
-        {
-          "probability": 0.106982,
-          "threshold": 300
-        }
-      ],
-      "usage": 32.0,
+      "thresholds": [],
+      "usage": 17.9,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 10.333333333333334,
@@ -447,33 +500,39 @@
       "kind": "receiving",
       "opponent": "BUF",
       "player_id": "00-0039064",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "BAL",
       "thresholds": [
         {
-          "probability": 0.96459,
+          "basis": "role_aware",
+          "probability": 0.93919,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.84203,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.754695,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.625591,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.357987,
           "threshold": 100
         }
       ],
-      "usage": 9.0,
+      "usage": 8.8,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 19.333333333333332,
@@ -482,27 +541,33 @@
       "kind": "rushing",
       "opponent": "BUF",
       "player_id": "00-0032764",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "BAL",
       "thresholds": [
         {
-          "probability": 0.95693,
+          "basis": "role_aware",
+          "probability": 0.965231,
           "threshold": 25
         },
         {
-          "probability": 0.842684,
+          "basis": "role_aware",
+          "probability": 0.745172,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.730592,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.558256,
           "threshold": 75
         },
         {
-          "probability": 0.315193,
+          "basis": "role_aware",
+          "probability": 0.161907,
           "threshold": 100
         }
       ],
@@ -517,33 +582,39 @@
       "kind": "receiving",
       "opponent": "BUF",
       "player_id": "00-0040887",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 3,
       "team": "BAL",
       "thresholds": [
         {
-          "probability": 0.364346,
+          "basis": "role_aware",
+          "probability": 0.423447,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.112411,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.064653,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.033996,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.014469,
           "threshold": 100
         }
       ],
-      "usage": 2.9,
+      "usage": 2.3,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 38.666666666666664,
@@ -552,29 +623,34 @@
       "kind": "passing",
       "opponent": "TEN",
       "player_id": "00-0036442",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "CIN",
       "thresholds": [
         {
-          "probability": 0.94576,
+          "basis": "role_aware",
+          "probability": 0.881225,
           "threshold": 150
         },
         {
-          "probability": 0.822808,
+          "basis": "role_aware",
+          "probability": 0.819157,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.590557,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.274719,
           "threshold": 300
         }
       ],
-      "usage": 35.0,
+      "usage": 29.6,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 9.0,
@@ -583,33 +659,39 @@
       "kind": "receiving",
       "opponent": "TEN",
       "player_id": "00-0036410",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "CIN",
       "thresholds": [
         {
-          "probability": 0.94325,
+          "basis": "role_aware",
+          "probability": 0.91509,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.785737,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.684472,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.524385,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.258218,
           "threshold": 100
         }
       ],
-      "usage": 8.1,
+      "usage": 7.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.666666666666667,
@@ -618,33 +700,39 @@
       "kind": "receiving",
       "opponent": "TEN",
       "player_id": "00-0036900",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "CIN",
       "thresholds": [
         {
-          "probability": 0.904332,
+          "basis": "role_aware",
+          "probability": 0.87223,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.713569,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.607655,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.431576,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.224081,
           "threshold": 100
         }
       ],
-      "usage": 7.6,
+      "usage": 7.7,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 4.333333333333333,
@@ -653,33 +741,39 @@
       "kind": "receiving",
       "opponent": "TEN",
       "player_id": "00-0040785",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 3,
       "team": "CIN",
       "thresholds": [
         {
-          "probability": 0.414344,
+          "basis": "role_aware",
+          "probability": 0.515961,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.193633,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.127439,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.072592,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.030765,
           "threshold": 100
         }
       ],
-      "usage": 3.4,
+      "usage": 3.1,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 29.666666666666668,
@@ -688,29 +782,34 @@
       "kind": "passing",
       "opponent": "CIN",
       "player_id": "00-0040676",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "TEN",
       "thresholds": [
         {
-          "probability": 0.690432,
+          "basis": "role_aware",
+          "probability": 0.58492,
           "threshold": 150
         },
         {
-          "probability": 0.467406,
+          "basis": "role_aware",
+          "probability": 0.58389,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.211853,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.097581,
           "threshold": 300
         }
       ],
-      "usage": 28.1,
+      "usage": 35.3,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 19.333333333333332,
@@ -719,30 +818,10 @@
       "kind": "rushing",
       "opponent": "CIN",
       "player_id": "00-0035261",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "TEN",
-      "thresholds": [
-        {
-          "probability": 0.906581,
-          "threshold": 25
-        },
-        {
-          "probability": 0.727268,
-          "threshold": 50
-        },
-        {
-          "probability": 0.614897,
-          "threshold": 60
-        },
-        {
-          "probability": 0.436915,
-          "threshold": 75
-        },
-        {
-          "probability": 0.195411,
-          "threshold": 100
-        }
-      ],
+      "thresholds": [],
       "usage": 17.7,
       "usage_field": "carries",
       "usage_status": "conditional_model"
@@ -754,33 +833,39 @@
       "kind": "receiving",
       "opponent": "CIN",
       "player_id": "00-0041438",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "TEN",
       "thresholds": [
         {
-          "probability": 0.815595,
+          "basis": "role_aware",
+          "probability": 0.840985,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.529951,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.418752,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.247681,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.097963,
           "threshold": 100
         }
       ],
-      "usage": 6.6,
+      "usage": 8.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.666666666666667,
@@ -789,33 +874,39 @@
       "kind": "receiving",
       "opponent": "CIN",
       "player_id": "00-0038117",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "TEN",
       "thresholds": [
         {
-          "probability": 0.703894,
+          "basis": "role_aware",
+          "probability": 0.662236,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.412004,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.299842,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.181131,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.06614,
           "threshold": 100
         }
       ],
-      "usage": 5.2,
+      "usage": 6.3,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 41.0,
@@ -824,29 +915,34 @@
       "kind": "passing",
       "opponent": "ARI",
       "player_id": "00-0033077",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "DAL",
       "thresholds": [
         {
-          "probability": 0.932451,
+          "basis": "role_aware",
+          "probability": 0.847894,
           "threshold": 150
         },
         {
-          "probability": 0.814189,
+          "basis": "role_aware",
+          "probability": 0.828751,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.550772,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.250589,
           "threshold": 300
         }
       ],
-      "usage": 37.1,
+      "usage": 29.3,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 10.0,
@@ -855,33 +951,39 @@
       "kind": "receiving",
       "opponent": "ARI",
       "player_id": "00-0037247",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "DAL",
       "thresholds": [
         {
-          "probability": 0.930253,
+          "basis": "role_aware",
+          "probability": 0.918547,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.755215,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.646502,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.441464,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.216016,
           "threshold": 100
         }
       ],
-      "usage": 7.9,
+      "usage": 5.2,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 16.0,
@@ -890,27 +992,33 @@
       "kind": "rushing",
       "opponent": "ARI",
       "player_id": "00-0036997",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "DAL",
       "thresholds": [
         {
-          "probability": 0.894696,
+          "basis": "role_aware",
+          "probability": 0.925508,
           "threshold": 25
         },
         {
-          "probability": 0.666866,
+          "basis": "role_aware",
+          "probability": 0.701491,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.544469,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.347044,
           "threshold": 75
         },
         {
-          "probability": 0.183946,
+          "basis": "role_aware",
+          "probability": 0.213883,
           "threshold": 100
         }
       ],
@@ -925,33 +1033,39 @@
       "kind": "receiving",
       "opponent": "ARI",
       "player_id": "00-0039410",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 3,
       "team": "DAL",
       "thresholds": [
         {
-          "probability": 0.726309,
+          "basis": "role_aware",
+          "probability": 0.738644,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.429721,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.327964,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.189344,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.078799,
           "threshold": 100
         }
       ],
-      "usage": 5.7,
+      "usage": 3.3,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 43.333333333333336,
@@ -960,29 +1074,34 @@
       "kind": "passing",
       "opponent": "DAL",
       "player_id": "00-0033119",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "ARI",
       "thresholds": [
         {
-          "probability": 0.872942,
+          "basis": "role_aware",
+          "probability": 0.811548,
           "threshold": 150
         },
         {
-          "probability": 0.72266,
+          "basis": "role_aware",
+          "probability": 0.688454,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.444111,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.182106,
           "threshold": 300
         }
       ],
-      "usage": 33.0,
+      "usage": 32.7,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 10.666666666666666,
@@ -991,33 +1110,39 @@
       "kind": "receiving",
       "opponent": "DAL",
       "player_id": "00-0037744",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "ARI",
       "thresholds": [
         {
-          "probability": 0.953576,
+          "basis": "role_aware",
+          "probability": 0.905889,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.753742,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.63826,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.403933,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.163694,
           "threshold": 100
         }
       ],
-      "usage": 8.1,
+      "usage": 8.9,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 7.666666666666667,
@@ -1026,30 +1151,10 @@
       "kind": "rushing",
       "opponent": "DAL",
       "player_id": "00-0037157",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 3,
       "team": "ARI",
-      "thresholds": [
-        {
-          "probability": 0.457196,
-          "threshold": 25
-        },
-        {
-          "probability": 0.20723,
-          "threshold": 50
-        },
-        {
-          "probability": 0.167044,
-          "threshold": 60
-        },
-        {
-          "probability": 0.085981,
-          "threshold": 75
-        },
-        {
-          "probability": 0.039184,
-          "threshold": 100
-        }
-      ],
+      "thresholds": [],
       "usage": 8.8,
       "usage_field": "carries",
       "usage_status": "conditional_model"
@@ -1061,33 +1166,39 @@
       "kind": "receiving",
       "opponent": "DAL",
       "player_id": "00-0033307",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "ARI",
       "thresholds": [
         {
-          "probability": 0.637659,
+          "basis": "role_aware",
+          "probability": 0.706144,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.346385,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.233427,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.123496,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.041221,
           "threshold": 100
         }
       ],
-      "usage": 5.3,
+      "usage": 5.0,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 38.0,
@@ -1096,29 +1207,34 @@
       "kind": "passing",
       "opponent": "MIN",
       "player_id": "00-0033106",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "DET",
       "thresholds": [
         {
-          "probability": 0.929186,
+          "basis": "role_aware",
+          "probability": 0.90506,
           "threshold": 150
         },
         {
-          "probability": 0.792388,
+          "basis": "role_aware",
+          "probability": 0.731053,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.529414,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.248199,
           "threshold": 300
         }
       ],
-      "usage": 37.0,
+      "usage": 31.5,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 23.0,
@@ -1127,27 +1243,33 @@
       "kind": "rushing",
       "opponent": "MIN",
       "player_id": "00-0039139",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "DET",
       "thresholds": [
         {
-          "probability": 0.962777,
+          "basis": "role_aware",
+          "probability": 0.956246,
           "threshold": 25
         },
         {
-          "probability": 0.873345,
+          "basis": "role_aware",
+          "probability": 0.814909,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.795372,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.612474,
           "threshold": 75
         },
         {
-          "probability": 0.379284,
+          "basis": "role_aware",
+          "probability": 0.157637,
           "threshold": 100
         }
       ],
@@ -1162,33 +1284,39 @@
       "kind": "receiving",
       "opponent": "MIN",
       "player_id": "00-0036963",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "DET",
       "thresholds": [
         {
-          "probability": 0.969805,
+          "basis": "role_aware",
+          "probability": 0.945637,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.882754,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.824763,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.661072,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.37378,
           "threshold": 100
         }
       ],
-      "usage": 9.6,
+      "usage": 9.3,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 7.0,
@@ -1197,33 +1325,39 @@
       "kind": "receiving",
       "opponent": "MIN",
       "player_id": "00-0037240",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "DET",
       "thresholds": [
         {
-          "probability": 0.818541,
+          "basis": "role_aware",
+          "probability": 0.798915,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.541707,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.427292,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.258632,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.117877,
           "threshold": 100
         }
       ],
-      "usage": 7.2,
+      "usage": 7.7,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 30.333333333333332,
@@ -1232,29 +1366,13 @@
       "kind": "passing",
       "opponent": "DET",
       "player_id": "00-0035228",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "MIN",
-      "thresholds": [
-        {
-          "probability": 0.795443,
-          "threshold": 150
-        },
-        {
-          "probability": 0.586292,
-          "threshold": 200
-        },
-        {
-          "probability": 0.319737,
-          "threshold": 250
-        },
-        {
-          "probability": 0.12356,
-          "threshold": 300
-        }
-      ],
-      "usage": 31.7,
+      "thresholds": [],
+      "usage": 34.0,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 17.666666666666668,
@@ -1263,30 +1381,10 @@
       "kind": "rushing",
       "opponent": "DET",
       "player_id": "00-0033293",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 2,
       "team": "MIN",
-      "thresholds": [
-        {
-          "probability": 0.88401,
-          "threshold": 25
-        },
-        {
-          "probability": 0.63415,
-          "threshold": 50
-        },
-        {
-          "probability": 0.47445,
-          "threshold": 60
-        },
-        {
-          "probability": 0.311975,
-          "threshold": 75
-        },
-        {
-          "probability": 0.122991,
-          "threshold": 100
-        }
-      ],
+      "thresholds": [],
       "usage": 13.9,
       "usage_field": "carries",
       "usage_status": "conditional_model"
@@ -1298,27 +1396,33 @@
       "kind": "rushing",
       "opponent": "DET",
       "player_id": "00-0037525",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "MIN",
       "thresholds": [
         {
-          "probability": 0.744089,
+          "basis": "role_aware",
+          "probability": 0.817733,
           "threshold": 25
         },
         {
-          "probability": 0.403638,
+          "basis": "role_aware",
+          "probability": 0.441516,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.28179,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.170978,
           "threshold": 75
         },
         {
-          "probability": 0.068031,
+          "basis": "role_aware",
+          "probability": 0.077915,
           "threshold": 100
         }
       ],
@@ -1333,33 +1437,39 @@
       "kind": "receiving",
       "opponent": "DET",
       "player_id": "00-0038994",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "MIN",
       "thresholds": [
         {
-          "probability": 0.629395,
+          "basis": "role_aware",
+          "probability": 0.666367,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.317261,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.224631,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.125544,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.044395,
           "threshold": 100
         }
       ],
-      "usage": 5.2,
+      "usage": 6.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 34.333333333333336,
@@ -1368,29 +1478,34 @@
       "kind": "passing",
       "opponent": "IND",
       "player_id": "00-0036971",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "JAX",
       "thresholds": [
         {
-          "probability": 0.902032,
+          "basis": "role_aware",
+          "probability": 0.863925,
           "threshold": 150
         },
         {
-          "probability": 0.735376,
+          "basis": "role_aware",
+          "probability": 0.766031,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.475978,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.207132,
           "threshold": 300
         }
       ],
-      "usage": 31.7,
+      "usage": 30.9,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 7.666666666666667,
@@ -1399,33 +1514,39 @@
       "kind": "receiving",
       "opponent": "IND",
       "player_id": "00-0038935",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "JAX",
       "thresholds": [
         {
-          "probability": 0.723264,
+          "basis": "role_aware",
+          "probability": 0.699178,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.336248,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.223037,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.127033,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.048733,
           "threshold": 100
         }
       ],
-      "usage": 5.7,
+      "usage": 5.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 7.666666666666667,
@@ -1434,33 +1555,39 @@
       "kind": "receiving",
       "opponent": "IND",
       "player_id": "00-0038606",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "JAX",
       "thresholds": [
         {
-          "probability": 0.915328,
+          "basis": "role_aware",
+          "probability": 0.887572,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.727664,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.629761,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.463312,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.250929,
           "threshold": 100
         }
       ],
-      "usage": 7.8,
+      "usage": 8.5,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 17.0,
@@ -1469,27 +1596,33 @@
       "kind": "rushing",
       "opponent": "IND",
       "player_id": "00-0040719",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "JAX",
       "thresholds": [
         {
-          "probability": 0.825206,
+          "basis": "role_aware",
+          "probability": 0.862133,
           "threshold": 25
         },
         {
-          "probability": 0.536528,
+          "basis": "role_aware",
+          "probability": 0.671153,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.440833,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.284894,
           "threshold": 75
         },
         {
-          "probability": 0.134348,
+          "basis": "role_aware",
+          "probability": 0.137447,
           "threshold": 100
         }
       ],
@@ -1504,29 +1637,13 @@
       "kind": "passing",
       "opponent": "JAX",
       "player_id": "00-0035710",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "IND",
-      "thresholds": [
-        {
-          "probability": 0.787892,
-          "threshold": 150
-        },
-        {
-          "probability": 0.588554,
-          "threshold": 200
-        },
-        {
-          "probability": 0.286295,
-          "threshold": 250
-        },
-        {
-          "probability": 0.12843,
-          "threshold": 300
-        }
-      ],
-      "usage": 34.5,
+      "thresholds": [],
+      "usage": 37.8,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 18.0,
@@ -1535,27 +1652,33 @@
       "kind": "rushing",
       "opponent": "JAX",
       "player_id": "00-0036223",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "IND",
       "thresholds": [
         {
-          "probability": 0.90246,
+          "basis": "role_aware",
+          "probability": 0.934589,
           "threshold": 25
         },
         {
-          "probability": 0.650567,
+          "basis": "role_aware",
+          "probability": 0.607492,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.466724,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.308434,
           "threshold": 75
         },
         {
-          "probability": 0.131797,
+          "basis": "role_aware",
+          "probability": 0.084785,
           "threshold": 100
         }
       ],
@@ -1570,33 +1693,39 @@
       "kind": "receiving",
       "opponent": "JAX",
       "player_id": "00-0030279",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "IND",
       "thresholds": [
         {
-          "probability": 0.741109,
+          "basis": "role_aware",
+          "probability": 0.729647,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.439563,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.324191,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.166992,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.056285,
           "threshold": 100
         }
       ],
-      "usage": 6.7,
+      "usage": 7.3,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.0,
@@ -1605,33 +1734,39 @@
       "kind": "receiving",
       "opponent": "JAX",
       "player_id": "00-0038997",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "IND",
       "thresholds": [
         {
-          "probability": 0.708278,
+          "basis": "role_aware",
+          "probability": 0.760693,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.415985,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.317903,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.16108,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.058376,
           "threshold": 100
         }
       ],
-      "usage": 6.5,
+      "usage": 7.5,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 30.0,
@@ -1640,29 +1775,34 @@
       "kind": "passing",
       "opponent": "LV",
       "player_id": "00-0030565",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "NYJ",
       "thresholds": [
         {
-          "probability": 0.905993,
+          "basis": "role_aware",
+          "probability": 0.794228,
           "threshold": 150
         },
         {
-          "probability": 0.714239,
+          "basis": "role_aware",
+          "probability": 0.721928,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.406783,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.161361,
           "threshold": 300
         }
       ],
-      "usage": 28.8,
+      "usage": 25.1,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 19.333333333333332,
@@ -1671,30 +1811,10 @@
       "kind": "rushing",
       "opponent": "LV",
       "player_id": "00-0039794",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 2,
       "team": "NYJ",
-      "thresholds": [
-        {
-          "probability": 0.863684,
-          "threshold": 25
-        },
-        {
-          "probability": 0.67456,
-          "threshold": 50
-        },
-        {
-          "probability": 0.615921,
-          "threshold": 60
-        },
-        {
-          "probability": 0.411592,
-          "threshold": 75
-        },
-        {
-          "probability": 0.216437,
-          "threshold": 100
-        }
-      ],
+      "thresholds": [],
       "usage": 15.6,
       "usage_field": "carries",
       "usage_status": "conditional_model"
@@ -1706,33 +1826,39 @@
       "kind": "receiving",
       "opponent": "LV",
       "player_id": "00-0037740",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "NYJ",
       "thresholds": [
         {
-          "probability": 0.833346,
+          "basis": "role_aware",
+          "probability": 0.825913,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.545247,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.414632,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.271885,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.1127,
           "threshold": 100
         }
       ],
-      "usage": 6.7,
+      "usage": 5.9,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 37.666666666666664,
@@ -1741,29 +1867,34 @@
       "kind": "passing",
       "opponent": "NYJ",
       "player_id": "00-0029604",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "LV",
       "thresholds": [
         {
-          "probability": 0.903631,
+          "basis": "role_aware",
+          "probability": 0.847762,
           "threshold": 150
         },
         {
-          "probability": 0.739645,
+          "basis": "role_aware",
+          "probability": 0.676332,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.438016,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.176535,
           "threshold": 300
         }
       ],
-      "usage": 32.2,
+      "usage": 30.9,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 9.0,
@@ -1772,33 +1903,39 @@
       "kind": "receiving",
       "opponent": "NYJ",
       "player_id": "00-0039338",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "LV",
       "thresholds": [
         {
-          "probability": 0.927609,
+          "basis": "role_aware",
+          "probability": 0.857017,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.639078,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.501583,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.326743,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.126985,
           "threshold": 100
         }
       ],
-      "usage": 8.5,
+      "usage": 6.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 8.0,
@@ -1807,33 +1944,39 @@
       "kind": "receiving",
       "opponent": "NYJ",
       "player_id": "00-0038563",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "LV",
       "thresholds": [
         {
-          "probability": 0.835967,
+          "basis": "role_aware",
+          "probability": 0.856877,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.541719,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.416067,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.256188,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.106474,
           "threshold": 100
         }
       ],
-      "usage": 7.1,
+      "usage": 6.3,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 4.333333333333333,
@@ -1842,33 +1985,39 @@
       "kind": "receiving",
       "opponent": "NYJ",
       "player_id": "00-0039066",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "LV",
       "thresholds": [
         {
-          "probability": 0.604726,
+          "basis": "role_aware",
+          "probability": 0.619837,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.25614,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.17031,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.083281,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.02936,
           "threshold": 100
         }
       ],
-      "usage": 5.0,
+      "usage": 4.9,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 36.666666666666664,
@@ -1877,29 +2026,34 @@
       "kind": "passing",
       "opponent": "CLE",
       "player_id": "00-0023459",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "PIT",
       "thresholds": [
         {
-          "probability": 0.915239,
+          "basis": "role_aware",
+          "probability": 0.813857,
           "threshold": 150
         },
         {
-          "probability": 0.74172,
+          "basis": "role_aware",
+          "probability": 0.764826,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.420256,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.172507,
           "threshold": 300
         }
       ],
-      "usage": 34.2,
+      "usage": 32.0,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 15.666666666666666,
@@ -1908,27 +2062,33 @@
       "kind": "rushing",
       "opponent": "CLE",
       "player_id": "00-0037228",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "PIT",
       "thresholds": [
         {
-          "probability": 0.898022,
+          "basis": "role_aware",
+          "probability": 0.909457,
           "threshold": 25
         },
         {
-          "probability": 0.727672,
+          "basis": "role_aware",
+          "probability": 0.64765,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.60867,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.417793,
           "threshold": 75
         },
         {
-          "probability": 0.199983,
+          "basis": "role_aware",
+          "probability": 0.131516,
           "threshold": 100
         }
       ],
@@ -1943,33 +2103,39 @@
       "kind": "receiving",
       "opponent": "CLE",
       "player_id": "00-0041489",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "PIT",
       "thresholds": [
         {
-          "probability": 0.745179,
+          "basis": "role_aware",
+          "probability": 0.758449,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.424584,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.299842,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.176609,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.074118,
           "threshold": 100
         }
       ],
-      "usage": 6.0,
+      "usage": 5.2,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 8.333333333333334,
@@ -1978,33 +2144,39 @@
       "kind": "receiving",
       "opponent": "CLE",
       "player_id": "00-0035640",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "PIT",
       "thresholds": [
         {
-          "probability": 0.872226,
+          "basis": "role_aware",
+          "probability": 0.862363,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.653416,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.527569,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.327726,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.135755,
           "threshold": 100
         }
       ],
-      "usage": 7.4,
+      "usage": 5.3,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 31.666666666666668,
@@ -2013,29 +2185,34 @@
       "kind": "passing",
       "opponent": "PIT",
       "player_id": "00-0033537",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "CLE",
       "thresholds": [
         {
-          "probability": 0.787459,
+          "basis": "role_aware",
+          "probability": 0.683596,
           "threshold": 150
         },
         {
-          "probability": 0.524067,
+          "basis": "role_aware",
+          "probability": 0.603648,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.243514,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.105258,
           "threshold": 300
         }
       ],
-      "usage": 30.3,
+      "usage": 35.7,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 16.0,
@@ -2044,27 +2221,33 @@
       "kind": "rushing",
       "opponent": "PIT",
       "player_id": "00-0040784",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "CLE",
       "thresholds": [
         {
-          "probability": 0.78546,
+          "basis": "role_aware",
+          "probability": 0.866944,
           "threshold": 25
         },
         {
-          "probability": 0.468697,
+          "basis": "role_aware",
+          "probability": 0.533137,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.35245,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.240313,
           "threshold": 75
         },
         {
-          "probability": 0.086468,
+          "basis": "role_aware",
+          "probability": 0.072095,
           "threshold": 100
         }
       ],
@@ -2079,33 +2262,39 @@
       "kind": "receiving",
       "opponent": "PIT",
       "player_id": "00-0041547",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "CLE",
       "thresholds": [
         {
-          "probability": 0.695746,
+          "basis": "role_aware",
+          "probability": 0.738628,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.38324,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.289027,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.152889,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.055158,
           "threshold": 100
         }
       ],
-      "usage": 5.9,
+      "usage": 5.1,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.0,
@@ -2114,33 +2303,39 @@
       "kind": "receiving",
       "opponent": "PIT",
       "player_id": "00-0036407",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 3,
       "team": "CLE",
       "thresholds": [
         {
-          "probability": 0.441898,
+          "basis": "role_aware",
+          "probability": 0.496479,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.197077,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.125012,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.065331,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.022145,
           "threshold": 100
         }
       ],
-      "usage": 4.1,
+      "usage": 2.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 26.333333333333332,
@@ -2149,29 +2344,13 @@
       "kind": "passing",
       "opponent": "ATL",
       "player_id": "00-0034855",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "TB",
-      "thresholds": [
-        {
-          "probability": 0.826681,
-          "threshold": 150
-        },
-        {
-          "probability": 0.621252,
-          "threshold": 200
-        },
-        {
-          "probability": 0.313121,
-          "threshold": 250
-        },
-        {
-          "probability": 0.130091,
-          "threshold": 300
-        }
-      ],
-      "usage": 30.3,
+      "thresholds": [],
+      "usage": 33.9,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 21.333333333333332,
@@ -2180,27 +2359,33 @@
       "kind": "rushing",
       "opponent": "ATL",
       "player_id": "00-0039361",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "TB",
       "thresholds": [
         {
-          "probability": 0.929435,
+          "basis": "role_aware",
+          "probability": 0.944032,
           "threshold": 25
         },
         {
-          "probability": 0.785351,
+          "basis": "role_aware",
+          "probability": 0.706985,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.689502,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.51231,
           "threshold": 75
         },
         {
-          "probability": 0.272996,
+          "basis": "role_aware",
+          "probability": 0.178211,
           "threshold": 100
         }
       ],
@@ -2215,30 +2400,10 @@
       "kind": "rushing",
       "opponent": "ATL",
       "player_id": "00-0036919",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 2,
       "team": "TB",
-      "thresholds": [
-        {
-          "probability": 0.321936,
-          "threshold": 25
-        },
-        {
-          "probability": 0.10243,
-          "threshold": 50
-        },
-        {
-          "probability": 0.065414,
-          "threshold": 60
-        },
-        {
-          "probability": 0.034475,
-          "threshold": 75
-        },
-        {
-          "probability": 0.013887,
-          "threshold": 100
-        }
-      ],
+      "thresholds": [],
       "usage": 6.0,
       "usage_field": "carries",
       "usage_status": "conditional_model"
@@ -2250,33 +2415,39 @@
       "kind": "receiving",
       "opponent": "ATL",
       "player_id": "00-0040237",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 4,
       "team": "TB",
       "thresholds": [
         {
-          "probability": 0.377082,
+          "basis": "role_aware",
+          "probability": 0.422964,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.163425,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.112295,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.061007,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.024288,
           "threshold": 100
         }
       ],
-      "usage": 2.7,
+      "usage": 2.9,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 33.0,
@@ -2285,29 +2456,34 @@
       "kind": "passing",
       "opponent": "TB",
       "player_id": "00-0039917",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "ATL",
       "thresholds": [
         {
-          "probability": 0.820161,
+          "basis": "role_aware",
+          "probability": 0.691161,
           "threshold": 150
         },
         {
-          "probability": 0.593161,
+          "basis": "role_aware",
+          "probability": 0.586093,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.351461,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.158402,
           "threshold": 300
         }
       ],
-      "usage": 31.8,
+      "usage": 34.4,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 10.333333333333334,
@@ -2316,33 +2492,39 @@
       "kind": "receiving",
       "opponent": "TB",
       "player_id": "00-0037238",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "ATL",
       "thresholds": [
         {
-          "probability": 0.91505,
+          "basis": "role_aware",
+          "probability": 0.915047,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.688238,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.556633,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.356603,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.150107,
           "threshold": 100
         }
       ],
-      "usage": 8.4,
+      "usage": 6.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 15.333333333333334,
@@ -2351,27 +2533,33 @@
       "kind": "rushing",
       "opponent": "TB",
       "player_id": "00-0038542",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "ATL",
       "thresholds": [
         {
-          "probability": 0.920548,
+          "basis": "role_aware",
+          "probability": 0.941317,
           "threshold": 25
         },
         {
-          "probability": 0.747942,
+          "basis": "role_aware",
+          "probability": 0.705483,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.596961,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.397832,
           "threshold": 75
         },
         {
-          "probability": 0.202387,
+          "basis": "role_aware",
+          "probability": 0.103335,
           "threshold": 100
         }
       ],
@@ -2386,33 +2574,39 @@
       "kind": "receiving",
       "opponent": "TB",
       "player_id": "00-0037741",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "ATL",
       "thresholds": [
         {
-          "probability": 0.493225,
+          "basis": "role_aware",
+          "probability": 0.583551,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.214642,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.14402,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.07719,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.030065,
           "threshold": 100
         }
       ],
-      "usage": 4.5,
+      "usage": 5.1,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 38.666666666666664,
@@ -2421,29 +2615,34 @@
       "kind": "passing",
       "opponent": "LAC",
       "player_id": "00-0026498",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "LA",
       "thresholds": [
         {
-          "probability": 0.940702,
+          "basis": "role_aware",
+          "probability": 0.861895,
           "threshold": 150
         },
         {
-          "probability": 0.811076,
+          "basis": "role_aware",
+          "probability": 0.806828,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.538768,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.249311,
           "threshold": 300
         }
       ],
-      "usage": 36.9,
+      "usage": 28.7,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 13.666666666666666,
@@ -2452,33 +2651,39 @@
       "kind": "receiving",
       "opponent": "LAC",
       "player_id": "00-0039075",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "LA",
       "thresholds": [
         {
-          "probability": 0.991816,
+          "basis": "role_aware",
+          "probability": 0.97641,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.958182,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.932634,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.857389,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.668013,
           "threshold": 100
         }
       ],
-      "usage": 9.1,
+      "usage": 9.2,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 14.0,
@@ -2487,27 +2692,33 @@
       "kind": "rushing",
       "opponent": "LAC",
       "player_id": "00-0037840",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "LA",
       "thresholds": [
         {
-          "probability": 0.858523,
+          "basis": "role_aware",
+          "probability": 0.892912,
           "threshold": 25
         },
         {
-          "probability": 0.614573,
+          "basis": "role_aware",
+          "probability": 0.650311,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.485269,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.308386,
           "threshold": 75
         },
         {
-          "probability": 0.144853,
+          "basis": "role_aware",
+          "probability": 0.148535,
           "threshold": 100
         }
       ],
@@ -2522,27 +2733,33 @@
       "kind": "rushing",
       "opponent": "LAC",
       "player_id": "00-0039738",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 2,
       "team": "LA",
       "thresholds": [
         {
-          "probability": 0.666385,
+          "basis": "role_aware",
+          "probability": 0.668604,
           "threshold": 25
         },
         {
-          "probability": 0.331405,
+          "basis": "role_aware",
+          "probability": 0.327905,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.238865,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.143148,
           "threshold": 75
         },
         {
-          "probability": 0.055904,
+          "basis": "role_aware",
+          "probability": 0.08526,
           "threshold": 100
         }
       ],
@@ -2557,29 +2774,34 @@
       "kind": "passing",
       "opponent": "LA",
       "player_id": "00-0036355",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "LAC",
       "thresholds": [
         {
-          "probability": 0.755414,
+          "basis": "role_aware",
+          "probability": 0.741588,
           "threshold": 150
         },
         {
-          "probability": 0.515281,
+          "basis": "role_aware",
+          "probability": 0.461379,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.225389,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.087301,
           "threshold": 300
         }
       ],
-      "usage": 28.1,
+      "usage": 32.1,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 3.6666666666666665,
@@ -2588,33 +2810,39 @@
       "kind": "receiving",
       "opponent": "LA",
       "player_id": "00-0038544",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "LAC",
       "thresholds": [
         {
-          "probability": 0.51068,
+          "basis": "role_aware",
+          "probability": 0.547428,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.237361,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.167103,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.096238,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.035739,
           "threshold": 100
         }
       ],
-      "usage": 4.6,
+      "usage": 5.0,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.666666666666667,
@@ -2623,27 +2851,33 @@
       "kind": "rushing",
       "opponent": "LA",
       "player_id": "00-0039391",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 3,
       "team": "LAC",
       "thresholds": [
         {
-          "probability": 0.358986,
+          "basis": "role_aware",
+          "probability": 0.274463,
           "threshold": 25
         },
         {
-          "probability": 0.122414,
+          "basis": "role_aware",
+          "probability": 0.095283,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.088845,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.057689,
           "threshold": 75
         },
         {
-          "probability": 0.022587,
+          "basis": "role_aware",
+          "probability": 0.020074,
           "threshold": 100
         }
       ],
@@ -2658,27 +2892,33 @@
       "kind": "rushing",
       "opponent": "LA",
       "player_id": "00-0040666",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "LAC",
       "thresholds": [
         {
-          "probability": 0.677548,
+          "basis": "role_aware",
+          "probability": 0.796043,
           "threshold": 25
         },
         {
-          "probability": 0.336621,
+          "basis": "role_aware",
+          "probability": 0.563294,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.254899,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.171236,
           "threshold": 75
         },
         {
-          "probability": 0.074444,
+          "basis": "role_aware",
+          "probability": 0.059074,
           "threshold": 100
         }
       ],
@@ -2693,29 +2933,34 @@
       "kind": "passing",
       "opponent": "KC",
       "player_id": "00-0039732",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "DEN",
       "thresholds": [
         {
-          "probability": 0.759396,
+          "basis": "role_aware",
+          "probability": 0.652391,
           "threshold": 150
         },
         {
-          "probability": 0.518884,
+          "basis": "role_aware",
+          "probability": 0.60769,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.233133,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.116553,
           "threshold": 300
         }
       ],
-      "usage": 29.4,
+      "usage": 30.6,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 13.666666666666666,
@@ -2724,27 +2969,33 @@
       "kind": "rushing",
       "opponent": "KC",
       "player_id": "00-0036158",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "DEN",
       "thresholds": [
         {
-          "probability": 0.752111,
+          "basis": "role_aware",
+          "probability": 0.839591,
           "threshold": 25
         },
         {
-          "probability": 0.408703,
+          "basis": "role_aware",
+          "probability": 0.469176,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.284082,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.206811,
           "threshold": 75
         },
         {
-          "probability": 0.070282,
+          "basis": "role_aware",
+          "probability": 0.094518,
           "threshold": 100
         }
       ],
@@ -2759,33 +3010,39 @@
       "kind": "receiving",
       "opponent": "KC",
       "player_id": "00-0036613",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "DEN",
       "thresholds": [
         {
-          "probability": 0.663912,
+          "basis": "role_aware",
+          "probability": 0.696843,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.365117,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.254194,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.137813,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.051215,
           "threshold": 100
         }
       ],
-      "usage": 5.7,
+      "usage": 6.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 31.0,
@@ -2794,29 +3051,34 @@
       "kind": "passing",
       "opponent": "DEN",
       "player_id": "00-0033873",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "KC",
       "thresholds": [
         {
-          "probability": 0.834729,
+          "basis": "role_aware",
+          "probability": 0.759992,
           "threshold": 150
         },
         {
-          "probability": 0.643102,
+          "basis": "role_aware",
+          "probability": 0.751896,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.328018,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.144747,
           "threshold": 300
         }
       ],
-      "usage": 28.9,
+      "usage": 37.4,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 18.333333333333332,
@@ -2825,30 +3087,10 @@
       "kind": "rushing",
       "opponent": "DEN",
       "player_id": "00-0038134",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "KC",
-      "thresholds": [
-        {
-          "probability": 0.961773,
-          "threshold": 25
-        },
-        {
-          "probability": 0.886022,
-          "threshold": 50
-        },
-        {
-          "probability": 0.811921,
-          "threshold": 60
-        },
-        {
-          "probability": 0.637449,
-          "threshold": 75
-        },
-        {
-          "probability": 0.398407,
-          "threshold": 100
-        }
-      ],
+      "thresholds": [],
       "usage": 19.0,
       "usage_field": "carries",
       "usage_status": "conditional_model"
@@ -2860,33 +3102,39 @@
       "kind": "receiving",
       "opponent": "DEN",
       "player_id": "00-0039894",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "KC",
       "thresholds": [
         {
-          "probability": 0.621456,
+          "basis": "role_aware",
+          "probability": 0.648606,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.330296,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.240776,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.133494,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.046607,
           "threshold": 100
         }
       ],
-      "usage": 5.3,
+      "usage": 7.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 3.0,
@@ -2895,33 +3143,39 @@
       "kind": "receiving",
       "opponent": "DEN",
       "player_id": "00-0036637",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "KC",
       "thresholds": [
         {
-          "probability": 0.299884,
+          "basis": "role_aware",
+          "probability": 0.390944,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.098482,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.058394,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.028515,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.009465,
           "threshold": 100
         }
       ],
-      "usage": 2.8,
+      "usage": 3.3,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 21.666666666666668,
@@ -2930,29 +3184,34 @@
       "kind": "passing",
       "opponent": "NE",
       "player_id": "00-0038128",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "MIA",
       "thresholds": [
         {
-          "probability": 0.715164,
+          "basis": "role_aware",
+          "probability": 0.555777,
           "threshold": 150
         },
         {
-          "probability": 0.397273,
+          "basis": "role_aware",
+          "probability": 0.551979,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.157926,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.076841,
           "threshold": 300
         }
       ],
-      "usage": 27.2,
+      "usage": 30.2,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 17.333333333333332,
@@ -2961,27 +3220,33 @@
       "kind": "rushing",
       "opponent": "NE",
       "player_id": "00-0040198",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "MIA",
       "thresholds": [
         {
-          "probability": 0.803587,
+          "basis": "role_aware",
+          "probability": 0.853759,
           "threshold": 25
         },
         {
-          "probability": 0.494222,
+          "basis": "role_aware",
+          "probability": 0.583905,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.394763,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.249099,
           "threshold": 75
         },
         {
-          "probability": 0.118447,
+          "basis": "role_aware",
+          "probability": 0.091468,
           "threshold": 100
         }
       ],
@@ -2996,33 +3261,39 @@
       "kind": "receiving",
       "opponent": "NE",
       "player_id": "00-0037252",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "MIA",
       "thresholds": [
         {
-          "probability": 0.575581,
+          "basis": "role_aware",
+          "probability": 0.594184,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.213309,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.132203,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.070331,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.022971,
           "threshold": 100
         }
       ],
       "usage": 5.2,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 32.333333333333336,
@@ -3031,29 +3302,34 @@
       "kind": "passing",
       "opponent": "MIA",
       "player_id": "00-0039851",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "NE",
       "thresholds": [
         {
-          "probability": 0.901974,
+          "basis": "role_aware",
+          "probability": 0.837517,
           "threshold": 150
         },
         {
-          "probability": 0.709226,
+          "basis": "role_aware",
+          "probability": 0.613084,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.495699,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.212414,
           "threshold": 300
         }
       ],
-      "usage": 31.9,
+      "usage": 32.2,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.666666666666667,
@@ -3062,33 +3338,39 @@
       "kind": "receiving",
       "opponent": "MIA",
       "player_id": "00-0038621",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "NE",
       "thresholds": [
         {
-          "probability": 0.593728,
+          "basis": "role_aware",
+          "probability": 0.66564,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.279941,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.196377,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.104364,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.042353,
           "threshold": 100
         }
       ],
-      "usage": 4.9,
+      "usage": 6.2,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.333333333333333,
@@ -3097,33 +3379,39 @@
       "kind": "receiving",
       "opponent": "MIA",
       "player_id": "00-0033090",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "NE",
       "thresholds": [
         {
-          "probability": 0.661412,
+          "basis": "role_aware",
+          "probability": 0.678236,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.274371,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.171005,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.087617,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.035297,
           "threshold": 100
         }
       ],
-      "usage": 4.9,
+      "usage": 4.6,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 4.0,
@@ -3132,33 +3420,39 @@
       "kind": "receiving",
       "opponent": "MIA",
       "player_id": "00-0041395",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "NE",
       "thresholds": [
         {
-          "probability": 0.429007,
+          "basis": "role_aware",
+          "probability": 0.483634,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.135987,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.080456,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.044464,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.019382,
           "threshold": 100
         }
       ],
-      "usage": 3.3,
+      "usage": 3.0,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 27.333333333333332,
@@ -3167,29 +3461,34 @@
       "kind": "passing",
       "opponent": "PHI",
       "player_id": "00-0039910",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "WAS",
       "thresholds": [
         {
-          "probability": 0.742542,
+          "basis": "role_aware",
+          "probability": 0.727216,
           "threshold": 150
         },
         {
-          "probability": 0.531827,
+          "basis": "role_aware",
+          "probability": 0.598445,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.265023,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.110573,
           "threshold": 300
         }
       ],
-      "usage": 27.5,
+      "usage": 33.0,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 4.666666666666667,
@@ -3198,33 +3497,39 @@
       "kind": "receiving",
       "opponent": "PHI",
       "player_id": "00-0035659",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 7,
       "team": "WAS",
       "thresholds": [
         {
-          "probability": 0.684294,
+          "basis": "role_aware",
+          "probability": 0.481126,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.393842,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.286487,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.163024,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.063856,
           "threshold": 100
         }
       ],
-      "usage": 5.3,
+      "usage": 4.4,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 4.666666666666667,
@@ -3233,33 +3538,39 @@
       "kind": "receiving",
       "opponent": "PHI",
       "player_id": "00-0037742",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 3,
       "team": "WAS",
       "thresholds": [
         {
-          "probability": 0.407447,
+          "basis": "role_aware",
+          "probability": 0.424554,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.16656,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.108844,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.067139,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.026305,
           "threshold": 100
         }
       ],
-      "usage": 3.9,
+      "usage": 4.0,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 5.666666666666667,
@@ -3268,33 +3579,39 @@
       "kind": "receiving",
       "opponent": "PHI",
       "player_id": "00-0037809",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "WAS",
       "thresholds": [
         {
-          "probability": 0.54452,
+          "basis": "role_aware",
+          "probability": 0.542104,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.203251,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.123322,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.06728,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.023285,
           "threshold": 100
         }
       ],
-      "usage": 4.9,
+      "usage": 6.1,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 40.0,
@@ -3303,29 +3620,13 @@
       "kind": "passing",
       "opponent": "WAS",
       "player_id": "00-0038400",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "PHI",
-      "thresholds": [
-        {
-          "probability": 0.782078,
-          "threshold": 150
-        },
-        {
-          "probability": 0.572492,
-          "threshold": 200
-        },
-        {
-          "probability": 0.290345,
-          "threshold": 250
-        },
-        {
-          "probability": 0.104459,
-          "threshold": 300
-        }
-      ],
-      "usage": 32.0,
+      "thresholds": [],
+      "usage": 31.3,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 8.0,
@@ -3334,27 +3635,33 @@
       "kind": "rushing",
       "opponent": "WAS",
       "player_id": "00-0034844",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "PHI",
       "thresholds": [
         {
-          "probability": 0.644435,
+          "basis": "role_aware",
+          "probability": 0.78608,
           "threshold": 25
         },
         {
-          "probability": 0.312416,
+          "basis": "role_aware",
+          "probability": 0.392593,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.202597,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.113055,
           "threshold": 75
         },
         {
-          "probability": 0.048468,
+          "basis": "role_aware",
+          "probability": 0.07386,
           "threshold": 100
         }
       ],
@@ -3369,33 +3676,39 @@
       "kind": "receiving",
       "opponent": "WAS",
       "player_id": "00-0034351",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "PHI",
       "thresholds": [
         {
-          "probability": 0.7682,
+          "basis": "role_aware",
+          "probability": 0.720645,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.38314,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.241187,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.135139,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.044987,
           "threshold": 100
         }
       ],
-      "usage": 6.3,
+      "usage": 6.5,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 7.0,
@@ -3404,33 +3717,39 @@
       "kind": "receiving",
       "opponent": "WAS",
       "player_id": "00-0040867",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 3,
       "team": "PHI",
       "thresholds": [
         {
-          "probability": 0.629627,
+          "basis": "role_aware",
+          "probability": 0.652123,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.312804,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.215854,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.119356,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.046692,
           "threshold": 100
         }
       ],
       "usage": 5.1,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 36.0,
@@ -3439,29 +3758,13 @@
       "kind": "passing",
       "opponent": "CHI",
       "player_id": "00-0034869",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "SEA",
-      "thresholds": [
-        {
-          "probability": 0.864579,
-          "threshold": 150
-        },
-        {
-          "probability": 0.67206,
-          "threshold": 200
-        },
-        {
-          "probability": 0.380424,
-          "threshold": 250
-        },
-        {
-          "probability": 0.156664,
-          "threshold": 300
-        }
-      ],
-      "usage": 31.9,
+      "thresholds": [],
+      "usage": 36.3,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 12.0,
@@ -3470,33 +3773,39 @@
       "kind": "receiving",
       "opponent": "CHI",
       "player_id": "00-0038543",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "SEA",
       "thresholds": [
         {
-          "probability": 0.987044,
+          "basis": "role_aware",
+          "probability": 0.973548,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.926471,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.883214,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.776908,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.523631,
           "threshold": 100
         }
       ],
-      "usage": 10.1,
+      "usage": 10.0,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 19.333333333333332,
@@ -3505,27 +3814,33 @@
       "kind": "rushing",
       "opponent": "CHI",
       "player_id": "00-0038797",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "SEA",
       "thresholds": [
         {
-          "probability": 0.864737,
+          "basis": "role_aware",
+          "probability": 0.900947,
           "threshold": 25
         },
         {
-          "probability": 0.605985,
+          "basis": "role_aware",
+          "probability": 0.615925,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.477113,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.330153,
           "threshold": 75
         },
         {
-          "probability": 0.131253,
+          "basis": "role_aware",
+          "probability": 0.134922,
           "threshold": 100
         }
       ],
@@ -3540,33 +3855,39 @@
       "kind": "receiving",
       "opponent": "CHI",
       "player_id": "00-0037545",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "SEA",
       "thresholds": [
         {
-          "probability": 0.441517,
+          "basis": "role_aware",
+          "probability": 0.512692,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.19796,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.130545,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.072034,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.028023,
           "threshold": 100
         }
       ],
-      "usage": 3.9,
+      "usage": 5.2,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 31.666666666666668,
@@ -3575,29 +3896,34 @@
       "kind": "passing",
       "opponent": "SEA",
       "player_id": "00-0039918",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "CHI",
       "thresholds": [
         {
-          "probability": 0.700382,
+          "basis": "role_aware",
+          "probability": 0.760752,
           "threshold": 150
         },
         {
-          "probability": 0.508522,
+          "basis": "role_aware",
+          "probability": 0.41796,
           "threshold": 200
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.261331,
           "threshold": 250
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.121097,
           "threshold": 300
         }
       ],
-      "usage": 32.3,
+      "usage": 35.4,
       "usage_field": "attempts",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 6.0,
@@ -3606,33 +3932,39 @@
       "kind": "receiving",
       "opponent": "SEA",
       "player_id": "00-0040735",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 2,
       "team": "CHI",
       "thresholds": [
         {
-          "probability": 0.836414,
+          "basis": "role_aware",
+          "probability": 0.822185,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.55064,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.453787,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.277846,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.124279,
           "threshold": 100
         }
       ],
-      "usage": 7.5,
+      "usage": 7.1,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     },
     {
       "baseline_usage": 15.666666666666666,
@@ -3641,27 +3973,33 @@
       "kind": "rushing",
       "opponent": "SEA",
       "player_id": "00-0036275",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
+      "role_rank": 1,
       "team": "CHI",
       "thresholds": [
         {
-          "probability": 0.844646,
+          "basis": "role_aware",
+          "probability": 0.879494,
           "threshold": 25
         },
         {
-          "probability": 0.495199,
+          "basis": "role_aware",
+          "probability": 0.592056,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.319103,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.202542,
           "threshold": 75
         },
         {
-          "probability": 0.067814,
+          "basis": "role_aware",
+          "probability": 0.067079,
           "threshold": 100
         }
       ],
@@ -3676,33 +4014,39 @@
       "kind": "receiving",
       "opponent": "SEA",
       "player_id": "00-0040126",
-      "role_adjustment": "Unavailable: historical pregame starter/injury evidence has not been validated.",
+      "role_adjustment": "Timestamped depth-rank model passed development gate",
+      "role_rank": 1,
       "team": "CHI",
       "thresholds": [
         {
-          "probability": 0.725189,
+          "basis": "role_aware",
+          "probability": 0.66029,
           "threshold": 25
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.31312,
           "threshold": 50
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.208082,
           "threshold": 60
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.106597,
           "threshold": 75
         },
         {
+          "basis": "conditional_baseline",
           "probability": 0.046057,
           "threshold": 100
         }
       ],
-      "usage": 5.8,
+      "usage": 4.9,
       "usage_field": "targets",
-      "usage_status": "conditional_model"
+      "usage_status": "role_aware_conditional"
     }
   ],
   "policy": "Experimental conditional-on-appearing estimates. Fit through 2023; calibrate 2024; evaluate 2025. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.",
@@ -3718,12 +4062,33 @@
       "target": "usage"
     },
     {
+      "baseline_mae": 8.936170212765957,
+      "calibration": "2025 W13\u201318",
+      "evaluation": "2026 completed weeks; development gate, not prospective validation",
+      "fit": "2025 through W12",
+      "kind": "passing",
+      "mae": 7.655485918446127,
+      "promoted": true,
+      "regular_usage_mae": 7.910965743612064,
+      "samples": 235,
+      "target": "role_usage"
+    },
+    {
       "baseline_brier": 0.20500222991962624,
       "brier": 0.15186247807588396,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
       "target": 150
+    },
+    {
+      "baseline_brier": 0.1949240787653668,
+      "brier": 0.15058370867943147,
+      "kind": "passing",
+      "promoted": true,
+      "regular_brier": 0.15197400862685692,
+      "samples": 235,
+      "target": "role_threshold_150"
     },
     {
       "baseline_brier": 0.2497961418479442,
@@ -3734,12 +4099,30 @@
       "target": 200
     },
     {
+      "baseline_brier": 0.25975164353542735,
+      "brier": 0.21125320665760985,
+      "kind": "passing",
+      "promoted": true,
+      "regular_brier": 0.22052960123451193,
+      "samples": 235,
+      "target": "role_threshold_200"
+    },
+    {
       "baseline_brier": 0.21410938320162404,
       "brier": 0.19643983655423092,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
       "target": 250
+    },
+    {
+      "baseline_brier": 0.23806509211914614,
+      "brier": 0.2314744741624537,
+      "kind": "passing",
+      "promoted": false,
+      "regular_brier": 0.20636328998027917,
+      "samples": 235,
+      "target": "role_threshold_250"
     },
     {
       "baseline_brier": 0.09775725348688459,
@@ -3750,12 +4133,33 @@
       "target": 300
     },
     {
+      "baseline_brier": 0.12807358825185164,
+      "brier": 0.12421688873544147,
+      "kind": "passing",
+      "promoted": false,
+      "regular_brier": 0.12100710073631299,
+      "samples": 235,
+      "target": "role_threshold_300"
+    },
+    {
       "baseline_mae": 3.439476061427281,
       "kind": "rushing",
       "mae": 3.298735443766344,
       "promoted": true,
       "samples": 1476,
       "target": "usage"
+    },
+    {
+      "baseline_mae": 3.9676290463692037,
+      "calibration": "2025 W13\u201318",
+      "evaluation": "2026 completed weeks; development gate, not prospective validation",
+      "fit": "2025 through W12",
+      "kind": "rushing",
+      "mae": 3.8041653904850876,
+      "promoted": false,
+      "regular_usage_mae": 3.7688596491201065,
+      "samples": 381,
+      "target": "role_usage"
     },
     {
       "baseline_brier": 0.24931657225599016,
@@ -3766,12 +4170,30 @@
       "target": 25
     },
     {
+      "baseline_brier": 0.24552049154422578,
+      "brier": 0.1547597643798086,
+      "kind": "rushing",
+      "promoted": true,
+      "regular_brier": 0.1594856995090271,
+      "samples": 381,
+      "target": "role_threshold_25"
+    },
+    {
       "baseline_brier": 0.20002978969072113,
       "brier": 0.13981210755344942,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
       "target": 50
+    },
+    {
+      "baseline_brier": 0.2224820881975917,
+      "brier": 0.1572935130297043,
+      "kind": "rushing",
+      "promoted": true,
+      "regular_brier": 0.15980487845538277,
+      "samples": 381,
+      "target": "role_threshold_50"
     },
     {
       "baseline_brier": 0.169802616405288,
@@ -3782,12 +4204,30 @@
       "target": 60
     },
     {
+      "baseline_brier": 0.19281473773700702,
+      "brier": 0.14626368592038755,
+      "kind": "rushing",
+      "promoted": false,
+      "regular_brier": 0.1460481157335441,
+      "samples": 381,
+      "target": "role_threshold_60"
+    },
+    {
       "baseline_brier": 0.11788431373734377,
       "brier": 0.10065128045441213,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
       "target": 75
+    },
+    {
+      "baseline_brier": 0.1466382923188002,
+      "brier": 0.12882168084209822,
+      "kind": "rushing",
+      "promoted": false,
+      "regular_brier": 0.12305000829827253,
+      "samples": 381,
+      "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.05982664566877521,
@@ -3798,12 +4238,33 @@
       "target": 100
     },
     {
+      "baseline_brier": 0.08128947721114081,
+      "brier": 0.07696802450180151,
+      "kind": "rushing",
+      "promoted": true,
+      "regular_brier": 0.0770818543718277,
+      "samples": 381,
+      "target": "role_threshold_100"
+    },
+    {
       "baseline_mae": 1.804533630620587,
       "kind": "receiving",
       "mae": 1.7371868838318345,
       "promoted": true,
       "samples": 3588,
       "target": "usage"
+    },
+    {
+      "baseline_mae": 2.0201149425287355,
+      "calibration": "2025 W13\u201318",
+      "evaluation": "2026 completed weeks; development gate, not prospective validation",
+      "fit": "2025 through W12",
+      "kind": "receiving",
+      "mae": 1.8502458900377803,
+      "promoted": true,
+      "regular_usage_mae": 1.9040829830827029,
+      "samples": 1044,
+      "target": "role_usage"
     },
     {
       "baseline_brier": 0.2446763991730528,
@@ -3814,12 +4275,30 @@
       "target": 25
     },
     {
+      "baseline_brier": 0.24952626911468914,
+      "brier": 0.1727683836588802,
+      "kind": "receiving",
+      "promoted": true,
+      "regular_brier": 0.1744244425841282,
+      "samples": 1044,
+      "target": "role_threshold_25"
+    },
+    {
       "baseline_brier": 0.16265234798950273,
       "brier": 0.12580214829592698,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
       "target": 50
+    },
+    {
+      "baseline_brier": 0.19165712940732244,
+      "brier": 0.15005526946146855,
+      "kind": "receiving",
+      "promoted": false,
+      "regular_brier": 0.14459403621557856,
+      "samples": 1044,
+      "target": "role_threshold_50"
     },
     {
       "baseline_brier": 0.1291842325385742,
@@ -3830,6 +4309,15 @@
       "target": 60
     },
     {
+      "baseline_brier": 0.16032317244790023,
+      "brier": 0.12877834537945188,
+      "kind": "receiving",
+      "promoted": false,
+      "regular_brier": 0.12569158531201327,
+      "samples": 1044,
+      "target": "role_threshold_60"
+    },
+    {
       "baseline_brier": 0.08739124626901189,
       "brier": 0.07324038832196142,
       "kind": "receiving",
@@ -3838,14 +4326,32 @@
       "target": 75
     },
     {
+      "baseline_brier": 0.10999587908366563,
+      "brier": 0.09349714137085073,
+      "kind": "receiving",
+      "promoted": false,
+      "regular_brier": 0.09192914402325582,
+      "samples": 1044,
+      "target": "role_threshold_75"
+    },
+    {
       "baseline_brier": 0.03884607426654325,
       "brier": 0.03500280073976826,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
       "target": 100
+    },
+    {
+      "baseline_brier": 0.05350494435805535,
+      "brier": 0.04665409798304987,
+      "kind": "receiving",
+      "promoted": false,
+      "regular_brier": 0.046061831179075335,
+      "samples": 1044,
+      "target": "role_threshold_100"
     }
   ],
-  "version": "player-extensions:6602d9650ac00e4c",
+  "version": "player-extensions:f600f913efe9dda6",
   "week": 8
 }

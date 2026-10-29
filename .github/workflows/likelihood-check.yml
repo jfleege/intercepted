@@ -44,7 +44,7 @@ jobs:
             sleep 1
           done
           failed=0
-          for check in forecast-insights playbook unified interface-polish players-page markets-builder prop-quotes performance-hub footer-info; do
+          for check in player-extensions forecast-insights playbook unified interface-polish players-page markets-builder prop-quotes performance-hub footer-info; do
             node --experimental-strip-types "tests/$check.browser.mjs" || failed=1
           done
           exit "$failed"

@@ -44,6 +44,7 @@
 .dash-whats-new a:focus-visible { outline: 2px solid #9ce5ff; outline-offset: 4px; border-radius: 3px; }
 
 @media (min-width: 851px) and (max-width: 1100px) {
+  .dashboard-shell .ud-bottom-grid .dp-grid { grid-auto-columns: calc((100% - 14px) / 2); }
   .dashboard-shell .ud-bottom-grid .dp-headshot { width: 60px; height: 70px; flex-basis: 60px; }
   .dashboard-shell .ud-bottom-grid .dp-player-top { gap: 8px; }
   .dashboard-shell .ud-bottom-grid .dp-player-identity strong { font-size: 22px; }

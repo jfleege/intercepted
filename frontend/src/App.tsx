@@ -24,6 +24,7 @@ import "./HeroPlaybook.css";
 import "./Brand.css";
 import "./InterfacePolish.css";
 import "./GlassTheme.css";
+import "./PlayerPresentation.css";
 
 import type { Game, PredictionData } from "./forecastTypes";
 type WeekEntry = {season: number; week: number; file: string; count: number};
@@ -163,6 +164,12 @@ const focusedGame =
           </a>
         </nav>
         <div className="dash-sidebar-bottom">
+          <section className="dash-whats-new" aria-label="Latest improvements">
+            <span className="dash-whats-new-label">What’s new</span>
+            <strong>More ways to explore.</strong>
+            <p>Model-likelihood Markets, more cross-game combinations, and clearer forecast updates.</p>
+            <a href="#markets">Explore Markets <span aria-hidden="true">→</span></a>
+          </section>
           <div className="dash-side-note">
             <strong>INTERCEPTED</strong>
             <p>

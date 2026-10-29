@@ -27,6 +27,9 @@ try {
   await page.goto(base);await page.locator('.ud-game').first().waitFor();await page.locator('.dp-player-card').first().waitFor();
   await page.locator('.fi-updates').first().locator('summary').first().click();await page.locator('.fi-change').first().waitFor();
   assert.equal(await page.locator('.fi-change-value b').first().textContent(),'+30.0 yd');
+  assert.deepEqual(await page.locator('.fi-impact-summary').first().locator('b').allTextContents(),['0','1','0']);
+  assert.equal(await page.locator('.fi-change-kind').first().textContent(),'Projection changed');
+  assert.ok((await page.locator('.fi-impact-note').first().textContent()).includes('not proof of zero real-world impact'));
   await page.getByLabel('Forecast change type',{exact:true}).selectOption('td');assert.equal(await page.locator('.fi-change').count(),0);
   await page.getByLabel('Forecast change type',{exact:true}).selectOption('yards');assert.equal(await page.locator('.fi-change').count(),1);
   await page.locator('.fi-updates').first().screenshot({path:`qa/insights/${width}-changes-fixture.png`});

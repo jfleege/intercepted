@@ -1,6 +1,17 @@
 export type Availability={status:string;practice:string|null;injury:string|null;observed_at:string|null;report_updated_at:string|null;source:string;reason:string;blocked:boolean};
 export type PlayerContext={player_id:string;game_id:string;team:string;opponent:string;name:string;position:string;kickoff:string|null;availability:Availability;starter:{status:string;rank:number|null;updated_at:string|null;source:string;reason:string};usage:{status:string;field?:string;estimate:number|null;recent_average?:number;last?:number;observed_range?:number[];samples:number;through_week?:number;version:string;method?:string}};
 export type ForecastChange={id:string;game_id:string;season:number;week:number;matchup:string;field:string;label:string;player_id?:string;unit:string;before:string|number|null;after:string|number|null;delta:number|null;previous_observed_at:string;observed_at:string;source_at?:string;reasons:string[]};
+export function changeKind(change: ForecastChange) {
+ if (change.unit === 'probability') return 'probability';
+ if (['yards', 'points'].includes(change.unit)) return 'projection';
+ if (['status', 'opportunities', 'identity'].includes(change.unit)) return 'context';
+ return 'other';
+}
+export function summarizeChanges(changes: ForecastChange[]) {
+ const counts = { probability: 0, projection: 0, context: 0, other: 0 };
+ for (const change of changes) counts[changeKind(change)]++;
+ return counts;
+}
 export type Signal={id:string;severity:string;message:string;game_id?:string;target?:string;version?:string};
 export type CalibrationWatch={target:string;version:string;family:string;samples:number;minimum:number;status:string;windows:{samples:number;predicted:number;observed:number;gap:number;ece:number;start:string;end:string}[]};
 export type ForecastInsights={schema_version:number;season:number;week:number;exported_at:string;tracking_started_at:string;sources:Record<string,{status:string;observed_at:string;rows:number;latest_report_at?:string}>;players:PlayerContext[];changes:ForecastChange[];usage_validation:{field:string;samples:number;mae:number;baseline_mae:number;version:string;evaluation:string}[];monitoring:{checked_at:string;alerts:Signal[];calibration:CalibrationWatch[];policy:{label:string;calibration_gap:number;automatic_retraining:boolean};automatic_retraining:boolean}};

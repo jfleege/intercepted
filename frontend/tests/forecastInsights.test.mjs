@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {availabilityLabel,changeDelta,displayValue,findContext,fresh,matchesInsights,reportedOut,starterLabel} from '../src/forecastInsights.ts';
+import {availabilityLabel,changeDelta,changeKind,summarizeChanges,displayValue,findContext,fresh,matchesInsights,reportedOut,starterLabel} from '../src/forecastInsights.ts';
 import {rankWatchPlayers} from '../src/playerWatchRanking.ts';
 const now=Date.parse('2026-10-28T12:00:00Z'),slate={season:2026,week:8};
 const context={player_id:'p1',game_id:'g1',team:'TB',opponent:'ATL',kickoff:'2026-10-29T20:00:00Z',availability:{status:'Out',observed_at:'2026-10-28T10:00:00Z',blocked:true,practice:'Did Not Participate In Practice'},starter:{status:'listed_first_unit',updated_at:'2026-10-28T07:00:00Z'}};
@@ -39,4 +39,14 @@ test('current reported-out exclusions apply in blended and form watch rankings',
  const data={...slate,games:{g1:{away_team:'ATL',home_team:'TB',away_players:[],home_players:[p(1),p(2),p(3)]}}};
  for(const mode of ['blend','form'])assert.equal(rankWatchPlayers(data,null,mode,['p2']).players.some(p=>p.player_id==='p2'),false);
  assert.equal(rankWatchPlayers(data,null,'form').players.length,3);
+});
+
+test('change breakdown distinguishes saved probabilities from projections and contextual evidence',()=>{
+ const changes=[{unit:'probability',field:'home_win_prob_v5_qb_plus'},{unit:'probability',field:'p:passing_td_probability'},{unit:'yards'},{unit:'points'},{unit:'status'},{unit:'identity'},{unit:'opportunities'},{unit:'version'}];
+ const original=structuredClone(changes);
+ assert.deepEqual(summarizeChanges(changes),{probability:2,projection:2,context:3,other:1});
+ assert.equal(changeKind({unit:'status',field:'p:practice'}),'context');
+ assert.deepEqual(summarizeChanges([{unit:'status'}]),{probability:0,projection:0,context:1,other:0});
+ assert.deepEqual(summarizeChanges([]),{probability:0,projection:0,context:0,other:0});
+ assert.deepEqual(changes,original);
 });

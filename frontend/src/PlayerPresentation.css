@@ -1,0 +1,58 @@
+/* Give player identity more presence without changing the card layout. */
+.dashboard-shell .ud-bottom-grid .dp-headshot {
+  width: 72px;
+  height: 80px;
+  flex-basis: 72px;
+  border-radius: 10px;
+}
+.dashboard-shell .ud-bottom-grid .dp-player-top { gap: 11px; }
+.dashboard-shell .ud-bottom-grid .dp-player-identity { gap: 5px; }
+.dashboard-shell .ud-bottom-grid .dp-player-identity strong { font-size: 24px; }
+.dashboard-shell .ud-bottom-grid .dp-player-identity small { font-size: 12px; }
+.dashboard-shell .ud-bottom-grid .dp-position { font-size: 11px; }
+
+.dashboard-shell .dash-sidebar { overflow-y: auto; scrollbar-width: thin; }
+.dash-sidebar-bottom { display: grid; gap: 12px; }
+.dash-whats-new {
+  padding: 15px;
+  border: 1px solid #315969;
+  border-radius: 16px;
+  background: linear-gradient(145deg, #153b495e, #102131a6);
+  box-shadow: inset 0 1px 0 #b1efff0d, 0 6px 18px #00000014;
+}
+.dash-whats-new-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #8ee9dc;
+  font-size: 10px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.dash-whats-new-label::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.dash-whats-new strong { color: #e1eef7; font-size: 13px; }
+.dash-whats-new p { color: #aac0d1; font-size: 11px; line-height: 1.6; margin: 8px 0 10px; }
+.dash-whats-new a { color: #8bdef7; font-size: 11px; text-decoration: none; display: inline-block; padding: 5px 0; }
+.dash-whats-new a:hover { text-decoration: underline; }
+.dash-whats-new a:focus-visible { outline: 2px solid #9ce5ff; outline-offset: 4px; border-radius: 3px; }
+
+@media (min-width: 851px) and (max-width: 1100px) {
+  .dashboard-shell .ud-bottom-grid .dp-grid { grid-auto-columns: calc((100% - 14px) / 2); }
+  .dashboard-shell .ud-bottom-grid .dp-headshot { width: 60px; height: 70px; flex-basis: 60px; }
+  .dashboard-shell .ud-bottom-grid .dp-player-top { gap: 8px; }
+  .dashboard-shell .ud-bottom-grid .dp-player-identity strong { font-size: 22px; }
+}
+@media (max-width: 1050px) { .dashboard-shell .dash-sidebar-bottom { display: none; } }
+@media (max-width: 650px) {
+  .dashboard-shell .dash-sidebar { overflow: visible; }
+  .dashboard-shell .ud-bottom-grid .dp-headshot { width: 64px; height: 74px; flex-basis: 64px; }
+  .dashboard-shell .ud-bottom-grid .dp-player-top { gap: 8px; }
+  .dashboard-shell .ud-bottom-grid .dp-player-identity strong { font-size: 23px; }
+}

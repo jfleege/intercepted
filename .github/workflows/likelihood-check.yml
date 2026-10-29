@@ -1,7 +1,7 @@
-name: Check likelihood Markets and cross-game alternatives
+name: Check player presentation and forecast transparency
 on:
   push:
-    branches: [codex/markets-decision]
+    branches: [codex/markets-decision, codex/player-polish-updates]
 permissions:
   contents: read
 jobs:
@@ -51,6 +51,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: likelihood-markets-validation
+          name: player-presentation-validation
           path: frontend/qa/
           retention-days: 14

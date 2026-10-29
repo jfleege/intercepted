@@ -40,3 +40,11 @@ test('new plans freeze unpriced selections; malformed storage and duplicate cont
  assert.equal(plan.legs[0].price,null);assert.equal(plan.legs[0].bookmaker,null);assert.equal(plan.legs[0].quoteFresh,false);original.probability=.1;assert.equal(plan.legs[0].probability,.7);assert.deepEqual(readPlans(JSON.stringify([plan])),[plan]);
  assert.throws(()=>makePlan([plan.legs[0],plan.legs[0]],now));assert.throws(()=>readPlans('broken'));assert.throws(()=>readPlans(JSON.stringify([{...plan,legs:[{...plan.legs[0],price:100}]}])));assert.equal(withoutPrice(original).quoteAt,null);
 });
+
+test('pins, exclusions and shared-leg limits constrain the alternatives',()=>{
+ const pool=Array.from({length:6},(_,n)=>offer(`${n}`,`${n}`,.8));
+ const pinned=crossGameIdeas(pool,'higher',3,3,now,{pinned:['0'],excluded:['5'],maxShared:1});
+ assert.ok(pinned.length>0);assert.ok(pinned.every(x=>x.legs.some(o=>o.id==='0')&&!x.legs.some(o=>o.id==='5')));
+ for(let i=0;i<pinned.length;i++)for(let j=0;j<i;j++)assert.ok(pinned[i].legs.filter(o=>pinned[j].legs.some(l=>l.id===o.id)).length<=1);
+ assert.equal(crossGameIdeas(pool,'higher',3,3,now,{pinned:['missing']}).length,0);
+});

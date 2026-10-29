@@ -61,13 +61,15 @@ def run(cache):
   role_test=[r for r in role_rows if r['season']==slate['season']]
   if min(len(role_train),len(role_cal),len(role_test))>=40:
    candidate=fit_regression(role_train,role_cal,role_columns,'opportunities')
+   role_blind=fit_regression(role_train,role_cal,PLAYER_FEATURES,'opportunities')
+   blind_error=float(np.mean(abs(predict_regression(role_blind,role_test)-np.array([r['opportunities'] for r in role_test]))))
    rp=predict_regression(candidate,role_test)
    regular=predict_regression(usage,[{**r,'x':{k:r['x'][k] for k in PLAYER_FEATURES}} for r in role_test])
    ry=np.array([r['opportunities'] for r in role_test]);recent=np.array([r['x']['recent_usage'] for r in role_test])
    error=float(np.mean(abs(rp-ry)));regular_error=float(np.mean(abs(regular-ry)));recent_error=float(np.mean(abs(recent-ry)))
-   promoted=error<min(regular_error,recent_error)
+   promoted=error<min(regular_error,recent_error,blind_error)
    role_fitted[kind]=candidate if promoted else None
-   validation.append({'kind':kind,'target':'role_usage','samples':len(role_test),'mae':error,'baseline_mae':recent_error,'regular_usage_mae':regular_error,'promoted':promoted,'fit':'2025 through W12','calibration':'2025 W13–18','evaluation':f'{slate["season"]} completed weeks; development gate, not prospective validation'})
+   validation.append({'kind':kind,'target':'role_usage','samples':len(role_test),'mae':error,'baseline_mae':recent_error,'regular_usage_mae':regular_error,'role_blind_mae':blind_error,'promoted':promoted,'fit':'2025 through W12','calibration':'2025 W13–18','evaluation':f'{slate["season"]} completed weeks; development gate, not prospective validation'})
   for threshold in THRESHOLDS[kind]:
    for r in group:r['threshold_event']=int(r['yards']>=threshold)
    model=fit_event(train,cal,'threshold_event');p=predict_event(model,test)
@@ -80,12 +82,14 @@ def run(cache):
      for r in subset:r['threshold_event']=int(r['yards']>=threshold)
     if all(len({r['threshold_event'] for r in subset})==2 for subset in [role_train,role_cal]):
      candidate=fit_event(role_train,role_cal,'threshold_event',role_columns)
+     role_blind=fit_event(role_train,role_cal,'threshold_event')
+     blind_error=float(np.mean((predict_event(role_blind,role_test)-np.array([r['threshold_event'] for r in role_test]))**2))
      rp=predict_event(candidate,role_test);actual=np.array([r['threshold_event'] for r in role_test])
      standard=predict_event(model,[{**r,'x':{k:r['x'][k] for k in PLAYER_FEATURES}} for r in role_test])
      error=float(np.mean((rp-actual)**2));standard_error=float(np.mean((standard-actual)**2));rate=np.mean([r['threshold_event'] for r in role_cal]);baseline_error=float(np.mean((rate-actual)**2))
-     promoted=error<min(standard_error,baseline_error)
+     promoted=error<min(standard_error,baseline_error,blind_error)
      role_thresholds[(kind,threshold)]=candidate if promoted else None
-     validation.append({'kind':kind,'target':f'role_threshold_{threshold}','samples':len(role_test),'brier':error,'baseline_brier':baseline_error,'regular_brier':standard_error,'promoted':promoted})
+     validation.append({'kind':kind,'target':f'role_threshold_{threshold}','samples':len(role_test),'brier':error,'baseline_brier':baseline_error,'regular_brier':standard_error,'role_blind_brier':blind_error,'promoted':promoted})
  now=datetime.now(timezone.utc).isoformat()
  games={r['game_id']:r for r in schedules};output=[]
  for gid,game in watch.get('games',{}).items():
@@ -121,7 +125,7 @@ def run(cache):
      elif m:thresholds.append({'threshold':threshold,'probability':round(float(predict_event(m,[{'x':x}])[0]),6),'basis':'conditional_baseline'})
     # Separate classifiers can cross; withhold incoherent curves rather than silently repair them.
     if any(b['probability']>a['probability'] for a,b in zip(thresholds,thresholds[1:])):thresholds=[]
-    output.append({'game_id':gid,'player_id':player['player_id'],'team':team,'opponent':opp,'kickoff':kickoff(g),'kind':kind,'usage_field':USAGE[kind], 'usage':0 if out else round(role_usage,1) if role_usage is not None else round(float(predict_regression(model,[{'x':x}])[0]),1) if model else None,'usage_status':'reported_out' if out else 'role_aware_conditional' if role_usage is not None else 'conditional_model' if model else 'baseline_not_beaten','baseline_usage':x['recent_usage'],'thresholds':[] if out else thresholds,'role_adjustment':'Timestamped depth-rank model passed development gate' if role_usage is not None else 'Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained', 'role_rank':role_rank})
+    output.append({'game_id':gid,'player_id':player['player_id'],'team':team,'opponent':opp,'kickoff':kickoff(g),'kind':kind,'usage_field':USAGE[kind], 'usage':0 if out else round(role_usage,1) if role_usage is not None else round(float(predict_regression(model,[{'x':x}])[0]),1) if model else None,'usage_status':'reported_out' if out else 'role_aware_conditional' if role_usage is not None else 'conditional_model' if model else 'baseline_not_beaten','baseline_usage':x['recent_usage'],'thresholds':[] if out else thresholds,'role_adjustment':'Timestamped depth-rank model passed development gate' if role_usage is not None else 'Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained', 'role_rank':role_rank,'role_evidence':c['starter'] if role_current else None,'availability_evidence':c['availability'] if c else None})
  now=datetime.now(timezone.utc).isoformat()
  output=[p for p in output if stamp(p['kickoff'])>stamp(now)]
  report={'schema_version':1,'season':slate['season'],'week':slate['week'],'generated_at':now,'version':'player-extensions:'+hashlib.sha256(Path(__file__).read_bytes()+(ROOT/'src/features/pregame_roles.py').read_bytes()+(ROOT/'src/ml/projection_models.py').read_bytes()+json.dumps(validation,sort_keys=True).encode()).hexdigest()[:16],'policy':'Experimental conditional-on-appearing estimates. Base models fit through 2023, calibrate 2024, evaluate 2025. Timestamped role candidates fit 2025 through W12, calibrate W13–18, evaluate completed current-season appearances. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.','validation':validation,'players':output}

@@ -31,27 +31,31 @@ function factorScore(o: Offer, factor: Factor) {
 const key = (legs: Offer[]) => legs.map(o => o.id).sort().join('|');
 
 /** Bounded beam search; deterministic alternatives, exact count, one leg per game. */
-export function crossGameIdeas(offers: Offer[], factor: Factor, count: number, limit: number, now: number): Idea[] {
+export function crossGameIdeas(offers: Offer[], factor: Factor, count: number, limit: number, now: number, controls: { pinned?: string[]; excluded?: string[]; maxShared?: number; diversity?: number } = {}): Idea[] {
   if (![2, 3, 4].includes(count) || ![3, 4, 5, 6].includes(limit)) return [];
-  const available = offers.filter(o => eligible(o, now) && (factor === 'higher' ? o.probability! >= .65 : factor === 'even' ? o.probability! >= .45 && o.probability! <= .55 : factor === 'longer' ? o.probability! < .45 : o.category === 'moneyline' && o.probability! >= .5 && support(o) !== null));
+  const available = offers.filter(o => eligible(o, now) && !controls.excluded?.includes(o.id) && (factor === 'higher' ? o.probability! >= .65 : factor === 'even' ? o.probability! >= .45 && o.probability! <= .55 : factor === 'longer' ? o.probability! < .45 : o.category === 'moneyline' && o.probability! >= .5 && support(o) !== null));
   const grouped = new Map<string, Offer[]>();
   for (const o of available) { const group = grouped.get(o.game_id) ?? []; if (!group.some(other => other.id === o.id)) group.push(o); grouped.set(o.game_id, group); }
   const beams: Offer[][][] = Array.from({ length: count + 1 }, () => []); beams[0] = [[]];
   const score = (legs: Offer[]) => legs.reduce((sum, o) => sum + factorScore(o, factor), 0);
   for (const [, group] of [...grouped].sort(([a], [b]) => a.localeCompare(b))) {
-    const candidates = group.sort((a, b) => factorScore(b, factor) - factorScore(a, factor) || a.id.localeCompare(b.id)).slice(0, 6);
+    const candidates = group.sort((a, b) => Number(controls.pinned?.includes(b.id)??false)-Number(controls.pinned?.includes(a.id)??false) || factorScore(b, factor) - factorScore(a, factor) || a.id.localeCompare(b.id)).slice(0, 6);
     for (let n = count; n >= 1; n--) {
       beams[n] = [...beams[n], ...beams[n - 1].flatMap(legs => candidates.map(o => [...legs, o]))]
         .sort((a, b) => score(b) - score(a) || key(a).localeCompare(key(b))).slice(0, 240);
     }
+    const required=group.filter(o=>controls.pinned?.includes(o.id));
+    if(required.length>1)return [];
+    if(required.length)for(let n=0;n<=count;n++)beams[n]=beams[n].filter(legs=>legs.some(o=>o.id===required[0].id));
   }
-  const pool = beams[count].map(legs => ({ id: key(legs), legs, score: score(legs) / count }));
+  const pool = beams[count].filter(legs => (controls.pinned ?? []).every(id => legs.some(o => o.id === id))).map(legs => ({ id: key(legs), legs, score: score(legs) / count }));
   const chosen: Idea[] = [];
   while (pool.length && chosen.length < limit) {
     // Prefer useful alternatives: penalize overlap with the options already displayed.
-    const adjusted = (idea: Idea) => idea.score - .12 * Math.max(0, ...chosen.map(other => idea.legs.filter(o => other.legs.some(l => l.id === o.id)).length / count));
+    const adjusted = (idea: Idea) => idea.score - (controls.diversity ?? .12) * Math.max(0, ...chosen.map(other => idea.legs.filter(o => other.legs.some(l => l.id === o.id)).length / count));
     pool.sort((a, b) => adjusted(b) - adjusted(a) || a.id.localeCompare(b.id));
-    chosen.push(pool.shift()!);
+    const next = pool.shift()!;
+    if (chosen.every(other => next.legs.filter(o => other.legs.some(l => l.id === o.id)).length <= (controls.maxShared ?? count - 1))) chosen.push(next);
   }
   return chosen;
 }

@@ -86,6 +86,7 @@ def run(cache):
      promoted=error<min(standard_error,baseline_error)
      role_thresholds[(kind,threshold)]=candidate if promoted else None
      validation.append({'kind':kind,'target':f'role_threshold_{threshold}','samples':len(role_test),'brier':error,'baseline_brier':baseline_error,'regular_brier':standard_error,'promoted':promoted})
+ now=datetime.now(timezone.utc).isoformat()
  games={r['game_id']:r for r in schedules};output=[]
  for gid,game in watch.get('games',{}).items():
   g=games.get(gid)
@@ -121,7 +122,11 @@ def run(cache):
     # Separate classifiers can cross; withhold incoherent curves rather than silently repair them.
     if any(b['probability']>a['probability'] for a,b in zip(thresholds,thresholds[1:])):thresholds=[]
     output.append({'game_id':gid,'player_id':player['player_id'],'team':team,'opponent':opp,'kickoff':kickoff(g),'kind':kind,'usage_field':USAGE[kind], 'usage':0 if out else round(role_usage,1) if role_usage is not None else round(float(predict_regression(model,[{'x':x}])[0]),1) if model else None,'usage_status':'reported_out' if out else 'role_aware_conditional' if role_usage is not None else 'conditional_model' if model else 'baseline_not_beaten','baseline_usage':x['recent_usage'],'thresholds':[] if out else thresholds,'role_adjustment':'Timestamped depth-rank model passed development gate' if role_usage is not None else 'Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained', 'role_rank':role_rank})
- report={'schema_version':1,'season':slate['season'],'week':slate['week'],'generated_at':now,'version':'player-extensions:'+hashlib.sha256(Path(__file__).read_bytes()+(ROOT/'src/features/pregame_roles.py').read_bytes()+(ROOT/'src/ml/projection_models.py').read_bytes()+json.dumps(validation,sort_keys=True).encode()).hexdigest()[:16],'policy':'Experimental conditional-on-appearing estimates. Fit through 2023; calibrate 2024; evaluate 2025. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.','validation':validation,'players':output}
+ now=datetime.now(timezone.utc).isoformat()
+ output=[p for p in output if stamp(p['kickoff'])>stamp(now)]
+ report={'schema_version':1,'season':slate['season'],'week':slate['week'],'generated_at':now,'version':'player-extensions:'+hashlib.sha256(Path(__file__).read_bytes()+(ROOT/'src/features/pregame_roles.py').read_bytes()+(ROOT/'src/ml/projection_models.py').read_bytes()+json.dumps(validation,sort_keys=True).encode()).hexdigest()[:16],'policy':'Experimental conditional-on-appearing estimates. Base models fit through 2023, calibrate 2024, evaluate 2025. Timestamped role candidates fit 2025 through W12, calibrate W13–18, evaluate completed current-season appearances. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.','validation':validation,'players':output}
+ archive=ROOT/'data/tracking/player_extensions'/f"{hashlib.sha256(json.dumps(report,sort_keys=True).encode()).hexdigest()}.json"
+ if not archive.exists():write_json(archive,report)
  write_json(ROOT/'frontend/public/player_extensions.json',report)
  print(json.dumps({'players':len(output),'validation':validation},indent=2))
 

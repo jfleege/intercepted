@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-29T22:47:52.662984+00:00",
+  "generated_at": "2026-10-29T22:49:50.145167+00:00",
   "players": [
     {
       "baseline_usage": 39.0,
@@ -4023,7 +4023,7 @@
       "usage_status": "role_aware_conditional"
     }
   ],
-  "policy": "Experimental conditional-on-appearing estimates. Fit through 2023; calibrate 2024; evaluate 2025. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.",
+  "policy": "Experimental conditional-on-appearing estimates. Base models fit through 2023, calibrate 2024, evaluate 2025. Timestamped role candidates fit 2025 through W12, calibrate W13\u201318, evaluate completed current-season appearances. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.",
   "schema_version": 1,
   "season": 2026,
   "validation": [
@@ -4326,6 +4326,6 @@
       "target": "role_threshold_100"
     }
   ],
-  "version": "player-extensions:4b51eedb93486740",
+  "version": "player-extensions:0e56dc4709b6dd92",
   "week": 8
 }

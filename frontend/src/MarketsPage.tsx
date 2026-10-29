@@ -60,6 +60,13 @@ export default function MarketsPage({ search = '' }: { search?: string }) {
    return p.thresholds.filter(t=>Number.isInteger(t.threshold)&&t.threshold>0&&Number.isFinite(t.probability)&&t.probability>=0&&t.probability<=1).map(t=>({...guide,id:guide.id+':threshold:'+t.threshold,line:t.threshold-.5,custom:false,probability:t.probability,prediction:null,range:null,market:`${t.threshold}+ ${p.kind} yards`,source:`${t.basis==='role_aware'?'Role-aware':'Baseline'} experimental threshold classifier · conditional on appearing`,modelVersion:extensions.version,forecastAt:extensions.generated_at}));
   })];
  },[data,research,model,now,extensions]);
+ useEffect(()=>{
+  if(!pageActive)return;
+  let active=true;
+  const update=()=>fetchSnapshot(`${import.meta.env.BASE_URL}research_performance.json`).then(r=>r.ok?r.json():null).then(d=>{if(active&&d)setActuals(d.datasets?.verified?.rows??[]);}).catch(()=>{});
+  const timer=setInterval(update,60000);
+  return()=>{active=false;clearInterval(timer);};
+ },[pageActive]);
  const contextFor = (o: Offer) => data && ['yardage', 'touchdown'].includes(o.category) ? findContext(insights.data, data, o.player_id ?? o.id.split(':')[1], o.game_id, o.team, o.matchup.split(' @ ').find(t => t !== o.team) ?? '', now) : null;
  const blocked = (o: Offer) => reportedOut(contextFor(o), now);
  const matchesSearch = (o: Offer) => `${o.name} ${o.matchup} ${o.market} ${o.matchup.split(/ @ /).map(t => TEAM_NAMES[t] ?? t).join(' ')}`.toLowerCase().includes(search.trim().toLowerCase());

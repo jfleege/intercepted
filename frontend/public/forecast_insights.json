@@ -1723,7 +1723,7 @@
       "week": 8
     }
   ],
-  "exported_at": "2026-10-29T23:10:42.324749+00:00",
+  "exported_at": "2026-10-30T14:32:29.661186+00:00",
   "monitoring": {
     "alerts": [
       {
@@ -1734,16 +1734,25 @@
       },
       {
         "id": "availability_coverage",
-        "message": "66 of 454 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "63 of 454 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 66,
+      "reported": 63,
       "tracked": 454
     },
     "calibration": [
+      {
+        "family": "touchdowns",
+        "minimum": 500,
+        "samples": 8,
+        "status": "sample_building",
+        "target": "any_td",
+        "version": "35b3afd7279bc09a",
+        "windows": []
+      },
       {
         "family": "touchdowns",
         "minimum": 500,
@@ -1751,6 +1760,15 @@
         "status": "sample_building",
         "target": "any_td",
         "version": "4407254781897e09",
+        "windows": []
+      },
+      {
+        "family": "touchdowns",
+        "minimum": 500,
+        "samples": 2,
+        "status": "sample_building",
+        "target": "pass_td",
+        "version": "35b3afd7279bc09a",
         "windows": []
       },
       {
@@ -1765,7 +1783,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 14,
+        "samples": 15,
         "status": "sample_building",
         "target": "winner:v4_a",
         "version": "ac161c2fa5d3",
@@ -1783,7 +1801,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 14,
+        "samples": 15,
         "status": "sample_building",
         "target": "winner:v4_qb_plus",
         "version": "ac161c2fa5d3",
@@ -1801,7 +1819,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 14,
+        "samples": 15,
         "status": "sample_building",
         "target": "winner:v5_boosted",
         "version": "ac161c2fa5d3",
@@ -1810,14 +1828,14 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 14,
+        "samples": 15,
         "status": "sample_building",
         "target": "winner:v5_qb_plus",
         "version": "ac161c2fa5d3",
         "windows": []
       }
     ],
-    "checked_at": "2026-10-29T23:10:42.324749+00:00",
+    "checked_at": "2026-10-30T14:32:29.661186+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,

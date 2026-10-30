@@ -60245,11 +60245,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 5,
-            "lower": 0.1176182311592533,
-            "observed": 0.4,
-            "predicted": 0.5384249822067725,
-            "upper": 0.769280067791163
+            "games": 6,
+            "lower": 0.18761280689940868,
+            "observed": 0.5,
+            "predicted": 0.5372519859152213,
+            "upper": 0.8123871931005913
           },
           {
             "bin": "60\u201370%",
@@ -61104,21 +61104,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 19,
             "away_team": "CAR",
-            "brier": null,
+            "brier": 0.21959813959134772,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-29",
             "game_id": "2026_08_CAR_GB",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "GB",
             "kickoff": "2026-10-30T00:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6322647012481482,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "GB",
             "probability": 0.5313870044574652,
             "provenance": {
@@ -61128,7 +61128,7 @@
             "saved_at": "2026-10-28T01:47:37.427690+00:00",
             "season": 2026,
             "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 8
           },
@@ -61511,14 +61511,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.4642857142857143,
-          "brier": 0.2875747511816071,
+          "accuracy": 0.4827586206896552,
+          "brier": 0.28523073009228783,
           "cancelled": 0,
-          "correct": 13,
-          "games": 28,
+          "correct": 14,
+          "games": 29,
           "incorrect": 15,
-          "log_loss": 0.7725991905089682,
-          "pending": 14,
+          "log_loss": 0.7677600701896297,
+          "pending": 13,
           "ties": 0
         },
         "trend": [
@@ -61829,6 +61829,17 @@
             "game_number": 28,
             "label": "DAL @ PHI",
             "log_loss": 0.7725991905089682
+          },
+          {
+            "accuracy": 0.4827586206896552,
+            "brier": 0.28523073009228783,
+            "correct": true,
+            "date": "2026-10-29",
+            "game_brier": 0.21959813959134772,
+            "game_id": "2026_08_CAR_GB",
+            "game_number": 29,
+            "label": "CAR @ GB",
+            "log_loss": 0.7677600701896297
           }
         ],
         "weekly": [
@@ -61859,14 +61870,14 @@
             "week": 7
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.21959813959134772,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 14,
+            "log_loss": 0.6322647012481482,
+            "pending": 13,
             "season": 2026,
             "ties": 0,
             "week": 8
@@ -61901,11 +61912,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 5,
-            "lower": 0.03622316096978745,
-            "observed": 0.2,
-            "predicted": 0.546162770127147,
-            "upper": 0.6244717358814613
+            "games": 6,
+            "lower": 0.09676933255921683,
+            "observed": 0.3333333333333333,
+            "predicted": 0.541350528188672,
+            "upper": 0.7000116786584712
           },
           {
             "bin": "60\u201370%",
@@ -62760,21 +62771,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 19,
             "away_team": "CAR",
-            "brier": null,
+            "brier": 0.23300960203776885,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-29",
             "game_id": "2026_08_CAR_GB",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "GB",
             "kickoff": "2026-10-30T00:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6591529507528394,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "GB",
             "probability": 0.5172893184962976,
             "provenance": {
@@ -62784,7 +62795,7 @@
             "saved_at": "2026-10-28T01:47:37.427690+00:00",
             "season": 2026,
             "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 8
           },
@@ -63167,14 +63178,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.4642857142857143,
-          "brier": 0.2893771473147283,
+          "accuracy": 0.4827586206896552,
+          "brier": 0.28743343885690215,
           "cancelled": 0,
-          "correct": 13,
-          "games": 28,
+          "correct": 14,
+          "games": 29,
           "incorrect": 15,
-          "log_loss": 0.7776851144651021,
-          "pending": 14,
+          "log_loss": 0.7735977984750242,
+          "pending": 13,
           "ties": 0
         },
         "trend": [
@@ -63485,6 +63496,17 @@
             "game_number": 28,
             "label": "DAL @ PHI",
             "log_loss": 0.7776851144651021
+          },
+          {
+            "accuracy": 0.4827586206896552,
+            "brier": 0.28743343885690215,
+            "correct": true,
+            "date": "2026-10-29",
+            "game_brier": 0.23300960203776885,
+            "game_id": "2026_08_CAR_GB",
+            "game_number": 29,
+            "label": "CAR @ GB",
+            "log_loss": 0.7735977984750242
           }
         ],
         "weekly": [
@@ -63515,14 +63537,14 @@
             "week": 7
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.23300960203776885,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 14,
+            "log_loss": 0.6591529507528394,
+            "pending": 13,
             "season": 2026,
             "ties": 0,
             "week": 8
@@ -63549,11 +63571,11 @@
           },
           {
             "bin": "40\u201350%",
-            "games": 3,
-            "lower": 0.0614903152761605,
-            "observed": 0.3333333333333333,
-            "predicted": 0.43854120770392657,
-            "upper": 0.7923450448735121
+            "games": 4,
+            "lower": 0.15003570882017148,
+            "observed": 0.5,
+            "predicted": 0.45308094654543607,
+            "upper": 0.8499642911798285
           },
           {
             "bin": "50\u201360%",
@@ -63988,21 +64010,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 19,
             "away_team": "CAR",
-            "brier": null,
+            "brier": 0.25331072585380027,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-29",
             "game_id": "2026_08_CAR_GB",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 27,
             "home_team": "GB",
             "kickoff": "2026-10-30T00:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6997687285621325,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "CAR",
             "probability": 0.49670016306996456,
             "provenance": {
@@ -64012,7 +64034,7 @@
             "saved_at": "2026-10-28T01:47:37.427690+00:00",
             "season": 2026,
             "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 8
           },
@@ -64395,14 +64417,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.42857142857142855,
-          "brier": 0.3119273652548524,
+          "accuracy": 0.4,
+          "brier": 0.30801958929478224,
           "cancelled": 0,
           "correct": 6,
-          "games": 14,
-          "incorrect": 8,
-          "log_loss": 0.8300863880924968,
-          "pending": 14,
+          "games": 15,
+          "incorrect": 9,
+          "log_loss": 0.8213985441238059,
+          "pending": 13,
           "ties": 0
         },
         "trend": [
@@ -64559,6 +64581,17 @@
             "game_number": 14,
             "label": "DAL @ PHI",
             "log_loss": 0.8300863880924968
+          },
+          {
+            "accuracy": 0.4,
+            "brier": 0.30801958929478224,
+            "correct": false,
+            "date": "2026-10-29",
+            "game_brier": 0.25331072585380027,
+            "game_id": "2026_08_CAR_GB",
+            "game_number": 15,
+            "label": "CAR @ GB",
+            "log_loss": 0.8213985441238059
           }
         ],
         "weekly": [
@@ -64576,14 +64609,14 @@
             "week": 7
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 0.0,
+            "brier": 0.25331072585380027,
             "cancelled": 0,
             "correct": 0,
-            "games": 0,
-            "incorrect": 0,
-            "log_loss": null,
-            "pending": 14,
+            "games": 1,
+            "incorrect": 1,
+            "log_loss": 0.6997687285621325,
+            "pending": 13,
             "season": 2026,
             "ties": 0,
             "week": 8
@@ -64618,10 +64651,10 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 1,
-            "lower": 0.20654329147389294,
+            "games": 2,
+            "lower": 0.34237195288961925,
             "observed": 1.0,
-            "predicted": 0.5640186330860888,
+            "predicted": 0.5463813231676667,
             "upper": 1.0
           },
           {
@@ -65049,21 +65082,21 @@
             "week": 7
           },
           {
-            "away_score": null,
+            "away_score": 19,
             "away_team": "CAR",
-            "brier": null,
+            "brier": 0.22208220504842807,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-10-29",
             "game_id": "2026_08_CAR_GB",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "GB",
             "kickoff": "2026-10-30T00:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6372508711458061,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "GB",
             "probability": 0.5287440132492447,
             "provenance": {
@@ -65073,7 +65106,7 @@
             "saved_at": "2026-10-28T01:47:37.427690+00:00",
             "season": 2026,
             "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 8
           },
@@ -65456,14 +65489,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5714285714285714,
-          "brier": 0.2857829793700625,
+          "accuracy": 0.6,
+          "brier": 0.2815362610819535,
           "cancelled": 0,
-          "correct": 8,
-          "games": 14,
+          "correct": 9,
+          "games": 15,
           "incorrect": 6,
-          "log_loss": 0.7733661307205788,
-          "pending": 14,
+          "log_loss": 0.7642917800822606,
+          "pending": 13,
           "ties": 0
         },
         "trend": [
@@ -65620,6 +65653,17 @@
             "game_number": 14,
             "label": "DAL @ PHI",
             "log_loss": 0.7733661307205788
+          },
+          {
+            "accuracy": 0.6,
+            "brier": 0.2815362610819535,
+            "correct": true,
+            "date": "2026-10-29",
+            "game_brier": 0.22208220504842807,
+            "game_id": "2026_08_CAR_GB",
+            "game_number": 15,
+            "label": "CAR @ GB",
+            "log_loss": 0.7642917800822606
           }
         ],
         "weekly": [
@@ -65637,14 +65681,14 @@
             "week": 7
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.22208220504842807,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 14,
+            "log_loss": 0.6372508711458061,
+            "pending": 13,
             "season": 2026,
             "ties": 0,
             "week": 8
@@ -65657,5 +65701,5 @@
   "schema_version": 1,
   "snapshot_count": 5,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-10-29T23:10:28.580981+00:00"
+  "updated_at": "2026-10-30T14:32:23.938683+00:00"
 }

@@ -1,460 +1,6 @@
 {
-  "generated_at": "2026-10-29T23:10:59.939939+00:00",
+  "generated_at": "2026-10-30T14:32:53.375059+00:00",
   "players": [
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 39.0,
-      "game_id": "2026_08_CAR_GB",
-      "kickoff": "2026-10-30T00:15:00+00:00",
-      "kind": "passing",
-      "opponent": "CAR",
-      "player_id": "00-0036264",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.857866,
-          "threshold": 150
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.729862,
-          "threshold": 200
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.498861,
-          "threshold": 250
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.217254,
-          "threshold": 300
-        }
-      ],
-      "usage": 31.2,
-      "usage_field": "attempts",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Shoulder",
-        "observed_at": "2026-10-29T23:10:42.324749+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Questionable"
-      },
-      "baseline_usage": 10.666666666666666,
-      "game_id": "2026_08_CAR_GB",
-      "kickoff": "2026-10-30T00:15:00+00:00",
-      "kind": "receiving",
-      "opponent": "CAR",
-      "player_id": "00-0040667",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 2,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.878365,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.707114,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.591965,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.411194,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.17329,
-          "threshold": 100
-        }
-      ],
-      "usage": 7.0,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 8.0,
-      "game_id": "2026_08_CAR_GB",
-      "kickoff": "2026-10-30T00:15:00+00:00",
-      "kind": "receiving",
-      "opponent": "CAR",
-      "player_id": "00-0038124",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.895706,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.716205,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.597984,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.44613,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.2099,
-          "threshold": 100
-        }
-      ],
-      "usage": 7.7,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 6.333333333333333,
-      "game_id": "2026_08_CAR_GB",
-      "kickoff": "2026-10-30T00:15:00+00:00",
-      "kind": "receiving",
-      "opponent": "CAR",
-      "player_id": "00-0038996",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.716288,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.40583,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.276696,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.158221,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.061641,
-          "threshold": 100
-        }
-      ],
-      "usage": 6.1,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Knee",
-        "observed_at": "2026-10-29T23:10:42.324749+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 35.666666666666664,
-      "game_id": "2026_08_CAR_GB",
-      "kickoff": "2026-10-30T00:15:00+00:00",
-      "kind": "passing",
-      "opponent": "GB",
-      "player_id": "00-0039150",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "CAR",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.779898,
-          "threshold": 150
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.708469,
-          "threshold": 200
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.405251,
-          "threshold": 250
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.185867,
-          "threshold": 300
-        }
-      ],
-      "usage": 32.4,
-      "usage_field": "attempts",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 10.333333333333334,
-      "game_id": "2026_08_CAR_GB",
-      "kickoff": "2026-10-30T00:15:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0040124",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "CAR",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.904421,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.696869,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.59063,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.392339,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.156316,
-          "threshold": 100
-        }
-      ],
-      "usage": 6.9,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 18.333333333333332,
-      "game_id": "2026_08_CAR_GB",
-      "kickoff": "2026-10-30T00:15:00+00:00",
-      "kind": "rushing",
-      "opponent": "GB",
-      "player_id": "00-0036555",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "CAR",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.90548,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.629375,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.442417,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.299001,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.128949,
-          "threshold": 100
-        }
-      ],
-      "usage": 13.0,
-      "usage_field": "carries",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Shoulder",
-        "observed_at": "2026-10-29T23:10:42.324749+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 7.0,
-      "game_id": "2026_08_CAR_GB",
-      "kickoff": "2026-10-30T00:15:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0039491",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 2,
-      "team": "CAR",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.74936,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.533203,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.413942,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.272343,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.110447,
-          "threshold": 100
-        }
-      ],
-      "usage": 5.9,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
     {
       "availability_evidence": {
         "blocked": false,
@@ -557,8 +103,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.295451,
+          "basis": "role_aware",
+          "probability": 0.209018,
           "threshold": 100
         }
       ],
@@ -821,8 +367,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.315193,
+          "basis": "role_aware",
+          "probability": 0.162683,
           "threshold": 100
         }
       ],
@@ -1327,233 +873,6 @@
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
       },
-      "baseline_usage": 41.0,
-      "game_id": "2026_08_ARI_DAL",
-      "kickoff": "2026-11-01T18:00:00+00:00",
-      "kind": "passing",
-      "opponent": "ARI",
-      "player_id": "00-0033077",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "DAL",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.847894,
-          "threshold": 150
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.828751,
-          "threshold": 200
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.550772,
-          "threshold": 250
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.250589,
-          "threshold": 300
-        }
-      ],
-      "usage": 29.7,
-      "usage_field": "attempts",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Shoulder",
-        "observed_at": "2026-10-29T23:10:42.324749+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 10.0,
-      "game_id": "2026_08_ARI_DAL",
-      "kickoff": "2026-11-01T18:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "ARI",
-      "player_id": "00-0037247",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 2,
-      "team": "DAL",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.905873,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.755215,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.646502,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.441464,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.216016,
-          "threshold": 100
-        }
-      ],
-      "usage": 5.7,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 16.0,
-      "game_id": "2026_08_ARI_DAL",
-      "kickoff": "2026-11-01T18:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "ARI",
-      "player_id": "00-0036997",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "DAL",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.920286,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.703604,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.617959,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.347044,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.183946,
-          "threshold": 100
-        }
-      ],
-      "usage": 15.6,
-      "usage_field": "carries",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 5.666666666666667,
-      "game_id": "2026_08_ARI_DAL",
-      "kickoff": "2026-11-01T18:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "ARI",
-      "player_id": "00-0039410",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 3,
-      "team": "DAL",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.70765,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.429721,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.327964,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.189344,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.078799,
-          "threshold": 100
-        }
-      ],
-      "usage": 3.8,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
       "baseline_usage": 43.333333333333336,
       "game_id": "2026_08_ARI_DAL",
       "kickoff": "2026-11-01T18:00:00+00:00",
@@ -1573,26 +892,26 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.811548,
+          "probability": 0.812892,
           "threshold": 150
         },
         {
           "basis": "role_aware",
-          "probability": 0.688454,
+          "probability": 0.697154,
           "threshold": 200
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.444111,
+          "probability": 0.453346,
           "threshold": 250
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.182106,
+          "probability": 0.186202,
           "threshold": 300
         }
       ],
-      "usage": 32.5,
+      "usage": 33.6,
       "usage_field": "attempts",
       "usage_status": "role_aware_conditional"
     },
@@ -1626,31 +945,31 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.893102,
+          "probability": 0.895129,
           "threshold": 25
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.753742,
+          "probability": 0.75751,
           "threshold": 50
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.63826,
+          "probability": 0.643118,
           "threshold": 60
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.403933,
+          "probability": 0.409023,
           "threshold": 75
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.163694,
+          "probability": 0.166283,
           "threshold": 100
         }
       ],
-      "usage": 8.7,
+      "usage": 8.9,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1682,7 +1001,7 @@
       "role_rank": 3,
       "team": "ARI",
       "thresholds": [],
-      "usage": 4.6,
+      "usage": 3.4,
       "usage_field": "carries",
       "usage_status": "role_aware_conditional"
     },
@@ -1716,31 +1035,31 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.651293,
+          "probability": 0.656139,
           "threshold": 25
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.346385,
+          "probability": 0.351019,
           "threshold": 50
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.233427,
+          "probability": 0.237224,
           "threshold": 60
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.123496,
+          "probability": 0.125798,
           "threshold": 75
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.041221,
+          "probability": 0.04197,
           "threshold": 100
         }
       ],
-      "usage": 4.6,
+      "usage": 5.4,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -1846,8 +1165,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.379284,
+          "basis": "role_aware",
+          "probability": 0.158724,
           "threshold": 100
         }
       ],
@@ -2084,8 +1403,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.068031,
+          "basis": "role_aware",
+          "probability": 0.072261,
           "threshold": 100
         }
       ],
@@ -2369,8 +1688,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.134348,
+          "basis": "role_aware",
+          "probability": 0.124341,
           "threshold": 100
         }
       ],
@@ -2459,8 +1778,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.131797,
+          "basis": "role_aware",
+          "probability": 0.083044,
           "threshold": 100
         }
       ],
@@ -3056,8 +2375,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.199983,
+          "basis": "role_aware",
+          "probability": 0.126058,
           "threshold": 100
         }
       ],
@@ -3283,8 +2602,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.086468,
+          "basis": "role_aware",
+          "probability": 0.062316,
           "threshold": 100
         }
       ],
@@ -3489,8 +2808,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.272996,
+          "basis": "role_aware",
+          "probability": 0.175469,
           "threshold": 100
         }
       ],
@@ -3525,33 +2844,7 @@
       },
       "role_rank": 2,
       "team": "TB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.385763,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.160267,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.111713,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.034475,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.013887,
-          "threshold": 100
-        }
-      ],
+      "thresholds": [],
       "usage": 5.8,
       "usage_field": "carries",
       "usage_status": "role_aware_conditional"
@@ -3774,8 +3067,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.202387,
+          "basis": "role_aware",
+          "probability": 0.104441,
           "threshold": 100
         }
       ],
@@ -4001,8 +3294,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.144853,
+          "basis": "role_aware",
+          "probability": 0.136503,
           "threshold": 100
         }
       ],
@@ -4059,8 +3352,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.055904,
+          "basis": "role_aware",
+          "probability": 0.071078,
           "threshold": 100
         }
       ],
@@ -4260,8 +3553,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.074444,
+          "basis": "role_aware",
+          "probability": 0.045102,
           "threshold": 100
         }
       ],
@@ -4371,8 +3664,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.070282,
+          "basis": "role_aware",
+          "probability": 0.077361,
           "threshold": 100
         }
       ],
@@ -4741,8 +4034,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.118447,
+          "basis": "role_aware",
+          "probability": 0.077063,
           "threshold": 100
         }
       ],
@@ -5065,26 +4358,26 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.727216,
+          "probability": 0.721394,
           "threshold": 150
         },
         {
           "basis": "role_aware",
-          "probability": 0.598445,
+          "probability": 0.605112,
           "threshold": 200
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.265023,
+          "probability": 0.260488,
           "threshold": 250
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.110573,
+          "probability": 0.110114,
           "threshold": 300
         }
       ],
-      "usage": 34.7,
+      "usage": 33.9,
       "usage_field": "attempts",
       "usage_status": "role_aware_conditional"
     },
@@ -5116,7 +4409,7 @@
       "role_rank": 7,
       "team": "WAS",
       "thresholds": [],
-      "usage": 3.5,
+      "usage": 3.4,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -5150,27 +4443,27 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.391334,
+          "probability": 0.384635,
           "threshold": 25
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.16656,
+          "probability": 0.163655,
           "threshold": 50
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.108844,
+          "probability": 0.1072,
           "threshold": 60
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.067139,
+          "probability": 0.065642,
           "threshold": 75
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.026305,
+          "probability": 0.025544,
           "threshold": 100
         }
       ],
@@ -5208,237 +4501,31 @@
       "thresholds": [
         {
           "basis": "role_aware",
-          "probability": 0.521125,
+          "probability": 0.514081,
           "threshold": 25
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.203251,
+          "probability": 0.199859,
           "threshold": 50
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.123322,
+          "probability": 0.121489,
           "threshold": 60
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.06728,
+          "probability": 0.06578,
           "threshold": 75
         },
         {
           "basis": "conditional_baseline",
-          "probability": 0.023285,
+          "probability": 0.022609,
           "threshold": 100
         }
       ],
-      "usage": 6.4,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 40.0,
-      "game_id": "2026_08_PHI_WAS",
-      "kickoff": "2026-11-02T01:20:00+00:00",
-      "kind": "passing",
-      "opponent": "WAS",
-      "player_id": "00-0038400",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "PHI",
-      "thresholds": [],
-      "usage": 31.3,
-      "usage_field": "attempts",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Hamstring",
-        "observed_at": "2026-10-29T23:10:42.324749+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 8.0,
-      "game_id": "2026_08_PHI_WAS",
-      "kickoff": "2026-11-02T01:20:00+00:00",
-      "kind": "rushing",
-      "opponent": "WAS",
-      "player_id": "00-0034844",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "PHI",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.777632,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.377333,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.271222,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.113055,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.048468,
-          "threshold": 100
-        }
-      ],
-      "usage": 13.0,
-      "usage_field": "carries",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Knee",
-        "observed_at": "2026-10-29T23:10:42.324749+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 8.0,
-      "game_id": "2026_08_PHI_WAS",
-      "kickoff": "2026-11-02T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "WAS",
-      "player_id": "00-0034351",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 1,
-      "team": "PHI",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.707338,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.38314,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.241187,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.135139,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.044987,
-          "threshold": 100
-        }
-      ],
-      "usage": 6.0,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 7.0,
-      "game_id": "2026_08_PHI_WAS",
-      "kickoff": "2026-11-02T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "WAS",
-      "player_id": "00-0040867",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-10-29T14:07:35Z"
-      },
-      "role_rank": 3,
-      "team": "PHI",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.629374,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.312804,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.215854,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.119356,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.046692,
-          "threshold": 100
-        }
-      ],
-      "usage": 4.1,
+      "usage": 6.1,
       "usage_field": "targets",
       "usage_status": "role_aware_conditional"
     },
@@ -5581,8 +4668,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.131253,
+          "basis": "role_aware",
+          "probability": 0.125799,
           "threshold": 100
         }
       ],
@@ -5808,8 +4895,8 @@
           "threshold": 75
         },
         {
-          "basis": "conditional_baseline",
-          "probability": 0.067814,
+          "basis": "role_aware",
+          "probability": 0.05461,
           "threshold": 100
         }
       ],
@@ -5889,52 +4976,52 @@
       "target": "usage"
     },
     {
-      "baseline_mae": 8.936170212765957,
+      "baseline_mae": 8.898426323319025,
       "calibration": "2025 W13\u201318",
       "evaluation": "2026 completed weeks; development gate, not prospective validation",
       "fit": "2025 through W12",
       "kind": "passing",
-      "mae": 7.681489307266963,
+      "mae": 7.67758710838948,
       "promoted": true,
-      "regular_usage_mae": 7.842598004853205,
-      "role_blind_mae": 8.307470821364355,
-      "samples": 235,
+      "regular_usage_mae": 7.830875526925611,
+      "role_blind_mae": 8.31633560736522,
+      "samples": 233,
       "target": "role_usage"
     },
     {
       "baseline_brier": 0.20500222991962624,
-      "brier": 0.15186247807588396,
+      "brier": 0.15186247807588457,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
       "target": 150
     },
     {
-      "baseline_brier": 0.1949240787653668,
-      "brier": 0.15058370867943147,
+      "baseline_brier": 0.19536831809189997,
+      "brier": 0.1510874545054122,
       "kind": "passing",
       "promoted": true,
-      "regular_brier": 0.15197400862685692,
-      "role_blind_brier": 0.17841057499214563,
-      "samples": 235,
+      "regular_brier": 0.1529895360420816,
+      "role_blind_brier": 0.17859532364525393,
+      "samples": 233,
       "target": "role_threshold_150"
     },
     {
       "baseline_brier": 0.2497961418479442,
-      "brier": 0.21556142038524956,
+      "brier": 0.21556142038524997,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
       "target": 200
     },
     {
-      "baseline_brier": 0.25975164353542735,
-      "brier": 0.21125320665760985,
+      "baseline_brier": 0.25947325355746653,
+      "brier": 0.21262694143111482,
       "kind": "passing",
       "promoted": true,
-      "regular_brier": 0.22052960123451193,
-      "role_blind_brier": 0.22659795234955782,
-      "samples": 235,
+      "regular_brier": 0.22155357945530563,
+      "role_blind_brier": 0.2274552622338586,
+      "samples": 233,
       "target": "role_threshold_200"
     },
     {
@@ -5946,13 +5033,13 @@
       "target": 250
     },
     {
-      "baseline_brier": 0.23806509211914614,
-      "brier": 0.2314744741624537,
+      "baseline_brier": 0.23939517756940326,
+      "brier": 0.2326376560217138,
       "kind": "passing",
       "promoted": false,
-      "regular_brier": 0.20636328998027917,
-      "role_blind_brier": 0.2330041382411328,
-      "samples": 235,
+      "regular_brier": 0.20651351548933242,
+      "role_blind_brier": 0.23422072282724118,
+      "samples": 233,
       "target": "role_threshold_250"
     },
     {
@@ -5964,13 +5051,13 @@
       "target": 300
     },
     {
-      "baseline_brier": 0.12807358825185164,
-      "brier": 0.12421688873544147,
+      "baseline_brier": 0.12906407741693673,
+      "brier": 0.12477907963846652,
       "kind": "passing",
       "promoted": false,
-      "regular_brier": 0.12100710073631299,
-      "role_blind_brier": 0.12407082625753102,
-      "samples": 235,
+      "regular_brier": 0.12176123570135813,
+      "role_blind_brier": 0.12462063117124776,
+      "samples": 233,
       "target": "role_threshold_300"
     },
     {
@@ -5982,16 +5069,16 @@
       "target": "usage"
     },
     {
-      "baseline_mae": 3.7570621468926553,
+      "baseline_mae": 3.7432005060088547,
       "calibration": "2025 W13\u201318",
       "evaluation": "2026 completed weeks; development gate, not prospective validation",
       "fit": "2025 through W12",
       "kind": "rushing",
-      "mae": 3.4668090427949747,
+      "mae": 3.4381914109791105,
       "promoted": true,
-      "regular_usage_mae": 3.508888131551915,
-      "role_blind_mae": 3.6055764739394083,
-      "samples": 531,
+      "regular_usage_mae": 3.4847272870695933,
+      "role_blind_mae": 3.578621963343768,
+      "samples": 527,
       "target": "role_usage"
     },
     {
@@ -6003,13 +5090,13 @@
       "target": 25
     },
     {
-      "baseline_brier": 0.2500814664161811,
-      "brier": 0.14977739904067489,
+      "baseline_brier": 0.2501116178972219,
+      "brier": 0.14924849548155306,
       "kind": "rushing",
       "promoted": true,
-      "regular_brier": 0.15651102960738114,
-      "role_blind_brier": 0.15672902794586965,
-      "samples": 531,
+      "regular_brier": 0.15567659712364748,
+      "role_blind_brier": 0.15582244030358505,
+      "samples": 527,
       "target": "role_threshold_25"
     },
     {
@@ -6021,13 +5108,13 @@
       "target": 50
     },
     {
-      "baseline_brier": 0.2035884533898305,
-      "brier": 0.13983937202656005,
+      "baseline_brier": 0.20296934297912714,
+      "brier": 0.13968380807930447,
       "kind": "rushing",
       "promoted": true,
-      "regular_brier": 0.1447550859083767,
-      "role_blind_brier": 0.14438534386557214,
-      "samples": 531,
+      "regular_brier": 0.14440802914330605,
+      "role_blind_brier": 0.1438513356000986,
+      "samples": 527,
       "target": "role_threshold_50"
     },
     {
@@ -6039,49 +5126,49 @@
       "target": 60
     },
     {
-      "baseline_brier": 0.170324982896363,
-      "brier": 0.12476058278674376,
+      "baseline_brier": 0.16921574341051945,
+      "brier": 0.1241345782705058,
       "kind": "rushing",
       "promoted": true,
-      "regular_brier": 0.12703423204709033,
-      "role_blind_brier": 0.12940132309313973,
-      "samples": 531,
+      "regular_brier": 0.12603351554074152,
+      "role_blind_brier": 0.12841955723048898,
+      "samples": 527,
       "target": "role_threshold_60"
     },
     {
       "baseline_brier": 0.11788431373734377,
-      "brier": 0.10065128045441213,
+      "brier": 0.10065128045441084,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
       "target": 75
     },
     {
-      "baseline_brier": 0.1226523519684815,
-      "brier": 0.10435630425368142,
+      "baseline_brier": 0.12207881775481425,
+      "brier": 0.10408573403308681,
       "kind": "rushing",
       "promoted": false,
-      "regular_brier": 0.10118560123084333,
-      "role_blind_brier": 0.10621292389288604,
-      "samples": 531,
+      "regular_brier": 0.10071829608911449,
+      "role_blind_brier": 0.10590265757523758,
+      "samples": 527,
       "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.05982664566877521,
-      "brier": 0.057202874273952334,
+      "brier": 0.05720287427395235,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
       "target": 100
     },
     {
-      "baseline_brier": 0.06320216292041843,
-      "brier": 0.059150754192842964,
+      "baseline_brier": 0.06200288776202265,
+      "brier": 0.05800698836597336,
       "kind": "rushing",
-      "promoted": false,
-      "regular_brier": 0.059140652847874856,
-      "role_blind_brier": 0.05946718112130061,
-      "samples": 531,
+      "promoted": true,
+      "regular_brier": 0.058009296240491996,
+      "role_blind_brier": 0.05830143289367795,
+      "samples": 527,
       "target": "role_threshold_100"
     },
     {
@@ -6093,16 +5180,16 @@
       "target": "usage"
     },
     {
-      "baseline_mae": 1.9024273011295363,
+      "baseline_mae": 1.90569696969697,
       "calibration": "2025 W13\u201318",
       "evaluation": "2026 completed weeks; development gate, not prospective validation",
       "fit": "2025 through W12",
       "kind": "receiving",
-      "mae": 1.7750722045222138,
+      "mae": 1.7758692436635346,
       "promoted": true,
-      "regular_usage_mae": 1.8190061197918554,
-      "role_blind_mae": 1.8409369620470952,
-      "samples": 1387,
+      "regular_usage_mae": 1.8212779615287662,
+      "role_blind_mae": 1.8421819021238077,
+      "samples": 1375,
       "target": "role_usage"
     },
     {
@@ -6114,13 +5201,13 @@
       "target": 25
     },
     {
-      "baseline_brier": 0.24444055726040168,
-      "brier": 0.1667041987306813,
+      "baseline_brier": 0.24431306613662435,
+      "brier": 0.16703651830238747,
       "kind": "receiving",
       "promoted": true,
-      "regular_brier": 0.16975629415339405,
-      "role_blind_brier": 0.17118600459880587,
-      "samples": 1387,
+      "regular_brier": 0.17018596291396001,
+      "role_blind_brier": 0.17159790635063996,
+      "samples": 1375,
       "target": "role_threshold_25"
     },
     {
@@ -6132,31 +5219,31 @@
       "target": 50
     },
     {
-      "baseline_brier": 0.17576468388250457,
-      "brier": 0.13676550787752634,
+      "baseline_brier": 0.17515831823036346,
+      "brier": 0.13678402069221152,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.13369384616519497,
-      "role_blind_brier": 0.13922592891111454,
-      "samples": 1387,
+      "regular_brier": 0.13402020130549813,
+      "role_blind_brier": 0.13934818141533692,
+      "samples": 1375,
       "target": "role_threshold_50"
     },
     {
       "baseline_brier": 0.1291842325385742,
-      "brier": 0.10449801426483987,
+      "brier": 0.10449801426483986,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
       "target": 60
     },
     {
-      "baseline_brier": 0.1447625851079148,
-      "brier": 0.11525679002729275,
+      "baseline_brier": 0.144282367552348,
+      "brier": 0.11493866905549976,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.1139750957774882,
-      "role_blind_brier": 0.11728296703233744,
-      "samples": 1387,
+      "regular_brier": 0.11381825776655297,
+      "role_blind_brier": 0.11702179380090215,
+      "samples": 1375,
       "target": "role_threshold_60"
     },
     {
@@ -6168,34 +5255,34 @@
       "target": 75
     },
     {
-      "baseline_brier": 0.09730097430547555,
-      "brier": 0.08198100403108723,
+      "baseline_brier": 0.0980763091038545,
+      "brier": 0.08256109133196987,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.08059112796417287,
-      "role_blind_brier": 0.08316871521253251,
-      "samples": 1387,
+      "regular_brier": 0.08083332456520896,
+      "role_blind_brier": 0.08373006508719165,
+      "samples": 1375,
       "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.03884607426654325,
-      "brier": 0.03500280073976826,
+      "brier": 0.03500280073976827,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
       "target": 100
     },
     {
-      "baseline_brier": 0.04343041237043576,
-      "brier": 0.037692288270439266,
+      "baseline_brier": 0.043797526259389916,
+      "brier": 0.037973579986142,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.03748011862899375,
-      "role_blind_brier": 0.03801119138818825,
-      "samples": 1387,
+      "regular_brier": 0.03769845660418121,
+      "role_blind_brier": 0.038290265747477625,
+      "samples": 1375,
       "target": "role_threshold_100"
     }
   ],
-  "version": "player-extensions:5286726083232d1f",
+  "version": "player-extensions:b189071ec51ea5b5",
   "week": 8
 }

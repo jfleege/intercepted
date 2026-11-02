@@ -1,9 +1,10 @@
 # Scheduled data refresh on GitHub Pages
 
-The **Refresh data and deploy Pages** workflow on `main` uses three schedules:
+The **Refresh data and deploy Pages** workflow on `main` includes these schedules:
 
 | Run | Schedule | Purpose |
 | --- | --- | --- |
+| Postgame check | Every 30 minutes, at :07 and :37 UTC | Lightweight final-score signal; new/corrected archived finals trigger results-only grading and deployment. No new forecasts or paid odds requests. |
 | Morning refresh | Daily, 13:17 UTC (8:17 a.m. CDT / 7:17 a.m. CST) | Check the next slate; refresh players, projections, results, rankings, and the existing budgeted odds feed. |
 | Overnight refresh | Daily, 07:47 UTC | Refresh final results and other existing data exports; no scheduled odds or prop request. |
 | Weekly archive and refresh | Tuesday, noon `America/Chicago` | Commit the published forecast archive and final results first, then check the next slate and refresh all site data. |
@@ -29,3 +30,9 @@ Game winner forecasts use saved model weights with fresh eligible inputs; a week
 ## Markets likelihood workspace
 
 Markets now uses forecasts only (see `likelihood-markets.md`). The daily morning game-odds refresh still supplies matchup/dashboard quotes. Player-prop fetching is no longer automatic; the legacy explicit manual input remains subject to its existing fail-closed quota limits. Tuesday/overnight/deployment runs add no paid requests. Old prop cache and quota records remain committed for provenance, but are not an active source in the data-status panel.
+
+## Postgame accuracy and startup model
+
+Dashboard forecasts and Season Pulse both start on Updated QB+. Users can still switch models; archived weeks only offer models actually saved there.
+
+The postgame gate checks ESPN final scores for archived games with kickoffs today or yesterday in America/Chicago. It matches teams and kickoff, rejects ambiguous/live entries, and detects corrections. If nothing changed, the expensive build/deploy job is skipped. ESPN is a signal only: existing nflverse grading remains authoritative, preserving original forecasts and pending results when official stats are delayed. Checks retry while the published final differs; ordinary morning/overnight runs remain as coverage for late player stats and later corrections. GitHub scheduling and source delays mean this is not an immediate final-whistle webhook.

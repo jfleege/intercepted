@@ -24,6 +24,8 @@ try {
   await page.locator('.dp-headshot').first().waitFor();
   await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('.ud-game').count(),data.games.length);
+  assert.equal(await page.getByLabel('Record model',{exact:true}).inputValue(),'v5_qb_plus');
+  assert.equal(await page.getByRole('button',{name:'Updated QB+',exact:true}).getAttribute('aria-pressed'),'true');
   assert.equal(await page.locator('.ud-draftkings-logo').getAttribute('alt'),'DraftKings');
   assert.ok((await page.locator('.dp-headshot').first().getAttribute('src')).startsWith('https://'));
   assert.equal(await page.locator('.dp-player-card').count(),10);

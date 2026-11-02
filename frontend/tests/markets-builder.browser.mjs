@@ -52,7 +52,7 @@ try{
   assert.equal(await page.locator('.lm-idea').first().locator('.mb-combo-legs strong').count(),8);
   await page.screenshot({path:`qa/markets/${width}-cross-game.png`,fullPage:true});
   const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();reports.push({width,view:'ideas',violations:axe.violations});assert.deepEqual(axe.violations.map(v=>v.id),[]);
-  if(width<=760){await page.locator('.mb-mobile-slip').click();await page.locator('.mb-mobile-back').click();await page.locator('#mb-explore').waitFor({state:'visible'});}
+  if(width<=760){await page.getByRole('button',{name:'Use option 1',exact:true}).click();await page.locator('.mb-mobile-slip').click();await page.locator('.mb-mobile-back').click();await page.locator('#mb-explore').waitFor({state:'visible'});}
   await page.getByLabel('Market game',{exact:true}).selectOption(data.games[0].game_id);await page.getByRole('button',{name:'Player yards',exact:true}).click();
   const game=data.games[0],eligible=research.games[game.game_id].players.filter(p=>p.status==='available'&&Number.isFinite(p.expected_yards));assert.deepEqual(new Set(await page.locator('.mb-offer h3').allTextContents()),new Set(eligible.map(p=>p.name)));
   const card=page.locator('.mb-offer').first();assert.ok((await card.textContent()).includes('Target hit probability unavailable'));await card.locator('input').fill('55.5');await card.getByRole('button').click();assert.ok((await page.locator('.mb-slip').textContent()).includes('Joint likelihood unavailable'));

@@ -60253,11 +60253,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 11,
-            "lower": 0.15166223614131383,
-            "observed": 0.36363636363636365,
-            "predicted": 0.6450570694088249,
-            "upper": 0.6462032231083628
+            "games": 12,
+            "lower": 0.19325746190524656,
+            "observed": 0.4166666666666667,
+            "predicted": 0.6422129487815719,
+            "upper": 0.6804926643446272
           },
           {
             "bin": "70\u201380%",
@@ -61423,21 +61423,21 @@
             "week": 8
           },
           {
-            "away_score": null,
+            "away_score": 10,
             "away_team": "PHI",
-            "brier": null,
+            "brier": 0.1513773154145603,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-01",
             "game_id": "2026_08_PHI_WAS",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "WAS",
             "kickoff": "2026-11-02T01:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4927767852859098,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "WAS",
             "probability": 0.6109276218817888,
             "provenance": {
@@ -61447,7 +61447,7 @@
             "saved_at": "2026-10-28T01:47:37.427690+00:00",
             "season": 2026,
             "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 8
           },
@@ -61511,14 +61511,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.55,
-          "brier": 0.2594972122452318,
+          "accuracy": 0.5609756097560976,
+          "brier": 0.25686014159082515,
           "cancelled": 0,
-          "correct": 22,
-          "games": 40,
+          "correct": 23,
+          "games": 41,
           "incorrect": 18,
-          "log_loss": 0.7114910245570744,
-          "pending": 2,
+          "log_loss": 0.7061565309163143,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -61961,6 +61961,17 @@
             "game_number": 40,
             "label": "NE @ MIA",
             "log_loss": 0.7114910245570744
+          },
+          {
+            "accuracy": 0.5609756097560976,
+            "brier": 0.25686014159082515,
+            "correct": true,
+            "date": "2026-11-01",
+            "game_brier": 0.1513773154145603,
+            "game_id": "2026_08_PHI_WAS",
+            "game_number": 41,
+            "label": "PHI @ WAS",
+            "log_loss": 0.7061565309163143
           }
         ],
         "weekly": [
@@ -61991,14 +62002,14 @@
             "week": 7
           },
           {
-            "accuracy": 0.75,
-            "brier": 0.19398295472702284,
+            "accuracy": 0.7692307692307693,
+            "brier": 0.19070559785683341,
             "cancelled": 0,
-            "correct": 9,
-            "games": 12,
+            "correct": 10,
+            "games": 13,
             "incorrect": 3,
-            "log_loss": 0.5689053040026554,
-            "pending": 2,
+            "log_loss": 0.5630492641013671,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 8
@@ -62041,11 +62052,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 10,
-            "lower": 0.23658959361548731,
-            "observed": 0.5,
-            "predicted": 0.6515361896705262,
-            "upper": 0.7634104063845126
+            "games": 11,
+            "lower": 0.28008775568998817,
+            "observed": 0.5454545454545454,
+            "predicted": 0.6524391855870242,
+            "upper": 0.7872904245601196
           },
           {
             "bin": "70\u201380%",
@@ -63211,21 +63222,21 @@
             "week": 8
           },
           {
-            "away_score": null,
+            "away_score": 10,
             "away_team": "PHI",
-            "brier": null,
+            "brier": 0.11460313995493938,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-01",
             "game_id": "2026_08_PHI_WAS",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "WAS",
             "kickoff": "2026-11-02T01:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4132919408808376,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "WAS",
             "probability": 0.6614691447520044,
             "provenance": {
@@ -63235,7 +63246,7 @@
             "saved_at": "2026-10-28T01:47:37.427690+00:00",
             "season": 2026,
             "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 8
           },
@@ -63299,14 +63310,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.55,
-          "brier": 0.25996800426772315,
+          "accuracy": 0.5609756097560976,
+          "brier": 0.25642251977228936,
           "cancelled": 0,
-          "correct": 22,
-          "games": 40,
+          "correct": 23,
+          "games": 41,
           "incorrect": 18,
-          "log_loss": 0.7135324541560518,
-          "pending": 2,
+          "log_loss": 0.7062095148078759,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -63749,6 +63760,17 @@
             "game_number": 40,
             "label": "NE @ MIA",
             "log_loss": 0.7135324541560518
+          },
+          {
+            "accuracy": 0.5609756097560976,
+            "brier": 0.25642251977228936,
+            "correct": true,
+            "date": "2026-11-01",
+            "game_brier": 0.11460313995493938,
+            "game_id": "2026_08_PHI_WAS",
+            "game_number": 41,
+            "label": "PHI @ WAS",
+            "log_loss": 0.7062095148078759
           }
         ],
         "weekly": [
@@ -63779,14 +63801,14 @@
             "week": 7
           },
           {
-            "accuracy": 0.75,
-            "brier": 0.19134667049137769,
+            "accuracy": 0.7692307692307693,
+            "brier": 0.18544332198857474,
             "cancelled": 0,
-            "correct": 9,
-            "games": 12,
+            "correct": 10,
+            "games": 13,
             "incorrect": 3,
-            "log_loss": 0.5638429134349344,
-            "pending": 2,
+            "log_loss": 0.5522620693923115,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 8
@@ -63829,11 +63851,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 6,
-            "lower": 0.09676933255921683,
-            "observed": 0.3333333333333333,
-            "predicted": 0.6665108193220669,
-            "upper": 0.7000116786584712
+            "games": 7,
+            "lower": 0.15821692226262685,
+            "observed": 0.42857142857142855,
+            "predicted": 0.6631592798095841,
+            "upper": 0.7495457695909742
           },
           {
             "bin": "70\u201380%",
@@ -64579,21 +64601,21 @@
             "week": 8
           },
           {
-            "away_score": null,
+            "away_score": 10,
             "away_team": "PHI",
-            "brier": null,
+            "brier": 0.12741327199170852,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-01",
             "game_id": "2026_08_PHI_WAS",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "WAS",
             "kickoff": "2026-11-02T01:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4415327308138,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "WAS",
             "probability": 0.6430500427346874,
             "provenance": {
@@ -64603,7 +64625,7 @@
             "saved_at": "2026-10-28T01:47:37.427690+00:00",
             "season": 2026,
             "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 8
           },
@@ -64667,14 +64689,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5384615384615384,
-          "brier": 0.25189490552252497,
+          "accuracy": 0.5555555555555556,
+          "brier": 0.24728447465101325,
           "cancelled": 0,
-          "correct": 14,
-          "games": 26,
+          "correct": 15,
+          "games": 27,
           "incorrect": 12,
-          "log_loss": 0.6961702970039205,
-          "pending": 2,
+          "log_loss": 0.6867392760339159,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -64963,6 +64985,17 @@
             "game_number": 26,
             "label": "NE @ MIA",
             "log_loss": 0.6961702970039205
+          },
+          {
+            "accuracy": 0.5555555555555556,
+            "brier": 0.24728447465101325,
+            "correct": true,
+            "date": "2026-11-01",
+            "game_brier": 0.12741327199170852,
+            "game_id": "2026_08_PHI_WAS",
+            "game_number": 27,
+            "label": "PHI @ WAS",
+            "log_loss": 0.6867392760339159
           }
         ],
         "weekly": [
@@ -64980,14 +65013,14 @@
             "week": 7
           },
           {
-            "accuracy": 0.6666666666666666,
-            "brier": 0.18185703583480972,
+            "accuracy": 0.6923076923076923,
+            "brier": 0.17766905400072502,
             "cancelled": 0,
-            "correct": 8,
-            "games": 12,
+            "correct": 9,
+            "games": 13,
             "incorrect": 4,
-            "log_loss": 0.5399348574005814,
-            "pending": 2,
+            "log_loss": 0.532365463047752,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 8
@@ -65030,11 +65063,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 10,
-            "lower": 0.23658959361548731,
-            "observed": 0.5,
-            "predicted": 0.6441648349282523,
-            "upper": 0.7634104063845126
+            "games": 11,
+            "lower": 0.28008775568998817,
+            "observed": 0.5454545454545454,
+            "predicted": 0.6452816564726397,
+            "upper": 0.7872904245601196
           },
           {
             "bin": "70\u201380%",
@@ -65780,21 +65813,21 @@
             "week": 8
           },
           {
-            "away_score": null,
+            "away_score": 10,
             "away_team": "PHI",
-            "brier": null,
+            "brier": 0.11802669050617953,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-01",
             "game_id": "2026_08_PHI_WAS",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "WAS",
             "kickoff": "2026-11-02T01:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4209089447174086,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "WAS",
             "probability": 0.6564498719165142,
             "provenance": {
@@ -65804,7 +65837,7 @@
             "saved_at": "2026-10-28T01:47:37.427690+00:00",
             "season": 2026,
             "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 8
           },
@@ -65868,14 +65901,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6538461538461539,
-          "brier": 0.24118534085570745,
+          "accuracy": 0.6666666666666666,
+          "brier": 0.2366239093612805,
           "cancelled": 0,
-          "correct": 17,
-          "games": 26,
+          "correct": 18,
+          "games": 27,
           "incorrect": 9,
-          "log_loss": 0.6745679119447607,
-          "pending": 2,
+          "log_loss": 0.6651731353807848,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -66164,6 +66197,17 @@
             "game_number": 26,
             "label": "NE @ MIA",
             "log_loss": 0.6745679119447607
+          },
+          {
+            "accuracy": 0.6666666666666666,
+            "brier": 0.2366239093612805,
+            "correct": true,
+            "date": "2026-11-01",
+            "game_brier": 0.11802669050617953,
+            "game_id": "2026_08_PHI_WAS",
+            "game_number": 27,
+            "label": "PHI @ WAS",
+            "log_loss": 0.6651731353807848
           }
         ],
         "weekly": [
@@ -66181,14 +66225,14 @@
             "week": 7
           },
           {
-            "accuracy": 0.75,
-            "brier": 0.1891547625889599,
+            "accuracy": 0.7692307692307693,
+            "brier": 0.18368337242874602,
             "cancelled": 0,
-            "correct": 9,
-            "games": 12,
+            "correct": 10,
+            "games": 13,
             "incorrect": 3,
-            "log_loss": 0.5593033233729732,
-            "pending": 2,
+            "log_loss": 0.5486576019379297,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 8
@@ -66201,5 +66245,5 @@
   "schema_version": 1,
   "snapshot_count": 5,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-02T02:26:21.344265+00:00"
+  "updated_at": "2026-11-02T09:54:29.793464+00:00"
 }

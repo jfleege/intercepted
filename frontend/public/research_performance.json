@@ -235,34 +235,34 @@
       "groups": [
         {
           "accuracy": null,
-          "baseline_error": 9.070833333333333,
-          "baseline_samples": 24,
-          "bias": 0.6749999999999999,
+          "baseline_error": 8.965384615384615,
+          "baseline_samples": 26,
+          "bias": 0.5,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 4,
+            "pending": 2,
             "unavailable": 0
           },
-          "coverage": 0.75,
-          "error": 8.371153846153847,
+          "coverage": 0.7592592592592593,
+          "error": 8.28888888888889,
           "family": "scoring",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 26,
+            "samples": 27,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 8.866666666666667,
-          "range_samples": 52,
-          "range_width": 23.892307692307693,
-          "rmse": 10.122642175607346,
-          "samples": 52,
+          "paired_error": 8.657692307692308,
+          "range_samples": 54,
+          "range_width": 23.883333333333333,
+          "rmse": 10.03399776316056,
+          "samples": 54,
           "target": "team_points",
           "trend": [
             {
@@ -680,6 +680,22 @@
               "loss": 8.371153846153844,
               "n": 52,
               "prediction": 16.9
+            },
+            {
+              "actual": 10,
+              "date": "2026-11-01",
+              "label": "PHI points",
+              "loss": 8.405660377358489,
+              "n": 53,
+              "prediction": 20.2
+            },
+            {
+              "actual": 27,
+              "date": "2026-11-01",
+              "label": "WAS points",
+              "loss": 8.288888888888888,
+              "n": 54,
+              "prediction": 24.9
             }
           ],
           "version": "all",
@@ -952,34 +968,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 13.608333333333334,
-          "baseline_samples": 12,
-          "bias": 1.3500000000000003,
+          "baseline_error": 13.330769230769231,
+          "baseline_samples": 13,
+          "bias": 1.0000000000000002,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
-          "coverage": 0.8076923076923077,
-          "error": 11.942307692307693,
+          "coverage": 0.8148148148148148,
+          "error": 11.8,
           "family": "scoring",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 26,
+            "samples": 27,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 13.3,
-          "range_samples": 26,
-          "range_width": 34.01538461538462,
-          "rmse": 14.969854323323874,
-          "samples": 26,
+          "paired_error": 12.9,
+          "range_samples": 27,
+          "range_width": 34.007407407407406,
+          "rmse": 14.772496967901759,
+          "samples": 27,
           "target": "total",
           "trend": [
             {
@@ -1189,6 +1205,14 @@
               "loss": 11.942307692307695,
               "n": 26,
               "prediction": 40.1
+            },
+            {
+              "actual": 37,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS total",
+              "loss": 11.800000000000002,
+              "n": 27,
+              "prediction": 45.1
             }
           ],
           "version": "all",
@@ -1349,34 +1373,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 11.208333333333334,
-          "baseline_samples": 12,
-          "bias": -0.3653846153846151,
+          "baseline_error": 11.53076923076923,
+          "baseline_samples": 13,
+          "bias": 0.10370370370370402,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
-          "coverage": 0.8461538461538461,
-          "error": 10.557692307692308,
+          "coverage": 0.8518518518518519,
+          "error": 10.622222222222222,
           "family": "scoring",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 26,
+            "samples": 27,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 9.466666666666667,
-          "range_samples": 26,
+          "paired_error": 9.684615384615384,
+          "range_samples": 27,
           "range_width": 33.6,
-          "rmse": 13.629930300628834,
-          "samples": 26,
+          "rmse": 13.582995905829383,
+          "samples": 27,
           "target": "margin",
           "trend": [
             {
@@ -1586,6 +1610,14 @@
               "loss": 10.557692307692305,
               "n": 26,
               "prediction": -6.3
+            },
+            {
+              "actual": 17,
+              "date": "2026-11-01",
+              "label": "WAS margin",
+              "loss": 10.62222222222222,
+              "n": 27,
+              "prediction": 4.7
             }
           ],
           "version": "all",
@@ -1746,34 +1778,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 85.38653846153846,
-          "baseline_samples": 52,
-          "bias": -6.263461538461539,
+          "baseline_error": 82.7611111111111,
+          "baseline_samples": 54,
+          "bias": -5.07037037037037,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 4,
+            "pending": 2,
             "unavailable": 0
           },
-          "coverage": 0.7884615384615384,
-          "error": 74.03653846153846,
+          "coverage": 0.7962962962962963,
+          "error": 72.25555555555556,
           "family": "yardage",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 300,
             "reason": "Choose one model version for health assessment.",
-            "samples": 52,
+            "samples": 54,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 74.03653846153846,
-          "range_samples": 52,
-          "range_width": 204.51923076923077,
-          "rmse": 91.52859683433117,
-          "samples": 52,
+          "paired_error": 72.25555555555556,
+          "range_samples": 54,
+          "range_width": 204.45555555555555,
+          "rmse": 89.99471383652775,
+          "samples": 54,
           "target": "passing",
           "trend": [
             {
@@ -2191,6 +2223,22 @@
               "loss": 74.03653846153847,
               "n": 52,
               "prediction": 240.8
+            },
+            {
+              "actual": 212,
+              "date": "2026-11-01",
+              "label": "Tanner McKee",
+              "loss": 73.38679245283019,
+              "n": 53,
+              "prediction": 172.4
+            },
+            {
+              "actual": 217,
+              "date": "2026-11-01",
+              "label": "Jayden Daniels",
+              "loss": 72.25555555555556,
+              "n": 54,
+              "prediction": 204.7
             }
           ],
           "version": "all",
@@ -2463,9 +2511,9 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 0.21802460819322342,
-          "baseline_samples": 94,
-          "bias": 0.035174257425742574,
+          "baseline_error": 0.21024430964007923,
+          "baseline_samples": 101,
+          "bias": 0.03229665071770335,
           "calibration": [
             {
               "bin": "0\u201310%",
@@ -2477,27 +2525,27 @@
             },
             {
               "bin": "10\u201320%",
-              "lower": 0.09661201862809403,
-              "observed": 0.1643835616438356,
-              "predicted": 0.15611506849315068,
-              "samples": 73,
-              "upper": 0.26571255556088685
+              "lower": 0.09025416205339185,
+              "observed": 0.15384615384615385,
+              "predicted": 0.1562653846153846,
+              "samples": 78,
+              "upper": 0.2499346905594603
             },
             {
               "bin": "20\u201330%",
-              "lower": 0.1907092651972273,
-              "observed": 0.30952380952380953,
-              "predicted": 0.24218809523809523,
-              "samples": 42,
-              "upper": 0.46026277766340595
+              "lower": 0.18601827946182872,
+              "observed": 0.3023255813953488,
+              "predicted": 0.2426046511627907,
+              "samples": 43,
+              "upper": 0.4510564575240983
             },
             {
               "bin": "30\u201340%",
-              "lower": 0.2954102987654314,
-              "observed": 0.4444444444444444,
-              "predicted": 0.3473833333333333,
-              "samples": 36,
-              "upper": 0.6041921268399659
+              "lower": 0.31038327828457724,
+              "observed": 0.4594594594594595,
+              "predicted": 0.3461783783783784,
+              "samples": 37,
+              "upper": 0.6161622047523264
             },
             {
               "bin": "40\u201350%",
@@ -2534,28 +2582,28 @@
           ],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 5,
-            "pending": 16,
+            "missing_stats": 6,
+            "pending": 8,
             "unavailable": 1
           },
           "coverage": null,
-          "error": 0.19603828158415842,
+          "error": 0.19273641157894736,
           "family": "touchdowns",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 500,
             "reason": "Choose one model version for health assessment.",
-            "samples": 202,
+            "samples": 209,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
-          "log_loss": 0.5760125106940314,
-          "paired_error": 0.202432959893617,
+          "log_loss": 0.5680147532022455,
+          "paired_error": 0.1951571818811881,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.44276210495497287,
-          "samples": 202,
+          "rmse": 0.4390175527002848,
+          "samples": 209,
           "target": "any_td",
           "trend": [
             {
@@ -4173,6 +4221,62 @@
               "loss": 0.19603828158415862,
               "n": 202,
               "prediction": 0.15
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Dallas Goedert",
+              "loss": 0.19540583689655194,
+              "n": 203,
+              "prediction": 0.2601
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "Saquon Barkley",
+              "loss": 0.19683074867647082,
+              "n": 204,
+              "prediction": 0.3028
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Treylon Burks",
+              "loss": 0.19602480765853683,
+              "n": 205,
+              "prediction": 0.1778
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Chig Okonkwo",
+              "loss": 0.19523191364077694,
+              "n": 206,
+              "prediction": 0.1808
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Tanner McKee",
+              "loss": 0.1943647312560389,
+              "n": 207,
+              "prediction": 0.1254
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Jayden Daniels",
+              "loss": 0.19351545663461567,
+              "n": 208,
+              "prediction": 0.1331
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Makai Lemon",
+              "loss": 0.19273641157894764,
+              "n": 209,
+              "prediction": 0.1752
             }
           ],
           "version": "all",
@@ -5142,9 +5246,9 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 0.22509861785016666,
-          "baseline_samples": 24,
-          "bias": -0.048792307692307704,
+          "baseline_error": 0.227000012914,
+          "baseline_samples": 26,
+          "bias": -0.05443518518518519,
           "calibration": [
             {
               "bin": "50\u201360%",
@@ -5156,19 +5260,19 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.29998832134152864,
-              "observed": 0.6666666666666666,
-              "predicted": 0.6535833333333333,
-              "samples": 6,
-              "upper": 0.9032306674407831
+              "lower": 0.2504542304090258,
+              "observed": 0.5714285714285714,
+              "predicted": 0.6564,
+              "samples": 7,
+              "upper": 0.8417830777373732
             },
             {
               "bin": "70\u201380%",
-              "lower": 0.3371606942825164,
-              "observed": 0.5555555555555556,
-              "predicted": 0.7570388888888889,
-              "samples": 18,
-              "upper": 0.7544076889861088
+              "lower": 0.36275551465160105,
+              "observed": 0.5789473684210527,
+              "predicted": 0.7555631578947368,
+              "samples": 19,
+              "upper": 0.7685837960796962
             },
             {
               "bin": "80\u201390%",
@@ -5190,27 +5294,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 4,
+            "pending": 2,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.1728990280769231,
+          "error": 0.1762504324074074,
           "family": "touchdowns",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 500,
             "reason": "Choose one model version for health assessment.",
-            "samples": 52,
+            "samples": 54,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
-          "log_loss": 0.5145682773671418,
-          "paired_error": 0.20581492125,
+          "log_loss": 0.5220804616748143,
+          "paired_error": 0.21024353846153845,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.41581128902054004,
-          "samples": 52,
+          "rmse": 0.41982190558307864,
+          "samples": 54,
           "target": "pass_td",
           "trend": [
             {
@@ -5628,6 +5732,22 @@
               "loss": 0.17289902807692312,
               "n": 52,
               "prediction": 0.855
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Tanner McKee",
+              "loss": 0.17819023301886797,
+              "n": 53,
+              "prediction": 0.6733
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "Jayden Daniels",
+              "loss": 0.17625043240740745,
+              "n": 54,
+              "prediction": 0.729
             }
           ],
           "version": "all",
@@ -5941,34 +6061,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 31.13142857142857,
-          "baseline_samples": 105,
-          "bias": -1.7552380952380953,
+          "baseline_error": 30.726605504587155,
+          "baseline_samples": 109,
+          "bias": -1.2467889908256882,
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 5,
-            "pending": 9,
+            "missing_stats": 6,
+            "pending": 4,
             "unavailable": 1
           },
-          "coverage": 0.6666666666666666,
-          "error": 26.526666666666667,
+          "coverage": 0.6697247706422018,
+          "error": 26.3954128440367,
           "family": "yardage",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 300,
             "reason": "Choose one model version for health assessment.",
-            "samples": 105,
+            "samples": 109,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 26.526666666666667,
-          "range_samples": 105,
-          "range_width": 62.12,
-          "rmse": 34.276340583695976,
-          "samples": 105,
+          "paired_error": 26.3954128440367,
+          "range_samples": 109,
+          "range_width": 62.11926605504587,
+          "rmse": 34.1032471751578,
+          "samples": 109,
           "target": "receiving",
           "trend": [
             {
@@ -6810,6 +6930,38 @@
               "loss": 26.52666666666666,
               "n": 105,
               "prediction": 41.7
+            },
+            {
+              "actual": 30,
+              "date": "2026-11-01",
+              "label": "Dallas Goedert",
+              "loss": 26.443396226415086,
+              "n": 106,
+              "prediction": 47.7
+            },
+            {
+              "actual": 81,
+              "date": "2026-11-01",
+              "label": "Treylon Burks",
+              "loss": 26.688785046728963,
+              "n": 107,
+              "prediction": 28.3
+            },
+            {
+              "actual": 32,
+              "date": "2026-11-01",
+              "label": "Chig Okonkwo",
+              "loss": 26.478703703703694,
+              "n": 108,
+              "prediction": 36.0
+            },
+            {
+              "actual": 57,
+              "date": "2026-11-01",
+              "label": "Makai Lemon",
+              "loss": 26.395412844036688,
+              "n": 109,
+              "prediction": 39.6
             }
           ],
           "version": "all",
@@ -7338,34 +7490,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 35.14666666666667,
-          "baseline_samples": 45,
-          "bias": 9.786666666666667,
+          "baseline_error": 34.832608695652176,
+          "baseline_samples": 46,
+          "bias": 9.206521739130435,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 3,
+            "pending": 2,
             "unavailable": 0
           },
-          "coverage": 0.4444444444444444,
-          "error": 37.21333333333333,
+          "coverage": 0.45652173913043476,
+          "error": 36.77173913043478,
           "family": "yardage",
-          "games": 25,
+          "games": 26,
           "health": {
             "minimum": 300,
             "reason": "Choose one model version for health assessment.",
-            "samples": 45,
+            "samples": 46,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 37.21333333333333,
-          "range_samples": 45,
-          "range_width": 60.24,
-          "rmse": 44.04669239694521,
-          "samples": 45,
+          "paired_error": 36.77173913043478,
+          "range_samples": 46,
+          "range_width": 60.2695652173913,
+          "rmse": 43.63649499733192,
+          "samples": 46,
           "target": "rushing",
           "trend": [
             {
@@ -7727,6 +7879,14 @@
               "loss": 37.21333333333334,
               "n": 45,
               "prediction": 58.0
+            },
+            {
+              "actual": 30,
+              "date": "2026-11-01",
+              "label": "Saquon Barkley",
+              "loss": 36.771739130434796,
+              "n": 46,
+              "prediction": 46.9
             }
           ],
           "version": "all",
@@ -7935,34 +8095,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 9.070833333333333,
-          "baseline_samples": 24,
-          "bias": 0.9666666666666667,
+          "baseline_error": 8.965384615384615,
+          "baseline_samples": 26,
+          "bias": 0.5807692307692308,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 4,
+            "pending": 2,
             "unavailable": 0
           },
-          "coverage": 0.6666666666666666,
-          "error": 8.866666666666667,
+          "coverage": 0.6923076923076923,
+          "error": 8.657692307692308,
           "family": "scoring",
-          "games": 12,
+          "games": 13,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 12,
+            "samples": 13,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 8.866666666666667,
-          "range_samples": 24,
-          "range_width": 23.675,
-          "rmse": 10.813687314386954,
-          "samples": 24,
+          "paired_error": 8.657692307692308,
+          "range_samples": 26,
+          "range_width": 23.673076923076923,
+          "rmse": 10.588291792207233,
+          "samples": 26,
           "target": "team_points",
           "trend": [
             {
@@ -8156,6 +8316,22 @@
               "loss": 8.866666666666665,
               "n": 24,
               "prediction": 16.9
+            },
+            {
+              "actual": 10,
+              "date": "2026-11-01",
+              "label": "PHI points",
+              "loss": 8.919999999999998,
+              "n": 25,
+              "prediction": 20.2
+            },
+            {
+              "actual": 27,
+              "date": "2026-11-01",
+              "label": "WAS points",
+              "loss": 8.657692307692306,
+              "n": 26,
+              "prediction": 24.9
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -8165,34 +8341,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 13.608333333333334,
-          "baseline_samples": 12,
-          "bias": 1.9333333333333342,
+          "baseline_error": 13.330769230769231,
+          "baseline_samples": 13,
+          "bias": 1.1615384615384623,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
-          "coverage": 0.75,
-          "error": 13.3,
+          "coverage": 0.7692307692307693,
+          "error": 12.9,
           "family": "scoring",
-          "games": 12,
+          "games": 13,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 12,
+            "samples": 13,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 13.3,
-          "range_samples": 12,
+          "paired_error": 12.9,
+          "range_samples": 13,
           "range_width": 33.8,
-          "rmse": 17.400766266652358,
-          "samples": 12,
+          "rmse": 16.86838189312501,
+          "samples": 13,
           "target": "total",
           "trend": [
             {
@@ -8290,6 +8466,14 @@
               "loss": 13.299999999999999,
               "n": 12,
               "prediction": 40.1
+            },
+            {
+              "actual": 37,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS total",
+              "loss": 12.899999999999999,
+              "n": 13,
+              "prediction": 45.1
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -8299,34 +8483,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 11.208333333333334,
-          "baseline_samples": 12,
-          "bias": 6.733333333333333,
+          "baseline_error": 11.53076923076923,
+          "baseline_samples": 13,
+          "bias": 7.161538461538462,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
-          "coverage": 0.8333333333333334,
-          "error": 9.466666666666667,
+          "coverage": 0.8461538461538461,
+          "error": 9.684615384615384,
           "family": "scoring",
-          "games": 12,
+          "games": 13,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 12,
+            "samples": 13,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 9.466666666666667,
-          "range_samples": 12,
+          "paired_error": 9.684615384615384,
+          "range_samples": 13,
           "range_width": 33.6,
-          "rmse": 12.843545720192173,
-          "samples": 12,
+          "rmse": 12.802553831770622,
+          "samples": 13,
           "target": "margin",
           "trend": [
             {
@@ -8424,6 +8608,14 @@
               "loss": 9.466666666666669,
               "n": 12,
               "prediction": -6.3
+            },
+            {
+              "actual": 17,
+              "date": "2026-11-01",
+              "label": "WAS margin",
+              "loss": 9.684615384615386,
+              "n": 13,
+              "prediction": 4.7
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -8433,34 +8625,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 92.675,
-          "baseline_samples": 24,
-          "bias": -16.133333333333336,
+          "baseline_error": 86.66153846153846,
+          "baseline_samples": 26,
+          "bias": -12.896153846153847,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 4,
+            "pending": 2,
             "unavailable": 0
           },
-          "coverage": 0.6666666666666666,
-          "error": 84.45,
+          "coverage": 0.6923076923076923,
+          "error": 79.95,
           "family": "yardage",
-          "games": 12,
+          "games": 13,
           "health": {
             "minimum": 300,
             "reason": "Need 300 graded appearances per non-overlapping window.",
-            "samples": 24,
+            "samples": 26,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 84.45,
-          "range_samples": 24,
+          "paired_error": 79.95,
+          "range_samples": 26,
           "range_width": 202.79999999999998,
-          "rmse": 102.8974003558885,
-          "samples": 24,
+          "rmse": 99.19453497663453,
+          "samples": 26,
           "target": "passing",
           "trend": [
             {
@@ -8654,6 +8846,22 @@
               "loss": 84.45,
               "n": 24,
               "prediction": 240.8
+            },
+            {
+              "actual": 212,
+              "date": "2026-11-01",
+              "label": "Tanner McKee",
+              "loss": 82.656,
+              "n": 25,
+              "prediction": 172.4
+            },
+            {
+              "actual": 217,
+              "date": "2026-11-01",
+              "label": "Jayden Daniels",
+              "loss": 79.95000000000002,
+              "n": 26,
+              "prediction": 204.7
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -8663,9 +8871,9 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 0.21802460819322342,
-          "baseline_samples": 94,
-          "bias": 0.06112021276595744,
+          "baseline_error": 0.21024430964007923,
+          "baseline_samples": 101,
+          "bias": 0.05336732673267327,
           "calibration": [
             {
               "bin": "0\u201310%",
@@ -8677,27 +8885,27 @@
             },
             {
               "bin": "10\u201320%",
-              "lower": 0.12065736746179101,
-              "observed": 0.22857142857142856,
-              "predicted": 0.15510857142857143,
-              "samples": 35,
-              "upper": 0.39017637780102
+              "lower": 0.10499864973166874,
+              "observed": 0.2,
+              "predicted": 0.1555275,
+              "samples": 40,
+              "upper": 0.34757607381856676
             },
             {
               "bin": "20\u201330%",
-              "lower": 0.12499569146355474,
-              "observed": 0.2777777777777778,
-              "predicted": 0.24531111111111112,
-              "samples": 18,
-              "upper": 0.5087307754619452
+              "lower": 0.11806238339540162,
+              "observed": 0.2631578947368421,
+              "predicted": 0.24608947368421052,
+              "samples": 19,
+              "upper": 0.48791968441070643
             },
             {
               "bin": "30\u201340%",
-              "lower": 0.24809225259746442,
-              "observed": 0.4666666666666667,
-              "predicted": 0.35806,
-              "samples": 15,
-              "upper": 0.6988336984894921
+              "lower": 0.2799923761135083,
+              "observed": 0.5,
+              "predicted": 0.35460625,
+              "samples": 16,
+              "upper": 0.7200076238864916
             },
             {
               "bin": "40\u201350%",
@@ -8734,28 +8942,28 @@
           ],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 2,
-            "pending": 16,
+            "missing_stats": 3,
+            "pending": 8,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.202432959893617,
+          "error": 0.1951571818811881,
           "family": "touchdowns",
-          "games": 12,
+          "games": 13,
           "health": {
             "minimum": 500,
             "reason": "Need 500 graded appearances per non-overlapping window.",
-            "samples": 94,
+            "samples": 101,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
-          "log_loss": 0.5917183172079672,
-          "paired_error": 0.202432959893617,
+          "log_loss": 0.5740799809566721,
+          "paired_error": 0.1951571818811881,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.4499255048267624,
-          "samples": 94,
+          "rmse": 0.4417659809007345,
+          "samples": 101,
           "target": "any_td",
           "trend": [
             {
@@ -9509,6 +9717,62 @@
               "loss": 0.20243295989361706,
               "n": 94,
               "prediction": 0.15
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Dallas Goedert",
+              "loss": 0.20101421305263162,
+              "n": 95,
+              "prediction": 0.2601
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "Saquon Barkley",
+              "loss": 0.20398373000000003,
+              "n": 96,
+              "prediction": 0.3028
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Treylon Burks",
+              "loss": 0.20220671051546396,
+              "n": 97,
+              "prediction": 0.1778
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Chig Okonkwo",
+              "loss": 0.20047693428571434,
+              "n": 98,
+              "prediction": 0.1808
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Tanner McKee",
+              "loss": 0.19861075474747478,
+              "n": 99,
+              "prediction": 0.1254
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Jayden Daniels",
+              "loss": 0.19680180330000002,
+              "n": 100,
+              "prediction": 0.1331
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Makai Lemon",
+              "loss": 0.19515718188118816,
+              "n": 101,
+              "prediction": 0.1752
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -9518,25 +9782,25 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 0.22509861785016666,
-          "baseline_samples": 24,
-          "bias": -0.10562916666666666,
+          "baseline_error": 0.227000012914,
+          "baseline_samples": 26,
+          "bias": -0.11297692307692307,
           "calibration": [
             {
               "bin": "60\u201370%",
-              "lower": 0.2076549551264879,
-              "observed": 0.6666666666666666,
-              "predicted": 0.6465666666666666,
-              "samples": 3,
-              "upper": 0.9385096847238394
+              "lower": 0.15003570882017148,
+              "observed": 0.5,
+              "predicted": 0.65325,
+              "samples": 4,
+              "upper": 0.8499642911798285
             },
             {
               "bin": "70\u201380%",
-              "lower": 0.15821692226262685,
-              "observed": 0.42857142857142855,
-              "predicted": 0.7482285714285715,
-              "samples": 7,
-              "upper": 0.7495457695909742
+              "lower": 0.21521252682444186,
+              "observed": 0.5,
+              "predicted": 0.745825,
+              "samples": 8,
+              "upper": 0.7847874731755582
             },
             {
               "bin": "80\u201390%",
@@ -9558,27 +9822,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 4,
+            "pending": 2,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.20581492125,
+          "error": 0.21024353846153845,
           "family": "touchdowns",
-          "games": 12,
+          "games": 13,
           "health": {
             "minimum": 500,
             "reason": "Need 500 graded appearances per non-overlapping window.",
-            "samples": 24,
+            "samples": 26,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
-          "log_loss": 0.5957989451899149,
-          "paired_error": 0.20581492125,
+          "log_loss": 0.605152661227175,
+          "paired_error": 0.21024353846153845,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.4536682942966149,
-          "samples": 24,
+          "rmse": 0.45852321474658014,
+          "samples": 26,
           "target": "pass_td",
           "trend": [
             {
@@ -9772,6 +10036,22 @@
               "loss": 0.20581492124999992,
               "n": 24,
               "prediction": 0.855
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-01",
+              "label": "Tanner McKee",
+              "loss": 0.21571563999999996,
+              "n": 25,
+              "prediction": 0.6733
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "Jayden Daniels",
+              "loss": 0.2102435384615384,
+              "n": 26,
+              "prediction": 0.729
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -9781,34 +10061,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 28.77111111111111,
-          "baseline_samples": 45,
-          "bias": -3.268888888888889,
+          "baseline_error": 28.06326530612245,
+          "baseline_samples": 49,
+          "bias": -2.0142857142857147,
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 2,
-            "pending": 9,
+            "missing_stats": 3,
+            "pending": 4,
             "unavailable": 0
           },
-          "coverage": 0.7333333333333333,
-          "error": 25.56222222222222,
+          "coverage": 0.7346938775510204,
+          "error": 25.348979591836734,
           "family": "yardage",
-          "games": 12,
+          "games": 13,
           "health": {
             "minimum": 300,
             "reason": "Need 300 graded appearances per non-overlapping window.",
-            "samples": 45,
+            "samples": 49,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 25.56222222222222,
-          "range_samples": 45,
-          "range_width": 62.086666666666666,
-          "rmse": 33.77952371218727,
-          "samples": 45,
+          "paired_error": 25.348979591836734,
+          "range_samples": 49,
+          "range_width": 62.087755102040816,
+          "rmse": 33.428836995282126,
+          "samples": 49,
           "target": "receiving",
           "trend": [
             {
@@ -10170,6 +10450,38 @@
               "loss": 25.56222222222222,
               "n": 45,
               "prediction": 41.7
+            },
+            {
+              "actual": 30,
+              "date": "2026-11-01",
+              "label": "Dallas Goedert",
+              "loss": 25.391304347826086,
+              "n": 46,
+              "prediction": 47.7
+            },
+            {
+              "actual": 81,
+              "date": "2026-11-01",
+              "label": "Treylon Burks",
+              "loss": 25.972340425531915,
+              "n": 47,
+              "prediction": 28.3
+            },
+            {
+              "actual": 32,
+              "date": "2026-11-01",
+              "label": "Chig Okonkwo",
+              "loss": 25.514583333333334,
+              "n": 48,
+              "prediction": 36.0
+            },
+            {
+              "actual": 57,
+              "date": "2026-11-01",
+              "label": "Makai Lemon",
+              "loss": 25.348979591836738,
+              "n": 49,
+              "prediction": 39.6
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -10179,34 +10491,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 34.896,
-          "baseline_samples": 25,
-          "bias": 11.984000000000002,
+          "baseline_error": 34.35,
+          "baseline_samples": 26,
+          "bias": 10.873076923076924,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 3,
+            "pending": 2,
             "unavailable": 0
           },
-          "coverage": 0.48,
-          "error": 37.464,
+          "coverage": 0.5,
+          "error": 36.67307692307693,
           "family": "yardage",
-          "games": 12,
+          "games": 13,
           "health": {
             "minimum": 300,
             "reason": "Need 300 graded appearances per non-overlapping window.",
-            "samples": 25,
+            "samples": 26,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 37.464,
-          "range_samples": 25,
-          "range_width": 61.616,
-          "rmse": 47.45292404056888,
-          "samples": 25,
+          "paired_error": 36.67307692307693,
+          "range_samples": 26,
+          "range_width": 61.61538461538461,
+          "rmse": 46.64930950103203,
+          "samples": 26,
           "target": "rushing",
           "trend": [
             {
@@ -10408,6 +10720,14 @@
               "loss": 37.464,
               "n": 25,
               "prediction": 58.0
+            },
+            {
+              "actual": 30,
+              "date": "2026-11-01",
+              "label": "Saquon Barkley",
+              "loss": 36.67307692307692,
+              "n": 26,
+              "prediction": 46.9
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -10416,10 +10736,10 @@
           ]
         },
         {
-          "accuracy": 0.55,
+          "accuracy": 0.5609756097560976,
           "baseline_error": 0.25,
-          "baseline_samples": 40,
-          "bias": -0.05237671304827638,
+          "baseline_samples": 41,
+          "bias": -0.041609662044215706,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -10455,11 +10775,11 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.15166223614131383,
-              "observed": 0.36363636363636365,
-              "predicted": 0.6450570694088249,
-              "samples": 11,
-              "upper": 0.6462032231083628
+              "lower": 0.19325746190524656,
+              "observed": 0.4166666666666667,
+              "predicted": 0.6422129487815719,
+              "samples": 12,
+              "upper": 0.6804926643446272
             },
             {
               "bin": "70\u201380%",
@@ -10481,27 +10801,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2594972122452318,
+          "error": 0.2568601415908252,
           "family": "winners",
-          "games": 40,
+          "games": 41,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 40,
+            "samples": 41,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.7114910245570744,
-          "paired_error": 0.2594972122452318,
+          "log_loss": 0.7061565309163143,
+          "paired_error": 0.2568601415908252,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5094086888199217,
-          "samples": 40,
+          "rmse": 0.5068137148803544,
+          "samples": 41,
           "target": "winner:v4_a",
           "trend": [
             {
@@ -10823,6 +11143,14 @@
               "loss": 0.2594972122452317,
               "n": 40,
               "prediction": 0.2857453680608877
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS",
+              "loss": 0.2568601415908251,
+              "n": 41,
+              "prediction": 0.6109276218817888
             }
           ],
           "version": "all",
@@ -11039,10 +11367,10 @@
           ]
         },
         {
-          "accuracy": 0.6153846153846154,
+          "accuracy": 0.6296296296296297,
           "baseline_error": 0.25,
-          "baseline_samples": 26,
-          "bias": -0.010423729481288417,
+          "baseline_samples": 27,
+          "bias": 0.0043724226520263825,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -11078,11 +11406,11 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.12058159868274293,
-              "observed": 0.3333333333333333,
-              "predicted": 0.6384690841245606,
-              "samples": 9,
-              "upper": 0.6458026525009102
+              "lower": 0.16817758120350967,
+              "observed": 0.4,
+              "predicted": 0.6357149379002833,
+              "samples": 10,
+              "upper": 0.6873304525498135
             },
             {
               "bin": "70\u201380%",
@@ -11104,27 +11432,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2444387159476218,
+          "error": 0.24099199740936025,
           "family": "winners",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 26,
+            "samples": 27,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6784406259638984,
-          "paired_error": 0.2444387159476218,
+          "log_loss": 0.6715641874202691,
+          "paired_error": 0.24099199740936025,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.49440743921144814,
-          "samples": 26,
+          "rmse": 0.4909093576306733,
+          "samples": 27,
           "target": "winner:v4_a",
           "trend": [
             {
@@ -11334,6 +11662,14 @@
               "loss": 0.2444387159476218,
               "n": 26,
               "prediction": 0.2857453680608877
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS",
+              "loss": 0.24099199740936025,
+              "n": 27,
+              "prediction": 0.6109276218817888
             }
           ],
           "version": "ac161c2fa5d3",
@@ -11342,10 +11678,10 @@
           ]
         },
         {
-          "accuracy": 0.55,
+          "accuracy": 0.5609756097560976,
           "baseline_error": 0.25,
-          "baseline_samples": 40,
-          "bias": -0.0567413789959238,
+          "baseline_samples": 41,
+          "bias": -0.04710059279485259,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -11381,11 +11717,11 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.23658959361548731,
-              "observed": 0.5,
-              "predicted": 0.6515361896705262,
-              "samples": 10,
-              "upper": 0.7634104063845126
+              "lower": 0.28008775568998817,
+              "observed": 0.5454545454545454,
+              "predicted": 0.6524391855870242,
+              "samples": 11,
+              "upper": 0.7872904245601196
             },
             {
               "bin": "70\u201380%",
@@ -11407,27 +11743,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2599680042677231,
+          "error": 0.25642251977228936,
           "family": "winners",
-          "games": 40,
+          "games": 41,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 40,
+            "samples": 41,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.7135324541560518,
-          "paired_error": 0.2599680042677231,
+          "log_loss": 0.7062095148078759,
+          "paired_error": 0.25642251977228936,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5098705759972064,
-          "samples": 40,
+          "rmse": 0.5063817924968169,
+          "samples": 41,
           "target": "winner:v4_qb_plus",
           "trend": [
             {
@@ -11749,6 +12085,14 @@
               "loss": 0.25996800426772304,
               "n": 40,
               "prediction": 0.2553033008430528
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS",
+              "loss": 0.2564225197722893,
+              "n": 41,
+              "prediction": 0.6614691447520044
             }
           ],
           "version": "all",
@@ -11965,10 +12309,10 @@
           ]
         },
         {
-          "accuracy": 0.6538461538461539,
+          "accuracy": 0.6666666666666666,
           "baseline_error": 0.25,
-          "baseline_samples": 26,
-          "bias": -0.013995892744727975,
+          "baseline_samples": 27,
+          "bias": -0.0009393465227752483,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -12004,11 +12348,11 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.21521252682444186,
-              "observed": 0.5,
-              "predicted": 0.6517403480072494,
-              "samples": 8,
-              "upper": 0.7847874731755582
+              "lower": 0.2666473457440297,
+              "observed": 0.5555555555555556,
+              "predicted": 0.6528213254233333,
+              "samples": 9,
+              "upper": 0.811224570528086
             },
             {
               "bin": "70\u201380%",
@@ -12030,27 +12374,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2409348722363223,
+          "error": 0.23625591918886366,
           "family": "winners",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 26,
+            "samples": 27,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6737201878089631,
-          "paired_error": 0.2409348722363223,
+          "log_loss": 0.6640746971819955,
+          "paired_error": 0.23625591918886366,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.49085117116731247,
-          "samples": 26,
+          "rmse": 0.4860616413469218,
+          "samples": 27,
           "target": "winner:v4_qb_plus",
           "trend": [
             {
@@ -12260,6 +12604,14 @@
               "loss": 0.2409348722363222,
               "n": 26,
               "prediction": 0.2553033008430528
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS",
+              "loss": 0.23625591918886357,
+              "n": 27,
+              "prediction": 0.6614691447520044
             }
           ],
           "version": "ac161c2fa5d3",
@@ -12268,10 +12620,10 @@
           ]
         },
         {
-          "accuracy": 0.5384615384615384,
+          "accuracy": 0.5555555555555556,
           "baseline_error": 0.25,
-          "baseline_samples": 26,
-          "bias": -0.01697969415481978,
+          "baseline_samples": 27,
+          "bias": -0.0031304478059259854,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -12307,11 +12659,11 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.09676933255921683,
-              "observed": 0.3333333333333333,
-              "predicted": 0.666510819322067,
-              "samples": 6,
-              "upper": 0.7000116786584712
+              "lower": 0.15821692226262685,
+              "observed": 0.42857142857142855,
+              "predicted": 0.6631592798095842,
+              "samples": 7,
+              "upper": 0.7495457695909742
             },
             {
               "bin": "70\u201380%",
@@ -12333,27 +12685,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.25189490552252497,
+          "error": 0.24728447465101325,
           "family": "winners",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 26,
+            "samples": 27,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6961702970039205,
-          "paired_error": 0.25189490552252497,
+          "log_loss": 0.686739276033916,
+          "paired_error": 0.24728447465101325,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5018913283994105,
-          "samples": 26,
+          "rmse": 0.49727706025013185,
+          "samples": 27,
           "target": "winner:v5_boosted",
           "trend": [
             {
@@ -12563,6 +12915,14 @@
               "loss": 0.25189490552252497,
               "n": 26,
               "prediction": 0.29911765804531637
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS",
+              "loss": 0.24728447465101328,
+              "n": 27,
+              "prediction": 0.6430500427346874
             }
           ],
           "version": "all",
@@ -12571,10 +12931,10 @@
           ]
         },
         {
-          "accuracy": 0.5384615384615384,
+          "accuracy": 0.5555555555555556,
           "baseline_error": 0.25,
-          "baseline_samples": 26,
-          "bias": -0.01697969415481978,
+          "baseline_samples": 27,
+          "bias": -0.0031304478059259854,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -12610,11 +12970,11 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.09676933255921683,
-              "observed": 0.3333333333333333,
-              "predicted": 0.666510819322067,
-              "samples": 6,
-              "upper": 0.7000116786584712
+              "lower": 0.15821692226262685,
+              "observed": 0.42857142857142855,
+              "predicted": 0.6631592798095842,
+              "samples": 7,
+              "upper": 0.7495457695909742
             },
             {
               "bin": "70\u201380%",
@@ -12636,27 +12996,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.25189490552252497,
+          "error": 0.24728447465101325,
           "family": "winners",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 26,
+            "samples": 27,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6961702970039205,
-          "paired_error": 0.25189490552252497,
+          "log_loss": 0.686739276033916,
+          "paired_error": 0.24728447465101325,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5018913283994105,
-          "samples": 26,
+          "rmse": 0.49727706025013185,
+          "samples": 27,
           "target": "winner:v5_boosted",
           "trend": [
             {
@@ -12866,6 +13226,14 @@
               "loss": 0.25189490552252497,
               "n": 26,
               "prediction": 0.29911765804531637
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS",
+              "loss": 0.24728447465101328,
+              "n": 27,
+              "prediction": 0.6430500427346874
             }
           ],
           "version": "ac161c2fa5d3",
@@ -12874,10 +13242,10 @@
           ]
         },
         {
-          "accuracy": 0.6538461538461539,
+          "accuracy": 0.6666666666666666,
           "baseline_error": 0.25,
-          "baseline_samples": 26,
-          "bias": -0.01838109068573305,
+          "baseline_samples": 27,
+          "bias": -0.004976230731317534,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -12913,11 +13281,11 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.23658959361548731,
-              "observed": 0.5,
-              "predicted": 0.6441648349282523,
-              "samples": 10,
-              "upper": 0.7634104063845126
+              "lower": 0.28008775568998817,
+              "observed": 0.5454545454545454,
+              "predicted": 0.6452816564726398,
+              "samples": 11,
+              "upper": 0.7872904245601196
             },
             {
               "bin": "70\u201380%",
@@ -12939,27 +13307,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.24118534085570745,
+          "error": 0.2366239093612805,
           "family": "winners",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 26,
+            "samples": 27,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6745679119447608,
-          "paired_error": 0.24118534085570745,
+          "log_loss": 0.6651731353807848,
+          "paired_error": 0.2366239093612805,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.4911062419229748,
-          "samples": 26,
+          "rmse": 0.48644003675816044,
+          "samples": 27,
           "target": "winner:v5_qb_plus",
           "trend": [
             {
@@ -13169,6 +13537,14 @@
               "loss": 0.24118534085570748,
               "n": 26,
               "prediction": 0.2670713200203028
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS",
+              "loss": 0.23662390936128053,
+              "n": 27,
+              "prediction": 0.6564498719165142
             }
           ],
           "version": "all",
@@ -13177,10 +13553,10 @@
           ]
         },
         {
-          "accuracy": 0.6538461538461539,
+          "accuracy": 0.6666666666666666,
           "baseline_error": 0.25,
-          "baseline_samples": 26,
-          "bias": -0.01838109068573305,
+          "baseline_samples": 27,
+          "bias": -0.004976230731317534,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -13216,11 +13592,11 @@
             },
             {
               "bin": "60\u201370%",
-              "lower": 0.23658959361548731,
-              "observed": 0.5,
-              "predicted": 0.6441648349282523,
-              "samples": 10,
-              "upper": 0.7634104063845126
+              "lower": 0.28008775568998817,
+              "observed": 0.5454545454545454,
+              "predicted": 0.6452816564726398,
+              "samples": 11,
+              "upper": 0.7872904245601196
             },
             {
               "bin": "70\u201380%",
@@ -13242,27 +13618,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 1,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.24118534085570745,
+          "error": 0.2366239093612805,
           "family": "winners",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 26,
+            "samples": 27,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6745679119447608,
-          "paired_error": 0.24118534085570745,
+          "log_loss": 0.6651731353807848,
+          "paired_error": 0.2366239093612805,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.4911062419229748,
-          "samples": 26,
+          "rmse": 0.48644003675816044,
+          "samples": 27,
           "target": "winner:v5_qb_plus",
           "trend": [
             {
@@ -13472,6 +13848,14 @@
               "loss": 0.24118534085570748,
               "n": 26,
               "prediction": 0.2670713200203028
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-01",
+              "label": "PHI @ WAS",
+              "loss": 0.23662390936128053,
+              "n": 27,
+              "prediction": 0.6564498719165142
             }
           ],
           "version": "ac161c2fa5d3",
@@ -37111,14 +37495,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "PHI",
           "baseline": 0.333333,
-          "baseline_loss": null,
+          "baseline_loss": 0.11111088888899999,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.2601,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37127,7 +37511,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Dallas Goedert",
-          "loss": null,
+          "loss": 0.06765201,
           "player_id": "00-0034351",
           "position": "TE",
           "prediction": 0.2601,
@@ -37135,7 +37519,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0034351",
           "target": "any_td",
           "team": "PHI",
@@ -37143,14 +37527,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 1,
           "away_team": "PHI",
           "baseline": 0.333333,
-          "baseline_loss": null,
+          "baseline_loss": 0.444444888889,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 0.6972,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37159,7 +37543,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Saquon Barkley",
-          "loss": null,
+          "loss": 0.48608784000000005,
           "player_id": "00-0034844",
           "position": "RB",
           "prediction": 0.3028,
@@ -37167,7 +37551,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0034844",
           "target": "any_td",
           "team": "PHI",
@@ -37199,7 +37583,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0035659",
           "target": "any_td",
           "team": "WAS",
@@ -37207,14 +37591,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "PHI",
           "baseline": 0.2,
-          "baseline_loss": null,
+          "baseline_loss": 0.04000000000000001,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.1778,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37223,7 +37607,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Treylon Burks",
-          "loss": null,
+          "loss": 0.03161284,
           "player_id": "00-0037742",
           "position": "WR",
           "prediction": 0.1778,
@@ -37231,7 +37615,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0037742",
           "target": "any_td",
           "team": "WAS",
@@ -37239,14 +37623,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "PHI",
           "baseline": 0.2,
-          "baseline_loss": null,
+          "baseline_loss": 0.04000000000000001,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.1808,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37255,7 +37639,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Chig Okonkwo",
-          "loss": null,
+          "loss": 0.03268864,
           "player_id": "00-0037809",
           "position": "TE",
           "prediction": 0.1808,
@@ -37263,7 +37647,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0037809",
           "target": "any_td",
           "team": "WAS",
@@ -37271,14 +37655,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "PHI",
           "baseline": 0.076923,
-          "baseline_loss": null,
+          "baseline_loss": 0.005917147929,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.1254,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37287,7 +37671,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Tanner McKee",
-          "loss": null,
+          "loss": 0.015725160000000002,
           "player_id": "00-0038400",
           "position": "QB",
           "prediction": 0.1254,
@@ -37295,7 +37679,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0038400",
           "target": "any_td",
           "team": "PHI",
@@ -37303,14 +37687,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "PHI",
           "baseline": 0.266667,
-          "baseline_loss": null,
+          "baseline_loss": 0.071111288889,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.1331,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37319,7 +37703,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Jayden Daniels",
-          "loss": null,
+          "loss": 0.01771561,
           "player_id": "00-0039910",
           "position": "QB",
           "prediction": 0.1331,
@@ -37327,7 +37711,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0039910",
           "target": "any_td",
           "team": "WAS",
@@ -37335,14 +37719,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "PHI",
           "baseline": 0.166667,
-          "baseline_loss": null,
+          "baseline_loss": 0.027777888889000003,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.1752,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37351,7 +37735,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Makai Lemon",
-          "loss": null,
+          "loss": 0.03069504,
           "player_id": "00-0040867",
           "position": "WR",
           "prediction": 0.1752,
@@ -37359,7 +37743,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0040867",
           "target": "any_td",
           "team": "PHI",
@@ -37367,22 +37751,22 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 17,
           "away_team": "PHI",
           "baseline": 1.6000000000000014,
-          "baseline_loss": null,
+          "baseline_loss": 15.399999999999999,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 12.3,
           "family": "scoring",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "WAS margin",
-          "loss": null,
+          "loss": 12.3,
           "prediction": 4.7,
           "range": [
             -12.1,
@@ -37391,21 +37775,21 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "margin",
           "version": "35b3afd7279bc09a",
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "PHI",
           "baseline": 0.636364,
-          "baseline_loss": null,
+          "baseline_loss": 0.40495914049600007,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.6733,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37414,7 +37798,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Tanner McKee",
-          "loss": null,
+          "loss": 0.45333289,
           "player_id": "00-0038400",
           "position": "QB",
           "prediction": 0.6733,
@@ -37422,7 +37806,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0038400",
           "target": "pass_td",
           "team": "PHI",
@@ -37430,14 +37814,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 1,
           "away_team": "PHI",
           "baseline": 0.692308,
-          "baseline_loss": null,
+          "baseline_loss": 0.09467436686399998,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 0.271,
           "family": "touchdowns",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -37446,7 +37830,7 @@
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Jayden Daniels",
-          "loss": null,
+          "loss": 0.073441,
           "player_id": "00-0039910",
           "position": "QB",
           "prediction": 0.729,
@@ -37454,7 +37838,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0039910",
           "target": "pass_td",
           "team": "WAS",
@@ -37462,23 +37846,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 212,
           "away_team": "PHI",
           "baseline": 222.3,
-          "baseline_loss": null,
+          "baseline_loss": 10.300000000000011,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 39.599999999999994,
           "family": "yardage",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/oveivzhzv13jrfvkp8zg",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Tanner McKee",
-          "loss": null,
+          "loss": 39.599999999999994,
           "player_id": "00-0038400",
           "position": "QB",
           "prediction": 172.4,
@@ -37489,7 +37873,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0038400",
           "target": "passing",
           "team": "PHI",
@@ -37497,23 +37881,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 217,
           "away_team": "PHI",
           "baseline": 198.3,
-          "baseline_loss": null,
+          "baseline_loss": 18.69999999999999,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 12.300000000000011,
           "family": "yardage",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/gfz8k5onuqjrche9ogqc",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Jayden Daniels",
-          "loss": null,
+          "loss": 12.300000000000011,
           "player_id": "00-0039910",
           "position": "QB",
           "prediction": 204.7,
@@ -37524,7 +37908,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0039910",
           "target": "passing",
           "team": "WAS",
@@ -37532,23 +37916,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 30,
           "away_team": "PHI",
           "baseline": 49.0,
-          "baseline_loss": null,
+          "baseline_loss": 19.0,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -17.700000000000003,
           "family": "yardage",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/bafepstxu7vvxb9v5vua",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Dallas Goedert",
-          "loss": null,
+          "loss": 17.700000000000003,
           "player_id": "00-0034351",
           "position": "TE",
           "prediction": 47.7,
@@ -37559,7 +37943,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0034351",
           "target": "receiving",
           "team": "PHI",
@@ -37594,7 +37978,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0035659",
           "target": "receiving",
           "team": "WAS",
@@ -37602,23 +37986,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 81,
           "away_team": "PHI",
           "baseline": 46.3,
-          "baseline_loss": null,
+          "baseline_loss": 34.7,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 52.7,
           "family": "yardage",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/bmozbzdxgnnwdniuvgnn",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": false,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Treylon Burks",
-          "loss": null,
+          "loss": 52.7,
           "player_id": "00-0037742",
           "position": "WR",
           "prediction": 28.3,
@@ -37629,7 +38013,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0037742",
           "target": "receiving",
           "team": "WAS",
@@ -37637,23 +38021,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 32,
           "away_team": "PHI",
           "baseline": 44.7,
-          "baseline_loss": null,
+          "baseline_loss": 12.700000000000003,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -4.0,
           "family": "yardage",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/pzcez6pi9tpdqkmjjnzk",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Chig Okonkwo",
-          "loss": null,
+          "loss": 4.0,
           "player_id": "00-0037809",
           "position": "TE",
           "prediction": 36.0,
@@ -37664,7 +38048,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0037809",
           "target": "receiving",
           "team": "WAS",
@@ -37672,23 +38056,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 57,
           "away_team": "PHI",
           "baseline": 43.0,
-          "baseline_loss": null,
+          "baseline_loss": 14.0,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 17.4,
           "family": "yardage",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/ys2i2o7c0bl36xvlrojz",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Makai Lemon",
-          "loss": null,
+          "loss": 17.4,
           "player_id": "00-0040867",
           "position": "WR",
           "prediction": 39.6,
@@ -37699,7 +38083,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0040867",
           "target": "receiving",
           "team": "PHI",
@@ -37707,23 +38091,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 30,
           "away_team": "PHI",
           "baseline": 50.7,
-          "baseline_loss": null,
+          "baseline_loss": 20.700000000000003,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -16.9,
           "family": "yardage",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/qcayrzjpura2zydszonh",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "Saquon Barkley",
-          "loss": null,
+          "loss": 16.9,
           "player_id": "00-0034844",
           "position": "RB",
           "prediction": 46.9,
@@ -37734,7 +38118,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0034844",
           "target": "rushing",
           "team": "PHI",
@@ -37742,22 +38126,22 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 10,
           "away_team": "PHI",
           "baseline": 22.7,
-          "baseline_loss": null,
+          "baseline_loss": 12.7,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -10.2,
           "family": "scoring",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "PHI points",
-          "loss": null,
+          "loss": 10.2,
           "prediction": 20.2,
           "range": [
             8.4,
@@ -37766,29 +38150,29 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "away",
           "target": "team_points",
           "version": "35b3afd7279bc09a",
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 27,
           "away_team": "PHI",
           "baseline": 24.3,
-          "baseline_loss": null,
+          "baseline_loss": 2.6999999999999993,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 2.1000000000000014,
           "family": "scoring",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "WAS points",
-          "loss": null,
+          "loss": 2.1000000000000014,
           "prediction": 24.9,
           "range": [
             13.1,
@@ -37797,29 +38181,29 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "home",
           "target": "team_points",
           "version": "35b3afd7279bc09a",
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 37,
           "away_team": "PHI",
           "baseline": 47.0,
-          "baseline_loss": null,
+          "baseline_loss": 10.0,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -8.100000000000001,
           "family": "scoring",
           "game_id": "2026_08_PHI_WAS",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "home_team": "WAS",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "PHI @ WAS total",
-          "loss": null,
+          "loss": 8.100000000000001,
           "prediction": 45.1,
           "range": [
             28.2,
@@ -37828,37 +38212,37 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "total",
           "version": "35b3afd7279bc09a",
           "week": 8
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 1,
+          "away_score": 10,
           "away_team": "PHI",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.1513773154145603,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": 0.38907237811821116,
           "family": "winners",
           "game_date": "2026-11-01",
           "game_id": "2026_08_PHI_WAS",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 27,
           "home_team": "WAS",
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "PHI @ WAS",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.4927767852859098,
+          "loss": 0.1513773154145603,
           "model": "v4_a",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 1,
           "pick": "WAS",
           "prediction": 0.6109276218817888,
           "probability": 0.6109276218817888,
@@ -37870,7 +38254,7 @@
           "saved_at": "2026-10-28T01:47:37.427690+00:00",
           "season": 2026,
           "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v4_a",
           "training_cutoff": "2026 W5",
@@ -37878,30 +38262,30 @@
           "week": 8
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 1,
+          "away_score": 10,
           "away_team": "PHI",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.11460313995493938,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": 0.33853085524799564,
           "family": "winners",
           "game_date": "2026-11-01",
           "game_id": "2026_08_PHI_WAS",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 27,
           "home_team": "WAS",
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "PHI @ WAS",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.4132919408808376,
+          "loss": 0.11460313995493938,
           "model": "v4_qb_plus",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 1,
           "pick": "WAS",
           "prediction": 0.6614691447520044,
           "probability": 0.6614691447520044,
@@ -37913,7 +38297,7 @@
           "saved_at": "2026-10-28T01:47:37.427690+00:00",
           "season": 2026,
           "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v4_qb_plus",
           "training_cutoff": "2026 W5",
@@ -37921,30 +38305,30 @@
           "week": 8
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 1,
+          "away_score": 10,
           "away_team": "PHI",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.12741327199170852,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": 0.35694995726531265,
           "family": "winners",
           "game_date": "2026-11-01",
           "game_id": "2026_08_PHI_WAS",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 27,
           "home_team": "WAS",
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "PHI @ WAS",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.4415327308138,
+          "loss": 0.12741327199170852,
           "model": "v5_boosted",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 1,
           "pick": "WAS",
           "prediction": 0.6430500427346874,
           "probability": 0.6430500427346874,
@@ -37956,7 +38340,7 @@
           "saved_at": "2026-10-28T01:47:37.427690+00:00",
           "season": 2026,
           "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v5_boosted",
           "training_cutoff": "2026 W6",
@@ -37964,30 +38348,30 @@
           "week": 8
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 1,
+          "away_score": 10,
           "away_team": "PHI",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.11802669050617953,
           "date": "2026-11-01",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": 0.34355012808348584,
           "family": "winners",
           "game_date": "2026-11-01",
           "game_id": "2026_08_PHI_WAS",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 27,
           "home_team": "WAS",
           "inside_range": null,
           "kickoff": "2026-11-02T01:20:00+00:00",
           "label": "PHI @ WAS",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.4209089447174086,
+          "loss": 0.11802669050617953,
           "model": "v5_qb_plus",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 1,
           "pick": "WAS",
           "prediction": 0.6564498719165142,
           "probability": 0.6564498719165142,
@@ -37999,7 +38383,7 @@
           "saved_at": "2026-10-28T01:47:37.427690+00:00",
           "season": 2026,
           "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v5_qb_plus",
           "training_cutoff": "2026 W6",
@@ -39815,5 +40199,5 @@
     "windows": 2
   },
   "schema_version": 1,
-  "updated_at": "2026-11-02T02:26:27.294113+00:00"
+  "updated_at": "2026-11-02T09:54:30.145491+00:00"
 }

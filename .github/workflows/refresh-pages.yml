@@ -180,6 +180,7 @@ jobs:
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         run: python -m src.features.player_intelligence
       - name: Export defensive allowances by opposing position
+        id: position_defense
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         continue-on-error: true
         run: python -m src.features.position_defense
@@ -193,7 +194,7 @@ jobs:
         env:
           RESULTS_CONTEXT_ONLY: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && (github.event.schedule == '47 7 * * *' || github.event.schedule == '7,37 * * * *'))) && '1' || '0' }}
           FORECAST_INPUT_OUTCOMES: >-
-            {"forecast":"${{ steps.forecast.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}"}
+            {"forecast":"${{ steps.forecast.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","directory":"${{ steps.directory.outcome }}","position_defense":"${{ steps.position_defense.outcome }}","research_results":"${{ steps.research_results.outcome }}"}
         run: |
           if [ "$RESULTS_CONTEXT_ONLY" = "1" ]; then
             python -m src.ml.forecast_insights --results-only
@@ -254,7 +255,7 @@ jobs:
         if: always()
         env:
           REFRESH_OUTCOMES: >-
-            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}","insights":"${{ steps.insights.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
+            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","position_defense":"${{ steps.position_defense.outcome }}","research_results":"${{ steps.research_results.outcome }}","insights":"${{ steps.insights.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
         run: python -m src.ml.refresh_status finish
       - name: Persist refresh status evidence
         if: always()

@@ -18,6 +18,7 @@ SOURCES = (
     ('results', 'Game results', 'performance.json', 'updated_at'),
     ('research_results', 'Projection results', 'research_performance.json', 'updated_at'),
     ('insights', 'Forecast context & checks', 'forecast_insights.json', 'exported_at'),
+    ('position_defense', 'Defense vs positions', 'position_defense/{season}-week-{week}.json', 'exported_at'),
     ('odds', 'Sportsbook lines', 'odds.json', 'exported_at'),
 )
 
@@ -79,7 +80,7 @@ def finish(now, outcomes=None, root=ROOT):
     forecasts = read(root / 'frontend/public/predictions.json')
     sources = []
     for key, label, filename, date_field in SOURCES:
-        data = read(root / 'frontend/public' / filename)
+        data = read(root / 'frontend/public' / filename.format(season=forecasts.get('season'),week=forecasts.get('week')))
         source = {'id': key, 'label': label, 'updated_at': data.get(date_field)}
         for field in ('season', 'week', 'features_through_week', 'through_week'):
             if field in data:

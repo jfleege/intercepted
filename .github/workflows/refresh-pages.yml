@@ -34,6 +34,8 @@ on:
       - src/features/qb_coverage.py
       - src/features/qb_starters.py
   schedule:
+    # Lightweight final-score checks; build only for a new/corrected archived final.
+    - cron: "7,37 * * * *"
     # 13:17 UTC = 8:17am CDT / 7:17am CST
     - cron: "17 13 * * *"
     # results after overnight games; no additional odds call
@@ -85,8 +87,27 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
+  postgame:
     if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    outputs:
+      refresh: ${{ steps.check.outputs.refresh }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for newly finished games
+        id: check
+        env:
+          POSTGAME: ${{ github.event_name == 'schedule' && github.event.schedule == '7,37 * * * *' }}
+        run: |
+          if [ "$POSTGAME" = "true" ]; then
+            python3 scripts/check_postgame.py
+          else
+            echo "refresh=true" >> "$GITHUB_OUTPUT"
+          fi
+  build:
+    needs: postgame
+    if: github.ref == 'refs/heads/main' && needs.postgame.outputs.refresh == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 45
     permissions:
@@ -102,14 +123,14 @@ jobs:
         run: python -m pip install -r requirements-automation.txt
       - name: Start refresh status record
         env:
-          STATUS_MODE: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && github.event.schedule == '47 7 * * *')) && 'results' || 'full' }}
+          STATUS_MODE: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && (github.event.schedule == '47 7 * * *' || github.event.schedule == '7,37 * * * *'))) && 'results' || 'full' }}
         run: python -m src.ml.refresh_status start --mode "$STATUS_MODE"
       - name: Verify results grading
         id: verify
         run: python -m unittest discover -s tests -v
       - name: Archive the published slate before the Tuesday rollover check
         id: pre_rollover
-        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '0 12 * * 2') || inputs.refresh_forecasts)
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && ((github.event_name == 'schedule' && github.event.schedule == '0 12 * * 2') || inputs.refresh_forecasts)
         run: |
           python -m src.ml.refresh_performance --import-git-history
           python -m src.ml.export_prediction_history
@@ -122,7 +143,7 @@ jobs:
           fi
       - name: Advance weekly forecasts when the prior slate is complete
         id: forecast
-        if: inputs.results_only != true && ((github.event_name == 'schedule' && (github.event.schedule == '17 13 * * *' || github.event.schedule == '0 12 * * 2')) || inputs.refresh_forecasts || github.event_name == 'push')
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && ((github.event_name == 'schedule' && (github.event.schedule == '17 13 * * *' || github.event.schedule == '0 12 * * 2')) || inputs.refresh_forecasts || github.event_name == 'push')
         run: python -m src.ml.weekly_forecast
       - name: Archive forecasts and refresh final results
         id: results
@@ -132,17 +153,17 @@ jobs:
         run: python -m src.ml.export_prediction_history
       - name: Refresh player cards
         id: players
-        if: inputs.results_only != true
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         run: python -m src.features.player_watch
       - uses: actions/cache@v4
-        if: inputs.results_only != true
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         with:
           path: data/raw/research
           key: research-sources-${{ runner.os }}-${{ hashFiles('src/ml/projection_features.py', 'src/ml/refresh_research.py') }}
           restore-keys: research-sources-${{ runner.os }}-
       - name: Refresh experimental matchup projections and period trends
         id: research
-        if: inputs.results_only != true
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         continue-on-error: true
         env:
           OMP_NUM_THREADS: '2'
@@ -150,13 +171,13 @@ jobs:
         run: python -m src.ml.refresh_research
       - name: Export team efficiency and ranking movement
         id: teams
-        if: inputs.results_only != true
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         continue-on-error: true
         run: python -m src.ml.export_team_insights
       - name: Export player directory, history and usage
         id: directory
         continue-on-error: true
-        if: inputs.results_only != true
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         run: python -m src.features.player_intelligence
       - name: Grade original research forecasts
         id: research_results
@@ -166,7 +187,7 @@ jobs:
         id: insights
         continue-on-error: true
         env:
-          RESULTS_CONTEXT_ONLY: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && github.event.schedule == '47 7 * * *')) && '1' || '0' }}
+          RESULTS_CONTEXT_ONLY: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && (github.event.schedule == '47 7 * * *' || github.event.schedule == '7,37 * * * *'))) && '1' || '0' }}
           FORECAST_INPUT_OUTCOMES: >-
             {"forecast":"${{ steps.forecast.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}"}
         run: |
@@ -176,12 +197,12 @@ jobs:
             python -m src.ml.forecast_insights
           fi
       - name: Export experimental player usage and threshold probabilities
-        if: inputs.results_only != true && steps.research.outcome == 'success' && steps.insights.outcome == 'success'
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && steps.research.outcome == 'success' && steps.insights.outcome == 'success'
         continue-on-error: true
         run: python -m src.ml.player_extensions
       - name: Refresh odds
         id: odds
-        if: inputs.results_only != true && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
@@ -192,7 +213,7 @@ jobs:
           fi
       - name: Legacy player prop cache (explicit manual request only)
         id: props
-        if: inputs.results_only != true && inputs.refresh_props == true
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && inputs.refresh_props == true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           REFRESH_PROPS_NOW: ${{ inputs.refresh_props && '1' || '0' }}

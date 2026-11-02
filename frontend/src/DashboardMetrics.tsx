@@ -24,7 +24,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
   const [feed, setFeed] = useState<PerformanceFeed | null>(null);
   const [failed, setFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
-  const [recordModel, setRecordModel] = useState<Model>('v4_qb_plus');
+  const [recordModel, setRecordModel] = useState<Model>('v5_qb_plus');
   useEffect(() => {
     const controller = new AbortController();
     fetchSnapshot(`${import.meta.env.BASE_URL}performance.json`, { signal: controller.signal, cache: 'no-cache' })

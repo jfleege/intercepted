@@ -35,6 +35,9 @@ def main():
     assert weekly == [{'cron': '0 12 * * 2', 'timezone': 'America/Chicago'}]
     steps = workflow['jobs']['build']['steps']
     indexed = {step['id']: step for step in steps if 'id' in step}
+    assert workflow['jobs']['build']['needs'] == 'postgame'
+    assert "needs.postgame.outputs.refresh == 'true'" in workflow['jobs']['build']['if']
+    assert any(schedule['cron']=='7,37 * * * *' for schedule in schedules)
     order = list(indexed)
     assert order.index('pre_rollover') < order.index('forecast') < order.index('results') < order.index('history')
     archive = indexed['pre_rollover']['run']
@@ -43,6 +46,7 @@ def main():
     cases = [
         ('Tuesday noon', 'schedule', '0 12 * * 2', {}, (True, True, False, False)),
         ('Daily morning', 'schedule', '17 13 * * *', {}, (False, True, True, False)),
+        ('Postgame final', 'schedule', '7,37 * * * *', {}, (False, False, False, False)),
         ('Overnight', 'schedule', '47 7 * * *', {}, (False, False, False, False)),
         ('Manual forecast', 'workflow_dispatch', None, {'refresh_forecasts': True}, (True, True, False, False)),
         ('Results-only wins', 'workflow_dispatch', None, {'results_only': True, 'refresh_forecasts': True, 'refresh_odds': True, 'refresh_props': True}, (False, False, False, False)),

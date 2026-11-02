@@ -2,13 +2,13 @@
   "active_season": 2026,
   "active_week": 8,
   "attempt": {
-    "completed_at": "2026-11-02T17:28:37.883308+00:00",
-    "mode": "results",
-    "started_at": "2026-11-02T17:28:05.449029+00:00",
+    "completed_at": "2026-11-02T17:32:14.526903+00:00",
+    "mode": "full",
+    "started_at": "2026-11-02T17:31:37.734065+00:00",
     "state": "success",
     "steps": {
       "directory": "success",
-      "forecast": "skipped",
+      "forecast": "success",
       "history": "success",
       "insights": "success",
       "markets": "success",
@@ -27,18 +27,18 @@
   "forecast_check": {
     "active_season": 2026,
     "active_week": 8,
-    "checked_at": "2026-11-02T16:25:31.196729+00:00",
+    "checked_at": "2026-11-02T17:31:40.347205+00:00",
     "message": "Published slate uses qualified low-volume NGS exclusions. TB: Baker Mayfield NGS through 2026 Week 3. No missing tracking metrics were invented.",
     "state": "current_limited_qb",
     "target_season": 2026,
     "target_week": 8
   },
   "last_results_refresh_at": "2026-11-02T17:28:37.883308+00:00",
-  "last_successful_refresh_at": "2026-11-02T16:25:59.841679+00:00",
+  "last_successful_refresh_at": "2026-11-02T17:32:14.526903+00:00",
   "next_forecast_check_at": "2026-11-03T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-03T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-02T17:28:37.883308+00:00",
+  "snapshot_at": "2026-11-02T17:32:14.526903+00:00",
   "sources": [
     {
       "features_through_week": 7,
@@ -53,7 +53,7 @@
       "label": "Player cards",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-02T17:28:09.657400+00:00",
+      "updated_at": "2026-11-02T17:31:43.275536+00:00",
       "week": 8
     },
     {
@@ -62,7 +62,7 @@
       "refresh_outcome": "success",
       "season": 2026,
       "through_week": 7,
-      "updated_at": "2026-11-02T17:28:13.250291+00:00",
+      "updated_at": "2026-11-02T17:31:48.323694+00:00",
       "week": 8
     },
     {
@@ -78,20 +78,20 @@
       "id": "results",
       "label": "Game results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-02T17:28:08.449074+00:00"
+      "updated_at": "2026-11-02T17:31:41.658712+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-02T17:28:14.560481+00:00"
+      "updated_at": "2026-11-02T17:31:49.929236+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-02T17:28:15.145805+00:00",
+      "updated_at": "2026-11-02T17:31:50.851805+00:00",
       "week": 8
     },
     {
@@ -99,7 +99,7 @@
       "label": "Defense vs positions",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-02T17:28:14.090642+00:00",
+      "updated_at": "2026-11-02T17:31:49.452420+00:00",
       "week": 8
     },
     {
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-01T18:27:51.459656+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/41491356221"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/41491732582"
 }

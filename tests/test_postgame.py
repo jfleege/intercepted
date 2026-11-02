@@ -24,5 +24,5 @@ class PostgameTests(unittest.TestCase):
 
  def test_chicago_dates_and_future_guard_across_dst(self):
   now=datetime.fromisoformat('2026-11-02T03:00:00+00:00')
-  games={str(i):{'kickoff':at} for i,at in enumerate(['2026-11-01T01:00:00Z','2026-10-31T01:00:00Z','2026-11-02T04:00:00Z','2026-11-01T12:00:00'])}
+  games={str(i):{'kickoff':at} for i,at in enumerate(['2026-11-01T01:00:00Z','2026-10-31T01:00:00Z','2026-11-02T04:00:00Z','2026-11-01T12:00:00',None])}
   self.assertEqual(set(recent_games(games,now)),{'0'})

@@ -24,11 +24,11 @@ def changed_finals(games,events):
             scores={s:float(sides[s]['score']) for s in sides}
             start=datetime.fromisoformat(event['date'].replace('Z','+00:00'))
             if start.tzinfo is None or not all(math.isfinite(v) and v>=0 and v.is_integer() for v in scores.values()):continue
-        except (KeyError,ValueError,TypeError):continue
+        except (KeyError,ValueError,TypeError,AttributeError):continue
         matches=[]
         for gid,g in games.items():
             try: saved=datetime.fromisoformat(g['kickoff'].replace('Z','+00:00'))
-            except (ValueError,TypeError,KeyError):continue
+            except (ValueError,TypeError,KeyError,AttributeError):continue
             if saved.tzinfo is not None and teams['home']==g.get('home_team') and teams['away']==g.get('away_team') and abs((saved-start).total_seconds())<=300:matches.append((gid,g))
         if len(matches)!=1:continue
         gid,g=matches[0]
@@ -43,7 +43,7 @@ def recent_games(games,now):
         try:
             start=datetime.fromisoformat(g['kickoff'].replace('Z','+00:00'))
             if start.tzinfo is not None and start<=now and start.astimezone(ZoneInfo('America/Chicago')).date().isoformat() in dates:relevant[gid]=g
-        except (KeyError,ValueError,TypeError):continue
+        except (KeyError,ValueError,TypeError,AttributeError):continue
     return relevant
 
 def main():

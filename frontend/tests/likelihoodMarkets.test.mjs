@@ -48,3 +48,28 @@ test('pins, exclusions and shared-leg limits constrain the alternatives',()=>{
  for(let i=0;i<pinned.length;i++)for(let j=0;j<i;j++)assert.ok(pinned[i].legs.filter(o=>pinned[j].legs.some(l=>l.id===o.id)).length<=1);
  assert.equal(crossGameIdeas(pool,'higher',3,3,now,{pinned:['missing']}).length,0);
 });
+
+test('expanded customization supports eight legs and 24 unique options, with custom probability floor',()=>{
+ const pool=Array.from({length:14},(_,n)=>[offer(`${n}:a`,`${n}`,.8),offer(`${n}:b`,`${n}`,.6)]).flat();
+ const ideas=crossGameIdeas(pool,'custom',8,24,now,{minimum:.55,maxShared:7,diversity:.5});
+ assert.equal(ideas.length,24);assert.equal(new Set(ideas.map(i=>i.id)).size,24);
+ for(const idea of ideas){assert.equal(idea.legs.length,8);assert.equal(new Set(idea.legs.map(l=>l.game_id)).size,8);assert.ok(idea.legs.every(l=>l.probability>=.55));}
+ assert.deepEqual(crossGameIdeas(pool,'custom',2,24,now,{minimum:.9}),[]);
+ for(const [count,limit] of [[9,24],[8,25],[2.5,6],[2,3.5]])assert.deepEqual(crossGameIdeas(pool,'higher',count,limit,now),[]);
+});
+
+test('hindsight uses only verified winning outcomes and pregame forecasts, and preserves actual save time',async()=>{
+ const {retrospectiveResult}=await import('../src/likelihoodMarkets.ts');
+ const {gradeSelection}=await import('../src/planResults.ts');
+ const kickoff=now-10000,forecastAt=new Date(kickoff-10000).toISOString();
+ const legs=[0,1,2,3].map(n=>offer(`past:${n}`,`past:${n}`,.7,{category:'yardage',player_id:`p${n}`,target:'rushing',line:49.5,direction:'over',kickoff:new Date(kickoff).toISOString(),forecastAt}));
+ const rows=legs.map((o,n)=>({game_id:o.game_id,player_id:o.player_id,family:'yardage',target:'rushing',actual:n===3?40:60,status:'graded'}));
+ const ideas=crossGameIdeas(legs,'higher',2,6,now,{retrospective:true,actuals:rows});assert.equal(ideas.length,3);assert.ok(ideas.every(i=>i.legs.every(o=>o.id!=='past:3')));
+ assert.deepEqual(crossGameIdeas(legs,'higher',2,6,now),[]);
+ for(const rows2 of [[],rows.map(r=>({...r,status:'pending'})),[...rows,...rows.map(r=>({...r,actual:0}))]])assert.deepEqual(crossGameIdeas(legs,'higher',2,6,now,{retrospective:true,actuals:rows2}),[]);
+ assert.equal(retrospectiveResult({...legs[0],forecastAt:new Date(kickoff).toISOString()},rows).status,'unverified');
+ const plan=makePlan(ideas[0].legs,now,true);assert.equal(plan.saved_at,new Date(now).toISOString());assert.equal(plan.retrospective,true);assert.deepEqual(readPlans(JSON.stringify([plan])),[plan]);
+ assert.equal(gradeSelection(plan.legs[0],plan.saved_at,rows).status,'unverified');
+ assert.equal(retrospectiveResult(plan.legs[0],rows).status,'hit');
+ assert.throws(()=>readPlans(JSON.stringify([{...plan,retrospective:'yes'}])));
+});

@@ -13,3 +13,13 @@ Cross-game controls select probability profile, 2–4 legs, 3–6 alternatives, 
 For winner-only plans, Frechet bounds are max(0, sum(p)-(n-1)) to min(p). These are mathematical bounds given the supplied marginals, not confidence intervals or a fitted joint model. An off-by-default independence scenario displays product(p) only when explicitly enabled; different games do not prove independence. Any selection without a known probability makes a joint summary unavailable. TD estimates are conditional on individual appearances, which differ across players; mixing those conditionals or with unconditional winner estimates does not establish common marginals. Any TD-containing combination therefore withholds joint bounds and independence products.
 
 New plans use `intercepted.likelihood-plans.v1`. The original `intercepted.projection-slips.v1` is only read, never rewritten. Earlier drafts can be exported losslessly or loaded as historical selections with quote fields stripped. New plans contain no quotes, prices, stakes, or asserted joint probability. Loading flags historical estimates rather than silently revaluing them. Corrupt storage is preserved and new writes to that store are blocked.
+
+## Expanded cross-game workspace
+
+Markets no longer displays the Decision Lab or the experimental validation accordion. Individual experimental forecast sources remain labeled on their cards.
+
+Cross-game ideas supports 2–8 legs and 3–24 alternatives, a custom individual likelihood minimum, variety preference, game/market filtering, pins, exclusions, and shared-leg limits. Search remains bounded; fewer options may be returned when constraints or the search pool limit coverage. Every option uses one leg per game.
+
+Completed-game mode constructs winning hindsight examples from verified results and available pre-kickoff forecasts on the currently loaded slate. Missing, conflicting, live, and unverified results cannot qualify. These examples retain their actual save timestamp and carry a retrospective flag; their outcome display excludes Brier scoring and explicitly disclaims pregame performance. This is not a historical week browser.
+
+Options can be saved directly or reviewed in the plan builder. Individual saved plans and earlier drafts can be deleted from browser storage; other records remain intact. Existing plan records need no migration. Storage failures preserve the displayed records and report an error.

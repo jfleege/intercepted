@@ -22,10 +22,10 @@ try{
   await page.getByLabel('Combination alternatives',{exact:true}).selectOption('6');assert.equal(await page.locator('.lm-idea').count(),6);
   const identities=await page.locator('.lm-idea').evaluateAll(els=>els.map(e=>[...e.querySelectorAll('.mb-combo-legs strong')].map(x=>x.textContent).sort().join('|')));assert.equal(new Set(identities).size,6);
   await page.getByLabel('Combination markets',{exact:true}).selectOption('moneyline');assert.equal(await page.locator('.lm-idea').count(),6);
-  assert.equal(await page.locator('.lm-idea').first().locator('.lm-bounds').count(),2); // includes collapsed stress test
+  assert.equal(await page.locator('.lm-idea').first().locator('.lm-bounds').count(),1);
   assert.equal(await page.getByText('Independence scenario',{exact:true}).count(),0);
-  await page.locator('.lm-lab>summary').click();await page.getByLabel('Show independence scenarios',{exact:true}).check();assert.ok(await page.getByText('Independence scenario',{exact:true}).count()>0);
-  await page.getByLabel('Probability reduction',{exact:true}).fill('10');
+  assert.equal(await page.getByText('Decision Lab · thresholds & sensitivity',{exact:true}).count(),0);
+  assert.equal(await page.getByText('Experimental player models · validation & limitations',{exact:true}).count(),0);
   await page.locator('.lm-games>summary').click();const boxes=page.locator('.lm-games input');for(let i=0;i<await boxes.count();i++)await boxes.nth(i).uncheck();
   assert.equal(await page.locator('.lm-idea').count(),0);assert.ok(await page.getByText('Not enough eligible upcoming games',{exact:false}).count());
   for(let i=0;i<await boxes.count();i++)await boxes.nth(i).check();await page.locator('.lm-games>summary').click();
@@ -36,9 +36,23 @@ try{
   if(width>760)assert.ok(await page.locator('.mb-slip').evaluate(e=>e.clientHeight<=innerHeight-40));
   await page.locator('.mb-slip details').filter({has:page.getByText('Saved research plans (1)',{exact:true})}).locator('summary').click();await page.locator('.mb-saved').first().click();assert.ok(await page.getByText('Includes a saved selection snapshot',{exact:false}).count());
   const promise=page.waitForEvent('download');await page.getByRole('button',{name:'Export plans',exact:true}).click();const file=await promise;assert.deepEqual(JSON.parse(await readFile(await file.path(),'utf8')),saved);
+  await page.getByRole('button',{name:`Delete saved plan ${saved[0].id}`,exact:true}).click();
+  assert.deepEqual(await page.evaluate(()=>JSON.parse(localStorage.getItem('intercepted.likelihood-plans.v1'))),[]);
+  await page.reload();await page.locator('.mb-slate').waitFor();
+  assert.equal(await page.getByText('Saved research plans (0)',{exact:true}).count(),1);
+  await page.getByRole('button',{name:'Cross-game ideas',exact:true}).click();
+  await page.getByLabel('Selection factor',{exact:true}).selectOption('custom');
+  await page.getByLabel('Custom minimum likelihood',{exact:true}).fill('0');
+  await page.getByLabel('Maximum shared legs',{exact:true}).selectOption('1');
+  await page.getByLabel('Combination alternatives',{exact:true}).selectOption('24');
+  assert.equal(await page.locator('.lm-idea').count(),24);
+  await page.getByLabel('Combination legs',{exact:true}).selectOption('8');
+  await page.getByLabel('Maximum shared legs',{exact:true}).selectOption('7');
+  assert.ok(await page.locator('.lm-idea').count()>0);
+  assert.equal(await page.locator('.lm-idea').first().locator('.mb-combo-legs strong').count(),8);
   await page.screenshot({path:`qa/markets/${width}-cross-game.png`,fullPage:true});
   const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();reports.push({width,view:'ideas',violations:axe.violations});assert.deepEqual(axe.violations.map(v=>v.id),[]);
-  if(width<=760){await page.locator('.mb-mobile-slip').click();await page.locator('.mb-mobile-back').click();await page.locator('#mb-explore').waitFor({state:'visible'});}
+  if(width<=760){await page.getByRole('button',{name:'Use option 1',exact:true}).click();await page.locator('.mb-mobile-slip').click();await page.locator('.mb-mobile-back').click();await page.locator('#mb-explore').waitFor({state:'visible'});}
   await page.getByLabel('Market game',{exact:true}).selectOption(data.games[0].game_id);await page.getByRole('button',{name:'Player yards',exact:true}).click();
   const game=data.games[0],eligible=research.games[game.game_id].players.filter(p=>p.status==='available'&&Number.isFinite(p.expected_yards));assert.deepEqual(new Set(await page.locator('.mb-offer h3').allTextContents()),new Set(eligible.map(p=>p.name)));
   const card=page.locator('.mb-offer').first();assert.ok((await card.textContent()).includes('Target hit probability unavailable'));await card.locator('input').fill('55.5');await card.getByRole('button').click();assert.ok((await page.locator('.mb-slip').textContent()).includes('Joint likelihood unavailable'));
@@ -49,6 +63,32 @@ try{
   assert.ok(!requests.some(u=>/\/(odds|player_props|odds_usage|markets)\.json/.test(u)),requests.filter(u=>/json/.test(u)).join('\n'));
   await page.screenshot({path:`qa/markets/${width}-game.png`,fullPage:true});await context.close();console.log(`PASS ${width}px likelihood-only offers, six unique alternatives, included-game filtering, scenario controls, plan save/load/export, no odds requests, accessibility, no overflow`);
  }
+ const completedContext=await browser.newContext({viewport:{width:900,height:1000}}),completed=await completedContext.newPage();
+ completed.on('pageerror',e=>errors.push(e.message));
+ await completed.clock.setFixedTime(Math.max(...Object.values(research.games).map(g=>Date.parse(g.kickoff)))+86400000);
+ await completed.route('**/research_performance.json',route=>route.fulfill({json:{datasets:{verified:{rows:data.games.map(g=>({game_id:g.game_id,family:'winners',target:'winner',actual:1,status:'graded',home_team:g.home_team,away_team:g.away_team,home_score:24,away_score:10}))}}}}));
+ await completed.goto('http://127.0.0.1:4174/intercepted/#markets');await completed.locator('.mb-slate').waitFor();
+ await completed.getByRole('button',{name:'Cross-game ideas',exact:true}).click();
+ await completed.getByLabel('Idea game status',{exact:true}).selectOption('completed');
+ await completed.getByLabel('Selection factor',{exact:true}).selectOption('custom');
+ await completed.getByLabel('Custom minimum likelihood',{exact:true}).fill('0');
+ await completed.getByLabel('Combination markets',{exact:true}).selectOption('moneyline');
+ await completed.locator('.lm-idea').first().waitFor();
+ await completed.getByRole('button',{name:'Save winning example',exact:true}).first().click();
+ const hindsight=await completed.evaluate(()=>JSON.parse(localStorage.getItem('intercepted.likelihood-plans.v1')));
+ assert.equal(hindsight[0].retrospective,true);assert.ok(hindsight[0].legs.every(l=>Date.parse(l.kickoff)<Date.parse(hindsight[0].saved_at)));
+ await completed.getByText('Saved research plans (1)',{exact:true}).click();
+ assert.ok((await completed.locator('.lm-saved-record').textContent()).includes('Hindsight example · not pregame performance'));
+ assert.ok(!(await completed.locator('.lm-saved-record').textContent()).includes('Brier'));
+ assert.equal(await completed.locator('.lm-saved-record small').filter({hasText:'· hit'}).count(),2);
+ const legacyRecord={schema_version:1,id:'legacy-fixture',saved_at:hindsight[0].saved_at,kind:'unverified_research_draft',stake:1,legs:hindsight[0].legs,combined_price:null,quote_source:'unavailable',joint_probability:null};
+ await completed.evaluate(record=>localStorage.setItem('intercepted.projection-slips.v1',JSON.stringify([record])),legacyRecord);
+ await completed.reload();await completed.locator('.mb-slate').waitFor();
+ await completed.getByText('Earlier research drafts (1)',{exact:true}).click();
+ await completed.getByRole('button',{name:'Delete earlier draft legacy-fixture',exact:true}).click();
+ assert.deepEqual(await completed.evaluate(()=>JSON.parse(localStorage.getItem('intercepted.projection-slips.v1'))),[]);
+ await completed.reload();await completed.locator('.mb-slate').waitFor();assert.equal(await completed.getByText('Earlier research drafts (1)',{exact:true}).count(),0);
+ await completedContext.close();
  const context=await browser.newContext(),page=await context.newPage();await page.addInitScript(()=>localStorage.setItem('intercepted.likelihood-plans.v1','broken'));await page.goto('http://127.0.0.1:4174/intercepted/#markets');await page.locator('.mb-slate').waitFor();assert.ok(await page.getByRole('button',{name:'Save research plan',exact:true}).isDisabled());assert.equal(await page.evaluate(()=>localStorage.getItem('intercepted.likelihood-plans.v1')),'broken');await context.close();
  const {writeFile}=await import('node:fs/promises');await writeFile('qa/markets/axe.json',JSON.stringify(reports,null,2));assert.deepEqual(errors,[]);
 }finally{await browser.close();}

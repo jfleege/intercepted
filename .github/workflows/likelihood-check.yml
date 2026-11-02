@@ -1,7 +1,7 @@
 name: Check player presentation and forecast transparency
 on:
   push:
-    branches: [codex/markets-decision, codex/player-polish-updates, codex/usage-thresholds-plans, codex/default-qb-postgame, codex/position-defense-outlooks]
+    branches: [feat/markets-customization, codex/markets-decision, codex/player-polish-updates, codex/usage-thresholds-plans, codex/default-qb-postgame, codex/position-defense-outlooks]
 permissions:
   contents: read
 jobs:

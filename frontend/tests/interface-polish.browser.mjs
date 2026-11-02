@@ -48,14 +48,14 @@ try{
   }
   assert.equal(await markets.getByLabel('Paper stake ($)',{exact:true}).count(),0);
   assert.equal(await markets.getByLabel('Manual combined American price',{exact:true}).count(),0);
-  await markets.locator('.lm-lab>summary').click();await markets.getByLabel('Probability reduction',{exact:true}).fill('8');
+  assert.equal(await markets.locator('.lm-lab').count(),0);
   await markets.locator('.mb-advanced>summary').click();await markets.getByLabel('Probability profile',{exact:true}).selectOption('unscored');
   await page.locator('.dash-nav a[href="#players"]').click();
   assert.equal(await players.getByLabel('Player team',{exact:true}).inputValue(),'CHI');assert.equal(await players.getByRole('button',{name:'QB',exact:true}).getAttribute('aria-pressed'),'true');
   await page.waitForTimeout(100);assert.ok(Math.abs(await page.evaluate(()=>scrollY)-savedScroll)<20,`Scroll restoration: saved ${savedScroll}, actual ${await page.evaluate(()=>scrollY)}`);
   assert.equal(requests.get('player_intelligence.json'),1);
   await page.locator('.dash-nav a[href="#markets"]').click();assert.equal(await markets.getByLabel('Market game',{exact:true}).inputValue(),slate.games[0].game_id);assert.equal(await markets.getByLabel('Probability profile',{exact:true}).inputValue(),'unscored');
-  assert.equal(await markets.getByLabel('Probability reduction',{exact:true}).inputValue(),'8');
+  assert.equal(await markets.locator('.lm-lab').count(),0);
   await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   if(width<=650)assert.ok(await page.locator('.dash-search').evaluate(e=>e.getBoundingClientRect().width>innerWidth-60));

@@ -1,3 +1,4 @@
+import PositionDefense from './PositionDefense';
 import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useState } from 'react';
 
@@ -23,7 +24,7 @@ const range = (r: number[]) => `${r[0].toFixed(1)}–${r[1].toFixed(1)}`;
 const pct = (p: number) => `${(p * 100).toFixed(1)}%`;
 const signed = (p: number) => `${p > 0 ? '+' : ''}${p.toFixed(1)}`;
 
-function ProjectionCard({ player }: {player: PlayerProjection}) {
+function ProjectionCard({ player,season,week }: {player: PlayerProjection;season:number;week:number}) {
   return <article className="mr-player">
     <header><span className="mr-avatar">{player.name.split(' ').map(p => p[0]).slice(0, 2).join('')}{player.headshot && <img src={player.headshot} alt="" loading="lazy" referrerPolicy="no-referrer" onError={e => {e.currentTarget.style.display = 'none';}}/>}</span><div><small>{player.team} · {player.position}</small><h4>{player.name}</h4><small>vs {player.opponent}</small></div></header>
     {player.status !== 'available' ? <p className="mr-muted">At least three prior appearances are required.</p> : <>
@@ -34,6 +35,7 @@ function ProjectionCard({ player }: {player: PlayerProjection}) {
       {player.passing_td_probability != null && <div className="mr-pair"><span>1+ passing TD</span><b>{pct(player.passing_td_probability)}</b></div>}
       <small className="mr-sample">{player.prior_appearances} prior appearances · conditional on playing</small>
     </>}
+    <PositionDefense season={season} week={week} opponent={player.opponent} position={player.position}/>
   </article>;
 }
 
@@ -79,7 +81,7 @@ export default function MatchupProjections({ game, mode = 'forecasts' }: {game: 
     <p className="mr-muted">Expected points are averages, not an exact score prediction. Positive home margin means {game.home_team} scores more. {report.validation.scoring.margin.mae >= report.validation.scoring.margin.baseline_mae ? "Margin error did not beat the baseline in the 2025 benchmark." : "See the validation details for benchmark errors."}</p>
     </>}
     <div className="mr-section-title"><div><h3>Individual player outlook</h3><p>Yardage and touchdown probabilities, conditional on appearing. These models do not predict player availability.</p></div></div>
-    <div className="mr-player-grid">{prediction.players.map(p => <ProjectionCard player={p} key={p.player_id}/>)}</div>
+    <div className="mr-team-columns">{teams.map((team,index)=><section className="mr-team-column" key={team} aria-label={`${team} player outlooks`}><h4 className="mr-team-title"><img src={`${import.meta.env.BASE_URL}logos/${team}.png`} alt=""/>{team}<small>{index===0?'AWAY':'HOME'}</small></h4><div className="mr-player-grid">{prediction.players.filter(p=>p.team===team&&p.opponent===teams[1-index]).sort((a,b)=>['QB','RB','WR','TE'].indexOf(a.position)-['QB','RB','WR','TE'].indexOf(b.position)||(b.expected_yards??-1)-(a.expected_yards??-1)).map(p=><ProjectionCard player={p} season={game.season} week={game.week} key={p.player_id}/>)}</div>{!prediction.players.some(p=>p.team===team&&p.opponent===teams[1-index])&&<p className="mr-muted">No saved player outlooks for this team.</p>}</section>)}</div>
     <p className="mr-muted">Rush/receiving TD excludes passing touchdowns and return scores. “1+ passing TD” is a separate quarterback event. Estimates are not player-prop prices or parlay probabilities.</p>
     <details className="mr-method"><summary>Model validation & data provenance</summary>
       <p>Development benchmark: fit 2018–2023, calibrate 2024, test 2025. This is retrospective evaluation, separate from the live winner-model record. Lower error and lower Brier scores are better.</p>

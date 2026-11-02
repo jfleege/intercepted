@@ -208,31 +208,7 @@ export default function PlayersToWatch({ gameId }: Props) {
         <span>Recent performance</span>
       </div>
 
-      <div className="pw-team-heading">
-        {matchup.away_team} · Away
-      </div>
-
-      <div className="pw-grid">
-        {matchup.away_players.map((player) => (
-          <PlayerCard
-            key={player.player_id}
-            player={player}
-          />
-        ))}
-      </div>
-
-      <div className="pw-team-heading">
-        {matchup.home_team} · Home
-      </div>
-
-      <div className="pw-grid">
-        {matchup.home_players.map((player) => (
-          <PlayerCard
-            key={player.player_id}
-            player={player}
-          />
-        ))}
-      </div>
+      <div className="pw-team-columns">{(['away','home'] as const).map(side=><section key={side} aria-label={`${matchup[`${side}_team`]} recent players`}><h4 className="pw-team-heading">{matchup[`${side}_team`]} · {side==='away'?'Away':'Home'}</h4><div className="pw-grid">{matchup[`${side}_players`].map(player=><PlayerCard key={player.player_id} player={player}/>)}</div></section>)}</div>
 
       <p className="ic-footnote">
         Statistics use available games through {data.as_of}.

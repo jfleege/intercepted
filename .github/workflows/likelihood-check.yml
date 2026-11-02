@@ -1,7 +1,7 @@
 name: Check player presentation and forecast transparency
 on:
   push:
-    branches: [codex/markets-decision, codex/player-polish-updates, codex/usage-thresholds-plans, codex/default-qb-postgame]
+    branches: [codex/markets-decision, codex/player-polish-updates, codex/usage-thresholds-plans, codex/default-qb-postgame, codex/position-defense-outlooks]
 permissions:
   contents: read
 jobs:
@@ -21,6 +21,7 @@ jobs:
           python -m pip install -r requirements-automation.txt pyyaml
           python -m unittest discover -s tests -v
           python scripts/check_refresh_schedule.py
+          python -m src.features.position_defense
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -44,7 +45,7 @@ jobs:
             sleep 1
           done
           failed=0
-          for check in player-extensions forecast-insights playbook unified interface-polish players-page markets-builder prop-quotes performance-hub footer-info; do
+          for check in position-defense player-extensions forecast-insights playbook unified interface-polish players-page markets-builder prop-quotes performance-hub footer-info; do
             node --experimental-strip-types "tests/$check.browser.mjs" || failed=1
           done
           exit "$failed"
@@ -52,5 +53,7 @@ jobs:
         if: always()
         with:
           name: player-presentation-validation
-          path: frontend/qa/
+          path: |
+            frontend/qa/
+            frontend/public/position_defense/
           retention-days: 14

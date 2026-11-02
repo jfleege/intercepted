@@ -179,6 +179,11 @@ jobs:
         continue-on-error: true
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         run: python -m src.features.player_intelligence
+      - name: Export defensive allowances by opposing position
+        id: position_defense
+        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
+        continue-on-error: true
+        run: python -m src.features.position_defense
       - name: Grade original research forecasts
         id: research_results
         continue-on-error: true
@@ -189,7 +194,7 @@ jobs:
         env:
           RESULTS_CONTEXT_ONLY: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && (github.event.schedule == '47 7 * * *' || github.event.schedule == '7,37 * * * *'))) && '1' || '0' }}
           FORECAST_INPUT_OUTCOMES: >-
-            {"forecast":"${{ steps.forecast.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}"}
+            {"forecast":"${{ steps.forecast.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","directory":"${{ steps.directory.outcome }}","position_defense":"${{ steps.position_defense.outcome }}","research_results":"${{ steps.research_results.outcome }}"}
         run: |
           if [ "$RESULTS_CONTEXT_ONLY" = "1" ]; then
             python -m src.ml.forecast_insights --results-only
@@ -250,7 +255,7 @@ jobs:
         if: always()
         env:
           REFRESH_OUTCOMES: >-
-            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","research_results":"${{ steps.research_results.outcome }}","insights":"${{ steps.insights.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
+            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","position_defense":"${{ steps.position_defense.outcome }}","research_results":"${{ steps.research_results.outcome }}","insights":"${{ steps.insights.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
         run: python -m src.ml.refresh_status finish
       - name: Persist refresh status evidence
         if: always()
@@ -285,6 +290,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add frontend/public/forecast_insights.json frontend/public/research_performance.json
           if [ -f frontend/public/player_extensions.json ]; then git add frontend/public/player_extensions.json; fi
+          if [ -d frontend/public/position_defense ]; then git add frontend/public/position_defense; fi
           git add frontend/public/team_insights data/tracking frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/odds_usage.json frontend/public/player_props.json frontend/public/players_watch.json frontend/public/player_intelligence.json frontend/public/matchup_research.json frontend/public/research models/research docs/research-validation.json
           if ! git diff --cached --quiet; then
             git commit -m "Refresh weekly forecasts, markets, and game results"

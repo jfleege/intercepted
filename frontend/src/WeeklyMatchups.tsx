@@ -1,3 +1,4 @@
+import { useAnimatedNumber } from './useAnimatedNumber';
 import { availableModels, probability, MODEL_LABELS } from './predictionModels';
 import type { Model } from './predictionModels';
 import type { Game } from './forecastTypes';
@@ -7,6 +8,10 @@ import ProbabilityWheel from './ProbabilityWheel';
 const pct = (p: number) => `${(p * 100).toFixed(1)}%`;
 const logo = (team: string) => `${import.meta.env.BASE_URL}logos/${team}.png`;
 const qbStatus = (status?: string) => status === 'reported_expected' ? 'Expected starter' : status === 'confirmed' ? 'Confirmed starter' : 'Unconfirmed projection';
+function Chance({ chance, active, winner }: { chance: number; active: boolean; winner: string }) {
+  const shown = useAnimatedNumber(chance * 100) ?? chance * 100;
+  return <span className="ud-game-probability" aria-hidden="true"><span><small>{winner} PICK</small><b style={{fontVariantNumeric:'tabular-nums'}}>{shown.toFixed(1)}%</b></span><span className="ud-chance-track"><span className={active ? 'ud-selected-fill' : ''} style={{width:`${shown}%`}}/></span></span>;
+}
 function Result({ game, winner }: { game: Game; winner: string }) {
   const result = game.result;
   if (result?.status !== 'final' || result.home_score === null || result.away_score === null) return <span className="ud-result">{result?.status ?? 'Pending'}</span>;
@@ -34,7 +39,7 @@ export default function WeeklyMatchups({ games, focusedGame, model, archived, on
             <span><span className="ud-game-teams"><img src={logo(game.away_team)} alt=""/><b>{game.away_team}</b><i>at</i><img src={logo(game.home_team)} alt=""/><b>{game.home_team}</b></span>
               <span className="ud-game-date">{new Date(`${game.game_date}T12:00:00`).toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'})}{archived ? <Result game={game} winner={winner}/> : ' · Pregame'}</span>
             </span>
-            <span className="ud-game-probability"><span><small>{winner} PICK</small><b>{pct(chance)}</b></span><span className="ud-chance-track"><span className={active ? 'ud-selected-fill' : ''} style={{width:`${chance*100}%`}}/></span></span>
+            <Chance chance={chance} active={active} winner={winner}/>
           </button>;
         })}
       </div>

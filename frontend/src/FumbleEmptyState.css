@@ -1,0 +1,8 @@
+.market-fumble { width: 100%; text-align: center; padding: 0 0 12px; }
+.market-fumble canvas { display: block; width: 100%; max-width: 620px; height: auto; margin: 0 auto; image-rendering: pixelated; }
+.market-fumble h4 { margin: 2px 0 9px; color: #cee9f3; font-size: 1.35rem; font-weight: 600; }
+.market-fumble p { margin: 0 auto; max-width: 380px; color: #9eb7c6; font-size: .9rem; line-height: 1.7; }
+.market-fumble button { margin-top: 18px; padding: 8px 13px; min-height: 36px; border: 1px solid #345569; border-radius: 7px; background: transparent; color: #a8c5d4; font: inherit; font-size: .8rem; cursor: pointer; }
+.market-fumble button:hover { color: #83d9f1; border-color: #6eb8d0; }
+.market-fumble button:focus-visible { outline: 2px solid #84dbf2; outline-offset: 4px; }
+@media (pointer: coarse) { .market-fumble button { min-height: 44px; } }

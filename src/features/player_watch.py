@@ -9,6 +9,7 @@ from pathlib import Path
 import nflreadpy as nfl
 from src.features.qb_starters import watch_players
 from src.features.defense_rankings import build_defense_rankings
+from src.features.player_pool import latest_teams, projection_pool
 
 
 # configuration
@@ -244,6 +245,7 @@ for row in players.to_dicts():
 
 # collect only completed pre-cutoff games
 history = defaultdict(list)
+observed_teams = latest_teams(stats.to_dicts(), season, week, normalize_team)
 
 for row in stats.to_dicts():
     if int(row["season"]) != season:
@@ -285,6 +287,7 @@ for row in stats.to_dicts():
     if (
         position not in STAT_OPTIONS
         or player_id is None
+        or observed_teams.get(player_id) != team
     ):
         continue
 
@@ -385,11 +388,14 @@ for game in games:
         "home_team": home,
         "away_players": watch_players(game, "away", by_team.get(away, [])),
         "home_players": watch_players(game, "home", by_team.get(home, [])),
+        "away_catalog": projection_pool(game, "away", by_team.get(away, [])),
+        "home_catalog": projection_pool(game, "home", by_team.get(home, [])),
     }
 
 output = {
     "season": season,
     "week": week,
+    "catalog_policy": "All observed RB/WR/TE players plus the projected QB, using latest unambiguous prior-week team statistics. No active-roster or appearance guarantee. Dashboard shortlists remain separate.",
     "as_of": AS_OF.isoformat(),
     "exported_at": datetime.now(
         timezone.utc

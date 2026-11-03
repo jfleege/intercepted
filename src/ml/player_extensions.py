@@ -9,6 +9,7 @@ import numpy as np
 from src.ml.refresh_performance import ROOT, kickoff, stamp, write_json
 from src.ml.projection_features import build_history, player_features, team_summary, KINDS, USAGE, day
 from src.ml.projection_models import fit_event, predict_event, fit_regression, predict_regression, PLAYER_FEATURES
+from src.features.player_pool import matchup_pool
 
 THRESHOLDS={'passing':[150,200,250,300], 'rushing':[25,50,60,75,100], 'receiving':[25,50,60,75,100]}
 
@@ -92,13 +93,14 @@ def run(cache):
      validation.append({'kind':kind,'target':f'role_threshold_{threshold}','samples':len(role_test),'brier':error,'baseline_brier':baseline_error,'regular_brier':standard_error,'role_blind_brier':blind_error,'promoted':promoted})
  now=datetime.now(timezone.utc).isoformat()
  games={r['game_id']:r for r in schedules};output=[]
+ slate_games={g['game_id']:g for g in slate['games']}
  for gid,game in watch.get('games',{}).items():
   g=games.get(gid)
-  if not g or stamp(kickoff(g))<=stamp(now):continue
+  if not g or gid not in slate_games or stamp(kickoff(g))<=stamp(now):continue
   for side,other in [('home','away'),('away','home')]:
    team=g[f'{side}_team'];opp=g[f'{other}_team']
    own=team_summary(teams,team,slate['season'],day(g));opponent=team_summary(teams,opp,slate['season'],day(g))
-   for player in game.get(f'{side}_players',[]):
+   for player in matchup_pool(slate_games[gid], side, game):
     kind=KINDS.get(player['position']);history=histories.get(player['player_id'],[])
     if not kind:continue
     # Do not publish from an older cache when the public directory has newer appearances.

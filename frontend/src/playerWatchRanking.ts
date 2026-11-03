@@ -11,7 +11,7 @@ export type WatchReport = {
   season: number; week: number;
   games: Record<string, { players: WatchProjection[] }>;
 };
-export type WatchMatchup<T> = { away_team: string; home_team: string; away_players: T[]; home_players: T[] };
+export type WatchMatchup<T> = { away_team: string; home_team: string; away_players: T[]; home_players: T[]; away_catalog?: T[]; home_catalog?: T[] };
 export type RankedPlayer<T> = T & { opponent: string; isHome: boolean; projection?: WatchProjection; watchScore?: number };
 const kinds: Record<string, string> = { QB: 'passing', RB: 'rushing', WR: 'receiving', TE: 'receiving' };
 const floors: Record<string, number> = { QB: 100, RB: 25, WR: 20, TE: 15 };

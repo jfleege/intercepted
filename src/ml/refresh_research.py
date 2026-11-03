@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 from src.ml.refresh_performance import ROOT, kickoff, stamp, write_json
 from src.ml.projection_features import (SCORE_FEATURES, PLAYER_FEATURES, KINDS, build_history, final_games, player_features, team_summary, score_features, team_name, day)
 from src.features.quarter_trends import quarter_trends
+from src.features.player_pool import matchup_pool
 
 
 def sha(path):
@@ -20,7 +21,7 @@ def sha(path):
 
 
 def fingerprint(predictions, players):
-    code = {str(p.relative_to(ROOT)): sha(p) for p in [Path(__file__), ROOT / 'src/ml/projection_features.py', ROOT / 'src/ml/projection_models.py', ROOT / 'src/features/quarter_trends.py']}
+    code = {str(p.relative_to(ROOT)): sha(p) for p in [Path(__file__), ROOT / 'src/ml/projection_features.py', ROOT / 'src/ml/projection_models.py', ROOT / 'src/features/quarter_trends.py', ROOT / 'src/features/player_pool.py']}
     core = {'predictions': predictions, 'players': players.get('games', {}), 'code': code}
     return hashlib.sha256(json.dumps(core, sort_keys=True).encode()).hexdigest()
 
@@ -162,7 +163,7 @@ def export(reuse=False, force=False):
         matchup = watch.get('games', {}).get(game['game_id'], {})
         for side, other_side in [('away', 'home'), ('home', 'away')]:
             team, opponent = game[f'{side}_team'], game[f'{other_side}_team']
-            for player in matchup.get(f'{side}_players', []):
+            for player in matchup_pool(game, side, matchup):
                 position = player['position']
                 if position not in KINDS:
                     continue

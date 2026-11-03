@@ -15,7 +15,7 @@ for(const side of ['away','home']){
  assert.equal(sample.length,12);
  for(const [i,person] of sample.entries()){
   const template=templates.find(p=>p.position===person.position);assert.ok(template);
-  report.players.push({...template,...person,team,opponent,prior_appearances:8,status:i===11?'insufficient_history':'available'});
+  report.players.push({...template,...person,stat:template.stat,team,opponent,prior_appearances:8,status:i===11?'insufficient_history':'available'});
  }
 }
 const targets=report.players.filter(p=>p.status==='available');

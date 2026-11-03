@@ -9,7 +9,9 @@ const read=async f=>JSON.parse(await readFile(`public/${f}.json`,'utf8'));
 const [slate,report,watch,source]=await Promise.all(['predictions','matchup_research','players_watch','forecast_insights'].map(read));
 const candidate=rankWatchPlayers(watch,report,'blend').players.find(p=>source.players.some(c=>c.player_id===p.player_id&&c.usage.estimate!==null));
 assert.ok(candidate);const context=source.players.find(c=>c.player_id===candidate.player_id);
-const fixture=structuredClone(source),now=Date.parse(source.exported_at),at=source.exported_at;
+// The production slate may already be final when CI runs; this fixture tests pregame exclusions.
+const fixture=structuredClone(source),now=Date.parse(context.kickoff)-3600000,at=new Date(now).toISOString();
+fixture.exported_at=at;fixture.monitoring.checked_at=at;
 const player=fixture.players.find(c=>c.player_id===candidate.player_id);
 player.availability={...player.availability,status:'Out',blocked:true,observed_at:at};
 player.starter={...player.starter,status:'listed_first_unit',rank:1,updated_at:at};

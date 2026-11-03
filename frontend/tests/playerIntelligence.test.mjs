@@ -19,3 +19,13 @@ test('only the same player, stat, season, version and graded forecasts support r
 test('search and position/team filters compose without changing original directory',()=>{
  const a={...p,watchRank:2},b={...p,player_id:'two',name:'Other Player',position:'RB',watchRank:1};const original=[a,b];assert.equal(filteredPlayers(original,' PLAYER ','DEN','QB','watch')[0].player_id,'one');assert.equal(filteredPlayers(original,'','all','all','watch')[0].player_id,'two');assert.deepEqual(original,[a,b]);
 });
+
+test('full player catalog merges into the directory without enlarging the watch shortlist',()=>{
+ const people=Array.from({length:14},(_,i)=>({...p,player_id:`skill:${i}`,name:`Skill ${i}`,position:i<4?'RB':i<11?'WR':'TE',history:[]}));
+ const watch={season:2026,week:7,games:{g:{home_team:'DEN',away_team:'SEA',home_players:people.slice(0,3),away_players:[],home_catalog:people,away_catalog:[]}}};
+ const result=directory(slate,null,watch,null,[]);
+ assert.equal(result.length,14);assert.equal(new Set(result.map(p=>p.player_id)).size,14);assert.ok(result.every(p=>!p.projection));
+ assert.equal(watch.games.g.home_players.length,3);
+ const wrong={...people[0],player_id:'wrong',team:'SEA'};
+ assert.equal(directory(slate,null,{...watch,games:{g:{...watch.games.g,home_catalog:[wrong]}}},null,[]).some(p=>p.player_id==='wrong'),false);
+});

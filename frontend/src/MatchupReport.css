@@ -127,3 +127,5 @@
 
 .pw-team-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.pw-team-columns>section{min-width:0}.pw-team-columns .pw-grid{grid-template-columns:minmax(0,1fr)}@media(max-width:650px){.pw-team-columns{grid-template-columns:1fr}}
 .mr-player>header>div{min-width:0}.mr-player h4{overflow-wrap:anywhere}.mr-defense label{flex-wrap:wrap}.mr-defense select{min-width:0}
+
+.mr-pool-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0;font-size:12px;color:#9cb5c6}.mr-pool-controls select,.mr-show-players{font:inherit;background:#102a3a;color:#d8e8f1;border:1px solid #36596c;border-radius:7px;padding:8px;max-width:100%}.mr-show-players{width:100%;margin-top:12px;cursor:pointer}.mr-pool-controls select:focus-visible,.mr-show-players:focus-visible{outline:2px solid #69dce8;outline-offset:3px}

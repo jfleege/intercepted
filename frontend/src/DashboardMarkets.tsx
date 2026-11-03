@@ -2,6 +2,7 @@ import { fetchSnapshot } from "./snapshotCache";
 import { availableModels, probability, MODEL_LABELS } from './predictionModels';
 import type { Model, PredictionFields } from './predictionModels';
 import { useEffect, useState } from 'react';
+import FumbleEmptyState from './FumbleEmptyState';
 import draftKingsLogo from './assets/draftkings.png';
 
 type Game = PredictionFields & {game_id: string; home_team: string; away_team: string};
@@ -32,7 +33,7 @@ export default function DashboardMarkets({game, model, showModelPicks = true}: {
       <div className="ud-panel-heading"><div><h3>Market snapshot</h3><p>{game ? `${game.away_team} at ${game.home_team}` : 'Selected matchup'} · Saved game lines</p></div>
         {(!odds || /draftkings/i.test(odds.bookmaker)) ? <img className="ud-draftkings-logo" src={draftKingsLogo} alt="DraftKings"/> : <span className="ud-tag">{odds.bookmaker}</span>}
       </div>
-      <div className="ud-market-body">{unavailable ? <p className="ud-empty">{unavailable}</p> : <>
+      <div className="ud-market-body">{!error && data && game && !odds ? <FumbleEmptyState /> : unavailable ? <p className="ud-empty">{unavailable}</p> : <>
         <div className="ud-moneylines">{[['away',game!.away_team,odds?.away_moneyline],['home',game!.home_team,odds?.home_moneyline]].map(([side,team,value]) => <div className="ud-moneyline" key={String(side)}><span><img src={`${import.meta.env.BASE_URL}logos/${team}.png`} alt=""/>{team}</span><strong>{american(value as number | null | undefined)}</strong></div>)}</div>
         <div className="ud-market-lines" aria-label="Additional saved game lines">
           <div className="ud-market-line"><span>Spread</span><strong>{game!.away_team} <b>{spread(odds?.away_spread)}</b></strong><strong>{game!.home_team} <b>{spread(odds?.home_spread)}</b></strong></div>

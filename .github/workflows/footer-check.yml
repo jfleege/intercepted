@@ -1,0 +1,45 @@
+name: Check footer and site information
+on:
+  push:
+    branches: [codex/footer-info]
+permissions:
+  contents: read
+jobs:
+  footer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Validate frontend
+        working-directory: frontend
+        run: |
+          npm ci --no-audit --no-fund --prefer-offline
+          npm run lint
+          npm test
+          npm run build
+          npm install --no-save --package-lock=false --no-audit --no-fund playwright @axe-core/playwright
+      - name: Check responsive footer, routes, accessibility, and existing state
+        working-directory: frontend
+        run: |
+          export CHROME_BIN="$(command -v google-chrome)"
+          npx vite preview --host 127.0.0.1 --port 4174 >/tmp/footer-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
+            sleep 1
+          done
+          failed=0
+          for check in footer-info playbook unified interface-polish; do
+            node "tests/$check.browser.mjs" || failed=1
+          done
+          exit "$failed"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: footer-information-preview
+          path: frontend/qa/
+          retention-days: 14

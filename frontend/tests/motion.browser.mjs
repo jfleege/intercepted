@@ -1,0 +1,35 @@
+import process from 'node:process';
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright';
+const browser=await chromium.launch({executablePath:process.env.CHROME_BIN || undefined});
+try {
+ const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'no-preference'});
+ await page.route('**/*',route=>route.request().url().startsWith('http://127.0.0.1:4174')?route.continue():route.fulfill(route.request().resourceType()==='image'?{contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"/>'}:{json:{events:[]}}));
+ await page.goto('http://127.0.0.1:4174/intercepted/');
+ await page.locator('.score-ticker-game').first().waitFor();
+ await page.mouse.move(0,0);
+ const position=()=>page.locator('.score-ticker-window').evaluate(e=>e.scrollLeft-new DOMMatrixReadOnly(getComputedStyle(e.firstElementChild).transform).m41);
+ const sample=frames=>page.locator('.score-ticker-window').evaluate(async(e,frames)=>{const values=[];for(let i=0;i<frames;i++){await new Promise(r=>requestAnimationFrame(r));values.push(e.scrollLeft-new DOMMatrixReadOnly(getComputedStyle(e.firstElementChild).transform).m41);}return values;},frames);
+ await page.waitForFunction(()=>document.querySelector('.score-ticker-window').scrollLeft>4);
+ const samples=await sample(70);
+ assert.ok(samples.at(-1)-samples[0]>10,'Ticker must glide between former six-second steps');
+ assert.ok(samples.every((v,i)=>!i||v>=samples[i-1]-.01));
+ assert.ok(samples.every((v,i)=>!i||Math.abs(v-samples[i-1])<2),'No frame should jump by a tile');
+ await page.getByRole('button',{name:'Pause scoreboard scrolling',exact:true}).click();
+ await page.mouse.move(0,0);await page.evaluate(()=>document.activeElement.blur());
+ const paused=await position();await sample(30);assert.ok(Math.abs(await position()-paused)<1);
+ await page.getByRole('button',{name:'Resume scoreboard scrolling',exact:true}).click();
+ await page.mouse.move(0,0);await page.evaluate(()=>document.activeElement.blur());
+ await page.waitForFunction(p=>document.querySelector('.score-ticker-window').scrollLeft>p+2,paused);
+ const box=await page.locator('.score-ticker-window').boundingBox();
+ await page.mouse.move(box.x+10,box.y+10);await sample(3);
+ const hovered=await position();await sample(30);assert.ok(Math.abs(await position()-hovered)<1,'Hover must pause motion');
+ await page.locator('.score-ticker-window').evaluate(e=>{e.scrollLeft=e.scrollWidth-e.clientWidth-3;});
+ await sample(3);await page.mouse.move(0,0);
+ const edge=await sample(220),peak=Math.max(...edge);
+ assert.ok(edge.at(-1)<peak-3,'Ticker must reverse gently at the end');
+ assert.ok(edge.every((v,i)=>!i||Math.abs(v-edge[i-1])<2),'End reversal must not rewind across the whole slate');
+ await page.emulateMedia({reducedMotion:'reduce'});await sample(3);
+ const reduced=await position();await sample(30);assert.ok(Math.abs(await position()-reduced)<1,'Reduced motion disables the glide');
+ console.log('PASS ticker: continuous subpixel glide, no tile jumps, pause/resume, hover, gentle reversal, reduced motion.');
+}finally{await browser.close();}

@@ -1,0 +1,47 @@
+name: Check Intercepted branding
+on:
+  push:
+    branches: [codex/intercepted-brand]
+permissions:
+  contents: read
+jobs:
+  brand:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Generate icon sizes and validate frontend
+        working-directory: frontend
+        run: |
+          npm ci --no-audit --no-fund --prefer-offline
+          npm install --no-save --package-lock=false --no-audit --no-fund playwright
+          export CHROME_BIN="$(command -v google-chrome)"
+          node tests/render-brand.mjs
+          npm run lint
+          npm test
+          npm run build
+      - name: Check brand placement and dashboard
+        working-directory: frontend
+        run: |
+          export CHROME_BIN="$(command -v google-chrome)"
+          npx vite preview --host 127.0.0.1 --port 4174 >/tmp/brand-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/brand.browser.mjs
+          node tests/unified.browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: intercepted-brand-preview
+          path: |
+            frontend/qa/
+            frontend/public/brand/
+            frontend/public/favicon.ico
+          retention-days: 14

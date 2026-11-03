@@ -1,0 +1,59 @@
+name: Check full model performance report
+on:
+  push:
+    branches: [codex/performance-model-report]
+permissions:
+  contents: read
+jobs:
+  performance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test grading and generate source-backed evaluation
+        run: |
+          python -m pip install -r requirements-automation.txt
+          python -m unittest discover -s tests -v
+          python -m src.ml.research_performance
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Validate frontend
+        working-directory: frontend
+        run: |
+          npm ci --no-audit --no-fund --prefer-offline
+          npm run lint
+          npm test
+          npm run build
+          npm install --no-save --package-lock=false --no-audit --no-fund playwright
+      - name: Browser checks
+        working-directory: frontend
+        run: |
+          export CHROME_BIN="$(command -v google-chrome)"
+          npx vite preview --host 127.0.0.1 --port 4174 >/tmp/performance-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/performance-hub.browser.mjs
+          node tests/unified.browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: model-performance-preview
+          path: |
+            frontend/public/research_performance.json
+            data/tracking/research_evidence.json
+            data/tracking/research_results.json
+            frontend/qa/
+          retention-days: 14

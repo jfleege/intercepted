@@ -1,0 +1,64 @@
+name: Check dashboard layouts
+on:
+  push:
+    branches: [codex/dashboard-scorecards, codex/unified-dashboard, codex/smooth-dashboard-motion, codex/compact-controls-player-context, codex/animated-hero-playbook, codex/defense-ranks-market-detail]
+permissions:
+  contents: read
+jobs:
+  frontend:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        if: github.ref == 'refs/heads/codex/defense-ranks-market-detail'
+        with:
+          python-version: '3.12'
+      - name: Verify defense rankings and refresh their saved export
+        if: github.ref == 'refs/heads/codex/defense-ranks-market-detail'
+        run: |
+          python -m unittest discover -s tests -p test_defense_rankings.py -v
+          python -m pip install nflreadpy==0.1.5 polars==2.0.0
+          python -m src.features.player_watch
+          mkdir -p frontend/qa/data
+          cp frontend/public/players_watch.json frontend/qa/data/players_watch.json
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - name: Check frontend
+        working-directory: frontend
+        run: |
+          npm ci --no-audit --no-fund --prefer-offline
+          npm run lint
+          npm test
+          npm run build
+      - name: Prepare browser checks
+        working-directory: frontend
+        run: |
+          npm install --no-save --package-lock=false --no-audit --no-fund playwright
+          if command -v google-chrome >/dev/null; then
+            printf 'CHROME_BIN=%s\n' "$(command -v google-chrome)" >> "$GITHUB_ENV"
+          else
+            npx playwright install --with-deps chromium
+          fi
+      - name: Check dashboard in browser
+        working-directory: frontend
+        run: |
+          npx vite preview --host 127.0.0.1 --port 4174 >/tmp/dashboard-preview.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/dashboard.browser.mjs
+          node tests/unified.browser.mjs
+          node tests/motion.browser.mjs
+          node tests/playbook.browser.mjs
+          node tests/defense-markets.browser.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: dashboard-preview
+          path: frontend/qa/
+          retention-days: 14

@@ -1,0 +1,76 @@
+name: Verify refactor preserves behavior
+on:
+  push:
+    branches: [codex/refactor-cleanup]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+      PYTHONUNBUFFERED: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check out unchanged baseline
+        run: git worktree add --detach /tmp/intercepted-baseline f1c18802ff426b7ec8436c9f646f472b48e60965
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements-automation.txt
+      - name: Verify grading and history
+        run: python -m unittest discover -s tests -v
+      - name: Rebuild historical feature inputs without fitting models
+        run: |
+          python -m src.data.weekly_stats
+          python -m src.features.expanded_team_stats
+          python -m src.features.rolling_stats
+          python -m src.features.preseason_strength
+          python -m src.features.blended_features
+          python -m src.features.matchup_features_v2
+          python -m src.features.pregame_features_v4
+          python -m src.features.game_context
+          python -m src.features.qb_stats
+          python -m src.features.training_qb_proxy
+          python -m src.features.qb_matchup_features
+          ln -s "$GITHUB_WORKSPACE/data/processed" /tmp/intercepted-baseline/data/processed
+          python -m scripts.verify_refactor /tmp/intercepted-baseline
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Build baseline and refactor
+        run: |
+          cd /tmp/intercepted-baseline/frontend
+          npm ci
+          npm run build
+          cd "$GITHUB_WORKSPACE/frontend"
+          npm ci
+          npm run lint
+          npm test
+          npm run build
+          npm install --no-save --package-lock=false playwright pngjs
+          npx playwright install --with-deps chromium
+      - name: Verify identical rendered pages
+        working-directory: frontend
+        run: |
+          (cd /tmp/intercepted-baseline/frontend && npx vite preview --host 127.0.0.1 --port 4173) >/tmp/refactor-before.log 2>&1 &
+          npx vite preview --host 127.0.0.1 --port 4174 >/tmp/refactor-after.log 2>&1 &
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:4173/intercepted/ >/dev/null && curl -fsS http://127.0.0.1:4174/intercepted/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node tests/refactor.browser.mjs
+      - name: Confirm saved data and weights are untouched
+        run: |
+          git diff --exit-code -- models data/tracking frontend/public .github/workflows/refresh-pages.yml
+          git diff --check
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: refactor-before-after
+          path: frontend/qa/refactor/
+          retention-days: 14

@@ -3823,43 +3823,25 @@
       "week": 8
     }
   ],
-  "exported_at": "2026-11-02T22:20:55.818032+00:00",
+  "exported_at": "2026-11-03T10:03:54.739544+00:00",
   "monitoring": {
     "alerts": [
       {
-        "game_id": "2026_08_CHI_SEA",
-        "id": "reported_out:2026_08_CHI_SEA:00-0037545",
-        "message": "Rashid Shaheed is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_08_CHI_SEA",
-        "id": "reported_out:2026_08_CHI_SEA:00-0037745",
-        "message": "Velus Jones Jr. is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_08_CHI_SEA",
-        "id": "reported_out:2026_08_CHI_SEA:00-0040236",
-        "message": "Kyle Monangai is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
         "id": "availability_coverage",
-        "message": "8 of 454 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "0 of 454 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 8,
+      "reported": 0,
       "tracked": 454
     },
     "calibration": [
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 101,
+        "samples": 107,
         "status": "sample_building",
         "target": "any_td",
         "version": "35b3afd7279bc09a",
@@ -3877,7 +3859,7 @@
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 26,
+        "samples": 28,
         "status": "sample_building",
         "target": "pass_td",
         "version": "35b3afd7279bc09a",
@@ -3895,7 +3877,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 27,
+        "samples": 28,
         "status": "sample_building",
         "target": "winner:v4_a",
         "version": "ac161c2fa5d3",
@@ -3913,7 +3895,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 27,
+        "samples": 28,
         "status": "sample_building",
         "target": "winner:v4_qb_plus",
         "version": "ac161c2fa5d3",
@@ -3931,7 +3913,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 27,
+        "samples": 28,
         "status": "sample_building",
         "target": "winner:v5_boosted",
         "version": "ac161c2fa5d3",
@@ -3940,14 +3922,14 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 27,
+        "samples": 28,
         "status": "sample_building",
         "target": "winner:v5_qb_plus",
         "version": "ac161c2fa5d3",
         "windows": []
       }
     ],
-    "checked_at": "2026-11-02T22:20:55.818032+00:00",
+    "checked_at": "2026-11-03T10:03:54.739544+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,

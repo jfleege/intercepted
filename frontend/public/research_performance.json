@@ -235,34 +235,34 @@
       "groups": [
         {
           "accuracy": null,
-          "baseline_error": 8.965384615384615,
-          "baseline_samples": 26,
-          "bias": 0.5,
+          "baseline_error": 8.914285714285715,
+          "baseline_samples": 28,
+          "bias": 0.5678571428571428,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.7592592592592593,
-          "error": 8.28888888888889,
+          "coverage": 0.7678571428571429,
+          "error": 8.307142857142857,
           "family": "scoring",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 27,
+            "samples": 28,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 8.657692307692308,
-          "range_samples": 54,
-          "range_width": 23.883333333333333,
-          "rmse": 10.03399776316056,
-          "samples": 54,
+          "paired_error": 8.667857142857143,
+          "range_samples": 56,
+          "range_width": 23.876785714285713,
+          "rmse": 10.002838882751522,
+          "samples": 56,
           "target": "team_points",
           "trend": [
             {
@@ -696,6 +696,22 @@
               "loss": 8.288888888888888,
               "n": 54,
               "prediction": 24.9
+            },
+            {
+              "actual": 34,
+              "date": "2026-11-02",
+              "label": "CHI points",
+              "loss": 8.34181818181818,
+              "n": 55,
+              "prediction": 22.8
+            },
+            {
+              "actual": 17,
+              "date": "2026-11-02",
+              "label": "SEA points",
+              "loss": 8.307142857142855,
+              "n": 56,
+              "prediction": 23.4
             }
           ],
           "version": "all",
@@ -968,34 +984,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 13.330769230769231,
-          "baseline_samples": 13,
-          "bias": 1.0000000000000002,
+          "baseline_error": 12.82857142857143,
+          "baseline_samples": 14,
+          "bias": 1.135714285714286,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8148148148148148,
-          "error": 11.8,
+          "coverage": 0.8214285714285714,
+          "error": 11.55,
           "family": "scoring",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 27,
+            "samples": 28,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 12.9,
-          "range_samples": 27,
-          "range_width": 34.007407407407406,
-          "rmse": 14.772496967901759,
-          "samples": 27,
+          "paired_error": 12.321428571428571,
+          "range_samples": 28,
+          "range_width": 34.0,
+          "rmse": 14.534638429823918,
+          "samples": 28,
           "target": "total",
           "trend": [
             {
@@ -1213,6 +1229,14 @@
               "loss": 11.800000000000002,
               "n": 27,
               "prediction": 45.1
+            },
+            {
+              "actual": 51,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA total",
+              "loss": 11.550000000000002,
+              "n": 28,
+              "prediction": 46.2
             }
           ],
           "version": "all",
@@ -1373,34 +1397,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 11.53076923076923,
-          "baseline_samples": 13,
-          "bias": 0.10370370370370402,
+          "baseline_error": 11.885714285714286,
+          "baseline_samples": 14,
+          "bias": -0.5285714285714284,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8518518518518519,
-          "error": 10.622222222222222,
+          "coverage": 0.8214285714285714,
+          "error": 10.871428571428572,
           "family": "scoring",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 27,
+            "samples": 28,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 9.684615384615384,
-          "range_samples": 27,
+          "paired_error": 10.25,
+          "range_samples": 28,
           "range_width": 33.6,
-          "rmse": 13.582995905829383,
-          "samples": 27,
+          "rmse": 13.746687912782066,
+          "samples": 28,
           "target": "margin",
           "trend": [
             {
@@ -1618,6 +1642,14 @@
               "loss": 10.62222222222222,
               "n": 27,
               "prediction": 4.7
+            },
+            {
+              "actual": -17,
+              "date": "2026-11-02",
+              "label": "SEA margin",
+              "loss": 10.87142857142857,
+              "n": 28,
+              "prediction": 0.6
             }
           ],
           "version": "all",
@@ -1778,34 +1810,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 82.7611111111111,
-          "baseline_samples": 54,
-          "bias": -5.07037037037037,
+          "baseline_error": 80.85178571428571,
+          "baseline_samples": 56,
+          "bias": -5.089285714285714,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.7962962962962963,
-          "error": 72.25555555555556,
+          "coverage": 0.8035714285714286,
+          "error": 71.53214285714286,
           "family": "yardage",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 300,
             "reason": "Choose one model version for health assessment.",
-            "samples": 54,
+            "samples": 56,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 72.25555555555556,
-          "range_samples": 54,
-          "range_width": 204.45555555555555,
-          "rmse": 89.99471383652775,
-          "samples": 54,
+          "paired_error": 71.53214285714286,
+          "range_samples": 56,
+          "range_width": 204.39642857142857,
+          "rmse": 88.92405869215436,
+          "samples": 56,
           "target": "passing",
           "trend": [
             {
@@ -2239,6 +2271,22 @@
               "loss": 72.25555555555556,
               "n": 54,
               "prediction": 204.7
+            },
+            {
+              "actual": 188,
+              "date": "2026-11-02",
+              "label": "Sam Darnold",
+              "loss": 71.9890909090909,
+              "n": 55,
+              "prediction": 245.6
+            },
+            {
+              "actual": 247,
+              "date": "2026-11-02",
+              "label": "Caleb Williams",
+              "loss": 71.53214285714286,
+              "n": 56,
+              "prediction": 200.6
             }
           ],
           "version": "all",
@@ -2511,33 +2559,33 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 0.21024430964007923,
-          "baseline_samples": 101,
-          "bias": 0.03229665071770335,
+          "baseline_error": 0.2107498104494673,
+          "baseline_samples": 107,
+          "bias": 0.03721023255813953,
           "calibration": [
             {
               "bin": "0\u201310%",
-              "lower": 0.013710066379696323,
-              "observed": 0.07692307692307693,
-              "predicted": 0.07876923076923077,
-              "samples": 13,
-              "upper": 0.3331453392824736
+              "lower": 0.012721886112291636,
+              "observed": 0.07142857142857142,
+              "predicted": 0.07917142857142857,
+              "samples": 14,
+              "upper": 0.3146926955395781
             },
             {
               "bin": "10\u201320%",
-              "lower": 0.09025416205339185,
-              "observed": 0.15384615384615385,
-              "predicted": 0.1562653846153846,
-              "samples": 78,
-              "upper": 0.2499346905594603
+              "lower": 0.08908180320986644,
+              "observed": 0.1518987341772152,
+              "predicted": 0.15596455696202532,
+              "samples": 79,
+              "upper": 0.2470005515490952
             },
             {
               "bin": "20\u201330%",
-              "lower": 0.18601827946182872,
-              "observed": 0.3023255813953488,
-              "predicted": 0.2426046511627907,
-              "samples": 43,
-              "upper": 0.4510564575240983
+              "lower": 0.19528525463541907,
+              "observed": 0.3111111111111111,
+              "predicted": 0.2434688888888889,
+              "samples": 45,
+              "upper": 0.4566507998754897
             },
             {
               "bin": "30\u201340%",
@@ -2549,19 +2597,19 @@
             },
             {
               "bin": "40\u201350%",
-              "lower": 0.3420820083075997,
-              "observed": 0.55,
-              "predicted": 0.441845,
-              "samples": 20,
-              "upper": 0.7418049791429071
+              "lower": 0.3654621629703244,
+              "observed": 0.5714285714285714,
+              "predicted": 0.4433666666666667,
+              "samples": 21,
+              "upper": 0.7553030051347894
             },
             {
               "bin": "50\u201360%",
-              "lower": 0.28008775568998817,
-              "observed": 0.5454545454545454,
-              "predicted": 0.5527727272727273,
-              "samples": 11,
-              "upper": 0.7872904245601196
+              "lower": 0.3195073356553728,
+              "observed": 0.5833333333333334,
+              "predicted": 0.5512916666666666,
+              "samples": 12,
+              "upper": 0.8067425380947535
             },
             {
               "bin": "60\u201370%",
@@ -2582,28 +2630,28 @@
           ],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 6,
-            "pending": 8,
+            "missing_stats": 8,
+            "pending": 0,
             "unavailable": 1
           },
           "coverage": null,
-          "error": 0.19273641157894736,
+          "error": 0.19268060427906977,
           "family": "touchdowns",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 500,
             "reason": "Choose one model version for health assessment.",
-            "samples": 209,
+            "samples": 215,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
-          "log_loss": 0.5680147532022455,
-          "paired_error": 0.1951571818811881,
+          "log_loss": 0.5674219220407752,
+          "paired_error": 0.19490930158878506,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.4390175527002848,
-          "samples": 209,
+          "rmse": 0.4389539887950328,
+          "samples": 215,
           "target": "any_td",
           "trend": [
             {
@@ -4277,6 +4325,54 @@
               "loss": 0.19273641157894764,
               "n": 209,
               "prediction": 0.1752
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "Sam Darnold",
+              "loss": 0.1919022203333336,
+              "n": 210,
+              "prediction": 0.1325
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "D'Andre Swift",
+              "loss": 0.19230498914691968,
+              "n": 211,
+              "prediction": 0.4738
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "Jaxon Smith-Njigba",
+              "loss": 0.1924178193867927,
+              "n": 212,
+              "prediction": 0.535
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "Caleb Williams",
+              "loss": 0.1915478923474181,
+              "n": 213,
+              "prediction": 0.0844
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "Colston Loveland",
+              "loss": 0.19099019046728996,
+              "n": 214,
+              "prediction": 0.2687
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "Luther Burden III",
+              "loss": 0.19268060427907,
+              "n": 215,
+              "prediction": 0.2554
             }
           ],
           "version": "all",
@@ -5246,9 +5342,9 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 0.227000012914,
-          "baseline_samples": 26,
-          "bias": -0.05443518518518519,
+          "baseline_error": 0.2169142009180357,
+          "baseline_samples": 28,
+          "bias": -0.04409285714285715,
           "calibration": [
             {
               "bin": "50\u201360%",
@@ -5268,19 +5364,19 @@
             },
             {
               "bin": "70\u201380%",
-              "lower": 0.36275551465160105,
-              "observed": 0.5789473684210527,
-              "predicted": 0.7555631578947368,
-              "samples": 19,
-              "upper": 0.7685837960796962
+              "lower": 0.3865779423152061,
+              "observed": 0.6,
+              "predicted": 0.752865,
+              "samples": 20,
+              "upper": 0.7811960325858074
             },
             {
               "bin": "80\u201390%",
-              "lower": 0.686054495051583,
-              "observed": 0.8947368421052632,
-              "predicted": 0.8649473684210526,
-              "samples": 19,
-              "upper": 0.9706420586049034
+              "lower": 0.6989617935882066,
+              "observed": 0.9,
+              "predicted": 0.863105,
+              "samples": 20,
+              "upper": 0.9721341060158468
             },
             {
               "bin": "90\u2013100%",
@@ -5294,27 +5390,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.1762504324074074,
+          "error": 0.17207349142857142,
           "family": "touchdowns",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 500,
             "reason": "Choose one model version for health assessment.",
-            "samples": 54,
+            "samples": 56,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
-          "log_loss": 0.5220804616748143,
-          "paired_error": 0.21024353846153845,
+          "log_loss": 0.5131313951304753,
+          "paired_error": 0.1994615775,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.41982190558307864,
-          "samples": 54,
+          "rmse": 0.4148174193890264,
+          "samples": 56,
           "target": "pass_td",
           "trend": [
             {
@@ -5748,6 +5844,22 @@
               "loss": 0.17625043240740745,
               "n": 54,
               "prediction": 0.729
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "Sam Darnold",
+              "loss": 0.1735831447272728,
+              "n": 55,
+              "prediction": 0.8281
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "Caleb Williams",
+              "loss": 0.17207349142857148,
+              "n": 56,
+              "prediction": 0.7016
             }
           ],
           "version": "all",
@@ -6061,34 +6173,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 30.726605504587155,
-          "baseline_samples": 109,
-          "bias": -1.2467889908256882,
+          "baseline_error": 30.43392857142857,
+          "baseline_samples": 112,
+          "bias": -0.7598214285714285,
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 6,
-            "pending": 4,
+            "missing_stats": 7,
+            "pending": 0,
             "unavailable": 1
           },
-          "coverage": 0.6697247706422018,
-          "error": 26.3954128440367,
+          "coverage": 0.6696428571428571,
+          "error": 26.299107142857142,
           "family": "yardage",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 300,
             "reason": "Choose one model version for health assessment.",
-            "samples": 109,
+            "samples": 112,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 26.3954128440367,
-          "range_samples": 109,
-          "range_width": 62.11926605504587,
-          "rmse": 34.1032471751578,
-          "samples": 109,
+          "paired_error": 26.299107142857142,
+          "range_samples": 112,
+          "range_width": 62.11875,
+          "rmse": 33.90705125781361,
+          "samples": 112,
           "target": "receiving",
           "trend": [
             {
@@ -6962,6 +7074,30 @@
               "loss": 26.395412844036688,
               "n": 109,
               "prediction": 39.6
+            },
+            {
+              "actual": 118,
+              "date": "2026-11-02",
+              "label": "Jaxon Smith-Njigba",
+              "loss": 26.502727272727263,
+              "n": 110,
+              "prediction": 79.8
+            },
+            {
+              "actual": 65,
+              "date": "2026-11-02",
+              "label": "Colston Loveland",
+              "loss": 26.456756756756747,
+              "n": 111,
+              "prediction": 43.6
+            },
+            {
+              "actual": 56,
+              "date": "2026-11-02",
+              "label": "Luther Burden III",
+              "loss": 26.299107142857135,
+              "n": 112,
+              "prediction": 64.8
             }
           ],
           "version": "all",
@@ -7490,34 +7626,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 34.832608695652176,
-          "baseline_samples": 46,
-          "bias": 9.206521739130435,
+          "baseline_error": 34.38936170212766,
+          "baseline_samples": 47,
+          "bias": 9.336170212765959,
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 0,
-            "pending": 2,
+            "missing_stats": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.45652173913043476,
-          "error": 36.77173913043478,
+          "coverage": 0.46808510638297873,
+          "error": 36.314893617021276,
           "family": "yardage",
-          "games": 26,
+          "games": 27,
           "health": {
             "minimum": 300,
             "reason": "Choose one model version for health assessment.",
-            "samples": 46,
+            "samples": 47,
             "status": "version_required",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 36.77173913043478,
-          "range_samples": 46,
-          "range_width": 60.2695652173913,
-          "rmse": 43.63649499733192,
-          "samples": 46,
+          "paired_error": 36.314893617021276,
+          "range_samples": 47,
+          "range_width": 60.297872340425535,
+          "rmse": 43.22742923535787,
+          "samples": 47,
           "target": "rushing",
           "trend": [
             {
@@ -7887,6 +8023,14 @@
               "loss": 36.771739130434796,
               "n": 46,
               "prediction": 46.9
+            },
+            {
+              "actual": 69,
+              "date": "2026-11-02",
+              "label": "D'Andre Swift",
+              "loss": 36.31489361702128,
+              "n": 47,
+              "prediction": 53.7
             }
           ],
           "version": "all",
@@ -8095,34 +8239,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 8.965384615384615,
-          "baseline_samples": 26,
-          "bias": 0.5807692307692308,
+          "baseline_error": 8.914285714285715,
+          "baseline_samples": 28,
+          "bias": 0.7107142857142857,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.6923076923076923,
-          "error": 8.657692307692308,
+          "coverage": 0.7142857142857143,
+          "error": 8.667857142857143,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 8.657692307692308,
-          "range_samples": 26,
-          "range_width": 23.673076923076923,
-          "rmse": 10.588291792207233,
-          "samples": 26,
+          "paired_error": 8.667857142857143,
+          "range_samples": 28,
+          "range_width": 23.675,
+          "rmse": 10.49031866600275,
+          "samples": 28,
           "target": "team_points",
           "trend": [
             {
@@ -8332,6 +8476,22 @@
               "loss": 8.657692307692306,
               "n": 26,
               "prediction": 24.9
+            },
+            {
+              "actual": 34,
+              "date": "2026-11-02",
+              "label": "CHI points",
+              "loss": 8.75185185185185,
+              "n": 27,
+              "prediction": 22.8
+            },
+            {
+              "actual": 17,
+              "date": "2026-11-02",
+              "label": "SEA points",
+              "loss": 8.667857142857141,
+              "n": 28,
+              "prediction": 23.4
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -8341,34 +8501,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 13.330769230769231,
-          "baseline_samples": 13,
-          "bias": 1.1615384615384623,
+          "baseline_error": 12.82857142857143,
+          "baseline_samples": 14,
+          "bias": 1.421428571428572,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.7692307692307693,
-          "error": 12.9,
+          "coverage": 0.7857142857142857,
+          "error": 12.321428571428571,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 12.9,
-          "range_samples": 13,
+          "paired_error": 12.321428571428571,
+          "range_samples": 14,
           "range_width": 33.8,
-          "rmse": 16.86838189312501,
-          "samples": 13,
+          "rmse": 16.305323407665714,
+          "samples": 14,
           "target": "total",
           "trend": [
             {
@@ -8474,6 +8634,14 @@
               "loss": 12.899999999999999,
               "n": 13,
               "prediction": 45.1
+            },
+            {
+              "actual": 51,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA total",
+              "loss": 12.321428571428571,
+              "n": 14,
+              "prediction": 46.2
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -8483,34 +8651,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 11.53076923076923,
-          "baseline_samples": 13,
-          "bias": 7.161538461538462,
+          "baseline_error": 11.885714285714286,
+          "baseline_samples": 14,
+          "bias": 5.392857142857143,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.8461538461538461,
-          "error": 9.684615384615384,
+          "coverage": 0.7857142857142857,
+          "error": 10.25,
           "family": "scoring",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 13,
+            "samples": 14,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 9.684615384615384,
-          "range_samples": 13,
+          "paired_error": 10.25,
+          "range_samples": 14,
           "range_width": 33.6,
-          "rmse": 12.802553831770622,
-          "samples": 13,
+          "rmse": 13.203165204926107,
+          "samples": 14,
           "target": "margin",
           "trend": [
             {
@@ -8616,6 +8784,14 @@
               "loss": 9.684615384615386,
               "n": 13,
               "prediction": 4.7
+            },
+            {
+              "actual": -17,
+              "date": "2026-11-02",
+              "label": "SEA margin",
+              "loss": 10.250000000000002,
+              "n": 14,
+              "prediction": 0.6
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -8625,34 +8801,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 86.66153846153846,
-          "baseline_samples": 26,
-          "bias": -12.896153846153847,
+          "baseline_error": 82.56428571428572,
+          "baseline_samples": 28,
+          "bias": -12.375000000000002,
           "calibration": [],
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.6923076923076923,
-          "error": 79.95,
+          "coverage": 0.7142857142857143,
+          "error": 77.95357142857142,
           "family": "yardage",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 300,
             "reason": "Need 300 graded appearances per non-overlapping window.",
-            "samples": 26,
+            "samples": 28,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 79.95,
-          "range_samples": 26,
-          "range_width": 202.79999999999998,
-          "rmse": 99.19453497663453,
-          "samples": 26,
+          "paired_error": 77.95357142857142,
+          "range_samples": 28,
+          "range_width": 202.8,
+          "rmse": 96.60286338554212,
+          "samples": 28,
           "target": "passing",
           "trend": [
             {
@@ -8862,6 +9038,22 @@
               "loss": 79.95000000000002,
               "n": 26,
               "prediction": 204.7
+            },
+            {
+              "actual": 188,
+              "date": "2026-11-02",
+              "label": "Sam Darnold",
+              "loss": 79.12222222222223,
+              "n": 27,
+              "prediction": 245.6
+            },
+            {
+              "actual": 247,
+              "date": "2026-11-02",
+              "label": "Caleb Williams",
+              "loss": 77.95357142857144,
+              "n": 28,
+              "prediction": 200.6
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -8871,33 +9063,33 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 0.21024430964007923,
-          "baseline_samples": 101,
-          "bias": 0.05336732673267327,
+          "baseline_error": 0.2107498104494673,
+          "baseline_samples": 107,
+          "bias": 0.0620588785046729,
           "calibration": [
             {
               "bin": "0\u201310%",
               "lower": 0,
               "observed": 0,
-              "predicted": 0.07623333333333333,
-              "samples": 6,
-              "upper": 0.3903430336530645
+              "predicted": 0.0774,
+              "samples": 7,
+              "upper": 0.35433884297520657
             },
             {
               "bin": "10\u201320%",
-              "lower": 0.10499864973166874,
-              "observed": 0.2,
-              "predicted": 0.1555275,
-              "samples": 40,
-              "upper": 0.34757607381856676
+              "lower": 0.10234315749205929,
+              "observed": 0.1951219512195122,
+              "predicted": 0.15496585365853657,
+              "samples": 41,
+              "upper": 0.34013882352556724
             },
             {
               "bin": "20\u201330%",
-              "lower": 0.11806238339540162,
-              "observed": 0.2631578947368421,
-              "predicted": 0.24608947368421052,
-              "samples": 19,
-              "upper": 0.48791968441070643
+              "lower": 0.13813675745628204,
+              "observed": 0.2857142857142857,
+              "predicted": 0.2476095238095238,
+              "samples": 21,
+              "upper": 0.49956773822837586
             },
             {
               "bin": "30\u201340%",
@@ -8909,19 +9101,19 @@
             },
             {
               "bin": "40\u201350%",
-              "lower": 0.3126695474501864,
-              "observed": 0.6,
-              "predicted": 0.44348,
-              "samples": 10,
-              "upper": 0.8318224187964902
+              "lower": 0.35379677689163724,
+              "observed": 0.6363636363636364,
+              "predicted": 0.44623636363636365,
+              "samples": 11,
+              "upper": 0.8483377638586862
             },
             {
               "bin": "50\u201360%",
-              "lower": 0.23071993220883708,
-              "observed": 0.6,
-              "predicted": 0.54458,
-              "samples": 5,
-              "upper": 0.8823817688407467
+              "lower": 0.29998832134152864,
+              "observed": 0.6666666666666666,
+              "predicted": 0.5429833333333334,
+              "samples": 6,
+              "upper": 0.9032306674407831
             },
             {
               "bin": "60\u201370%",
@@ -8942,28 +9134,28 @@
           ],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 3,
-            "pending": 8,
+            "missing_stats": 5,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.1951571818811881,
+          "error": 0.19490930158878506,
           "family": "touchdowns",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 500,
             "reason": "Need 500 graded appearances per non-overlapping window.",
-            "samples": 101,
+            "samples": 107,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
-          "log_loss": 0.5740799809566721,
-          "paired_error": 0.1951571818811881,
+          "log_loss": 0.5725486719263668,
+          "paired_error": 0.19490930158878506,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.4417659809007345,
-          "samples": 101,
+          "rmse": 0.4414853356441016,
+          "samples": 107,
           "target": "any_td",
           "trend": [
             {
@@ -9773,6 +9965,54 @@
               "loss": 0.19515718188118816,
               "n": 101,
               "prediction": 0.1752
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "Sam Darnold",
+              "loss": 0.1934159962745098,
+              "n": 102,
+              "prediction": 0.1325
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "D'Andre Swift",
+              "loss": 0.19422638893203883,
+              "n": 103,
+              "prediction": 0.4738
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "Jaxon Smith-Njigba",
+              "loss": 0.19443791403846156,
+              "n": 104,
+              "prediction": 0.535
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "Caleb Williams",
+              "loss": 0.19265396590476194,
+              "n": 105,
+              "prediction": 0.0844
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "Colston Loveland",
+              "loss": 0.1915176048113208,
+              "n": 106,
+              "prediction": 0.2687
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "Luther Burden III",
+              "loss": 0.1949093015887851,
+              "n": 107,
+              "prediction": 0.2554
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -9782,9 +10022,9 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 0.227000012914,
-          "baseline_samples": 26,
-          "bias": -0.11297692307692307,
+          "baseline_error": 0.2169142009180357,
+          "baseline_samples": 28,
+          "bias": -0.08811071428571428,
           "calibration": [
             {
               "bin": "60\u201370%",
@@ -9796,19 +10036,19 @@
             },
             {
               "bin": "70\u201380%",
-              "lower": 0.21521252682444186,
-              "observed": 0.5,
-              "predicted": 0.745825,
-              "samples": 8,
-              "upper": 0.7847874731755582
+              "lower": 0.2666473457440297,
+              "observed": 0.5555555555555556,
+              "predicted": 0.7409111111111111,
+              "samples": 9,
+              "upper": 0.811224570528086
             },
             {
               "bin": "80\u201390%",
-              "lower": 0.4525833436728054,
-              "observed": 0.7777777777777778,
-              "predicted": 0.8667222222222222,
-              "samples": 9,
-              "upper": 0.9367762376877727
+              "lower": 0.49015684672072335,
+              "observed": 0.8,
+              "predicted": 0.86286,
+              "samples": 10,
+              "upper": 0.9433190520193067
             },
             {
               "bin": "90\u2013100%",
@@ -9822,27 +10062,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 2,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.21024353846153845,
+          "error": 0.1994615775,
           "family": "touchdowns",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 500,
             "reason": "Need 500 graded appearances per non-overlapping window.",
-            "samples": 26,
+            "samples": 28,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
-          "log_loss": 0.605152661227175,
-          "paired_error": 0.21024353846153845,
+          "log_loss": 0.5813207995990428,
+          "paired_error": 0.1994615775,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.45852321474658014,
-          "samples": 26,
+          "rmse": 0.44661121515250823,
+          "samples": 28,
           "target": "pass_td",
           "trend": [
             {
@@ -10052,6 +10292,22 @@
               "loss": 0.2102435384615384,
               "n": 26,
               "prediction": 0.729
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "Sam Darnold",
+              "loss": 0.2035511707407407,
+              "n": 27,
+              "prediction": 0.8281
+            },
+            {
+              "actual": 1,
+              "date": "2026-11-02",
+              "label": "Caleb Williams",
+              "loss": 0.19946157749999996,
+              "n": 28,
+              "prediction": 0.7016
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -10061,34 +10317,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 28.06326530612245,
-          "baseline_samples": 49,
-          "bias": -2.0142857142857147,
+          "baseline_error": 27.58653846153846,
+          "baseline_samples": 52,
+          "bias": -0.9211538461538462,
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 3,
-            "pending": 4,
+            "missing_stats": 4,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.7346938775510204,
-          "error": 25.348979591836734,
+          "coverage": 0.7307692307692307,
+          "error": 25.201923076923077,
           "family": "yardage",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 300,
             "reason": "Need 300 graded appearances per non-overlapping window.",
-            "samples": 49,
+            "samples": 52,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 25.348979591836734,
-          "range_samples": 49,
-          "range_width": 62.087755102040816,
-          "rmse": 33.428836995282126,
-          "samples": 49,
+          "paired_error": 25.201923076923077,
+          "range_samples": 52,
+          "range_width": 62.08846153846154,
+          "rmse": 33.03596816059267,
+          "samples": 52,
           "target": "receiving",
           "trend": [
             {
@@ -10482,6 +10738,30 @@
               "loss": 25.348979591836738,
               "n": 49,
               "prediction": 39.6
+            },
+            {
+              "actual": 118,
+              "date": "2026-11-02",
+              "label": "Jaxon Smith-Njigba",
+              "loss": 25.606000000000005,
+              "n": 50,
+              "prediction": 79.8
+            },
+            {
+              "actual": 65,
+              "date": "2026-11-02",
+              "label": "Colston Loveland",
+              "loss": 25.523529411764713,
+              "n": 51,
+              "prediction": 43.6
+            },
+            {
+              "actual": 56,
+              "date": "2026-11-02",
+              "label": "Luther Burden III",
+              "loss": 25.20192307692308,
+              "n": 52,
+              "prediction": 64.8
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -10491,34 +10771,34 @@
         },
         {
           "accuracy": null,
-          "baseline_error": 34.35,
-          "baseline_samples": 26,
-          "bias": 10.873076923076924,
+          "baseline_error": 33.596296296296295,
+          "baseline_samples": 27,
+          "bias": 11.037037037037038,
           "calibration": [],
           "counts": {
             "cancelled": 0,
-            "missing_stats": 0,
-            "pending": 2,
+            "missing_stats": 1,
+            "pending": 0,
             "unavailable": 0
           },
-          "coverage": 0.5,
-          "error": 36.67307692307693,
+          "coverage": 0.5185185185185185,
+          "error": 35.88148148148148,
           "family": "yardage",
-          "games": 13,
+          "games": 14,
           "health": {
             "minimum": 300,
             "reason": "Need 300 graded appearances per non-overlapping window.",
-            "samples": 26,
+            "samples": 27,
             "status": "sample_building",
             "unit": "appearances",
             "windows": []
           },
           "log_loss": null,
-          "paired_error": 36.67307692307693,
-          "range_samples": 26,
-          "range_width": 61.61538461538461,
-          "rmse": 46.64930950103203,
-          "samples": 26,
+          "paired_error": 35.88148148148148,
+          "range_samples": 27,
+          "range_width": 61.614814814814814,
+          "rmse": 45.87188277833852,
+          "samples": 27,
           "target": "rushing",
           "trend": [
             {
@@ -10728,6 +11008,14 @@
               "loss": 36.67307692307692,
               "n": 26,
               "prediction": 46.9
+            },
+            {
+              "actual": 69,
+              "date": "2026-11-02",
+              "label": "D'Andre Swift",
+              "loss": 35.88148148148148,
+              "n": 27,
+              "prediction": 53.7
             }
           ],
           "version": "35b3afd7279bc09a",
@@ -10736,10 +11024,10 @@
           ]
         },
         {
-          "accuracy": 0.5609756097560976,
+          "accuracy": 0.5476190476190477,
           "baseline_error": 0.25,
-          "baseline_samples": 41,
-          "bias": -0.041609662044215706,
+          "baseline_samples": 42,
+          "bias": -0.05336585638361127,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -10767,11 +11055,11 @@
             },
             {
               "bin": "50\u201360%",
-              "lower": 0.30573785458380187,
-              "observed": 0.625,
-              "predicted": 0.5404301695596025,
-              "samples": 8,
-              "upper": 0.863158240538479
+              "lower": 0.2666473457440297,
+              "observed": 0.5555555555555556,
+              "predicted": 0.5398679089750721,
+              "samples": 9,
+              "upper": 0.811224570528086
             },
             {
               "bin": "60\u201370%",
@@ -10801,27 +11089,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2568601415908252,
+          "error": 0.2575687298569903,
           "family": "winners",
-          "games": 41,
+          "games": 42,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 41,
+            "samples": 42,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.7061565309163143,
-          "paired_error": 0.2568601415908252,
+          "log_loss": 0.7075936018683812,
+          "paired_error": 0.2575687298569903,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5068137148803544,
-          "samples": 41,
+          "rmse": 0.5075122952766665,
+          "samples": 42,
           "target": "winner:v4_a",
           "trend": [
             {
@@ -11151,6 +11439,14 @@
               "loss": 0.2568601415908251,
               "n": 41,
               "prediction": 0.6109276218817888
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA",
+              "loss": 0.2575687298569902,
+              "n": 42,
+              "prediction": 0.5353698242988293
             }
           ],
           "version": "all",
@@ -11367,10 +11663,10 @@
           ]
         },
         {
-          "accuracy": 0.6296296296296297,
+          "accuracy": 0.6071428571428571,
           "baseline_error": 0.25,
-          "baseline_samples": 27,
-          "bias": 0.0043724226520263825,
+          "baseline_samples": 28,
+          "bias": -0.014904086167647034,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -11398,11 +11694,11 @@
             },
             {
               "bin": "50\u201360%",
-              "lower": 0.43649056343635395,
-              "observed": 0.8333333333333334,
-              "predicted": 0.538690365948596,
-              "samples": 6,
-              "upper": 0.9699474141282697
+              "lower": 0.35892909014821267,
+              "observed": 0.7142857142857143,
+              "predicted": 0.5382160028557721,
+              "samples": 7,
+              "upper": 0.9177828342909844
             },
             {
               "bin": "60\u201370%",
@@ -11432,27 +11728,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.24099199740936025,
+          "error": 0.2426215992436602,
           "family": "winners",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 27,
+            "samples": 28,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6715641874202691,
-          "paired_error": 0.24099199740936025,
+          "log_loss": 0.6749552346875141,
+          "paired_error": 0.2426215992436602,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.4909093576306733,
-          "samples": 27,
+          "rmse": 0.4925663399417993,
+          "samples": 28,
           "target": "winner:v4_a",
           "trend": [
             {
@@ -11670,6 +11966,14 @@
               "loss": 0.24099199740936025,
               "n": 27,
               "prediction": 0.6109276218817888
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA",
+              "loss": 0.24262159924366022,
+              "n": 28,
+              "prediction": 0.5353698242988293
             }
           ],
           "version": "ac161c2fa5d3",
@@ -11678,10 +11982,10 @@
           ]
         },
         {
-          "accuracy": 0.5609756097560976,
+          "accuracy": 0.5714285714285714,
           "baseline_error": 0.25,
-          "baseline_samples": 41,
-          "bias": -0.04710059279485259,
+          "baseline_samples": 42,
+          "bias": -0.05784982809505135,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -11701,11 +12005,11 @@
             },
             {
               "bin": "40\u201350%",
-              "lower": 0.045586062644636216,
-              "observed": 0.25,
-              "predicted": 0.4679274001063785,
-              "samples": 4,
-              "upper": 0.6993639475573634
+              "lower": 0.03622316096978745,
+              "observed": 0.2,
+              "predicted": 0.4740556151657429,
+              "samples": 5,
+              "upper": 0.6244717358814613
             },
             {
               "bin": "50\u201360%",
@@ -11743,27 +12047,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.25642251977228936,
+          "error": 0.25623556750785087,
           "family": "winners",
-          "games": 41,
+          "games": 42,
           "health": {
             "minimum": 100,
             "reason": "Choose one model version for health assessment.",
-            "samples": 41,
+            "samples": 42,
             "status": "version_required",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.7062095148078759,
-          "paired_error": 0.25642251977228936,
+          "log_loss": 0.7058304364097263,
+          "paired_error": 0.25623556750785087,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.5063817924968169,
-          "samples": 41,
+          "rmse": 0.506197162682537,
+          "samples": 42,
           "target": "winner:v4_qb_plus",
           "trend": [
             {
@@ -12093,6 +12397,14 @@
               "loss": 0.2564225197722893,
               "n": 41,
               "prediction": 0.6614691447520044
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA",
+              "loss": 0.2562355675078508,
+              "n": 42,
+              "prediction": 0.49856847540320054
             }
           ],
           "version": "all",
@@ -12309,10 +12621,10 @@
           ]
         },
         {
-          "accuracy": 0.6666666666666666,
+          "accuracy": 0.6785714285714286,
           "baseline_error": 0.25,
-          "baseline_samples": 27,
-          "bias": -0.0009393465227752483,
+          "baseline_samples": 28,
+          "bias": -0.018711815411361864,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -12334,9 +12646,9 @@
               "bin": "40\u201350%",
               "lower": 0,
               "observed": 0,
-              "predicted": 0.4731079660787219,
-              "samples": 2,
-              "upper": 0.6576280471103807
+              "predicted": 0.4815948025202148,
+              "samples": 3,
+              "upper": 0.5615060804490177
             },
             {
               "bin": "50\u201360%",
@@ -12374,27 +12686,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.23625591918886366,
+          "error": 0.23669572652732823,
           "family": "winners",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 27,
+            "samples": 28,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6640746971819955,
-          "paired_error": 0.23625591918886366,
+          "log_loss": 0.6650108944999813,
+          "paired_error": 0.23669572652732823,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.4860616413469218,
-          "samples": 27,
+          "rmse": 0.4865138502934199,
+          "samples": 28,
           "target": "winner:v4_qb_plus",
           "trend": [
             {
@@ -12612,6 +12924,14 @@
               "loss": 0.23625591918886357,
               "n": 27,
               "prediction": 0.6614691447520044
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA",
+              "loss": 0.23669572652732815,
+              "n": 28,
+              "prediction": 0.49856847540320054
             }
           ],
           "version": "ac161c2fa5d3",
@@ -12620,10 +12940,10 @@
           ]
         },
         {
-          "accuracy": 0.5555555555555556,
+          "accuracy": 0.5714285714285714,
           "baseline_error": 0.25,
-          "baseline_samples": 27,
-          "bias": -0.0031304478059259854,
+          "baseline_samples": 28,
+          "bias": -0.019433806287776644,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -12643,11 +12963,11 @@
             },
             {
               "bin": "40\u201350%",
-              "lower": 0.15003570882017148,
-              "observed": 0.5,
-              "predicted": 0.45308094654543607,
-              "samples": 4,
-              "upper": 0.8499642911798285
+              "lower": 0.1176182311592533,
+              "observed": 0.4,
+              "predicted": 0.4543896542958978,
+              "samples": 5,
+              "upper": 0.769280067791163
             },
             {
               "bin": "50\u201360%",
@@ -12685,27 +13005,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.24728447465101325,
+          "error": 0.24599769582366338,
           "family": "winners",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 27,
+            "samples": 28,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.686739276033916,
-          "paired_error": 0.24728447465101325,
+          "log_loss": 0.6841946941578448,
+          "paired_error": 0.24599769582366338,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.49727706025013185,
-          "samples": 27,
+          "rmse": 0.49598154786611104,
+          "samples": 28,
           "target": "winner:v5_boosted",
           "trend": [
             {
@@ -12923,6 +13243,14 @@
               "loss": 0.24728447465101328,
               "n": 27,
               "prediction": 0.6430500427346874
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA",
+              "loss": 0.2459976958236634,
+              "n": 28,
+              "prediction": 0.45962448529774447
             }
           ],
           "version": "all",
@@ -12931,10 +13259,10 @@
           ]
         },
         {
-          "accuracy": 0.5555555555555556,
+          "accuracy": 0.5714285714285714,
           "baseline_error": 0.25,
-          "baseline_samples": 27,
-          "bias": -0.0031304478059259854,
+          "baseline_samples": 28,
+          "bias": -0.019433806287776644,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -12954,11 +13282,11 @@
             },
             {
               "bin": "40\u201350%",
-              "lower": 0.15003570882017148,
-              "observed": 0.5,
-              "predicted": 0.45308094654543607,
-              "samples": 4,
-              "upper": 0.8499642911798285
+              "lower": 0.1176182311592533,
+              "observed": 0.4,
+              "predicted": 0.4543896542958978,
+              "samples": 5,
+              "upper": 0.769280067791163
             },
             {
               "bin": "50\u201360%",
@@ -12996,27 +13324,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.24728447465101325,
+          "error": 0.24599769582366338,
           "family": "winners",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 27,
+            "samples": 28,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.686739276033916,
-          "paired_error": 0.24728447465101325,
+          "log_loss": 0.6841946941578448,
+          "paired_error": 0.24599769582366338,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.49727706025013185,
-          "samples": 27,
+          "rmse": 0.49598154786611104,
+          "samples": 28,
           "target": "winner:v5_boosted",
           "trend": [
             {
@@ -13234,6 +13562,14 @@
               "loss": 0.24728447465101328,
               "n": 27,
               "prediction": 0.6430500427346874
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA",
+              "loss": 0.2459976958236634,
+              "n": 28,
+              "prediction": 0.45962448529774447
             }
           ],
           "version": "ac161c2fa5d3",
@@ -13242,10 +13578,10 @@
           ]
         },
         {
-          "accuracy": 0.6666666666666666,
+          "accuracy": 0.6785714285714286,
           "baseline_error": 0.25,
-          "baseline_samples": 27,
-          "bias": -0.004976230731317534,
+          "baseline_samples": 28,
+          "bias": -0.02249849268436879,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -13267,9 +13603,9 @@
               "bin": "40\u201350%",
               "lower": 0,
               "observed": 0,
-              "predicted": 0.4494728327409886,
-              "samples": 3,
-              "upper": 0.5615060804490177
+              "predicted": 0.46100451590992964,
+              "samples": 4,
+              "upper": 0.48990002040399916
             },
             {
               "bin": "50\u201360%",
@@ -13307,27 +13643,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2366239093612805,
+          "error": 0.23694516007128025,
           "family": "winners",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 27,
+            "samples": 28,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6651731353807848,
-          "paired_error": 0.2366239093612805,
+          "log_loss": 0.6658592667352994,
+          "paired_error": 0.23694516007128025,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.48644003675816044,
-          "samples": 27,
+          "rmse": 0.4867701306276714,
+          "samples": 28,
           "target": "winner:v5_qb_plus",
           "trend": [
             {
@@ -13545,6 +13881,14 @@
               "loss": 0.23662390936128053,
               "n": 27,
               "prediction": 0.6564498719165142
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA",
+              "loss": 0.23694516007128033,
+              "n": 28,
+              "prediction": 0.49559956541675265
             }
           ],
           "version": "all",
@@ -13553,10 +13897,10 @@
           ]
         },
         {
-          "accuracy": 0.6666666666666666,
+          "accuracy": 0.6785714285714286,
           "baseline_error": 0.25,
-          "baseline_samples": 27,
-          "bias": -0.004976230731317534,
+          "baseline_samples": 28,
+          "bias": -0.02249849268436879,
           "calibration": [
             {
               "bin": "20\u201330%",
@@ -13578,9 +13922,9 @@
               "bin": "40\u201350%",
               "lower": 0,
               "observed": 0,
-              "predicted": 0.4494728327409886,
-              "samples": 3,
-              "upper": 0.5615060804490177
+              "predicted": 0.46100451590992964,
+              "samples": 4,
+              "upper": 0.48990002040399916
             },
             {
               "bin": "50\u201360%",
@@ -13618,27 +13962,27 @@
           "counts": {
             "cancelled": 0,
             "missing_stats": 0,
-            "pending": 1,
+            "pending": 0,
             "unavailable": 0
           },
           "coverage": null,
-          "error": 0.2366239093612805,
+          "error": 0.23694516007128025,
           "family": "winners",
-          "games": 27,
+          "games": 28,
           "health": {
             "minimum": 100,
             "reason": "Need 100 graded games per non-overlapping window.",
-            "samples": 27,
+            "samples": 28,
             "status": "sample_building",
             "unit": "games",
             "windows": []
           },
-          "log_loss": 0.6651731353807848,
-          "paired_error": 0.2366239093612805,
+          "log_loss": 0.6658592667352994,
+          "paired_error": 0.23694516007128025,
           "range_samples": 0,
           "range_width": null,
-          "rmse": 0.48644003675816044,
-          "samples": 27,
+          "rmse": 0.4867701306276714,
+          "samples": 28,
           "target": "winner:v5_qb_plus",
           "trend": [
             {
@@ -13856,6 +14200,14 @@
               "loss": 0.23662390936128053,
               "n": 27,
               "prediction": 0.6564498719165142
+            },
+            {
+              "actual": 0,
+              "date": "2026-11-02",
+              "label": "CHI @ SEA",
+              "loss": 0.23694516007128033,
+              "n": 28,
+              "prediction": 0.49559956541675265
             }
           ],
           "version": "ac161c2fa5d3",
@@ -39287,14 +39639,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "CHI",
           "baseline": 0.066667,
-          "baseline_loss": null,
+          "baseline_loss": 0.004444488889,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.1325,
           "family": "touchdowns",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -39303,7 +39655,7 @@
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Sam Darnold",
-          "loss": null,
+          "loss": 0.017556250000000002,
           "player_id": "00-0034869",
           "position": "QB",
           "prediction": 0.1325,
@@ -39311,7 +39663,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0034869",
           "target": "any_td",
           "team": "SEA",
@@ -39319,14 +39671,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 1,
           "away_team": "CHI",
           "baseline": 0.4,
-          "baseline_loss": null,
+          "baseline_loss": 0.36,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 0.5262,
           "family": "touchdowns",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -39335,7 +39687,7 @@
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "D'Andre Swift",
-          "loss": null,
+          "loss": 0.27688644,
           "player_id": "00-0036275",
           "position": "RB",
           "prediction": 0.4738,
@@ -39343,7 +39695,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0036275",
           "target": "any_td",
           "team": "CHI",
@@ -39375,7 +39727,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0037545",
           "target": "any_td",
           "team": "SEA",
@@ -39383,14 +39735,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 1,
           "away_team": "CHI",
           "baseline": 0.466667,
-          "baseline_loss": null,
+          "baseline_loss": 0.2844440888890001,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 0.46499999999999997,
           "family": "touchdowns",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -39399,7 +39751,7 @@
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Jaxon Smith-Njigba",
-          "loss": null,
+          "loss": 0.21622499999999997,
           "player_id": "00-0038543",
           "position": "WR",
           "prediction": 0.535,
@@ -39407,7 +39759,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0038543",
           "target": "any_td",
           "team": "SEA",
@@ -39439,7 +39791,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0038797",
           "target": "any_td",
           "team": "SEA",
@@ -39447,14 +39799,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "CHI",
           "baseline": 0.133333,
-          "baseline_loss": null,
+          "baseline_loss": 0.017777688889000002,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.0844,
           "family": "touchdowns",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -39463,7 +39815,7 @@
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Caleb Williams",
-          "loss": null,
+          "loss": 0.0071233600000000005,
           "player_id": "00-0039918",
           "position": "QB",
           "prediction": 0.0844,
@@ -39471,7 +39823,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0039918",
           "target": "any_td",
           "team": "CHI",
@@ -39479,14 +39831,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 0,
           "away_team": "CHI",
           "baseline": 0.333333,
-          "baseline_loss": null,
+          "baseline_loss": 0.11111088888899999,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -0.2687,
           "family": "touchdowns",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -39495,7 +39847,7 @@
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Colston Loveland",
-          "loss": null,
+          "loss": 0.07219969,
           "player_id": "00-0040126",
           "position": "TE",
           "prediction": 0.2687,
@@ -39503,7 +39855,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0040126",
           "target": "any_td",
           "team": "CHI",
@@ -39511,14 +39863,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 1,
           "away_team": "CHI",
           "baseline": 0.266667,
-          "baseline_loss": null,
+          "baseline_loss": 0.537777288889,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 0.7445999999999999,
           "family": "touchdowns",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -39527,7 +39879,7 @@
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Luther Burden III",
-          "loss": null,
+          "loss": 0.5544291599999999,
           "player_id": "00-0040735",
           "position": "WR",
           "prediction": 0.2554,
@@ -39535,7 +39887,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0040735",
           "target": "any_td",
           "team": "CHI",
@@ -39543,22 +39895,22 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": -17,
           "away_team": "CHI",
           "baseline": -0.5,
-          "baseline_loss": null,
+          "baseline_loss": 16.5,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -17.6,
           "family": "scoring",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": false,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "SEA margin",
-          "loss": null,
+          "loss": 17.6,
           "prediction": 0.6,
           "range": [
             -16.2,
@@ -39567,21 +39919,21 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "margin",
           "version": "35b3afd7279bc09a",
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 1,
           "away_team": "CHI",
           "baseline": 0.615385,
-          "baseline_loss": null,
+          "baseline_loss": 0.14792869822500004,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 0.17190000000000005,
           "family": "touchdowns",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -39590,7 +39942,7 @@
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Sam Darnold",
-          "loss": null,
+          "loss": 0.029549610000000018,
           "player_id": "00-0034869",
           "position": "QB",
           "prediction": 0.8281,
@@ -39598,7 +39950,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0034869",
           "target": "pass_td",
           "team": "SEA",
@@ -39606,14 +39958,14 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 1,
           "away_team": "CHI",
           "baseline": 0.846154,
-          "baseline_loss": null,
+          "baseline_loss": 0.023668591716000012,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 0.2984,
           "family": "touchdowns",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
@@ -39622,7 +39974,7 @@
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Caleb Williams",
-          "loss": null,
+          "loss": 0.08904255999999999,
           "player_id": "00-0039918",
           "position": "QB",
           "prediction": 0.7016,
@@ -39630,7 +39982,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0039918",
           "target": "pass_td",
           "team": "CHI",
@@ -39638,23 +39990,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 188,
           "away_team": "CHI",
           "baseline": 243.3,
-          "baseline_loss": null,
+          "baseline_loss": 55.30000000000001,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -57.599999999999994,
           "family": "yardage",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/fyay8vruj0cqmhopufzk",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Sam Darnold",
-          "loss": null,
+          "loss": 57.599999999999994,
           "player_id": "00-0034869",
           "position": "QB",
           "prediction": 245.6,
@@ -39665,7 +40017,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0034869",
           "target": "passing",
           "team": "SEA",
@@ -39673,23 +40025,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 247,
           "away_team": "CHI",
           "baseline": 250.3,
-          "baseline_loss": null,
+          "baseline_loss": 3.3000000000000114,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 46.400000000000006,
           "family": "yardage",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/h4qs11kutwiw7whekmyt",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Caleb Williams",
-          "loss": null,
+          "loss": 46.400000000000006,
           "player_id": "00-0039918",
           "position": "QB",
           "prediction": 200.6,
@@ -39700,7 +40052,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0039918",
           "target": "passing",
           "team": "CHI",
@@ -39735,7 +40087,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0037545",
           "target": "receiving",
           "team": "SEA",
@@ -39743,23 +40095,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 118,
           "away_team": "CHI",
           "baseline": 128.7,
-          "baseline_loss": null,
+          "baseline_loss": 10.699999999999989,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 38.2,
           "family": "yardage",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/yx1xjrupbqdknnjaq4a6",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": false,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Jaxon Smith-Njigba",
-          "loss": null,
+          "loss": 38.2,
           "player_id": "00-0038543",
           "position": "WR",
           "prediction": 79.8,
@@ -39770,7 +40122,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0038543",
           "target": "receiving",
           "team": "SEA",
@@ -39778,23 +40130,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 65,
           "away_team": "CHI",
           "baseline": 51.0,
-          "baseline_loss": null,
+          "baseline_loss": 14.0,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 21.4,
           "family": "yardage",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/tdeidev1typrqjijtb3a",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Colston Loveland",
-          "loss": null,
+          "loss": 21.4,
           "player_id": "00-0040126",
           "position": "TE",
           "prediction": 43.6,
@@ -39805,7 +40157,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0040126",
           "target": "receiving",
           "team": "CHI",
@@ -39813,23 +40165,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 56,
           "away_team": "CHI",
           "baseline": 90.7,
-          "baseline_loss": null,
+          "baseline_loss": 34.7,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -8.799999999999997,
           "family": "yardage",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/iyuwdz7pbowdkwzq2tg5",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "Luther Burden III",
-          "loss": null,
+          "loss": 8.799999999999997,
           "player_id": "00-0040735",
           "position": "WR",
           "prediction": 64.8,
@@ -39840,7 +40192,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0040735",
           "target": "receiving",
           "team": "CHI",
@@ -39848,23 +40200,23 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 69,
           "away_team": "CHI",
           "baseline": 55.0,
-          "baseline_loss": null,
+          "baseline_loss": 14.0,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 15.299999999999997,
           "family": "yardage",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/owpmwzoilitcodc6cmxo",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "D'Andre Swift",
-          "loss": null,
+          "loss": 15.299999999999997,
           "player_id": "00-0036275",
           "position": "RB",
           "prediction": 53.7,
@@ -39875,7 +40227,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "00-0036275",
           "target": "rushing",
           "team": "CHI",
@@ -39910,7 +40262,7 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "missing_stats",
           "subject": "00-0038797",
           "target": "rushing",
           "team": "SEA",
@@ -39918,22 +40270,22 @@
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 34,
           "away_team": "CHI",
           "baseline": 22.6,
-          "baseline_loss": null,
+          "baseline_loss": 11.399999999999999,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 11.2,
           "family": "scoring",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "CHI points",
-          "loss": null,
+          "loss": 11.2,
           "prediction": 22.8,
           "range": [
             10.9,
@@ -39942,29 +40294,29 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "away",
           "target": "team_points",
           "version": "35b3afd7279bc09a",
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 17,
           "away_team": "CHI",
           "baseline": 22.1,
-          "baseline_loss": null,
+          "baseline_loss": 5.100000000000001,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": -6.399999999999999,
           "family": "scoring",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "SEA points",
-          "loss": null,
+          "loss": 6.399999999999999,
           "prediction": 23.4,
           "range": [
             11.5,
@@ -39973,29 +40325,29 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "home",
           "target": "team_points",
           "version": "35b3afd7279bc09a",
           "week": 8
         },
         {
-          "actual": null,
+          "actual": 51,
           "away_team": "CHI",
           "baseline": 44.7,
-          "baseline_loss": null,
+          "baseline_loss": 6.299999999999997,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Pregame evidence and model cutoffs verified",
-          "error": null,
+          "error": 4.799999999999997,
           "family": "scoring",
           "game_id": "2026_08_CHI_SEA",
           "generated_at": "2026-10-28T01:47:51.769947+00:00",
           "home_team": "SEA",
-          "inside_range": null,
+          "inside_range": true,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "CHI @ SEA total",
-          "loss": null,
+          "loss": 4.799999999999997,
           "prediction": 46.2,
           "range": [
             29.3,
@@ -40004,37 +40356,37 @@
           "saved_at": "2026-10-28T01:47:54.961541+00:00",
           "season": 2026,
           "snapshot_id": "e8ac381a60deafc3e5c4fa6c55bd5abebc739dc161bcfecc8a58902e27d0c2f6",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "total",
           "version": "35b3afd7279bc09a",
           "week": 8
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 0,
+          "away_score": 34,
           "away_team": "CHI",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.28662084876975935,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": -0.5353698242988293,
           "family": "winners",
           "game_date": "2026-11-02",
           "game_id": "2026_08_CHI_SEA",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "incorrect",
+          "home_score": 17,
           "home_team": "SEA",
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "CHI @ SEA",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.766513510903126,
+          "loss": 0.28662084876975935,
           "model": "v4_a",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 0,
           "pick": "SEA",
           "prediction": 0.5353698242988293,
           "probability": 0.5353698242988293,
@@ -40046,7 +40398,7 @@
           "saved_at": "2026-10-28T01:47:37.427690+00:00",
           "season": 2026,
           "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v4_a",
           "training_cutoff": "2026 W5",
@@ -40054,30 +40406,30 @@
           "week": 8
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 0,
+          "away_score": 34,
           "away_team": "CHI",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.2485705246658718,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": -0.49856847540320054,
           "family": "winners",
           "game_date": "2026-11-02",
           "game_id": "2026_08_CHI_SEA",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 17,
           "home_team": "SEA",
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "CHI @ SEA",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.6902882220855951,
+          "loss": 0.2485705246658718,
           "model": "v4_qb_plus",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 0,
           "pick": "CHI",
           "prediction": 0.49856847540320054,
           "probability": 0.49856847540320054,
@@ -40089,7 +40441,7 @@
           "saved_at": "2026-10-28T01:47:37.427690+00:00",
           "season": 2026,
           "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v4_qb_plus",
           "training_cutoff": "2026 W5",
@@ -40097,30 +40449,30 @@
           "week": 8
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 0,
+          "away_score": 34,
           "away_team": "CHI",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.2112546674852165,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": -0.45962448529774447,
           "family": "winners",
           "game_date": "2026-11-02",
           "game_id": "2026_08_CHI_SEA",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 17,
           "home_team": "SEA",
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "CHI @ SEA",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.6154909835039217,
+          "loss": 0.2112546674852165,
           "model": "v5_boosted",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 0,
           "pick": "CHI",
           "prediction": 0.45962448529774447,
           "probability": 0.45962448529774447,
@@ -40132,7 +40484,7 @@
           "saved_at": "2026-10-28T01:47:37.427690+00:00",
           "season": 2026,
           "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v5_boosted",
           "training_cutoff": "2026 W6",
@@ -40140,30 +40492,30 @@
           "week": 8
         },
         {
-          "actual": null,
-          "away_score": null,
+          "actual": 0,
+          "away_score": 34,
           "away_team": "CHI",
           "baseline": 0.5,
-          "baseline_loss": null,
-          "brier": null,
+          "baseline_loss": 0.25,
+          "brier": 0.2456189292412741,
           "date": "2026-11-02",
           "eligibility": "verified",
           "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
-          "error": null,
+          "error": -0.49559956541675265,
           "family": "winners",
           "game_date": "2026-11-02",
           "game_id": "2026_08_CHI_SEA",
-          "grade": "pending",
-          "home_score": null,
+          "grade": "correct",
+          "home_score": 17,
           "home_team": "SEA",
           "inside_range": null,
           "kickoff": "2026-11-03T01:15:00+00:00",
           "label": "CHI @ SEA",
-          "log_loss": null,
-          "loss": null,
+          "log_loss": 0.684384813307193,
+          "loss": 0.2456189292412741,
           "model": "v5_qb_plus",
           "model_version": "ac161c2fa5d3",
-          "outcome": null,
+          "outcome": 0,
           "pick": "CHI",
           "prediction": 0.49559956541675265,
           "probability": 0.49559956541675265,
@@ -40175,7 +40527,7 @@
           "saved_at": "2026-10-28T01:47:37.427690+00:00",
           "season": 2026,
           "snapshot_id": "08d05e105ff138b177e13a4d2d878ab107a7348eedbb0edb7403c33277d46ca8",
-          "status": "pending",
+          "status": "graded",
           "subject": "game",
           "target": "winner:v5_qb_plus",
           "training_cutoff": "2026 W6",
@@ -40199,5 +40551,5 @@
     "windows": 2
   },
   "schema_version": 1,
-  "updated_at": "2026-11-02T22:20:54.960366+00:00"
+  "updated_at": "2026-11-03T10:03:54.079340+00:00"
 }

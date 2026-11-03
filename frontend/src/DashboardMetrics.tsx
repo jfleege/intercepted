@@ -1,3 +1,4 @@
+import AnimatedNumber from './AnimatedNumber';
 import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useId, useState } from 'react';
 import { MODEL_LABELS, MODEL_ORDER } from './predictionModels';
@@ -7,7 +8,6 @@ import { modelAgreement, seasonRecord } from './dashboardMetrics';
 import type { PerformanceFeed } from './dashboardMetrics';
 import './DashboardMetrics.css';
 
-const pct = (value: number | null) => value === null ? '—' : `${(value * 100).toFixed(1)}%`;
 function AccuracyChart({ values }: { values: number[] }) {
   const id = useId();
   const points = values.map((value, i) => `${8 + i / Math.max(1, values.length - 1) * 204},${70 - value * 60}`);
@@ -47,7 +47,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
     <div className="pulse-grid">
       <article className="pulse-card">
         <div className="pulse-card-top"><h3>Model accuracy</h3><span className="pulse-badge">VERIFIED</span></div>
-        <div className="pulse-card-main"><div><strong className="pulse-value">{ready ? pct(record.accuracy) : '—'}</strong>
+        <div className="pulse-card-main"><div><strong className="pulse-value"><AnimatedNumber value={ready && record.accuracy !== null ? record.accuracy * 100 : null} decimals={1} suffix="%"/></strong>
           <p className="pulse-support">{ready && record.graded ? `${record.correct}W – ${record.incorrect}L` : 'No graded games yet'}</p></div>
           <div className="pulse-visual"><AccuracyChart values={record.trend}/><span>Cumulative · game by game</span></div>
         </div>
@@ -56,7 +56,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
       </article>
       <article className="pulse-card">
         <div className="pulse-card-top"><h3>Forecasts this season</h3><span className="pulse-badge">THROUGH W{data?.week ?? '—'}</span></div>
-        <div className="pulse-card-main"><div><strong className="pulse-value">{ready ? record.total : '—'}</strong><p className="pulse-support">{MODEL_LABELS[recordModel]}</p></div>
+        <div className="pulse-card-main"><div><strong className="pulse-value"><AnimatedNumber value={ready ? record.total : null}/></strong><p className="pulse-support">{MODEL_LABELS[recordModel]}</p></div>
           <div className="pulse-visual"><div className="pulse-week-bars" role="img" aria-label={record.weekly.map(w => `Week ${w.week}: ${w.total} forecasts, ${w.correct + w.incorrect} graded`).join('; ') || 'No saved forecasts'}>
             {record.weekly.map(w => <div className="pulse-week" key={w.week}><div className="pulse-week-column" title={`Week ${w.week}: ${w.total} forecasts, ${w.correct + w.incorrect} graded`} style={{height: `${w.total / maxWeek * 64}px`}}><span style={{height:`${(w.correct + w.incorrect) / w.total * 100}%`}}/></div><small>W{w.week}</small></div>)}
           </div><span><i className="pulse-legend"/> Graded <i className="pulse-legend pending"/> Pending / other</span></div>
@@ -65,7 +65,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
       </article>
       <article className="pulse-card">
         <div className="pulse-card-top"><h3>Model agreement</h3><span className="pulse-badge">WEEK {data?.week ?? '—'}</span></div>
-        <div className="pulse-card-main"><div><strong className="pulse-value">{pct(agreement.rate)}</strong><p className="pulse-support">{agreement.total ? `${agreement.unanimous} / ${agreement.total} unanimous picks` : 'Need two saved models'}</p></div>
+        <div className="pulse-card-main"><div><strong className="pulse-value"><AnimatedNumber value={agreement.rate === null ? null : agreement.rate * 100} decimals={1} suffix="%"/></strong><p className="pulse-support">{agreement.total ? `${agreement.unanimous} / ${agreement.total} unanimous picks` : 'Need two saved models'}</p></div>
           <div className="pulse-visual"><div className="pulse-consensus" role="img" aria-label={`Pick consensus by matchup, ${agreement.models.length} models. ${agreement.points.map(p => `${p.away} at ${p.home}: ${p.pick ? `${p.votes} of ${p.total} pick ${p.pick}` : 'even split'}`).join('; ')}`}>
             {agreement.points.map(p => <span className={p.share === 1 ? 'unanimous' : ''} key={p.gameId} style={{height:`${p.share * 64}px`}} title={`${p.away} @ ${p.home}: ${p.pick ? `${p.votes}/${p.total} pick ${p.pick}` : 'Even split'}`}/>)}
           </div><span>Pick consensus by matchup</span></div>

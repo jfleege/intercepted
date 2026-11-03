@@ -210,3 +210,6 @@
 .dashboard-shell .dp-touchdown-stat strong { color:#64d8ba; font:600 26px/1.1 Barlow,sans-serif; }
 .dashboard-shell .dp-touchdown-stat span { color:var(--ud-text); font-size:11px; }
 .dashboard-shell .dp-touchdown-stat small { color:var(--ud-muted); font-size:10px; }
+
+/* Number interpolation drives these marks directly; avoid a second CSS animation. */
+.dashboard-shell .ud-probability-fill, .dashboard-shell .ud-winner-arc, .dashboard-shell .ud-selected-fill { animation: none; }

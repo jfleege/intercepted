@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-11-03T16:41:25.030654+00:00",
+  "created_at": "2026-11-04T16:22:55.883783+00:00",
   "models": {
     "anytime_td": {
       "calibration_cutoff": [
@@ -33,7 +33,7 @@
         "is_te"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "e2bf107463aee6efd74221c0dadedcb8baad70d3a6e780c0bc4f1ae6b37ea0d9",
+      "sha256": "16e9f881c460a68be44a8656f0a13c145e7472a665a06617c29682b4d65f0153",
       "training_cutoff": [
         2025,
         18
@@ -72,7 +72,7 @@
         "is_te"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "900b36b39da25a4a287a3b53d21da43cfe3be5a9bdf829401b64ee8842dfb7f5",
+      "sha256": "b8c666453af9d0a82353a53231fcebc3b0c88fc91cda49b45666c9ba248bc93f",
       "training_cutoff": [
         2025,
         18
@@ -229,9 +229,9 @@
   "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
   "source_sha256": {
     "pbp_current": "730d0d0d4b1b946ac6f191e009bdcf32c659190e45bcbb2e9bfbeedd8f87cb38",
-    "players_current": "3b141c1ba96c818848de1c348d9afa426304d8a53bc5b9454a287cedac70d94c",
+    "players_current": "78bb2c43f3b5d041567927337b101224034ee6d1b786d680f567d6fb3880cfe7",
     "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
-    "schedules_current": "a46e0fde0e62e0bcca0e44760b46c008f3e306d6e8d5cf64d805287c148ac534",
+    "schedules_current": "9cf4a747392d024f2a5ff467d58d73e8bcf43873db8fd7010edd9a3242c2abe2",
     "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
   },
   "status": "experimental",
@@ -462,5 +462,5 @@
       }
     }
   },
-  "version": "d9dc5fc3d2b9c070"
+  "version": "682aced48d97f9fc"
 }

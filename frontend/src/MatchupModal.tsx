@@ -221,7 +221,6 @@ export default function MatchupModal({
   </div>
 </div>
 
-<AvailabilityImpact game={game} model={model}/>
 {(['away','home'] as const).map(side=>game[`${side}_qb_selection`]?.ngs_coverage_note && <p className="qb-coverage-note ic-coverage-note" key={side}><strong>{game[`${side}_team`]} tracking inputs</strong><span>{game[`${side}_qb_selection`]?.ngs_coverage_note}</span></p>)}
 
 
@@ -293,6 +292,7 @@ export default function MatchupModal({
 
         <div className="ic-content" role="tabpanel">
           {archived && <p className="ic-footnote">Archived prediction. Research is shown only when a saved pregame snapshot exists for this week; current player cards and sportsbook lines are excluded.</p>}
+          {tab === "overview" && <AvailabilityImpact game={game} model={model}/>}
           {(tab === "overview" || tab === "periods") && <MatchupProjections game={game} mode={tab === "periods" ? "periods" : "forecasts"}/>}
           {tab === "overview" && <details className="mr-method ic-model-details"><summary>Compare saved winner models</summary>{(["v5_qb_plus", "v5_boosted", "v4_a", "v4_qb_plus"] as Model[]).map(option => {
             const p = game[("home_win_prob_" + option) as keyof Matchup];

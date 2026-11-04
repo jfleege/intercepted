@@ -103,7 +103,7 @@ def merge_revisions(current, regenerated, schedules, now):
     by_id = {g['game_id']: g for g in schedules}
     replacement = {g['game_id']: g for g in regenerated['games']
                    if g['game_id'] in by_id and kickoff(by_id[g['game_id']]) and stamp(kickoff(by_id[g['game_id']])) > stamp(now)}
-    result = {**current, 'generated_at': now, 'revision_reason': 'Sourced QB starter update',
+    result = {**current, 'generated_at': now, 'revision_reason': 'Sourced starter or availability update',
               'games': [replacement.get(g['game_id'], g) for g in current['games']]}
     if 'qb_coverage' in current or 'qb_coverage' in regenerated:
         from src.features.qb_coverage import coverage_metadata

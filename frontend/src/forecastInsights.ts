@@ -22,7 +22,7 @@ export function findContext(feed:ForecastInsights|null,slate:{season:number;week
  const matches=feed!.players.filter(p=>p.player_id===id&&p.game_id===game&&p.team===team&&p.opponent===opponent);
  return matches.length===1?matches[0]:null;
 }
-export function reportedOut(context:PlayerContext|null,now:number){return !!context&&context.availability.blocked&&context.availability.status==='Out'&&fresh(context.availability.observed_at,now)&&Number.isFinite(Date.parse(context.kickoff??''))&&now<Date.parse(context.kickoff!);}
+export function reportedOut(context:PlayerContext|null,now:number){return !!context&&context.availability.blocked&&['Out','Injured Reserve'].includes(context.availability.status)&&fresh(context.availability.observed_at,now)&&Number.isFinite(Date.parse(context.kickoff??''))&&now<Date.parse(context.kickoff!);}
 export function availabilityLabel(context:PlayerContext|null,now:number){
  if(!context)return 'Availability unknown';
  if(!context.kickoff||now>=Date.parse(context.kickoff))return 'Pregame snapshot · game started/time unknown';

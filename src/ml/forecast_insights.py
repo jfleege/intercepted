@@ -162,6 +162,8 @@ def monitor(predictions,research,directory,contexts,events,performance,sources,n
                 name=next(c['name'] for c in group if c['player_id'] in qbs)
                 alert('qb_depth:'+g['game_id']+':'+team,'watch',f'{team}: published QB {g.get(f"{side}_projected_qb_name","unknown")} differs from first-unit depth listing {name}. A depth chart is not a game-day confirmation; review before revising.',game_id=g['game_id'])
         for c in group:
+            if c['availability']['status'] in ('Questionable','Doubtful') and within(c['availability'].get('observed_at'),now):
+                alert('availability_watch:'+g['game_id']+':'+c['player_id'],'watch',f'{c["name"]}: {c["availability"]["status"]} ({c["availability"].get("injury") or "injury detail unavailable"}). Forecasts remain conditional on the displayed starters; review backup scenarios where available.',game_id=g['game_id'])
             if c['availability']['blocked'] and within(c['availability'].get('observed_at'),now):alert('reported_out:'+g['game_id']+':'+c['player_id'],'watch',f'{c["name"]} is reported out. Saved projections remain conditional; current recommendations exclude this player.',game_id=g['game_id'])
     for name,s in sources.items():
         if s.get('status')!='available':alert('source:'+name,'watch',f'{name.replace("_"," ").title()} source unavailable; availability is not inferred.')
@@ -204,9 +206,15 @@ def source_tables(season,now):
 
 
 def export(root=ROOT,now=None,fetch_sources=True):
+    live_clock=now is None
     now=now or utcnow();public=root/'frontend/public';predictions=read(public/'predictions.json');research=read(public/'matchup_research.json');directory=read(public/'player_intelligence.json');performance=read(public/'research_performance.json')
     state_path=root/f'data/tracking/forecast_insights/{predictions["season"]}-week-{predictions["week"]}.json';state=read(state_path)
-    if fetch_sources:tables,sources=source_tables(predictions['season'],now)
+    if fetch_sources:
+        tables,sources=source_tables(predictions['season'],now)
+        from src.features.injury_updates import fetch_supplement, supplement
+        extra,sources['espn_injuries']=fetch_supplement(directory,predictions['season'],predictions['week'],None if live_clock else now)
+        tables['injuries']=supplement(tables.get('injuries',[]),extra)
+        if live_clock:now=utcnow()
     else:
         previous=read(public/'forecast_insights.json');sources=previous.get('sources',{});tables={}
     if fetch_sources:

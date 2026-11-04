@@ -103,16 +103,16 @@ def build_context(predictions, directory, research, injuries, depth, sources, no
         pregame=bool(start and stamp(now)<stamp(start))
         rows=injury_map[(team,pid)]
         src=sources.get('injuries',{})
-        usable=pregame and src.get('status')=='available' and within(src.get('observed_at'),now)
+        usable=pregame and (src.get('status')=='available' and within(src.get('observed_at'),now) or len(rows)==1 and within(rows[0].get('_observed_at'),now))
         # Ambiguous duplicate rows never become an automatic absence or healthy designation.
         row=rows[0] if len(rows)==1 and usable else {}
         if row.get('date_modified') and not within(row['date_modified'],now): row={}
         status=row.get('report_status')
-        availability={'status':status if status in ('Out','Doubtful','Questionable') else 'unknown',
+        availability={'status':status if status in ('Out','Doubtful','Questionable','Injured Reserve') else 'unknown',
                       'practice':row.get('practice_status'), 'injury':row.get('report_primary_injury') or row.get('practice_primary_injury'),
-                      'observed_at':src.get('observed_at') if row else None, 'report_updated_at':row.get('date_modified'),
-                      'source':SOURCE, 'reason':'Current-week source row; observation time is not the report update time.' if row else 'No unique, current, pregame injury report row. Availability is unknown.',
-                      'blocked':status=='Out' and bool(row)}
+                      'observed_at':row.get('_observed_at',src.get('observed_at')) if row else None, 'report_updated_at':row.get('date_modified'),
+                      'source':row.get('_source',SOURCE), 'reason':'Current-week source row; observation time is not the report update time.' if row else 'No unique, current, pregame injury report row. Availability is unknown.',
+                      'blocked':status in ('Out','Injured Reserve') and bool(row)}
         entries=charts[(team,pid)];latest=max((r['dt'] for r in entries),default=None)
         entries=[r for r in entries if r['dt']==latest and r['pos_abb']==p['position']]
         ranks=[r['pos_rank'] for r in entries if finite(r.get('pos_rank')) and r['pos_rank']>=1]

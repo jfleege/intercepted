@@ -1,0 +1,35 @@
+.availability-callout {
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 0 20px;
+  padding: 14px 16px 14px 24px;
+  border: 1px solid #d99b4366;
+  border-radius: 10px;
+  background: #d99b4312;
+  color: #e5edf3;
+  font: 400 13px/1.5 Barlow, sans-serif;
+  overflow-wrap: anywhere;
+}
+.availability-callout::before {
+  content: '';
+  position: absolute;
+  inset: 14px auto 14px 10px;
+  width: 3px;
+  border-radius: 3px;
+  background: #eab363;
+}
+.availability-callout-heading { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; color: #efbd77; }
+.availability-callout-heading svg { flex-shrink: 0; }
+.availability-callout-heading strong { font-weight: 600; font-size: 14px; }
+.availability-callout .availability-callout-players { list-style: none; padding: 0; margin: 0; display: grid; gap: 4px; }
+.availability-callout-players li { display: flex; flex-wrap: wrap; column-gap: 8px; align-items: baseline; }
+.availability-callout a { color: #efbd77; text-decoration: underline; text-underline-offset: 3px; }
+.availability-callout a:focus-visible { outline: 2px solid #efbd77; outline-offset: 3px; border-radius: 2px; }
+.availability-callout .availability-callout-note { font-size: 12px; color: #b7c7d1; line-height: 1.5; margin: 8px 0 0; }
+.availability-callout-scenarios { display: grid; gap: 6px; font-size: 12px; }
+.availability-callout-scenarios:not(:empty) { margin-top: 10px; padding-top: 10px; border-top: 1px solid #d99b4333; }
+.mx-briefing > .availability-callout { margin-top: 16px; margin-bottom: 16px; }
+@media (max-width: 650px) {
+  .availability-callout { padding: 12px 12px 12px 22px; font-size: 12px; }
+  .availability-callout-heading strong { font-size: 13px; }
+}

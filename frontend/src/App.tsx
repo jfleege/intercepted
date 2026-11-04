@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import { fetchSnapshot } from "./snapshotCache";
 import { filterGames } from "./matchupFilters";
 import { lazy, memo, useCallback, useEffect, useRef, useState } from "react";
@@ -145,22 +146,22 @@ const focusedGame =
             href="#dashboard"
             className={`dash-nav-item${page === "dashboard" ? " active" : ""}`} aria-current={page === "dashboard" ? "page" : undefined}
           >
-            <span className="dash-nav-icon">⌂</span>
+            <span className="dash-nav-icon"><InterfaceIcon name="dashboard" /></span>
             <span className="dash-nav-label">Dashboard</span>
           </a>
           <a
             href="#matchups"
             className={`dash-nav-item${page === "matchups" ? " active" : ""}`} aria-current={page === "matchups" ? "page" : undefined}
           >
-            <span className="dash-nav-icon">◉</span>
+            <span className="dash-nav-icon"><InterfaceIcon name="matchups" /></span>
             <span className="dash-nav-label">Matchups</span>
           </a>
           <a href="#performance" className={`dash-nav-item${page === "performance" ? " active" : ""}`} aria-current={page === "performance" ? "page" : undefined}>
-            <span className="dash-nav-icon">▥</span><span className="dash-nav-label">Performance</span>
+            <span className="dash-nav-icon"><InterfaceIcon name="performance" /></span><span className="dash-nav-label">Performance</span>
           </a>
-          <a href="#players" className={`dash-nav-item${page === "players" ? " active" : ""}`} aria-current={page === "players" ? "page" : undefined}><span className="dash-nav-icon">⌁</span><span className="dash-nav-label">Players</span></a>
+          <a href="#players" className={`dash-nav-item${page === "players" ? " active" : ""}`} aria-current={page === "players" ? "page" : undefined}><span className="dash-nav-icon"><InterfaceIcon name="players" /></span><span className="dash-nav-label">Players</span></a>
           <a href="#markets" className={`dash-nav-item${page === "markets" ? " active" : ""}`} aria-current={page === "markets" ? "page" : undefined}>
-            <span className="dash-nav-icon">↗</span><span className="dash-nav-label">Markets</span>
+            <span className="dash-nav-icon"><InterfaceIcon name="markets" /></span><span className="dash-nav-label">Markets</span>
           </a>
         </nav>
         <div className="dash-sidebar-bottom">
@@ -168,7 +169,7 @@ const focusedGame =
             <span className="dash-whats-new-label">What’s new</span>
             <strong>More ways to explore.</strong>
             <p>Model-likelihood Markets, more cross-game combinations, and clearer forecast updates.</p>
-            <a href="#markets">Explore Markets <span aria-hidden="true">→</span></a>
+            <a href="#markets">Explore Markets <InterfaceIcon name="right" /></a>
           </section>
           <div className="dash-side-note">
             <strong>INTERCEPTED</strong>

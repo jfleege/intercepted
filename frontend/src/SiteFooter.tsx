@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import './SiteInfo.css';
 
 function showDataStatus() {
@@ -24,7 +25,7 @@ export default function SiteFooter({inert}: {inert: boolean}) {
         <h2>Behind the numbers</h2>
         <a href="#methodology">Models &amp; data sources</a>
         <button type="button" onClick={showDataStatus}>Data status</button>
-        <a href="https://github.com/jfleege/intercepted/issues/new" target="_blank" rel="noreferrer">Report an issue <span className="sr-only">(opens GitHub in a new tab)</span><span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/jfleege/intercepted/issues/new" target="_blank" rel="noreferrer">Report an issue <span className="sr-only">(opens GitHub in a new tab)</span><InterfaceIcon name="external" /></a>
       </nav>
     </div>
     <div className="site-footer-bottom">

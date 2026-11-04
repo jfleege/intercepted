@@ -1,3 +1,5 @@
+import AvailabilityImpact from './AvailabilityImpact';
+import type { AvailabilityImpactFields } from './AvailabilityImpact';
 import { fetchSnapshot } from "./snapshotCache";
 import type { QbSelection } from "./forecastTypes";
 import { TEAM_NAMES } from "./teams";
@@ -10,7 +12,7 @@ import "./MatchupReport.css";
 import PlayersToWatch from "./PlayersToWatch";
 import draftkingsLogo from "./assets/draftkings.png";
 
-export type Matchup = PredictionFields & {
+export type Matchup = PredictionFields & AvailabilityImpactFields & {
   game_id: string;
   season: number;
   week: number;
@@ -219,6 +221,7 @@ export default function MatchupModal({
   </div>
 </div>
 
+<AvailabilityImpact game={game} model={model}/>
 {(['away','home'] as const).map(side=>game[`${side}_qb_selection`]?.ngs_coverage_note && <p className="qb-coverage-note ic-coverage-note" key={side}><strong>{game[`${side}_team`]} tracking inputs</strong><span>{game[`${side}_qb_selection`]?.ngs_coverage_note}</span></p>)}
 
 

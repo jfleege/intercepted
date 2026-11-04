@@ -61,7 +61,7 @@ def check_coverage(rows, weekly, expanded, ngs, season, week, now, boxscores=Non
         raise DataPending(f'QB statistics missing: {labels}. {error}') from error
 
 
-def generate(rows, games, season, week, now):
+def generate(rows, games, season, week, now, contexts=()):
     import joblib
     import numpy as np
     import polars as pl
@@ -119,6 +119,8 @@ def generate(rows, games, season, week, now):
     ngs_rows = ngs.to_dicts()
     now = utcnow()  # Data downloads may cross kickoff; use the actual serving clock.
     records, matrices = [], {model: [] for model in models}
+    scenario_inputs = []
+    from src.features.injury_updates import game_evidence, backup_candidates, replace_qb_features
     for game in games:
         start = kickoff(game)
         if not start or stamp(start) <= stamp(now):
@@ -137,11 +139,24 @@ def generate(rows, games, season, week, now):
             record[f'{side}_team_latest_week'] = ratings[team]['team_latest_week']
             features[f'{side}_qb_projection_missing'] = float(qb['player_id'] is None)
             qb_features[side] = history or {}
-        for metric in QB_METRICS:
-            for prefix in ('career', 'recent'):
-                key = f'qb_{prefix}_{metric}'
-                features[f'diff_{key}'] = qb_features['home'].get(key, np.nan) - qb_features['away'].get(key, np.nan)
-        features['qb_experience_diff'] = np.log1p(qb_features['home'].get('qb_career_attempts', np.nan)) - np.log1p(qb_features['away'].get('qb_career_attempts', np.nan))
+        features = replace_qb_features(features, qb_features['home'], qb_features['away'], QB_METRICS)
+        record['availability_watch'] = game_evidence(game, contexts, now)
+        record['availability_checked_at'] = now
+        record['qb_scenarios'] = []
+        for side in ('home', 'away'):
+            for candidate in backup_candidates(record | {'gameday': game['gameday'], 'gametime': game['gametime']}, side, record['availability_watch'], contexts, now):
+                history = histories.get(candidate['player_id'])
+                if not history or not all(math.isfinite(v) for v in history.values()):
+                    record['qb_scenarios'].append({'team': candidate['team'], 'name': candidate['name'], 'player_id': candidate['player_id'], 'status': 'insufficient_history'})
+                    continue
+                alternate = {**qb_features, side: history}
+                inputs = replace_qb_features(features, alternate['home'], alternate['away'], QB_METRICS)
+                scenario = {'team': candidate['team'], 'name': candidate['name'], 'player_id': candidate['player_id'],
+                            'status': 'conditional', 'source': candidate['starter']['source'],
+                            'observed_at': candidate['starter']['updated_at'], 'generated_at': now,
+                            'assumption': 'If this depth-chart reserve starts; not a starter announcement or an availability probability.'}
+                record['qb_scenarios'].append(scenario)
+                scenario_inputs.append((scenario, inputs))
         for model in models:
             matrices[model].append([features[col] for col in metadata['models'][model]['features']])
         records.append(record)
@@ -161,6 +176,12 @@ def generate(rows, games, season, week, now):
                 raise ValueError('Invalid model probability')
             record[f'home_win_prob_{model}'] = float(p)
             record[f'away_win_prob_{model}'] = float(1 - p)
+        for scenario, inputs in scenario_inputs:
+            values = np.array([[inputs[col] for col in metadata['models'][model]['features']]], dtype=float)
+            p = float(pipeline.predict_proba(values)[0, classes.index(1)])
+            if not math.isfinite(p) or not 0 <= p <= 1:
+                raise ValueError('Invalid scenario probability')
+            scenario[f'home_win_prob_{model}'] = p
     for r in records:
         primary = 'v5_qb_plus' if 'v5_qb_plus' in models else 'v4_qb_plus'
         p = r[f'home_win_prob_{primary}']
@@ -188,6 +209,19 @@ def main():
     season, week, games = target_slate(rows, now)
     current = json.loads((ROOT / 'frontend/public/predictions.json').read_text())
     revisions = changed_report_games(current, rows, load_reports(), now)
+    from src.features.injury_updates import availability_changed
+    insight_path = ROOT / 'frontend/public/forecast_insights.json'
+    insights = json.loads(insight_path.read_text()) if insight_path.exists() else {}
+    contexts = insights.get('players', []) if (insights.get('season'), insights.get('week')) == (season, week) else []
+    # Source outages must not remove previously published injury assumptions.
+    healthy_sources = insights.get('sources', {})
+    if contexts and all(healthy_sources.get(k, {}).get('status') == 'available' for k in ('injuries', 'depth_charts', 'espn_injuries')):
+        previous = {g['game_id']: g for g in current['games']}
+        for game in games:
+            old = previous.get(game['game_id'])
+            if old and kickoff(game) and stamp(kickoff(game)) > stamp(now) and availability_changed(old, game, contexts, now):
+                if game not in revisions:
+                    revisions.append(game)
     configured = available_models(json.loads((ROOT / 'models/model_metadata.json').read_text()))
     upgrade = (current['season'], current['week']) == (season, week) and any(
         f'home_win_prob_{m}' not in g for g in current['games'] for m in configured)
@@ -209,7 +243,7 @@ def main():
     if is_revision:
         games = revisions
     try:
-        payload, metadata = generate(rows, games, season, week, now)
+        payload, metadata = generate(rows, games, season, week, now, contexts)
     except DataPending as error:
         if not args.validate_current:
             forecast_check(current, season, week, 'waiting_stats', str(error), utcnow())

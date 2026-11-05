@@ -201,6 +201,7 @@ def generate(rows, games, season, week, now, contexts=()):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--validate-current', action='store_true', help='Rebuild current inputs without changing predictions or archives')
+    parser.add_argument('--revisions-only', action='store_true', help='Check changes to the published slate only')
     args = parser.parse_args()
     import nflreadpy as nfl
     now = utcnow()
@@ -208,26 +209,24 @@ def main():
     rows = nfl.load_schedules([year - 1, year]).to_dicts()
     season, week, games = target_slate(rows, now)
     current = json.loads((ROOT / 'frontend/public/predictions.json').read_text())
-    revisions = changed_report_games(current, rows, load_reports(), now)
-    from src.features.injury_updates import availability_changed
+    starter_revisions = changed_report_games(current, rows, load_reports(), now)
+    revisions = list(starter_revisions)
+    from src.features.injury_updates import availability_revision_games, backup_candidates, game_evidence
     insight_path = ROOT / 'frontend/public/forecast_insights.json'
     insights = json.loads(insight_path.read_text()) if insight_path.exists() else {}
     contexts = insights.get('players', []) if (insights.get('season'), insights.get('week')) == (season, week) else []
-    # Source outages must not remove previously published injury assumptions.
-    healthy_sources = insights.get('sources', {})
-    if contexts and all(healthy_sources.get(k, {}).get('status') == 'available' for k in ('injuries', 'depth_charts', 'espn_injuries')):
-        previous = {g['game_id']: g for g in current['games']}
-        for game in games:
-            old = previous.get(game['game_id'])
-            if old and kickoff(game) and stamp(kickoff(game)) > stamp(now) and availability_changed(old, game, contexts, now):
-                if game not in revisions:
-                    revisions.append(game)
+    for game in availability_revision_games(current, games, contexts, insights.get('sources', {}), now):
+        if game not in revisions:
+            revisions.append(game)
     configured = available_models(json.loads((ROOT / 'models/model_metadata.json').read_text()))
     upgrade = (current['season'], current['week']) == (season, week) and any(
         f'home_win_prob_{m}' not in g for g in current['games'] for m in configured)
-    if upgrade:
+    if upgrade and not args.revisions_only:
         revisions = [g for g in games if kickoff(g) and stamp(kickoff(g)) > stamp(now)]
     is_revision = (current['season'], current['week']) == (season, week) and bool(revisions)
+    if args.revisions_only and not is_revision:
+        print('No supported revisions to the published slate.')
+        return
     if week is None or (not args.validate_current and not is_revision and (current['season'], current['week']) >= (season, week)):
         if not args.validate_current:
             remaining = sum(normalize_result(g, now)['status'] not in ('final', 'cancelled') for g in games)
@@ -242,13 +241,44 @@ def main():
         return
     if is_revision:
         games = revisions
+    pending_error = None
+    context_updates = []
+    if args.revisions_only and not args.validate_current:
+        previous = {game['game_id']: game for game in current['games']}
+        model_games = []
+        for game in games:
+            old = previous[game['game_id']]
+            evidence = game_evidence(game, contexts, now)
+            candidates = {c['player_id'] for side in ('home', 'away')
+                          for c in backup_candidates(old, side, evidence, contexts, now)}
+            scenarios = old.get('qb_scenarios', [])
+            saved_ids = {scenario.get('player_id') for scenario in scenarios}
+            if game in starter_revisions or candidates - saved_ids:
+                model_games.append(game)
+            else:
+                context_updates.append({
+                    **old,
+                    'availability_watch': evidence,
+                    'availability_checked_at': now,
+                    'qb_scenarios': [scenario for scenario in scenarios if scenario.get('player_id') in candidates],
+                })
+        games = model_games
     try:
-        payload, metadata = generate(rows, games, season, week, now, contexts)
+        if games or not context_updates:
+            payload, metadata = generate(rows, games, season, week, now, contexts)
+            payload['games'].extend(context_updates)
+        else:
+            metadata = json.loads((ROOT / 'models/model_metadata.json').read_text())
+            payload = {**current, 'games': context_updates}
     except DataPending as error:
         if not args.validate_current:
             forecast_check(current, season, week, 'waiting_stats', str(error), utcnow())
         print(f'::warning::Weekly forecasts waiting for data: {error}. Existing predictions retained.')
-        return
+        if not context_updates:
+            return
+        pending_error = str(error)
+        metadata = json.loads((ROOT / 'models/model_metadata.json').read_text())
+        payload = {**current, 'games': context_updates}
     if args.validate_current:
         print(f"Validated {payload['count']} future games for {season} Week {week}; no forecasts published.")
         return
@@ -260,7 +290,11 @@ def main():
     archive(payload, metadata, payload['generated_at'], {'kind': 'weekly_automation', 'commit': git('rev-parse', 'HEAD')},
             model_hashes={name: git('hash-object', f'models/{name}.joblib') for name in available_models(metadata)})
     write_json(ROOT / 'frontend/public/predictions.json', payload)
-    forecast_check(payload, season, week, 'current_limited_qb' if payload.get('qb_coverage', {}).get('limited_inputs') else 'current', coverage_message(payload), utcnow())
+    if pending_error:
+        forecast_check(payload, season, week, 'waiting_stats', pending_error, utcnow())
+    else:
+        state = 'current_limited_qb' if payload.get('qb_coverage', {}).get('limited_inputs') else 'current'
+        forecast_check(payload, season, week, state, coverage_message(payload), utcnow())
     print(f"Published {payload['count']} forecasts for {season} Week {week}.")
 
 

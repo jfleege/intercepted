@@ -70,13 +70,16 @@ def finish(now, outcomes=None, root=ROOT):
     outcomes = outcomes or {}
     required = ('verify', 'results', 'history', 'players', 'research', 'teams', 'directory', 'research_results', 'insights', 'markets')
     results_required = ('verify', 'results', 'history', 'research_results', 'insights', 'markets')
-    expected = results_required if mode == 'results' else required
+    pregame_required = ('verify', 'forecast', 'history', 'insights')
+    expected = {'full': required, 'results': results_required, 'pregame': pregame_required}.get(mode)
     failed = [key for key, value in outcomes.items() if value in ('failure', 'cancelled')]
-    complete = mode in ('full', 'results') and all(outcomes.get(key) == 'success' for key in expected)
+    complete = expected is not None and all(outcomes.get(key) == 'success' for key in expected)
     state = 'success' if complete and not failed else 'partial' if outcomes else 'unknown'
     attempt.update(completed_at=now, mode=mode, state=state, steps=outcomes)
-    if state == 'success':
-        previous['last_results_refresh_at' if mode == 'results' else 'last_successful_refresh_at'] = now
+    if state == 'success' and mode == 'full':
+        previous['last_successful_refresh_at'] = now
+    if state == 'success' and mode != 'full' and all(outcomes.get(key) == 'success' for key in results_required):
+        previous['last_results_refresh_at'] = now
     forecasts = read(root / 'frontend/public/predictions.json')
     sources = []
     for key, label, filename, date_field in SOURCES:
@@ -107,7 +110,7 @@ def finish(now, outcomes=None, root=ROOT):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('command', choices=['start', 'finish', 'snapshot'])
-    parser.add_argument('--mode', choices=['full', 'results'], default='full')
+    parser.add_argument('--mode', choices=['full', 'results', 'pregame'], default='full')
     args = parser.parse_args()
     now = utcnow()
     if args.command == 'start':

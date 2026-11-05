@@ -205,22 +205,28 @@ def source_tables(season,now):
     return tables,sources
 
 
+def load_context(predictions, directory, research, now=None):
+    """Collect the same pregame evidence for the probe and the export."""
+    from src.features.injury_updates import fetch_supplement, supplement
+    tables, sources = source_tables(predictions['season'], now or utcnow())
+    extra, sources['espn_injuries'] = fetch_supplement(directory, predictions['season'], predictions['week'], now)
+    now = now or utcnow()
+    injuries = supplement(tables.get('injuries', []), extra)
+    contexts, validation = build_context(
+        predictions, directory, research, injuries, tables.get('depth_charts', []), sources, now,
+    )
+    return contexts, validation, sources, now
+
+
 def export(root=ROOT,now=None,fetch_sources=True):
     live_clock=now is None
     now=now or utcnow();public=root/'frontend/public';predictions=read(public/'predictions.json');research=read(public/'matchup_research.json');directory=read(public/'player_intelligence.json');performance=read(public/'research_performance.json')
     state_path=root/f'data/tracking/forecast_insights/{predictions["season"]}-week-{predictions["week"]}.json';state=read(state_path)
     if fetch_sources:
-        tables,sources=source_tables(predictions['season'],now)
-        from src.features.injury_updates import fetch_supplement, supplement
-        extra,sources['espn_injuries']=fetch_supplement(directory,predictions['season'],predictions['week'],None if live_clock else now)
-        tables['injuries']=supplement(tables.get('injuries',[]),extra)
-        if live_clock:now=utcnow()
+        contexts,validation,sources,now=load_context(predictions,directory,research,None if live_clock else now)
     else:
-        previous=read(public/'forecast_insights.json');sources=previous.get('sources',{});tables={}
-    if fetch_sources:
-        contexts,validation=build_context(predictions,directory,research,tables.get('injuries',[]),tables.get('depth_charts',[]),sources,now)
-    else:
-        # Results-only checks retain only matching contexts; client time guards prevent stale eligibility decisions.
+        previous=read(public/'forecast_insights.json')
+        sources=previous.get('sources',{})
         contexts=previous.get('players',[]) if (previous.get('season'),previous.get('week'))==(predictions['season'],predictions['week']) else []
         validation=previous.get('usage_validation',[])
     current=capture(predictions,research,contexts);new_state=observe(current,state,now)

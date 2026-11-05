@@ -114,3 +114,16 @@ def availability_changed(previous, game, contexts, now):
     candidates = [c['player_id'] for side in ('home', 'away')
                   for c in backup_candidates(previous, side, evidence, contexts, now)]
     return sorted(candidates) != sorted(c.get('player_id', '') for c in previous.get('qb_scenarios', []))
+
+
+def availability_revision_games(current, games, contexts, sources, now):
+    """Use the same revision gate in the polling job and the forecast generator."""
+    if not contexts or any(sources.get(key, {}).get('status') != 'available'
+                           for key in ('injuries', 'depth_charts', 'espn_injuries')):
+        return []
+    previous = {g['game_id']: g for g in current['games']}
+    return [
+        game for game in games
+        if game['game_id'] in previous and kickoff(game) and stamp(kickoff(game)) > stamp(now)
+        and availability_changed(previous[game['game_id']], game, contexts, now)
+    ]

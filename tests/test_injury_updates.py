@@ -1,6 +1,8 @@
 import copy
 import unittest
 from src.features.injury_updates import espn_rows, supplement, game_evidence, backup_candidates, replace_qb_features, availability_changed
+from scripts.check_pregame import pending_games
+from src.features.injury_updates import availability_revision_games
 from tests.test_forecast_insights import fixtures, NOW
 from src.features.player_context import build_context
 
@@ -61,6 +63,21 @@ class InjuryUpdateTests(unittest.TestCase):
         self.assertFalse(availability_changed(old,game,contexts+[reserve],NOW))
         reserve['player_id']='new-backup'
         self.assertTrue(availability_changed(old,game,contexts+[reserve],NOW))
+
+    def test_half_hour_gate_ignores_stable_evidence_started_games_and_outages(self):
+        predictions, directory, research, sources, injury, depth = fixtures()
+        injury.update(date_modified=NOW, report_status='Questionable')
+        sources['espn_injuries'] = {'status': 'available'}
+        contexts = build_context(predictions, directory, research, [injury], [depth], sources, NOW)[0]
+        pending = pending_games(predictions, research, NOW)
+        self.assertEqual(len(pending), 1)
+        self.assertEqual(availability_revision_games(predictions, pending, contexts, sources, NOW), pending)
+
+        predictions['games'][0]['availability_watch'] = game_evidence(pending[0], contexts, NOW)
+        self.assertEqual(availability_revision_games(predictions, pending, contexts, sources, NOW), [])
+        sources['espn_injuries']['status'] = 'unavailable'
+        self.assertEqual(availability_revision_games(predictions, pending, contexts, sources, NOW), [])
+        self.assertEqual(pending_games(predictions, research, '2026-10-30T12:00:00Z'), [])
 
     def test_backup_features_replace_qb_only(self):
         a={'qb_career_attempts':100,'qb_career_epa':2,'qb_recent_epa':3}

@@ -6,6 +6,7 @@ on:
     paths:
       - frontend/public/predictions.json
       - src/features/injury_updates.py
+      - scripts/check_pregame.py
       - data/inputs/qb_starters.json
       - src/ml/refresh_markets.py
       - src/ml/weekly_forecast.py
@@ -35,7 +36,7 @@ on:
       - src/features/qb_coverage.py
       - src/features/qb_starters.py
   schedule:
-    # Lightweight final-score checks; build only for a new/corrected archived final.
+    # Lightweight checks for finals and supported pregame changes.
     - cron: "7,37 * * * *"
     # 13:17 UTC = 8:17am CDT / 7:17am CST
     - cron: "17 13 * * *"
@@ -95,11 +96,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     outputs:
-      refresh: ${{ steps.check.outputs.refresh }}
+      refresh: ${{ steps.check.outputs.refresh == 'true' || steps.pregame.outputs.refresh == 'true' }}
+      finals: ${{ steps.check.outputs.refresh }}
+      pregame: ${{ steps.pregame.outputs.refresh }}
     steps:
       - uses: actions/checkout@v4
       - name: Check for newly finished games
         id: check
+        continue-on-error: true
         env:
           POSTGAME: ${{ github.event_name == 'schedule' && github.event.schedule == '7,37 * * * *' }}
         run: |
@@ -108,6 +112,22 @@ jobs:
           else
             echo "refresh=true" >> "$GITHUB_OUTPUT"
           fi
+      - uses: actions/setup-python@v5
+        if: github.event.schedule == '7,37 * * * *'
+        continue-on-error: true
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-automation.txt
+      - name: Install pregame source readers
+        continue-on-error: true
+        if: github.event.schedule == '7,37 * * * *'
+        run: python -m pip install $(sed -n '/^nflreadpy==/p; /^polars==/p' requirements-automation.txt)
+      - name: Check for injury and supported starter changes
+        id: pregame
+        if: github.event.schedule == '7,37 * * * *'
+        continue-on-error: true
+        run: python -m scripts.check_pregame
   build:
     needs: postgame
     if: github.ref == 'refs/heads/main' && needs.postgame.outputs.refresh == 'true'
@@ -126,7 +146,7 @@ jobs:
         run: python -m pip install -r requirements-automation.txt
       - name: Start refresh status record
         env:
-          STATUS_MODE: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && (github.event.schedule == '47 7 * * *' || github.event.schedule == '7,37 * * * *'))) && 'results' || 'full' }}
+          STATUS_MODE: ${{ needs.postgame.outputs.pregame == 'true' && 'pregame' || (inputs.results_only == true || github.event.schedule == '47 7 * * *' || github.event.schedule == '7,37 * * * *') && 'results' || 'full' }}
         run: python -m src.ml.refresh_status start --mode "$STATUS_MODE"
       - name: Verify results grading
         id: verify
@@ -145,14 +165,19 @@ jobs:
             git push origin HEAD:main
           fi
       - name: Refresh availability before checking forecast revisions
-        if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && github.event.schedule != '47 7 * * *'
+        if: inputs.results_only != true && github.event.schedule != '47 7 * * *' && (github.event.schedule != '7,37 * * * *' || needs.postgame.outputs.pregame == 'true')
         run: python -m src.ml.forecast_insights
       - name: Advance weekly forecasts when the prior slate is complete
         id: forecast
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && ((github.event_name == 'schedule' && (github.event.schedule == '17 13 * * *' || github.event.schedule == '17 17,21 * * *' || github.event.schedule == '0 12 * * 2')) || inputs.refresh_forecasts || github.event_name == 'push')
         run: python -m src.ml.weekly_forecast
+      - name: Apply supported pregame revisions to the published slate
+        id: pregame_forecast
+        if: github.event.schedule == '7,37 * * * *' && needs.postgame.outputs.pregame == 'true'
+        run: python -m src.ml.weekly_forecast --revisions-only
       - name: Archive forecasts and refresh final results
         id: results
+        if: github.event.schedule != '7,37 * * * *' || needs.postgame.outputs.finals == 'true'
         run: python -m src.ml.refresh_performance --import-git-history
       - name: Export browsable prediction weeks
         id: history
@@ -192,6 +217,7 @@ jobs:
         run: python -m src.features.position_defense
       - name: Grade original research forecasts
         id: research_results
+        if: github.event.schedule != '7,37 * * * *' || needs.postgame.outputs.finals == 'true'
         continue-on-error: true
         run: python -m src.ml.research_performance
       - name: Observe forecast changes and monitor input/model quality
@@ -200,7 +226,7 @@ jobs:
         env:
           RESULTS_CONTEXT_ONLY: ${{ (inputs.results_only == true || (github.event_name == 'schedule' && (github.event.schedule == '47 7 * * *' || github.event.schedule == '7,37 * * * *'))) && '1' || '0' }}
           FORECAST_INPUT_OUTCOMES: >-
-            {"forecast":"${{ steps.forecast.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","directory":"${{ steps.directory.outcome }}","position_defense":"${{ steps.position_defense.outcome }}","research_results":"${{ steps.research_results.outcome }}"}
+            {"forecast":"${{ steps.forecast.outcome == 'skipped' && steps.pregame_forecast.outcome || steps.forecast.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","directory":"${{ steps.directory.outcome }}","position_defense":"${{ steps.position_defense.outcome }}","research_results":"${{ steps.research_results.outcome }}"}
         run: |
           if [ "$RESULTS_CONTEXT_ONLY" = "1" ]; then
             python -m src.ml.forecast_insights --results-only
@@ -246,6 +272,7 @@ jobs:
           fi
       - name: Archive moneylines and grade paper selections
         id: markets
+        if: github.event.schedule != '7,37 * * * *' || needs.postgame.outputs.finals == 'true'
         env:
           PAPER_GAME: ${{ inputs.paper_game }}
           PAPER_TEAM: ${{ inputs.paper_team }}
@@ -261,7 +288,7 @@ jobs:
         if: always()
         env:
           REFRESH_OUTCOMES: >-
-            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","position_defense":"${{ steps.position_defense.outcome }}","research_results":"${{ steps.research_results.outcome }}","insights":"${{ steps.insights.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
+            {"verify":"${{ steps.verify.outcome }}","pre_rollover":"${{ steps.pre_rollover.outcome }}","forecast":"${{ steps.forecast.outcome == 'skipped' && steps.pregame_forecast.outcome || steps.forecast.outcome }}","results":"${{ steps.results.outcome }}","history":"${{ steps.history.outcome }}","players":"${{ steps.players.outcome }}","research":"${{ steps.research.outcome }}","teams":"${{ steps.teams.outcome }}","directory":"${{ steps.directory.outcome }}","position_defense":"${{ steps.position_defense.outcome }}","research_results":"${{ steps.research_results.outcome }}","insights":"${{ steps.insights.outcome }}","odds":"${{ steps.odds.outcome }}","props":"${{ steps.props.outcome }}","markets":"${{ steps.markets.outcome }}"}
         run: python -m src.ml.refresh_status finish
       - name: Persist refresh status evidence
         if: always()

@@ -1,15 +1,36 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {readFileSync} from 'node:fs';
 import {likelihoodOffers,eligible,crossGameIdeas,probabilitySummary,decision,support,makePlan,readPlans,withoutPrice} from '../src/likelihoodMarkets.ts';
-const data=JSON.parse(readFileSync(new URL('../public/predictions.json',import.meta.url)));
-const research=JSON.parse(readFileSync(new URL(`../public/research/${data.season}-week-${data.week}.json`,import.meta.url)));
-const now=Math.min(...Object.values(research.games).map(r=>Date.parse(r.kickoff)))-3600000;
+// A midweek revision can be published after one game starts and before another.
+const now = Date.parse('2026-11-06T12:00:00Z');
+const generated_at = '2026-11-06T09:00:00Z';
+const games = [
+  {game_id: 'started', away_team: 'JAX', home_team: 'BAL', home_win_prob_v5_qb_plus: .6},
+  {game_id: 'upcoming', away_team: 'SEA', home_team: 'DEN', home_win_prob_v5_qb_plus: .7},
+];
+const data = {season: 2026, week: 9, generated_at, games};
+const research = {
+  season: data.season,
+  week: data.week,
+  games: Object.fromEntries(games.map((game, index) => [game.game_id, {
+    kickoff: index === 0 ? '2026-11-06T01:00:00Z' : '2026-11-08T18:00:00Z',
+    generated_at: '2026-11-05T12:00:00Z',
+    model_version: 'research-fixture',
+    players: [{player_id: 'rb', name: 'Example RB', team: game.home_team, opponent: game.away_team,
+      status: 'available', position: 'RB', stat: 'rushing', expected_yards: 65}],
+    scoring: {home: {team: game.home_team}, away: {team: game.away_team}, total: 45, home_margin: 3},
+  }])),
+};
 const offers=likelihoodOffers(data,research,'v5_qb_plus',now),winner=offers.find(o=>o.category==='moneyline');
 const offer=(id,game,p,extra={})=>({...winner,id,contract:game,game_id:game,probability:p,kickoff:new Date(now+86400000).toISOString(),forecastAt:new Date(now-60000).toISOString(),...extra});
 test('Markets offers have no quotes, use winner snapshot time, and leave projection guides unscored',()=>{
  assert.ok(offers.length);for(const o of offers){assert.equal(o.price,null);assert.equal(o.bookmaker,null);assert.equal(o.quoteFresh,false);if(['yardage','spread','total'].includes(o.category))assert.equal(o.probability,null);}
- assert.equal(winner.forecastAt,data.generated_at);assert.ok(offers.some(o=>o.category==='moneyline'&&eligible(o,now)));
+ const moneylines = offers.filter(o => o.category === 'moneyline');
+ assert.equal(moneylines.length, 4);
+ for (const o of moneylines) {
+   assert.equal(o.forecastAt, data.generated_at);
+   assert.equal(eligible(o, now), o.game_id === 'upcoming');
+ }
  assert.ok(likelihoodOffers(data,{...research,week:99},'v5_qb_plus',now).every(o=>o.category==='moneyline'));
 });
 test('multiple ideas are deterministic, unique, exact-size, distinct-game and satisfy the profile',()=>{

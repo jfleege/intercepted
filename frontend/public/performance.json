@@ -60229,11 +60229,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 5,
-            "lower": 0.23071993220883708,
-            "observed": 0.6,
-            "predicted": 0.37258621549975235,
-            "upper": 0.8823817688407467
+            "games": 6,
+            "lower": 0.18761280689940868,
+            "observed": 0.5,
+            "predicted": 0.37036019676976695,
+            "upper": 0.8123871931005913
           },
           {
             "bin": "40\u201350%",
@@ -61510,21 +61510,21 @@
             "week": 8
           },
           {
-            "away_score": null,
+            "away_score": 33,
             "away_team": "JAX",
-            "brier": null,
+            "brier": 0.1290462669874909,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-05",
             "game_id": "2026_09_JAX_BAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 10,
             "home_team": "BAL",
             "kickoff": "2026-11-06T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4450848617344565,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "JAX",
             "probability": 0.35923010311984,
             "provenance": {
@@ -61534,7 +61534,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 9
           },
@@ -61946,14 +61946,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5476190476190477,
-          "brier": 0.25756872985699025,
+          "accuracy": 0.5581395348837209,
+          "brier": 0.2545798353716531,
           "cancelled": 0,
-          "correct": 23,
-          "games": 42,
+          "correct": 24,
+          "games": 43,
           "incorrect": 19,
-          "log_loss": 0.7075936018683812,
-          "pending": 15,
+          "log_loss": 0.701488747446662,
+          "pending": 14,
           "ties": 0
         },
         "trend": [
@@ -62418,6 +62418,17 @@
             "game_number": 42,
             "label": "CHI @ SEA",
             "log_loss": 0.7075936018683812
+          },
+          {
+            "accuracy": 0.5581395348837209,
+            "brier": 0.2545798353716531,
+            "correct": true,
+            "date": "2026-11-05",
+            "game_brier": 0.1290462669874909,
+            "game_id": "2026_09_JAX_BAL",
+            "game_number": 43,
+            "label": "JAX @ BAL",
+            "log_loss": 0.701488747446662
           }
         ],
         "weekly": [
@@ -62461,14 +62472,14 @@
             "week": 8
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.1290462669874909,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 15,
+            "log_loss": 0.4450848617344565,
+            "pending": 14,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -62479,11 +62490,11 @@
         "calibration": [
           {
             "bin": "20\u201330%",
-            "games": 4,
-            "lower": 0.15003570882017148,
-            "observed": 0.5,
-            "predicted": 0.269575326940826,
-            "upper": 0.8499642911798285
+            "games": 5,
+            "lower": 0.1176182311592533,
+            "observed": 0.4,
+            "predicted": 0.2678579036904688,
+            "upper": 0.769280067791163
           },
           {
             "bin": "30\u201340%",
@@ -63768,21 +63779,21 @@
             "week": 8
           },
           {
-            "away_score": null,
+            "away_score": 33,
             "away_team": "JAX",
-            "brier": null,
+            "brier": 0.06811484611866675,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-05",
             "game_id": "2026_09_JAX_BAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 10,
             "home_team": "BAL",
             "kickoff": "2026-11-06T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.30244140510169815,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "JAX",
             "probability": 0.26098821068904005,
             "provenance": {
@@ -63792,7 +63803,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 9
           },
@@ -64204,14 +64215,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5714285714285714,
-          "brier": 0.25623556750785087,
+          "accuracy": 0.5813953488372093,
+          "brier": 0.251860667010428,
           "cancelled": 0,
-          "correct": 24,
-          "games": 42,
+          "correct": 25,
+          "games": 43,
           "incorrect": 18,
-          "log_loss": 0.7058304364097263,
-          "pending": 15,
+          "log_loss": 0.6964492961467489,
+          "pending": 14,
           "ties": 0
         },
         "trend": [
@@ -64676,6 +64687,17 @@
             "game_number": 42,
             "label": "CHI @ SEA",
             "log_loss": 0.7058304364097263
+          },
+          {
+            "accuracy": 0.5813953488372093,
+            "brier": 0.251860667010428,
+            "correct": true,
+            "date": "2026-11-05",
+            "game_brier": 0.06811484611866675,
+            "game_id": "2026_09_JAX_BAL",
+            "game_number": 43,
+            "label": "JAX @ BAL",
+            "log_loss": 0.6964492961467489
           }
         ],
         "weekly": [
@@ -64719,14 +64741,14 @@
             "week": 8
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.06811484611866675,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 15,
+            "log_loss": 0.30244140510169815,
+            "pending": 14,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -64745,11 +64767,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 4,
-            "lower": 0.15003570882017148,
-            "observed": 0.5,
-            "predicted": 0.3559885980172853,
-            "upper": 0.8499642911798285
+            "games": 5,
+            "lower": 0.1176182311592533,
+            "observed": 0.4,
+            "predicted": 0.35301014951226656,
+            "upper": 0.769280067791163
           },
           {
             "bin": "40\u201350%",
@@ -65606,21 +65628,21 @@
             "week": 8
           },
           {
-            "away_score": null,
+            "away_score": 33,
             "away_team": "JAX",
-            "brier": null,
+            "brier": 0.11634672373005557,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-05",
             "game_id": "2026_09_JAX_BAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 10,
             "home_team": "BAL",
             "kickoff": "2026-11-06T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4171779698774651,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "JAX",
             "probability": 0.34109635549219164,
             "provenance": {
@@ -65630,7 +65652,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 9
           },
@@ -66042,14 +66064,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5714285714285714,
-          "brier": 0.24599769582366338,
+          "accuracy": 0.5862068965517241,
+          "brier": 0.24152697264802173,
           "cancelled": 0,
-          "correct": 16,
-          "games": 28,
+          "correct": 17,
+          "games": 29,
           "incorrect": 12,
-          "log_loss": 0.6841946941578448,
-          "pending": 15,
+          "log_loss": 0.6749872209067973,
+          "pending": 14,
           "ties": 0
         },
         "trend": [
@@ -66360,6 +66382,17 @@
             "game_number": 28,
             "label": "CHI @ SEA",
             "log_loss": 0.6841946941578448
+          },
+          {
+            "accuracy": 0.5862068965517241,
+            "brier": 0.24152697264802173,
+            "correct": true,
+            "date": "2026-11-05",
+            "game_brier": 0.11634672373005557,
+            "game_id": "2026_09_JAX_BAL",
+            "game_number": 29,
+            "label": "JAX @ BAL",
+            "log_loss": 0.6749872209067973
           }
         ],
         "weekly": [
@@ -66390,14 +66423,14 @@
             "week": 8
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.11634672373005557,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 15,
+            "log_loss": 0.4171779698774651,
+            "pending": 14,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -66408,11 +66441,11 @@
         "calibration": [
           {
             "bin": "20\u201330%",
-            "games": 2,
-            "lower": 0.09452865480086614,
-            "observed": 0.5,
-            "predicted": 0.2616995732486673,
-            "upper": 0.9054713451991339
+            "games": 3,
+            "lower": 0.0614903152761605,
+            "observed": 0.3333333333333333,
+            "predicted": 0.2667649978034144,
+            "upper": 0.7923450448735121
           },
           {
             "bin": "30\u201340%",
@@ -67277,21 +67310,21 @@
             "week": 8
           },
           {
-            "away_score": null,
+            "away_score": 33,
             "away_team": "JAX",
-            "brier": null,
+            "brier": 0.07667131003761682,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-05",
             "game_id": "2026_09_JAX_BAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 10,
             "home_team": "BAL",
             "kickoff": "2026-11-06T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.3242020103699418,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "JAX",
             "probability": 0.2768958469129084,
             "provenance": {
@@ -67301,7 +67334,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 9
           },
@@ -67713,14 +67746,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6785714285714286,
-          "brier": 0.23694516007128025,
+          "accuracy": 0.6896551724137931,
+          "brier": 0.23141847558736084,
           "cancelled": 0,
-          "correct": 19,
-          "games": 28,
+          "correct": 20,
+          "games": 29,
           "incorrect": 9,
-          "log_loss": 0.6658592667352995,
-          "pending": 15,
+          "log_loss": 0.6540779820330457,
+          "pending": 14,
           "ties": 0
         },
         "trend": [
@@ -68031,6 +68064,17 @@
             "game_number": 28,
             "label": "CHI @ SEA",
             "log_loss": 0.6658592667352995
+          },
+          {
+            "accuracy": 0.6896551724137931,
+            "brier": 0.23141847558736084,
+            "correct": true,
+            "date": "2026-11-05",
+            "game_brier": 0.07667131003761682,
+            "game_id": "2026_09_JAX_BAL",
+            "game_number": 29,
+            "label": "JAX @ BAL",
+            "log_loss": 0.6540779820330457
           }
         ],
         "weekly": [
@@ -68061,14 +68105,14 @@
             "week": 8
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.07667131003761682,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 15,
+            "log_loss": 0.3242020103699418,
+            "pending": 14,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -68081,5 +68125,5 @@
   "schema_version": 1,
   "snapshot_count": 13,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-05T22:42:05.788133+00:00"
+  "updated_at": "2026-11-06T15:25:06.695465+00:00"
 }

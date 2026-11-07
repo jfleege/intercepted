@@ -2,17 +2,17 @@
   "active_season": 2026,
   "active_week": 9,
   "attempt": {
-    "completed_at": "2026-11-07T14:22:44.030887+00:00",
-    "mode": "results",
-    "started_at": "2026-11-07T14:22:02.418699+00:00",
+    "completed_at": "2026-11-07T18:04:54.097924+00:00",
+    "mode": "full",
+    "started_at": "2026-11-07T18:04:04.243803+00:00",
     "state": "success",
     "steps": {
       "directory": "success",
-      "forecast": "skipped",
+      "forecast": "success",
       "history": "success",
       "insights": "success",
       "markets": "success",
-      "odds": "skipped",
+      "odds": "success",
       "players": "success",
       "position_defense": "success",
       "pre_rollover": "skipped",
@@ -27,25 +27,25 @@
   "forecast_check": {
     "active_season": 2026,
     "active_week": 9,
-    "checked_at": "2026-11-07T09:12:07.746602+00:00",
+    "checked_at": "2026-11-07T18:04:11.624711+00:00",
     "message": "Published slate uses qualified low-volume NGS exclusions. JAX: Trevor Lawrence NGS through 2026 Week 6; TB: Baker Mayfield NGS through 2026 Week 3. No missing tracking metrics were invented.",
     "state": "current_limited_qb",
     "target_season": 2026,
     "target_week": 9
   },
   "last_results_refresh_at": "2026-11-07T14:22:44.030887+00:00",
-  "last_successful_refresh_at": "2026-11-06T22:10:47.587863+00:00",
+  "last_successful_refresh_at": "2026-11-07T18:04:54.097924+00:00",
   "next_forecast_check_at": "2026-11-08T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-10T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-07T14:22:44.030887+00:00",
+  "snapshot_at": "2026-11-07T18:04:54.097924+00:00",
   "sources": [
     {
       "features_through_week": 8,
       "id": "forecasts",
       "label": "Game forecasts",
       "season": 2026,
-      "updated_at": "2026-11-07T09:12:07.737381+00:00",
+      "updated_at": "2026-11-07T18:04:11.616680+00:00",
       "week": 9
     },
     {
@@ -53,7 +53,7 @@
       "label": "Player cards",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-07T14:22:07.108088+00:00",
+      "updated_at": "2026-11-07T18:04:13.662816+00:00",
       "week": 9
     },
     {
@@ -62,7 +62,7 @@
       "refresh_outcome": "success",
       "season": 2026,
       "through_week": 8,
-      "updated_at": "2026-11-07T14:22:20.685343+00:00",
+      "updated_at": "2026-11-07T18:04:27.266710+00:00",
       "week": 9
     },
     {
@@ -71,27 +71,27 @@
       "label": "Matchup projections",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-07T14:22:18.059719+00:00",
+      "updated_at": "2026-11-07T18:04:24.208132+00:00",
       "week": 9
     },
     {
       "id": "results",
       "label": "Game results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-07T14:22:05.955510+00:00"
+      "updated_at": "2026-11-07T18:04:12.534650+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-07T14:22:21.879472+00:00"
+      "updated_at": "2026-11-07T18:04:28.383703+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-07T14:22:22.733915+00:00",
+      "updated_at": "2026-11-07T18:04:30.076521+00:00",
       "week": 9
     },
     {
@@ -99,15 +99,15 @@
       "label": "Defense vs positions",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-07T14:22:21.484446+00:00",
+      "updated_at": "2026-11-07T18:04:28.012382+00:00",
       "week": 9
     },
     {
       "id": "odds",
       "label": "Sportsbook lines",
-      "refresh_outcome": "skipped",
-      "updated_at": "2026-11-06T19:59:10.214099+00:00"
+      "refresh_outcome": "success",
+      "updated_at": "2026-11-07T18:04:53.962625+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/42381224067"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/42399351291"
 }

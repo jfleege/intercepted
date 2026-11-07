@@ -2,32 +2,32 @@
   "active_season": 2026,
   "active_week": 9,
   "attempt": {
-    "completed_at": "2026-11-06T22:10:47.587863+00:00",
-    "mode": "full",
-    "started_at": "2026-11-06T22:10:12.033792+00:00",
+    "completed_at": "2026-11-07T02:20:25.514343+00:00",
+    "mode": "pregame",
+    "started_at": "2026-11-07T02:20:20.190748+00:00",
     "state": "success",
     "steps": {
-      "directory": "success",
+      "directory": "skipped",
       "forecast": "success",
       "history": "success",
       "insights": "success",
-      "markets": "success",
+      "markets": "skipped",
       "odds": "skipped",
-      "players": "success",
-      "position_defense": "success",
+      "players": "skipped",
+      "position_defense": "skipped",
       "pre_rollover": "skipped",
       "props": "skipped",
-      "research": "success",
-      "research_results": "success",
-      "results": "success",
-      "teams": "success",
+      "research": "skipped",
+      "research_results": "skipped",
+      "results": "skipped",
+      "teams": "skipped",
       "verify": "success"
     }
   },
   "forecast_check": {
     "active_season": 2026,
     "active_week": 9,
-    "checked_at": "2026-11-06T22:10:15.642424+00:00",
+    "checked_at": "2026-11-07T02:20:25.101086+00:00",
     "message": "Published slate uses qualified low-volume NGS exclusions. JAX: Trevor Lawrence NGS through 2026 Week 6; TB: Baker Mayfield NGS through 2026 Week 3. No missing tracking metrics were invented.",
     "state": "current_limited_qb",
     "target_season": 2026,
@@ -38,20 +38,20 @@
   "next_forecast_check_at": "2026-11-07T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-10T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-06T22:10:47.587863+00:00",
+  "snapshot_at": "2026-11-07T02:20:25.514343+00:00",
   "sources": [
     {
       "features_through_week": 8,
       "id": "forecasts",
       "label": "Game forecasts",
       "season": 2026,
-      "updated_at": "2026-11-06T19:58:26.589813+00:00",
+      "updated_at": "2026-11-07T02:20:25.091767+00:00",
       "week": 9
     },
     {
       "id": "players",
       "label": "Player cards",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "season": 2026,
       "updated_at": "2026-11-06T22:10:17.963141+00:00",
       "week": 9
@@ -59,7 +59,7 @@
     {
       "id": "directory",
       "label": "Player history",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "season": 2026,
       "through_week": 8,
       "updated_at": "2026-11-06T22:10:21.507496+00:00",
@@ -69,7 +69,7 @@
       "features_through_week": 8,
       "id": "research",
       "label": "Matchup projections",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "season": 2026,
       "updated_at": "2026-11-06T19:58:39.095395+00:00",
       "week": 9
@@ -77,13 +77,13 @@
     {
       "id": "results",
       "label": "Game results",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "updated_at": "2026-11-06T22:10:16.710006+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "updated_at": "2026-11-06T22:10:22.594712+00:00"
     },
     {
@@ -91,13 +91,13 @@
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-06T22:10:24.513596+00:00",
+      "updated_at": "2026-11-07T02:20:25.302302+00:00",
       "week": 9
     },
     {
       "id": "position_defense",
       "label": "Defense vs positions",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "season": 2026,
       "updated_at": "2026-11-06T22:10:22.288437+00:00",
       "week": 9
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-06T19:59:10.214099+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/42302530968"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/42328679711"
 }

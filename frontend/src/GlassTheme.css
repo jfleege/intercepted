@@ -128,6 +128,7 @@
 .dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) button[aria-pressed=true],
 .dashboard-shell.unified-dashboard .mb-page button.active,
 .dashboard-shell.unified-dashboard .ud-forecast .model-switch button.active,
+.dashboard-shell.unified-dashboard .ud-details-button,
 .dashboard-shell.unified-dashboard .ic-tabs button.ic-active,
 .dashboard-shell.unified-dashboard .mr-toggle button[aria-pressed=true] {
   color: #c6f4ff;
@@ -138,11 +139,6 @@
 .dashboard-shell.unified-dashboard .mb-page .mb-selected {
   background: linear-gradient(135deg, #154540, #102f33);
   border-color: #79dbb866;
-}
-.dashboard-shell.unified-dashboard .ud-details-button {
-  background: linear-gradient(135deg, #a0e4ff, #78cde9);
-  box-shadow: inset 0 1px 0 #ffffff66, 0 3px 10px #0002;
-  border-radius: 9px;
 }
 .dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) :is(input, select)[aria-invalid=true] { border-color: #e5a293; }
 .dashboard-shell.unified-dashboard :is(button, a, summary, input, select):focus-visible {
@@ -182,7 +178,6 @@
   .dashboard-shell.unified-dashboard .dash-nav-item:hover { background-color: #1a354866; color: #effaff; }
   .dashboard-shell.unified-dashboard .ud-game:not(.is-selected):hover { background: #21425755; }
   .dashboard-shell.unified-dashboard .mb-offer:hover { border-color: #80d5ff66; }
-  .dashboard-shell.unified-dashboard .ud-details-button:hover { box-shadow: inset 0 1px 0 #ffffff88, 0 4px 16px #67cfff26; }
 }
 
 /* Short data arrival; no delayed cards, bouncing charts, or changes to the hero timeline. */

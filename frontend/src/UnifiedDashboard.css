@@ -81,7 +81,7 @@
 .dashboard-shell .ud-projected-qbs > div:last-child { text-align:right; }
 .dashboard-shell .ud-projected-qbs strong { display:block; color:var(--ud-text); font-size:13px; font-weight:600; margin-top:3px; }
 .dashboard-shell .ud-projected-qbs small { display:block; font-size:10px; margin-top:4px; }
-.dashboard-shell .ud-details-button { display:flex; align-items:center; justify-content:space-between; width:calc(100% - 38px); margin:0 19px; padding:12px 14px; background:var(--ud-blue); color:#0c2231; border:0; border-radius:6px; font-size:13px; font-weight:600; cursor:pointer; }
+.dashboard-shell .ud-details-button { display:flex; align-items:center; justify-content:center; text-align:center; min-height:46px; width:calc(100% - 38px); margin:0 19px; padding:12px 14px; background:var(--ud-blue); color:#0c2231; border:0; border-radius:5px; font-size:13px; font-weight:600; cursor:pointer; }
 .dashboard-shell .ud-empty { color:var(--ud-muted); font-size:13px; line-height:1.5; }
 .dashboard-shell .ud-bottom-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .dashboard-shell .ud-bottom-grid .dp-panel { grid-column:1/-1; background:transparent; border:0; box-shadow:none; padding:0; color:var(--ud-text); overflow:visible; border-radius:0; }

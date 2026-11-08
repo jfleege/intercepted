@@ -9934,21 +9934,9 @@
       "week": 9
     }
   ],
-  "exported_at": "2026-11-08T00:45:17.036585+00:00",
+  "exported_at": "2026-11-08T14:33:13.653537+00:00",
   "monitoring": {
     "alerts": [
-      {
-        "game_id": "2026_09_CIN_ATL",
-        "id": "reported_out:2026_09_CIN_ATL:00-0037746",
-        "message": "Brian Robinson is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_CIN_ATL",
-        "id": "reported_out:2026_09_CIN_ATL:00-0041044",
-        "message": "Zachariah Branch is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
       {
         "game_id": "2026_09_DEN_CAR",
         "id": "availability_watch:2026_09_DEN_CAR:00-0040134",
@@ -10197,13 +10185,13 @@
       },
       {
         "id": "availability_coverage",
-        "message": "103 of 506 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "101 of 506 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 103,
+      "reported": 101,
       "tracked": 506
     },
     "calibration": [
@@ -10316,7 +10304,7 @@
         "windows": []
       }
     ],
-    "checked_at": "2026-11-08T00:45:17.036585+00:00",
+    "checked_at": "2026-11-08T14:33:13.653537+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,

@@ -60229,11 +60229,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 6,
-            "lower": 0.18761280689940868,
-            "observed": 0.5,
-            "predicted": 0.37036019676976695,
-            "upper": 0.8123871931005913
+            "games": 7,
+            "lower": 0.15821692226262685,
+            "observed": 0.42857142857142855,
+            "predicted": 0.3732465409991045,
+            "upper": 0.7495457695909742
           },
           {
             "bin": "40\u201350%",
@@ -61568,21 +61568,21 @@
             "week": 9
           },
           {
-            "away_score": null,
+            "away_score": 34,
             "away_team": "CIN",
-            "brier": null,
+            "brier": 0.15254071175296002,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-08",
             "game_id": "2026_09_CIN_ATL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 17,
             "home_team": "ATL",
             "kickoff": "2026-11-08T14:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4952223346538815,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "CIN",
             "probability": 0.39056460637512974,
             "provenance": {
@@ -61592,7 +61592,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 9
           },
@@ -61946,14 +61946,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5581395348837209,
-          "brier": 0.2545798353716531,
+          "accuracy": 0.5681818181818182,
+          "brier": 0.25226076438031914,
           "cancelled": 0,
-          "correct": 24,
-          "games": 43,
+          "correct": 25,
+          "games": 44,
           "incorrect": 19,
-          "log_loss": 0.701488747446662,
-          "pending": 14,
+          "log_loss": 0.6968008744286442,
+          "pending": 13,
           "ties": 0
         },
         "trend": [
@@ -62429,6 +62429,17 @@
             "game_number": 43,
             "label": "JAX @ BAL",
             "log_loss": 0.701488747446662
+          },
+          {
+            "accuracy": 0.5681818181818182,
+            "brier": 0.25226076438031914,
+            "correct": true,
+            "date": "2026-11-08",
+            "game_brier": 0.15254071175296002,
+            "game_id": "2026_09_CIN_ATL",
+            "game_number": 44,
+            "label": "CIN @ ATL",
+            "log_loss": 0.6968008744286442
           }
         ],
         "weekly": [
@@ -62473,13 +62484,13 @@
           },
           {
             "accuracy": 1.0,
-            "brier": 0.1290462669874909,
+            "brier": 0.14079348937022546,
             "cancelled": 0,
-            "correct": 1,
-            "games": 1,
+            "correct": 2,
+            "games": 2,
             "incorrect": 0,
-            "log_loss": 0.4450848617344565,
-            "pending": 14,
+            "log_loss": 0.470153598194169,
+            "pending": 13,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -62498,11 +62509,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 6,
-            "lower": 0.18761280689940868,
-            "observed": 0.5,
-            "predicted": 0.35684030179387055,
-            "upper": 0.8123871931005913
+            "games": 7,
+            "lower": 0.15821692226262685,
+            "observed": 0.42857142857142855,
+            "predicted": 0.3518833891957372,
+            "upper": 0.7495457695909742
           },
           {
             "bin": "40\u201350%",
@@ -63837,21 +63848,21 @@
             "week": 9
           },
           {
-            "away_score": null,
+            "away_score": 34,
             "away_team": "CIN",
-            "brier": null,
+            "brier": 0.10377541250233951,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-08",
             "game_id": "2026_09_CIN_ATL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 17,
             "home_team": "ATL",
             "kickoff": "2026-11-08T14:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.3888173250552048,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "CIN",
             "probability": 0.3221419136069374,
             "provenance": {
@@ -63861,7 +63872,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 9
           },
@@ -64215,14 +64226,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5813953488372093,
-          "brier": 0.251860667010428,
+          "accuracy": 0.5909090909090909,
+          "brier": 0.24849509304433504,
           "cancelled": 0,
-          "correct": 25,
-          "games": 43,
+          "correct": 26,
+          "games": 44,
           "incorrect": 18,
-          "log_loss": 0.6964492961467489,
-          "pending": 14,
+          "log_loss": 0.6894576604401229,
+          "pending": 13,
           "ties": 0
         },
         "trend": [
@@ -64698,6 +64709,17 @@
             "game_number": 43,
             "label": "JAX @ BAL",
             "log_loss": 0.6964492961467489
+          },
+          {
+            "accuracy": 0.5909090909090909,
+            "brier": 0.24849509304433504,
+            "correct": true,
+            "date": "2026-11-08",
+            "game_brier": 0.10377541250233951,
+            "game_id": "2026_09_CIN_ATL",
+            "game_number": 44,
+            "label": "CIN @ ATL",
+            "log_loss": 0.6894576604401229
           }
         ],
         "weekly": [
@@ -64742,13 +64764,13 @@
           },
           {
             "accuracy": 1.0,
-            "brier": 0.06811484611866675,
+            "brier": 0.08594512931050313,
             "cancelled": 0,
-            "correct": 1,
-            "games": 1,
+            "correct": 2,
+            "games": 2,
             "incorrect": 0,
-            "log_loss": 0.30244140510169815,
-            "pending": 14,
+            "log_loss": 0.34562936507845143,
+            "pending": 13,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -64767,11 +64789,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 5,
-            "lower": 0.1176182311592533,
-            "observed": 0.4,
-            "predicted": 0.35301014951226656,
-            "upper": 0.769280067791163
+            "games": 6,
+            "lower": 0.09676933255921683,
+            "observed": 0.3333333333333333,
+            "predicted": 0.3470578327354221,
+            "upper": 0.7000116786584712
           },
           {
             "bin": "40\u201350%",
@@ -65686,21 +65708,21 @@
             "week": 9
           },
           {
-            "away_score": null,
+            "away_score": 34,
             "away_team": "CIN",
-            "brier": null,
+            "brier": 0.10067690953504274,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-08",
             "game_id": "2026_09_CIN_ATL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 17,
             "home_team": "ATL",
             "kickoff": "2026-11-08T14:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.3816942599944127,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "CIN",
             "probability": 0.31729624885120017,
             "provenance": {
@@ -65710,7 +65732,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 9
           },
@@ -66064,14 +66086,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.5862068965517241,
-          "brier": 0.24152697264802173,
+          "accuracy": 0.6,
+          "brier": 0.23683197054425575,
           "cancelled": 0,
-          "correct": 17,
-          "games": 29,
+          "correct": 18,
+          "games": 30,
           "incorrect": 12,
-          "log_loss": 0.6749872209067973,
-          "pending": 14,
+          "log_loss": 0.6652107888763844,
+          "pending": 13,
           "ties": 0
         },
         "trend": [
@@ -66393,6 +66415,17 @@
             "game_number": 29,
             "label": "JAX @ BAL",
             "log_loss": 0.6749872209067973
+          },
+          {
+            "accuracy": 0.6,
+            "brier": 0.23683197054425575,
+            "correct": true,
+            "date": "2026-11-08",
+            "game_brier": 0.10067690953504274,
+            "game_id": "2026_09_CIN_ATL",
+            "game_number": 30,
+            "label": "CIN @ ATL",
+            "log_loss": 0.6652107888763844
           }
         ],
         "weekly": [
@@ -66424,13 +66457,13 @@
           },
           {
             "accuracy": 1.0,
-            "brier": 0.11634672373005557,
+            "brier": 0.10851181663254916,
             "cancelled": 0,
-            "correct": 1,
-            "games": 1,
+            "correct": 2,
+            "games": 2,
             "incorrect": 0,
-            "log_loss": 0.4171779698774651,
-            "pending": 14,
+            "log_loss": 0.3994361149359389,
+            "pending": 13,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -66449,11 +66482,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 4,
-            "lower": 0.15003570882017148,
-            "observed": 0.5,
-            "predicted": 0.34611086391385004,
-            "upper": 0.8499642911798285
+            "games": 5,
+            "lower": 0.1176182311592533,
+            "observed": 0.4,
+            "predicted": 0.3426209605860591,
+            "upper": 0.769280067791163
           },
           {
             "bin": "40\u201350%",
@@ -67368,21 +67401,21 @@
             "week": 9
           },
           {
-            "away_score": null,
+            "away_score": 34,
             "away_team": "CIN",
-            "brier": null,
+            "brier": 0.10801828119254937,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-08",
             "game_id": "2026_09_CIN_ATL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 17,
             "home_team": "ATL",
             "kickoff": "2026-11-08T14:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.39848157078083,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "CIN",
             "probability": 0.3286613472748954,
             "provenance": {
@@ -67392,7 +67425,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 9
           },
@@ -67746,14 +67779,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6896551724137931,
-          "brier": 0.23141847558736084,
+          "accuracy": 0.7,
+          "brier": 0.22730513577420047,
           "cancelled": 0,
-          "correct": 20,
-          "games": 29,
+          "correct": 21,
+          "games": 30,
           "incorrect": 9,
-          "log_loss": 0.6540779820330457,
-          "pending": 14,
+          "log_loss": 0.6455581016579719,
+          "pending": 13,
           "ties": 0
         },
         "trend": [
@@ -68075,6 +68108,17 @@
             "game_number": 29,
             "label": "JAX @ BAL",
             "log_loss": 0.6540779820330457
+          },
+          {
+            "accuracy": 0.7,
+            "brier": 0.22730513577420047,
+            "correct": true,
+            "date": "2026-11-08",
+            "game_brier": 0.10801828119254937,
+            "game_id": "2026_09_CIN_ATL",
+            "game_number": 30,
+            "label": "CIN @ ATL",
+            "log_loss": 0.6455581016579719
           }
         ],
         "weekly": [
@@ -68106,13 +68150,13 @@
           },
           {
             "accuracy": 1.0,
-            "brier": 0.07667131003761682,
+            "brier": 0.0923447956150831,
             "cancelled": 0,
-            "correct": 1,
-            "games": 1,
+            "correct": 2,
+            "games": 2,
             "incorrect": 0,
-            "log_loss": 0.3242020103699418,
-            "pending": 14,
+            "log_loss": 0.3613417905753859,
+            "pending": 13,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -68125,5 +68169,5 @@
   "schema_version": 1,
   "snapshot_count": 15,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-08T14:33:06.035130+00:00"
+  "updated_at": "2026-11-08T18:23:28.039655+00:00"
 }

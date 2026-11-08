@@ -10102,63 +10102,9 @@
       "week": 9
     }
   ],
-  "exported_at": "2026-11-08T21:14:03.408273+00:00",
+  "exported_at": "2026-11-08T22:25:59.724144+00:00",
   "monitoring": {
     "alerts": [
-      {
-        "game_id": "2026_09_GB_NE",
-        "id": "availability_watch:2026_09_GB_NE:00-0033090",
-        "message": "Hunter Henry: Questionable (Foot). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_GB_NE",
-        "id": "availability_watch:2026_09_GB_NE:00-0033555",
-        "message": "Mack Hollins: Questionable (Calf). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_GB_NE",
-        "id": "reported_out:2026_09_GB_NE:00-0035676",
-        "message": "A.J. Brown is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_GB_NE",
-        "id": "availability_watch:2026_09_GB_NE:00-0038685",
-        "message": "Chris Brooks: Questionable (Ankle). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_GB_NE",
-        "id": "availability_watch:2026_09_GB_NE:00-0039811",
-        "message": "MarShawn Lloyd: Questionable (Knee). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_GB_NE",
-        "id": "reported_out:2026_09_GB_NE:00-0040734",
-        "message": "TreVeyon Henderson is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_ARI_SEA",
-        "id": "reported_out:2026_09_ARI_SEA:00-0034869",
-        "message": "Sam Darnold is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_ARI_SEA",
-        "id": "reported_out:2026_09_ARI_SEA:00-0037157",
-        "message": "Bam Knight is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_09_ARI_SEA",
-        "id": "reported_out:2026_09_ARI_SEA:00-0037545",
-        "message": "Rashid Shaheed is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
       {
         "game_id": "2026_09_TB_CHI",
         "id": "availability_watch:2026_09_TB_CHI:00-0040129",
@@ -10197,13 +10143,13 @@
       },
       {
         "id": "availability_coverage",
-        "message": "35 of 506 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "17 of 506 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 35,
+      "reported": 17,
       "tracked": 506
     },
     "calibration": [
@@ -10228,7 +10174,7 @@
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 21,
+        "samples": 177,
         "status": "sample_building",
         "target": "any_td",
         "version": "d9dc5fc3d2b9c070",
@@ -10255,7 +10201,7 @@
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 1,
+        "samples": 15,
         "status": "sample_building",
         "target": "pass_td",
         "version": "d9dc5fc3d2b9c070",
@@ -10264,7 +10210,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 32,
+        "samples": 37,
         "status": "sample_building",
         "target": "winner:v4_a",
         "version": "ac161c2fa5d3",
@@ -10282,7 +10228,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 32,
+        "samples": 37,
         "status": "sample_building",
         "target": "winner:v4_qb_plus",
         "version": "ac161c2fa5d3",
@@ -10300,7 +10246,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 32,
+        "samples": 37,
         "status": "sample_building",
         "target": "winner:v5_boosted",
         "version": "ac161c2fa5d3",
@@ -10309,14 +10255,14 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 32,
+        "samples": 37,
         "status": "sample_building",
         "target": "winner:v5_qb_plus",
         "version": "ac161c2fa5d3",
         "windows": []
       }
     ],
-    "checked_at": "2026-11-08T21:14:03.408273+00:00",
+    "checked_at": "2026-11-08T22:25:59.724144+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,

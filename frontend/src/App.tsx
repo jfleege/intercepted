@@ -230,7 +230,7 @@ const focusedGame =
   />
 ) : <div className="score-ticker score-ticker-placeholder" role="status" aria-label="Loading scoreboard"><span>Loading scoreboard…</span></div>}
 <DashboardMetrics data={data} />
-{!archived && <ForecastChanges season={data?.season} week={data?.week}/>}
+{!archived && <ForecastChanges season={data?.season} week={data?.week} maxVisible={5}/>}
           {/* predictions */}
           <section
             className="forecast-section ud-forecast"

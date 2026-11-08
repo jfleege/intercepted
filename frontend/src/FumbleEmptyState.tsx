@@ -39,9 +39,9 @@ export default function FumbleEmptyState() {
     };
   }, []);
   return <div className="market-fumble">
+    <h4>Fumble!</h4>
     <canvas ref={canvasRef} width={580} height={275} role="img"
       aria-label="A light-blue pixel football player runs, fumbles, falls face-first, then looks up at the loose ball." />
-    <h4>Fumble!</h4>
     <p>No sportsbook odds are currently available for this matchup.</p>
   </div>;
 }

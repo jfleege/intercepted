@@ -2,43 +2,43 @@
   "active_season": 2026,
   "active_week": 9,
   "attempt": {
-    "completed_at": "2026-11-08T22:25:59.918306+00:00",
-    "mode": "results",
-    "started_at": "2026-11-08T22:25:56.429876+00:00",
+    "completed_at": "2026-11-08T23:42:36.178495+00:00",
+    "mode": "full",
+    "started_at": "2026-11-08T23:42:05.999532+00:00",
     "state": "success",
     "steps": {
-      "directory": "skipped",
-      "forecast": "skipped",
+      "directory": "success",
+      "forecast": "success",
       "history": "success",
       "insights": "success",
       "markets": "success",
       "odds": "skipped",
-      "players": "skipped",
-      "position_defense": "skipped",
+      "players": "success",
+      "position_defense": "success",
       "pre_rollover": "skipped",
       "props": "skipped",
-      "research": "skipped",
+      "research": "success",
       "research_results": "success",
       "results": "success",
-      "teams": "skipped",
+      "teams": "success",
       "verify": "success"
     }
   },
   "forecast_check": {
     "active_season": 2026,
     "active_week": 9,
-    "checked_at": "2026-11-08T21:13:54.408482+00:00",
+    "checked_at": "2026-11-08T23:42:08.966809+00:00",
     "message": "Published slate uses qualified low-volume NGS exclusions. JAX: Trevor Lawrence NGS through 2026 Week 6; TB: Baker Mayfield NGS through 2026 Week 3. No missing tracking metrics were invented.",
     "state": "current_limited_qb",
     "target_season": 2026,
     "target_week": 9
   },
   "last_results_refresh_at": "2026-11-08T22:25:59.918306+00:00",
-  "last_successful_refresh_at": "2026-11-08T21:14:20.314840+00:00",
+  "last_successful_refresh_at": "2026-11-08T23:42:36.178495+00:00",
   "next_forecast_check_at": "2026-11-09T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-10T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-08T22:25:59.918306+00:00",
+  "snapshot_at": "2026-11-08T23:42:36.178495+00:00",
   "sources": [
     {
       "features_through_week": 8,
@@ -51,25 +51,25 @@
     {
       "id": "players",
       "label": "Player cards",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-08T21:13:56.662968+00:00",
+      "updated_at": "2026-11-08T23:42:11.721109+00:00",
       "week": 9
     },
     {
       "id": "directory",
       "label": "Player history",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
       "through_week": 8,
-      "updated_at": "2026-11-08T21:14:00.496866+00:00",
+      "updated_at": "2026-11-08T23:42:15.482862+00:00",
       "week": 9
     },
     {
       "features_through_week": 8,
       "id": "research",
       "label": "Matchup projections",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
       "updated_at": "2026-11-07T18:04:24.208132+00:00",
       "week": 9
@@ -78,28 +78,28 @@
       "id": "results",
       "label": "Game results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-08T22:25:58.582638+00:00"
+      "updated_at": "2026-11-08T23:42:10.369306+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-08T22:25:58.920952+00:00"
+      "updated_at": "2026-11-08T23:42:16.651983+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-08T22:25:59.724144+00:00",
+      "updated_at": "2026-11-08T23:42:18.806929+00:00",
       "week": 9
     },
     {
       "id": "position_defense",
       "label": "Defense vs positions",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-08T21:14:01.230372+00:00",
+      "updated_at": "2026-11-08T23:42:16.331554+00:00",
       "week": 9
     },
     {
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-08T18:24:01.505013+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/42530158231"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/42536382991"
 }

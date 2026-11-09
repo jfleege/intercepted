@@ -190,7 +190,7 @@ const focusedGame =
           <div id="page-content" tabIndex={-1}/>
           <div className="dashboard-status-row">
             <RefreshStatus season={currentData?.season} week={currentData?.week}/>
-            {page === 'dashboard' && !archived && <ForecastChanges season={data?.season} week={data?.week} maxVisible={5}/>}
+            {page === 'dashboard' && !archived && <ForecastChanges season={data?.season} week={data?.week} maxVisible={5} dialog/>}
           </div>
           {infoPages.filter(name => visited.has(name)).map(name => <PagePanel active={page === name} name={name} key={name}><RetainedSiteInfo page={name}/></PagePanel>)}
           {visited.has('players') && <PagePanel active={page === 'players'} name="players"><RetainedPlayers search={searches.players ?? ''} onSearch={setPlayerSearch}/></PagePanel>}

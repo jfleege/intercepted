@@ -216,44 +216,18 @@
 
 
 .dashboard-status-row {
-  --status-summary-height: 56px;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  align-items: start;
   gap: 12px;
   margin-bottom: 18px;
 }
-.dashboard-shell.unified-dashboard .dashboard-status-row > :is(.refresh-status, .fi-updates) {
-  margin: 0;
-  min-width: 0;
-}
-.dashboard-status-row > .fi-updates > summary {
-  box-sizing: border-box;
-  min-height: var(--status-summary-height);
-  padding: 8px 16px;
-}
-.dashboard-status-row > .fi-updates > summary > span:first-child { gap: 2px; }
-.dashboard-status-row > .fi-updates > summary strong { font-size: 20px; line-height: 1.15; }
 
 @media (min-width: 1200px) {
-  .dashboard-status-row:has(> .fi-updates) {
+  .dashboard-status-row:has(> .status-card-slot + .status-card-slot) {
     grid-template-columns: minmax(0, 62fr) minmax(0, 38fr);
   }
-  .dashboard-status-row:has(> .fi-updates) > .refresh-status > summary {
-    min-height: var(--status-summary-height);
-    padding-block: 8px;
-    gap: 12px;
-  }
-  .dashboard-status-row:has(> .fi-updates) .refresh-status-state {
-    flex: 1;
-    min-width: 0;
-  }
-  .dashboard-status-row:has(> .fi-updates) .refresh-status-last { flex-shrink: 0; }
-  .dashboard-status-row:has(> .fi-updates) .refresh-status-sources {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .dashboard-status-row .fi-change {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    overflow-wrap: anywhere;
-  }
+  .dashboard-status-row { grid-auto-rows: 1fr; }
+  .dashboard-status-row .status-card { height: 100%; }
+  .dashboard-status-row .refresh-status-state { min-width: 0; }
+  .dashboard-status-row .refresh-status-last { flex-shrink: 0; }
 }

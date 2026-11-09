@@ -1,14 +1,6 @@
 import InterfaceIcon from './InterfaceIcon';
 import './SiteInfo.css';
 
-function showDataStatus() {
-  const panel = document.getElementById('refresh-status') as HTMLDetailsElement | null;
-  if (!panel) return;
-  panel.open = true;
-  panel.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth', block: 'start'});
-  panel.querySelector('summary')?.focus({preventScroll: true});
-}
-
 export default function SiteFooter({inert}: {inert: boolean}) {
   return <footer className="footer site-footer" inert={inert}>
     <div className="site-footer-main">
@@ -24,7 +16,10 @@ export default function SiteFooter({inert}: {inert: boolean}) {
       <nav className="site-footer-links" aria-label="About Intercepted">
         <h2>Behind the numbers</h2>
         <a href="#methodology">Models &amp; data sources</a>
-        <button type="button" onClick={showDataStatus}>Data status</button>
+        <button type="button" aria-haspopup="dialog" onClick={event => {
+          event.currentTarget.focus({ preventScroll: true });
+          document.getElementById('refresh-status')?.click();
+        }}>Data status</button>
         <a href="https://github.com/jfleege/intercepted/issues/new" target="_blank" rel="noreferrer">Report an issue <span className="sr-only">(opens GitHub in a new tab)</span><InterfaceIcon name="external" /></a>
       </nav>
     </div>

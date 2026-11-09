@@ -1,0 +1,79 @@
+.dashboard-shell.unified-dashboard .status-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 58px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  color: var(--ud-text);
+  background: linear-gradient(110deg, #142b3bd9, #0d1e2be8);
+  border: 1px solid transparent;
+  border-radius: 12px;
+  text-align: left;
+  font: 400 12px/1.4 Barlow, sans-serif;
+  cursor: pointer;
+}
+
+.status-card-slot { min-width: 0; }
+.status-card-label {
+  display: grid;
+  gap: 2px;
+  font-size: 9px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ud-muted);
+}
+.status-card-label b {
+  font-size: 12px;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ud-text);
+  font-weight: 600;
+}
+.status-card-action {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  white-space: nowrap;
+  color: var(--ud-blue);
+}
+.status-card-action svg { width: 14px; height: 14px; }
+
+body:has(.status-dialog[open]) { overflow: hidden; }
+.dashboard-shell .ic-dialog.status-dialog {
+  width: min(800px, calc(100% - 32px));
+  max-height: 90dvh;
+  margin: auto;
+  box-sizing: border-box;
+}
+.status-dialog::backdrop {
+  background: #020914ba;
+  backdrop-filter: blur(10px);
+}
+.dashboard-shell .status-dialog-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.status-dialog-header h2 {
+  margin: 0;
+  font: 600 24px/1.2 'Barlow Condensed', sans-serif;
+}
+.status-dialog-header .ic-close { flex-shrink: 0; }
+.status-dialog > .fi-content,
+.status-dialog > .refresh-status-body { border-top: 0; }
+
+@media (hover: hover) {
+  .dashboard-shell.unified-dashboard .status-card:hover { background: #173243; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .status-dialog[open], .status-dialog[open]::backdrop {
+    animation: modal-veil-in 150ms ease-out;
+  }
+}
+@media (prefers-reduced-transparency: reduce) {
+  .status-dialog::backdrop { background: #020914ed; backdrop-filter: none; }
+}

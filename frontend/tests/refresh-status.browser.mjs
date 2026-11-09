@@ -22,16 +22,26 @@ try {
    return route.fulfill({json:{events:[]}});
   });
   await page.goto(origin);await page.getByText(`Waiting for Week ${original.active_week+1} stats`,{exact:true}).waitFor();
-  const panel=page.locator('.refresh-status');assert.equal(await panel.getAttribute('open'),null);
-  await panel.locator('summary').focus();await page.keyboard.press('Enter');assert.notEqual(await panel.getAttribute('open'),null);
+  const trigger=page.locator('#refresh-status');
+  const panel=page.getByRole('dialog',{name:'Data status',exact:true});
+  assert.equal(await panel.isVisible(),false);
+  await trigger.focus();await page.keyboard.press('Enter');await panel.waitFor();
+  if(width>=1200){
+   const cards=await page.locator('.dashboard-status-row .status-card').evaluateAll(els=>els.map(e=>e.getBoundingClientRect().toJSON()));
+   assert.equal(cards.length,2);
+   assert.equal(cards[0].y,cards[1].y);
+   assert.equal(cards[0].height,cards[1].height);
+  }
   await page.getByText('QB statistics missing 2 completed team-weeks',{exact:true}).waitFor();assert.equal(await panel.locator('dt').count(),8);
   assert.ok(await panel.innerText().then(v=>v.includes('Inputs through Week')));
-  assert.equal(await panel.locator('.refresh-status-toggle>span').evaluate(e=>getComputedStyle(e).transitionDuration),'0s');
+  assert.equal(await panel.evaluate(e=>getComputedStyle(e).animationName),'none');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   for(const item of await panel.locator('dd,dt').all())assert.ok(await item.evaluate(e=>e.scrollWidth<=e.clientWidth+1));
   await page.screenshot({path:`qa/status/${width}-expanded.png`});
-  await panel.locator('summary').click();await page.screenshot({path:`qa/status/${width}-collapsed.png`});
-  await page.locator('.dash-nav a[href="#players"]').click();assert.ok(await panel.isVisible());
+  await page.keyboard.press('Escape');await panel.waitFor({state:'hidden'});
+  assert.ok(await trigger.evaluate(e=>e===document.activeElement));
+  await page.screenshot({path:`qa/status/${width}-collapsed.png`});
+  await page.locator('.dash-nav a[href="#players"]').click();assert.ok(await trigger.isVisible());
   status={...status,forecast_check:{...status.forecast_check,state:'current'},attempt:{...status.attempt,steps:{research:'failure'}}};
   await page.reload();await page.getByText('Some data updates did not complete',{exact:true}).waitFor();
   status={...status,snapshot_at:iso(-31*3600000)};await page.reload();await page.getByText('Refresh status is over 30 hours old',{exact:true}).waitFor();

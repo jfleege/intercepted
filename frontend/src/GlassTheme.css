@@ -170,9 +170,44 @@
   }
 }
 @media (hover: hover) {
-  .dashboard-shell.unified-dashboard .dash-nav-item:hover { background-color: #1a354866; color: #effaff; }
-  .dashboard-shell.unified-dashboard .ud-game:not(.is-selected):hover { background: #21425755; }
   .dashboard-shell.unified-dashboard .mb-offer:hover { border-color: #80d5ff66; }
+}
+
+.dashboard-shell.unified-dashboard :is(button:enabled, .dash-nav-item, .info-nav a) {
+  --button-hover-fill: #1b3b4f;
+  /* Tint existing gradients while keeping selected states and text colors visible. */
+  background-blend-mode: screen;
+  transition: background-color 160ms ease-out, border-color 160ms ease-out,
+    color 160ms ease-out, box-shadow 180ms ease-out, scale 160ms ease-out;
+}
+.dashboard-shell.unified-dashboard :where(
+  .status-card, .dash-nav-item, .ud-game, .score-ticker-game, .mx-slate > button,
+  .pi-player-row, .pi-watch-strip > button, .mb-games > button, .mb-saved
+) {
+  --button-hover-scale: 1.015;
+}
+.dashboard-shell.unified-dashboard .status-card:enabled { --button-hover-fill: #0b1b25; }
+.dashboard-shell.unified-dashboard .ud-details-button:enabled { --button-hover-fill: #0c1b26; }
+.dashboard-shell.unified-dashboard :is(.mb-primary, .mb-mobile-slip, .section-load-error button):enabled {
+  --button-hover-fill: #8bdff3;
+}
+.dashboard-shell.unified-dashboard :is(button:enabled, .dash-nav-item, .info-nav a):focus-visible {
+  background-color: var(--button-hover-fill);
+}
+@media (hover: hover) and (pointer: fine) {
+  .dashboard-shell.unified-dashboard :is(button:enabled, .dash-nav-item, .info-nav a):hover {
+    background-color: var(--button-hover-fill);
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .dashboard-shell.unified-dashboard :is(button:enabled, .dash-nav-item, .info-nav a):hover {
+    scale: var(--button-hover-scale, 1.025);
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .dashboard-shell.unified-dashboard :is(button:enabled, .dash-nav-item, .info-nav a):active {
+    scale: .97;
+  }
 }
 
 /* Short data arrival; no delayed cards, bouncing charts, or changes to the hero timeline. */

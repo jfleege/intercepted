@@ -66,9 +66,6 @@ body:has(.status-dialog[open]) { overflow: hidden; }
 .status-dialog > .fi-content,
 .status-dialog > .refresh-status-body { border-top: 0; }
 
-@media (hover: hover) {
-  .dashboard-shell.unified-dashboard .status-card:hover { background: #173243; }
-}
 @media (prefers-reduced-motion: no-preference) {
   .status-dialog[open], .status-dialog[open]::backdrop {
     animation: modal-veil-in 150ms ease-out;

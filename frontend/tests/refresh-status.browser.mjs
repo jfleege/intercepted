@@ -25,6 +25,17 @@ try {
   const trigger=page.locator('#refresh-status');
   const panel=page.getByRole('dialog',{name:'Data status',exact:true});
   assert.equal(await panel.isVisible(),false);
+  if(width>=1200){
+   const analysis=page.getByRole('button',{name:'Full matchup analysis',exact:true});
+   for(const [button,scale] of [[trigger,'1.015'],[analysis,'1.025']]){
+    await button.hover();
+    assert.equal(await button.evaluate(e=>getComputedStyle(e).scale),'none');
+    await page.emulateMedia({reducedMotion:'no-preference'});
+    await page.waitForFunction(([element,expected])=>getComputedStyle(element).scale===expected,[await button.elementHandle(),scale]);
+    await page.emulateMedia({reducedMotion:'reduce'});
+   }
+   await page.mouse.move(0,0);
+  }
   await trigger.focus();await page.keyboard.press('Enter');await panel.waitFor();
   if(width>=1200){
    const cards=await page.locator('.dashboard-status-row .status-card').evaluateAll(els=>els.map(e=>e.getBoundingClientRect().toJSON()));

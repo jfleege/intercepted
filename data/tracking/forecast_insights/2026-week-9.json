@@ -10100,6 +10100,90 @@
       "source_at": "2026-11-08T18:23:24.948798+00:00",
       "unit": "status",
       "week": 9
+    },
+    {
+      "after": "Out",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0028986:availability",
+      "game_id": "2026_09_TB_CHI",
+      "id": "8e4d182ab7430d03e42542c4",
+      "label": "Case Keenum game status",
+      "matchup": "TB @ CHI",
+      "observed_at": "2026-11-09T00:21:43.871793+00:00",
+      "player_id": "00-0028986",
+      "previous_observed_at": "2026-11-08T23:59:24.125214+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-09T00:21:43.859027+00:00",
+      "unit": "status",
+      "week": 9
+    },
+    {
+      "after": 0.6547436485845938,
+      "before": 0.6547436485845939,
+      "delta": -1.1102230246251565e-16,
+      "field": "home_win_prob_v4_qb_plus",
+      "game_id": "2026_09_TB_CHI",
+      "id": "96156dc81ca779493f8b7a8d",
+      "label": "v4_qb_plus home win",
+      "matchup": "TB @ CHI",
+      "observed_at": "2026-11-09T00:22:10.702720+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-09T00:21:43.871793+00:00",
+      "reasons": [
+        "Saved research input fingerprint changed; individual cause is not attributed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-09T00:21:48.335356+00:00",
+      "unit": "probability",
+      "week": 9
+    },
+    {
+      "after": "682aced48d97f9fc",
+      "before": "d9dc5fc3d2b9c070",
+      "delta": null,
+      "field": "research_model_version",
+      "game_id": "2026_09_TB_CHI",
+      "id": "c8152d481efc3870fa71840a",
+      "label": "Research model version",
+      "matchup": "TB @ CHI",
+      "observed_at": "2026-11-09T00:22:10.702720+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-09T00:21:43.871793+00:00",
+      "reasons": [
+        "Saved model version changed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-09T00:22:04.750676+00:00",
+      "unit": "version",
+      "week": 9
+    },
+    {
+      "after": "682aced48d97f9fc",
+      "before": "d9dc5fc3d2b9c070",
+      "delta": null,
+      "field": "research_model_version",
+      "game_id": "2026_09_BUF_MIN",
+      "id": "73a7de8473e7227aadc654cd",
+      "label": "Research model version",
+      "matchup": "BUF @ MIN",
+      "observed_at": "2026-11-09T00:22:10.702720+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-09T00:21:43.871793+00:00",
+      "reasons": [
+        "Saved model version changed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-09T00:22:04.750676+00:00",
+      "unit": "version",
+      "week": 9
     }
   ],
   "games": {
@@ -11612,14 +11696,14 @@
       "away_team": "BUF",
       "game_id": "2026_09_BUF_MIN",
       "home_team": "MIN",
-      "input_fingerprint": "8e996ab1f21540882a60473a0212106e79afbaffba430c22e1ed73deef4f3d9c",
+      "input_fingerprint": "6b3de94c1859223615b2d70b3ad09b3b85a20f33db49798a310564c37b515151",
       "kickoff": "2026-11-10T01:15:00+00:00",
-      "observed_at": "2026-11-08T23:59:24.125214+00:00",
+      "observed_at": "2026-11-09T00:22:10.702720+00:00",
       "qb_ids": [
         "00-0034857",
         "00-0035228"
       ],
-      "research_version": "d9dc5fc3d2b9c070",
+      "research_version": "682aced48d97f9fc",
       "season": 2026,
       "values": {
         "00-0032950:availability": {
@@ -11646,12 +11730,12 @@
           "value": "listed_reserve"
         },
         "00-0033293:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Aaron Jones \u00b7 anytime td probability",
           "player_id": "00-0033293",
           "unit": "probability",
           "value": 0.3892,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0033293:availability": {
           "at": null,
@@ -11662,12 +11746,12 @@
           "value": "unknown"
         },
         "00-0033293:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Aaron Jones \u00b7 expected yards",
           "player_id": "00-0033293",
           "unit": "yards",
           "value": 57.4,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0033293:practice": {
           "at": null,
@@ -11692,12 +11776,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0034487:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Trent Sherfield \u00b7 anytime td probability",
           "player_id": "00-0034487",
           "unit": "probability",
           "value": 0.0593,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034487:availability": {
           "at": null,
@@ -11708,12 +11792,12 @@
           "value": "unknown"
         },
         "00-0034487:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Trent Sherfield \u00b7 expected yards",
           "player_id": "00-0034487",
           "unit": "yards",
           "value": 5.6,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034487:practice": {
           "at": null,
@@ -11754,15 +11838,15 @@
           "value": "listed_reserve"
         },
         "00-0034827:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "DJ Moore \u00b7 anytime td probability",
           "player_id": "00-0034827",
           "unit": "probability",
           "value": 0.2419,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034827:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "DJ Moore game status",
           "player_id": "00-0034827",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -11770,15 +11854,15 @@
           "value": "unknown"
         },
         "00-0034827:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "DJ Moore \u00b7 expected yards",
           "player_id": "00-0034827",
           "unit": "yards",
           "value": 46.0,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034827:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "DJ Moore practice",
           "player_id": "00-0034827",
           "unit": "status",
@@ -11800,12 +11884,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0034857:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Allen \u00b7 anytime td probability",
           "player_id": "00-0034857",
           "unit": "probability",
           "value": 0.2782,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034857:availability": {
           "at": null,
@@ -11816,20 +11900,20 @@
           "value": "unknown"
         },
         "00-0034857:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Allen \u00b7 expected yards",
           "player_id": "00-0034857",
           "unit": "yards",
           "value": 213.2,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034857:passing_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Allen \u00b7 passing td probability",
           "player_id": "00-0034857",
           "unit": "probability",
           "value": 0.8442,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034857:practice": {
           "at": null,
@@ -11854,15 +11938,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035228:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kyler Murray \u00b7 anytime td probability",
           "player_id": "00-0035228",
           "unit": "probability",
           "value": 0.0745,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035228:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Kyler Murray game status",
           "player_id": "00-0035228",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -11870,23 +11954,23 @@
           "value": "Out"
         },
         "00-0035228:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kyler Murray \u00b7 expected yards",
           "player_id": "00-0035228",
           "unit": "yards",
           "value": 212.9,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035228:passing_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kyler Murray \u00b7 passing td probability",
           "player_id": "00-0035228",
           "unit": "probability",
           "value": 0.7788,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035228:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Kyler Murray practice",
           "player_id": "00-0035228",
           "unit": "status",
@@ -11908,12 +11992,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035229:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "T.J. Hockenson \u00b7 anytime td probability",
           "player_id": "00-0035229",
           "unit": "probability",
           "value": 0.2836,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035229:availability": {
           "at": null,
@@ -11924,12 +12008,12 @@
           "value": "unknown"
         },
         "00-0035229:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "T.J. Hockenson \u00b7 expected yards",
           "player_id": "00-0035229",
           "unit": "yards",
           "value": 35.6,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035229:practice": {
           "at": null,
@@ -11954,12 +12038,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035249:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Oliver \u00b7 anytime td probability",
           "player_id": "00-0035249",
           "unit": "probability",
           "value": 0.1089,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035249:availability": {
           "at": null,
@@ -11970,12 +12054,12 @@
           "value": "unknown"
         },
         "00-0035249:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Oliver \u00b7 expected yards",
           "player_id": "00-0035249",
           "unit": "yards",
           "value": 14.2,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035249:practice": {
           "at": null,
@@ -12000,12 +12084,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035500:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Greg Dortch \u00b7 anytime td probability",
           "player_id": "00-0035500",
           "unit": "probability",
           "value": 0.1057,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035500:availability": {
           "at": null,
@@ -12016,12 +12100,12 @@
           "value": "unknown"
         },
         "00-0035500:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Greg Dortch \u00b7 expected yards",
           "player_id": "00-0035500",
           "unit": "yards",
           "value": 6.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035500:practice": {
           "at": null,
@@ -12046,15 +12130,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035537:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ty Johnson \u00b7 anytime td probability",
           "player_id": "00-0035537",
           "unit": "probability",
           "value": 0.109,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035537:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Ty Johnson game status",
           "player_id": "00-0035537",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12062,15 +12146,15 @@
           "value": "unknown"
         },
         "00-0035537:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ty Johnson \u00b7 expected yards",
           "player_id": "00-0035537",
           "unit": "yards",
           "value": 11.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035537:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Ty Johnson practice",
           "player_id": "00-0035537",
           "unit": "status",
@@ -12092,12 +12176,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035689:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Dawson Knox \u00b7 anytime td probability",
           "player_id": "00-0035689",
           "unit": "probability",
           "value": 0.1265,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035689:availability": {
           "at": null,
@@ -12108,12 +12192,12 @@
           "value": "unknown"
         },
         "00-0035689:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Dawson Knox \u00b7 expected yards",
           "player_id": "00-0035689",
           "unit": "yards",
           "value": 12.8,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035689:practice": {
           "at": null,
@@ -12138,15 +12222,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036259:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jauan Jennings \u00b7 anytime td probability",
           "player_id": "00-0036259",
           "unit": "probability",
           "value": 0.1701,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036259:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Jauan Jennings game status",
           "player_id": "00-0036259",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12154,15 +12238,15 @@
           "value": "Out"
         },
         "00-0036259:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jauan Jennings \u00b7 expected yards",
           "player_id": "00-0036259",
           "unit": "yards",
           "value": 18.2,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036259:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Jauan Jennings practice",
           "player_id": "00-0036259",
           "unit": "status",
@@ -12184,12 +12268,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036322:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Justin Jefferson \u00b7 anytime td probability",
           "player_id": "00-0036322",
           "unit": "probability",
           "value": 0.2664,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036322:availability": {
           "at": null,
@@ -12200,12 +12284,12 @@
           "value": "unknown"
         },
         "00-0036322:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Justin Jefferson \u00b7 expected yards",
           "player_id": "00-0036322",
           "unit": "yards",
           "value": 54.4,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036322:practice": {
           "at": null,
@@ -12230,12 +12314,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036425:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "DeeJay Dallas \u00b7 anytime td probability",
           "player_id": "00-0036425",
           "unit": "probability",
           "value": 0.0913,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036425:availability": {
           "at": null,
@@ -12246,12 +12330,12 @@
           "value": "unknown"
         },
         "00-0036425:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "DeeJay Dallas \u00b7 expected yards",
           "player_id": "00-0036425",
           "unit": "yards",
           "value": 6.6,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036425:practice": {
           "at": null,
@@ -12276,15 +12360,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036988:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Palmer \u00b7 anytime td probability",
           "player_id": "00-0036988",
           "unit": "probability",
           "value": 0.1259,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036988:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Josh Palmer game status",
           "player_id": "00-0036988",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12292,15 +12376,15 @@
           "value": "Out"
         },
         "00-0036988:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Palmer \u00b7 expected yards",
           "player_id": "00-0036988",
           "unit": "yards",
           "value": 18.6,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036988:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Josh Palmer practice",
           "player_id": "00-0036988",
           "unit": "status",
@@ -12322,12 +12406,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0037248:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "James Cook \u00b7 anytime td probability",
           "player_id": "00-0037248",
           "unit": "probability",
           "value": 0.7089,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037248:availability": {
           "at": null,
@@ -12338,12 +12422,12 @@
           "value": "unknown"
         },
         "00-0037248:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "James Cook \u00b7 expected yards",
           "player_id": "00-0037248",
           "unit": "yards",
           "value": 84.0,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037248:practice": {
           "at": null,
@@ -12368,15 +12452,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0037261:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Khalil Shakir \u00b7 anytime td probability",
           "player_id": "00-0037261",
           "unit": "probability",
           "value": 0.1745,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037261:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Khalil Shakir game status",
           "player_id": "00-0037261",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12384,15 +12468,15 @@
           "value": "unknown"
         },
         "00-0037261:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Khalil Shakir \u00b7 expected yards",
           "player_id": "00-0037261",
           "unit": "yards",
           "value": 39.8,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037261:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Khalil Shakir practice",
           "player_id": "00-0037261",
           "unit": "status",
@@ -12414,12 +12498,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0037525:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jordan Mason \u00b7 anytime td probability",
           "player_id": "00-0037525",
           "unit": "probability",
           "value": 0.2967,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037525:availability": {
           "at": null,
@@ -12430,12 +12514,12 @@
           "value": "unknown"
         },
         "00-0037525:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jordan Mason \u00b7 expected yards",
           "player_id": "00-0037525",
           "unit": "yards",
           "value": 49.8,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037525:practice": {
           "at": null,
@@ -12460,15 +12544,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0038933:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Dalton Kincaid \u00b7 anytime td probability",
           "player_id": "00-0038933",
           "unit": "probability",
           "value": 0.1999,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038933:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Dalton Kincaid game status",
           "player_id": "00-0038933",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12476,15 +12560,15 @@
           "value": "unknown"
         },
         "00-0038933:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Dalton Kincaid \u00b7 expected yards",
           "player_id": "00-0038933",
           "unit": "yards",
           "value": 39.3,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038933:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Dalton Kincaid practice",
           "player_id": "00-0038933",
           "unit": "status",
@@ -12506,12 +12590,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0038994:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jordan Addison \u00b7 anytime td probability",
           "player_id": "00-0038994",
           "unit": "probability",
           "value": 0.1905,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038994:availability": {
           "at": null,
@@ -12522,12 +12606,12 @@
           "value": "unknown"
         },
         "00-0038994:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jordan Addison \u00b7 expected yards",
           "player_id": "00-0038994",
           "unit": "yards",
           "value": 37.9,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038994:practice": {
           "at": null,
@@ -12575,12 +12659,12 @@
           "value": "unknown"
         },
         "00-0039710:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jeshaun Jones \u00b7 anytime td probability",
           "player_id": "00-0039710",
           "unit": "probability",
           "value": 0.1068,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039710:availability": {
           "at": null,
@@ -12591,12 +12675,12 @@
           "value": "unknown"
         },
         "00-0039710:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jeshaun Jones \u00b7 expected yards",
           "player_id": "00-0039710",
           "unit": "yards",
           "value": 7.8,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039710:practice": {
           "at": null,
@@ -12614,12 +12698,12 @@
           "value": "unknown"
         },
         "00-0039875:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ray Davis \u00b7 anytime td probability",
           "player_id": "00-0039875",
           "unit": "probability",
           "value": 0.1123,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039875:availability": {
           "at": null,
@@ -12630,12 +12714,12 @@
           "value": "unknown"
         },
         "00-0039875:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ray Davis \u00b7 expected yards",
           "player_id": "00-0039875",
           "unit": "yards",
           "value": 14.3,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039875:practice": {
           "at": null,
@@ -12660,15 +12744,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039901:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Keon Coleman \u00b7 anytime td probability",
           "player_id": "00-0039901",
           "unit": "probability",
           "value": 0.2397,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039901:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Keon Coleman game status",
           "player_id": "00-0039901",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12676,15 +12760,15 @@
           "value": "unknown"
         },
         "00-0039901:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Keon Coleman \u00b7 expected yards",
           "player_id": "00-0039901",
           "unit": "yards",
           "value": 32.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039901:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Keon Coleman practice",
           "player_id": "00-0039901",
           "unit": "status",
@@ -12706,12 +12790,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040154:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Tai Felton \u00b7 anytime td probability",
           "player_id": "00-0040154",
           "unit": "probability",
           "value": 0.0913,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040154:availability": {
           "at": null,
@@ -12722,12 +12806,12 @@
           "value": "unknown"
         },
         "00-0040154:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Tai Felton \u00b7 expected yards",
           "player_id": "00-0040154",
           "unit": "yards",
           "value": 13.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040154:practice": {
           "at": null,
@@ -12752,12 +12836,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040194:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jackson Hawes \u00b7 anytime td probability",
           "player_id": "00-0040194",
           "unit": "probability",
           "value": 0.0879,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040194:availability": {
           "at": null,
@@ -12768,12 +12852,12 @@
           "value": "unknown"
         },
         "00-0040194:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jackson Hawes \u00b7 expected yards",
           "player_id": "00-0040194",
           "unit": "yards",
           "value": 6.8,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040194:practice": {
           "at": null,
@@ -12798,12 +12882,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040215:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Gavin Bartholomew \u00b7 anytime td probability",
           "player_id": "00-0040215",
           "unit": "probability",
           "value": 0.0853,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040215:availability": {
           "at": null,
@@ -12814,12 +12898,12 @@
           "value": "unknown"
         },
         "00-0040215:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Gavin Bartholomew \u00b7 expected yards",
           "player_id": "00-0040215",
           "unit": "yards",
           "value": 18.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040215:practice": {
           "at": null,
@@ -12844,12 +12928,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040363:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Keleki Latu \u00b7 anytime td probability",
           "player_id": "00-0040363",
           "unit": "probability",
           "value": 0.072,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040363:availability": {
           "at": null,
@@ -12860,12 +12944,12 @@
           "value": "unknown"
         },
         "00-0040363:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Keleki Latu \u00b7 expected yards",
           "player_id": "00-0040363",
           "unit": "yards",
           "value": 4.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040363:practice": {
           "at": null,
@@ -12890,12 +12974,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040506:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Myles Price \u00b7 anytime td probability",
           "player_id": "00-0040506",
           "unit": "probability",
           "value": 0.0962,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040506:availability": {
           "at": null,
@@ -12906,12 +12990,12 @@
           "value": "unknown"
         },
         "00-0040506:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Myles Price \u00b7 expected yards",
           "player_id": "00-0040506",
           "unit": "yards",
           "value": 10.6,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040506:practice": {
           "at": null,
@@ -12936,12 +13020,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040509:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ben Yurosek \u00b7 anytime td probability",
           "player_id": "00-0040509",
           "unit": "probability",
           "value": 0.0862,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040509:availability": {
           "at": null,
@@ -12952,12 +13036,12 @@
           "value": "unknown"
         },
         "00-0040509:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ben Yurosek \u00b7 expected yards",
           "player_id": "00-0040509",
           "unit": "yards",
           "value": 10.8,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040509:practice": {
           "at": null,
@@ -12998,15 +13082,15 @@
           "value": "unknown"
         },
         "00-0041104:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Demond Claiborne \u00b7 anytime td probability",
           "player_id": "00-0041104",
           "unit": "probability",
           "value": 0.0768,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041104:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Demond Claiborne game status",
           "player_id": "00-0041104",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13014,15 +13098,15 @@
           "value": "Out"
         },
         "00-0041104:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Demond Claiborne \u00b7 expected yards",
           "player_id": "00-0041104",
           "unit": "yards",
           "value": 10.7,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041104:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Demond Claiborne practice",
           "player_id": "00-0041104",
           "unit": "status",
@@ -13067,11 +13151,11 @@
           "value": "listed_reserve"
         },
         "away_points": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "BUF projected points",
           "unit": "points",
           "value": 22.3,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "away_qb": {
           "at": "2026-11-05T22:42:04.806207+00:00",
@@ -13089,11 +13173,11 @@
           "value": "unconfirmed_proxy"
         },
         "home_points": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "MIN projected points",
           "unit": "points",
           "value": 19.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "home_qb": {
           "at": "2026-11-05T22:42:04.806207+00:00",
@@ -13111,34 +13195,34 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-07T18:04:11.616680+00:00",
+          "at": "2026-11-09T00:21:48.335356+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.33041932195326235
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-07T18:04:11.616680+00:00",
+          "at": "2026-11-09T00:21:48.335356+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.36374564110274027
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-07T18:04:11.616680+00:00",
+          "at": "2026-11-09T00:21:48.335356+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.48526187722756325
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-07T18:04:11.616680+00:00",
+          "at": "2026-11-09T00:21:48.335356+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.3529021372492524
         },
         "research_model_version": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Research model version",
           "unit": "version",
-          "value": "d9dc5fc3d2b9c070"
+          "value": "682aced48d97f9fc"
         }
       },
       "week": 9
@@ -31758,26 +31842,26 @@
       "away_team": "TB",
       "game_id": "2026_09_TB_CHI",
       "home_team": "CHI",
-      "input_fingerprint": "8e996ab1f21540882a60473a0212106e79afbaffba430c22e1ed73deef4f3d9c",
+      "input_fingerprint": "6b3de94c1859223615b2d70b3ad09b3b85a20f33db49798a310564c37b515151",
       "kickoff": "2026-11-09T01:20:00+00:00",
-      "observed_at": "2026-11-08T23:59:24.125214+00:00",
+      "observed_at": "2026-11-09T00:22:10.702720+00:00",
       "qb_ids": [
         "00-0034855",
         "00-0039918"
       ],
-      "research_version": "d9dc5fc3d2b9c070",
+      "research_version": "682aced48d97f9fc",
       "season": 2026,
       "values": {
         "00-0028986:availability": {
-          "at": null,
+          "at": "2026-11-09T00:22:10.690450+00:00",
           "label": "Case Keenum game status",
           "player_id": "00-0028986",
-          "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+          "source": "https://www.espn.com/nfl/injuries",
           "unit": "status",
-          "value": "unknown"
+          "value": "Out"
         },
         "00-0028986:practice": {
-          "at": null,
+          "at": "2026-11-09T00:22:10.690450+00:00",
           "label": "Case Keenum practice",
           "player_id": "00-0028986",
           "unit": "status",
@@ -31792,12 +31876,12 @@
           "value": "listed_reserve"
         },
         "00-0032464:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kalif Raymond \u00b7 anytime td probability",
           "player_id": "00-0032464",
           "unit": "probability",
           "value": 0.1458,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0032464:availability": {
           "at": null,
@@ -31808,12 +31892,12 @@
           "value": "unknown"
         },
         "00-0032464:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kalif Raymond \u00b7 expected yards",
           "player_id": "00-0032464",
           "unit": "yards",
           "value": 27.8,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0032464:practice": {
           "at": null,
@@ -31838,15 +31922,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0033921:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Chris Godwin Jr. \u00b7 anytime td probability",
           "player_id": "00-0033921",
           "unit": "probability",
           "value": 0.1364,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0033921:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Chris Godwin Jr. game status",
           "player_id": "00-0033921",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -31854,15 +31938,15 @@
           "value": "unknown"
         },
         "00-0033921:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Chris Godwin Jr. \u00b7 expected yards",
           "player_id": "00-0033921",
           "unit": "yards",
           "value": 33.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0033921:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Chris Godwin Jr. practice",
           "player_id": "00-0033921",
           "unit": "status",
@@ -31884,15 +31968,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0034855:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Baker Mayfield \u00b7 anytime td probability",
           "player_id": "00-0034855",
           "unit": "probability",
           "value": 0.0361,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034855:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Baker Mayfield game status",
           "player_id": "00-0034855",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -31900,23 +31984,23 @@
           "value": "unknown"
         },
         "00-0034855:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Baker Mayfield \u00b7 expected yards",
           "player_id": "00-0034855",
           "unit": "yards",
           "value": 218.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034855:passing_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Baker Mayfield \u00b7 passing td probability",
           "player_id": "00-0034855",
           "unit": "probability",
           "value": 0.643,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0034855:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Baker Mayfield practice",
           "player_id": "00-0034855",
           "unit": "status",
@@ -31938,12 +32022,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035359:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "David Sills \u00b7 anytime td probability",
           "player_id": "00-0035359",
           "unit": "probability",
           "value": 0.0912,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035359:availability": {
           "at": null,
@@ -31954,12 +32038,12 @@
           "value": "unknown"
         },
         "00-0035359:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "David Sills \u00b7 expected yards",
           "player_id": "00-0035359",
           "unit": "yards",
           "value": 10.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0035359:practice": {
           "at": null,
@@ -31977,12 +32061,12 @@
           "value": "listed_reserve"
         },
         "00-0036275:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "D'Andre Swift \u00b7 anytime td probability",
           "player_id": "00-0036275",
           "unit": "probability",
           "value": 0.6538,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036275:availability": {
           "at": null,
@@ -31993,12 +32077,12 @@
           "value": "unknown"
         },
         "00-0036275:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "D'Andre Swift \u00b7 expected yards",
           "player_id": "00-0036275",
           "unit": "yards",
           "value": 53.4,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036275:practice": {
           "at": null,
@@ -32023,12 +32107,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036290:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Cole Kmet \u00b7 anytime td probability",
           "player_id": "00-0036290",
           "unit": "probability",
           "value": 0.1261,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036290:availability": {
           "at": null,
@@ -32039,12 +32123,12 @@
           "value": "unknown"
         },
         "00-0036290:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Cole Kmet \u00b7 expected yards",
           "player_id": "00-0036290",
           "unit": "yards",
           "value": 16.3,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036290:practice": {
           "at": null,
@@ -32069,15 +32153,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036919:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kenny Gainwell \u00b7 anytime td probability",
           "player_id": "00-0036919",
           "unit": "probability",
           "value": 0.2251,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036919:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Kenny Gainwell game status",
           "player_id": "00-0036919",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -32085,15 +32169,15 @@
           "value": "unknown"
         },
         "00-0036919:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kenny Gainwell \u00b7 expected yards",
           "player_id": "00-0036919",
           "unit": "yards",
           "value": 42.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0036919:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Kenny Gainwell practice",
           "player_id": "00-0036919",
           "unit": "status",
@@ -32115,12 +32199,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0037311:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ko Kieft \u00b7 anytime td probability",
           "player_id": "00-0037311",
           "unit": "probability",
           "value": 0.0595,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037311:availability": {
           "at": null,
@@ -32131,12 +32215,12 @@
           "value": "unknown"
         },
         "00-0037311:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ko Kieft \u00b7 expected yards",
           "player_id": "00-0037311",
           "unit": "yards",
           "value": 4.4,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037311:practice": {
           "at": null,
@@ -32161,12 +32245,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0037380:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kaden Davis \u00b7 anytime td probability",
           "player_id": "00-0037380",
           "unit": "probability",
           "value": 0.0507,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037380:availability": {
           "at": null,
@@ -32177,12 +32261,12 @@
           "value": "unknown"
         },
         "00-0037380:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kaden Davis \u00b7 expected yards",
           "player_id": "00-0037380",
           "unit": "yards",
           "value": 4.6,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0037380:practice": {
           "at": null,
@@ -32200,15 +32284,15 @@
           "value": "unknown"
         },
         "00-0038129:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Cade Otton \u00b7 anytime td probability",
           "player_id": "00-0038129",
           "unit": "probability",
           "value": 0.1241,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038129:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Cade Otton game status",
           "player_id": "00-0038129",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -32216,15 +32300,15 @@
           "value": "unknown"
         },
         "00-0038129:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Cade Otton \u00b7 expected yards",
           "player_id": "00-0038129",
           "unit": "yards",
           "value": 26.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038129:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Cade Otton practice",
           "player_id": "00-0038129",
           "unit": "status",
@@ -32276,15 +32360,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0038440:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Zavier Scott \u00b7 anytime td probability",
           "player_id": "00-0038440",
           "unit": "probability",
           "value": 0.07,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038440:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Zavier Scott game status",
           "player_id": "00-0038440",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -32292,15 +32376,15 @@
           "value": "unknown"
         },
         "00-0038440:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Zavier Scott \u00b7 expected yards",
           "player_id": "00-0038440",
           "unit": "yards",
           "value": 3.9,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038440:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Zavier Scott practice",
           "player_id": "00-0038440",
           "unit": "status",
@@ -32322,12 +32406,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0038951:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Sean Tucker \u00b7 anytime td probability",
           "player_id": "00-0038951",
           "unit": "probability",
           "value": 0.2093,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038951:availability": {
           "at": null,
@@ -32338,12 +32422,12 @@
           "value": "unknown"
         },
         "00-0038951:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Sean Tucker \u00b7 expected yards",
           "player_id": "00-0038951",
           "unit": "yards",
           "value": 21.3,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0038951:practice": {
           "at": null,
@@ -32368,12 +32452,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039021:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Roschon Johnson \u00b7 anytime td probability",
           "player_id": "00-0039021",
           "unit": "probability",
           "value": 0.1529,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039021:availability": {
           "at": null,
@@ -32384,12 +32468,12 @@
           "value": "unknown"
         },
         "00-0039021:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Roschon Johnson \u00b7 expected yards",
           "player_id": "00-0039021",
           "unit": "yards",
           "value": 22.7,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039021:practice": {
           "at": null,
@@ -32414,12 +32498,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039050:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Payne Durham \u00b7 anytime td probability",
           "player_id": "00-0039050",
           "unit": "probability",
           "value": 0.0596,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039050:availability": {
           "at": null,
@@ -32430,12 +32514,12 @@
           "value": "unknown"
         },
         "00-0039050:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Payne Durham \u00b7 expected yards",
           "player_id": "00-0039050",
           "unit": "yards",
           "value": 8.6,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039050:practice": {
           "at": null,
@@ -32453,15 +32537,15 @@
           "value": "listed_reserve"
         },
         "00-0039361:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Bucky Irving \u00b7 anytime td probability",
           "player_id": "00-0039361",
           "unit": "probability",
           "value": 0.5482,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039361:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Bucky Irving game status",
           "player_id": "00-0039361",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -32469,15 +32553,15 @@
           "value": "unknown"
         },
         "00-0039361:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Bucky Irving \u00b7 expected yards",
           "player_id": "00-0039361",
           "unit": "yards",
           "value": 75.4,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039361:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Bucky Irving practice",
           "player_id": "00-0039361",
           "unit": "status",
@@ -32499,12 +32583,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039589:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kameron Johnson \u00b7 anytime td probability",
           "player_id": "00-0039589",
           "unit": "probability",
           "value": 0.0689,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039589:availability": {
           "at": null,
@@ -32515,12 +32599,12 @@
           "value": "unknown"
         },
         "00-0039589:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kameron Johnson \u00b7 expected yards",
           "player_id": "00-0039589",
           "unit": "yards",
           "value": 4.9,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039589:practice": {
           "at": null,
@@ -32545,12 +32629,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039855:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jalen McMillan \u00b7 anytime td probability",
           "player_id": "00-0039855",
           "unit": "probability",
           "value": 0.1802,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039855:availability": {
           "at": null,
@@ -32561,12 +32645,12 @@
           "value": "unknown"
         },
         "00-0039855:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jalen McMillan \u00b7 expected yards",
           "player_id": "00-0039855",
           "unit": "yards",
           "value": 31.3,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039855:practice": {
           "at": null,
@@ -32584,12 +32668,12 @@
           "value": "listed_reserve"
         },
         "00-0039918:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Caleb Williams \u00b7 anytime td probability",
           "player_id": "00-0039918",
           "unit": "probability",
           "value": 0.1012,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039918:availability": {
           "at": null,
@@ -32600,20 +32684,20 @@
           "value": "unknown"
         },
         "00-0039918:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Caleb Williams \u00b7 expected yards",
           "player_id": "00-0039918",
           "unit": "yards",
           "value": 241.3,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039918:passing_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Caleb Williams \u00b7 passing td probability",
           "player_id": "00-0039918",
           "unit": "probability",
           "value": 0.7953,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039918:practice": {
           "at": null,
@@ -32638,12 +32722,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039919:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Rome Odunze \u00b7 anytime td probability",
           "player_id": "00-0039919",
           "unit": "probability",
           "value": 0.1675,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039919:availability": {
           "at": null,
@@ -32654,12 +32738,12 @@
           "value": "unknown"
         },
         "00-0039919:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Rome Odunze \u00b7 expected yards",
           "player_id": "00-0039919",
           "unit": "yards",
           "value": 45.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0039919:practice": {
           "at": null,
@@ -32684,12 +32768,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040126:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Colston Loveland \u00b7 anytime td probability",
           "player_id": "00-0040126",
           "unit": "probability",
           "value": 0.3392,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040126:availability": {
           "at": null,
@@ -32700,12 +32784,12 @@
           "value": "unknown"
         },
         "00-0040126:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Colston Loveland \u00b7 expected yards",
           "player_id": "00-0040126",
           "unit": "yards",
           "value": 48.9,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040126:practice": {
           "at": null,
@@ -32730,15 +32814,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040129:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Emeka Egbuka \u00b7 anytime td probability",
           "player_id": "00-0040129",
           "unit": "probability",
           "value": 0.2398,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040129:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Emeka Egbuka game status",
           "player_id": "00-0040129",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -32746,15 +32830,15 @@
           "value": "Questionable"
         },
         "00-0040129:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Emeka Egbuka \u00b7 expected yards",
           "player_id": "00-0040129",
           "unit": "yards",
           "value": 42.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040129:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Emeka Egbuka practice",
           "player_id": "00-0040129",
           "unit": "status",
@@ -32776,15 +32860,15 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040236:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kyle Monangai \u00b7 anytime td probability",
           "player_id": "00-0040236",
           "unit": "probability",
           "value": 0.3744,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040236:availability": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Kyle Monangai game status",
           "player_id": "00-0040236",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -32792,15 +32876,15 @@
           "value": "Questionable"
         },
         "00-0040236:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Kyle Monangai \u00b7 expected yards",
           "player_id": "00-0040236",
           "unit": "yards",
           "value": 57.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040236:practice": {
-          "at": "2026-11-08T23:59:23.012708+00:00",
+          "at": "2026-11-09T00:22:09.791413+00:00",
           "label": "Kyle Monangai practice",
           "player_id": "00-0040236",
           "unit": "status",
@@ -32822,12 +32906,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040237:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Tez Johnson \u00b7 anytime td probability",
           "player_id": "00-0040237",
           "unit": "probability",
           "value": 0.1242,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040237:availability": {
           "at": null,
@@ -32838,12 +32922,12 @@
           "value": "unknown"
         },
         "00-0040237:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Tez Johnson \u00b7 expected yards",
           "player_id": "00-0040237",
           "unit": "yards",
           "value": 17.1,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040237:practice": {
           "at": null,
@@ -32868,12 +32952,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040277:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jahdae Walker \u00b7 anytime td probability",
           "player_id": "00-0040277",
           "unit": "probability",
           "value": 0.1241,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040277:availability": {
           "at": null,
@@ -32884,12 +32968,12 @@
           "value": "unknown"
         },
         "00-0040277:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Jahdae Walker \u00b7 expected yards",
           "player_id": "00-0040277",
           "unit": "yards",
           "value": 5.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040277:practice": {
           "at": null,
@@ -32914,12 +32998,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040429:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Williams \u00b7 anytime td probability",
           "player_id": "00-0040429",
           "unit": "probability",
           "value": 0.0494,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040429:availability": {
           "at": null,
@@ -32930,12 +33014,12 @@
           "value": "unknown"
         },
         "00-0040429:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Josh Williams \u00b7 expected yards",
           "player_id": "00-0040429",
           "unit": "yards",
           "value": 6.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040429:practice": {
           "at": null,
@@ -32953,12 +33037,12 @@
           "value": "unknown"
         },
         "00-0040735:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Luther Burden III \u00b7 anytime td probability",
           "player_id": "00-0040735",
           "unit": "probability",
           "value": 0.3604,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040735:availability": {
           "at": null,
@@ -32969,12 +33053,12 @@
           "value": "unknown"
         },
         "00-0040735:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Luther Burden III \u00b7 expected yards",
           "player_id": "00-0040735",
           "unit": "yards",
           "value": 67.6,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0040735:practice": {
           "at": null,
@@ -32999,12 +33083,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0041048:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ted Hurst III \u00b7 anytime td probability",
           "player_id": "00-0041048",
           "unit": "probability",
           "value": 0.1202,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041048:availability": {
           "at": null,
@@ -33015,12 +33099,12 @@
           "value": "unknown"
         },
         "00-0041048:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Ted Hurst III \u00b7 expected yards",
           "player_id": "00-0041048",
           "unit": "yards",
           "value": 22.4,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041048:practice": {
           "at": null,
@@ -33045,12 +33129,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0041051:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Zavion Thomas \u00b7 anytime td probability",
           "player_id": "00-0041051",
           "unit": "probability",
           "value": 0.0955,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041051:availability": {
           "at": null,
@@ -33061,12 +33145,12 @@
           "value": "unknown"
         },
         "00-0041051:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Zavion Thomas \u00b7 expected yards",
           "player_id": "00-0041051",
           "unit": "yards",
           "value": 11.0,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041051:practice": {
           "at": null,
@@ -33091,12 +33175,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0041094:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Bauer Sharp \u00b7 anytime td probability",
           "player_id": "00-0041094",
           "unit": "probability",
           "value": 0.098,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041094:availability": {
           "at": null,
@@ -33107,12 +33191,12 @@
           "value": "unknown"
         },
         "00-0041094:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Bauer Sharp \u00b7 expected yards",
           "player_id": "00-0041094",
           "unit": "yards",
           "value": 6.4,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041094:practice": {
           "at": null,
@@ -33167,12 +33251,12 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0041558:anytime_td_probability": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Sam Roush \u00b7 anytime td probability",
           "player_id": "00-0041558",
           "unit": "probability",
           "value": 0.0867,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041558:availability": {
           "at": null,
@@ -33183,12 +33267,12 @@
           "value": "unknown"
         },
         "00-0041558:expected_yards": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Sam Roush \u00b7 expected yards",
           "player_id": "00-0041558",
           "unit": "yards",
           "value": 8.8,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "00-0041558:practice": {
           "at": null,
@@ -33213,14 +33297,14 @@
           "version": "recent-opportunities-mean-v1"
         },
         "away_points": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "TB projected points",
           "unit": "points",
           "value": 18.5,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "away_qb": {
-          "at": "2026-11-07T18:04:11.502534+00:00",
+          "at": "2026-11-09T00:21:48.188122+00:00",
           "display": "Baker Mayfield",
           "label": "TB projected QB",
           "source": "Latest completed-game primary passer: reconciled player/team box score and schedule QB ID; not a starter announcement",
@@ -33228,21 +33312,21 @@
           "value": "00-0034855"
         },
         "away_qb_status": {
-          "at": "2026-11-07T18:04:11.502534+00:00",
+          "at": "2026-11-09T00:21:48.188122+00:00",
           "label": "TB QB confirmation",
           "source": "Latest completed-game primary passer: reconciled player/team box score and schedule QB ID; not a starter announcement",
           "unit": "status",
           "value": "unconfirmed_proxy"
         },
         "home_points": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "CHI projected points",
           "unit": "points",
           "value": 24.7,
-          "version": "d9dc5fc3d2b9c070"
+          "version": "682aced48d97f9fc"
         },
         "home_qb": {
-          "at": "2026-11-07T18:04:11.502534+00:00",
+          "at": "2026-11-09T00:21:48.188122+00:00",
           "display": "Caleb Williams",
           "label": "CHI projected QB",
           "source": "Latest prior-week primary passer; not a starter announcement",
@@ -33250,47 +33334,47 @@
           "value": "00-0039918"
         },
         "home_qb_status": {
-          "at": "2026-11-07T18:04:11.502534+00:00",
+          "at": "2026-11-09T00:21:48.188122+00:00",
           "label": "CHI QB confirmation",
           "source": "Latest prior-week primary passer; not a starter announcement",
           "unit": "status",
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-07T18:04:11.616680+00:00",
+          "at": "2026-11-09T00:21:48.335356+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.6728920914595847
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-07T18:04:11.616680+00:00",
+          "at": "2026-11-09T00:21:48.335356+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
-          "value": 0.6547436485845939
+          "value": 0.6547436485845938
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-07T18:04:11.616680+00:00",
+          "at": "2026-11-09T00:21:48.335356+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.6117441856281574
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-07T18:04:11.616680+00:00",
+          "at": "2026-11-09T00:21:48.335356+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.6710205604046016
         },
         "research_model_version": {
-          "at": "2026-11-07T18:04:24.208132+00:00",
+          "at": "2026-11-09T00:22:04.750676+00:00",
           "label": "Research model version",
           "unit": "version",
-          "value": "d9dc5fc3d2b9c070"
+          "value": "682aced48d97f9fc"
         }
       },
       "week": 9
     }
   },
-  "last_observed_at": "2026-11-08T23:59:24.125214+00:00",
+  "last_observed_at": "2026-11-09T00:22:10.702720+00:00",
   "schema_version": 1,
   "tracking_started_at": "2026-11-03T16:41:38.427957+00:00"
 }

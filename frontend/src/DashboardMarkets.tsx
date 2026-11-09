@@ -43,7 +43,7 @@ export default function DashboardMarkets({game, model, showModelPicks = true}: {
       </>}</div>
     </section>
     {showModelPicks && <section className="ud-panel ud-model-panel" aria-label="Selected matchup model picks">
-      <div className="ud-panel-heading"><div><h3>Where the models stand</h3><p>Saved forecasts · agreement is not confidence</p></div><span className="ud-tag">{agree} / {models.length} pick {selectedPick ?? '—'}</span></div>
+      <div className="ud-panel-heading"><div><h3>Where the models stand</h3></div><span className="ud-tag">{agree} / {models.length} pick {selectedPick ?? '—'}</span></div>
       <div className="ud-model-votes">{game ? models.map(m => {
         const home=probability(game,m), pick=home>=.5?game.home_team:game.away_team;
         return <div className={`ud-model-vote${m===model?' is-active':''}`} key={m}><span>{MODEL_LABELS[m]}</span><strong><img src={`${import.meta.env.BASE_URL}logos/${pick}.png`} alt=""/>{pick}</strong><span>{(Math.max(home,1-home)*100).toFixed(1)}%</span></div>;

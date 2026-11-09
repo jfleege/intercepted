@@ -153,7 +153,7 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
         <div className="hp-form-row is-recent"><span>Last {trending.games_sampled}</span><i style={{'--hp-bar':`${Math.max(0, trending.recent_average) / maxYards * 100}%`} as CSSProperties}/><b>{trending.recent_average.toFixed(1)}</b></div>
       </> : <span className="hp-empty">{archived ? 'Player trends belong to the current week.' : 'No saved player trend for this matchup.'}</span>}
     </div>
-    <div className="hp-footer"><span>Illustrative playbook · Saved stats</span><div>
+    <div className="hp-footer"><div>
       <button type="button" onClick={() => setPaused(value => !value)} aria-label={paused ? 'Resume playbook' : 'Pause playbook'} aria-pressed={paused} disabled={reduced}>{paused || reduced ? '▶' : 'Ⅱ'}</button>
       <button type="button" onClick={advance} aria-label="Next playbook formation">→</button>
     </div></div>

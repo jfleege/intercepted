@@ -5,7 +5,7 @@
   --ud-border: #a4d5ec26;
   --glass-surface: linear-gradient(135deg, #172d40ed, #0c1b2af7);
   --glass-edge: #b6def530;
-  --glass-shadow: inset 0 1px 0 #e6f6ff09, 0 8px 24px #02091426;
+  --glass-soft-edge: #a4d5ec18;
   --glass-inset: inset 0 2px 5px #02091455, 0 1px 0 #d9f1ff08;
   background: radial-gradient(ellipse at 72% 0, #12405b38, transparent 45%), #080f1b;
   color-scheme: dark;
@@ -27,12 +27,6 @@
   background: linear-gradient(120deg, #144055bb, #132e43aa);
   box-shadow: inset 0 1px 0 #d0f3ff12, 0 3px 10px #0002;
 }
-.dashboard-shell.unified-dashboard .dash-side-note {
-  background: linear-gradient(135deg, #142c3d88, #0b1a28bb);
-  border-color: var(--ud-border);
-  box-shadow: inset 0 1px 0 #ffffff08;
-}
-.dashboard-shell.unified-dashboard .dash-side-note strong { color: #93dff5; }
 .dashboard-shell.unified-dashboard .dash-search {
   background: #071420d9;
   border-color: var(--glass-edge);
@@ -52,42 +46,49 @@
 /* Only the hero's outer material changes; its dimensions and animation are untouched. */
 .dashboard-shell.unified-dashboard .ud-hero {
   background: radial-gradient(ellipse at 86% 54%, #24577355, transparent 65%), linear-gradient(110deg, #102638f2, #0d1e2bf5);
-  border-color: var(--glass-edge);
+  border-color: transparent;
   border-radius: 18px;
-  box-shadow: var(--glass-shadow);
+  box-shadow: none;
 }
 .dashboard-shell.unified-dashboard :is(.ud-panel, .pulse-card, .pi-panel, .mx-panel, .ph-panel, .mb-panel, .review-panel, .review-metric, .review-method) {
   background: var(--glass-surface);
-  border-color: var(--glass-edge);
-  border-radius: 16px;
-  box-shadow: var(--glass-shadow);
-}
-.dashboard-shell.unified-dashboard .season-pulse .pulse-card {
   border-color: transparent;
+  border-radius: 16px;
   box-shadow: none;
 }
 .dashboard-shell.unified-dashboard .ud-bottom-grid .dp-player-card {
   background: var(--glass-surface);
-  border-color: var(--glass-edge);
+  border-color: transparent;
   border-radius: 14px;
-  /* Carousel clipping stays clean at the first/last card. */
-  box-shadow: inset 0 1px 0 #e6f6ff09;
+  box-shadow: none;
 }
 .dashboard-shell.unified-dashboard :is(.mb-offer, .mr-player, .mr-panel, .mr-score-card, .mr-method, .ic-panel, .ic-odds-tile) {
   background: linear-gradient(135deg, #142a3bdb, #0c1c2be8);
-  border-color: var(--ud-border);
-  box-shadow: inset 0 1px 0 #ffffff07;
+  border-color: var(--glass-soft-edge);
+  box-shadow: none;
+}
+/* Nested cards use a faint edge where the surrounding fill is similar. */
+.dashboard-shell.unified-dashboard :is(.ic-dialog .pw-card, .lm-idea, .mb-feed-status, .info-facts > div) {
+  border-color: var(--glass-soft-edge);
+  box-shadow: none;
 }
 .dashboard-shell.unified-dashboard .refresh-status {
   background: linear-gradient(110deg, #142b3bd9, #0d1e2be8);
-  border-color: var(--ud-border);
+  border-color: transparent;
   border-radius: 12px;
-  box-shadow: inset 0 1px 0 #ffffff08;
+  box-shadow: none;
 }
 .dashboard-shell.unified-dashboard .score-ticker {
   background: #0d1c2ad9;
-  border-color: var(--ud-border);
-  box-shadow: inset 0 1px 0 #ffffff06;
+  border-color: transparent;
+  box-shadow: none;
+}
+.dashboard-shell.unified-dashboard .mx-slate > button:not([aria-pressed=true]) {
+  border-color: var(--glass-soft-edge);
+  box-shadow: none;
+}
+.dashboard-shell.unified-dashboard .score-ticker-game {
+  border-right-color: var(--glass-soft-edge);
 }
 .dashboard-shell.unified-dashboard .ud-game { border-bottom-color: #a4d5ec16; }
 .dashboard-shell.unified-dashboard .ud-game.is-selected {
@@ -150,9 +151,9 @@
 .dashboard-shell.unified-dashboard .ic-overlay { background: #020914ba; }
 .dashboard-shell.unified-dashboard .ic-dialog {
   background: linear-gradient(135deg, #172d40fa, #0a1928fc);
-  border-color: #b6def547;
+  border-color: var(--glass-soft-edge);
   border-radius: 18px;
-  box-shadow: inset 0 1px 0 #e6f6ff14, 0 28px 90px #0009;
+  box-shadow: 0 28px 90px #0009;
 }
 .dashboard-shell.unified-dashboard .ic-header {
   background: #112637f5;
@@ -194,13 +195,13 @@
 }
 @keyframes glass-loading { from { background-position: 140% 0; } to { background-position: -120% 0; } }
 .dashboard-shell.unified-dashboard .loading-card {
-  background: var(--glass-surface); border-color: var(--ud-border); border-radius: 16px;
-  box-shadow: inset 0 1px 0 #ffffff08;
+  background: var(--glass-surface); border-color: transparent; border-radius: 16px;
+  box-shadow: none;
 }
 .dashboard-shell.unified-dashboard :is(.loading-card i, .loading-card > span, .loading-filter) { background: #213b4e; }
 .loading-matchup-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
 .dashboard-shell.unified-dashboard .loading-matchups { min-height: 0; padding: 0; }
-.loading-slate, .loading-focus { min-width: 0; border: 1px solid var(--ud-border); border-radius: 16px; background: var(--glass-surface); padding: 19px; }
+.loading-slate, .loading-focus { min-width: 0; border: 1px solid transparent; border-radius: 16px; background: var(--glass-surface); padding: 19px; }
 .loading-matchup-grid :is(i,b) { display: block; height: 12px; border-radius: 5px; background: #213b4e; }
 .loading-slate-heading { display: grid; gap: 10px; padding-bottom: 20px; }
 .loading-slate-heading i:first-child { width: 48%; height: 20px; }

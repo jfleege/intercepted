@@ -30,12 +30,7 @@ try {
   assert.ok((await page.locator('.dp-headshot').first().getAttribute('src')).startsWith('https://'));
   assert.equal(await page.locator('.dp-player-card').count(),10);
   assert.ok(await page.locator('.dp-headshot').first().evaluate(e=>e.getBoundingClientRect().width>=60));
-  if(width>1050){
-   const bubble=page.getByRole('region',{name:'Latest improvements'});await bubble.waitFor();
-   assert.equal(await bubble.locator('a').getAttribute('href'),'#markets');
-   assert.ok(await page.locator('.dash-sidebar-bottom').evaluate(e=>e.querySelector('.dash-whats-new').getBoundingClientRect().bottom<=e.querySelector('.dash-side-note').getBoundingClientRect().top));
-   await page.locator('.dash-sidebar-bottom').screenshot({path:`qa/unified/${width}-latest-improvements.png`});
-  }
+  assert.equal(await page.locator('.dash-sidebar-bottom').count(), 0);
   const controlHeights=await page.locator('.ud-forecast .forecast-sort,.ud-forecast .model-switch').evaluateAll(els=>els.map(e=>e.getBoundingClientRect().height));
   assert.ok(controlHeights.every(h=>Math.abs(h-38)<1),`Controls must share the compact model selector height: ${controlHeights}`);
   for(const card of await page.locator('.dp-player-card').all()){

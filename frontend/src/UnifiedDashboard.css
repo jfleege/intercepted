@@ -1,5 +1,6 @@
 @import '@fontsource/barlow/latin-400.css';
 @import '@fontsource/barlow/latin-600.css';
+@import '@fontsource/barlow/latin-600-italic.css';
 @import '@fontsource/barlow/latin-700.css';
 @import '@fontsource/barlow-condensed/latin-600.css';
 @import '@fontsource/barlow-condensed/latin-700.css';
@@ -25,7 +26,7 @@
 .dashboard-shell .forecast-section.ud-forecast { background:transparent; padding:0; border:0; box-shadow:none; margin-top:0; margin-bottom:24px; overflow:visible; }
 .dashboard-shell .ud-section-heading { display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:14px; margin-bottom:14px; }
 .dashboard-shell .ud-section-heading h2 { color:var(--ud-text); font:600 30px/1.1 'Barlow Condensed',sans-serif; margin:0; }
-.dashboard-shell .ud-section-heading .eyebrow { color:var(--ud-blue); font-size:11px; margin:0 0 5px; }
+.dashboard-shell .ud-section-kicker { margin:0 0 5px; font-style:italic; }
 .dashboard-shell .ud-forecast .forecast-controls { --ud-control-height:38px; display:flex; justify-content:flex-end; flex-wrap:wrap; align-items:flex-end; gap:8px; }
 .dashboard-shell .ud-forecast .prediction-week-label { color:var(--ud-muted); font-size:11px; }
 .dashboard-shell .ud-forecast .forecast-sort { color:var(--ud-text); background:#102632; border:1px solid var(--ud-border); height:var(--ud-control-height); min-height:var(--ud-control-height); box-sizing:border-box; padding:0 32px 0 10px; border-radius:6px; font-size:12px; line-height:14px; max-width:100%; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%23a5bdcc' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m4 6 4 4 4-4'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 10px center; }
@@ -88,7 +89,6 @@
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading h3 { color:var(--ud-text); font:600 28px/1.1 'Barlow Condensed',sans-serif; }
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading p { color:var(--ud-muted); font-size:12px; }
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading .ud-eyebrow { color:var(--ud-blue); font-size:11px; margin:0 0 5px; }
-.dashboard-shell .ud-bottom-grid .dp-week-label { color:var(--ud-blue); background:#183b4e; }
 .dashboard-shell .ud-bottom-grid .dp-scroll-button { color:var(--ud-text); background:#183443; border-color:var(--ud-border); }
 .dashboard-shell .ud-bottom-grid .dp-scroll-container { padding-bottom:4px; scrollbar-color:#3f6276 #102632; }
 .dashboard-shell .ud-bottom-grid .dp-grid { display:grid; grid-auto-flow:column; grid-auto-columns:calc((100% - 28px)/3); gap:14px; padding:0; }
@@ -172,7 +172,7 @@
 @media(max-width:650px) {
  .dashboard-shell .ud-hero { display:block; padding:23px 20px; min-height:240px; }
  .dashboard-shell .ud-hero-copy { max-width:88%; }
- .dashboard-shell .ud-hero h1 { font-size:44px; }
+ .dashboard-shell .ud-hero h1 { font-size:clamp(26px, 7.2vw, 44px); }
  .dashboard-shell .ud-hero-meta { gap:13px; margin-top:18px; }
  .dashboard-shell .ud-section-heading h2 { font-size:28px; }
  .dashboard-shell .ud-forecast .forecast-controls { justify-content:flex-start; width:100%; }

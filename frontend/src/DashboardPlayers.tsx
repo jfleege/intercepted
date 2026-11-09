@@ -238,6 +238,7 @@ const scrollPlayers = (direction: number) => {
     <section className="dash-bottom-panel dp-panel">
       <div className="dash-bottom-heading">
         <div>
+          <p className="ud-eyebrow ud-section-kicker">Dawg Report</p>
           <h3>Players to Watch</h3>
           <p>
   {ranking.blended ? "Top 10 · projections + recent form" : "Top 10 · positive yardage trends"} · Week {data?.week ?? "—"}
@@ -246,10 +247,6 @@ const scrollPlayers = (direction: number) => {
 
         <div className="dp-header-controls">
   <label className="dp-ranking-select"><span className="sr-only">Player ranking</span><select aria-label="Player ranking" value={mode} onChange={event => {setMode(event.target.value as "blend" | "form"); scrollRef.current?.scrollTo({left:0});}}><option value="blend">Projection + form</option><option value="form">Recent form</option></select></label>
-  <span className="dp-week-label">
-    TOP 10
-  </span>
-
   <button
     type="button"
     className="dp-scroll-button"

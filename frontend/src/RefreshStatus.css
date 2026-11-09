@@ -2,6 +2,15 @@
 .refresh-status-state i{width:6px;height:6px;border-radius:50%;background:#98aeba;flex-shrink:0}
 .refresh-status-card.is-good .refresh-status-state i{background:#79dbb8}
 .refresh-status-card.is-warning .refresh-status-state i{background:#efc183}
+@media (prefers-reduced-motion: no-preference) {
+  .refresh-status-card.is-warning .refresh-status-state i {
+    animation: refresh-status-pulse 2.4s ease-out 2;
+  }
+}
+@keyframes refresh-status-pulse {
+  0% { box-shadow: 0 0 0 0 #efc18366; }
+  75%, 100% { box-shadow: 0 0 0 5px #efc18300; }
+}
 .refresh-status-last{margin-left:auto;display:flex;flex-direction:column;gap:3px;font-size:10px;color:var(--ud-muted)}
 .refresh-status-last b{color:var(--ud-text);font-weight:400;font-variant-numeric:tabular-nums}
 .refresh-status-body{padding:18px;border-top:1px solid var(--ud-border)}

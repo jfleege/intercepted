@@ -188,7 +188,10 @@ const focusedGame =
         </div>
         <main className="container" id="dashboard" inert={!!selectedGame}>
           <div id="page-content" tabIndex={-1}/>
-          <RefreshStatus season={currentData?.season} week={currentData?.week}/>
+          <div className="dashboard-status-row">
+            <RefreshStatus season={currentData?.season} week={currentData?.week}/>
+            {page === 'dashboard' && !archived && <ForecastChanges season={data?.season} week={data?.week} maxVisible={5}/>}
+          </div>
           {infoPages.filter(name => visited.has(name)).map(name => <PagePanel active={page === name} name={name} key={name}><RetainedSiteInfo page={name}/></PagePanel>)}
           {visited.has('players') && <PagePanel active={page === 'players'} name="players"><RetainedPlayers search={searches.players ?? ''} onSearch={setPlayerSearch}/></PagePanel>}
           {visited.has('performance') && <PagePanel active={page === 'performance'} name="performance"><RetainedPerformance/></PagePanel>}
@@ -215,7 +218,6 @@ const focusedGame =
   />
 ) : <div className="score-ticker score-ticker-placeholder" role="status" aria-label="Loading scoreboard"><span>Loading scoreboard…</span></div>}
 <DashboardMetrics data={data} />
-{!archived && <ForecastChanges season={data?.season} week={data?.week} maxVisible={5}/>}
           {/* predictions */}
           <section
             className="forecast-section ud-forecast"

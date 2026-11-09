@@ -649,9 +649,9 @@
     },
     "2026_09_BUF_MIN": {
       "game_id": "2026_09_BUF_MIN",
-      "generated_at": "2026-11-09T00:22:04.750676+00:00",
+      "generated_at": "2026-11-09T15:40:18.931301+00:00",
       "kickoff": "2026-11-10T01:15:00+00:00",
-      "model_version": "682aced48d97f9fc",
+      "model_version": "d9dc5fc3d2b9c070",
       "players": [
         {
           "anytime_td_probability": 0.2782,
@@ -958,23 +958,23 @@
           "team": "BUF"
         },
         {
-          "anytime_td_probability": 0.0745,
+          "anytime_td_probability": 0.0496,
           "baseline_anytime_td_probability": 0.133333,
-          "baseline_passing_td_probability": 0.692308,
+          "baseline_passing_td_probability": 0.615385,
           "conditional_on": "Appearing in the game",
-          "expected_yards": 212.9,
-          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/qzoa3bglbgxpxcvjqzo1",
-          "name": "Kyler Murray",
+          "expected_yards": 176.5,
+          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/azwdmcksvjva4tgaa8vm",
+          "name": "Carson Wentz",
           "opponent": "BUF",
-          "passing_td_probability": 0.7788,
-          "player_id": "00-0035228",
+          "passing_td_probability": 0.6151,
+          "player_id": "00-0032950",
           "position": "QB",
-          "prior_appearances": 93,
+          "prior_appearances": 74,
           "range_80": [
-            109.9,
-            315.9
+            73.5,
+            279.5
           ],
-          "recent_yards": 196.3,
+          "recent_yards": 140.0,
           "stat": "passing",
           "status": "available",
           "team": "MIN"
@@ -9968,8 +9968,8 @@
       }
     }
   },
-  "generated_at": "2026-11-09T00:22:04.750676+00:00",
-  "input_fingerprint": "6b3de94c1859223615b2d70b3ad09b3b85a20f33db49798a310564c37b515151",
+  "generated_at": "2026-11-09T15:40:18.931301+00:00",
+  "input_fingerprint": "545c486d94891d8f02d6eaf8512f353be00821f4504a407ee514f4e0a2bbe5bc",
   "model_versions": {
     "682aced48d97f9fc": {
       "created_at": "2026-11-09T00:21:54.155842+00:00",
@@ -10210,7 +10210,7 @@
       "status": "experimental"
     },
     "d9dc5fc3d2b9c070": {
-      "created_at": "2026-11-07T18:04:15.736506+00:00",
+      "created_at": "2026-11-09T15:40:10.333197+00:00",
       "models": {
         "anytime_td": {
           "calibration_cutoff": [
@@ -10439,10 +10439,10 @@
       },
       "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
       "source_sha256": {
-        "pbp_current": "0ee2707fb50377e7466d9fdaed91fe2b62ba3f9f68a40701d59df2b9affcc46c",
-        "players_current": "5e8f2a71466e0da61add7b5936088ee8294aba621c171adda26539b847c7d281",
+        "pbp_current": "d8f0563ff6f5061f36ced3b187bda9f6a1dcc586eb42152004cc6493aff5ef6c",
+        "players_current": "7db4bd860bbe68c3131a3a887643bf9ba53d85ddf786d1ec4b2de78b942b3b6c",
         "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
-        "schedules_current": "492941242792b4648e70c0fdfc4f0460b2ffa73caf53f92e76d0bb7d3cb2f174",
+        "schedules_current": "5915ae13c093c137be568a20272438129b6954956af24e2d7002ca12f3cccf0e",
         "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
       },
       "status": "experimental"

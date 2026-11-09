@@ -1,37 +1,37 @@
 {
-  "generated_at": "2026-11-09T05:12:06.553391+00:00",
+  "generated_at": "2026-11-09T15:40:42.212105+00:00",
   "players": [
     {
       "availability_evidence": {
-        "blocked": true,
-        "injury": "Hamstring",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
+        "status": "unknown"
       },
-      "baseline_usage": 27.666666666666668,
+      "baseline_usage": 22.0,
       "game_id": "2026_09_BUF_MIN",
       "kickoff": "2026-11-10T01:15:00+00:00",
       "kind": "passing",
       "opponent": "BUF",
-      "player_id": "00-0035228",
+      "player_id": "00-0032950",
       "role_adjustment": "Timestamped depth-rank model passed development gate",
       "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "rank": null,
+        "reason": "Game-specific sourced quarterback report.",
+        "source": "https://www.vikings.com/news/quarterback-carson-wentz-monday-night-bills",
+        "status": "confirmed",
+        "updated_at": "2026-11-09T15:27:34+00:00"
       },
       "role_rank": 1,
       "team": "MIN",
       "thresholds": [],
-      "usage": 0,
+      "usage": 31.8,
       "usage_field": "attempts",
-      "usage_status": "reported_out"
+      "usage_status": "role_aware_conditional"
     },
     {
       "availability_evidence": {
@@ -56,7 +56,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 2,
       "team": "MIN",
@@ -88,7 +88,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 1,
       "team": "MIN",
@@ -127,7 +127,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Knee",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
+        "observed_at": "2026-11-09T15:40:23.351502+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -146,7 +146,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 4,
       "team": "MIN",
@@ -178,7 +178,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 3,
       "team": "MIN",
@@ -236,7 +236,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 1,
       "team": "MIN",
@@ -294,7 +294,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 2,
       "team": "MIN",
@@ -333,7 +333,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Calf",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
+        "observed_at": "2026-11-09T15:40:23.351502+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -352,7 +352,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 3,
       "team": "MIN",
@@ -384,7 +384,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 4,
       "team": "MIN",
@@ -442,7 +442,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 5,
       "team": "MIN",
@@ -500,7 +500,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 1,
       "team": "MIN",
@@ -558,7 +558,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 3,
       "team": "MIN",
@@ -616,7 +616,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 4,
       "team": "MIN",
@@ -674,7 +674,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 1,
       "team": "BUF",
@@ -727,7 +727,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 1,
       "team": "BUF",
@@ -785,7 +785,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 3,
       "team": "BUF",
@@ -824,7 +824,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Illness",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
+        "observed_at": "2026-11-09T15:40:23.351502+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -843,7 +843,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 2,
       "team": "BUF",
@@ -882,7 +882,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Not injury related - personal matter",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
+        "observed_at": "2026-11-09T15:40:23.351502+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -901,7 +901,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 2,
       "team": "BUF",
@@ -940,7 +940,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
+        "observed_at": "2026-11-09T15:40:23.351502+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -959,7 +959,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 1,
       "team": "BUF",
@@ -998,7 +998,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
+        "observed_at": "2026-11-09T15:40:23.351502+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -1017,7 +1017,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 3,
       "team": "BUF",
@@ -1056,7 +1056,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Hamstring",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
+        "observed_at": "2026-11-09T15:40:23.351502+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -1075,7 +1075,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 4,
       "team": "BUF",
@@ -1159,7 +1159,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 5,
       "team": "BUF",
@@ -1198,7 +1198,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Chest",
-        "observed_at": "2026-11-09T05:11:42.363635+00:00",
+        "observed_at": "2026-11-09T15:40:23.351502+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -1217,7 +1217,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 1,
       "team": "BUF",
@@ -1275,7 +1275,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 2,
       "team": "BUF",
@@ -1333,7 +1333,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 3,
       "team": "BUF",
@@ -1391,7 +1391,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-08T14:14:26Z"
+        "updated_at": "2026-11-09T07:02:18Z"
       },
       "role_rank": 4,
       "team": "BUF",

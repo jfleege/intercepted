@@ -23,13 +23,14 @@ function quoteFresh(quote:Quote|undefined,at:string|undefined,start:string|null,
  const times=[Date.parse(at),Date.parse(updated??''),Date.parse(start)];
  return times.every(Number.isFinite)&&times[1]<=times[0]&&times[0]<=now&&now<times[2]&&now-times[0]<=86400000&&now-times[1]<=86400000;
 }
+export function matchingResearchGame(data: PredictionData, research: Research | null, game: Game) {
+ const report = research?.season === data.season && research.week === data.week ? research.games[game.game_id] : undefined;
+ return report?.scoring.home.team === game.home_team && report.scoring.away.team === game.away_team ? report : undefined;
+}
 export function buildOffers(data:PredictionData,research:Research|null,odds:Odds|null,lines:Line[],model:Model,now:number):Offer[]{
- const matching=research?.season===data.season&&research.week===data.week?research:null;
  const result:Offer[]=[];
  for(const game of data.games){
-  const r=matching?.games[game.game_id];
-  const identity=r&&r.scoring.home.team===game.home_team&&r.scoring.away.team===game.away_team;
-  const report=identity?r:undefined;
+  const report=matchingResearchGame(data,research,game);
   const tracked=lines.find(l=>l.game_id===game.game_id&&l.home_team===game.home_team&&l.away_team===game.away_team);
   const q=odds?.games[game.game_id];const start=report?.kickoff??tracked?.kickoff??null;
   const base={game_id:game.game_id,matchup:`${game.away_team} @ ${game.home_team}`,kickoff:start,headshot:null,bookmaker:q?.bookmaker??null,price:null,quoteFresh:false,quoteAt:null,probability:null,prediction:null,range:null,modelRange:null,agreement:null,forecastAt:report?.generated_at??null,modelVersion:report?.model_version??'saved winner forecast'};

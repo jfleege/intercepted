@@ -12,7 +12,7 @@ import MatchupProjections from './MatchupProjections';
 import type { Report } from './MatchupProjections';
 import DashboardMarkets from './DashboardMarkets';
 import './MatchupReport.css';
-import './MatchupsPage.css';
+import MatchupSlate from './MatchupSlate';
 
 type Metrics = Record<string, number | null> & {games: number};
 type Team = {season: Metrics; recent: Metrics; off_rank: number | null; def_rank: number | null; off_movement: number | null; def_movement: number | null; history: ({week: number; opponent: string} & Metrics)[]};
@@ -78,7 +78,7 @@ export default function MatchupsPage({data,games,game,model,onSelect,weekControl
   const periods=game?teams.map(t=>research?.period_trends.teams[t]):[];
   const periodLabels=period==='quarters'?['Q1','Q2','Q3','Q4']:['H1','H2'];
   return <div className="mx-page"><header className="mx-page-heading"><div><p className="ud-eyebrow">THE MATCHUP DESK</p><h1>Every angle. One game.</h1><p>Team strengths, scoring outlooks, and how the game develops.</p></div>{weekControl}</header>
-    <div className="mx-slate" aria-label="Select matchup">{games.map(g=><button type="button" key={g.game_id} aria-pressed={g.game_id===game?.game_id} onClick={()=>onSelect(g.game_id)}><span><Logo team={g.away_team}/>{g.away_team}<small>@</small><Logo team={g.home_team}/>{g.home_team}</span><small>{g.game_date}</small></button>)}</div>
+    <MatchupSlate games={games} selected={game?.game_id} onSelect={onSelect} />
     {!game?<p className="mx-empty">No matchups match your search.</p>:<div className="mx-layout"><aside className="mx-rail" aria-label="Team power rankings">{matching?<>{(['off','def'] as const).map(kind=><Ranking key={kind} kind={kind} data={matching} teams={teams}/>)}</>:<section className="mx-panel"><h2>Team power rankings</h2><p>{loading?'Loading team context…':'No team ranking export is available for this week.'}</p></section>}</aside>
     <div className="mx-report" key={game.game_id}>
       <section className="mx-panel mx-briefing"><header><div><Logo team={teams[0]}/><h2>{teams[0]} <small>{TEAM_NAMES[teams[0]]}</small></h2><p>{game.away_projected_qb_name??'QB unavailable'}</p></div><span className="mx-at">@</span><div><Logo team={teams[1]}/><h2>{teams[1]} <small>{TEAM_NAMES[teams[1]]}</small></h2><p>{game.home_projected_qb_name??'QB unavailable'}</p></div></header>{(['away','home'] as const).map(side=>game[`${side}_qb_selection`]?.ngs_coverage_note&&<p className="qb-coverage-note" key={side}><strong>{game[`${side}_team`]} tracking inputs</strong><span>{game[`${side}_qb_selection`]?.ngs_coverage_note}</span></p>)}<p className="mx-caption">{game.game_date} · Week {data.week} · projected quarterbacks</p>

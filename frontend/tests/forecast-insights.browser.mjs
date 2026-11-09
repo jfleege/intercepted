@@ -26,6 +26,7 @@ try {
   const page=await browserContext.newPage();page.on('pageerror',e=>errors.push(e.message));
   await page.clock.install({time:new Date(now)});
   await page.route('**/*',r=>{const req=r.request();if(req.url().startsWith('http://127.0.0.1:4174'))return req.url().endsWith('/forecast_insights.json')?r.fulfill({json:fixture}):r.continue();return r.fulfill(req.resourceType()==='image'?{contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg"/>'}:{json:{events:[]}});});
+  await page.route('**/performance.json',r=>r.fulfill({json:{schema_version:1,datasets:{verified:{}}}}));
   await page.goto(base);await page.locator('.ud-game').first().waitFor();await page.locator('.dp-player-card').first().waitFor();
   await page.getByRole('button',{name:/Forecast updates.*View updates/}).click();
   const updates=page.getByRole('dialog',{name:'Forecast updates',exact:true});
@@ -51,8 +52,8 @@ try {
   await page.locator('.pi-more > summary').click();await page.getByLabel('Player availability',{exact:true}).selectOption('exclude_out');
   assert.equal(await page.locator('.pi-player-row').count(),0);
   await page.getByLabel('Player availability',{exact:true}).selectOption('all');await page.locator('.pi-player-row').first().waitFor();
-  await page.locator('.dash-nav a[href="#markets"]').click();await page.locator('.mb-offer').first().waitFor();
-  await page.getByLabel('Market game',{exact:true}).selectOption(player.game_id);await page.getByRole('button',{name:'Player yards',exact:true}).click();
+  await page.locator('.dash-nav a[href="#markets"]').click();await page.getByRole('button',{name:'Explore markets',exact:true}).click();await page.locator('.mb-offer').first().waitFor();
+  await page.getByRole('group',{name:'Market game',exact:true}).locator(`[data-game-id="${player.game_id}"]`).click();await page.getByRole('button',{name:'Player yards',exact:true}).click();
   await page.getByLabel('Search teams or matchups',{exact:true}).fill(candidate.name);
   const offer=page.locator('.mb-offer').filter({has:page.getByRole('heading',{name:candidate.name,exact:true})}).first();await offer.waitFor();
   assert.ok(await offer.getByRole('button',{name:'Reported out · selection unavailable',exact:true}).isDisabled());

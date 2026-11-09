@@ -14,8 +14,9 @@ try{
   const requests=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>requests.push(r.url()));
   await page.clock.setFixedTime(earliest-3600000);
   await page.route('**/*',route=>{if(route.request().url().startsWith('http://127.0.0.1:4174'))return route.continue();if(route.request().resourceType()==='image')return route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg"/>'});return route.fulfill({json:{events:[]}});});
-  await page.goto('http://127.0.0.1:4174/intercepted/#markets');await page.locator('.mb-offer').first().waitFor();
-  assert.equal(await page.getByLabel('Market game',{exact:true}).locator('option').count(),data.games.length+1);
+  await page.route('**/performance.json',r=>r.fulfill({json:{schema_version:1,datasets:{verified:{}}}}));
+  await page.goto('http://127.0.0.1:4174/intercepted/#markets');await page.getByRole('button',{name:'Explore markets',exact:true}).click();await page.locator('.mb-offer').first().waitFor();
+  assert.equal(await page.getByRole('group',{name:'Market game',exact:true}).getByRole('button').count(),data.games.length+1);
   assert.equal(await page.getByText('Needs quote',{exact:true}).count(),0);assert.equal(await page.getByLabel('Manual combined American price').count(),0);
   assert.equal(await page.getByLabel('Paper stake ($)').count(),0);
   await page.getByRole('button',{name:'Cross-game ideas',exact:true}).click();assert.equal(await page.locator('.lm-idea').count(),3);
@@ -53,7 +54,7 @@ try{
   await page.screenshot({path:`qa/markets/${width}-cross-game.png`,fullPage:true});
   const axe=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();reports.push({width,view:'ideas',violations:axe.violations});assert.deepEqual(axe.violations.map(v=>v.id),[]);
   if(width<=760){await page.getByRole('button',{name:'Use option 1',exact:true}).click();await page.locator('.mb-mobile-slip').click();await page.locator('.mb-mobile-back').click();await page.locator('#mb-explore').waitFor({state:'visible'});}
-  await page.getByLabel('Market game',{exact:true}).selectOption(data.games[0].game_id);await page.getByRole('button',{name:'Player yards',exact:true}).click();
+  await page.getByRole('group',{name:'Market game',exact:true}).locator(`[data-game-id="${data.games[0].game_id}"]`).click();await page.getByRole('button',{name:'Player yards',exact:true}).click();
   const game=data.games[0],eligible=research.games[game.game_id].players.filter(p=>p.status==='available'&&Number.isFinite(p.expected_yards));assert.deepEqual(new Set(await page.locator('.mb-offer h3').allTextContents()),new Set(eligible.map(p=>p.name)));
   const card=page.locator('.mb-offer').first();assert.ok((await card.textContent()).includes('Target hit probability unavailable'));await card.locator('input').fill('55.5');await card.getByRole('button').click();assert.ok((await page.locator('.mb-slip').textContent()).includes('Joint likelihood unavailable'));
   await page.getByRole('button',{name:'Winners',exact:true}).click();await page.getByRole('button',{name:'Clear plan',exact:true}).click();await page.locator('.mb-offer').nth(0).getByRole('button').click();await page.locator('.mb-offer').nth(1).getByRole('button').click();assert.equal(await page.locator('.mb-slip-leg').count(),1);
@@ -68,6 +69,10 @@ try{
  await completed.clock.setFixedTime(Math.max(...Object.values(research.games).map(g=>Date.parse(g.kickoff)))+86400000);
  await completed.route('**/research_performance.json',route=>route.fulfill({json:{datasets:{verified:{rows:data.games.map(g=>({game_id:g.game_id,family:'winners',target:'winner',actual:1,status:'graded',home_team:g.home_team,away_team:g.away_team,home_score:24,away_score:10}))}}}}));
  await completed.goto('http://127.0.0.1:4174/intercepted/#markets');await completed.locator('.mb-slate').waitFor();
+ const closed = completed.getByRole('group',{name:'Market game',exact:true}).locator('[data-game-id]').first();
+ await closed.click();
+ assert.match(await closed.getAttribute('class'), /is-closed/);
+ assert.ok(await completed.getByRole('button',{name:'Selections closed',exact:true}).first().isDisabled());
  await completed.getByRole('button',{name:'Cross-game ideas',exact:true}).click();
  await completed.getByLabel('Idea game status',{exact:true}).selectOption('completed');
  await completed.getByLabel('Selection factor',{exact:true}).selectOption('custom');

@@ -6,22 +6,61 @@
 .lm-saved-record .mb-saved { width: 100%; }
 .lm-saved-record > button:last-child { margin-top: .5rem; }
 
-.lm-page .mb-view-switch {
+/* Match the dashboard controls while keeping the workspace tabs content-sized. */
+.dashboard-shell.unified-dashboard .lm-page button {
+  min-height: 36px;
+  padding: 7px 10px;
+  border-radius: 6px;
+  font: 600 12px/1.2 Barlow, sans-serif;
+}
+.dashboard-shell.unified-dashboard .lm-page .mb-view-switch {
   flex-wrap: wrap;
-  gap: 5px;
+  gap: 3px;
   width: fit-content;
   max-width: 100%;
+  padding: 3px;
 }
-.lm-page .mb-view-switch button {
+.dashboard-shell.unified-dashboard .lm-page .mb-view-switch button {
   flex: 0 0 auto;
-  min-height: 34px;
-  padding: 6px 11px;
-  font-size: 13px;
+  min-height: 30px;
+  padding-block: 0;
+  border-radius: 5px;
+}
+.dashboard-shell.unified-dashboard .lm-page .mb-view-switch button[aria-pressed=false]:not(:hover):not(:focus-visible) {
+  background: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+.dashboard-shell.unified-dashboard .lm-page button:disabled {
+  background: #152332;
+  color: #a3b5c3;
+  border-color: var(--glass-soft-edge);
+  opacity: 1;
 }
 .lm-page .mb-suggestion-controls { align-items: end; }
 .lm-page .mb-suggestion-controls > label { flex: 0 1 auto; min-width: 0; }
-.lm-page .mb-suggestion-controls :is(button, select) { min-height: 36px; padding: 7px 10px; }
+.lm-page .mb-suggestion-controls select { min-height: 36px; padding: 7px 10px; }
+.lm-page .mb-game-picker h2 {
+  font: 600 21px/1.15 'Barlow Condensed', sans-serif;
+  margin: 16px 0 9px;
+}
+.dashboard-shell.unified-dashboard .lm-page .mx-slate > button { min-height: 66px; text-align: left; }
+.dashboard-shell.unified-dashboard .lm-page .mx-slate > .is-closed[aria-pressed=false]:not(:hover):not(:focus-visible) {
+  background: #111d2a;
+  color: #b1c2ce;
+}
+.dashboard-shell.unified-dashboard .lm-page .mx-slate > .is-closed[aria-pressed=true] {
+  background: #203141;
+  border-color: #71899a;
+  color: var(--ud-text);
+}
+.mb-game-picker .is-closed .mx-logo { filter: saturate(.4); }
+.dashboard-shell.unified-dashboard .lm-page .mb-offer.is-closed {
+  background: #101d2a;
+}
+.lm-page .mb-offer.is-closed .mb-status { color: #b1c2ce; }
 @media (pointer: coarse), (max-width: 650px) {
-  .lm-page .mb-view-switch button,
-  .lm-page .mb-suggestion-controls :is(button, select) { min-height: 44px; }
+  .dashboard-shell.unified-dashboard .lm-page button,
+  .dashboard-shell.unified-dashboard .lm-page .mb-view-switch button,
+  .lm-page .mb-suggestion-controls select { min-height: 44px; }
 }

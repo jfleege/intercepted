@@ -6,6 +6,8 @@
   --glass-surface: linear-gradient(135deg, #172d40ed, #0c1b2af7);
   --glass-edge: #b6def530;
   --glass-soft-edge: #a4d5ec18;
+  --dashboard-action-fill: linear-gradient(135deg, #24536bed, #153b51ed);
+  --dashboard-action-text: #c6f4ff;
   --glass-inset: inset 0 2px 5px #02091455, 0 1px 0 #d9f1ff08;
   background: radial-gradient(ellipse at 72% 0, #12405b38, transparent 45%), #080f1b;
   color-scheme: dark;
@@ -124,16 +126,13 @@
 .dashboard-shell.unified-dashboard .mb-page button.active,
 .dashboard-shell.unified-dashboard .ud-forecast .model-switch button.active,
 .dashboard-shell.unified-dashboard .ud-details-button,
+.dashboard-shell.unified-dashboard .mb-page :is(.mb-primary, .mb-selected, .mb-mobile-slip):enabled,
 .dashboard-shell.unified-dashboard .ic-tabs button.ic-active,
 .dashboard-shell.unified-dashboard .mr-toggle button[aria-pressed=true] {
-  color: #c6f4ff;
-  background: linear-gradient(135deg, #24536bed, #153b51ed);
+  color: var(--dashboard-action-text);
+  background: var(--dashboard-action-fill);
   border-color: #80d5ff80;
   box-shadow: inset 0 1px 0 #d9f6ff24, 0 2px 5px #0003;
-}
-.dashboard-shell.unified-dashboard .mb-page .mb-selected {
-  background: linear-gradient(135deg, #154540, #102f33);
-  border-color: #79dbb866;
 }
 .dashboard-shell.unified-dashboard :is(.pi-page, .mx-page, .ph-page, .mb-page) :is(input, select)[aria-invalid=true] { border-color: #e5a293; }
 .dashboard-shell.unified-dashboard :is(button, a, summary, input, select):focus-visible {
@@ -187,8 +186,8 @@
   --button-hover-scale: 1.015;
 }
 .dashboard-shell.unified-dashboard .status-card:enabled { --button-hover-fill: #0b1b25; }
-.dashboard-shell.unified-dashboard .ud-details-button:enabled { --button-hover-fill: #0c1b26; }
-.dashboard-shell.unified-dashboard :is(.mb-primary, .mb-mobile-slip, .section-load-error button):enabled {
+.dashboard-shell.unified-dashboard :is(.ud-details-button, .mb-page .mb-primary, .mb-page .mb-selected, .mb-page .mb-mobile-slip):enabled { --button-hover-fill: #0c1b26; }
+.dashboard-shell.unified-dashboard .section-load-error button:enabled {
   --button-hover-fill: #8bdff3;
 }
 .dashboard-shell.unified-dashboard :is(button:enabled, .dash-nav-item, .info-nav a):focus-visible {

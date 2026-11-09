@@ -5,3 +5,23 @@
 .lm-saved-record { border-bottom: 1px solid var(--border, #294353); padding-bottom: 1rem; margin-bottom: 1rem; }
 .lm-saved-record .mb-saved { width: 100%; }
 .lm-saved-record > button:last-child { margin-top: .5rem; }
+
+.lm-page .mb-view-switch {
+  flex-wrap: wrap;
+  gap: 5px;
+  width: fit-content;
+  max-width: 100%;
+}
+.lm-page .mb-view-switch button {
+  flex: 0 0 auto;
+  min-height: 34px;
+  padding: 6px 11px;
+  font-size: 13px;
+}
+.lm-page .mb-suggestion-controls { align-items: end; }
+.lm-page .mb-suggestion-controls > label { flex: 0 1 auto; min-width: 0; }
+.lm-page .mb-suggestion-controls :is(button, select) { min-height: 36px; padding: 7px 10px; }
+@media (pointer: coarse), (max-width: 650px) {
+  .lm-page .mb-view-switch button,
+  .lm-page .mb-suggestion-controls :is(button, select) { min-height: 44px; }
+}

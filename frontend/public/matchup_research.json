@@ -649,9 +649,9 @@
     },
     "2026_09_BUF_MIN": {
       "game_id": "2026_09_BUF_MIN",
-      "generated_at": "2026-11-07T18:04:24.208132+00:00",
+      "generated_at": "2026-11-09T00:22:04.750676+00:00",
       "kickoff": "2026-11-10T01:15:00+00:00",
-      "model_version": "d9dc5fc3d2b9c070",
+      "model_version": "682aced48d97f9fc",
       "players": [
         {
           "anytime_td_probability": 0.2782,
@@ -9325,9 +9325,9 @@
     },
     "2026_09_TB_CHI": {
       "game_id": "2026_09_TB_CHI",
-      "generated_at": "2026-11-07T18:04:24.208132+00:00",
+      "generated_at": "2026-11-09T00:22:04.750676+00:00",
       "kickoff": "2026-11-09T01:20:00+00:00",
-      "model_version": "d9dc5fc3d2b9c070",
+      "model_version": "682aced48d97f9fc",
       "players": [
         {
           "anytime_td_probability": 0.0361,
@@ -9968,9 +9968,247 @@
       }
     }
   },
-  "generated_at": "2026-11-07T18:04:24.208132+00:00",
-  "input_fingerprint": "8e996ab1f21540882a60473a0212106e79afbaffba430c22e1ed73deef4f3d9c",
+  "generated_at": "2026-11-09T00:22:04.750676+00:00",
+  "input_fingerprint": "6b3de94c1859223615b2d70b3ad09b3b85a20f33db49798a310564c37b515151",
   "model_versions": {
+    "682aced48d97f9fc": {
+      "created_at": "2026-11-09T00:21:54.155842+00:00",
+      "models": {
+        "anytime_td": {
+          "calibration_cutoff": [
+            2026,
+            8
+          ],
+          "calibration_samples": 2476,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "standardized logistic regression + held-out sigmoid calibration",
+          "sha256": "16e9f881c460a68be44a8656f0a13c145e7472a665a06617c29682b4d65f0153",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 41529
+        },
+        "passing_td": {
+          "calibration_cutoff": [
+            2026,
+            8
+          ],
+          "calibration_samples": 269,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "standardized logistic regression + held-out sigmoid calibration",
+          "sha256": "b8c666453af9d0a82353a53231fcebc3b0c88fc91cda49b45666c9ba248bc93f",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 4614
+        },
+        "passing_yards": {
+          "calibration_cutoff": [
+            2026,
+            8
+          ],
+          "calibration_samples": 269,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "histogram gradient boosting + held-out absolute-residual intervals",
+          "sha256": "32d92d41104f717044084f5b14bab759c5f968c20b23c8fdf30526afdcde7d80",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 4614
+        },
+        "receiving_yards": {
+          "calibration_cutoff": [
+            2026,
+            8
+          ],
+          "calibration_samples": 1579,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "histogram gradient boosting + held-out absolute-residual intervals",
+          "sha256": "2dc969f9ccc813fe8dbbb3dc17a184ef72c157832ee8835d68e857994c0e84b5",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 26009
+        },
+        "rushing_yards": {
+          "calibration_cutoff": [
+            2026,
+            8
+          ],
+          "calibration_samples": 628,
+          "features": [
+            "recent_yards",
+            "season_yards",
+            "last10_yards",
+            "recent_usage",
+            "season_usage",
+            "yards_per_opportunity",
+            "recent_any_td",
+            "recent_pass_td",
+            "season_any_td",
+            "season_pass_td",
+            "appearances",
+            "season_appearances",
+            "opp_pass",
+            "opp_rush",
+            "opp_points",
+            "team_points",
+            "home",
+            "rest",
+            "week",
+            "is_qb",
+            "is_rb",
+            "is_wr",
+            "is_te"
+          ],
+          "method": "histogram gradient boosting + held-out absolute-residual intervals",
+          "sha256": "cb9098b006e40bbb92a228bd3ba8421e7cae5070e6943379bc920338fbab867a",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 10906
+        },
+        "scoring": {
+          "calibration_cutoff": [
+            2026,
+            8
+          ],
+          "calibration_samples": 242,
+          "features": [
+            "own_points_recent",
+            "own_points_season",
+            "opp_points_recent",
+            "opp_points_season",
+            "own_pass",
+            "own_rush",
+            "opp_pass",
+            "opp_rush",
+            "home",
+            "rest",
+            "opp_rest",
+            "season_games",
+            "week"
+          ],
+          "method": "histogram gradient boosting + held-out absolute-residual intervals",
+          "sha256": "4c0a4fd1de14ad959274b3c56be839e32de07bb848bfe7d1a1bf614410c6837c",
+          "training_cutoff": [
+            2025,
+            18
+          ],
+          "training_samples": 4254
+        }
+      },
+      "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
+      "source_sha256": {
+        "pbp_current": "07624e29d3f753f33fd1cad6d0f64050968c2e1461f4d29c8772600f87a5c598",
+        "players_current": "d8fc8823350d653f44daef1016a69e8ab1d4beb668420d89d293a5f8cdac169f",
+        "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
+        "schedules_current": "da39976320f8a476ba9152ff7f0e31b4932bdce3bd463cd5694295224c9eb1e9",
+        "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
+      },
+      "status": "experimental"
+    },
     "d9dc5fc3d2b9c070": {
       "created_at": "2026-11-07T18:04:15.736506+00:00",
       "models": {

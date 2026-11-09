@@ -60269,10 +60269,10 @@
           },
           {
             "bin": "80\u201390%",
-            "games": 2,
-            "lower": 0.34237195288961925,
+            "games": 3,
+            "lower": 0.43849391955098227,
             "observed": 1.0,
-            "predicted": 0.8215081212648494,
+            "predicted": 0.8269145843104257,
             "upper": 1.0
           }
         ],
@@ -61800,21 +61800,21 @@
             "week": 9
           },
           {
-            "away_score": null,
+            "away_score": 17,
             "away_team": "LV",
-            "brier": null,
+            "brier": 0.02633236088046983,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-08",
             "game_id": "2026_09_LV_SF",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "SF",
             "kickoff": "2026-11-08T21:05:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.1770623979633998,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "SF",
             "probability": 0.8377275104015784,
             "provenance": {
@@ -61824,7 +61824,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 9
           },
@@ -61946,14 +61946,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6078431372549019,
-          "brier": 0.23878858173173997,
+          "accuracy": 0.6153846153846154,
+          "brier": 0.23470288517690788,
           "cancelled": 0,
-          "correct": 31,
-          "games": 51,
+          "correct": 32,
+          "games": 52,
           "incorrect": 20,
-          "log_loss": 0.6687311749340589,
-          "pending": 6,
+          "log_loss": 0.6592760061461616,
+          "pending": 5,
           "ties": 0
         },
         "trend": [
@@ -62517,6 +62517,17 @@
             "game_number": 51,
             "label": "NYJ @ KC",
             "log_loss": 0.6687311749340589
+          },
+          {
+            "accuracy": 0.6153846153846154,
+            "brier": 0.23470288517690788,
+            "correct": true,
+            "date": "2026-11-08",
+            "game_brier": 0.02633236088046983,
+            "game_id": "2026_09_LV_SF",
+            "game_number": 52,
+            "label": "LV @ SF",
+            "log_loss": 0.6592760061461616
           }
         ],
         "weekly": [
@@ -62560,14 +62571,14 @@
             "week": 8
           },
           {
-            "accuracy": 0.8888888888888888,
-            "brier": 0.15114789048057195,
+            "accuracy": 0.9,
+            "brier": 0.13866633752056173,
             "cancelled": 0,
-            "correct": 8,
-            "games": 9,
+            "correct": 9,
+            "games": 10,
             "incorrect": 1,
-            "log_loss": 0.4873731825738877,
-            "pending": 6,
+            "log_loss": 0.45634210411283893,
+            "pending": 5,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -62626,10 +62637,10 @@
           },
           {
             "bin": "80\u201390%",
-            "games": 2,
-            "lower": 0.34237195288961925,
+            "games": 3,
+            "lower": 0.43849391955098227,
             "observed": 1.0,
-            "predicted": 0.8586322411167312,
+            "predicted": 0.850575548336287,
             "upper": 1.0
           }
         ],
@@ -64157,21 +64168,21 @@
             "week": 9
           },
           {
-            "away_score": null,
+            "away_score": 17,
             "away_team": "LV",
-            "brier": null,
+            "brier": 0.027402775552998578,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-08",
             "game_id": "2026_09_LV_SF",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "SF",
             "kickoff": "2026-11-08T21:05:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.1809678781000431,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "SF",
             "probability": 0.8344621627753988,
             "provenance": {
@@ -64181,7 +64192,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 9
           },
@@ -64303,14 +64314,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6274509803921569,
-          "brier": 0.23584189864263572,
+          "accuracy": 0.6346153846153846,
+          "brier": 0.231833453967835,
           "cancelled": 0,
-          "correct": 32,
-          "games": 51,
+          "correct": 33,
+          "games": 52,
           "incorrect": 19,
-          "log_loss": 0.6624591840608667,
-          "pending": 6,
+          "log_loss": 0.6531997358693123,
+          "pending": 5,
           "ties": 0
         },
         "trend": [
@@ -64874,6 +64885,17 @@
             "game_number": 51,
             "label": "NYJ @ KC",
             "log_loss": 0.6624591840608667
+          },
+          {
+            "accuracy": 0.6346153846153846,
+            "brier": 0.231833453967835,
+            "correct": true,
+            "date": "2026-11-08",
+            "game_brier": 0.027402775552998578,
+            "game_id": "2026_09_LV_SF",
+            "game_number": 52,
+            "label": "LV @ SF",
+            "log_loss": 0.6531997358693123
           }
         ],
         "weekly": [
@@ -64917,14 +64939,14 @@
             "week": 8
           },
           {
-            "accuracy": 0.8888888888888888,
-            "brier": 0.14067144393829845,
+            "accuracy": 0.9,
+            "brier": 0.12934457709976846,
             "cancelled": 0,
-            "correct": 8,
-            "games": 9,
+            "correct": 9,
+            "games": 10,
             "incorrect": 1,
-            "log_loss": 0.4600600064328547,
-            "pending": 6,
+            "log_loss": 0.43215079359957353,
+            "pending": 5,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -64975,11 +64997,11 @@
           },
           {
             "bin": "70\u201380%",
-            "games": 4,
-            "lower": 0.3006360524426366,
-            "observed": 0.75,
-            "predicted": 0.7436557224545569,
-            "upper": 0.9544139373553637
+            "games": 5,
+            "lower": 0.3755282641185388,
+            "observed": 0.8,
+            "predicted": 0.7547035022356247,
+            "upper": 0.9637768390302125
           },
           {
             "bin": "80\u201390%",
@@ -66094,21 +66116,21 @@
             "week": 9
           },
           {
-            "away_score": null,
+            "away_score": 17,
             "away_team": "LV",
-            "brier": null,
+            "brier": 0.040443373317979696,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-08",
             "game_id": "2026_09_LV_SF",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "SF",
             "kickoff": "2026-11-08T21:05:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.2245262300742013,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "SF",
             "probability": 0.7988946213598958,
             "provenance": {
@@ -66118,7 +66140,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 9
           },
@@ -66240,14 +66262,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6216216216216216,
-          "brier": 0.22529500945251674,
+          "accuracy": 0.631578947368421,
+          "brier": 0.2204304927121342,
           "cancelled": 0,
-          "correct": 23,
-          "games": 37,
+          "correct": 24,
+          "games": 38,
           "incorrect": 14,
-          "log_loss": 0.6406873246360423,
-          "pending": 6,
+          "log_loss": 0.6297357168844149,
+          "pending": 5,
           "ties": 0
         },
         "trend": [
@@ -66657,6 +66679,17 @@
             "game_number": 37,
             "label": "NYJ @ KC",
             "log_loss": 0.6406873246360423
+          },
+          {
+            "accuracy": 0.631578947368421,
+            "brier": 0.2204304927121342,
+            "correct": true,
+            "date": "2026-11-08",
+            "game_brier": 0.040443373317979696,
+            "game_id": "2026_09_LV_SF",
+            "game_number": 38,
+            "label": "LV @ SF",
+            "log_loss": 0.6297357168844149
           }
         ],
         "weekly": [
@@ -66687,14 +66720,14 @@
             "week": 8
           },
           {
-            "accuracy": 0.7777777777777778,
-            "brier": 0.16088665185339393,
+            "accuracy": 0.8,
+            "brier": 0.1488423239998525,
             "cancelled": 0,
-            "correct": 7,
-            "games": 9,
+            "correct": 8,
+            "games": 10,
             "incorrect": 2,
-            "log_loss": 0.5053310639015458,
-            "pending": 6,
+            "log_loss": 0.4772505805188113,
+            "pending": 5,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -66753,10 +66786,10 @@
           },
           {
             "bin": "80\u201390%",
-            "games": 2,
-            "lower": 0.34237195288961925,
+            "games": 3,
+            "lower": 0.43849391955098227,
             "observed": 1.0,
-            "predicted": 0.8140880323321373,
+            "predicted": 0.8201718791196946,
             "upper": 1.0
           }
         ],
@@ -67864,21 +67897,21 @@
             "week": 9
           },
           {
-            "away_score": null,
+            "away_score": 17,
             "away_team": "LV",
-            "brier": null,
+            "brier": 0.02811001888415921,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-08",
             "game_id": "2026_09_LV_SF",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "SF",
             "kickoff": "2026-11-08T21:05:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.18351478116932413,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "SF",
             "probability": 0.8323395726948091,
             "provenance": {
@@ -67888,7 +67921,7 @@
             "saved_at": "2026-11-03T16:41:21.243366+00:00",
             "season": 2026,
             "snapshot_id": "8ed0dd16ed2c009d50ca6ca0b442f71821c2c75af69c26558a9aec19e4efd434",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 9
           },
@@ -68010,14 +68043,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.7297297297297297,
-          "brier": 0.21308052421312146,
+          "accuracy": 0.7368421052631579,
+          "brier": 0.20821287933604352,
           "cancelled": 0,
-          "correct": 27,
-          "games": 37,
+          "correct": 28,
+          "games": 38,
           "incorrect": 10,
-          "log_loss": 0.6151784192168569,
-          "pending": 6,
+          "log_loss": 0.6038188497945535,
+          "pending": 5,
           "ties": 0
         },
         "trend": [
@@ -68427,6 +68460,17 @@
             "game_number": 37,
             "label": "NYJ @ KC",
             "log_loss": 0.6151784192168569
+          },
+          {
+            "accuracy": 0.7368421052631579,
+            "brier": 0.20821287933604352,
+            "correct": true,
+            "date": "2026-11-08",
+            "game_brier": 0.02811001888415921,
+            "game_id": "2026_09_LV_SF",
+            "game_number": 38,
+            "label": "LV @ SF",
+            "log_loss": 0.6038188497945535
           }
         ],
         "weekly": [
@@ -68457,14 +68501,14 @@
             "week": 8
           },
           {
-            "accuracy": 0.8888888888888888,
-            "brier": 0.13883499043218303,
+            "accuracy": 0.9,
+            "brier": 0.12776249327738065,
             "cancelled": 0,
-            "correct": 8,
-            "games": 9,
+            "correct": 9,
+            "games": 10,
             "incorrect": 1,
-            "log_loss": 0.4575046713817026,
-            "pending": 6,
+            "log_loss": 0.43010568236046476,
+            "pending": 5,
             "season": 2026,
             "ties": 0,
             "week": 9
@@ -68475,7 +68519,7 @@
   },
   "policy": "First verified pregame snapshot per game and model; ties excluded from binary metrics; historical experiments separate.",
   "schema_version": 1,
-  "snapshot_count": 15,
+  "snapshot_count": 16,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-08T23:59:16.031459+00:00"
+  "updated_at": "2026-11-09T00:21:49.436212+00:00"
 }

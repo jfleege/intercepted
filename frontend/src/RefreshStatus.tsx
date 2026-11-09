@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { nextCheck, sourceNote, statusSummary, validDate } from './refreshStatus';
 import type { RefreshStatus as Status } from './refreshStatus';
+import DashboardStatusCard from './DashboardStatusCard';
 import './RefreshStatus.css';
 
 function dateLabel(value?: string | null) {
@@ -27,13 +28,11 @@ export default function RefreshStatus({season, week}: {season?: number; week?: n
   const matches = status && status.active_season === season && status.active_week === week;
   const summary = statusSummary(matches ? status : null, now);
   const next = status ? nextCheck(status, now) : null;
-  return <details id="refresh-status" className={`refresh-status is-${summary.tone}`}>
-    <summary>
-      <span className="refresh-status-slate">ACTIVE SLATE <b>{season ?? '—'} · Week {week ?? '—'}</b></span>
-      <span className="refresh-status-state"><i aria-hidden="true"/>{summary.label}</span>
-      <span className="refresh-status-last">Last full refresh <b>{dateLabel(status?.last_successful_refresh_at)}</b></span>
-      <span className="refresh-status-toggle">Data status <span aria-hidden="true">⌄</span></span>
-    </summary>
+  return <DashboardStatusCard id="refresh-status" className={`refresh-status-card is-${summary.tone}`} title="Data status" summary={<>
+    <span className="status-card-label">Active Slate <b>{season ?? '—'} · Week {week ?? '—'}</b></span>
+    <span className="refresh-status-state"><i aria-hidden="true"/>{summary.label}</span>
+    <span className="refresh-status-last">Last full refresh <b>{dateLabel(status?.last_successful_refresh_at)}</b></span>
+  </>}>
     <div className="refresh-status-body">
       <div className="refresh-status-explanation"><div><h2>Refresh &amp; data freshness</h2><p>Active slate is separate from any saved week you’re viewing. Times are Central.</p></div>
         {status?.workflow_url && /^https:\/\/github\.com\/jfleege\/intercepted\/actions\/runs\/\d+$/.test(status.workflow_url) && <a href={status.workflow_url} target="_blank" rel="noreferrer">View refresh run ↗</a>}
@@ -46,5 +45,5 @@ export default function RefreshStatus({season, week}: {season?: number; week?: n
       </div>)}</dl>}
       <p className="refresh-status-footnote">This is a published status snapshot, not a live workflow monitor. A failed deployment can leave the previous snapshot visible. Full refresh means the data steps completed; it does not mean every source or quote changed.</p>
     </div>
-  </details>;
+  </DashboardStatusCard>;
 }

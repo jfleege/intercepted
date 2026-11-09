@@ -21,10 +21,14 @@ try {
   assert.ok(await footer.locator('a,button').evaluateAll(els=>els.every(e=>e.scrollWidth<=e.clientWidth+1)));
   assert.equal(await page.getByRole('contentinfo').count(),1);
   await footer.screenshot({path:`qa/footer/${width}-footer.png`});
-  await footer.getByRole('button',{name:'Data status',exact:true}).click();
-  assert.equal(await page.locator('#refresh-status').getAttribute('open'),'');
+  const dataStatus=footer.getByRole('button',{name:'Data status',exact:true});
+  await dataStatus.click();
+  const statusDialog=page.getByRole('dialog',{name:'Data status',exact:true});
+  await statusDialog.waitFor();
   assert.equal(new URL(page.url()).hash,'');
-  assert.ok(await page.locator('#refresh-status > summary').evaluate(e=>e===document.activeElement));
+  await statusDialog.getByRole('button',{name:'Close data status',exact:true}).click();
+  await statusDialog.waitFor({state:'hidden'});
+  assert.ok(await dataStatus.evaluate(e=>e===document.activeElement));
   await page.getByRole('button',{name:'Full matchup analysis',exact:false}).click();
   await page.getByRole('dialog').waitFor();assert.equal(await footer.getAttribute('inert'),'');
   await page.keyboard.press('Escape');await page.getByRole('dialog').waitFor({state:'hidden'});assert.equal(await footer.getAttribute('inert'),null);

@@ -122,28 +122,6 @@
   cursor: default;
 }
 
-.dash-sidebar-bottom {
-  margin-top: auto;
-}
-
-.dash-side-note {
-  padding: 18px;
-  border: 1px solid #29486b;
-  border-radius: 14px;
-  background: linear-gradient(145deg, #0f3159, #0c1827);
-}
-
-.dash-side-note strong {
-  color: var(--dash-lime);
-  font-size: 14px;
-}
-
-.dash-side-note p {
-  color: #b5c4d0;
-  font-size: 12px;
-  line-height: 1.6;
-}
-
 .dash-workspace {
   min-width: 0;
   padding: 22px 26px 50px;
@@ -1355,9 +1333,7 @@
     padding: 12px;
   }
 
-  .dash-nav-label,
-
-    .dash-sidebar-bottom {
+  .dash-nav-label {
     display: none;
   }
 

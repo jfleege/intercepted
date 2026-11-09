@@ -164,21 +164,6 @@ const focusedGame =
             <span className="dash-nav-icon"><InterfaceIcon name="markets" /></span><span className="dash-nav-label">Markets</span>
           </a>
         </nav>
-        <div className="dash-sidebar-bottom">
-          <section className="dash-whats-new" aria-label="Latest improvements">
-            <span className="dash-whats-new-label">What’s new</span>
-            <strong>More ways to explore.</strong>
-            <p>Model-likelihood Markets, more cross-game combinations, and clearer forecast updates.</p>
-            <a href="#markets">Explore Markets <InterfaceIcon name="right" /></a>
-          </section>
-          <div className="dash-side-note">
-            <strong>INTERCEPTED</strong>
-            <p>
-              NFL forecasts powered by team efficiency
-              and quarterback analytics.
-            </p>
-          </div>
-        </div>
       </aside>
       {/* main dashboard */}
       <div className="dash-workspace">

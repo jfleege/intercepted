@@ -86,6 +86,7 @@ function PlayerHeadshot({ player }: { player: Player }) {
 function PlayerCard({ player, week, season, gameId, defense, leagueSize }: { player: WeeklyPlayer; week: number; season:number; gameId:string; defense?: DefenseRank; leagueSize?: number }) {
   const insights=useForecastInsights();
   const context=findContext(insights.data,{season,week},player.player_id,gameId,player.team,player.opponent,insights.now);
+  const hasPregameContext = context?.kickoff && insights.now < Date.parse(context.kickoff);
   const rushing = player.position === "RB";
   const yardageRank = rushing ? defense?.rush_rank : defense?.pass_rank;
   const yards = rushing ? defense?.rush_yards_allowed_per_game : defense?.pass_yards_allowed_per_game;
@@ -154,7 +155,7 @@ function PlayerCard({ player, week, season, gameId, defense, leagueSize }: { pla
         <div><span>Last {player.games_sampled}</span><i className="ud-recent" style={{width:`${Math.max(0, player.recent_average) / scale * 100}%`}}/><b>{player.recent_average.toFixed(1)}</b></div>
         {projection && <div><span>Projected</span><i className="ud-projected" style={{width:`${projection.expected_yards! / scale * 100}%`}}/><b>{projection.expected_yards!.toFixed(1)}</b></div>}
       </div>
-      <p className="fi-availability-note">{availabilityLabel(context,insights.now)} · {starterLabel(context,insights.now)}{context?.usage.estimate!=null && context.kickoff && insights.now<Date.parse(context.kickoff) && ` · Usage baseline ${context.usage.estimate.toFixed(1)} ${context.usage.field}`}</p>
+      {hasPregameContext && <p className="fi-availability-note">{availabilityLabel(context,insights.now)} · {starterLabel(context,insights.now)}{context.usage.estimate != null && ` · Usage baseline ${context.usage.estimate.toFixed(1)} ${context.usage.field}`}</p>}
       <div className="ud-player-trend"><span>Change vs. season average</span><strong className={`dp-trend ${trendClass}`}>{trendText}</strong></div>
     </article>
   );
@@ -237,7 +238,7 @@ const scrollPlayers = (direction: number) => {
     <section className="dash-bottom-panel dp-panel">
       <div className="dash-bottom-heading">
         <div>
-          <p className="ud-eyebrow">PROJECTION + FORM</p><h3>Players to Watch</h3>
+          <h3>Players to Watch</h3>
           <p>
   {ranking.blended ? "Top 10 · projections + recent form" : "Top 10 · positive yardage trends"} · Week {data?.week ?? "—"}
 </p>

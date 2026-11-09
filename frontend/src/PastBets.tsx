@@ -77,16 +77,18 @@ function BetEditor({original, onSave, onCancel}: {original?: PastBet; onSave: (b
       <p className="mb-note" id="pb-payout-note">Enter the full payout, including any stake returned.</p>
       <fieldset className="pb-legs">
         <legend>Legs</legend>
-        {legs.map((leg, index) => <div className="pb-leg-fields" key={leg.key}>
-          <label>Leg {index + 1}<input value={leg.name} maxLength={120} required placeholder="e.g. Buffalo moneyline"
-            onChange={event => setLegs(rows => rows.map(row => row.key === leg.key ? {...row, name: event.target.value} : row))} /></label>
-          <label>Leg result<select aria-label={`Leg ${index + 1} result`} value={leg.result}
-            onChange={event => setLegs(rows => rows.map(row => row.key === leg.key ? {...row, result: event.target.value as LegResult} : row))}>
-            {LEG_RESULTS.map(value => <option key={value}>{value}</option>)}
-          </select></label>
-          <button type="button" aria-label={`Remove leg ${index + 1}`} disabled={legs.length === 1}
-            onClick={() => setLegs(rows => rows.filter(row => row.key !== leg.key))}>Remove</button>
-        </div>)}
+        <ol className="pb-leg-timeline pb-editor-legs">
+          {legs.map((leg, index) => <li className="pb-leg-fields" key={leg.key}>
+            <label>Leg {index + 1}<input value={leg.name} maxLength={120} required placeholder="e.g. Buffalo moneyline"
+              onChange={event => setLegs(rows => rows.map(row => row.key === leg.key ? {...row, name: event.target.value} : row))} /></label>
+            <label>Leg result<select aria-label={`Leg ${index + 1} result`} value={leg.result}
+              onChange={event => setLegs(rows => rows.map(row => row.key === leg.key ? {...row, result: event.target.value as LegResult} : row))}>
+              {LEG_RESULTS.map(value => <option key={value}>{value}</option>)}
+            </select></label>
+            <button type="button" aria-label={`Remove leg ${index + 1}`} disabled={legs.length === 1}
+              onClick={() => setLegs(rows => rows.filter(row => row.key !== leg.key))}>Remove</button>
+          </li>)}
+        </ol>
         <button type="button" onClick={() => {
           const key = nextLeg.current++;
           setLegs(rows => [...rows, {key, name: '', result: 'Pending'}]);
@@ -174,9 +176,9 @@ export default function PastBets() {
             <div><dt>Net</dt><dd>{profit === null ? 'Pending' : signedMoney(profit)}</dd></div>
           </dl>
           <h4>Legs</h4>
-          <ul className="pb-detail-legs">{active.legs.map((leg, index) =>
+          <ol className="pb-leg-timeline pb-detail-legs">{active.legs.map((leg, index) =>
             <li key={index}><span>{leg.name}</span><span className={tone(leg.result)}>{leg.result}</span></li>
-          )}</ul>
+          )}</ol>
           <h4>Notes</h4>
           <p className="mb-note pb-notes">{active.notes || 'No notes recorded.'}</p>
         </section>

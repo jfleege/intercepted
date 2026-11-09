@@ -4,6 +4,7 @@ import type { Model, PredictionFields } from './predictionModels.ts';
 export type RecordRow = {
   game_id: string; season: number; week: number; game_date: string;
   grade: string;
+  home_team?: string; away_team?: string; kickoff?: string | null; status?: string;
 };
 export type PerformanceFeed = {
   schema_version: number;

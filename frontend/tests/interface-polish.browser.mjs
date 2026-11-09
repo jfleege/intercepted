@@ -36,11 +36,11 @@ try{
   await players.getByLabel('Player team',{exact:true}).selectOption('CHI');
   await page.evaluate(()=>window.scrollTo({top:400,behavior:'instant'}));await page.waitForTimeout(80);
   const savedScroll=await page.evaluate(()=>scrollY);
-  await page.locator('.dash-nav a[href="#markets"]').click();const markets=page.locator('[data-page="markets"]');await markets.locator('.mb-offer').first().waitFor();
+  await page.locator('.dash-nav a[href="#markets"]').click();const markets=page.locator('[data-page="markets"]');await markets.getByRole('button',{name:'Explore markets',exact:true}).click();await markets.locator('.mb-offer').first().waitFor();
   assert.ok(await page.evaluate(()=>scrollY<30));
   assert.equal(await players.isVisible(),false);
   assert.equal(await markets.locator('.mb-combinations').count(),0);
-  await markets.getByLabel('Market game',{exact:true}).selectOption(slate.games[0].game_id);
+  await markets.getByRole('group',{name:'Market game',exact:true}).locator(`[data-game-id="${slate.games[0].game_id}"]`).click();
   await markets.getByRole('button',{name:'Player yards',exact:true}).click();
   const target=markets.locator('.mb-target input').first();if(await target.count()){
    await target.fill('');assert.equal(await target.getAttribute('aria-invalid'),'true');
@@ -54,7 +54,7 @@ try{
   assert.equal(await players.getByLabel('Player team',{exact:true}).inputValue(),'CHI');assert.equal(await players.getByRole('button',{name:'QB',exact:true}).getAttribute('aria-pressed'),'true');
   await page.waitForTimeout(100);assert.ok(Math.abs(await page.evaluate(()=>scrollY)-savedScroll)<20,`Scroll restoration: saved ${savedScroll}, actual ${await page.evaluate(()=>scrollY)}`);
   assert.equal(requests.get('player_intelligence.json'),1);
-  await page.locator('.dash-nav a[href="#markets"]').click();assert.equal(await markets.getByLabel('Market game',{exact:true}).inputValue(),slate.games[0].game_id);assert.equal(await markets.getByLabel('Probability profile',{exact:true}).inputValue(),'unscored');
+  await page.locator('.dash-nav a[href="#markets"]').click();assert.equal(await markets.getByRole('group',{name:'Market game',exact:true}).locator('[aria-pressed=true]').getAttribute('data-game-id'),slate.games[0].game_id);assert.equal(await markets.getByLabel('Probability profile',{exact:true}).inputValue(),'unscored');
   assert.equal(await markets.locator('.lm-lab').count(),0);
   await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));

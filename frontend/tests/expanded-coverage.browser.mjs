@@ -31,7 +31,8 @@ try{for(const width of [375,650,900,1440]){
   if(url.startsWith('http://127.0.0.1:4174'))return route.continue();
   return route.fulfill(route.request().resourceType()==='image'?{contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg"/>'}:{json:{events:[]}});
  });
- await page.goto('http://127.0.0.1:4174/intercepted/#players');await page.locator('.pi-player-row').first().waitFor();
+ await page.route('**/performance.json',r=>r.fulfill({json:{schema_version:1,datasets:{verified:{}}}}));
+  await page.goto('http://127.0.0.1:4174/intercepted/#players');await page.locator('.pi-player-row').first().waitFor();
  await page.getByText('More filters',{exact:true}).click();
  await page.getByLabel('Player forecast coverage').selectOption('projected');
  await page.getByLabel('Player team',{exact:true}).selectOption(game.away_team);
@@ -41,7 +42,7 @@ try{for(const width of [375,650,900,1440]){
  await page.getByLabel('Player forecast coverage').selectOption('all');await page.getByText('More filters',{exact:true}).click();
  await page.screenshot({path:`qa/expanded-coverage/${width}-players.png`,fullPage:true});
  await page.locator('.dash-nav a[href="#markets"]').click();await page.locator('.mb-slate').waitFor();
- await page.getByLabel('Market game',{exact:true}).selectOption(game.game_id);await page.getByRole('button',{name:'Player yards',exact:true}).click();
+ await page.getByRole('group',{name:'Market game',exact:true}).locator(`[data-game-id="${game.game_id}"]`).click();await page.getByRole('button',{name:'Player yards',exact:true}).click();
  assert.equal(await page.locator('.mb-offer').count(),targets.length);
  const extra=targets.find(p=>!match.away_players.some(w=>w.player_id===p.player_id)&&p.team===game.away_team);assert.ok(extra);
  await page.locator('.mb-offer').filter({has:page.getByRole('heading',{name:extra.name,exact:true})}).getByRole('button').click();

@@ -226,8 +226,8 @@ const focusedGame =
             
 <div className="ud-section-heading">
   <div>
-    <p className="eyebrow">THE FORECAST</p>
-    <h2>Weekly matchups</h2>
+    <p className="eyebrow"><em>THE FORECAST</em></p>
+    <h2>Weekly Matchups</h2>
   </div>
 
   <div className="forecast-controls">

@@ -3,8 +3,9 @@ import assert from 'node:assert/strict';
 import {mkdir,readFile} from 'node:fs/promises';
 import {chromium} from 'playwright';
 const players=JSON.parse(await readFile('public/players_watch.json','utf8'));
-const odds=JSON.parse(await readFile('public/odds.json','utf8'));
 const predictions=JSON.parse(await readFile('public/predictions.json','utf8'));
+const sampleLine={bookmaker:'DraftKings',last_update:'2026-11-10T18:00:00Z',away_moneyline:-145,home_moneyline:125,away_spread:-2.5,home_spread:2.5,over_under:43.5};
+const odds={games:Object.fromEntries(predictions.games.map(game=>[game.game_id,sampleLine]))};
 const origin='http://127.0.0.1:4174/intercepted/';
 const browser=await chromium.launch({executablePath:process.env.CHROME_BIN || undefined});
 const errors=[];
@@ -18,6 +19,7 @@ try {
   const page=await browser.newPage({viewport:{width,height:1000},reducedMotion:'reduce'});
   page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/*',r=>r.request().url().startsWith('http://127.0.0.1:4174')?r.continue():r.fulfill(r.request().resourceType()==='image'?{contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"/>'}:{json:{events:[]}}));
+  await page.route('**/odds.json',route=>route.fulfill({json:odds}));
   await page.goto(origin);await page.locator('.dp-player-card').first().waitFor();await page.locator('.ud-market-lines').waitFor();await page.evaluate(()=>document.fonts.ready);
   for(const card of await page.locator('.dp-player-card').all()){
    const name=await card.locator('.dp-player-identity strong').textContent();
@@ -34,9 +36,12 @@ try {
    const heading=await page.locator('.ud-market-panel .ud-panel-heading p').textContent();
    const game=predictions.games.find(g=>heading.startsWith(`${g.away_team} at ${g.home_team}`));assert.ok(game);
    const quote=odds.games[game.game_id];assert.ok(quote);
-   assert.deepEqual(await page.locator('.ud-market-line').first().locator('strong').allTextContents(),[`${game.away_team} ${sign(quote.away_spread)}`,`${game.home_team} ${sign(quote.home_spread)}`]);
+   assert.deepEqual(await page.locator('.ud-market-spread dd').allTextContents(),[`${game.away_team} ${sign(quote.away_spread)}`,`${game.home_team} ${sign(quote.home_spread)}`]);
    assert.equal(await page.locator('.ud-market-total strong').textContent(),quote.over_under==null?'—':`O/U ${quote.over_under}`);
   }
+  assert.equal(await page.getByRole('heading',{name:'Markets & Bet History',exact:true}).count(),1);
+  const heights=await page.locator('.ud-betting-grid .ud-panel').evaluateAll(cards=>cards.map(card=>card.getBoundingClientRect().height));
+  assert.ok(Math.abs(heights[0]-heights[1])<1,`Betting card heights should match at ${width}px: ${heights}`);
   assert.ok(await page.locator('.ud-market-panel,.dp-player-card').evaluateAll(els=>els.every(e=>e.scrollWidth<=e.clientWidth+1)));
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));
   await page.locator('.dp-panel').screenshot({path:`qa/defense-markets/${width}-players.png`});
@@ -48,8 +53,14 @@ try {
    await page.route('**/odds.json',r=>r.fulfill({json:missing}));
    await page.reload();await page.locator('.dp-player-card').first().waitFor();await page.locator('.ud-market-lines').waitFor();
    assert.deepEqual(await page.locator('.dp-defense-ranks b').first().textContent(),'—');
-   assert.deepEqual(await page.locator('.ud-market-line').first().locator('b').allTextContents(),['—','PK']);
+   assert.deepEqual(await page.locator('.ud-market-spread strong').allTextContents(),['—','PK']);
    assert.equal(await page.locator('.ud-market-total strong').textContent(),'—');
+   await page.route('**/odds.json',r=>r.fulfill({json:{games:{}}}));
+   await page.reload();
+   await page.getByText('No sportsbook odds saved for this matchup.',{exact:true}).waitFor();
+   assert.equal(await page.locator('.ud-market-panel canvas').count(),0);
+   const emptyHeights=await page.locator('.ud-betting-grid .ud-panel').evaluateAll(cards=>cards.map(card=>card.getBoundingClientRect().height));
+   assert.ok(Math.abs(emptyHeights[0]-emptyHeights[1])<1);
   }
   await page.close();console.log(`PASS defense/markets ${width}px: opponent ranks, position-specific yardage, saved spreads/totals, matchup updates, missing-data handling, no overflow.`);
  }

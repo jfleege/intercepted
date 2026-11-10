@@ -1,5 +1,6 @@
 .dashboard-shell.unified-dashboard .status-card {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 12px;
   width: 100%;
@@ -35,7 +36,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  margin-left: auto;
+  justify-self: end;
   white-space: nowrap;
   color: var(--ud-blue);
 }

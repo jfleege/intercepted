@@ -8,6 +8,7 @@
   --glass-soft-edge: #a4d5ec18;
   --dashboard-action-fill: linear-gradient(135deg, #24536bed, #153b51ed);
   --dashboard-action-text: #c6f4ff;
+  --link-interaction-color: #f2c488;
   --glass-inset: inset 0 2px 5px #02091455, 0 1px 0 #d9f1ff08;
   background: radial-gradient(ellipse at 72% 0, #12405b38, transparent 45%), #080f1b;
   color-scheme: dark;
@@ -96,7 +97,7 @@
   background: #17374b80;
   border-color: #9acfe936;
 }
-.dashboard-shell.unified-dashboard :is(.ud-moneyline, .dp-player-opponent) {
+.dashboard-shell.unified-dashboard .dp-player-opponent {
   background: #091b2b99;
   border-color: var(--ud-border);
   box-shadow: var(--glass-inset);
@@ -140,6 +141,14 @@
   outline-offset: 3px;
 }
 .dashboard-shell.unified-dashboard .ud-game:focus-visible { outline-offset: -3px; }
+.dashboard-shell.unified-dashboard a:any-link:not(.skip-link):is(:hover, :focus-visible),
+.dashboard-shell.unified-dashboard .site-footer-links button:is(:hover, :focus-visible),
+.dashboard-shell.unified-dashboard .status-card:is(:hover, :focus-visible) .status-card-action {
+  color: var(--link-interaction-color);
+}
+.dashboard-shell.unified-dashboard .skip-link:is(:hover, :focus-visible) {
+  background-color: var(--link-interaction-color);
+}
 
 .dashboard-shell.unified-dashboard .ic-overlay { background: #020914ba; }
 .dashboard-shell.unified-dashboard .ic-dialog {

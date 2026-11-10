@@ -22,7 +22,7 @@ try {
   assert.equal(await page.locator('.ud-projected-winner + .ud-matchup-agreement').count(),1);
   assert.equal(await page.locator('.ud-bottom-grid .ud-model-vote').count(),0);
   await page.waitForFunction(()=>{const body=document.querySelector('.ud-market-body');return body && !body.textContent.includes('Loading sportsbook data...');});
-  assert.ok(await page.locator('.ud-moneyline').count()===2 || await page.getByText('No sportsbook odds saved for this matchup.',{exact:true}).count()===1);
+  assert.ok(await page.locator('.ud-market-moneyline dd').count()===2 || await page.getByText('No sportsbook odds saved for this matchup.',{exact:true}).count()===1);
   await page.locator('.dp-headshot').first().waitFor();
   await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('.ud-game').count(),data.games.length);

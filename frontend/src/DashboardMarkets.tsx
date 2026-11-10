@@ -1,6 +1,5 @@
 import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useState } from 'react';
-import FumbleEmptyState from './FumbleEmptyState';
 import draftKingsLogo from './assets/draftkings.png';
 
 type Game = {game_id: string; home_team: string; away_team: string};
@@ -21,21 +20,40 @@ export default function DashboardMarkets({game}: {game: Game | null}) {
     return () => {active=false;};
   }, []);
   const odds = game && data ? data.games[game.game_id] ?? null : null;
-  const unavailable = error || (!data ? 'Loading sportsbook data...' : !game ? 'Select a matchup.' : !odds ? 'No sportsbook odds saved for this matchup.' : null);
-  const lastUpdated = odds?.last_update ? new Date(odds.last_update).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}) : 'Update unavailable';
+  const unavailable = error || (!data ? 'Loading sportsbook data...' : !game ? 'Select a matchup.' : 'No sportsbook odds saved for this matchup.');
+  const lastUpdated = odds?.last_update && Number.isFinite(Date.parse(odds.last_update))
+    ? new Date(odds.last_update).toLocaleString('en-US', {month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'})
+    : null;
   return (
     <section className="ud-panel ud-market-panel" aria-label="Selected matchup market snapshot">
-      <div className="ud-panel-heading"><div><h3>Market Snapshot</h3><p>{game ? `${game.away_team} at ${game.home_team}` : 'Selected matchup'} · Saved game lines</p></div>
-        {(!odds || /draftkings/i.test(odds.bookmaker)) ? <img className="ud-draftkings-logo" src={draftKingsLogo} alt="DraftKings"/> : <span className="ud-tag">{odds.bookmaker}</span>}
-      </div>
-      <div className="ud-market-body">{!error && data && game && !odds ? <FumbleEmptyState /> : unavailable ? <p className="ud-empty">{unavailable}</p> : <>
-        <div className="ud-moneylines">{[['away',game!.away_team,odds?.away_moneyline],['home',game!.home_team,odds?.home_moneyline]].map(([side,team,value]) => <div className="ud-moneyline" key={String(side)}><span><img src={`${import.meta.env.BASE_URL}logos/${team}.png`} alt=""/>{team}</span><strong>{american(value as number | null | undefined)}</strong></div>)}</div>
-        <div className="ud-market-lines" aria-label="Additional saved game lines">
-          <div className="ud-market-line"><span>Spread</span><strong>{game!.away_team} <b>{spread(odds?.away_spread)}</b></strong><strong>{game!.home_team} <b>{spread(odds?.home_spread)}</b></strong></div>
-          <div className="ud-market-line ud-market-total"><span>Game total</span><strong>{typeof odds?.over_under === 'number' && Number.isFinite(odds.over_under) ? `O/U ${odds.over_under}` : '—'}</strong></div>
+      <div className="ud-panel-heading">
+        <div>
+          <h3>Market Snapshot</h3>
+          <p>{game ? `${game.away_team} at ${game.home_team}` : 'Selected matchup'} · {lastUpdated ? `Saved ${lastUpdated}` : 'Saved game lines'}</p>
         </div>
-        <div className="ud-market-footer"><span>Saved odds · {lastUpdated}</span><a href="#markets">Explore markets ↗</a></div>
-      </>}</div>
+        <div className="ud-market-source">
+          {(!odds || /draftkings/i.test(odds.bookmaker)) ? <img className="ud-draftkings-logo" src={draftKingsLogo} alt="DraftKings" /> : <span className="ud-tag">{odds.bookmaker}</span>}
+          {odds && <a href="#markets" aria-label="Explore markets">Markets ↗</a>}
+        </div>
+      </div>
+      <div className="ud-market-body">
+        {game && odds ? <dl className="ud-market-lines" aria-label="Saved game lines">
+          <div className="ud-market-moneyline">
+            <dt>Moneyline</dt>
+            <dd><span>{game.away_team}</span> <strong>{american(odds.away_moneyline)}</strong></dd>
+            <dd><span>{game.home_team}</span> <strong>{american(odds.home_moneyline)}</strong></dd>
+          </div>
+          <div className="ud-market-spread">
+            <dt>Spread</dt>
+            <dd><span>{game.away_team}</span> <strong>{spread(odds.away_spread)}</strong></dd>
+            <dd><span>{game.home_team}</span> <strong>{spread(odds.home_spread)}</strong></dd>
+          </div>
+          <div className="ud-market-total">
+            <dt>Game total</dt>
+            <dd><strong>{typeof odds.over_under === 'number' && Number.isFinite(odds.over_under) ? `O/U ${odds.over_under}` : '—'}</strong></dd>
+          </div>
+        </dl> : <p className="ud-empty" role="status">{unavailable}</p>}
+      </div>
     </section>
   );
 }

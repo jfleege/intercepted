@@ -277,9 +277,16 @@ const focusedGame =
 {/* dashboard bottom panels */}
 {!archived && <section className="ud-bottom-grid">
 <DashboardPlayers />
-
-<DashboardMarkets game={focusedGame} />
-<DashboardPastBets />
+<section aria-labelledby="ud-betting-title">
+  <header className="ud-betting-heading">
+    <p className="ud-eyebrow ud-section-kicker">The Lab</p>
+    <h2 id="ud-betting-title">Markets &amp; Bet History</h2>
+  </header>
+  <div className="ud-betting-grid">
+    <DashboardMarkets game={focusedGame} />
+    <DashboardPastBets />
+  </div>
+</section>
 </section>}
           </PagePanel>}
         </main>

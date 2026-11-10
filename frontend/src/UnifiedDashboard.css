@@ -74,7 +74,13 @@
 .dashboard-shell .ud-wheel-side.is-favored > span { color:var(--ud-text); }
 .dashboard-shell .ud-probability-column { position:relative; width:20px; height:64px; background:#244352; border-radius:3px; overflow:hidden; margin-bottom:5px; }
 .dashboard-shell .ud-probability-fill { position:absolute; bottom:0; left:0; width:100%; background:#6c8d9f; border-radius:2px 2px 0 0; transform-origin:bottom; animation:udBarRise 900ms both; }
-.dashboard-shell .ud-winner-arc { animation:udRingGrow 650ms cubic-bezier(.4,0,.2,1) both; }
+.dashboard-shell .ud-wheel-side.is-favored .ud-probability-fill {
+  background: linear-gradient(var(--wheel-highlight), var(--wheel-shade));
+}
+.dashboard-shell .ud-winner-arc {
+  animation: udRingGrow 650ms cubic-bezier(.4,0,.2,1) both;
+  filter: drop-shadow(0 0 4px color-mix(in srgb, var(--wheel-highlight) 26%, transparent));
+}
 .dashboard-shell .ud-projected-winner { text-align:center; color:var(--ud-muted); font-size:12px; margin:0 17px 17px; }
 .dashboard-shell .ud-projected-winner strong { color:var(--ud-text); margin-left:5px; font-weight:600; }
 .dashboard-shell .ud-projected-qbs { display:flex; justify-content:space-between; gap:12px; border-top:1px solid var(--ud-border); border-bottom:1px solid var(--ud-border); padding:13px 0; margin:auto 19px 17px; color:var(--ud-muted); font-size:11px; }

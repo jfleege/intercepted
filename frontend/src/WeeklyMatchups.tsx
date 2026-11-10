@@ -31,7 +31,7 @@ export default function WeeklyMatchups({ games, focusedGame, model, archived, on
   const agreeing = focusedGame ? savedModels.filter(m => (probability(focusedGame, m) >= .5 ? focusedGame.home_team : focusedGame.away_team) === focusedWinner).length : 0;
   return <div className="ud-matchup-grid">
     <section className="ud-panel ud-slate" aria-label="Weekly matchup list">
-      <div className="ud-panel-heading"><div><h3>The weekly slate</h3><p>{games.length} matchups · {archived ? 'Saved pregame forecasts' : MODEL_LABELS[model]}</p></div><span>WIN PROBABILITY</span></div>
+      <div className="ud-panel-heading"><div><h3>The Slate</h3><p>{games.length} matchups · {archived ? 'Saved pregame forecasts' : MODEL_LABELS[model]}</p></div><span>WIN PROBABILITY</span></div>
       <div className="ud-game-list">
         {games.map(game => {
           const home = probability(game, model), winner = home >= .5 ? game.home_team : game.away_team;

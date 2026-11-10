@@ -30,7 +30,7 @@ export default function DashboardMarkets({game, model, showModelPicks = true}: {
   const lastUpdated = odds?.last_update ? new Date(odds.last_update).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}) : 'Update unavailable';
   return <>
     <section className="ud-panel ud-market-panel" aria-label="Selected matchup market snapshot">
-      <div className="ud-panel-heading"><div><h3>Market snapshot</h3><p>{game ? `${game.away_team} at ${game.home_team}` : 'Selected matchup'} · Saved game lines</p></div>
+      <div className="ud-panel-heading"><div><h3>Market Snapshot</h3><p>{game ? `${game.away_team} at ${game.home_team}` : 'Selected matchup'} · Saved game lines</p></div>
         {(!odds || /draftkings/i.test(odds.bookmaker)) ? <img className="ud-draftkings-logo" src={draftKingsLogo} alt="DraftKings"/> : <span className="ud-tag">{odds.bookmaker}</span>}
       </div>
       <div className="ud-market-body">{!error && data && game && !odds ? <FumbleEmptyState /> : unavailable ? <p className="ud-empty">{unavailable}</p> : <>
@@ -43,7 +43,7 @@ export default function DashboardMarkets({game, model, showModelPicks = true}: {
       </>}</div>
     </section>
     {showModelPicks && <section className="ud-panel ud-model-panel" aria-label="Selected matchup model picks">
-      <div className="ud-panel-heading"><div><h3>Where the models stand</h3></div><span className="ud-tag">{agree} / {models.length} pick {selectedPick ?? '—'}</span></div>
+      <div className="ud-panel-heading"><div><h3>Model Agreement</h3></div><span className="ud-tag">{agree} / {models.length} pick {selectedPick ?? '—'}</span></div>
       <div className="ud-model-votes">{game ? models.map(m => {
         const home=probability(game,m), pick=home>=.5?game.home_team:game.away_team;
         return <div className={`ud-model-vote${m===model?' is-active':''}`} key={m}><span>{MODEL_LABELS[m]}</span><strong><img src={`${import.meta.env.BASE_URL}logos/${pick}.png`} alt=""/>{pick}</strong><span>{(Math.max(home,1-home)*100).toFixed(1)}%</span></div>;

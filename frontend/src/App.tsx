@@ -11,6 +11,8 @@ import MatchupModal from "./MatchupModal";
 import HeroPlaybook from "./HeroPlaybook";
 import DashboardPlayers from "./DashboardPlayers";
 import DashboardMarkets from "./DashboardMarkets";
+import DashboardPastBets from "./DashboardPastBets";
+import { PAST_BETS_PATH } from "./pastBets";
 import ScoreTicker from "./ScoreTicker";
 import RefreshStatus from "./RefreshStatus";
 import PagePanel from "./PagePanel";
@@ -34,18 +36,24 @@ const RetainedPlayers = memo(lazy(() => import("./PlayersPage"))), RetainedPerfo
 const infoPages = ['methodology', 'privacy', 'terms'] as const;
 const RetainedSiteInfo = memo(lazy(() => import('./SiteInfoPages')));
 const routeNames = ['dashboard', 'matchups', 'performance', 'players', 'markets', ...infoPages];
-const route = () => routeNames.includes(window.location.hash.slice(1)) ? window.location.hash.slice(1) : 'dashboard';
+const route = () => {
+  const path = window.location.hash.slice(1);
+  return path === PAST_BETS_PATH || routeNames.includes(path) ? path : 'dashboard';
+};
+const pageFor = (path: string) => path === PAST_BETS_PATH ? 'markets' : path;
 function App() {
-  const [page, setPage] = useState(route);
-  const [visited, setVisited] = useState(() => new Set([route()]));
+  const [path, setPath] = useState(route);
+  const page = pageFor(path);
+  const [visited, setVisited] = useState(() => new Set([page]));
   const pageRef = useRef(page);
   const [selectedGame, setSelectedGame] = useState<Game | null>(null);
   useEffect(() => {
     const navigate = () => {
-      const next = route();
+      const nextPath = route();
+      const next = pageFor(nextPath);
       pageRef.current = next;
       setVisited(previous => new Set([...previous, next]));
-      setPage(next); setSelectedGame(null);
+      setPath(nextPath); setSelectedGame(null);
     };
     const previousRestoration = window.history.scrollRestoration;
     window.history.scrollRestoration = 'manual';
@@ -196,7 +204,7 @@ const focusedGame =
           {infoPages.filter(name => visited.has(name)).map(name => <PagePanel active={page === name} name={name} key={name}><RetainedSiteInfo page={name}/></PagePanel>)}
           {visited.has('players') && <PagePanel active={page === 'players'} name="players"><RetainedPlayers search={searches.players ?? ''} onSearch={setPlayerSearch}/></PagePanel>}
           {visited.has('performance') && <PagePanel active={page === 'performance'} name="performance"><RetainedPerformance/></PagePanel>}
-          {visited.has('markets') && <PagePanel active={page === 'markets'} name="markets"><RetainedMarkets search={searches.markets ?? ''}/></PagePanel>}
+          {visited.has('markets') && <PagePanel active={page === 'markets'} name="markets"><RetainedMarkets search={searches.markets ?? ''} showPastBets={path === PAST_BETS_PATH}/></PagePanel>}
           {visited.has('matchups') && <PagePanel active={page === 'matchups'} name="matchups"><RetainedMatchups data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/></PagePanel>}
           {visited.has('dashboard') && <PagePanel active={page === 'dashboard'} name="dashboard">
           <section className="ud-hero">
@@ -270,10 +278,8 @@ const focusedGame =
 {!archived && <section className="ud-bottom-grid">
 <DashboardPlayers />
 
-<DashboardMarkets
-  game={focusedGame}
-  model={model}
-/>
+<DashboardMarkets game={focusedGame} />
+<DashboardPastBets />
 </section>}
           </PagePanel>}
         </main>

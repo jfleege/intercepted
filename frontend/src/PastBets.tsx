@@ -1,24 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import type { FormEvent } from 'react';
-import { BET_RESULTS, LEG_RESULTS, PAST_BETS_KEY, betReturn, netBetProfit, parseBetAmount, readPastBets, savePastBet, summarizePastBets } from './pastBets';
+import { BET_RESULTS, LEG_RESULTS, PAST_BETS_KEY, betReturn, formatBetMoney, formatBetProfit, netBetProfit, parseBetAmount, readPastBets, savePastBet, summarizePastBets } from './pastBets';
 import type { BetResult, LegResult, PastBet } from './pastBets';
+import usePastBets, { notifyPastBetsChanged } from './usePastBets';
 import './PastBets.css';
 
-const currency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
-const money = (cents: number) => currency.format(cents / 100);
-const signedMoney = (cents: number) => (cents > 0 ? '+' : '') + money(cents);
 const dateLabel = new Intl.DateTimeFormat('en-US', {month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC'});
 const kind = (bet: PastBet) => bet.legs.length === 1 ? 'Single' : `${bet.legs.length}-leg parlay`;
 const tone = (result: string) => result === 'Won' ? 'pb-positive' : result === 'Lost' ? 'pb-negative' : '';
 const localDate = () => new Date().toLocaleDateString('sv-SE');
-
-function loadBets() {
-  try {
-    return {records: readPastBets(localStorage.getItem(PAST_BETS_KEY)), error: ''};
-  } catch {
-    return {records: [], error: 'Bet history is unavailable in this browser. Existing records were preserved.'};
-  }
-}
 
 function BetEditor({original, onSave, onCancel}: {original?: PastBet; onSave: (bet: PastBet) => Promise<void>; onCancel: () => void}) {
   const nextLeg = useRef(original?.legs.length ?? 1);
@@ -102,18 +92,10 @@ function BetEditor({original, onSave, onCancel}: {original?: PastBet; onSave: (b
 }
 
 export default function PastBets() {
-  const [storage, setStorage] = useState(loadBets);
+  const storage = usePastBets();
   const [selectedId, setSelectedId] = useState<string>();
   const [editor, setEditor] = useState<{original?: PastBet} | null>(null);
   const [notice, setNotice] = useState('');
-  useEffect(() => {
-    const sync = (event: StorageEvent) => {
-      if (event.key === PAST_BETS_KEY || event.key === null) setStorage(loadBets());
-    };
-    window.addEventListener('storage', sync);
-    return () => window.removeEventListener('storage', sync);
-  }, []);
-
   const records = [...storage.records].reverse().sort((a, b) => b.date.localeCompare(a.date));
   const active = records.find(bet => bet.id === selectedId) ?? records[0];
   const totals = summarizePastBets(records);
@@ -127,10 +109,10 @@ export default function PastBets() {
       } catch {
         throw new Error('Could not save this bet. Browser storage may be full or unavailable.');
       }
-      return updated;
     };
-    const updated = navigator.locks ? await navigator.locks.request(PAST_BETS_KEY, persist) : persist();
-    setStorage({records: updated, error: ''});
+    if (navigator.locks) await navigator.locks.request(PAST_BETS_KEY, persist);
+    else persist();
+    notifyPastBetsChanged();
     setSelectedId(bet.id);
     setEditor(null);
     setNotice('Bet saved.');
@@ -145,9 +127,9 @@ export default function PastBets() {
     </header>
     {storage.error && <p className="mb-warning" role="alert">{storage.error}</p>}
     <dl className="pb-stats">
-      <div><dt>Net profit</dt><dd className={totals.profit > 0 ? 'pb-positive' : totals.profit < 0 ? 'pb-negative' : ''}>{signedMoney(totals.profit)}</dd></div>
+      <div><dt>Net profit</dt><dd className={totals.profit > 0 ? 'pb-positive' : totals.profit < 0 ? 'pb-negative' : ''}>{formatBetProfit(totals.profit)}</dd></div>
       <div><dt>Win–loss</dt><dd>{totals.wins}–{totals.losses}</dd></div>
-      <div><dt>Total staked</dt><dd>{money(totals.staked)}</dd></div>
+      <div><dt>Total staked</dt><dd>{formatBetMoney(totals.staked)}</dd></div>
     </dl>
     <p role="status" className="sr-only">{notice}</p>
     <div className="pb-workspace">
@@ -171,9 +153,9 @@ export default function PastBets() {
             <button type="button" onClick={() => {setNotice(''); setEditor({original: active});}}>Edit bet</button>
           </header>
           <dl className="pb-totals">
-            <div><dt>Stake</dt><dd>{money(active.stake)}</dd></div>
-            <div><dt>Returned</dt><dd>{active.returned === null ? 'Pending' : money(active.returned)}</dd></div>
-            <div><dt>Net</dt><dd>{profit === null ? 'Pending' : signedMoney(profit)}</dd></div>
+            <div><dt>Stake</dt><dd>{formatBetMoney(active.stake)}</dd></div>
+            <div><dt>Returned</dt><dd>{active.returned === null ? 'Pending' : formatBetMoney(active.returned)}</dd></div>
+            <div><dt>Net</dt><dd>{profit === null ? 'Pending' : formatBetProfit(profit)}</dd></div>
           </dl>
           <h4>Legs</h4>
           <ol className="pb-leg-timeline pb-detail-legs">{active.legs.map((leg, index) =>

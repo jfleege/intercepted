@@ -1,5 +1,6 @@
 import SuggestedParlays from './SuggestedParlays';
 import PastBets from './PastBets';
+import { PAST_BETS_PATH } from './pastBets';
 import MatchupSlate from './MatchupSlate';
 import { marketGameCard, marketGameOpen, marketGameResults } from './marketGameStatus';
 import type { PerformanceFeed } from './dashboardMetrics';
@@ -30,14 +31,19 @@ function Bounds({ legs, independence, reduction = 0 }: { legs: Offer[]; independ
  if (legs.some(o => o.category === 'touchdown' || o.category === 'yardage')) return <p className="mb-note">Joint likelihood unavailable: player estimates condition on individual appearances. Separate conditional estimates do not establish a combined probability.</p>;
  return summary ? <dl className="lm-bounds"><div><dt>All-leg probability bounds</dt><dd>{pct(summary.lower)}–{pct(summary.upper)}</dd></div>{independence && <div><dt>Independence scenario</dt><dd>{pct(summary.independent)}</dd></div>}</dl> : <p className="mb-note">Joint likelihood unavailable: a projection guide has no target hit probability.</p>;
 }
-export default function MarketsPage({ search = '' }: { search?: string }) {
+export default function MarketsPage({ search = '', showPastBets = false }: { search?: string; showPastBets?: boolean }) {
  const pageActive = usePageActive(), insights = useForecastInsights();
  const [extensions,setExtensions]=useState<{season:number;week:number;generated_at:string;version:string;policy?:string;validation?:{kind:string;target:string|number;samples:number;mae?:number;baseline_mae?:number;brier?:number;baseline_brier?:number;role_blind_mae?:number;role_blind_brier?:number;promoted:boolean}[];players:{game_id:string;player_id:string;team:string;opponent:string;kickoff:string;kind:string;role_adjustment?:string;usage:number|null;usage_field:string;usage_status:string;thresholds:{threshold:number;probability:number;basis?:string}[]}[]}|null>(null);
  const [performance, setPerformance] = useState<PerformanceFeed | null>(null);
  const [actuals, setActuals] = useState<Actual[]>([]);
  const [data, setData] = useState<PredictionData | null>(null), [research, setResearch] = useState<Research | null>(null), [error, setError] = useState('');
  const [game, setGame] = useState('all'), [category, setCategory] = useState('all'), [risk, setRisk] = useState<Profile>('all'), [model, setModel] = useState<Model>('v5_qb_plus');
- const [view, setView] = useState<'markets' | 'ideas' | 'suggested' | 'past'>('suggested'), [futureOnly, setFutureOnly] = useState(false);
+ const [marketView, setMarketView] = useState<'markets' | 'ideas' | 'suggested'>('suggested'), [futureOnly, setFutureOnly] = useState(false);
+ const view = showPastBets ? 'past' : marketView;
+ function setView(next: typeof marketView) {
+  setMarketView(next);
+  if (showPastBets) window.location.hash = 'markets';
+ }
  const [legs, setLegs] = useState<Offer[]>([]), [edits, setEdits] = useState<Record<string, Offer>>({}), [invalidTargets, setInvalidTargets] = useState<Record<string, boolean>>({});
  const [notice, setNotice] = useState(''), [snapshot, setSnapshot] = useState<string | null>(null);
  const [offerLimit,setOfferLimit]=useState(48);
@@ -135,7 +141,7 @@ export default function MarketsPage({ search = '' }: { search?: string }) {
     <button type="button" aria-pressed={view === 'suggested'} onClick={() => {setGame('all'); setView('suggested'); setHindsight(false);}}>Suggested parlays</button>
     <button type="button" aria-pressed={view === 'markets'} onClick={() => setView('markets')}>Explore markets</button>
     <button type="button" aria-pressed={view === 'ideas'} onClick={() => {setGame('all'); setView('ideas');}}>Cross-game ideas</button>
-    <button type="button" aria-pressed={view === 'past'} onClick={() => setView('past')}>Past Bets</button>
+    <button type="button" aria-pressed={view === 'past'} onClick={() => {window.location.hash = PAST_BETS_PATH;}}>Past Bets</button>
   </div>
   <div hidden={view !== 'past'}><PastBets /></div>
   {view !== 'past' && <>

@@ -47,9 +47,23 @@ export default function WeeklyMatchups({ games, focusedGame, model, archived, on
       </div>
     </section>
     {focusedGame && <section className="ud-panel ud-focus" aria-label="Selected matchup analysis">
-      <div className="ud-panel-heading"><div><span className="ud-eyebrow">MATCHUP FOCUS</span><h3>{focusedGame.away_team} at {focusedGame.home_team}</h3><p>Week {focusedGame.week} · {MODEL_LABELS[model]}</p></div><span className="ud-tag">{agreeing} / {savedModels.length} models</span></div>
+      <div className="ud-panel-heading"><div><span className="ud-eyebrow">MATCHUP FOCUS</span><h3>{focusedGame.away_team} at {focusedGame.home_team}</h3><p>Week {focusedGame.week} · {MODEL_LABELS[model]}</p></div></div>
       <ProbabilityWheel awayTeam={focusedGame.away_team} homeTeam={focusedGame.home_team} homeProb={focusedProbability}/>
       <p className="ud-projected-winner">Projected winner <strong>{focusedWinner ? TEAM_NAMES[focusedWinner] ?? focusedWinner : '—'}</strong></p>
+      <section className="ud-matchup-agreement" aria-labelledby="ud-matchup-agreement-title">
+        <header><h4 id="ud-matchup-agreement-title">Model Agreement</h4><span>{agreeing} / {savedModels.length} pick {focusedWinner}</span></header>
+        <div className="ud-model-votes">
+          {savedModels.map(savedModel => {
+            const home = probability(focusedGame, savedModel);
+            const pick = home >= .5 ? focusedGame.home_team : focusedGame.away_team;
+            return <div className={`ud-model-vote${savedModel === model ? ' is-active' : ''}`} key={savedModel}>
+              <span>{MODEL_LABELS[savedModel]}</span>
+              <strong><img src={logo(pick)} alt="" />{pick}</strong>
+              <span>{pct(Math.max(home, 1 - home))}</span>
+            </div>;
+          })}
+        </div>
+      </section>
       <div className="ud-projected-qbs"><div><span>{focusedGame.away_team} projected QB</span><strong>{focusedGame.away_projected_qb_name ?? 'QB TBD'}</strong>{awayQBStatus && <small>{awayQBStatus}</small>}</div><div><span>{focusedGame.home_team} projected QB</span><strong>{focusedGame.home_projected_qb_name ?? 'QB TBD'}</strong>{homeQBStatus && <small>{homeQBStatus}</small>}</div></div>
       {(['away','home'] as const).map(side=>focusedGame[`${side}_qb_selection`]?.ngs_coverage_note&&<p className="qb-coverage-note ud-coverage-note" key={side}><strong>{focusedGame[`${side}_team`]} tracking inputs</strong><span>{focusedGame[`${side}_qb_selection`]?.ngs_coverage_note}</span></p>)}
       <button type="button" className="ud-details-button" onClick={() => onAnalysis(focusedGame)}>Full matchup analysis</button>

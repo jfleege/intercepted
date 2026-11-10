@@ -1,3 +1,4 @@
+export const PAST_BETS_PATH = 'markets/past-bets';
 export const PAST_BETS_KEY = 'intercepted.past-bets.v1';
 export const LEG_RESULTS = ['Pending', 'Won', 'Lost', 'Push', 'Void'] as const;
 export const BET_RESULTS = [...LEG_RESULTS, 'Cash out'] as const;
@@ -90,3 +91,7 @@ export function summarizePastBets(records: PastBet[]) {
     return totals;
   }, {profit: 0, staked: 0, wins: 0, losses: 0});
 }
+
+const currency = new Intl.NumberFormat('en-US', {style: 'currency', currency: 'USD'});
+export const formatBetMoney = (cents: number) => currency.format(cents / 100);
+export const formatBetProfit = (cents: number) => (cents > 0 ? '+' : '') + formatBetMoney(cents);

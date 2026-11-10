@@ -1,16 +1,14 @@
 import { fetchSnapshot } from "./snapshotCache";
-import { availableModels, probability, MODEL_LABELS } from './predictionModels';
-import type { Model, PredictionFields } from './predictionModels';
 import { useEffect, useState } from 'react';
 import FumbleEmptyState from './FumbleEmptyState';
 import draftKingsLogo from './assets/draftkings.png';
 
-type Game = PredictionFields & {game_id: string; home_team: string; away_team: string};
+type Game = {game_id: string; home_team: string; away_team: string};
 type GameOdds = {bookmaker: string; last_update: string | null; home_moneyline: number | null; away_moneyline: number | null; home_spread?: number | null; away_spread?: number | null; over_under?: number | null};
 type OddsData = {exported_at: string; games: Record<string, GameOdds>};
 const american = (value: number | null | undefined) => value == null ? '—' : value > 0 ? `+${value}` : String(value);
 const spread = (value: number | null | undefined) => typeof value !== 'number' || !Number.isFinite(value) ? '—' : value === 0 ? 'PK' : value > 0 ? `+${value}` : String(value);
-export default function DashboardMarkets({game, model, showModelPicks = true}: {game: Game | null; model: Model; showModelPicks?: boolean}) {
+export default function DashboardMarkets({game}: {game: Game | null}) {
   const [data, setData] = useState<OddsData | null>(null);
   const [error, setError] = useState('');
   useEffect(() => {
@@ -24,11 +22,8 @@ export default function DashboardMarkets({game, model, showModelPicks = true}: {
   }, []);
   const odds = game && data ? data.games[game.game_id] ?? null : null;
   const unavailable = error || (!data ? 'Loading sportsbook data...' : !game ? 'Select a matchup.' : !odds ? 'No sportsbook odds saved for this matchup.' : null);
-  const models = game ? availableModels([game], true) : [];
-  const selectedPick = game ? probability(game, model) >= .5 ? game.home_team : game.away_team : null;
-  const agree = game ? models.filter(m => (probability(game,m)>=.5 ? game.home_team : game.away_team) === selectedPick).length : 0;
   const lastUpdated = odds?.last_update ? new Date(odds.last_update).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'}) : 'Update unavailable';
-  return <>
+  return (
     <section className="ud-panel ud-market-panel" aria-label="Selected matchup market snapshot">
       <div className="ud-panel-heading"><div><h3>Market Snapshot</h3><p>{game ? `${game.away_team} at ${game.home_team}` : 'Selected matchup'} · Saved game lines</p></div>
         {(!odds || /draftkings/i.test(odds.bookmaker)) ? <img className="ud-draftkings-logo" src={draftKingsLogo} alt="DraftKings"/> : <span className="ud-tag">{odds.bookmaker}</span>}
@@ -42,12 +37,5 @@ export default function DashboardMarkets({game, model, showModelPicks = true}: {
         <div className="ud-market-footer"><span>Saved odds · {lastUpdated}</span><a href="#markets">Explore markets ↗</a></div>
       </>}</div>
     </section>
-    {showModelPicks && <section className="ud-panel ud-model-panel" aria-label="Selected matchup model picks">
-      <div className="ud-panel-heading"><div><h3>Model Agreement</h3></div><span className="ud-tag">{agree} / {models.length} pick {selectedPick ?? '—'}</span></div>
-      <div className="ud-model-votes">{game ? models.map(m => {
-        const home=probability(game,m), pick=home>=.5?game.home_team:game.away_team;
-        return <div className={`ud-model-vote${m===model?' is-active':''}`} key={m}><span>{MODEL_LABELS[m]}</span><strong><img src={`${import.meta.env.BASE_URL}logos/${pick}.png`} alt=""/>{pick}</strong><span>{(Math.max(home,1-home)*100).toFixed(1)}%</span></div>;
-      }) : <p className="ud-empty">Select a matchup.</p>}</div>
-    </section>}
-  </>;
+  );
 }

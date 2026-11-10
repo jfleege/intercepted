@@ -19,6 +19,8 @@ try {
   await page.goto(origin);
   await page.locator('.ud-game').first().waitFor();
   await page.locator('.ud-model-vote').first().waitFor();
+  assert.equal(await page.locator('.ud-projected-winner + .ud-matchup-agreement').count(),1);
+  assert.equal(await page.locator('.ud-bottom-grid .ud-model-vote').count(),0);
   await page.waitForFunction(()=>{const body=document.querySelector('.ud-market-body');return body && !body.textContent.includes('Loading sportsbook data...');});
   assert.ok(await page.locator('.ud-moneyline').count()===2 || await page.getByText('No sportsbook odds saved for this matchup.',{exact:true}).count()===1);
   await page.locator('.dp-headshot').first().waitFor();
@@ -85,7 +87,7 @@ try {
   await page.evaluate(async()=>{for(const img of document.images)img.loading='eager';await Promise.all([...document.images].map(i=>i.complete?Promise.resolve():new Promise(r=>{i.onload=i.onerror=r;})));window.scrollTo(0,0);});
   if(width>850){const rects=await page.locator('.ud-slate,.ud-focus').evaluateAll(els=>els.map(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height})));assert.ok(Math.abs(rects[0].width-rects[1].width)<1);assert.ok(Math.abs(rects[0].height-rects[1].height)<1);}
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Page must not overflow');
-  assert.ok(await page.locator('.ud-game,.ud-focus,.dp-player-card,.ud-market-panel,.ud-model-panel').evaluateAll(els=>els.every(e=>e.scrollWidth<=e.clientWidth+1)),'Panels must not overflow');
+  assert.ok(await page.locator('.ud-game,.ud-focus,.dp-player-card,.ud-market-panel,.ud-past-bets').evaluateAll(els=>els.every(e=>e.scrollWidth<=e.clientWidth+1)),'Panels must not overflow');
   await page.screenshot({path:`qa/unified/${width}-dashboard.png`,fullPage:true});
   await page.locator('.ud-matchup-grid').screenshot({path:`qa/unified/${width}-matchups.png`});
   await page.locator('.dp-panel').screenshot({path:`qa/unified/${width}-players.png`});
@@ -93,7 +95,7 @@ try {
   await page.getByLabel('Prediction week').selectOption('2026-6');
   await page.getByRole('button',{name:'QB+ (original)',exact:true}).waitFor();
   await page.locator('.ud-result').first().waitFor();
-  assert.equal(await page.locator('.ud-model-panel').count(),0);
+  assert.equal(await page.locator('.ud-past-bets').count(),0);
   assert.equal(await page.getByRole('button',{name:'Gradient Boosted',exact:true}).count(),0);
   await page.getByLabel('Prediction week').selectOption('current');
   await page.getByRole('button',{name:'Updated QB+',exact:true}).waitFor();
@@ -107,6 +109,22 @@ try {
   await page.waitForTimeout(260);
   const arc=await page.locator('.ud-winner-arc').evaluate(e=>({expected:parseFloat(e.style.getPropertyValue('--ud-arc')),actual:parseFloat(getComputedStyle(e).strokeDasharray)}));
   assert.ok(Math.abs(arc.expected-arc.actual)<.01,JSON.stringify(arc));
+  if(width===1440){
+   await page.getByRole('link',{name:'View Past Bets',exact:true}).click();
+   await page.getByRole('button',{name:'+ Log bet',exact:true}).click();
+   assert.ok(page.url().endsWith('#markets/past-bets'));
+   await page.getByLabel('Bet name',{exact:true}).fill('Dashboard journal example');
+   await page.getByLabel('Stake ($)',{exact:true}).fill('5');
+   await page.getByLabel('Bet result',{exact:true}).selectOption('Won');
+   await page.getByLabel('Total returned ($)',{exact:true}).fill('27.25');
+   await page.getByLabel('Leg 1',{exact:true}).fill('Carolina moneyline');
+   await page.getByRole('button',{name:'Save bet',exact:true}).click();
+   await page.locator('.pb-list').getByRole('button',{name:/Dashboard journal example/}).waitFor();
+   await page.locator('.dash-nav a[href="#dashboard"]').click();
+   const totals=page.locator('.ud-bet-totals dd');
+   await totals.first().waitFor();
+   assert.deepEqual(await totals.allTextContents(),['+$22.25','1–0','$5.00']);
+  }
   await page.locator('.dash-nav a[href="#performance"]').click();
   await page.locator('.ph-page').waitFor();
   await page.getByRole('button',{name:'Winners',exact:true}).click();

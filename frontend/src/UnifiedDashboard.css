@@ -90,7 +90,11 @@
 .dashboard-shell .ud-projected-qbs small { display:block; font-size:10px; margin-top:4px; }
 .dashboard-shell .ud-details-button { display:flex; align-items:center; justify-content:center; text-align:center; min-height:46px; width:calc(100% - 38px); margin:0 19px; padding:12px 14px; background:var(--ud-blue); color:#0c2231; border:0; border-radius:5px; font-size:13px; font-weight:600; cursor:pointer; }
 .dashboard-shell .ud-empty { color:var(--ud-muted); font-size:13px; line-height:1.5; }
-.dashboard-shell .ud-bottom-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.dashboard-shell .ud-bottom-grid { display:grid; gap:16px; }
+.dashboard-shell .ud-betting-heading { margin:0 0 12px; padding:4px 2px; }
+.dashboard-shell .ud-betting-heading h2 { color:var(--ud-text); font:600 28px/1.1 'Barlow Condensed',sans-serif; margin:0; }
+.dashboard-shell .ud-betting-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
+.dashboard-shell .ud-betting-grid .ud-panel { display:grid; grid-template-rows:auto 1fr; }
 .dashboard-shell .ud-bottom-grid .dp-panel { grid-column:1/-1; background:transparent; border:0; box-shadow:none; padding:0; color:var(--ud-text); overflow:visible; border-radius:0; }
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading h3 { color:var(--ud-text); font:600 28px/1.1 'Barlow Condensed',sans-serif; }
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading p { color:var(--ud-muted); font-size:12px; }
@@ -127,29 +131,20 @@
 .dashboard-shell .ud-bottom-grid .dp-trend.negative { color:#f4a59d; }
 .dashboard-shell .ud-bottom-grid .dp-trend.neutral { color:var(--ud-muted); }
 .dashboard-shell .ud-bottom-grid .dp-footnote,.dashboard-shell .ud-bottom-grid .dp-empty { color:var(--ud-muted); font-size:11px; }
-.dashboard-shell .ud-draftkings-logo { display:block; width:86px; max-height:43px; object-fit:contain; }
-.dashboard-shell :is(.ud-market-body, .ud-past-bets-body) { padding:18px 19px; }
-.dashboard-shell .ud-past-bets { align-self:start; }
-.dashboard-shell .ud-past-bets .ud-panel-heading a { color:var(--ud-blue); font-size:12px; }
-.dashboard-shell .ud-past-bets-body .ud-empty { margin:0; }
-.dashboard-shell .ud-bet-totals { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:0; }
-.dashboard-shell .ud-bet-totals dt { color:var(--ud-muted); font-size:11px; }
-.dashboard-shell .ud-bet-totals dd { margin:4px 0 0; font-size:clamp(17px,2.3vw,24px); font-weight:700; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+.dashboard-shell .ud-draftkings-logo { display:block; width:64px; height:33px; object-fit:contain; }
+.dashboard-shell .ud-market-source { display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
+.dashboard-shell :is(.ud-market-source, .ud-past-bets .ud-panel-heading) a { color:var(--ud-blue); font-size:12px; }
+.dashboard-shell :is(.ud-market-body, .ud-past-bets-body) { padding:14px 19px; }
+.dashboard-shell :is(.ud-market-body, .ud-past-bets-body) .ud-empty { margin:0; }
+.dashboard-shell :is(.ud-market-lines, .ud-bet-totals) { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; margin:0; }
+.dashboard-shell :is(.ud-market-lines, .ud-bet-totals) dt { color:var(--ud-muted); font-size:11px; }
+.dashboard-shell :is(.ud-market-lines, .ud-bet-totals) dd { margin:4px 0 0; font-variant-numeric:tabular-nums; overflow-wrap:anywhere; }
+.dashboard-shell .ud-market-lines dd { display:flex; flex-wrap:wrap; align-items:baseline; gap:0 5px; font-size:13px; }
+.dashboard-shell .ud-market-lines dd span { color:var(--ud-muted); font-size:11px; }
+.dashboard-shell .ud-market-lines dd strong { color:var(--ud-text); font-weight:600; }
+.dashboard-shell .ud-bet-totals dd { font-size:clamp(17px,2.3vw,24px); font-weight:700; }
 .dashboard-shell .ud-bet-totals .is-positive { color:#79dbb8; }
 .dashboard-shell .ud-bet-totals .is-negative { color:#f4a59d; }
-.dashboard-shell .ud-moneylines { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
-.dashboard-shell .ud-moneyline { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; padding:14px; border-radius:7px; background:#1a3443; }
-.dashboard-shell .ud-moneyline > span { display:flex; align-items:center; gap:7px; font-size:14px; font-weight:600; }
-.dashboard-shell .ud-moneyline img { width:27px; height:25px; object-fit:contain; }
-.dashboard-shell .ud-moneyline strong { color:var(--ud-blue); font-size:24px; font-weight:600; }
-.dashboard-shell .ud-market-lines { margin-top:13px; }
-.dashboard-shell .ud-market-line { display:grid; grid-template-columns:minmax(70px,1fr) 1fr 1fr; gap:10px; align-items:center; padding:11px 0; border-bottom:1px solid #29414e; font-size:12px; }
-.dashboard-shell .ud-market-line > span { color:var(--ud-muted); }
-.dashboard-shell .ud-market-line > strong { color:var(--ud-text); font-weight:600; text-align:right; white-space:nowrap; }
-.dashboard-shell .ud-market-line b { color:var(--ud-blue); font-weight:600; margin-left:4px; }
-.dashboard-shell .ud-market-total > strong { grid-column:2 / 4; color:var(--ud-blue); }
-.dashboard-shell .ud-market-footer { display:flex; justify-content:space-between; flex-wrap:wrap; gap:9px; border-top:1px solid var(--ud-border); margin-top:17px; padding-top:13px; color:var(--ud-muted); font-size:11px; }
-.dashboard-shell .ud-market-footer a { color:var(--ud-blue); }
 .dashboard-shell .ud-matchup-agreement { container-type:inline-size; margin:0 19px; }
 .dashboard-shell .ud-matchup-agreement > header { display:flex; justify-content:space-between; align-items:baseline; gap:8px; padding-bottom:5px; border-bottom:1px solid var(--ud-border); color:var(--ud-muted); font-size:11px; }
 .dashboard-shell .ud-matchup-agreement h4 { margin:0; color:var(--ud-text); font:600 16px/1.2 'Barlow Condensed',sans-serif; }
@@ -183,7 +178,7 @@
  .dashboard-shell .ud-game-list { max-height:440px; }
  .dashboard-shell .ud-wheel { grid-template-columns:minmax(0,1fr) 174px minmax(0,1fr); max-width:420px; margin:20px auto 12px; }
  .dashboard-shell .ud-wheel-center { width:174px; height:174px; }
- .dashboard-shell .ud-bottom-grid { grid-template-columns:1fr; }
+ .dashboard-shell .ud-betting-grid { grid-template-columns:1fr; grid-auto-rows:1fr; }
  .dashboard-shell .ud-bottom-grid .dp-grid { grid-auto-columns:calc((100% - 14px)/2); }
  .dashboard-shell .ud-focus .ud-panel-heading { padding:17px 19px; }
  .dashboard-shell .ud-panel-heading > span:not(.ud-tag) { font-size:10px; }

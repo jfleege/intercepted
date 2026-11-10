@@ -1,0 +1,326 @@
+{
+  "generated_at": "2026-11-10T15:48:51.064468+00:00",
+  "players": [],
+  "policy": "Experimental conditional-on-appearing estimates. Base models fit through 2023, calibrate 2024, evaluate 2025. Timestamped role candidates fit 2025 through W12, calibrate W13\u201318, evaluate completed current-season appearances. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.",
+  "schema_version": 1,
+  "season": 2026,
+  "validation": [
+    {
+      "baseline_mae": 8.939978563772776,
+      "kind": "passing",
+      "mae": 7.871885434756477,
+      "promoted": true,
+      "samples": 622,
+      "target": "usage"
+    },
+    {
+      "baseline_mae": 9.089219330855018,
+      "calibration": "2025 W13\u201318",
+      "evaluation": "2026 completed weeks; development gate, not prospective validation",
+      "fit": "2025 through W12",
+      "kind": "passing",
+      "mae": 7.742847517752531,
+      "promoted": true,
+      "regular_usage_mae": 8.048654475947622,
+      "role_blind_mae": 8.404627605527459,
+      "samples": 269,
+      "target": "role_usage"
+    },
+    {
+      "baseline_brier": 0.20500222991962624,
+      "brier": 0.15186247807588457,
+      "kind": "passing",
+      "promoted": true,
+      "samples": 622,
+      "target": 150
+    },
+    {
+      "baseline_brier": 0.19742519571716793,
+      "brier": 0.14999264347595828,
+      "kind": "passing",
+      "promoted": true,
+      "regular_brier": 0.1539180587781458,
+      "role_blind_brier": 0.17567220455781218,
+      "samples": 269,
+      "target": "role_threshold_150"
+    },
+    {
+      "baseline_brier": 0.2497961418479442,
+      "brier": 0.21556142038524997,
+      "kind": "passing",
+      "promoted": true,
+      "samples": 622,
+      "target": 200
+    },
+    {
+      "baseline_brier": 0.2587268268972278,
+      "brier": 0.21580817958981555,
+      "kind": "passing",
+      "promoted": true,
+      "regular_brier": 0.22599371133930815,
+      "role_blind_brier": 0.2291091641983985,
+      "samples": 269,
+      "target": "role_threshold_200"
+    },
+    {
+      "baseline_brier": 0.21410938320162404,
+      "brier": 0.19643983655423092,
+      "kind": "passing",
+      "promoted": true,
+      "samples": 622,
+      "target": 250
+    },
+    {
+      "baseline_brier": 0.23107222564672578,
+      "brier": 0.22300374114812463,
+      "kind": "passing",
+      "promoted": false,
+      "regular_brier": 0.20490372906196622,
+      "role_blind_brier": 0.22441864580804785,
+      "samples": 269,
+      "target": "role_threshold_250"
+    },
+    {
+      "baseline_brier": 0.09775725348688459,
+      "brier": 0.09438128292268144,
+      "kind": "passing",
+      "promoted": true,
+      "samples": 622,
+      "target": 300
+    },
+    {
+      "baseline_brier": 0.12500954184366223,
+      "brier": 0.12180873111830412,
+      "kind": "passing",
+      "promoted": false,
+      "regular_brier": 0.11906751233093164,
+      "role_blind_brier": 0.12168396146904034,
+      "samples": 269,
+      "target": "role_threshold_300"
+    },
+    {
+      "baseline_mae": 3.439476061427281,
+      "kind": "rushing",
+      "mae": 3.307046005914346,
+      "promoted": true,
+      "samples": 1476,
+      "target": "usage"
+    },
+    {
+      "baseline_mae": 3.7997799779978,
+      "calibration": "2025 W13\u201318",
+      "evaluation": "2026 completed weeks; development gate, not prospective validation",
+      "fit": "2025 through W12",
+      "kind": "rushing",
+      "mae": 3.5733520678381954,
+      "promoted": true,
+      "regular_usage_mae": 3.5805305595454078,
+      "role_blind_mae": 3.686182660127032,
+      "samples": 606,
+      "target": "role_usage"
+    },
+    {
+      "baseline_brier": 0.24931657225599016,
+      "brier": 0.1438662382872419,
+      "kind": "rushing",
+      "promoted": true,
+      "samples": 1476,
+      "target": 25
+    },
+    {
+      "baseline_brier": 0.25009261027421104,
+      "brier": 0.15511090552547238,
+      "kind": "rushing",
+      "promoted": true,
+      "regular_brier": 0.1610778255272082,
+      "role_blind_brier": 0.1611831384527457,
+      "samples": 606,
+      "target": "role_threshold_25"
+    },
+    {
+      "baseline_brier": 0.20002978969072113,
+      "brier": 0.13981210755344942,
+      "kind": "rushing",
+      "promoted": true,
+      "samples": 1476,
+      "target": 50
+    },
+    {
+      "baseline_brier": 0.20532951732673269,
+      "brier": 0.13827404975424995,
+      "kind": "rushing",
+      "promoted": true,
+      "regular_brier": 0.14320792059975615,
+      "role_blind_brier": 0.14218695248225388,
+      "samples": 606,
+      "target": "role_threshold_50"
+    },
+    {
+      "baseline_brier": 0.169802616405288,
+      "brier": 0.12683889617065916,
+      "kind": "rushing",
+      "promoted": true,
+      "samples": 1476,
+      "target": 60
+    },
+    {
+      "baseline_brier": 0.17182000792852722,
+      "brier": 0.12612572017897014,
+      "kind": "rushing",
+      "promoted": true,
+      "regular_brier": 0.12690947582555867,
+      "role_blind_brier": 0.12948620886556247,
+      "samples": 606,
+      "target": "role_threshold_60"
+    },
+    {
+      "baseline_brier": 0.11788431373734377,
+      "brier": 0.10065128045441084,
+      "kind": "rushing",
+      "promoted": true,
+      "samples": 1476,
+      "target": 75
+    },
+    {
+      "baseline_brier": 0.12529559497392612,
+      "brier": 0.10637713938091152,
+      "kind": "rushing",
+      "promoted": false,
+      "regular_brier": 0.10207268299720847,
+      "role_blind_brier": 0.10761769809891931,
+      "samples": 606,
+      "target": "role_threshold_75"
+    },
+    {
+      "baseline_brier": 0.05982664566877521,
+      "brier": 0.05720287427395235,
+      "kind": "rushing",
+      "promoted": true,
+      "samples": 1476,
+      "target": 100
+    },
+    {
+      "baseline_brier": 0.06737389894995359,
+      "brier": 0.06290350765384697,
+      "kind": "rushing",
+      "promoted": false,
+      "regular_brier": 0.06188721381791961,
+      "role_blind_brier": 0.06311136744625227,
+      "samples": 606,
+      "target": "role_threshold_100"
+    },
+    {
+      "baseline_mae": 1.804533630620587,
+      "kind": "receiving",
+      "mae": 1.7359557751088026,
+      "promoted": true,
+      "samples": 3588,
+      "target": "usage"
+    },
+    {
+      "baseline_mae": 1.8737534479100362,
+      "calibration": "2025 W13\u201318",
+      "evaluation": "2026 completed weeks; development gate, not prospective validation",
+      "fit": "2025 through W12",
+      "kind": "receiving",
+      "mae": 1.7462513233462085,
+      "promoted": true,
+      "regular_usage_mae": 1.7990444004774329,
+      "role_blind_mae": 1.8068299753055053,
+      "samples": 1571,
+      "target": "role_usage"
+    },
+    {
+      "baseline_brier": 0.2446763991730528,
+      "brier": 0.16945882721860583,
+      "kind": "receiving",
+      "promoted": true,
+      "samples": 3588,
+      "target": 25
+    },
+    {
+      "baseline_brier": 0.24421389443570876,
+      "brier": 0.16550166185297063,
+      "kind": "receiving",
+      "promoted": true,
+      "regular_brier": 0.16821232121337928,
+      "role_blind_brier": 0.16994566468932207,
+      "samples": 1571,
+      "target": "role_threshold_25"
+    },
+    {
+      "baseline_brier": 0.16265234798950273,
+      "brier": 0.12580214829592698,
+      "kind": "receiving",
+      "promoted": true,
+      "samples": 3588,
+      "target": 50
+    },
+    {
+      "baseline_brier": 0.17647103707415854,
+      "brier": 0.13753186618462507,
+      "kind": "receiving",
+      "promoted": false,
+      "regular_brier": 0.13449793751798572,
+      "role_blind_brier": 0.1398314332419011,
+      "samples": 1571,
+      "target": "role_threshold_50"
+    },
+    {
+      "baseline_brier": 0.1291842325385742,
+      "brier": 0.10449801426483986,
+      "kind": "receiving",
+      "promoted": true,
+      "samples": 3588,
+      "target": 60
+    },
+    {
+      "baseline_brier": 0.1433976703224314,
+      "brier": 0.11501532047610302,
+      "kind": "receiving",
+      "promoted": false,
+      "regular_brier": 0.11413866177788157,
+      "role_blind_brier": 0.1168727943584302,
+      "samples": 1571,
+      "target": "role_threshold_60"
+    },
+    {
+      "baseline_brier": 0.08739124626901189,
+      "brier": 0.07324038832196142,
+      "kind": "receiving",
+      "promoted": true,
+      "samples": 3588,
+      "target": 75
+    },
+    {
+      "baseline_brier": 0.09780393449240972,
+      "brier": 0.08233624048928617,
+      "kind": "receiving",
+      "promoted": false,
+      "regular_brier": 0.08143055488255216,
+      "role_blind_brier": 0.08348977174949143,
+      "samples": 1571,
+      "target": "role_threshold_75"
+    },
+    {
+      "baseline_brier": 0.03884607426654325,
+      "brier": 0.03500280073976827,
+      "kind": "receiving",
+      "promoted": true,
+      "samples": 3588,
+      "target": 100
+    },
+    {
+      "baseline_brier": 0.04263010677552735,
+      "brier": 0.03684928050421321,
+      "kind": "receiving",
+      "promoted": false,
+      "regular_brier": 0.03679200171332981,
+      "role_blind_brier": 0.037141131902645876,
+      "samples": 1571,
+      "target": "role_threshold_100"
+    }
+  ],
+  "version": "player-extensions:c4b515b8b4d8c7c5",
+  "week": 9
+}

@@ -134,7 +134,6 @@
 .dashboard-shell .ud-draftkings-logo { display:block; width:64px; height:33px; object-fit:contain; }
 .dashboard-shell .ud-market-source { display:flex; align-items:center; gap:8px; flex-wrap:wrap; justify-content:flex-end; }
 .dashboard-shell :is(.ud-market-source, .ud-past-bets .ud-panel-heading) a { color:var(--ud-blue); font-size:12px; }
-.dashboard-shell :is(.ud-market-source, .ud-past-bets .ud-panel-heading, .pulse-card-foot) a:is(:hover, :focus-visible) { color:#f2c488; }
 .dashboard-shell :is(.ud-market-body, .ud-past-bets-body) { padding:14px 19px; }
 .dashboard-shell .ud-past-bets-body { display:grid; align-content:center; }
 .dashboard-shell :is(.ud-market-body, .ud-past-bets-body) .ud-empty { margin:0; }
@@ -241,10 +240,8 @@
 
 @media (min-width: 1200px) {
   .dashboard-status-row:has(> .status-card-slot + .status-card-slot) {
-    grid-template-columns: minmax(0, 62fr) minmax(0, 38fr);
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
   }
   .dashboard-status-row { grid-auto-rows: 1fr; }
   .dashboard-status-row .status-card { height: 100%; }
-  .dashboard-status-row .refresh-status-state { min-width: 0; }
-  .dashboard-status-row .refresh-status-last { flex-shrink: 0; }
 }

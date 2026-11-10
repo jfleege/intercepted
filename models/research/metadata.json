@@ -1,12 +1,12 @@
 {
-  "created_at": "2026-11-10T00:44:27.222692+00:00",
+  "created_at": "2026-11-10T18:27:10.460956+00:00",
   "models": {
     "anytime_td": {
       "calibration_cutoff": [
         2026,
-        8
+        9
       ],
-      "calibration_samples": 2476,
+      "calibration_samples": 2796,
       "features": [
         "recent_yards",
         "season_yards",
@@ -33,7 +33,7 @@
         "is_te"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "e2bf107463aee6efd74221c0dadedcb8baad70d3a6e780c0bc4f1ae6b37ea0d9",
+      "sha256": "5931c612d34b4b4065215ac04f3f25c987b58782657c56a131d51ee0b9292825",
       "training_cutoff": [
         2025,
         18
@@ -43,9 +43,9 @@
     "passing_td": {
       "calibration_cutoff": [
         2026,
-        8
+        9
       ],
-      "calibration_samples": 269,
+      "calibration_samples": 305,
       "features": [
         "recent_yards",
         "season_yards",
@@ -72,7 +72,7 @@
         "is_te"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "900b36b39da25a4a287a3b53d21da43cfe3be5a9bdf829401b64ee8842dfb7f5",
+      "sha256": "511736d13c49ccda9510a19f0ddc6ffab32725893be971e8c9a575ccb0290380",
       "training_cutoff": [
         2025,
         18
@@ -82,9 +82,9 @@
     "passing_yards": {
       "calibration_cutoff": [
         2026,
-        8
+        9
       ],
-      "calibration_samples": 269,
+      "calibration_samples": 305,
       "features": [
         "recent_yards",
         "season_yards",
@@ -111,7 +111,7 @@
         "is_te"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "32d92d41104f717044084f5b14bab759c5f968c20b23c8fdf30526afdcde7d80",
+      "sha256": "69311b7a8e114cd9bb67a0604e60a35c37232f0e196fe0acf12240f91fbcb724",
       "training_cutoff": [
         2025,
         18
@@ -121,9 +121,9 @@
     "receiving_yards": {
       "calibration_cutoff": [
         2026,
-        8
+        9
       ],
-      "calibration_samples": 1579,
+      "calibration_samples": 1784,
       "features": [
         "recent_yards",
         "season_yards",
@@ -150,7 +150,7 @@
         "is_te"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "2dc969f9ccc813fe8dbbb3dc17a184ef72c157832ee8835d68e857994c0e84b5",
+      "sha256": "d130cadfde1c163161201f8b3f766335c08ae6c223442c6d9be0c6920ca16ec9",
       "training_cutoff": [
         2025,
         18
@@ -160,9 +160,9 @@
     "rushing_yards": {
       "calibration_cutoff": [
         2026,
-        8
+        9
       ],
-      "calibration_samples": 628,
+      "calibration_samples": 707,
       "features": [
         "recent_yards",
         "season_yards",
@@ -189,7 +189,7 @@
         "is_te"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "cb9098b006e40bbb92a228bd3ba8421e7cae5070e6943379bc920338fbab867a",
+      "sha256": "98bb80b376d7d874c29f81b171ab1cef4780e4633cd068c5efbd1c7e0970dc46",
       "training_cutoff": [
         2025,
         18
@@ -199,9 +199,9 @@
     "scoring": {
       "calibration_cutoff": [
         2026,
-        8
+        9
       ],
-      "calibration_samples": 242,
+      "calibration_samples": 272,
       "features": [
         "own_points_recent",
         "own_points_season",
@@ -218,7 +218,7 @@
         "week"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "4c0a4fd1de14ad959274b3c56be839e32de07bb848bfe7d1a1bf614410c6837c",
+      "sha256": "21dd20ddf00f91ad848051b9bc68e7adbbe09f9c649627961d363ce68596dcf2",
       "training_cutoff": [
         2025,
         18
@@ -228,10 +228,10 @@
   },
   "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
   "source_sha256": {
-    "pbp_current": "7328aa6f2ea9291b1d3c73a718c639fedf09e2f5b45ae24d20ff497c12cc9829",
-    "players_current": "0e957d7ae2206fd97499a37e043f506cad4b65ab79872e9abded2062702ad386",
+    "pbp_current": "abf334a2ee440fc307fe25e915d651fa13ed569dd4dd9c7ef1005b0e8c149e9c",
+    "players_current": "df628e1f5bd7e5aa25110d63efa72de18ddb852600e7e933fca39b9127317b31",
     "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
-    "schedules_current": "ff096e9ff2d66f25f0531a6de0e4fcae7c5a1b6a3fa3b80a5e39b386d1aaa363",
+    "schedules_current": "531abc4583bde38325e07dbda1d368c26ffb4e42776d1d054892133ed3b4fc66",
     "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
   },
   "status": "experimental",
@@ -462,5 +462,5 @@
       }
     }
   },
-  "version": "d9dc5fc3d2b9c070"
+  "version": "1b2023548dbd5cee"
 }

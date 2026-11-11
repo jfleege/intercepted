@@ -2,25 +2,25 @@
   "active_season": 2026,
   "active_week": 10,
   "attempt": {
-    "completed_at": "2026-11-11T15:06:43.493860+00:00",
-    "mode": "pregame",
-    "started_at": "2026-11-11T15:06:38.820160+00:00",
+    "completed_at": "2026-11-11T15:39:07.413485+00:00",
+    "mode": "results",
+    "started_at": "2026-11-11T15:38:13.116520+00:00",
     "state": "success",
     "steps": {
-      "directory": "skipped",
-      "forecast": "success",
+      "directory": "success",
+      "forecast": "skipped",
       "history": "success",
       "insights": "success",
-      "markets": "skipped",
+      "markets": "success",
       "odds": "skipped",
-      "players": "skipped",
-      "position_defense": "skipped",
+      "players": "success",
+      "position_defense": "success",
       "pre_rollover": "skipped",
       "props": "skipped",
-      "research": "skipped",
-      "research_results": "skipped",
-      "results": "skipped",
-      "teams": "skipped",
+      "research": "success",
+      "research_results": "success",
+      "results": "success",
+      "teams": "success",
       "verify": "success"
     }
   },
@@ -33,12 +33,12 @@
     "target_season": 2026,
     "target_week": 10
   },
-  "last_results_refresh_at": "2026-11-10T15:48:51.850171+00:00",
+  "last_results_refresh_at": "2026-11-11T15:39:07.413485+00:00",
   "last_successful_refresh_at": "2026-11-10T23:01:24.611207+00:00",
   "next_forecast_check_at": "2026-11-12T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-17T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-11T15:06:43.493860+00:00",
+  "snapshot_at": "2026-11-11T15:39:07.413485+00:00",
   "sources": [
     {
       "features_through_week": 9,
@@ -51,55 +51,55 @@
     {
       "id": "players",
       "label": "Player cards",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-10T23:00:53.720909+00:00",
+      "updated_at": "2026-11-11T15:38:18.037970+00:00",
       "week": 10
     },
     {
       "id": "directory",
       "label": "Player history",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
       "through_week": 9,
-      "updated_at": "2026-11-10T23:00:57.043726+00:00",
+      "updated_at": "2026-11-11T15:38:34.454931+00:00",
       "week": 10
     },
     {
       "features_through_week": 9,
       "id": "research",
       "label": "Matchup projections",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-10T22:25:27.770574+00:00",
+      "updated_at": "2026-11-11T15:38:31.172617+00:00",
       "week": 10
     },
     {
       "id": "results",
       "label": "Game results",
-      "refresh_outcome": "skipped",
-      "updated_at": "2026-11-10T23:00:52.528485+00:00"
+      "refresh_outcome": "success",
+      "updated_at": "2026-11-11T15:38:16.611333+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
-      "refresh_outcome": "skipped",
-      "updated_at": "2026-11-10T23:00:58.199519+00:00"
+      "refresh_outcome": "success",
+      "updated_at": "2026-11-11T15:38:35.811541+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-11T15:06:43.316565+00:00",
+      "updated_at": "2026-11-11T15:38:37.206979+00:00",
       "week": 10
     },
     {
       "id": "position_defense",
       "label": "Defense vs positions",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-10T23:00:57.810674+00:00",
+      "updated_at": "2026-11-11T15:38:35.344466+00:00",
       "week": 10
     },
     {
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-10T20:30:22.486448+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43044901004"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43050248602"
 }

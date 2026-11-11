@@ -100,8 +100,6 @@
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading p { color:var(--ud-muted); font-size:12px; }
 .dashboard-shell .ud-bottom-grid .dash-bottom-heading .ud-eyebrow { color:var(--ud-blue); font-size:11px; margin:0 0 5px; }
 .dashboard-shell .ud-bottom-grid .dp-scroll-button { color:var(--ud-text); background:#183443; border-color:var(--ud-border); }
-.dashboard-shell .ud-bottom-grid .dp-scroll-container { padding-bottom:4px; scrollbar-color:#3f6276 #102632; }
-.dashboard-shell .ud-bottom-grid .dp-grid { display:grid; grid-auto-flow:column; grid-auto-columns:calc((100% - 28px)/3); gap:14px; padding:0; }
 .dashboard-shell .ud-bottom-grid .dp-player-card { width:auto; min-width:0; padding:17px; background:linear-gradient(120deg,#142934,#101f29); border:1px solid var(--ud-border); border-radius:11px; color:var(--ud-text); }
 .dashboard-shell .ud-bottom-grid .dp-headshot { width:55px; height:60px; flex-basis:55px; object-fit:cover; object-position:top; border-radius:8px; background:#274252; }
 .dashboard-shell .ud-bottom-grid .dp-headshot-fallback { color:var(--ud-text); }
@@ -181,7 +179,6 @@
  .dashboard-shell .ud-wheel { grid-template-columns:minmax(0,1fr) 174px minmax(0,1fr); max-width:420px; margin:20px auto 12px; }
  .dashboard-shell .ud-wheel-center { width:174px; height:174px; }
  .dashboard-shell .ud-betting-grid { grid-template-columns:1fr; grid-auto-rows:1fr; }
- .dashboard-shell .ud-bottom-grid .dp-grid { grid-auto-columns:calc((100% - 14px)/2); }
  .dashboard-shell .ud-focus .ud-panel-heading { padding:17px 19px; }
  .dashboard-shell .ud-panel-heading > span:not(.ud-tag) { font-size:10px; }
 }
@@ -202,7 +199,6 @@
  .dashboard-shell .ud-wheel-center { width:150px; height:150px; }
  .dashboard-shell .ud-wheel-logos img { width:28px; height:28px; }
  .dashboard-shell .ud-wheel-logos { gap:7px; }
- .dashboard-shell .ud-bottom-grid .dp-grid { grid-auto-columns:85%; gap:12px; }
  .dashboard-shell .ud-bottom-grid .dp-player-card { padding:17px; }
  .dashboard-shell .ud-bottom-grid .dash-bottom-heading { align-items:center; }
  .dashboard-shell .ud-bottom-grid .dash-bottom-heading h3 { font-size:26px; }

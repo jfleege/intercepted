@@ -81,9 +81,9 @@ try {
   await page.getByLabel('Search teams or matchups').fill('');
   await page.locator('.ud-game').first().click();
   await page.getByRole('button',{name:'Scroll players right'}).click();
-  await page.waitForFunction(()=>document.querySelector('.dp-scroll-container').scrollLeft>0);
+  await page.waitForFunction(()=>document.querySelector('.dp-carousel-slide[data-active="true"]').dataset.carouselIndex==='1');
   await page.getByRole('button',{name:'Scroll players left'}).click();
-  await page.waitForFunction(()=>document.querySelector('.dp-scroll-container').scrollLeft===0);
+  await page.waitForFunction(()=>document.querySelector('.dp-carousel-slide[data-active="true"]').dataset.carouselIndex==='0');
   await page.evaluate(async()=>{for(const img of document.images)img.loading='eager';await Promise.all([...document.images].map(i=>i.complete?Promise.resolve():new Promise(r=>{i.onload=i.onerror=r;})));window.scrollTo(0,0);});
   if(width>850){const rects=await page.locator('.ud-slate,.ud-focus').evaluateAll(els=>els.map(e=>({width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height})));assert.ok(Math.abs(rects[0].width-rects[1].width)<1);assert.ok(Math.abs(rects[0].height-rects[1].height)<1);}
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Page must not overflow');

@@ -8,6 +8,10 @@ on:
       - src/features/injury_updates.py
       - scripts/check_pregame.py
       - data/inputs/qb_starters.json
+      - data/inputs/roster_transactions.json
+      - src/features/roster_transactions.py
+      - src/features/player_watch.py
+      - src/features/player_pool.py
       - src/ml/refresh_markets.py
       - src/ml/weekly_forecast.py
       - src/ml/refresh_status.py

@@ -55,6 +55,9 @@ def archive(payload, metadata, observed_at, source, root=ROOT, model_hashes=None
     records = []
     for game in games:
         record = {key: game[key] for key in ("game_id", "season", "week", "game_date", "home_team", "away_team")}
+        for field in ('roster_changes', 'qb_scenarios'):
+            if field in game:
+                record[field] = game[field]
         for side in ("home", "away"):
             if f"{side}_qb_selection" not in game:
                 continue

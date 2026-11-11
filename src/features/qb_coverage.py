@@ -74,9 +74,14 @@ def coverage_metadata(games, exclusions):
     limited = {}
     for game in games:
         for side in ('home', 'away'):
-            evidence = game.get(f'{side}_qb_selection', {}).get('ngs_exclusion')
+            selection = game.get(f'{side}_qb_selection', {})
+            evidence = selection.get('ngs_exclusion')
             if evidence:
                 limited[(evidence['game_id'], evidence['team'])] = evidence
+            elif selection.get('history_status') == 'insufficient_history':
+                limited[(game['game_id'], game[f'{side}_team'])] = {
+                    'game_id': game['game_id'], 'team': game[f'{side}_team'], 'name': selection['name'],
+                    'player_id': selection['player_id'], 'history_status': 'insufficient_history'}
     return {'exclusions': exclusions, 'limited_inputs': list(limited.values())}
 
 
@@ -84,5 +89,6 @@ def coverage_message(payload):
     limited = payload.get('qb_coverage', {}).get('limited_inputs', [])
     if not limited:
         return 'Published forecast slate is current.'
-    notes = '; '.join(f"{row['team']}: {row['name']} NGS through {row['ngs_through_season']} Week {row['ngs_through_week']}" for row in limited)
-    return f'Published slate uses qualified low-volume NGS exclusions. {notes}. No missing tracking metrics were invented.'
+    notes = '; '.join(f"{row['team']}: {row['name']} has insufficient NFL tracking history" if row.get('history_status') == 'insufficient_history'
+                     else f"{row['team']}: {row['name']} NGS through {row['ngs_through_season']} Week {row['ngs_through_week']}" for row in limited)
+    return f'Published slate uses limited QB tracking inputs. {notes}. Missing QB inputs use the trained model treatment.'

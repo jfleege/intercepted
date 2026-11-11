@@ -10,6 +10,8 @@ import nflreadpy as nfl
 from src.features.qb_starters import watch_players
 from src.features.defense_rankings import build_defense_rankings
 from src.features.player_pool import latest_teams, projection_pool
+from src.features.roster_transactions import load_transactions, active_transactions, assigned_team
+from src.ml.refresh_performance import kickoff, stamp
 
 
 # configuration
@@ -246,6 +248,17 @@ for row in players.to_dicts():
 # collect only completed pre-cutoff games
 history = defaultdict(list)
 observed_teams = latest_teams(stats.to_dicts(), season, week, normalize_team)
+observed_at = datetime.now(timezone.utc).isoformat()
+transactions = active_transactions(load_transactions(), season, observed_at)
+last_played = {}
+for row in stats.to_dicts():
+    if row.get('season') == season and row.get('week', week) < week:
+        team = normalize_team(row.get(team_col))
+        played = schedule_dates.get((int(row['week']), team))
+        pid = row.get(player_id_col)
+        if played and played <= AS_OF and pid:
+            last_played[pid] = max(played, last_played.get(pid, played))
+current_teams = {pid: assigned_team(pid, team, transactions, last_played.get(pid)) for pid, team in observed_teams.items()}
 
 for row in stats.to_dicts():
     if int(row["season"]) != season:
@@ -266,9 +279,6 @@ for row in stats.to_dicts():
 
     team = normalize_team(row.get(team_col))
 
-    if team not in teams:
-        continue
-
     game_date = schedule_dates.get(
         (game_week, team)
     )
@@ -287,7 +297,7 @@ for row in stats.to_dicts():
     if (
         position not in STAT_OPTIONS
         or player_id is None
-        or observed_teams.get(player_id) != team
+        or current_teams.get(player_id) not in teams
     ):
         continue
 
@@ -302,7 +312,7 @@ for row in stats.to_dicts():
             + number(row["receiving_tds"])
         )
 
-    history[(team, player_id)].append({
+    history[(current_teams[player_id], player_id)].append({
         "week": game_week,
         "team": team,
         "name": row.get(name_col) or "Unknown player",
@@ -373,13 +383,21 @@ for (team, player_id), records in history.items():
         "games_sampled": len(recent),
         "season_games": len(records),
         "last_game_week": recent[0]["week"],
+        "history_teams": sorted({row['team'] for row in records}),
     })
 
 
 # generate per-matchup output
 matchup_data = {}
+existing = json.loads(OUTPUT.read_text()) if OUTPUT.exists() else {}
+schedule_by_id = {row['game_id']: row for row in schedule.to_dicts()}
 
 for game in games:
+    start = kickoff(schedule_by_id.get(game['game_id'], {}))
+    if start and stamp(start) <= stamp(observed_at):
+        if (existing.get('season'), existing.get('week')) == (season, week) and game['game_id'] in existing.get('games', {}):
+            matchup_data[game['game_id']] = existing['games'][game['game_id']]
+        continue
     home = normalize_team(game["home_team"])
     away = normalize_team(game["away_team"])
 
@@ -395,7 +413,7 @@ for game in games:
 output = {
     "season": season,
     "week": week,
-    "catalog_policy": "All observed RB/WR/TE players plus the projected QB, using latest unambiguous prior-week team statistics. No active-roster or appearance guarantee. Dashboard shortlists remain separate.",
+    "catalog_policy": "Observed RB/WR/TE players plus the projected QB, with sourced trades applied before kickoff. Player history retains production across former teams. A roster assignment is not an appearance or role guarantee.",
     "as_of": AS_OF.isoformat(),
     "exported_at": datetime.now(
         timezone.utc

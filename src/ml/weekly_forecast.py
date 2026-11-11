@@ -10,6 +10,7 @@ from src.ml.refresh_performance import ROOT, MODELS, ALIASES, archive, git, kick
 
 
 from src.features.qb_starters import load_reports, resolve_qb, changed_report_games, merge_revisions
+from src.features.roster_transactions import load_transactions, game_transactions, changed_transaction_games
 from src.ml.model_registry import available_models, model_metadata
 from src.features.model_context import context_features
 from src.ml.refresh_status import forecast_check
@@ -116,6 +117,7 @@ def generate(rows, games, season, week, now, contexts=()):
             raise DataPending(f"{exclusion['team']}: identified QB does not have usable saved NGS features")
         print(f"::notice::Qualified NGS omission: {exclusion['team']} Week {exclusion['week']}, {exclusion['name']} ({exclusion['attempts']} attempts).")
     reports = load_reports()
+    transactions = load_transactions()
     ngs_rows = ngs.to_dicts()
     now = utcnow()  # Data downloads may cross kickoff; use the actual serving clock.
     records, matrices = [], {model: [] for model in models}
@@ -127,17 +129,18 @@ def generate(rows, games, season, week, now, contexts=()):
             continue
         h, a = (ALIASES.get(game[f'{s}_team'], game[f'{s}_team']) for s in ('home', 'away'))
         record = dict(game_id=game['game_id'], season=season, week=week, game_date=str(game['gameday'])[:10], home_team=h, away_team=a)
+        record['roster_changes'] = game_transactions(game, transactions, now)
         features = {f'diff_{key}': ratings[h][key] - ratings[a][key] for key in ('blended_off_epa', 'blended_def_epa', *TEAM_EFFICIENCY)}
         features.update(context_features(game, rows))
         qb_features = {}
         for side, team in [('home', h), ('away', a)]:
-            qb = resolve_qb(game, team, ngs_rows, reports, now, coverage_exclusions)
+            qb = resolve_qb(game, team, ngs_rows, reports, now, coverage_exclusions, transactions)
             history = histories.get(qb['player_id'])
             record[f'{side}_projected_qb_name'] = qb['name']
             record[f'{side}_projected_qb_id'] = qb['player_id']
             record[f'{side}_qb_selection'] = qb
             record[f'{side}_team_latest_week'] = ratings[team]['team_latest_week']
-            features[f'{side}_qb_projection_missing'] = float(qb['player_id'] is None)
+            features[f'{side}_qb_projection_missing'] = float(not history)
             qb_features[side] = history or {}
         features = replace_qb_features(features, qb_features['home'], qb_features['away'], QB_METRICS)
         record['availability_watch'] = game_evidence(game, contexts, now)
@@ -154,7 +157,7 @@ def generate(rows, games, season, week, now, contexts=()):
                 scenario = {'team': candidate['team'], 'name': candidate['name'], 'player_id': candidate['player_id'],
                             'status': 'conditional', 'source': candidate['starter']['source'],
                             'observed_at': candidate['starter']['updated_at'], 'generated_at': now,
-                            'assumption': 'If this depth-chart reserve starts; not a starter announcement or an availability probability.'}
+                            'assumption': candidate.get('assumption', 'If this depth-chart reserve starts; not a starter announcement or an availability probability.')}
                 record['qb_scenarios'].append(scenario)
                 scenario_inputs.append((scenario, inputs))
         for model in models:
@@ -210,7 +213,9 @@ def main():
     season, week, games = target_slate(rows, now)
     current = json.loads((ROOT / 'frontend/public/predictions.json').read_text())
     starter_revisions = changed_report_games(current, rows, load_reports(), now)
+    roster_revisions = changed_transaction_games(current, games, load_transactions(), now)
     revisions = list(starter_revisions)
+    revisions.extend(game for game in roster_revisions if game not in revisions)
     from src.features.injury_updates import availability_revision_games, backup_candidates, game_evidence
     insight_path = ROOT / 'frontend/public/forecast_insights.json'
     insights = json.loads(insight_path.read_text()) if insight_path.exists() else {}
@@ -253,7 +258,7 @@ def main():
                           for c in backup_candidates(old, side, evidence, contexts, now)}
             scenarios = old.get('qb_scenarios', [])
             saved_ids = {scenario.get('player_id') for scenario in scenarios}
-            if game in starter_revisions or candidates - saved_ids:
+            if game in starter_revisions or game in roster_revisions or candidates - saved_ids:
                 model_games.append(game)
             else:
                 context_updates.append({

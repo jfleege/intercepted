@@ -5,6 +5,7 @@ from collections import defaultdict
 from urllib.request import urlopen
 from src.features.player_context import within
 from src.ml.refresh_performance import stamp, kickoff, ALIASES
+from src.features.roster_transactions import active_transactions, assigned_team
 
 ESPN_URL = 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/injuries'
 ESPN_SOURCE = 'https://www.espn.com/nfl/injuries'
@@ -87,18 +88,28 @@ def game_evidence(game, contexts, now):
 
 def backup_candidates(game, side, evidence, contexts, now):
     current = game.get(f'{side}_projected_qb_id')
-    if not any(r['player_id'] == current and r['position'] == 'QB' for r in evidence):
-        return []
     reserves = [c for c in contexts if c['game_id'] == game['game_id'] and c['team'] == game[f'{side}_team'] and c['position'] == 'QB'
                 and c['starter'].get('rank') == 2 and within(c['starter'].get('updated_at'), now)
                 and c['availability']['status'] not in ('Out', 'Doubtful', 'Injured Reserve')]
-    return reserves if len(reserves) == 1 else []
+    candidates = reserves if len(reserves) == 1 and any(r['player_id'] == current and r['position'] == 'QB' for r in evidence) else []
+    moves = active_transactions(game.get('roster_changes', []), game.get('season'), now)
+    for move in moves:
+        if move['position'] == 'QB' and move['to_team'] == game[f'{side}_team'] \
+                and move['player_id'] != current \
+                and assigned_team(move['player_id'], move['to_team'], moves) == move['to_team'] \
+                and not any(c['player_id'] == move['player_id'] for c in candidates):
+            candidates.append({'player_id': move['player_id'], 'name': move['name'], 'team': move['to_team'],
+                               'starter': {'source': move['source'], 'updated_at': move['observed_at']},
+                               'assumption': 'If the acquired QB starts; a trade is not a starter announcement. Physical and game availability must be verified.'})
+    return candidates
 
 
 def replace_qb_features(features, home, away, metrics):
     """Same feature definitions used by primary forecasts and backup scenarios."""
     import math
     result = dict(features)
+    result['home_qb_projection_missing'] = float(not home)
+    result['away_qb_projection_missing'] = float(not away)
     for metric in metrics:
         for prefix in ('career', 'recent'):
             key = f'qb_{prefix}_{metric}'

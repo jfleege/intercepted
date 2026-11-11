@@ -2,7 +2,8 @@ import {useForecastInsights} from './forecastInsightsStore';
 import {availabilityLabel,findContext,reportedOut,starterLabel} from './forecastInsights';
 import { fetchSnapshot } from "./snapshotCache";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import PlayerWatchCarousel from './PlayerWatchCarousel';
 import { rankWatchPlayers, watchTouchdown } from "./playerWatchRanking";
 import type { WatchProjection, WatchReport } from "./playerWatchRanking";
 
@@ -170,27 +171,6 @@ export default function DashboardPlayers() {
   const [mode, setMode] = useState<"blend" | "form">("blend");
   const [reportLoading, setReportLoading] = useState(false);
 
-  const scrollRef = useRef<HTMLDivElement>(null);
-
-// scroll player cards horizontally
-const scrollPlayers = (direction: number) => {
-  const container = scrollRef.current;
-  if (!container) return;
-
-  const card = container.querySelector<HTMLElement>(
-    ".dp-player-card"
-  );
-
-  const distance = card
-    ? card.getBoundingClientRect().width + 12
-    : 200;
-
-  container.scrollBy({
-    left: direction * distance,
-    behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
-  });
-};
-
   // load player data
   useEffect(() => {
     let active = true;
@@ -246,24 +226,7 @@ const scrollPlayers = (direction: number) => {
         </div>
 
         <div className="dp-header-controls">
-  <label className="dp-ranking-select"><span className="sr-only">Player ranking</span><select aria-label="Player ranking" value={mode} onChange={event => {setMode(event.target.value as "blend" | "form"); scrollRef.current?.scrollTo({left:0});}}><option value="blend">Projection + form</option><option value="form">Recent form</option></select></label>
-  <button
-    type="button"
-    className="dp-scroll-button"
-    onClick={() => scrollPlayers(-1)}
-    aria-label="Scroll players left"
-  >
-    ‹
-  </button>
-
-  <button
-    type="button"
-    className="dp-scroll-button"
-    onClick={() => scrollPlayers(1)}
-    aria-label="Scroll players right"
-  >
-    ›
-  </button>
+  <label className="dp-ranking-select"><span className="sr-only">Player ranking</span><select aria-label="Player ranking" value={mode} onChange={event => setMode(event.target.value as "blend" | "form")}><option value="blend">Projection + form</option><option value="form">Recent form</option></select></label>
 </div>
       </div>
 
@@ -288,21 +251,18 @@ const scrollPlayers = (direction: number) => {
 
       {players.length > 0 && (
         <>
-          <div className="dp-scroll-container" ref={scrollRef}>
-  <div className="dp-grid">
-    {players.map((player) => (
-      <PlayerCard
-        key={player.player_id}
-        player={player}
-        week={data!.week}
-        season={data!.season}
-        gameId={Object.keys(data!.games).find(gid=>[...data!.games[gid].away_players,...data!.games[gid].home_players].some(p=>p.player_id===player.player_id))??''}
-        defense={data?.defense_rankings?.teams[player.opponent]}
-        leagueSize={data?.defense_rankings?.league_size}
-      />
-    ))}
-  </div>
-</div>
+          <PlayerWatchCarousel key={`${data?.season}-${data?.week}-${mode}`} slides={players.map(player => ({
+            id: player.player_id,
+            name: player.name,
+            content: <PlayerCard
+              player={player}
+              week={data!.week}
+              season={data!.season}
+              gameId={Object.keys(data!.games).find(gid=>[...data!.games[gid].away_players,...data!.games[gid].home_players].some(p=>p.player_id===player.player_id))??''}
+              defense={data?.defense_rankings?.teams[player.opponent]}
+              leagueSize={data?.defense_rankings?.league_size}
+            />,
+          }))} />
 
           <p className="dp-footnote">
             {ranking.blended && <>Ranked equally by projected yardage and recent improvement within position, among {ranking.eligible} tracked players. Experimental estimates, conditional on appearing. </>}

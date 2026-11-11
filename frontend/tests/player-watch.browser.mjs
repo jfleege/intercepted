@@ -18,6 +18,28 @@ try {
   const panel=page.locator('.dp-panel');
   await panel.scrollIntoViewIfNeeded();await page.evaluate(()=>document.fonts.ready);
   assert.equal(await panel.locator('.dp-player-card').count(),10);
+  const activeSlide=panel.locator('.dp-carousel-slide[data-active="true"]');
+  assert.equal(await activeSlide.getAttribute('data-carousel-index'),'0');
+  const stage=panel.locator('.dp-carousel-stage');
+  await page.getByRole('button',{name:'Scroll players left',exact:true}).click();
+  assert.equal(await activeSlide.getAttribute('data-carousel-index'),'9');
+  await page.getByRole('button',{name:'Scroll players right',exact:true}).click();
+  assert.equal(await activeSlide.getAttribute('data-carousel-index'),'0');
+  await stage.focus();
+  await stage.press('End');
+  assert.equal(await activeSlide.getAttribute('data-carousel-index'),'9');
+  await stage.press('ArrowRight');
+  assert.equal(await activeSlide.getAttribute('data-carousel-index'),'0');
+  const depths=await panel.locator('.dp-carousel-slide').evaluateAll(slides=>slides.map(e=>({index:Number(e.dataset.carouselIndex),opacity:Number(getComputedStyle(e).opacity),transition:getComputedStyle(e).transitionDuration,inert:e.inert})));
+  assert.ok(depths[0].opacity>depths[1].opacity&&depths[1].opacity>depths[2].opacity);
+  assert.ok(depths[3].inert);
+  assert.equal(depths[0].transition,'0s');
+  const bounds=await stage.boundingBox();
+  await page.mouse.move(bounds.x+bounds.width/2,bounds.y+80);
+  await page.mouse.down();await page.mouse.move(bounds.x+bounds.width/2-70,bounds.y+80,{steps:6});await page.mouse.up();
+  assert.equal(await activeSlide.getAttribute('data-carousel-index'),'1');
+  await stage.press('Home');
+  assert.equal(await activeSlide.getAttribute('data-carousel-index'),'0');
   for(const card of await panel.locator('.dp-player-card').all()){
    const name=await card.locator('.dp-player-identity strong').textContent();
    const p=Object.values(report.games).flatMap(g=>g.players).find(p=>p.name===name);
@@ -33,6 +55,7 @@ try {
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await panel.screenshot({path:`qa/player-watch/${width}.png`});
   await page.getByLabel('Player ranking',{exact:true}).selectOption('form');
+  assert.equal(await activeSlide.getAttribute('data-carousel-index'),'0');
   assert.ok((await panel.locator('.dash-bottom-heading').textContent()).includes('positive yardage trends'));
   assert.equal(await panel.locator('.dp-player-card').count(),10);
   await page.getByLabel('Player ranking',{exact:true}).selectOption('blend');

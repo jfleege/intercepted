@@ -36,6 +36,9 @@ def export_history(root=ROOT):
                 record[f"home_win_prob_{model}"] = p
                 record[f"away_win_prob_{model}"] = 1 - p
                 record["model_evidence"][model] = {"saved_at": snapshot["observed_at"], "snapshot_id": snapshot["snapshot_id"]}
+                for field in ('roster_changes', 'qb_scenarios'):
+                    if field in game:
+                        record[field] = game[field]
                 for side in ("home", "away"):
                     for field in ("projected_qb_name", "projected_qb_id", "qb_selection"):
                         key = f"{side}_{field}"

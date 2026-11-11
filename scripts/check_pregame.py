@@ -4,6 +4,7 @@ from zoneinfo import ZoneInfo
 
 from src.features.injury_updates import availability_revision_games
 from src.features.qb_starters import changed_report_games, load_reports
+from src.features.roster_transactions import changed_transaction_games, load_transactions
 from src.ml.forecast_insights import ROOT, load_context, read, stamp, utcnow
 
 
@@ -32,6 +33,7 @@ def main():
         contexts, _, sources, now = load_context(current, directory, research)
         changed = availability_revision_games(current, pending, contexts, sources, now)
         changed += changed_report_games(current, pending, load_reports(), now)
+        changed += changed_transaction_games(current, pending, load_transactions(), now)
         unavailable = [name for name, source in sources.items() if source['status'] != 'available']
         if unavailable:
             print(f"::warning::Pregame sources unavailable: {', '.join(unavailable)}")

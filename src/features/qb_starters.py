@@ -1,6 +1,7 @@
 """Game-scoped, sourced starter reports override the explicitly unconfirmed passer proxy."""
 import json
 from src.ml.refresh_performance import ROOT, ALIASES, kickoff, stamp
+from src.features.roster_transactions import active_transactions, assigned_team
 
 
 def load_reports(root=ROOT):
@@ -44,24 +45,40 @@ def annotate_ngs_limit(selection, history, exclusions, team, season, week):
             'ngs_coverage_note': f"Low-volume Week {omission['week']} NGS omitted; using this QB's available tracking history through {latest['season']} Week {latest['week']}"}
 
 
-def resolve_qb(game, team, ngs_rows, reports, now, coverage_exclusions=()):
+def resolve_qb(game, team, ngs_rows, reports, now, coverage_exclusions=(), transactions=()):
     season, week = game['season'], game['week']
     history = [r for r in ngs_rows if r.get('player_gsis_id') and (r.get('attempts') or 0) > 0
                and (r['season'] < season or (r['season'] == season and r['week'] < week))]
     report = current_report(game, team, reports, now)
+    moves = active_transactions(transactions, season, now)
     if report:
         matches = [r for r in history if r.get('player_display_name') == report['name']
                    and r['season'] == season and ALIASES.get(r['team_abbr'], r['team_abbr']) == team]
+        if not matches:
+            acquired_ids = {r['player_id'] for r in moves if r['to_team'] == team and r['name'] == report['name']}
+            matches = [r for r in history if r['player_gsis_id'] in acquired_ids
+                       and r.get('player_display_name') == report['name']]
         ids = {r['player_gsis_id'] for r in matches}
+        if not ids and report.get('player_id') and report.get('allow_missing_history') is True:
+            if any(r['player_gsis_id'] == report['player_id'] for r in history) or assigned_team(report['player_id'], team, moves) != team:
+                raise ValueError('Starter report name and historical identity disagree')
+            return {'player_id': report['player_id'], 'name': report['name'], 'status': report['status'],
+                    'source': report['source'], 'observed_at': report['observed_at'],
+                    'history_status': 'insufficient_history',
+                    'ngs_coverage_note': 'No qualified prior NFL tracking history for this starter. QB models use their trained missing-input treatment; this is not a player-specific QB assessment.'}
         if len(ids) != 1:
             raise ValueError(f"Cannot uniquely resolve reported QB {report['name']} for {team}; refusing a cosmetic name change")
         player_id = ids.pop()
         if report.get('player_id') and report['player_id'] != player_id:
             raise ValueError('Starter report player ID and name disagree')
+        if assigned_team(player_id, team, moves) != team:
+            raise ValueError('Starter report selects a quarterback traded to another team')
         return annotate_ngs_limit({'player_id': player_id, 'name': report['name'], 'status': report['status'],
                 'source': report['source'], 'observed_at': report['observed_at']}, history, coverage_exclusions, team, season, week)
-    candidates = [r for r in history if r['season'] == season and ALIASES.get(r['team_abbr'], r['team_abbr']) == team]
-    omissions = [r for r in coverage_exclusions if r['team'] == team and r['season'] == season and r['week'] < week]
+    candidates = [r for r in history if r['season'] == season and ALIASES.get(r['team_abbr'], r['team_abbr']) == team
+                  and assigned_team(r['player_gsis_id'], team, moves) == team]
+    omissions = [r for r in coverage_exclusions if r['team'] == team and r['season'] == season and r['week'] < week
+                 and assigned_team(r['player_id'], team, moves) == team]
     latest_omission = max(omissions, key=lambda r: r['week']) if omissions else None
     if latest_omission and latest_omission['week'] > max((r['week'] for r in candidates), default=0):
         historical = [r for r in history if r['player_gsis_id'] == latest_omission['player_id']]
@@ -103,7 +120,7 @@ def merge_revisions(current, regenerated, schedules, now):
     by_id = {g['game_id']: g for g in schedules}
     replacement = {g['game_id']: g for g in regenerated['games']
                    if g['game_id'] in by_id and kickoff(by_id[g['game_id']]) and stamp(kickoff(by_id[g['game_id']])) > stamp(now)}
-    result = {**current, 'generated_at': now, 'revision_reason': 'Sourced starter or availability update',
+    result = {**current, 'generated_at': now, 'revision_reason': 'Sourced starter, roster or availability update',
               'games': [replacement.get(g['game_id'], g) for g in current['games']]}
     if 'qb_coverage' in current or 'qb_coverage' in regenerated:
         from src.features.qb_coverage import coverage_metadata

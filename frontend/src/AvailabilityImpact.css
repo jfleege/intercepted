@@ -29,6 +29,10 @@
 .availability-callout-scenarios { display: grid; gap: 6px; font-size: 12px; }
 .availability-callout-scenarios:not(:empty) { margin-top: 10px; padding-top: 10px; border-top: 1px solid #d99b4333; }
 .mx-briefing > .availability-callout { margin-top: 16px; margin-bottom: 16px; }
+.roster-callout { border-color: var(--ud-border); background: #80d5ff08; }
+.roster-callout::before { background: var(--ud-blue); }
+.roster-callout > summary { color: var(--ud-blue); cursor: pointer; font-weight: 600; }
+.roster-callout[open] > summary { margin-bottom: 8px; }
 @media (max-width: 650px) {
   .availability-callout { padding: 12px 12px 12px 22px; font-size: 12px; }
   .availability-callout-heading strong { font-size: 13px; }

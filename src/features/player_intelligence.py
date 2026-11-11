@@ -3,6 +3,7 @@ import json
 from collections import defaultdict
 from src.ml.refresh_performance import ROOT, utcnow, write_json
 from src.ml.projection_features import final_games, team_name, num
+from src.features.roster_transactions import load_transactions, active_transactions, assigned_team
 
 KINDS = {'QB':'passing','RB':'rushing','WR':'receiving','TE':'receiving'}
 FIELDS = ('passing_yards','rushing_yards','receiving_yards','attempts','carries','targets','receptions','passing_tds','rushing_tds','receiving_tds')
@@ -25,8 +26,9 @@ def periods(rows, games):
             for key,qs in grouped.items() if quarters[key[0]].issuperset({1,2,3,4})}
 
 
-def build(predictions, stats, schedules, identities, pbp, now):
+def build(predictions, stats, schedules, identities, pbp, now, transactions=()):
     season, week = predictions['season'], predictions['week']
+    moves = active_transactions(transactions, season, now)
     games = [g for g in final_games(schedules,season,week,now) if int(g['season'])==season]
     lookup = {(int(g['week']),team_name(g[side])):g for g in games for side in ('home_team','away_team')}
     metadata = {p.get('gsis_id',p.get('player_id')):p for p in identities}
@@ -47,15 +49,14 @@ def build(predictions, stats, schedules, identities, pbp, now):
     for pid, by_game in all_history.items():
         history=sorted(by_game.values(),key=lambda r:(r['date'],r['week']))
         last=history[-1]; meta=metadata.get(pid,{})
-        # Latest observed team, not an offseason roster assignment. Projections can add newer identities in the UI.
-        team=last['team']
+        team=assigned_team(pid,last['team'],moves,last['date'])
         if team not in matchups: continue
         headshot=meta.get('headshot') or meta.get('headshot_url')
         output.append({'player_id':pid,'name':last['name'],'position':last['position'],'team':team,'opponent':matchups[team][1],
                        'game_id':matchups[team][0],'headshot':headshot if isinstance(headshot,str) and headshot.startswith('https://') else None,
                        'history':history})
     return {'schema_version':1,'season':season,'week':week,'through_week':week-1,'exported_at':now,'players':output,
-            'policy':'Completed regular-season appearances before the forecast week. Missing statistics remain null. Period usage excludes no-play, kneel and spike rows; OT is separate. Latest observed team is not a confirmed active roster.'}
+            'policy':'Completed regular-season appearances before the forecast week. Sourced trades update the current team; historical appearances retain their original teams. Missing statistics remain null. Period usage excludes no-play, kneel and spike rows; OT is separate. Team assignment is not an appearance guarantee.'}
 
 
 def main():
@@ -66,7 +67,7 @@ def main():
     required={'passer_player_id','rusher_player_id','receiver_player_id','pass_attempt','rush_attempt','complete_pass','play_type','qb_kneel','qb_spike'}
     cached=pl.read_parquet(path) if path.exists() else None
     pbp=cached if cached is not None and required.issubset(cached.columns) else nfl.load_pbp(season)
-    result=build(data,nfl.load_player_stats(seasons=season,summary_level='week').to_dicts(),nfl.load_schedules(season).to_dicts(),nfl.load_players().to_dicts(),pbp.select(['game_id','qtr',*sorted(required)]).to_dicts(),utcnow())
+    result=build(data,nfl.load_player_stats(seasons=season,summary_level='week').to_dicts(),nfl.load_schedules(season).to_dicts(),nfl.load_players().to_dicts(),pbp.select(['game_id','qtr',*sorted(required)]).to_dicts(),utcnow(),load_transactions())
     write_json(ROOT/'frontend/public/player_intelligence.json',result)
     print(f"Exported {len(result['players'])} player histories.")
 

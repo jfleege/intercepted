@@ -545,7 +545,7 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:09:04.233457+00:00",
+      "availability_checked_at": "2026-11-11T20:59:39.896779+00:00",
       "availability_watch": [
         {
           "injury": "Heel",
@@ -562,9 +562,9 @@
           "name": "Malik Willis",
           "player_id": "00-0038128",
           "position": "QB",
-          "report_updated_at": "2026-11-11T18:01Z",
+          "report_updated_at": "2026-11-11T20:15Z",
           "source": "https://www.espn.com/nfl/injuries",
-          "status": "Injured Reserve",
+          "status": "Questionable",
           "team": "MIA"
         },
         {
@@ -582,7 +582,7 @@
       "away_projected_qb_name": "Malik Willis",
       "away_qb_selection": {
         "name": "Malik Willis",
-        "observed_at": "2026-11-11T20:09:04.233457+00:00",
+        "observed_at": "2026-11-11T20:59:39.896779+00:00",
         "player_id": "00-0038128",
         "source": "Latest prior-week primary passer; not a starter announcement",
         "status": "unconfirmed_proxy"
@@ -599,7 +599,7 @@
       "home_projected_qb_name": "Daniel Jones",
       "home_qb_selection": {
         "name": "Daniel Jones",
-        "observed_at": "2026-11-11T20:09:04.233457+00:00",
+        "observed_at": "2026-11-11T20:59:39.896779+00:00",
         "player_id": "00-0035710",
         "source": "Latest prior-week primary passer; not a starter announcement",
         "status": "unconfirmed_proxy"
@@ -613,7 +613,22 @@
       "predicted_winner": "IND",
       "predicted_winner_probability": 0.6619082662595216,
       "qb_probability_impact": 0.061290601680055845,
-      "qb_scenarios": [],
+      "qb_scenarios": [
+        {
+          "assumption": "If this depth-chart reserve starts; not a starter announcement or an availability probability.",
+          "generated_at": "2026-11-11T20:59:39.896779+00:00",
+          "home_win_prob_v4_a": 0.6006176645794657,
+          "home_win_prob_v4_qb_plus": 0.6688716739919502,
+          "home_win_prob_v5_boosted": 0.5925027139509086,
+          "home_win_prob_v5_qb_plus": 0.6619082662595216,
+          "name": "Malik Willis",
+          "observed_at": "2026-11-11T07:02:21Z",
+          "player_id": "00-0038128",
+          "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
+          "status": "conditional",
+          "team": "MIA"
+        }
+      ],
       "roster_changes": [
         {
           "effective_date": "2026-10-27",
@@ -668,7 +683,7 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:09:04.233457+00:00",
+      "availability_checked_at": "2026-11-11T20:59:39.896779+00:00",
       "availability_watch": [
         {
           "injury": "Knee",
@@ -685,7 +700,7 @@
           "name": "Jonathon Brooks",
           "player_id": "00-0039344",
           "position": "RB",
-          "report_updated_at": "2026-11-11T17:32Z",
+          "report_updated_at": "2026-11-11T19:59Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Injured Reserve",
           "team": "CAR"
@@ -705,7 +720,7 @@
       "away_projected_qb_name": "Bryce Young",
       "away_qb_selection": {
         "name": "Bryce Young",
-        "observed_at": "2026-11-11T20:09:04.233457+00:00",
+        "observed_at": "2026-11-11T20:59:39.896779+00:00",
         "player_id": "00-0039150",
         "source": "Latest prior-week primary passer; not a starter announcement",
         "status": "unconfirmed_proxy"
@@ -722,7 +737,7 @@
       "home_projected_qb_name": "Tyler Shough",
       "home_qb_selection": {
         "name": "Tyler Shough",
-        "observed_at": "2026-11-11T20:09:04.233457+00:00",
+        "observed_at": "2026-11-11T20:59:39.896779+00:00",
         "player_id": "00-0040743",
         "source": "Latest prior-week primary passer; not a starter announcement",
         "status": "unconfirmed_proxy"
@@ -1539,7 +1554,7 @@
       "week": 10
     }
   ],
-  "generated_at": "2026-11-11T20:14:16.684251+00:00",
+  "generated_at": "2026-11-11T20:59:40.031266+00:00",
   "model": "v5_qb_plus",
   "models": [
     "v4_a",

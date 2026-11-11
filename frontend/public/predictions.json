@@ -59,14 +59,24 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:09:04.233457+00:00",
+      "availability_checked_at": "2026-11-11T21:54:04.694223+00:00",
       "availability_watch": [
+        {
+          "injury": "Chest",
+          "name": "Jared Goff",
+          "player_id": "00-0033106",
+          "position": "QB",
+          "report_updated_at": "2026-11-11T21:27Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Questionable",
+          "team": "DET"
+        },
         {
           "injury": "Knee",
           "name": "A.J. Brown",
           "player_id": "00-0035676",
           "position": "WR",
-          "report_updated_at": "2026-11-11T19:43Z",
+          "report_updated_at": "2026-11-11T21:30Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "NE"
@@ -76,10 +86,20 @@
           "name": "Rhamondre Stevenson",
           "player_id": "00-0036875",
           "position": "RB",
-          "report_updated_at": "2026-11-10T16:01Z",
+          "report_updated_at": "2026-11-11T21:30Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Doubtful",
           "team": "NE"
+        },
+        {
+          "injury": "Ribs",
+          "name": "Amon-Ra St. Brown",
+          "player_id": "00-0036963",
+          "position": "WR",
+          "report_updated_at": "2026-11-11T21:22Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Questionable",
+          "team": "DET"
         },
         {
           "injury": "Neck",
@@ -96,7 +116,7 @@
           "name": "TreVeyon Henderson",
           "player_id": "00-0040734",
           "position": "RB",
-          "report_updated_at": "2026-11-10T15:44Z",
+          "report_updated_at": "2026-11-11T21:30Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "NE"
@@ -156,28 +176,8 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:09:04.233457+00:00",
+      "availability_checked_at": "2026-11-11T21:54:04.694223+00:00",
       "availability_watch": [
-        {
-          "injury": "Elbow",
-          "name": "Patrick Mahomes",
-          "player_id": "00-0033873",
-          "position": "QB",
-          "report_updated_at": "2026-11-11T18:26Z",
-          "source": "https://www.espn.com/nfl/injuries",
-          "status": "Questionable",
-          "team": "KC"
-        },
-        {
-          "injury": "Hamstring",
-          "name": "Xavier Worthy",
-          "player_id": "00-0039894",
-          "position": "WR",
-          "report_updated_at": "2026-11-11T18:02Z",
-          "source": "https://www.espn.com/nfl/injuries",
-          "status": "Questionable",
-          "team": "KC"
-        },
         {
           "injury": "Hamstring",
           "name": "Zachariah Branch",
@@ -224,22 +224,7 @@
       "predicted_winner": "KC",
       "predicted_winner_probability": 0.7500595851385481,
       "qb_probability_impact": -0.05024063709660559,
-      "qb_scenarios": [
-        {
-          "assumption": "If this depth-chart reserve starts; not a starter announcement or an availability probability.",
-          "generated_at": "2026-11-11T20:09:04.233457+00:00",
-          "home_win_prob_v4_a": 0.30018105195805755,
-          "home_win_prob_v4_qb_plus": 0.2976766434315655,
-          "home_win_prob_v5_boosted": 0.27410474666628915,
-          "home_win_prob_v5_qb_plus": 0.29263599118593037,
-          "name": "Justin Fields",
-          "observed_at": "2026-11-11T07:02:21Z",
-          "player_id": "00-0036945",
-          "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-          "status": "conditional",
-          "team": "KC"
-        }
-      ],
+      "qb_scenarios": [],
       "roster_changes": [
         {
           "effective_date": "2026-11-09",
@@ -391,14 +376,14 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:09:04.233457+00:00",
+      "availability_checked_at": "2026-11-11T21:54:04.694223+00:00",
       "availability_watch": [
         {
           "injury": "Ankle",
           "name": "Carson Wentz",
           "player_id": "00-0032950",
           "position": "QB",
-          "report_updated_at": "2026-11-11T19:33Z",
+          "report_updated_at": "2026-11-11T20:57Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "MIN"
@@ -411,6 +396,16 @@
           "report_updated_at": "2026-11-11T20:01Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Doubtful",
+          "team": "MIN"
+        },
+        {
+          "injury": "Wrist",
+          "name": "T.J. Hockenson",
+          "player_id": "00-0035229",
+          "position": "TE",
+          "report_updated_at": "2026-11-11T21:31Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Questionable",
           "team": "MIN"
         },
         {
@@ -432,16 +427,6 @@
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "MIN"
-        },
-        {
-          "injury": "Ankle",
-          "name": "Chris Brooks",
-          "player_id": "00-0038685",
-          "position": "RB",
-          "report_updated_at": "2026-11-09T21:35Z",
-          "source": "https://www.espn.com/nfl/injuries",
-          "status": "Injured Reserve",
-          "team": "GB"
         },
         {
           "injury": "Knee",
@@ -545,7 +530,7 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:59:39.896779+00:00",
+      "availability_checked_at": "2026-11-11T21:54:04.694223+00:00",
       "availability_watch": [
         {
           "injury": "Heel",
@@ -562,17 +547,17 @@
           "name": "Malik Willis",
           "player_id": "00-0038128",
           "position": "QB",
-          "report_updated_at": "2026-11-11T20:15Z",
+          "report_updated_at": "2026-11-11T21:01Z",
           "source": "https://www.espn.com/nfl/injuries",
-          "status": "Questionable",
+          "status": "Injured Reserve",
           "team": "MIA"
         },
         {
-          "injury": "Quadriceps",
-          "name": "Jaylen Wright",
-          "player_id": "00-0039874",
-          "position": "RB",
-          "report_updated_at": "2026-11-10T15:44Z",
+          "injury": "Knee",
+          "name": "Chris Bell",
+          "player_id": "00-0041525",
+          "position": "WR",
+          "report_updated_at": "2026-11-11T01:20Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "MIA"
@@ -613,22 +598,7 @@
       "predicted_winner": "IND",
       "predicted_winner_probability": 0.6619082662595216,
       "qb_probability_impact": 0.061290601680055845,
-      "qb_scenarios": [
-        {
-          "assumption": "If this depth-chart reserve starts; not a starter announcement or an availability probability.",
-          "generated_at": "2026-11-11T20:59:39.896779+00:00",
-          "home_win_prob_v4_a": 0.6006176645794657,
-          "home_win_prob_v4_qb_plus": 0.6688716739919502,
-          "home_win_prob_v5_boosted": 0.5925027139509086,
-          "home_win_prob_v5_qb_plus": 0.6619082662595216,
-          "name": "Malik Willis",
-          "observed_at": "2026-11-11T07:02:21Z",
-          "player_id": "00-0038128",
-          "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-          "status": "conditional",
-          "team": "MIA"
-        }
-      ],
+      "qb_scenarios": [],
       "roster_changes": [
         {
           "effective_date": "2026-10-27",
@@ -770,7 +740,7 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:09:04.233457+00:00",
+      "availability_checked_at": "2026-11-11T21:54:04.694223+00:00",
       "availability_watch": [
         {
           "injury": "Concussion",
@@ -781,6 +751,16 @@
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "NYJ"
+        },
+        {
+          "injury": "Ankle",
+          "name": "Dalton Kincaid",
+          "player_id": "00-0038933",
+          "position": "TE",
+          "report_updated_at": "2026-11-11T21:51Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Questionable",
+          "team": "BUF"
         },
         {
           "injury": "Ankle",
@@ -859,8 +839,28 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:09:04.233457+00:00",
+      "availability_checked_at": "2026-11-11T21:54:04.694223+00:00",
       "availability_watch": [
+        {
+          "injury": "Ankle",
+          "name": "Jakobi Meyers",
+          "player_id": "00-0034960",
+          "position": "WR",
+          "report_updated_at": "2026-11-11T21:16Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Questionable",
+          "team": "JAX"
+        },
+        {
+          "injury": "Hand",
+          "name": "Chris Rodriguez Jr.",
+          "player_id": "00-0038611",
+          "position": "RB",
+          "report_updated_at": "2026-11-11T21:20Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Questionable",
+          "team": "JAX"
+        },
         {
           "injury": "Knee",
           "name": "Tyjae Spears",
@@ -870,6 +870,16 @@
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "TEN"
+        },
+        {
+          "injury": "Ankle",
+          "name": "Bhayshul Tuten",
+          "player_id": "00-0040719",
+          "position": "RB",
+          "report_updated_at": "2026-11-11T21:14Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Questionable",
+          "team": "JAX"
         },
         {
           "injury": "Shoulder",
@@ -984,8 +994,18 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:14:16.534623+00:00",
+      "availability_checked_at": "2026-11-11T21:54:04.694223+00:00",
       "availability_watch": [
+        {
+          "injury": "Hamstring",
+          "name": "Davante Adams",
+          "player_id": "00-0031381",
+          "position": "WR",
+          "report_updated_at": "2026-11-11T21:05Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Injured Reserve",
+          "team": "LA"
+        },
         {
           "injury": "Concussion",
           "name": "Bam Knight",
@@ -1011,9 +1031,9 @@
           "name": "Puka Nacua",
           "player_id": "00-0039075",
           "position": "WR",
-          "report_updated_at": "2026-11-11T20:01Z",
+          "report_updated_at": "2026-11-11T21:19Z",
           "source": "https://www.espn.com/nfl/injuries",
-          "status": "Doubtful",
+          "status": "Out",
           "team": "LA"
         },
         {
@@ -1194,14 +1214,14 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-11T20:09:04.233457+00:00",
+      "availability_checked_at": "2026-11-11T21:54:04.694223+00:00",
       "availability_watch": [
         {
           "injury": "Achilles",
           "name": "Mike Evans",
           "player_id": "00-0031408",
           "position": "WR",
-          "report_updated_at": "2026-11-10T16:28Z",
+          "report_updated_at": "2026-11-11T21:01Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "SF"
@@ -1211,7 +1231,7 @@
           "name": "Deebo Samuel Sr.",
           "player_id": "00-0035719",
           "position": "WR",
-          "report_updated_at": "2026-11-10T15:44Z",
+          "report_updated_at": "2026-11-11T21:01Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "SF"
@@ -1554,7 +1574,7 @@
       "week": 10
     }
   ],
-  "generated_at": "2026-11-11T20:59:40.031266+00:00",
+  "generated_at": "2026-11-11T21:54:04.920448+00:00",
   "model": "v5_qb_plus",
   "models": [
     "v4_a",

@@ -3,9 +3,9 @@
   "games": {
     "2026_10_BUF_NYJ": {
       "game_id": "2026_10_BUF_NYJ",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T18:00:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.352,
@@ -700,9 +700,9 @@
     },
     "2026_10_CAR_NO": {
       "game_id": "2026_10_CAR_NO",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T18:00:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1892,
@@ -1437,9 +1437,9 @@
     },
     "2026_10_HOU_CLE": {
       "game_id": "2026_10_HOU_CLE",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T18:00:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1498,
@@ -2114,9 +2114,9 @@
     },
     "2026_10_JAX_TEN": {
       "game_id": "2026_10_JAX_TEN",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T18:00:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.0973,
@@ -2740,9 +2740,9 @@
     },
     "2026_10_KC_ATL": {
       "game_id": "2026_10_KC_ATL",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T18:00:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.2091,
@@ -2913,6 +2913,26 @@
             64.2
           ],
           "recent_yards": 24.0,
+          "stat": "receiving",
+          "status": "available",
+          "team": "KC"
+        },
+        {
+          "anytime_td_probability": 0.1805,
+          "baseline_anytime_td_probability": 0.133333,
+          "conditional_on": "Appearing in the game",
+          "expected_yards": 37.3,
+          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/zniq20yhnxjqajqcgfc5",
+          "name": "Josh Downs",
+          "opponent": "ATL",
+          "player_id": "00-0038997",
+          "position": "WR",
+          "prior_appearances": 56,
+          "range_80": [
+            7.8,
+            66.8
+          ],
+          "recent_yards": 21.7,
           "stat": "receiving",
           "status": "available",
           "team": "KC"
@@ -3375,9 +3395,9 @@
     },
     "2026_10_LAC_BAL": {
       "game_id": "2026_10_LAC_BAL",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-17T01:15:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1002,
@@ -3715,14 +3735,25 @@
           "team": "LAC"
         },
         {
+          "anytime_td_probability": 0.197,
+          "baseline_anytime_td_probability": 0.133333,
+          "baseline_passing_td_probability": 0.769231,
           "conditional_on": "Appearing in the game",
-          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/p8uqfsnpx153mn3gjtd3",
-          "name": "Joe Fagnano",
+          "expected_yards": 225.1,
+          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/qjswiunczrn5xmdiqhlz",
+          "name": "Jacoby Brissett",
           "opponent": "LAC",
-          "player_id": "00-0040981",
+          "passing_td_probability": 0.8037,
+          "player_id": "00-0033119",
           "position": "QB",
-          "prior_appearances": 2,
-          "status": "insufficient_history",
+          "prior_appearances": 85,
+          "range_80": [
+            123.7,
+            326.6
+          ],
+          "recent_yards": 203.0,
+          "stat": "passing",
+          "status": "available",
           "team": "BAL"
         },
         {
@@ -4032,9 +4063,9 @@
     },
     "2026_10_LA_ARI": {
       "game_id": "2026_10_LA_ARI",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T21:05:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1617,
@@ -4716,9 +4747,9 @@
     },
     "2026_10_MIA_IND": {
       "game_id": "2026_10_MIA_IND",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T18:00:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1546,
@@ -4814,17 +4845,6 @@
           "team": "MIA"
         },
         {
-          "conditional_on": "Appearing in the game",
-          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/bfojud7a4smw8ipmnaxa",
-          "name": "DJ Herman",
-          "opponent": "IND",
-          "player_id": "00-0041436",
-          "position": "RB",
-          "prior_appearances": 2,
-          "status": "insufficient_history",
-          "team": "MIA"
-        },
-        {
           "anytime_td_probability": 0.0734,
           "baseline_anytime_td_probability": 0.1,
           "conditional_on": "Appearing in the game",
@@ -4842,6 +4862,17 @@
           "recent_yards": 0.0,
           "stat": "rushing",
           "status": "available",
+          "team": "MIA"
+        },
+        {
+          "conditional_on": "Appearing in the game",
+          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/bfojud7a4smw8ipmnaxa",
+          "name": "DJ Herman",
+          "opponent": "IND",
+          "player_id": "00-0041436",
+          "position": "RB",
+          "prior_appearances": 2,
+          "status": "insufficient_history",
           "team": "MIA"
         },
         {
@@ -5127,26 +5158,6 @@
           "team": "IND"
         },
         {
-          "anytime_td_probability": 0.1934,
-          "baseline_anytime_td_probability": 0.133333,
-          "conditional_on": "Appearing in the game",
-          "expected_yards": 45.0,
-          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/ngk2iwpbmdeivvrpwk9h",
-          "name": "Keenan Allen",
-          "opponent": "MIA",
-          "player_id": "00-0030279",
-          "position": "WR",
-          "prior_appearances": 124,
-          "range_80": [
-            15.5,
-            74.5
-          ],
-          "recent_yards": 41.3,
-          "stat": "receiving",
-          "status": "available",
-          "team": "IND"
-        },
-        {
           "anytime_td_probability": 0.234,
           "baseline_anytime_td_probability": 0.333333,
           "conditional_on": "Appearing in the game",
@@ -5162,26 +5173,6 @@
             72.7
           ],
           "recent_yards": 68.0,
-          "stat": "receiving",
-          "status": "available",
-          "team": "IND"
-        },
-        {
-          "anytime_td_probability": 0.1959,
-          "baseline_anytime_td_probability": 0.133333,
-          "conditional_on": "Appearing in the game",
-          "expected_yards": 37.3,
-          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/zniq20yhnxjqajqcgfc5",
-          "name": "Josh Downs",
-          "opponent": "MIA",
-          "player_id": "00-0038997",
-          "position": "WR",
-          "prior_appearances": 56,
-          "range_80": [
-            7.8,
-            66.8
-          ],
-          "recent_yards": 21.7,
           "stat": "receiving",
           "status": "available",
           "team": "IND"
@@ -5422,9 +5413,9 @@
     },
     "2026_10_MIN_GB": {
       "game_id": "2026_10_MIN_GB",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T18:00:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.0442,
@@ -6108,9 +6099,9 @@
     },
     "2026_10_NE_DET": {
       "game_id": "2026_10_NE_DET",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T14:30:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1615,
@@ -6745,9 +6736,9 @@
     },
     "2026_10_PIT_CIN": {
       "game_id": "2026_10_PIT_CIN",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-16T01:20:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1452,
@@ -7413,9 +7404,9 @@
     },
     "2026_10_SEA_LV": {
       "game_id": "2026_10_SEA_LV",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T21:05:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.066,
@@ -7731,25 +7722,14 @@
           "team": "SEA"
         },
         {
-          "anytime_td_probability": 0.143,
-          "baseline_anytime_td_probability": 0.2,
-          "baseline_passing_td_probability": 0.923077,
           "conditional_on": "Appearing in the game",
-          "expected_yards": 240.1,
-          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/za7cynvpwlsro1tsaijk",
-          "name": "Kirk Cousins",
+          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/umygvel2pumkyvxt3jm9",
+          "name": "Fernando Mendoza",
           "opponent": "SEA",
-          "passing_td_probability": 0.8654,
-          "player_id": "00-0029604",
+          "player_id": "00-0041562",
           "position": "QB",
-          "prior_appearances": 121,
-          "range_80": [
-            138.6,
-            341.6
-          ],
-          "recent_yards": 252.7,
-          "stat": "passing",
-          "status": "available",
+          "prior_appearances": 1,
+          "status": "insufficient_history",
           "team": "LV"
         },
         {
@@ -8048,9 +8028,9 @@
     },
     "2026_10_SF_DAL": {
       "game_id": "2026_10_SF_DAL",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-15T21:25:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1601,
@@ -8190,6 +8170,26 @@
             66.5
           ],
           "recent_yards": 42.3,
+          "stat": "receiving",
+          "status": "available",
+          "team": "SF"
+        },
+        {
+          "anytime_td_probability": 0.2058,
+          "baseline_anytime_td_probability": 0.133333,
+          "conditional_on": "Appearing in the game",
+          "expected_yards": 49.5,
+          "headshot": "https://static.www.nfl.com/image/upload/f_auto,q_auto/league/ngk2iwpbmdeivvrpwk9h",
+          "name": "Keenan Allen",
+          "opponent": "DAL",
+          "player_id": "00-0030279",
+          "position": "WR",
+          "prior_appearances": 124,
+          "range_80": [
+            19.9,
+            79.0
+          ],
+          "recent_yards": 41.3,
           "stat": "receiving",
           "status": "available",
           "team": "SF"
@@ -8654,9 +8654,9 @@
     },
     "2026_10_WAS_NYG": {
       "game_id": "2026_10_WAS_NYG",
-      "generated_at": "2026-11-11T15:38:31.172617+00:00",
+      "generated_at": "2026-11-11T20:02:58.805362+00:00",
       "kickoff": "2026-11-13T01:15:00+00:00",
-      "model_version": "b642be34c8f77ef2",
+      "model_version": "ab96044d0f5806a1",
       "players": [
         {
           "anytime_td_probability": 0.1344,
@@ -9439,11 +9439,11 @@
       }
     }
   },
-  "generated_at": "2026-11-11T15:38:31.172617+00:00",
-  "input_fingerprint": "28d392b3e064e55646187153ca2cce4d76da2c2e4a7417bfd3896eb457966704",
+  "generated_at": "2026-11-11T20:02:58.805362+00:00",
+  "input_fingerprint": "9505639ac453ecbc396afe067099021b76f2c2f56b354022dc03c2bb63574d09",
   "model_versions": {
-    "b642be34c8f77ef2": {
-      "created_at": "2026-11-11T15:38:20.476825+00:00",
+    "ab96044d0f5806a1": {
+      "created_at": "2026-11-11T20:02:47.591516+00:00",
       "models": {
         "anytime_td": {
           "calibration_cutoff": [
@@ -9477,7 +9477,7 @@
             "is_te"
           ],
           "method": "standardized logistic regression + held-out sigmoid calibration",
-          "sha256": "775f337aa05f6c8618c50b6f9cd7715724e3dcafb8330641279bb6be6c569235",
+          "sha256": "b8821536448baaa44c75fcba415f4ee502661e1183374969f4d4db33db159a7a",
           "training_cutoff": [
             2025,
             18
@@ -9516,7 +9516,7 @@
             "is_te"
           ],
           "method": "standardized logistic regression + held-out sigmoid calibration",
-          "sha256": "4bb6bff9401058343c31c2ecb90ce566d54c8d2e84cfce8ccc083d179761524f",
+          "sha256": "511736d13c49ccda9510a19f0ddc6ffab32725893be971e8c9a575ccb0290380",
           "training_cutoff": [
             2025,
             18
@@ -9675,7 +9675,7 @@
         "pbp_current": "d78d4841f0f7606ff1cdcbbc3bce5cb0f7d3522ccc15b46b65c046d33892b72b",
         "players_current": "55809bdea9b05ef4cf40edde096ee6012f1118fd3f7c455548db23ded506f66c",
         "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
-        "schedules_current": "d1c6a9460f09893f5d8a9256c506271bf913c9a4c3935334b05fabca1c9f83f5",
+        "schedules_current": "d14f492689352ee54f6321b04b3b6475250ae8d09c10feed551c2b66ca544808",
         "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
       },
       "status": "experimental"

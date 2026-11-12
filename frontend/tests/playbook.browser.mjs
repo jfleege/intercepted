@@ -16,6 +16,7 @@ try {
   await page.locator('.hp-teams').waitFor();await page.locator('.hp-player-name').waitFor();
   await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('.hp-player').count(),11);
+  assert.equal(await page.locator('.hp-defender').count(),11);
   assert.equal(await page.locator('.ud-hero-photo').count(),0);
   assert.equal(await page.locator('.hero-playbook button,.hp-topline,.hp-footer').count(),0);
   const checkForecast=async model=>{
@@ -48,7 +49,9 @@ try {
  const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'no-preference'});
  page.on('pageerror',e=>errors.push(e.message));await route(page);await page.clock.install();await page.goto(origin);await page.locator('.hp-teams').waitFor();
  const positions=()=>page.locator('.hp-player').evaluateAll(els=>els.map(e=>e.getAttribute('transform')));
- const before=await positions();await page.clock.runFor(4200);
+ const defenders=()=>page.locator('.hp-defender').evaluateAll(els=>els.map(e=>e.getAttribute('transform')));
+ const defenseBefore=await defenders();const before=await positions();await page.clock.runFor(4200);
+ assert.notDeepEqual(await defenders(),defenseBefore,'Defenders must rush or drop with offensive motion');
  assert.notDeepEqual(await positions(),before,'Players must move along their routes');
  const offsets=await page.locator('.hp-routes.is-active path').evaluateAll(els=>els.map(e=>({offset:parseFloat(e.style.strokeDashoffset),length:e.getTotalLength()})));
  assert.ok(offsets.every(p=>p.offset>0&&p.offset<p.length),'Routes must trace progressively');

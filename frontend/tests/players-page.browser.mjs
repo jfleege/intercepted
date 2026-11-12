@@ -9,6 +9,14 @@ try{
   const context=await browser.newContext({viewport:{width,height:1000},reducedMotion:'reduce'}),page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));
   await page.route('**/*',route=>{if(route.request().url().startsWith('http://127.0.0.1:4174'))return route.continue();if(route.request().resourceType()==='image')return route.fulfill({contentType:'image/svg+xml',body:'<svg xmlns="http://www.w3.org/2000/svg"/>'});return route.fulfill({json:{events:[]}});});
   await page.goto('http://127.0.0.1:4174/intercepted/#players');await page.locator('.pi-player-row').first().waitFor();assert.ok(await page.locator('.pi-player-row').count()>=data.players.length);
+  assert.equal(await page.getByLabel('Player team',{exact:true}).locator('option').count(),33);
+  await page.getByLabel('Player team',{exact:true}).selectOption('CHI');
+  await page.locator('.pi-player-row').first().waitFor();
+  assert.ok(await page.locator('.pi-player-row').evaluateAll(es=>es.length>0&&es.every(e=>e.textContent.includes('CHI · Bye week'))));
+  await page.locator('.pi-player-row').first().click();
+  assert.ok((await page.locator('.pi-identity').textContent()).includes('Bye week'));
+  assert.equal(await page.locator('.pi-period-select').evaluate(e=>Math.round(e.getBoundingClientRect().height)),30);
+  await page.getByLabel('Player team',{exact:true}).selectOption('all');
   await page.getByRole('button',{name:'View top 10',exact:false}).click();assert.ok(await page.locator('.pi-watch-strip>button').count()<=10);
   await page.getByRole('button',{name:'QB',exact:true}).click();assert.ok(await page.locator('.pi-player-row').evaluateAll(els=>els.every(e=>e.textContent.includes('QB ·'))));
   assert.ok((await page.locator('.pi-hero').textContent()).includes('1+ PASSING TD'));assert.ok((await page.locator('.pi-hero').textContent()).includes('1+ SCORING TD'));

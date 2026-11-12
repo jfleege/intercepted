@@ -16,7 +16,7 @@ export default function SuggestedParlays({ offers, now, onUse, onSave, onCustomi
       <div className="mb-section-title"><h3>{idea.profile}</h3><span className="mb-badge">{idea.legs.length} legs</span></div><p className="mb-note">{idea.description}</p>
       <div className="mb-combo-legs">{idea.legs.map(leg => <div key={leg.id}><small>{leg.matchup}</small><strong>{leg.name} · {leg.market}</strong><span>{(leg.probability! * 100).toFixed(1)}% model likelihood{leg.player_id ? ' · if appearing' : ''}</span></div>)}</div>
       <p className="mb-note">Lowest individual estimate: {(Math.min(...idea.legs.map(o => o.probability!)) * 100).toFixed(1)}%</p>
-      <button className="mb-primary" onClick={() => onUse(idea.legs)}>Use suggestion {index + 1}</button><button onClick={() => onSave(idea.legs)}>Save suggestion {index + 1}</button>
+      <div className="lm-suggestion-actions"><button className="mb-primary" onClick={() => onUse(idea.legs)}>Use suggestion {index + 1}</button><button onClick={() => onSave(idea.legs)}>Save suggestion {index + 1}</button></div>
     </article>)}</div>
     {!options.length && <p className="mb-empty">No suggestions meet these profiles with the current upcoming games and filters. Choose fewer legs or customize the builder.</p>}
     {!!options.length && <p className="mb-note">Showing {options.length} distinct options. Profiles without enough eligible games are omitted.</p>}

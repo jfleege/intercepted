@@ -50,13 +50,14 @@ def build(predictions, stats, schedules, identities, pbp, now, transactions=()):
         history=sorted(by_game.values(),key=lambda r:(r['date'],r['week']))
         last=history[-1]; meta=metadata.get(pid,{})
         team=assigned_team(pid,last['team'],moves,last['date'])
-        if team not in matchups: continue
+        matchup = matchups.get(team)
         headshot=meta.get('headshot') or meta.get('headshot_url')
-        output.append({'player_id':pid,'name':last['name'],'position':last['position'],'team':team,'opponent':matchups[team][1],
-                       'game_id':matchups[team][0],'headshot':headshot if isinstance(headshot,str) and headshot.startswith('https://') else None,
+        output.append({'player_id':pid,'name':last['name'],'position':last['position'],'team':team,'opponent':matchup[1] if matchup else '',
+                       'game_id':matchup[0] if matchup else '', 'bye_week': matchup is None,
+                       'headshot':headshot if isinstance(headshot,str) and headshot.startswith('https://') else None,
                        'history':history})
     return {'schema_version':1,'season':season,'week':week,'through_week':week-1,'exported_at':now,'players':output,
-            'policy':'Completed regular-season appearances before the forecast week. Sourced trades update the current team; historical appearances retain their original teams. Missing statistics remain null. Period usage excludes no-play, kneel and spike rows; OT is separate. Team assignment is not an appearance guarantee.'}
+            'policy':'Completed regular-season appearances before the forecast week. Sourced trades update the current team; historical appearances retain their original teams. Teams outside the current slate retain history with bye-week labels and no matchup forecast. Missing statistics remain null. Period usage excludes no-play, kneel and spike rows; OT is separate. Team assignment is not an appearance guarantee.'}
 
 
 def main():

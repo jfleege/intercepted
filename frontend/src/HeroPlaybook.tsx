@@ -32,6 +32,13 @@ type TrendPlayer = { player_id: string; name: string; stat_label: string; recent
 type PlayerExport = { season: number; week: number; games: Record<string, { away_players: TrendPlayer[]; home_players: TrendPlayer[] }> };
 const ease = (n: number) => n * n * (3 - 2 * n);
 
+// Decorative eleven-on-eleven motion; these paths do not represent model outputs.
+const defensivePlays = [
+  ['M285 150 Q245 110 175 180','M280 182 L262 177','M280 218 L262 223','M285 250 Q245 290 175 220','M340 135 L415 110','M345 200 L410 200','M340 265 L420 290','M295 55 L420 95','M295 340 L440 310','M450 115 L505 70','M450 285 L505 325'],
+  ['M285 150 Q240 125 170 190','M280 182 L262 177','M280 218 L262 223','M285 250 Q230 270 170 230','M340 130 L415 100','M345 220 L420 210','M340 280 L430 310','M295 60 L460 100','M295 330 L430 275','M460 120 L520 160','M460 280 L520 235'],
+  ['M285 150 Q240 120 185 180','M280 182 L262 177','M280 218 L262 223','M285 250 Q240 280 185 220','M340 140 L415 120','M345 200 L410 215','M340 260 L420 280','M295 65 L395 130','M295 340 L450 320','M450 115 L510 155','M450 285 L510 250'],
+];
+
 export default function HeroPlaybook({ games, model, archived, season, week }: {
   games: Game[]; model: Model; archived: boolean; season?: number; week?: number;
 }) {
@@ -39,6 +46,8 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
   const root = useRef<HTMLDivElement>(null);
   const routes = useRef<(SVGPathElement | null)[][]>([]);
   const markers = useRef<(SVGGElement | null)[]>([]);
+  const defenseRoutes = useRef<(SVGPathElement | null)[][]>([]);
+  const defenders = useRef<(SVGGElement | null)[]>([]);
   const elapsed = useRef(0);
   const [cycle, setCycle] = useState(0);
   const [reduced, setReduced] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -71,25 +80,25 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
 
   useEffect(() => {
     let frame = 0, previous: number | undefined;
-    const lengths = routes.current.map(paths => paths.map(p => p?.getTotalLength() ?? 0));
+    const groups = [[routes.current, markers.current], [defenseRoutes.current, defenders.current]] as const;
     const draw = () => {
       const phase = (elapsed.current % PERIOD) / PERIOD;
       const progress = ease(Math.max(0, Math.min(1, (phase - .24) / .51)));
       const setup = ease(Math.min(1, phase / .16));
-      routes.current[playIndex]?.forEach((path, i) => {
+      groups.forEach(([paths, pieces]) => paths[playIndex]?.forEach((path, i) => {
         if (!path) return;
-        const length = lengths[playIndex][i];
+        const length = path.getTotalLength();
         path.style.strokeDasharray = `${length}`;
         path.style.strokeDashoffset = `${reduced ? 0 : length * (1 - progress)}`;
         path.style.opacity = `${reduced ? 1 : phase < .16 ? 0 : 1}`;
         const start = path.getPointAtLength(0);
-        const prior = routes.current[(playIndex + plays.length - 1) % plays.length][i];
-        const end = prior?.getPointAtLength(lengths[(playIndex + plays.length - 1) % plays.length][i]) ?? start;
+        const prior = paths[(playIndex + plays.length - 1) % plays.length][i];
+        const end = prior?.getPointAtLength(prior.getTotalLength()) ?? start;
         const point = reduced ? start : phase < .16 && cycle > 0
           ? { x: end.x + (start.x - end.x) * setup, y: end.y + (start.y - end.y) * setup }
           : path.getPointAtLength(progress * length);
-        markers.current[i]?.setAttribute('transform', `translate(${point.x} ${point.y})`);
-      });
+        pieces[i]?.setAttribute('transform', `translate(${point.x} ${point.y})`);
+      }));
     };
     if (!pageActive) return;
     draw();
@@ -126,6 +135,12 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
         <path className="hp-scrimmage" d="M250 30V370"/>
         {plays.map((formation, index) => <g key={formation.name} className={`hp-routes${index === playIndex ? ' is-active' : ''}`}>
           {formation.paths.map((d, i) => <path key={i} ref={node => { (routes.current[index] ??= [])[i] = node; }} d={d} className={i >= 6 ? 'hp-block' : 'hp-route'}/>)}
+        </g>)}
+        {defensivePlays.map((paths, index) => <g key={index} visibility="hidden">
+          {paths.map((d, i) => <path key={i} ref={node => { (defenseRoutes.current[index] ??= [])[i] = node; }} d={d}/>)}
+        </g>)}
+        {defensivePlays[playIndex].map((_, i) => <g key={i} ref={node => { defenders.current[i] = node; }} className="hp-defender">
+          <path d="M-5-5L5 5M5-5L-5 5"/>
         </g>)}
         {roles.map((role, i) => <g key={i} ref={node => { markers.current[i] = node; }} className={`hp-player${i >= 6 ? ' hp-lineman' : ''}`}>
           <circle r="10"/><text className="hp-number" textAnchor="middle" y="3">{play.numbers[i]}</text><text className="hp-role" textAnchor="middle" y="-16">{playIndex === 2 && i === 3 ? 'RB' : role}</text>

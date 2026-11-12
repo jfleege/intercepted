@@ -818,39 +818,8 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-12T02:07:04.239827+00:00",
-      "availability_watch": [
-        {
-          "injury": "Quadriceps",
-          "name": "Sam Darnold",
-          "player_id": "00-0034869",
-          "position": "QB",
-          "report_updated_at": "2026-11-10T15:44Z",
-          "source": "https://www.espn.com/nfl/injuries",
-          "status": "Out",
-          "team": "SEA"
-        },
-        {
-          "injury": "Oblique",
-          "name": "Drew Lock",
-          "player_id": "00-0035704",
-          "position": "QB",
-          "report_updated_at": "2026-11-12T00:10Z",
-          "source": "https://www.espn.com/nfl/injuries",
-          "status": "Questionable",
-          "team": "SEA"
-        },
-        {
-          "injury": null,
-          "name": "Rashid Shaheed",
-          "player_id": "00-0037545",
-          "position": "WR",
-          "report_updated_at": "2026-11-12T00:02Z",
-          "source": "https://www.espn.com/nfl/injuries",
-          "status": "Out",
-          "team": "SEA"
-        }
-      ],
+      "availability_checked_at": "2026-11-12T18:50:03.355000+00:00",
+      "availability_watch": [],
       "away_projected_qb_id": "00-0035704",
       "away_projected_qb_name": "Drew Lock",
       "away_qb_selection": {
@@ -888,22 +857,7 @@
       "predicted_winner": "SEA",
       "predicted_winner_probability": 0.694939935771884,
       "qb_probability_impact": -0.02989341680408536,
-      "qb_scenarios": [
-        {
-          "assumption": "If this depth-chart reserve starts; not a starter announcement or an availability probability.",
-          "generated_at": "2026-11-12T02:07:04.239827+00:00",
-          "home_win_prob_v4_a": 0.33495348103220135,
-          "home_win_prob_v4_qb_plus": 0.3048503403821411,
-          "home_win_prob_v5_boosted": 0.27188127615227736,
-          "home_win_prob_v5_qb_plus": 0.305060064228116,
-          "name": "Drew Lock",
-          "observed_at": "2026-11-11T07:02:21Z",
-          "player_id": "00-0035704",
-          "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-          "status": "conditional",
-          "team": "SEA"
-        }
-      ],
+      "qb_scenarios": [],
       "roster_changes": [
         {
           "effective_date": "2026-10-27",
@@ -1014,8 +968,19 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-12T10:55:17.743239+00:00",
-      "availability_watch": [],
+      "availability_checked_at": "2026-11-12T18:50:03.355000+00:00",
+      "availability_watch": [
+        {
+          "injury": "Thumb",
+          "name": "Andrei Iosivas",
+          "player_id": "00-0038619",
+          "position": "WR",
+          "report_updated_at": "2026-11-12T16:43Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Injured Reserve",
+          "team": "CIN"
+        }
+      ],
       "away_projected_qb_id": "00-0023459",
       "away_projected_qb_name": "Aaron Rodgers",
       "away_qb_selection": {
@@ -1070,29 +1035,8 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-12T02:07:04.239827+00:00",
-      "availability_watch": [
-        {
-          "injury": "Finger",
-          "name": "Justin Herbert",
-          "player_id": "00-0036355",
-          "position": "QB",
-          "report_updated_at": "2026-11-10T16:00Z",
-          "source": "https://www.espn.com/nfl/injuries",
-          "status": "Questionable",
-          "team": "LAC"
-        },
-        {
-          "injury": "Quadriceps",
-          "name": "Brenen Thompson",
-          "player_id": "00-0041550",
-          "position": "WR",
-          "report_updated_at": "2026-11-10T15:44Z",
-          "source": "https://www.espn.com/nfl/injuries",
-          "status": "Questionable",
-          "team": "LAC"
-        }
-      ],
+      "availability_checked_at": "2026-11-12T18:50:03.355000+00:00",
+      "availability_watch": [],
       "away_projected_qb_id": "00-0036355",
       "away_projected_qb_name": "Justin Herbert",
       "away_qb_selection": {
@@ -1128,14 +1072,7 @@
       "predicted_winner": "BAL",
       "predicted_winner_probability": 0.7027135335905733,
       "qb_probability_impact": -0.03958634890001034,
-      "qb_scenarios": [
-        {
-          "name": "DJ Uiagalelei",
-          "player_id": "00-0040464",
-          "status": "insufficient_history",
-          "team": "LAC"
-        }
-      ],
+      "qb_scenarios": [],
       "roster_changes": [
         {
           "effective_date": "2026-10-07",
@@ -1202,7 +1139,7 @@
       "week": 10
     }
   ],
-  "generated_at": "2026-11-12T10:55:17.943936+00:00",
+  "generated_at": "2026-11-12T18:50:03.476016+00:00",
   "model": "v5_qb_plus",
   "models": [
     "v4_a",

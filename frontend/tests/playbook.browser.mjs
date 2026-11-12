@@ -16,8 +16,9 @@ try {
   await page.locator('.hp-teams').waitFor();await page.locator('.hp-player-name').waitFor();
   await page.evaluate(()=>document.fonts.ready);
   assert.equal(await page.locator('.hp-player').count(),11);
+  assert.equal(await page.locator('.hp-defender').count(),11);
   assert.equal(await page.locator('.ud-hero-photo').count(),0);
-  assert.equal(await page.getByRole('button',{name:'Pause playbook',exact:true}).isDisabled(),true);
+  assert.equal(await page.locator('.hero-playbook button,.hp-topline,.hp-footer').count(),0);
   const checkForecast=async model=>{
    const teams=await page.locator('.hp-teams span').allTextContents();
    const game=data.games.find(g=>g.away_team===teams[0]&&g.home_team===teams[1]);assert.ok(game);
@@ -30,38 +31,38 @@ try {
   const expected=[...group.away_players,...group.home_players].filter(p=>Number.isFinite(p.trend_pct)).sort((a,b)=>b.trend_pct-a.trend_pct)[0];
   assert.equal(await page.locator('.hp-player-name').textContent(),expected.name);
   assert.deepEqual(await page.locator('.hp-form-row b').allTextContents(),[expected.season_average.toFixed(1),expected.recent_average.toFixed(1)]);
-  await page.getByRole('button',{name:'Next playbook formation',exact:true}).click();
-  assert.equal(await page.locator('.hero-playbook').getAttribute('data-formation'),'1');
+  assert.equal(await page.locator('.hero-playbook').getAttribute('data-formation'),'0');
   await checkForecast('v5_qb_plus');
   await page.getByRole('button',{name:'Gradient Boosted',exact:true}).click();await checkForecast('v5_boosted');
   await page.getByRole('button',{name:'Updated QB+',exact:true}).click();
   await page.evaluate(()=>window.scrollTo(0,0));
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'No horizontal page overflow');
-  assert.ok(await page.locator('.ud-hero-copy,.hp-insight,.hp-footer').evaluateAll(els=>els.every(e=>e.scrollWidth<=e.clientWidth+1)),'Hero text and cards must fit');
+  assert.ok(await page.locator('.ud-hero-copy,.hp-insight').evaluateAll(els=>els.every(e=>e.scrollWidth<=e.clientWidth+1)),'Hero text and cards must fit');
   const rects=await page.locator('.hp-matchup,.hp-trend').evaluateAll(els=>els.map(e=>{const r=e.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom};}));
   assert.ok(rects[0].left>=rects[1].right||rects[0].bottom<=rects[1].top,'Floating cards must not overlap');
   await page.locator('.ud-hero').screenshot({path:`qa/playbook/${width}-hero.png`});
   await page.getByLabel('Prediction week').selectOption('2026-6');
   await page.locator('.hp-matchup p').filter({hasText:'ARCHIVED FORECAST'}).waitFor();
   assert.equal(await page.locator('.hp-player-name').count(),0,'Archived weeks must not display current player stats');
-  await page.close();console.log(`PASS playbook ${width}px: forecasts, model switch, real trends, manual formation, reduced motion, archive isolation, card fit.`);
+  await page.close();console.log(`PASS playbook ${width}px: forecasts, model switch, real trends, reduced motion, archive isolation, card fit.`);
  }
  const page=await browser.newPage({viewport:{width:1440,height:1000},reducedMotion:'no-preference'});
  page.on('pageerror',e=>errors.push(e.message));await route(page);await page.clock.install();await page.goto(origin);await page.locator('.hp-teams').waitFor();
  const positions=()=>page.locator('.hp-player').evaluateAll(els=>els.map(e=>e.getAttribute('transform')));
- const before=await positions();await page.clock.runFor(4200);
+ const defenders=()=>page.locator('.hp-defender').evaluateAll(els=>els.map(e=>e.getAttribute('transform')));
+ const defenseBefore=await defenders();const before=await positions();await page.clock.runFor(4200);
+ assert.notDeepEqual(await defenders(),defenseBefore,'Defenders must rush or drop with offensive motion');
  assert.notDeepEqual(await positions(),before,'Players must move along their routes');
  const offsets=await page.locator('.hp-routes.is-active path').evaluateAll(els=>els.map(e=>({offset:parseFloat(e.style.strokeDashoffset),length:e.getTotalLength()})));
  assert.ok(offsets.every(p=>p.offset>0&&p.offset<p.length),'Routes must trace progressively');
- await page.getByRole('button',{name:'Pause playbook',exact:true}).click();const stopped=await positions();await page.clock.runFor(1500);assert.deepEqual(await positions(),stopped);
- await page.getByRole('button',{name:'Resume playbook',exact:true}).click();await page.clock.runFor(7000);
+ await page.clock.runFor(7000);
  assert.equal(await page.locator('.hero-playbook').getAttribute('data-formation'),'1','Automatic cycle must select the next formation');
- assert.notDeepEqual(await positions(),stopped);
+ assert.notDeepEqual(await positions(),before);
  await page.locator('.ud-hero').screenshot({path:'qa/playbook/1440-motion.png'});
  await page.emulateMedia({reducedMotion:'reduce'});await page.clock.runFor(50);const still=await positions();await page.clock.runFor(12000);assert.deepEqual(await positions(),still);
  await page.emulateMedia({reducedMotion:'no-preference'});await page.clock.runFor(300);
  await page.locator('.dp-panel').scrollIntoViewIfNeeded();await page.clock.runFor(100);const offscreen=await positions();await page.clock.runFor(1500);assert.deepEqual(await positions(),offscreen,'Offscreen playbook must stop animating');
  await page.close();
  const failed=await browser.newPage({reducedMotion:'reduce'});await route(failed);await failed.route('**/players_watch.json',r=>r.fulfill({status:503,body:'Unavailable'}));await failed.goto(origin);await failed.locator('.hp-teams').waitFor();await failed.locator('.hp-trend .hp-empty').waitFor();assert.equal(await failed.locator('.hp-player-name').count(),0);await failed.close();
- assert.deepEqual(errors,[]);console.log('PASS playbook: route tracing, moving players, automatic formation changes, pause/resume, reduced motion changes, offscreen suspension, unavailable player data, no browser errors.');
+ assert.deepEqual(errors,[]);console.log('PASS playbook: route tracing, moving players, automatic formation changes, reduced motion changes, offscreen suspension, unavailable player data, no browser errors.');
 } finally {await browser.close();}

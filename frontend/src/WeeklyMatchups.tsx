@@ -4,6 +4,10 @@ import type { Model } from './predictionModels';
 import type { Game } from './forecastTypes';
 import { TEAM_NAMES } from './teams';
 import ProbabilityWheel from './ProbabilityWheel';
+import { useEffect, useState } from 'react';
+import { fetchSnapshot } from './snapshotCache';
+import { gameScheduleLabel } from './gameSchedule';
+import type { ScheduleSnapshot } from './gameSchedule';
 
 const pct = (p: number) => `${(p * 100).toFixed(1)}%`;
 const logo = (team: string) => `${import.meta.env.BASE_URL}logos/${team}.png`;
@@ -23,6 +27,19 @@ export default function WeeklyMatchups({ games, focusedGame, model, archived, on
   games: Game[]; focusedGame: Game | null; model: Model; archived: boolean;
   onFocus: (id: string) => void; onAnalysis: (game: Game) => void;
 }) {
+  const [schedule, setSchedule] = useState<ScheduleSnapshot | null>(null);
+  const season = games[0]?.season;
+  const week = games[0]?.week;
+  useEffect(() => {
+    if (archived) return;
+    const controller = new AbortController();
+    fetchSnapshot(`${import.meta.env.BASE_URL}game_schedule.json`, { signal: controller.signal })
+      .then(response => { if (!response.ok) throw Error('Schedule unavailable'); return response.json(); })
+      .then((result: ScheduleSnapshot) => { if (!controller.signal.aborted && result.season === season && result.week === week && result.games) setSchedule(result); })
+      .catch(() => { /* The matchup and its saved kickoff remain usable when listings are unavailable. */ });
+    return () => controller.abort();
+  }, [archived, season, week]);
+  const scheduleGames = !archived && schedule?.season === season && schedule.week === week ? schedule.games : {};
   const focusedProbability = focusedGame ? probability(focusedGame, model) : .5;
   const focusedWinner = focusedGame && (focusedProbability >= .5 ? focusedGame.home_team : focusedGame.away_team);
   const awayQBStatus = qbStatus(focusedGame?.away_qb_selection?.status);
@@ -36,10 +53,11 @@ export default function WeeklyMatchups({ games, focusedGame, model, archived, on
         {games.map(game => {
           const home = probability(game, model), winner = home >= .5 ? game.home_team : game.away_team;
           const chance = Math.max(home, 1 - home), active = game.game_id === focusedGame?.game_id;
+          const scheduleLabel = gameScheduleLabel(game, scheduleGames[game.game_id]);
           return <button type="button" key={game.game_id} className={`ud-game${active ? ' is-selected' : ''}`} aria-pressed={active}
-            onClick={() => onFocus(game.game_id)} aria-label={`${game.away_team} at ${game.home_team}. ${winner} pick, ${pct(chance)}. Select matchup.`}>
+            onClick={() => onFocus(game.game_id)} aria-label={`${game.away_team} at ${game.home_team}. ${archived ? '' : `${scheduleLabel}. `}${winner} pick, ${pct(chance)}. Select matchup.`}>
             <span><span className="ud-game-teams"><img src={logo(game.away_team)} alt=""/><b>{game.away_team}</b><i>at</i><img src={logo(game.home_team)} alt=""/><b>{game.home_team}</b></span>
-              <span className="ud-game-date">{new Date(`${game.game_date}T12:00:00`).toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'})}{archived ? <Result game={game} winner={winner}/> : ' · Pregame'}</span>
+              <span className="ud-game-date" title={archived ? undefined : 'Kickoff in Central Time. U.S. broadcast listings; regional availability varies.'}>{archived ? <>{new Date(`${game.game_date}T12:00:00`).toLocaleDateString('en-US', {weekday:'short',month:'short',day:'numeric'})}<Result game={game} winner={winner}/></> : scheduleLabel}</span>
             </span>
             <Chance chance={chance} active={active} winner={winner}/>
           </button>;

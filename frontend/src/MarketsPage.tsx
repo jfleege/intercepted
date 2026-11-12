@@ -136,7 +136,7 @@ export default function MarketsPage({ search = '', showPastBets = false }: { sea
   } catch { setNotice('Unable to delete the saved record. Storage was not changed.'); }
  }
  return <div className="mb-page lm-page">
-  <header className="mb-heading"><div><span className="mb-eyebrow">PROJECTION LAB / MARKETS</span><h1>Build around the likelihood.</h1><p>Compare our forecasts, test your assumptions, and explore cross-game research ideas.</p></div><span className="lm-model-badge">MODEL ESTIMATES<span>No sportsbook prices</span></span></header>
+  <header className="mb-heading"><div><span className="mb-eyebrow">PROJECTION LAB / MARKETS</span><h1>Build around the likelihood.</h1><p>Compare model forecasts, explore player yardage and touchdown estimates, and combine selections across upcoming games to develop your own betting ideas.</p><p className="mb-storage-note">This is a research workspace for bettors. Saved ideas, bet history, and notes are stored locally in this browser, not in an account on this site. They do not sync across devices and may be lost if you clear site data or use private browsing. Model estimates are not sportsbook prices or guaranteed outcomes.</p></div></header>
   <div className="mb-view-switch" role="group" aria-label="Markets workspace">
     <button type="button" aria-pressed={view === 'suggested'} onClick={() => {setGame('all'); setView('suggested'); setHindsight(false);}}>Suggested parlays</button>
     <button type="button" aria-pressed={view === 'markets'} onClick={() => setView('markets')}>Explore markets</button>

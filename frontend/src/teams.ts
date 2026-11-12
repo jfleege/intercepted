@@ -67,3 +67,16 @@ export const TEAM_COLORS = Object.freeze<Record<string, string>>({
   TEN: "#4B92DB",
   WAS: "#5A1414",
 });
+
+/** Display names shared by alphabetical team menus. */
+export const TEAM_FULL_NAMES = Object.freeze<Record<string, string>>({
+  ARI:'Arizona Cardinals', ATL:'Atlanta Falcons', BAL:'Baltimore Ravens', BUF:'Buffalo Bills',
+  CAR:'Carolina Panthers', CHI:'Chicago Bears', CIN:'Cincinnati Bengals', CLE:'Cleveland Browns',
+  DAL:'Dallas Cowboys', DEN:'Denver Broncos', DET:'Detroit Lions', GB:'Green Bay Packers',
+  HOU:'Houston Texans', IND:'Indianapolis Colts', JAX:'Jacksonville Jaguars', KC:'Kansas City Chiefs',
+  LV:'Las Vegas Raiders', LAC:'Los Angeles Chargers', LA:'Los Angeles Rams', MIA:'Miami Dolphins',
+  MIN:'Minnesota Vikings', NE:'New England Patriots', NO:'New Orleans Saints', NYG:'New York Giants',
+  NYJ:'New York Jets', PHI:'Philadelphia Eagles', PIT:'Pittsburgh Steelers', SF:'San Francisco 49ers',
+  SEA:'Seattle Seahawks', TB:'Tampa Bay Buccaneers', TEN:'Tennessee Titans', WAS:'Washington Commanders',
+});
+export const ALPHABETICAL_TEAMS = Object.keys(TEAM_FULL_NAMES).sort((a,b)=>TEAM_FULL_NAMES[a].localeCompare(TEAM_FULL_NAMES[b]));

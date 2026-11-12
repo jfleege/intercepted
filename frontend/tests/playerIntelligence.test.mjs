@@ -1,9 +1,23 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {directory,average,reliability,playerGrades,filteredPlayers,windowHistory} from '../src/playerIntelligence.ts';
+import {ALPHABETICAL_TEAMS,TEAM_FULL_NAMES} from '../src/teams.ts';
 const slate={season:2026,week:7,games:[{game_id:'g',home_team:'DEN',away_team:'SEA'}]};
 const p={player_id:'one',name:'Player One',team:'DEN',opponent:'SEA',position:'QB',game_id:'g',history:[{week:5},{week:6},{week:7}]};
 const data={schema_version:1,season:2026,week:7,players:[p]};
+test('bye teams retain historical profiles without receiving projections or fabricated opponents',()=>{
+ const bye={...p,team:'CHI',game_id:'',opponent:'',bye_week:true,projection:{expected_yards:99}};
+ const result=directory(slate,{...data,players:[bye]},null,null,[]);
+ assert.equal(result.length,1);assert.equal(result[0].history.length,2);assert.equal(result[0].projection,undefined);
+ assert.equal(filteredPlayers(result,'','CHI','QB','name').length,1);
+ for(const invalid of [{...bye,team:'DEN'},{...bye,team:'UNKNOWN'},{...bye,opponent:'SEA'},{...bye,game_id:'g'},{...bye,bye_week:false}])assert.equal(directory(slate,{...data,players:[invalid]},null,null,[]).length,0);
+});
+test('team menu includes all 32 teams alphabetically by full name',()=>{
+ assert.equal(ALPHABETICAL_TEAMS.length,32);assert.equal(new Set(ALPHABETICAL_TEAMS).size,32);
+ assert.ok(ALPHABETICAL_TEAMS.includes('CHI'));
+ const names=ALPHABETICAL_TEAMS.map(t=>TEAM_FULL_NAMES[t]);
+ assert.deepEqual(names,[...names].sort((a,b)=>a.localeCompare(b)));
+});
 test('directory rejects wrong slate and opponents, excludes future history, and deduplicates identities',()=>{
  assert.equal(directory(slate,{...data,week:8},null,null,[]).length,0);assert.equal(directory(slate,{...data,players:[{...p,opponent:'KC'}]},null,null,[]).length,0);
  const result=directory(slate,{...data,players:[p,p]},null,null,['one']);assert.equal(result.length,1);assert.equal(result[0].history.length,2);assert.equal(result[0].watchRank,1);

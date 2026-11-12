@@ -3,7 +3,8 @@ import type { PredictionFields } from "./predictionModels";
 
 export type QbSelection = {status: string; ngs_coverage_note?: string; ngs_through_season?: number; ngs_through_week?: number};
 export type Game = PredictionFields & AvailabilityImpactFields & {
-  result?: {status: string; home_score: number | null; away_score: number | null};
+  result?: {status: string; home_score: number | null; away_score: number | null; kickoff?: string | null};
+  kickoff?: string;
   game_id: string;
   season: number;
   week: number;

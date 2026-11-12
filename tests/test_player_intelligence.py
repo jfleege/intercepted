@@ -5,6 +5,14 @@ GAME={'game_id':'2026_06_A_B','season':2026,'week':6,'game_type':'REG','gameday'
 SLATE={'season':2026,'week':7,'games':[{'game_id':'2026_07_DEN_LV','home_team':'LV','away_team':'DEN'}]}
 ROW={'season':2026,'week':6,'season_type':'REG','player_id':'p1','position':'RB','recent_team':'DEN','player_display_name':'Player One','rushing_yards':70,'carries':14,'receptions':None}
 class IntelligenceTests(unittest.TestCase):
+ def test_bye_teams_keep_history_without_a_current_matchup(self):
+  game={**GAME,'game_id':'2026_06_CHI_SEA','home_team':'CHI'}
+  row={**ROW,'recent_team':'CHI'}
+  p=build(SLATE,[row],[game],[],[],NOW)['players'][0]
+  self.assertEqual(p['team'],'CHI');self.assertTrue(p['bye_week'])
+  self.assertEqual(p['game_id'],'');self.assertEqual(p['opponent'],'')
+  self.assertEqual(p['history'][0]['game_id'],game['game_id'])
+  self.assertEqual(p['history'][0]['rushing_yards'],70)
  def test_history_only_completed_prior_regular_season_appearances_missing_is_not_zero(self):
   out=build(SLATE,[ROW,{**ROW,'week':7},{**ROW,'player_id':'other','season_type':'POST'}],[GAME],[],[],NOW)
   self.assertEqual(len(out['players']),1);p=out['players'][0];self.assertEqual(p['opponent'],'LV');self.assertEqual(len(p['history']),1);self.assertIsNone(p['history'][0]['receptions']);self.assertIsNone(p['history'][0]['periods'])

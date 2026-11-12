@@ -41,7 +41,6 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
   const markers = useRef<(SVGGElement | null)[]>([]);
   const elapsed = useRef(0);
   const [cycle, setCycle] = useState(0);
-  const [paused, setPaused] = useState(false);
   const [reduced, setReduced] = useState(() => window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   const [visible, setVisible] = useState(true);
   const [hidden, setHidden] = useState(() => document.hidden);
@@ -94,7 +93,7 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
     };
     if (!pageActive) return;
     draw();
-    if (paused || reduced || hidden || !visible) return;
+    if (reduced || hidden || !visible) return;
     const tick = (now: number) => {
       if (previous !== undefined) elapsed.current += Math.min(now - previous, 80);
       previous = now;
@@ -105,7 +104,7 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [cycle, playIndex, paused, reduced, hidden, visible, pageActive]);
+  }, [cycle, playIndex, reduced, hidden, visible, pageActive]);
 
   const game = games.length ? games[cycle % games.length] : null;
   const home = game ? probability(game, model) : null;
@@ -114,9 +113,8 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
     .filter(p => p.trend_pct !== null && Number.isFinite(p.trend_pct) && Number.isFinite(p.recent_average) && Number.isFinite(p.season_average))
     .sort((a, b) => (b.trend_pct ?? 0) - (a.trend_pct ?? 0))[0] : null;
   const maxYards = trending ? Math.max(1, trending.recent_average, trending.season_average) : 1;
-  const advance = () => { elapsed.current = (cycle + 1) * PERIOD + 1600; setCycle(cycle + 1); };
 
-  return <div ref={root} className="hero-playbook" aria-label="Weekly playbook preview" data-formation={playIndex} data-paused={paused || reduced || hidden || !visible}>
+  return <div ref={root} className="hero-playbook" aria-label="Weekly playbook preview" data-formation={playIndex} data-paused={reduced || hidden || !visible}>
     <div className="hp-field-space" aria-hidden="true">
       <svg className="hp-field" viewBox="0 0 640 400" fill="none">
         <rect x="28" y="25" width="584" height="350" rx="3" className="hp-boundary"/>
@@ -134,7 +132,6 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
         </g>)}
       </svg>
     </div>
-    <div className="hp-topline"><span>PLAYBOOK / {String(playIndex + 1).padStart(2, '0')}</span><span>{play.name}</span></div>
     <div className="hp-insight hp-matchup">
       <p>{archived ? 'ARCHIVED FORECAST' : 'WEEKLY FORECAST'} · {week ?? '—'}</p>
       {game && home !== null ? <>
@@ -153,9 +150,5 @@ export default function HeroPlaybook({ games, model, archived, season, week }: {
         <div className="hp-form-row is-recent"><span>Last {trending.games_sampled}</span><i style={{'--hp-bar':`${Math.max(0, trending.recent_average) / maxYards * 100}%`} as CSSProperties}/><b>{trending.recent_average.toFixed(1)}</b></div>
       </> : <span className="hp-empty">{archived ? 'Player trends belong to the current week.' : 'No saved player trend for this matchup.'}</span>}
     </div>
-    <div className="hp-footer"><div>
-      <button type="button" onClick={() => setPaused(value => !value)} aria-label={paused ? 'Resume playbook' : 'Pause playbook'} aria-pressed={paused} disabled={reduced}>{paused || reduced ? '▶' : 'Ⅱ'}</button>
-      <button type="button" onClick={advance} aria-label="Next playbook formation">→</button>
-    </div></div>
   </div>;
 }

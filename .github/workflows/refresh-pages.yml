@@ -17,6 +17,7 @@ on:
       - src/ml/refresh_status.py
       - .github/workflows/refresh-pages.yml
       - src/ml/export_prediction_history.py
+      - src/ml/export_game_schedule.py
       - src/ml/projection_features.py
       - src/ml/projection_models.py
       - src/ml/refresh_research.py
@@ -190,6 +191,9 @@ jobs:
         id: players
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         run: python -m src.features.player_watch
+      - name: Export kickoff times and U.S. broadcast listings
+        continue-on-error: true
+        run: python -m src.ml.export_game_schedule
       - uses: actions/cache@v4
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *'
         with:
@@ -327,6 +331,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add frontend/public/forecast_insights.json frontend/public/research_performance.json
           if [ -f frontend/public/player_extensions.json ]; then git add frontend/public/player_extensions.json; fi
+          if [ -f frontend/public/game_schedule.json ]; then git add frontend/public/game_schedule.json; fi
           if [ -d frontend/public/position_defense ]; then git add frontend/public/position_defense; fi
           git add frontend/public/team_insights data/tracking frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/odds_usage.json frontend/public/player_props.json frontend/public/players_watch.json frontend/public/player_intelligence.json frontend/public/matchup_research.json frontend/public/research models/research docs/research-validation.json
           if ! git diff --cached --quiet; then

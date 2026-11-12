@@ -208,7 +208,7 @@ const focusedGame =
           {visited.has('matchups') && <PagePanel active={page === 'matchups'} name="matchups"><RetainedMatchups data={data ? {...data, archived} : null} games={games} game={focusedGame} model={model} onSelect={setFocusedGameId} weekControl={weekControl} error={error}/></PagePanel>}
           {visited.has('dashboard') && <PagePanel active={page === 'dashboard'} name="dashboard">
           <section className="ud-hero">
-            <div className="ud-hero-copy"><p className="ud-eyebrow">NFL ANALYTICS FROM EVERY ANGLE.</p><h1>Gain more <em>perspective</em><br/>{' '}with each matchup.</h1><p>Explore statistical model predictions, analyze player trends, and track performance—all in one place.</p>
+            <div className="ud-hero-copy"><p className="ud-eyebrow">GET NFL ANALYTICS FROM EVERY ANGLE</p><h1>Gain more <em>perspective</em><br/>{' '}with each matchup.</h1><p>Explore statistical model predictions, analyze player trends, and track performance—all in one place.</p>
               <div className="ud-hero-meta"><span><b>{data?.week ?? '—'}</b> WEEK</span><span><b>{data?.count ?? '—'}</b> MATCHUPS</span><span><b>{data ? savedModelCount : '—'}</b> ACTIVE MODELS</span></div>
             </div>
             <HeroPlaybook games={data?.games ?? []} model={model} archived={archived} season={data?.season} week={data?.week}/>

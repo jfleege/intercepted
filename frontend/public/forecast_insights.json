@@ -1,6 +1,69 @@
 {
   "changes": [
     {
+      "after": "unknown",
+      "before": "Injured Reserve",
+      "delta": null,
+      "field": "00-0031381:availability",
+      "game_id": "2026_10_LA_ARI",
+      "id": "9b550be477d71f9e30e6b2ac",
+      "label": "Davante Adams game status",
+      "matchup": "LA @ ARI",
+      "observed_at": "2026-11-13T21:56:00.336639+00:00",
+      "player_id": "00-0031381",
+      "previous_observed_at": "2026-11-13T20:30:59.283801+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+      "source_at": null,
+      "unit": "status",
+      "week": 10
+    },
+    {
+      "after": "Questionable",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0039890:availability",
+      "game_id": "2026_10_BUF_NYJ",
+      "id": "5dc15669d8fa26b58a7b9789",
+      "label": "Adonai Mitchell game status",
+      "matchup": "BUF @ NYJ",
+      "observed_at": "2026-11-13T21:56:00.336639+00:00",
+      "player_id": "00-0039890",
+      "previous_observed_at": "2026-11-13T20:30:59.283801+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-13T21:56:00.325747+00:00",
+      "unit": "status",
+      "week": 10
+    },
+    {
+      "after": "Questionable",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0038994:availability",
+      "game_id": "2026_10_MIN_GB",
+      "id": "c829274309787426bd77099b",
+      "label": "Jordan Addison game status",
+      "matchup": "MIN @ GB",
+      "observed_at": "2026-11-13T21:56:00.336639+00:00",
+      "player_id": "00-0038994",
+      "previous_observed_at": "2026-11-13T20:30:59.283801+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-13T21:56:00.325747+00:00",
+      "unit": "status",
+      "week": 10
+    },
+    {
       "after": 0.6688716739919501,
       "before": 0.6688716739919502,
       "delta": -1.1102230246251565e-16,
@@ -9728,7 +9791,7 @@
       "week": 10
     }
   ],
-  "exported_at": "2026-11-13T20:30:59.283801+00:00",
+  "exported_at": "2026-11-13T21:56:01.359225+00:00",
   "monitoring": {
     "alerts": [
       {
@@ -9780,9 +9843,15 @@
         "severity": "watch"
       },
       {
-        "game_id": "2026_10_LA_ARI",
-        "id": "reported_out:2026_10_LA_ARI:00-0031381",
-        "message": "Davante Adams is reported out. Saved projections remain conditional; current recommendations exclude this player.",
+        "game_id": "2026_10_MIN_GB",
+        "id": "availability_watch:2026_10_MIN_GB:00-0038994",
+        "message": "Jordan Addison: Questionable (Thumb). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
+        "severity": "watch"
+      },
+      {
+        "game_id": "2026_10_BUF_NYJ",
+        "id": "availability_watch:2026_10_BUF_NYJ:00-0039890",
+        "message": "Adonai Mitchell: Questionable (Knee). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
         "severity": "watch"
       },
       {
@@ -9835,13 +9904,13 @@
       },
       {
         "id": "availability_coverage",
-        "message": "95 of 484 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "96 of 484 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 95,
+      "reported": 96,
       "tracked": 484
     },
     "calibration": [
@@ -9972,7 +10041,7 @@
         "windows": []
       }
     ],
-    "checked_at": "2026-11-13T20:30:59.283801+00:00",
+    "checked_at": "2026-11-13T21:56:01.359225+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,
@@ -10536,7 +10605,7 @@
       "availability": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -10700,7 +10769,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -10937,13 +11006,13 @@
     {
       "availability": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Knee",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-13T21:18Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "game_id": "2026_10_BUF_NYJ",
       "kickoff": "2026-11-15T18:00:00+00:00",
@@ -11324,7 +11393,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -11447,7 +11516,7 @@
       "availability": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -11488,7 +11557,7 @@
       "availability": {
         "blocked": false,
         "injury": "Back",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -11611,7 +11680,7 @@
       "availability": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -11693,7 +11762,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -12120,7 +12189,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -12153,7 +12222,7 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -12523,7 +12592,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -12761,7 +12830,7 @@
       "availability": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -12958,7 +13027,7 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -13081,7 +13150,7 @@
       "availability": {
         "blocked": false,
         "injury": "Finger",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -13393,7 +13462,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -13574,7 +13643,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -13779,7 +13848,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -13820,7 +13889,7 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -13984,7 +14053,7 @@
       "availability": {
         "blocked": false,
         "injury": "Toe",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -14280,7 +14349,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -14321,7 +14390,7 @@
       "availability": {
         "blocked": false,
         "injury": "Finger",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -14674,7 +14743,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -14756,7 +14825,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -15175,7 +15244,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -15323,7 +15392,7 @@
       "availability": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -15405,7 +15474,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -15520,7 +15589,7 @@
       "availability": {
         "blocked": false,
         "injury": "Elbow",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -15832,7 +15901,7 @@
       "availability": {
         "blocked": false,
         "injury": "Neck",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16111,10 +16180,10 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-13T19:18Z",
+        "report_updated_at": "2026-11-13T20:32Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -16300,7 +16369,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16341,7 +16410,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16620,7 +16689,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16694,7 +16763,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16883,7 +16952,7 @@
       "availability": {
         "blocked": true,
         "injury": "Lower Leg",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-13T00:14Z",
@@ -16998,7 +17067,7 @@
       "availability": {
         "blocked": true,
         "injury": "Thumb",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-13T14:48Z",
@@ -17203,7 +17272,7 @@
       "availability": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-13T00:08Z",
@@ -17285,7 +17354,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hip",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-12T23:54Z",
@@ -17646,7 +17715,7 @@
       "availability": {
         "blocked": false,
         "injury": "Back",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-12T23:27Z",
@@ -17950,7 +18019,7 @@
       "availability": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-13T00:09Z",
@@ -18180,7 +18249,7 @@
       "availability": {
         "blocked": false,
         "injury": "Quadriceps",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-13T00:35Z",
@@ -18213,7 +18282,7 @@
       "availability": {
         "blocked": false,
         "injury": "Elbow",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -18252,14 +18321,14 @@
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:59.269587+00:00",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
         "practice": null,
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-11T21:05Z",
-        "source": "https://www.espn.com/nfl/injuries",
-        "status": "Injured Reserve"
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
+        "report_updated_at": null,
+        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+        "status": "unknown"
       },
       "game_id": "2026_10_LA_ARI",
       "kickoff": "2026-11-15T21:05:00+00:00",
@@ -18295,7 +18364,7 @@
       "availability": {
         "blocked": false,
         "injury": "Illness",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -18451,7 +18520,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ribs",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -18648,7 +18717,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -18689,7 +18758,7 @@
       "availability": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19116,7 +19185,7 @@
       "availability": {
         "blocked": false,
         "injury": "Oblique",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19157,7 +19226,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19354,7 +19423,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19559,7 +19628,7 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19748,7 +19817,7 @@
       "availability": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20019,7 +20088,7 @@
       "availability": {
         "blocked": false,
         "injury": "Quadricep",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20241,7 +20310,7 @@
       "availability": {
         "blocked": false,
         "injury": "Quadricep",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20438,7 +20507,7 @@
       "availability": {
         "blocked": false,
         "injury": "Quadricep",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20627,7 +20696,7 @@
       "availability": {
         "blocked": false,
         "injury": "Quadricep",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20668,7 +20737,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20857,7 +20926,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20980,7 +21049,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -21021,7 +21090,7 @@
       "availability": {
         "blocked": false,
         "injury": "Wrist",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -21103,7 +21172,7 @@
       "availability": {
         "blocked": false,
         "injury": "Finger",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -21144,7 +21213,7 @@
       "availability": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -21308,7 +21377,7 @@
       "availability": {
         "blocked": false,
         "injury": "gameday concussion protocol evaluation",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -21390,7 +21459,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -21513,7 +21582,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -21553,13 +21622,13 @@
     {
       "availability": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Thumb",
+        "observed_at": "2026-11-13T21:56:00.325747+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-13T21:17Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "game_id": "2026_10_MIN_GB",
       "kickoff": "2026-11-15T18:00:00+00:00",
@@ -21743,7 +21812,7 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -22293,7 +22362,7 @@
       "availability": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -22334,7 +22403,7 @@
       "availability": {
         "blocked": false,
         "injury": "Chest",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -22498,7 +22567,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -22539,7 +22608,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -22613,7 +22682,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -22654,7 +22723,7 @@
       "availability": {
         "blocked": false,
         "injury": "Rib",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -22851,7 +22920,7 @@
       "availability": {
         "blocked": false,
         "injury": "Back",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -22933,7 +23002,7 @@
       "availability": {
         "blocked": false,
         "injury": "Neck",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -23056,7 +23125,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -23130,7 +23199,7 @@
       "availability": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -23409,7 +23478,7 @@
       "availability": {
         "blocked": true,
         "injury": "Illness",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -24074,7 +24143,7 @@
       "availability": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -24312,7 +24381,7 @@
       "availability": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -24394,7 +24463,7 @@
       "availability": {
         "blocked": false,
         "injury": "Thumb",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -24928,7 +24997,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -24969,7 +25038,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ribs",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -25010,7 +25079,7 @@
       "availability": {
         "blocked": false,
         "injury": "Elbow",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -25248,7 +25317,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -25371,7 +25440,7 @@
       "availability": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -25691,7 +25760,7 @@
       "availability": {
         "blocked": false,
         "injury": "Finger",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26151,7 +26220,7 @@
       "availability": {
         "blocked": false,
         "injury": "Achilles",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26192,7 +26261,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26274,7 +26343,7 @@
       "availability": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26397,7 +26466,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26594,7 +26663,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26635,7 +26704,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26709,7 +26778,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ribs",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26791,7 +26860,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26832,7 +26901,7 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26955,7 +27024,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -27078,7 +27147,7 @@
       "availability": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-13T20:30:58.283828+00:00",
+        "observed_at": "2026-11-13T21:55:56.980963+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -28697,19 +28766,19 @@
   "sources": {
     "depth_charts": {
       "latest_report_at": "2026-11-13T15:17:47Z",
-      "observed_at": "2026-11-13T20:30:58.283828+00:00",
+      "observed_at": "2026-11-13T21:55:56.980963+00:00",
       "rows": 2328,
       "status": "available"
     },
     "espn_injuries": {
-      "observed_at": "2026-11-13T20:30:59.269587+00:00",
-      "rows": 57,
+      "observed_at": "2026-11-13T21:56:00.325747+00:00",
+      "rows": 53,
       "source": "https://www.espn.com/nfl/injuries",
       "status": "available"
     },
     "injuries": {
       "latest_report_at": null,
-      "observed_at": "2026-11-13T20:30:58.283828+00:00",
+      "observed_at": "2026-11-13T21:55:56.980963+00:00",
       "rows": 3121,
       "status": "available"
     }

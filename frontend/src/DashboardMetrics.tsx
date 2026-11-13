@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import AnimatedNumber from './AnimatedNumber';
 import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useId, useState } from 'react';
@@ -61,7 +62,7 @@ export default function DashboardMetrics({ data }: { data: PredictionData | null
             {record.weekly.map(w => <div className="pulse-week" key={w.week}><div className="pulse-week-column" title={`Week ${w.week}: ${w.total} forecasts, ${w.correct + w.incorrect} graded`} style={{height: `${w.total / maxWeek * 64}px`}}><span style={{height:`${(w.correct + w.incorrect) / w.total * 100}%`}}/></div><small>W{w.week}</small></div>)}
           </div><span><i className="pulse-legend"/> Graded <i className="pulse-legend pending"/> Pending / other</span></div>
         </div>
-        <div className="pulse-card-foot"><span>Unique saved games · {data?.season ?? '—'}</span><a href="#performance">View record ↗</a></div>
+        <div className="pulse-card-foot"><span>Unique saved games · {data?.season ?? '—'}</span><a href="#performance">View record <InterfaceIcon name="external" size="1em"/></a></div>
       </article>
       <article className="pulse-card">
         <div className="pulse-card-top"><h3>Model agreement</h3><span className="pulse-badge">WEEK {data?.week ?? '—'}</span></div>

@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import { usePageActive } from "./pageActivity";
 import { probability } from "./predictionModels";
 import type { Model, PredictionFields } from "./predictionModels";
@@ -168,7 +169,7 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
   return (
     <section className="score-ticker" aria-label={`Week ${week} NFL scoreboard`}>
       <div className="score-ticker-label"><strong>WEEK {week}</strong><span>NFL SCORES</span>
-        <button type="button" className="score-ticker-arrow" onClick={() => move(-1)} aria-label="Previous score matchups">←</button>
+        <button type="button" className="score-ticker-arrow" onClick={() => move(-1)} aria-label="Previous score matchups"><InterfaceIcon name="left" size="1em"/></button>
       </div>
       <div className="score-ticker-window" ref={scroller}>
         <div className="score-ticker-glide" ref={track}>
@@ -184,7 +185,7 @@ export default function ScoreTicker({ games, season, week, model, activeGameId, 
         </div>
       </div>
       <div className="score-ticker-controls">
-        <button type="button" className="score-ticker-arrow" onClick={() => move(1)} aria-label="Next score matchups">→</button>
+        <button type="button" className="score-ticker-arrow" onClick={() => move(1)} aria-label="Next score matchups"><InterfaceIcon name="right" size="1em"/></button>
         <button type="button" className="score-ticker-pause" onClick={() => setPaused(value => !value)} aria-label={paused ? "Resume scoreboard scrolling" : "Pause scoreboard scrolling"} aria-pressed={paused}>{paused ? "▶" : "Ⅱ"}</button>
       </div>
     </section>

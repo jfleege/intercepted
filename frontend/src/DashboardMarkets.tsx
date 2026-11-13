@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import { fetchSnapshot } from "./snapshotCache";
 import { useEffect, useState } from 'react';
 import draftKingsLogo from './assets/draftkings.png';
@@ -33,7 +34,7 @@ export default function DashboardMarkets({game}: {game: Game | null}) {
         </div>
         <div className="ud-market-source">
           {(!odds || /draftkings/i.test(odds.bookmaker)) ? <img className="ud-draftkings-logo" src={draftKingsLogo} alt="DraftKings" /> : <span className="ud-tag">{odds.bookmaker}</span>}
-          {odds && <a href="#markets" aria-label="Explore markets">Markets ↗</a>}
+          {odds && <a href="#markets" aria-label="Explore markets">Markets <InterfaceIcon name="external" size="1em"/></a>}
         </div>
       </div>
       <div className="ud-market-body">

@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import AvailabilityImpact from './AvailabilityImpact';
 import LoadingSurface from "./LoadingSurface";
 import { usePageActive } from "./pageActivity";
@@ -27,7 +28,7 @@ function Ranking({kind, data, teams}: {kind: 'off' | 'def'; data: Insights; team
   const ordered = Object.entries(data.teams).filter(([,v])=>v[rankKey] != null).sort((a,b)=>a[1][rankKey]! - b[1][rankKey]! || a[0].localeCompare(b[0]));
   const shown = expanded ? ordered : ordered.filter(([t],i)=>i<8 || teams.includes(t));
   return <section className="mx-panel mx-ranking"><h2>{kind === 'off' ? 'Offensive' : 'Defensive'} power</h2><p className="mx-caption">{kind === 'off' ? 'EPA/play · higher is better' : 'EPA allowed/play · lower is better'}</p><div className="mx-rank-labels"><span>TEAM</span><span>EPA/PLAY · Δ</span></div>
-    <ol>{shown.map(([t,v])=>{const movement=v[kind === 'off' ? 'off_movement' : 'def_movement'];return <li key={t} className={teams.includes(t)?'mx-selected-team':''}><span className="mx-rank-number">{v[rankKey]}</span><Logo team={t}/><abbr title={TEAM_NAMES[t] ?? t}>{t}</abbr><span className="mx-rank-value">{format(v.season[kind === 'off' ? 'off_epa' : 'def_epa'],3)}</span><span className={`mx-movement ${movement != null && movement>0?'mx-up':movement != null && movement<0?'mx-down':''}`} aria-label={movement == null ? 'No previous ranking' : movement>0?`Up ${movement} places`:movement<0?`Down ${-movement} places`:'Unchanged'}>{movement == null ? '—' : movement>0 ? `▲ ${movement}` : movement<0 ? `▼ ${-movement}` : '–'}</span></li>;})}</ol>
+    <ol>{shown.map(([t,v])=>{const movement=v[kind === 'off' ? 'off_movement' : 'def_movement'];return <li key={t} className={teams.includes(t)?'mx-selected-team':''}><span className="mx-rank-number">{v[rankKey]}</span><Logo team={t}/><abbr title={TEAM_NAMES[t] ?? t}>{t}</abbr><span className="mx-rank-value">{format(v.season[kind === 'off' ? 'off_epa' : 'def_epa'],3)}</span><span className={`mx-movement ${movement != null && movement>0?'mx-up':movement != null && movement<0?'mx-down':''}`} aria-label={movement == null ? 'No previous ranking' : movement>0?`Up ${movement} places`:movement<0?`Down ${-movement} places`:'Unchanged'}>{movement == null ? '—' : movement>0 ? <><InterfaceIcon name="up" size="1em"/> {movement}</> : movement<0 ? <><InterfaceIcon name="down" size="1em"/> {-movement}</> : '–'}</span></li>;})}</ol>
     <button type="button" aria-expanded={expanded} onClick={()=>setExpanded(!expanded)}>{expanded?'Collapse league':`Full league · ${ordered.length} teams`}</button><p className="mx-caption">Change since Week {data.comparison_through_week}. Ties share a rank.</p>
   </section>;
 }

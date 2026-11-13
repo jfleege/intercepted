@@ -729,7 +729,7 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-13T00:11:17.016452+00:00",
+      "availability_checked_at": "2026-11-13T05:41:22.440259+00:00",
       "availability_watch": [
         {
           "injury": "Hamstring",
@@ -742,13 +742,13 @@
           "team": "LA"
         },
         {
-          "injury": "Back",
-          "name": "Jordan Whittington",
-          "player_id": "00-0039751",
-          "position": "WR",
-          "report_updated_at": "2026-11-11T00:38Z",
+          "injury": "Illness",
+          "name": "Tyler Higbee",
+          "player_id": "00-0033110",
+          "position": "TE",
+          "report_updated_at": "2026-11-13T00:18Z",
           "source": "https://www.espn.com/nfl/injuries",
-          "status": "Injured Reserve",
+          "status": "Questionable",
           "team": "LA"
         }
       ],
@@ -756,7 +756,7 @@
       "away_projected_qb_name": "Matthew Stafford",
       "away_qb_selection": {
         "name": "Matthew Stafford",
-        "observed_at": "2026-11-12T02:07:04.239827+00:00",
+        "observed_at": "2026-11-13T05:41:22.440259+00:00",
         "player_id": "00-0026498",
         "source": "Latest prior-week primary passer; not a starter announcement",
         "status": "unconfirmed_proxy"
@@ -773,20 +773,20 @@
       "home_projected_qb_name": "Gardner Minshew",
       "home_qb_selection": {
         "name": "Gardner Minshew",
-        "observed_at": "2026-11-12T02:07:04.239827+00:00",
+        "observed_at": "2026-11-13T05:41:22.440259+00:00",
         "player_id": "00-0035289",
         "source": "Latest prior-week primary passer; not a starter announcement",
         "status": "unconfirmed_proxy"
       },
       "home_team": "ARI",
       "home_team_latest_week": 9,
-      "home_win_prob_v4_a": 0.27923392782856676,
+      "home_win_prob_v4_a": 0.2792339278285667,
       "home_win_prob_v4_qb_plus": 0.2819490964041791,
       "home_win_prob_v5_boosted": 0.28227662004971155,
       "home_win_prob_v5_qb_plus": 0.2835946018059635,
       "predicted_winner": "LA",
       "predicted_winner_probability": 0.7164053981940365,
-      "qb_probability_impact": 0.004360673977396756,
+      "qb_probability_impact": 0.004360673977396812,
       "qb_scenarios": [],
       "roster_changes": [
         {
@@ -1035,14 +1035,24 @@
       "week": 10
     },
     {
-      "availability_checked_at": "2026-11-13T00:11:17.016452+00:00",
+      "availability_checked_at": "2026-11-13T05:41:22.440259+00:00",
       "availability_watch": [
+        {
+          "injury": "Lower Leg",
+          "name": "David Njoku",
+          "player_id": "00-0033885",
+          "position": "TE",
+          "report_updated_at": "2026-11-13T00:14Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Injured Reserve",
+          "team": "LAC"
+        },
         {
           "injury": "Calf",
           "name": "Rashod Bateman",
           "player_id": "00-0036550",
           "position": "WR",
-          "report_updated_at": "2026-11-12T23:42Z",
+          "report_updated_at": "2026-11-13T00:08Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "BAL"
@@ -1072,7 +1082,17 @@
           "name": "Tre Harris",
           "player_id": "00-0040727",
           "position": "WR",
-          "report_updated_at": "2026-11-12T23:41Z",
+          "report_updated_at": "2026-11-13T00:09Z",
+          "source": "https://www.espn.com/nfl/injuries",
+          "status": "Questionable",
+          "team": "LAC"
+        },
+        {
+          "injury": "Quadriceps",
+          "name": "Brenen Thompson",
+          "player_id": "00-0041550",
+          "position": "WR",
+          "report_updated_at": "2026-11-13T00:35Z",
           "source": "https://www.espn.com/nfl/injuries",
           "status": "Questionable",
           "team": "LAC"
@@ -1082,7 +1102,7 @@
       "away_projected_qb_name": "Justin Herbert",
       "away_qb_selection": {
         "name": "Justin Herbert",
-        "observed_at": "2026-11-12T02:07:04.239827+00:00",
+        "observed_at": "2026-11-13T05:41:22.440259+00:00",
         "player_id": "00-0036355",
         "source": "Latest prior-week primary passer; not a starter announcement",
         "status": "unconfirmed_proxy"
@@ -1180,7 +1200,7 @@
       "week": 10
     }
   ],
-  "generated_at": "2026-11-13T00:11:17.177967+00:00",
+  "generated_at": "2026-11-13T05:41:22.556955+00:00",
   "model": "v5_qb_plus",
   "models": [
     "v4_a",

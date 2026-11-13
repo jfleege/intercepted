@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import type { CSSProperties, PointerEvent, ReactNode } from 'react';
 import './PlayerWatchCarousel.css';
@@ -125,11 +126,11 @@ export default function PlayerWatchCarousel({ slides }: { slides: Slide[] }) {
       })}
     </div>
     <div className="dp-carousel-navigation" role="group" aria-label="Player carousel controls">
-      <button type="button" className="dp-scroll-button" onClick={() => move(-1)} disabled={count < 2} aria-label="Scroll players left">‹</button>
+      <button type="button" className="dp-scroll-button" onClick={() => move(-1)} disabled={count < 2} aria-label="Scroll players left"><InterfaceIcon name="chevron-left" size="1em"/></button>
       <div className="dp-carousel-dots">{slides.map((slide, index) => <button type="button" key={slide.id}
         className="dp-carousel-dot" aria-label={`Show player ${index + 1}, ${slide.name}`} aria-pressed={index === activeIndex}
         onClick={() => { setSelectedId(slide.id); setDragOffset(0); }} />)}</div>
-      <button type="button" className="dp-scroll-button" onClick={() => move(1)} disabled={count < 2} aria-label="Scroll players right">›</button>
+      <button type="button" className="dp-scroll-button" onClick={() => move(1)} disabled={count < 2} aria-label="Scroll players right"><InterfaceIcon name="chevron-right" size="1em"/></button>
     </div>
     <p className="dp-carousel-position" role="status" aria-live="polite" aria-atomic="true">{activeIndex + 1} / {count} · {slides[activeIndex].name}</p>
     <p id={descriptionId} className="sr-only">Drag or swipe left and right, scroll horizontally, or use the arrow buttons. When focused, use the arrow keys or mouse wheel. Home and End select the first and last players.</p>

@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import { useEffect, useState } from 'react';
 import { nextCheck, sourceNote, statusSummary, validDate } from './refreshStatus';
 import type { RefreshStatus as Status } from './refreshStatus';
@@ -35,7 +36,7 @@ export default function RefreshStatus({season, week}: {season?: number; week?: n
   </>}>
     <div className="refresh-status-body">
       <div className="refresh-status-explanation"><div><h2>Refresh &amp; data freshness</h2><p>Active slate is separate from any saved week you’re viewing. Times are Central.</p></div>
-        {status?.workflow_url && /^https:\/\/github\.com\/jfleege\/intercepted\/actions\/runs\/\d+$/.test(status.workflow_url) && <a href={status.workflow_url} target="_blank" rel="noreferrer">View refresh run ↗</a>}
+        {status?.workflow_url && /^https:\/\/github\.com\/jfleege\/intercepted\/actions\/runs\/\d+$/.test(status.workflow_url) && <a href={status.workflow_url} target="_blank" rel="noreferrer">View refresh run <InterfaceIcon name="external" size="1em"/></a>}
       </div>
       {matches && status.forecast_check ? <p className="refresh-status-check"><strong>Weekly check · {dateLabel(status.forecast_check.checked_at)}</strong><span>{status.attempt?.steps?.forecast === 'failure' ? 'The latest forecast check failed. Previously published forecasts are retained.' : status.forecast_check.message}</span></p> : <p className="refresh-status-check">Weekly refresh evidence isn’t available for this active slate yet.</p>}
       {matches && status.attempt?.completed_at && <p className="refresh-status-attempt">Latest data attempt: {dateLabel(status.attempt.completed_at)} · {status.attempt.state === 'success' ? (status.attempt.mode === 'results' ? 'Results refresh completed' : 'Data refresh completed') : status.attempt.state === 'partial' ? 'Incomplete refresh · previous successful timestamp retained' : 'Initial status snapshot'}</p>}

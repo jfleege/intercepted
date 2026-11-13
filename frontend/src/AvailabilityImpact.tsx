@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import './AvailabilityImpact.css';
 import type { PredictionFields, Model } from './predictionModels';
 import { probability } from './predictionModels';
@@ -25,7 +26,7 @@ export default function AvailabilityImpact({game,model}: {game: AvailabilityImpa
   {!!game.roster_changes?.length && <details className="availability-callout roster-callout">
     <summary>Roster changes · {game.roster_changes.length} player moves</summary>
     <ul className="availability-callout-players">{game.roster_changes.map(move => <li key={move.player_id+move.effective_date}>
-      <span>{move.name} · {move.from_team} → {move.to_team}{move.status==='pending_physical' ? ' · pending physical' : ''}</span>
+      <span>{move.name} · {move.from_team} <InterfaceIcon name="right" size="1em"/> {move.to_team}{move.status==='pending_physical' ? ' · pending physical' : ''}</span>
       <a href={move.source} target="_blank" rel="noreferrer" aria-label={`${move.name} trade source (opens in a new tab)`}>Source</a>
     </li>)}</ul>
     <p className="availability-callout-note">Team assignments include these reported trades. QB forecasts use the listed starter and available tracking history. Individual effects of other trades on win probabilities have not been estimated.</p>

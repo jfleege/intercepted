@@ -1,3 +1,4 @@
+import InterfaceIcon from './InterfaceIcon';
 import { fetchSnapshot } from "./snapshotCache";
 import { MODEL_LABELS, MODEL_ORDER } from "./predictionModels";
 import { useEffect, useState } from "react";
@@ -44,7 +45,7 @@ export default function MarketsPage() {
       const updated=appendBrowserSelection(parseBrowserLedger(localStorage.getItem(PAPER_STORAGE_KEY)),record);
       localStorage.setItem(PAPER_STORAGE_KEY,JSON.stringify(updated));
       setBrowser({records:updated,error:""});
-      return "Saved in this browser. Find it under Saved paper records → Browser selections.";
+      return "Saved in this browser. Find it under Saved paper records, then Browser selections.";
     } catch(error) {return error instanceof Error ? error.message : "Could not save; browser storage may be unavailable.";}
   }
   function exportPaper() {
@@ -68,7 +69,7 @@ export default function MarketsPage() {
     {error ? <div className="review-empty">Markets data is unavailable. Run the refresh workflow after merging this change.</div> : !data ? <div className="review-empty">Loading saved moneylines…</div> : <>
       <section className="review-panel"><div className="review-table-wrap"><table><thead><tr>{["Matchup","Kickoff","Away moneyline","Home moneyline","Status"].map(h=><th key={h}>{h}</th>)}</tr></thead><tbody>
       {lines.map(line=><tr key={line.game_id}>
-        <td><button type="button" className="market-matchup-button" onClick={()=>setSelected(line.game_id)} aria-haspopup="dialog">{line.away_team} @ {line.home_team}<span>View matchup ↗</span></button></td>
+        <td><button type="button" className="market-matchup-button" onClick={()=>setSelected(line.game_id)} aria-haspopup="dialog">{line.away_team} @ {line.home_team}<span>View matchup <InterfaceIcon name="external" size="1em"/></span></button></td>
         <td>{date(line.kickoff)}</td><td><strong>{line.away_team}</strong> {price(line.away_price)}</td><td><strong>{line.home_team}</strong> {price(line.home_price)}</td>
         <td title={`Collected ${date(line.observed_at)}; book updated ${date(line.last_update)}`}>{freshQuote(line,now)?"Pregame":"Historical / stale"}</td>
       </tr>)}

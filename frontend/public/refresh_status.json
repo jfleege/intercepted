@@ -2,32 +2,32 @@
   "active_season": 2026,
   "active_week": 10,
   "attempt": {
-    "completed_at": "2026-11-12T22:47:10.696403+00:00",
-    "mode": "full",
-    "started_at": "2026-11-12T22:46:20.788718+00:00",
+    "completed_at": "2026-11-13T00:11:17.867840+00:00",
+    "mode": "pregame",
+    "started_at": "2026-11-13T00:11:12.475817+00:00",
     "state": "success",
     "steps": {
-      "directory": "success",
+      "directory": "skipped",
       "forecast": "success",
       "history": "success",
       "insights": "success",
-      "markets": "success",
+      "markets": "skipped",
       "odds": "skipped",
-      "players": "success",
-      "position_defense": "success",
+      "players": "skipped",
+      "position_defense": "skipped",
       "pre_rollover": "skipped",
       "props": "skipped",
-      "research": "success",
-      "research_results": "success",
-      "results": "success",
-      "teams": "success",
+      "research": "skipped",
+      "research_results": "skipped",
+      "results": "skipped",
+      "teams": "skipped",
       "verify": "success"
     }
   },
   "forecast_check": {
     "active_season": 2026,
     "active_week": 10,
-    "checked_at": "2026-11-12T22:46:27.389408+00:00",
+    "checked_at": "2026-11-13T00:11:17.189301+00:00",
     "message": "Published slate uses limited QB tracking inputs. LV: Fernando Mendoza has insufficient NFL tracking history. Missing QB inputs use the trained model treatment.",
     "state": "current_limited_qb",
     "target_season": 2026,
@@ -38,20 +38,20 @@
   "next_forecast_check_at": "2026-11-13T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-17T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-12T22:47:10.696403+00:00",
+  "snapshot_at": "2026-11-13T00:11:17.867840+00:00",
   "sources": [
     {
       "features_through_week": 9,
       "id": "forecasts",
       "label": "Game forecasts",
       "season": 2026,
-      "updated_at": "2026-11-12T22:46:27.380517+00:00",
+      "updated_at": "2026-11-13T00:11:17.177967+00:00",
       "week": 10
     },
     {
       "id": "players",
       "label": "Player cards",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "season": 2026,
       "updated_at": "2026-11-12T22:46:29.843758+00:00",
       "week": 10
@@ -59,7 +59,7 @@
     {
       "id": "directory",
       "label": "Player history",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "season": 2026,
       "through_week": 9,
       "updated_at": "2026-11-12T22:46:43.688517+00:00",
@@ -69,7 +69,7 @@
       "features_through_week": 9,
       "id": "research",
       "label": "Matchup projections",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "season": 2026,
       "updated_at": "2026-11-12T22:46:40.747169+00:00",
       "week": 10
@@ -77,13 +77,13 @@
     {
       "id": "results",
       "label": "Game results",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "updated_at": "2026-11-12T22:46:28.622424+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "updated_at": "2026-11-12T22:46:44.884190+00:00"
     },
     {
@@ -91,13 +91,13 @@
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-12T22:46:47.381514+00:00",
+      "updated_at": "2026-11-13T00:11:17.613100+00:00",
       "week": 10
     },
     {
       "id": "position_defense",
       "label": "Defense vs positions",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "season": 2026,
       "updated_at": "2026-11-12T22:46:44.509871+00:00",
       "week": 10
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-12T20:52:16.605995+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43322868772"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43334920096"
 }

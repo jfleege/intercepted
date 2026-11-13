@@ -1,3 +1,6 @@
+import TeamMark from './TeamMark';
+import { teamStyle } from './teamPalette';
+import type { CSSProperties } from 'react';
 import { fetchSnapshot } from "./snapshotCache";
 
 import { useEffect, useState } from "react";
@@ -84,7 +87,7 @@ function PlayerCard({ player }: { player: Player }) {
           : "";
 
   return (
-    <article className="pw-card">
+    <article className="pw-card" style={teamStyle(player.team) as CSSProperties}>
       <div className="pw-name-line">
         <div>
           <div className="pw-name">
@@ -92,7 +95,7 @@ function PlayerCard({ player }: { player: Player }) {
           </div>
 
           <div className="pw-subtitle">
-            {player.team} · {player.position}{player.position === "QB" ? ` · ${player.qb_status === "confirmed" ? "Confirmed starter" : player.qb_status === "reported_expected" ? "Expected starter" : "Unconfirmed projection"}` : ""}
+            <TeamMark team={player.team}/> · {player.position}{player.position === "QB" ? ` · ${player.qb_status === "confirmed" ? "Confirmed starter" : player.qb_status === "reported_expected" ? "Expected starter" : "Unconfirmed projection"}` : ""}
           </div>
         </div>
 
@@ -103,6 +106,9 @@ function PlayerCard({ player }: { player: Player }) {
         {player.stat_label} per game
       </div>
 
+      <div className="pw-form-comparison" aria-label="Recent and season average yardage">
+        {[['Season',player.season_average],['Recent',player.recent_average]].map(([label,value])=><div key={label}><span>{label}</span><span className="pw-form-track"><i style={{width:`${Math.max(0,Number(value))/Math.max(1,player.season_average,player.recent_average)*100}%`}}/></span><b>{Number(value).toFixed(1)}</b></div>)}
+      </div>
       <div className="pw-stats">
         <div>
           <span>LAST {player.games_sampled} AVG.</span>
@@ -208,7 +214,7 @@ export default function PlayersToWatch({ gameId }: Props) {
         <span>Recent performance</span>
       </div>
 
-      <div className="pw-team-columns">{(['away','home'] as const).map(side=><section key={side} aria-label={`${matchup[`${side}_team`]} recent players`}><h4 className="pw-team-heading">{matchup[`${side}_team`]} · {side==='away'?'Away':'Home'}</h4><div className="pw-grid">{matchup[`${side}_players`].map(player=><PlayerCard key={player.player_id} player={player}/>)}</div></section>)}</div>
+      <div className="pw-team-columns">{(['away','home'] as const).map(side=><section key={side} aria-label={`${matchup[`${side}_team`]} recent players`}><h4 className="pw-team-heading"><TeamMark team={matchup[`${side}_team`]}/><span className="team-caption">{side==='away'?'Away':'Home'} · Recent form</span></h4><div className="pw-grid">{matchup[`${side}_players`].map(player=><PlayerCard key={player.player_id} player={player}/>)}</div></section>)}</div>
 
       <p className="ic-footnote">
         Statistics use available games through {data.as_of}.

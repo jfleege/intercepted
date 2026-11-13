@@ -1,3 +1,6 @@
+import TeamMark from './TeamMark';
+import { teamStyle } from './teamPalette';
+import type { CSSProperties } from 'react';
 import InterfaceIcon from './InterfaceIcon';
 import AvailabilityImpact from './AvailabilityImpact';
 import LoadingSurface from "./LoadingSurface";
@@ -34,12 +37,12 @@ function Ranking({kind, data, teams}: {kind: 'off' | 'def'; data: Insights; team
 }
 function Bars({labels, values, teams, unit = '', digits = 1}: {labels: string[]; values: (number | null)[][]; teams: string[]; unit?: string; digits?: number}) {
   const max = Math.max(1, ...values.flat().filter((v): v is number=>v != null));
-  return <div className="mx-bar-chart" role="img" aria-label={`${labels.join(', ')} comparison for ${teams.join(' and ')}; values are labeled.`}>{labels.map((label,i)=><div className="mx-bar-category" key={label}><span>{label}</span>{teams.map((t,j)=><div className="mx-bar-row" key={t}><small>{t}</small><div className="mx-track"><i className={`mx-series-${j}`} style={{width:`${Math.max(0,values[j][i] ?? 0)/max*100}%`}}/></div><b>{format(values[j][i],digits)}{values[j][i]!=null?unit:''}</b></div>)}</div>)}</div>;
+  return <div className="mx-bar-chart" role="img" aria-label={`${labels.join(', ')} comparison for ${teams.join(' and ')}; values are labeled.`}>{labels.map((label,i)=><div className="mx-bar-category" key={label}><span>{label}</span>{teams.map((t,j)=><div className="mx-bar-row" key={t} style={teamStyle(t) as CSSProperties}><small><TeamMark team={t}/></small><div className="mx-track"><i className={`mx-series-${j}`} style={{width:`${Math.max(0,values[j][i] ?? 0)/max*100}%`}}/></div><b>{format(values[j][i],digits)}{values[j][i]!=null?unit:''}</b></div>)}</div>)}</div>;
 }
 function Strengths({a,h,teams}: {a?: Team; h?: Team; teams: string[]}) {
   const metrics=[['Pass offense','pass_off_epa'],['Rush offense','rush_off_epa'],['Pass defense','pass_def_epa'],['Rush defense','rush_def_epa']];
   const max=Math.max(.05,...metrics.flatMap(([,key])=>[Math.abs(a?.season[key]??0),Math.abs(h?.season[key]??0)]));
-  return <div className="mx-efficiency">{metrics.map(([label,key])=><div className="mx-eff-row" key={key}><span>{label}</span>{[a,h].map((team,i)=>{const v=team?.season[key];return <div key={teams[i]}><small>{teams[i]}</small><div className="mx-diverge"><i className={`mx-series-${i}`} style={{left:`${v!=null&&v<0?50-Math.abs(v)/max*50:50}%`,width:`${Math.abs(v??0)/max*50}%`}}/></div><b>{v!=null&&v>0?'+':''}{format(v,3)}</b></div>;})}</div>)}<p className="mx-caption">Bars share a zero midpoint and scale. Lower defensive values are better.</p></div>;
+  return <div className="mx-efficiency">{metrics.map(([label,key])=><div className="mx-eff-row" key={key}><span>{label}</span>{[a,h].map((team,i)=>{const v=team?.season[key];return <div key={teams[i]} style={teamStyle(teams[i]) as CSSProperties}><small><TeamMark team={teams[i]}/></small><div className="mx-diverge"><i className={`mx-series-${i}`} style={{left:`${v!=null&&v<0?50-Math.abs(v)/max*50:50}%`,width:`${Math.abs(v??0)/max*50}%`}}/></div><b>{v!=null&&v>0?'+':''}{format(v,3)}</b></div>;})}</div>)}<p className="mx-caption">Bars share a zero midpoint and scale. Lower defensive values are better.</p></div>;
 }
 function FormChart({a,h,teams}: {a?: Team; h?: Team; teams: string[]}) {
   const series=[a?.history.slice(-6)??[],h?.history.slice(-6)??[]];

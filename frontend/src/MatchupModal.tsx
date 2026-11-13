@@ -1,3 +1,7 @@
+import TeamMark from './TeamMark';
+import { teamStyle } from './teamPalette';
+import { marketScoreShape } from './marketScoreShape';
+import type { CSSProperties } from 'react';
 import AvailabilityImpact from './AvailabilityImpact';
 import type { AvailabilityImpactFields } from './AvailabilityImpact';
 import { fetchSnapshot } from "./snapshotCache";
@@ -319,28 +323,16 @@ export default function MatchupModal({
   )}
 </div>
 
-                  <div className="ic-odds-grid">
-                    <div className="ic-odds-tile">
-                      <span>{game.away_team} MONEYLINE</span>
-                      <strong>{oddsText(odds.away_moneyline)}</strong>
-                    </div>
-                    <div className="ic-odds-tile">
-                      <span>{game.home_team} MONEYLINE</span>
-                      <strong>{oddsText(odds.home_moneyline)}</strong>
-                    </div>
-                    <div className="ic-odds-tile">
-                      <span>{game.away_team} SPREAD</span>
-                      <strong>{oddsText(odds.away_spread)}</strong>
-                    </div>
-                    <div className="ic-odds-tile">
-                      <span>{game.home_team} SPREAD</span>
-                      <strong>{oddsText(odds.home_spread)}</strong>
-                    </div>
-                    <div className="ic-odds-tile ic-wide">
-                      <span>OVER / UNDER</span>
-                      <strong>{odds.over_under ?? "—"}</strong>
-                    </div>
+                  <div className="market-board">
+                    <div className="market-board-row"><span>TEAM</span><span>MONEYLINE</span><span>SPREAD</span></div>
+                    {(['away','home'] as const).map(side=><div className="market-board-row" key={side} style={teamStyle(game[`${side}_team`]) as CSSProperties}>
+                      <div><TeamMark team={game[`${side}_team`]}/></div><strong>{oddsText(odds[`${side}_moneyline`])}</strong><strong>{oddsText(odds[`${side}_spread`])}</strong>
+                    </div>)}
+                    <div className="market-total"><span>Combined scoring line · Over / Under</span><b>{odds.over_under ?? '—'}</b></div>
                   </div>
+                  <section className="market-reading"><p className="ic-eyebrow">BETWEEN THE LINES</p><h4>The shape of the game</h4>
+                    {(() => {const shape=marketScoreShape(odds.over_under,odds.away_spread,odds.home_spread);return shape?<p>The saved spread and total translate to <strong>{game.away_team} {shape.away.toFixed(1)} · {game.home_team} {shape.home.toFixed(1)}</strong> in implied team points. That is the scoring split built into these lines, not an exact score forecast. Compare it with the scoring outlook in Projections to see how the two views frame this matchup.</p>:<p>The moneyline prices the outright winner; the spread sets the scoring margin to beat; the total sets the combined scoring threshold. Read them together to separate who is favored from how the game is priced.</p>;})()}
+                  </section>
 
                   <p className="ic-footnote">
                     Odds from {odds.bookmaker}. Last updated:{" "}

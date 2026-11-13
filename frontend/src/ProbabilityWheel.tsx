@@ -1,7 +1,7 @@
 import { useAnimatedNumber } from './useAnimatedNumber';
 import { useId } from 'react';
 import type { CSSProperties } from 'react';
-import { TEAM_COLORS } from './teams';
+import { teamPalette } from './teamPalette';
 
 const pct = (p: number) => `${(p * 100).toFixed(1)}%`;
 export default function ProbabilityWheel({ awayTeam, homeTeam, homeProb }: {
@@ -13,15 +13,8 @@ export default function ProbabilityWheel({ awayTeam, homeTeam, homeProb }: {
   const awayProb = 1 - homeProb, winnerIsHome = homeProb >= .5;
   const winner = winnerIsHome ? homeTeam : awayTeam;
   const winnerProb = Math.max(homeProb, awayProb);
-  const primary = TEAM_COLORS[winner] ?? '#80d5ff';
-  const [red, green, blue] = [1, 3, 5].map(start => parseInt(primary.slice(start,start+2),16));
-  const brightness = red * .299 + green * .587 + blue * .114;
-  // Dark jerseys need more lift to stay visible against the wheel track.
-  const shadeStrength = brightness < 60 ? 55 : brightness < 100 ? 68 : 92;
-  const palette = {
-    '--wheel-highlight': `color-mix(in oklab, ${primary} ${shadeStrength - 25}%, white)`,
-    '--wheel-shade': `color-mix(in oklab, ${primary} ${shadeStrength}%, white)`,
-  } as CSSProperties;
+  const colors = teamPalette(winner);
+  const palette = { '--wheel-highlight': colors.highlight, '--wheel-shade': colors.shade } as CSSProperties;
   const circumference = 2 * Math.PI * 61;
   const side = (team: string, p: number, favored: boolean) => <div className={`ud-wheel-side${favored ? ' is-favored' : ''}`}>
     <div className="ud-probability-column" aria-hidden="true"><span className="ud-probability-fill" style={{height:`${p*100}%`}}/></div>

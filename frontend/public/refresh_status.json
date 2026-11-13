@@ -2,17 +2,17 @@
   "active_season": 2026,
   "active_week": 10,
   "attempt": {
-    "completed_at": "2026-11-13T15:43:39.316335+00:00",
-    "mode": "results",
-    "started_at": "2026-11-13T15:42:49.550424+00:00",
+    "completed_at": "2026-11-13T20:31:26.375690+00:00",
+    "mode": "full",
+    "started_at": "2026-11-13T20:30:27.299384+00:00",
     "state": "success",
     "steps": {
       "directory": "success",
-      "forecast": "skipped",
+      "forecast": "success",
       "history": "success",
       "insights": "success",
       "markets": "success",
-      "odds": "skipped",
+      "odds": "success",
       "players": "success",
       "position_defense": "success",
       "pre_rollover": "skipped",
@@ -27,25 +27,25 @@
   "forecast_check": {
     "active_season": 2026,
     "active_week": 10,
-    "checked_at": "2026-11-13T15:40:16.188859+00:00",
+    "checked_at": "2026-11-13T20:30:35.388113+00:00",
     "message": "Published slate uses limited QB tracking inputs. LV: Fernando Mendoza has insufficient NFL tracking history. Missing QB inputs use the trained model treatment.",
     "state": "current_limited_qb",
     "target_season": 2026,
     "target_week": 10
   },
   "last_results_refresh_at": "2026-11-13T15:43:39.316335+00:00",
-  "last_successful_refresh_at": "2026-11-13T05:42:04.058773+00:00",
+  "last_successful_refresh_at": "2026-11-13T20:31:26.375690+00:00",
   "next_forecast_check_at": "2026-11-14T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-17T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-13T15:43:39.316335+00:00",
+  "snapshot_at": "2026-11-13T20:31:26.375690+00:00",
   "sources": [
     {
       "features_through_week": 9,
       "id": "forecasts",
       "label": "Game forecasts",
       "season": 2026,
-      "updated_at": "2026-11-13T15:40:16.178998+00:00",
+      "updated_at": "2026-11-13T20:30:35.379473+00:00",
       "week": 10
     },
     {
@@ -53,7 +53,7 @@
       "label": "Player cards",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-13T15:42:53.983339+00:00",
+      "updated_at": "2026-11-13T20:30:38.494795+00:00",
       "week": 10
     },
     {
@@ -62,7 +62,7 @@
       "refresh_outcome": "success",
       "season": 2026,
       "through_week": 9,
-      "updated_at": "2026-11-13T15:43:08.302810+00:00",
+      "updated_at": "2026-11-13T20:30:54.821159+00:00",
       "week": 10
     },
     {
@@ -71,27 +71,27 @@
       "label": "Matchup projections",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-13T15:43:05.360247+00:00",
+      "updated_at": "2026-11-13T20:30:51.605540+00:00",
       "week": 10
     },
     {
       "id": "results",
       "label": "Game results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-13T15:42:52.537434+00:00"
+      "updated_at": "2026-11-13T20:30:36.895846+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-13T15:43:09.555055+00:00"
+      "updated_at": "2026-11-13T20:30:56.436680+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-13T15:43:10.962549+00:00",
+      "updated_at": "2026-11-13T20:30:59.283801+00:00",
       "week": 10
     },
     {
@@ -99,15 +99,15 @@
       "label": "Defense vs positions",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-13T15:43:09.144380+00:00",
+      "updated_at": "2026-11-13T20:30:55.967143+00:00",
       "week": 10
     },
     {
       "id": "odds",
       "label": "Sportsbook lines",
-      "refresh_outcome": "skipped",
-      "updated_at": "2026-11-12T20:52:16.605995+00:00"
+      "refresh_outcome": "success",
+      "updated_at": "2026-11-13T20:31:26.193319+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43455261338"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43502074105"
 }

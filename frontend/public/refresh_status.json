@@ -2,43 +2,43 @@
   "active_season": 2026,
   "active_week": 10,
   "attempt": {
-    "completed_at": "2026-11-15T20:33:58.031653+00:00",
-    "mode": "pregame",
-    "started_at": "2026-11-15T20:33:53.207227+00:00",
+    "completed_at": "2026-11-15T21:54:38.308603+00:00",
+    "mode": "full",
+    "started_at": "2026-11-15T21:53:43.574504+00:00",
     "state": "success",
     "steps": {
-      "directory": "skipped",
+      "directory": "success",
       "forecast": "success",
       "history": "success",
       "insights": "success",
-      "markets": "skipped",
+      "markets": "success",
       "odds": "skipped",
-      "players": "skipped",
-      "position_defense": "skipped",
+      "players": "success",
+      "position_defense": "success",
       "pre_rollover": "skipped",
       "props": "skipped",
-      "research": "skipped",
-      "research_results": "skipped",
-      "results": "skipped",
-      "teams": "skipped",
+      "research": "success",
+      "research_results": "success",
+      "results": "success",
+      "teams": "success",
       "verify": "success"
     }
   },
   "forecast_check": {
     "active_season": 2026,
     "active_week": 10,
-    "checked_at": "2026-11-15T20:33:57.460823+00:00",
+    "checked_at": "2026-11-15T21:53:47.738514+00:00",
     "message": "Published slate uses limited QB tracking inputs. LV: Fernando Mendoza has insufficient NFL tracking history. Missing QB inputs use the trained model treatment.",
     "state": "current_limited_qb",
     "target_season": 2026,
     "target_week": 10
   },
   "last_results_refresh_at": "2026-11-15T14:59:37.141976+00:00",
-  "last_successful_refresh_at": "2026-11-15T19:24:43.865060+00:00",
+  "last_successful_refresh_at": "2026-11-15T21:54:38.308603+00:00",
   "next_forecast_check_at": "2026-11-16T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-17T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-15T20:33:58.031653+00:00",
+  "snapshot_at": "2026-11-15T21:54:38.308603+00:00",
   "sources": [
     {
       "features_through_week": 9,
@@ -51,55 +51,55 @@
     {
       "id": "players",
       "label": "Player cards",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-15T19:24:00.746261+00:00",
+      "updated_at": "2026-11-15T21:53:51.165523+00:00",
       "week": 10
     },
     {
       "id": "directory",
       "label": "Player history",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
       "through_week": 9,
-      "updated_at": "2026-11-15T19:24:16.521854+00:00",
+      "updated_at": "2026-11-15T21:54:07.950034+00:00",
       "week": 10
     },
     {
       "features_through_week": 9,
       "id": "research",
       "label": "Matchup projections",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-15T19:24:13.500882+00:00",
+      "updated_at": "2026-11-15T21:54:05.143025+00:00",
       "week": 10
     },
     {
       "id": "results",
       "label": "Game results",
-      "refresh_outcome": "skipped",
-      "updated_at": "2026-11-15T19:23:59.044654+00:00"
+      "refresh_outcome": "success",
+      "updated_at": "2026-11-15T21:53:49.521341+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
-      "refresh_outcome": "skipped",
-      "updated_at": "2026-11-15T19:24:18.125909+00:00"
+      "refresh_outcome": "success",
+      "updated_at": "2026-11-15T21:54:09.483527+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-15T20:33:57.796891+00:00",
+      "updated_at": "2026-11-15T21:54:13.310660+00:00",
       "week": 10
     },
     {
       "id": "position_defense",
       "label": "Defense vs positions",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-15T19:24:17.678800+00:00",
+      "updated_at": "2026-11-15T21:54:08.987386+00:00",
       "week": 10
     },
     {
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-15T19:24:43.676617+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43758718584"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43766145090"
 }

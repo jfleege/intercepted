@@ -1,6 +1,48 @@
 {
   "changes": [
     {
+      "after": "b642be34c8f77ef2",
+      "before": "ab96044d0f5806a1",
+      "delta": null,
+      "field": "research_model_version",
+      "game_id": "2026_10_LAC_BAL",
+      "id": "f91e170763daf9a678b0e9c5",
+      "label": "Research model version",
+      "matchup": "LAC @ BAL",
+      "observed_at": "2026-11-15T21:54:13.310660+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-15T21:53:47.159700+00:00",
+      "reasons": [
+        "Saved model version changed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-15T21:54:05.143025+00:00",
+      "unit": "version",
+      "week": 10
+    },
+    {
+      "after": "b642be34c8f77ef2",
+      "before": "ab96044d0f5806a1",
+      "delta": null,
+      "field": "research_model_version",
+      "game_id": "2026_10_PIT_CIN",
+      "id": "c4e60860172109c63f44ab57",
+      "label": "Research model version",
+      "matchup": "PIT @ CIN",
+      "observed_at": "2026-11-15T21:54:13.310660+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-15T21:53:47.159700+00:00",
+      "reasons": [
+        "Saved model version changed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-15T21:54:05.143025+00:00",
+      "unit": "version",
+      "week": 10
+    },
+    {
       "after": "Out",
       "before": "unknown",
       "delta": null,
@@ -12752,87 +12794,9 @@
       "week": 10
     }
   ],
-  "exported_at": "2026-11-15T20:33:57.796891+00:00",
+  "exported_at": "2026-11-15T21:54:13.310660+00:00",
   "monitoring": {
     "alerts": [
-      {
-        "game_id": "2026_10_LA_ARI",
-        "id": "reported_out:2026_10_LA_ARI:00-0031381",
-        "message": "Davante Adams is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_LA_ARI",
-        "id": "availability_watch:2026_10_LA_ARI:00-0037004",
-        "message": "Hunter Long: Questionable (Knee). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_LA_ARI",
-        "id": "availability_watch:2026_10_LA_ARI:00-0039074",
-        "message": "Davis Allen: Questionable (Oblique). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_LA_ARI",
-        "id": "reported_out:2026_10_LA_ARI:00-0040737",
-        "message": "Terrance Ferguson is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SEA_LV",
-        "id": "qb_depth:2026_10_SEA_LV:SEA",
-        "message": "SEA: published QB Drew Lock differs from first-unit depth listing Sam Darnold. A depth chart is not a game-day confirmation; review before revising.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SEA_LV",
-        "id": "reported_out:2026_10_SEA_LV:00-0034869",
-        "message": "Sam Darnold is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SEA_LV",
-        "id": "reported_out:2026_10_SEA_LV:00-0038797",
-        "message": "Emanuel Wilson is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SEA_LV",
-        "id": "reported_out:2026_10_SEA_LV:00-0040894",
-        "message": "Malik Benson is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SF_DAL",
-        "id": "reported_out:2026_10_SF_DAL:00-0031236",
-        "message": "Brandin Cooks is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SF_DAL",
-        "id": "reported_out:2026_10_SF_DAL:00-0031408",
-        "message": "Mike Evans is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SF_DAL",
-        "id": "reported_out:2026_10_SF_DAL:00-0037120",
-        "message": "Tyler Goodson is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SF_DAL",
-        "id": "reported_out:2026_10_SF_DAL:00-0038041",
-        "message": "Jake Ferguson is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_SF_DAL",
-        "id": "reported_out:2026_10_SF_DAL:00-0039062",
-        "message": "Jonathan Mingo is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
       {
         "game_id": "2026_10_PIT_CIN",
         "id": "availability_watch:2026_10_PIT_CIN:00-0036894",
@@ -12865,13 +12829,13 @@
       },
       {
         "id": "availability_coverage",
-        "message": "41 of 484 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "12 of 484 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 41,
+      "reported": 12,
       "tracked": 484
     },
     "calibration": [
@@ -12950,7 +12914,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 45,
+        "samples": 52,
         "status": "sample_building",
         "target": "winner:v4_a",
         "version": "ac161c2fa5d3",
@@ -12968,7 +12932,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 45,
+        "samples": 52,
         "status": "sample_building",
         "target": "winner:v4_qb_plus",
         "version": "ac161c2fa5d3",
@@ -12986,7 +12950,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 45,
+        "samples": 52,
         "status": "sample_building",
         "target": "winner:v5_boosted",
         "version": "ac161c2fa5d3",
@@ -12995,14 +12959,14 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 45,
+        "samples": 52,
         "status": "sample_building",
         "target": "winner:v5_qb_plus",
         "version": "ac161c2fa5d3",
         "windows": []
       }
     ],
-    "checked_at": "2026-11-15T20:33:57.796891+00:00",
+    "checked_at": "2026-11-15T21:54:13.310660+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,
@@ -18881,7 +18845,7 @@
       "availability": {
         "blocked": false,
         "injury": "Fibula",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19201,7 +19165,7 @@
       "availability": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19283,7 +19247,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hip",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19603,7 +19567,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19644,7 +19608,7 @@
       "availability": {
         "blocked": false,
         "injury": "Back",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19948,7 +19912,7 @@
       "availability": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20063,7 +20027,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20178,7 +20142,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20210,10 +20174,10 @@
     {
       "availability": {
         "blocked": false,
-        "injury": "Elbow",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -20225,39 +20189,31 @@
       "player_id": "00-0026498",
       "position": "QB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 32.3,
+        "estimate": null,
         "field": "attempts",
-        "last": 43.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          25.0,
-          43.0
-        ],
-        "recent_average": 32.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Hamstring",
-        "observed_at": "2026-11-15T20:33:56.646751+00:00",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
         "practice": null,
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-15T16:06Z",
-        "source": "https://www.espn.com/nfl/injuries",
-        "status": "Injured Reserve"
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
+        "report_updated_at": null,
+        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+        "status": "unknown"
       },
       "game_id": "2026_10_LA_ARI",
       "kickoff": "2026-11-15T21:05:00+00:00",
@@ -20266,36 +20222,28 @@
       "player_id": "00-0031381",
       "position": "WR",
       "starter": {
-        "rank": 7,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 6.7,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          4.0,
-          9.0
-        ],
-        "recent_average": 6.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 6,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Illness",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -20307,26 +20255,18 @@
       "player_id": "00-0033110",
       "position": "TE",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 3.3,
+        "estimate": null,
         "field": "targets",
-        "last": 5.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          5.0
-        ],
-        "recent_average": 3.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20348,26 +20288,18 @@
       "player_id": "00-0033307",
       "position": "WR",
       "starter": {
-        "rank": 7,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 5.3,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          8.0
-        ],
-        "recent_average": 5.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20389,18 +20321,18 @@
       "player_id": "00-0035289",
       "position": "QB",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
         "estimate": null,
         "field": "attempts",
-        "samples": 2,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20430,28 +20362,20 @@
       },
       "team": "LA",
       "usage": {
-        "estimate": 0.0,
+        "estimate": null,
         "field": "targets",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          0.0
-        ],
-        "recent_average": 0.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Ribs",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -20463,26 +20387,18 @@
       "player_id": "00-0036244",
       "position": "TE",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 5.3,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          4.0,
-          6.0
-        ],
-        "recent_average": 5.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20504,26 +20420,18 @@
       "player_id": "00-0036331",
       "position": "WR",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 1.3,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          2.0
-        ],
-        "recent_average": 1.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20555,8 +20463,8 @@
       "usage": {
         "estimate": null,
         "field": "targets",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20578,26 +20486,18 @@
       "player_id": "00-0036646",
       "position": "WR",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 0.7,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          1.0
-        ],
-        "recent_average": 0.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20619,39 +20519,31 @@
       "player_id": "00-0036849",
       "position": "WR",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 3.3,
+        "estimate": null,
         "field": "targets",
-        "last": 5.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          5.0
-        ],
-        "recent_average": 3.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Knee",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Questionable"
+        "status": "unknown"
       },
       "game_id": "2026_10_LA_ARI",
       "kickoff": "2026-11-15T21:05:00+00:00",
@@ -20660,36 +20552,28 @@
       "player_id": "00-0037004",
       "position": "TE",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 0.7,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          1.0
-        ],
-        "recent_average": 0.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 4,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Concussion",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -20701,26 +20585,18 @@
       "player_id": "00-0037157",
       "position": "RB",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 8.3,
+        "estimate": null,
         "field": "carries",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          3.0,
-          15.0
-        ],
-        "recent_average": 8.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20742,26 +20618,18 @@
       "player_id": "00-0037263",
       "position": "RB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 12.0,
+        "estimate": null,
         "field": "carries",
-        "last": 17.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          8.0,
-          17.0
-        ],
-        "recent_average": 12.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20783,18 +20651,18 @@
       "player_id": "00-0037277",
       "position": "TE",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
         "estimate": null,
         "field": "targets",
-        "samples": 2,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20816,18 +20684,18 @@
       "player_id": "00-0037557",
       "position": "RB",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
         "estimate": null,
         "field": "carries",
-        "samples": 2,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20849,26 +20717,18 @@
       "player_id": "00-0037744",
       "position": "TE",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 9.7,
+        "estimate": null,
         "field": "targets",
-        "last": 8.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          8.0,
-          13.0
-        ],
-        "recent_average": 9.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20890,26 +20750,18 @@
       "player_id": "00-0037840",
       "position": "RB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 15.7,
+        "estimate": null,
         "field": "carries",
-        "last": 15.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          15.0,
-          16.0
-        ],
-        "recent_average": 15.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20931,26 +20783,18 @@
       "player_id": "00-0038359",
       "position": "WR",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 0.3,
+        "estimate": null,
         "field": "targets",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          1.0
-        ],
-        "recent_average": 0.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 3,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -20972,18 +20816,18 @@
       "player_id": "00-0038397",
       "position": "RB",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
         "estimate": null,
         "field": "carries",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21005,26 +20849,18 @@
       "player_id": "00-0038559",
       "position": "WR",
       "starter": {
-        "rank": 6,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 10.0,
+        "estimate": null,
         "field": "targets",
-        "last": 7.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          7.0,
-          15.0
-        ],
-        "recent_average": 10.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21046,26 +20882,18 @@
       "player_id": "00-0038640",
       "position": "WR",
       "starter": {
-        "rank": 8,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 5.3,
+        "estimate": null,
         "field": "targets",
-        "last": 6.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          3.0,
-          7.0
-        ],
-        "recent_average": 5.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 7,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21087,39 +20915,31 @@
       "player_id": "00-0039041",
       "position": "TE",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 3.0,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          4.0
-        ],
-        "recent_average": 3.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Oblique",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Questionable"
+        "status": "unknown"
       },
       "game_id": "2026_10_LA_ARI",
       "kickoff": "2026-11-15T21:05:00+00:00",
@@ -21128,36 +20948,28 @@
       "player_id": "00-0039074",
       "position": "TE",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 2.3,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          5.0
-        ],
-        "recent_average": 2.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Knee",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -21169,26 +20981,18 @@
       "player_id": "00-0039075",
       "position": "WR",
       "starter": {
-        "rank": 6,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 13.7,
+        "estimate": null,
         "field": "targets",
-        "last": 19.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          10.0,
-          19.0
-        ],
-        "recent_average": 13.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21210,18 +21014,18 @@
       "player_id": "00-0039107",
       "position": "QB",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
         "estimate": null,
         "field": "attempts",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21243,26 +21047,18 @@
       "player_id": "00-0039738",
       "position": "RB",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 13.0,
+        "estimate": null,
         "field": "carries",
-        "last": 11.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          11.0,
-          17.0
-        ],
-        "recent_average": 13.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21284,26 +21080,18 @@
       "player_id": "00-0039751",
       "position": "WR",
       "starter": {
-        "rank": 8,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 0.3,
+        "estimate": null,
         "field": "targets",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          1.0
-        ],
-        "recent_average": 0.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21325,39 +21113,31 @@
       "player_id": "00-0040590",
       "position": "WR",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 2.0,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          2.0
-        ],
-        "recent_average": 2.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Ankle",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
+        "status": "unknown"
       },
       "game_id": "2026_10_LA_ARI",
       "kickoff": "2026-11-15T21:05:00+00:00",
@@ -21366,26 +21146,18 @@
       "player_id": "00-0040737",
       "position": "TE",
       "starter": {
-        "rank": 5,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 4.0,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          9.0
-        ],
-        "recent_average": 4.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 3,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21407,26 +21179,18 @@
       "player_id": "00-0041027",
       "position": "RB",
       "starter": {
-        "rank": 5,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 11.7,
+        "estimate": null,
         "field": "carries",
-        "last": 9.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          9.0,
-          14.0
-        ],
-        "recent_average": 11.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21448,26 +21212,18 @@
       "player_id": "00-0041070",
       "position": "WR",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "ARI",
       "usage": {
-        "estimate": 3.7,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          5.0
-        ],
-        "recent_average": 3.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -21489,26 +21245,18 @@
       "player_id": "00-0041415",
       "position": "RB",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LA",
       "usage": {
-        "estimate": 0.0,
+        "estimate": null,
         "field": "carries",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          0.0
-        ],
-        "recent_average": 0.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 5,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -25432,7 +25180,7 @@
       "availability": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -25473,7 +25221,7 @@
       "availability": {
         "blocked": false,
         "injury": "Illness",
-        "observed_at": "2026-11-15T20:33:56.646751+00:00",
+        "observed_at": "2026-11-15T21:54:13.290977+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-14T17:39Z",
@@ -25670,7 +25418,7 @@
       "availability": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -25752,7 +25500,7 @@
       "availability": {
         "blocked": false,
         "injury": "Thumb",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
+        "observed_at": "2026-11-15T21:54:11.404620+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -26218,26 +25966,18 @@
       "player_id": "00-0033576",
       "position": "TE",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 1.0,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          1.0
-        ],
-        "recent_average": 1.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26259,36 +25999,28 @@
       "player_id": "00-0033908",
       "position": "WR",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 3.0,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          4.0
-        ],
-        "recent_average": 3.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Ankle",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -26300,39 +26032,31 @@
       "player_id": "00-0034365",
       "position": "TE",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 1.3,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          2.0
-        ],
-        "recent_average": 1.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 7,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Ribs",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
+        "status": "unknown"
       },
       "game_id": "2026_10_SEA_LV",
       "kickoff": "2026-11-15T21:05:00+00:00",
@@ -26341,36 +26065,28 @@
       "player_id": "00-0034869",
       "position": "QB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 37.7,
+        "estimate": null,
         "field": "attempts",
-        "last": 34.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          28.0,
-          51.0
-        ],
-        "recent_average": 37.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Elbow",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -26382,26 +26098,18 @@
       "player_id": "00-0035704",
       "position": "QB",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 25.3,
+        "estimate": null,
         "field": "attempts",
-        "last": 28.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          22.0,
-          28.0
-        ],
-        "recent_average": 25.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26423,26 +26131,18 @@
       "player_id": "00-0035891",
       "position": "WR",
       "starter": {
-        "rank": 7,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 3.0,
+        "estimate": null,
         "field": "targets",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          4.0
-        ],
-        "recent_average": 3.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 7,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26464,26 +26164,18 @@
       "player_id": "00-0037093",
       "position": "WR",
       "starter": {
-        "rank": 5,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 0.0,
+        "estimate": null,
         "field": "targets",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          0.0
-        ],
-        "recent_average": 0.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26505,26 +26197,18 @@
       "player_id": "00-0037156",
       "position": "WR",
       "starter": {
-        "rank": 5,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 0.0,
+        "estimate": null,
         "field": "targets",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          0.0
-        ],
-        "recent_average": 0.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26546,26 +26230,18 @@
       "player_id": "00-0037291",
       "position": "WR",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 4.3,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          4.0,
-          5.0
-        ],
-        "recent_average": 4.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26597,18 +26273,18 @@
       "usage": {
         "estimate": null,
         "field": "targets",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Knee",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -26620,26 +26296,18 @@
       "player_id": "00-0037545",
       "position": "WR",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 5.0,
+        "estimate": null,
         "field": "targets",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          3.0,
-          8.0
-        ],
-        "recent_average": 5.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 7,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26669,18 +26337,10 @@
       },
       "team": "SEA",
       "usage": {
-        "estimate": 3.0,
+        "estimate": null,
         "field": "carries",
-        "last": 5.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          5.0
-        ],
-        "recent_average": 3.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 7,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26710,28 +26370,20 @@
       },
       "team": "SEA",
       "usage": {
-        "estimate": 0.0,
+        "estimate": null,
         "field": "carries",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          0.0
-        ],
-        "recent_average": 0.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -26743,26 +26395,18 @@
       "player_id": "00-0038543",
       "position": "WR",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 11.0,
+        "estimate": null,
         "field": "targets",
-        "last": 10.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          10.0,
-          12.0
-        ],
-        "recent_average": 11.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26784,39 +26428,31 @@
       "player_id": "00-0038563",
       "position": "WR",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 7.0,
+        "estimate": null,
         "field": "targets",
-        "last": 8.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          12.0
-        ],
-        "recent_average": 7.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Coach's Decision",
-        "observed_at": "2026-11-15T20:33:56.646751+00:00",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
         "practice": null,
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-15T19:55Z",
-        "source": "https://www.espn.com/nfl/injuries",
-        "status": "Out"
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
+        "report_updated_at": null,
+        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+        "status": "unknown"
       },
       "game_id": "2026_10_SEA_LV",
       "kickoff": "2026-11-15T21:05:00+00:00",
@@ -26825,26 +26461,18 @@
       "player_id": "00-0038797",
       "position": "RB",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 19.3,
+        "estimate": null,
         "field": "carries",
-        "last": 24.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          14.0,
-          24.0
-        ],
-        "recent_average": 19.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 7,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26866,26 +26494,18 @@
       "player_id": "00-0039066",
       "position": "TE",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 4.0,
+        "estimate": null,
         "field": "targets",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          3.0,
-          6.0
-        ],
-        "recent_average": 4.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26907,18 +26527,18 @@
       "player_id": "00-0039165",
       "position": "RB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
         "estimate": null,
         "field": "carries",
-        "samples": 2,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26940,26 +26560,18 @@
       "player_id": "00-0039299",
       "position": "RB",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 2.0,
+        "estimate": null,
         "field": "carries",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          5.0
-        ],
-        "recent_average": 2.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -26981,26 +26593,18 @@
       "player_id": "00-0039338",
       "position": "TE",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 8.7,
+        "estimate": null,
         "field": "targets",
-        "last": 8.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          8.0,
-          10.0
-        ],
-        "recent_average": 8.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27022,36 +26626,28 @@
       "player_id": "00-0039407",
       "position": "RB",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 0.0,
+        "estimate": null,
         "field": "carries",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          0.0
-        ],
-        "recent_average": 0.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Finger",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -27063,26 +26659,18 @@
       "player_id": "00-0039793",
       "position": "TE",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 4.7,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          4.0,
-          5.0
-        ],
-        "recent_average": 4.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27104,26 +26692,18 @@
       "player_id": "00-0040122",
       "position": "RB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 5.3,
+        "estimate": null,
         "field": "carries",
-        "last": 6.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          8.0
-        ],
-        "recent_average": 5.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27155,8 +26735,8 @@
       "usage": {
         "estimate": null,
         "field": "targets",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27178,26 +26758,18 @@
       "player_id": "00-0040648",
       "position": "WR",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 3.3,
+        "estimate": null,
         "field": "targets",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          6.0
-        ],
-        "recent_average": 3.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27219,26 +26791,18 @@
       "player_id": "00-0040729",
       "position": "WR",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 2.7,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          4.0
-        ],
-        "recent_average": 2.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27260,18 +26824,18 @@
       "player_id": "00-0040739",
       "position": "TE",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
         "estimate": null,
         "field": "targets",
-        "samples": 2,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27293,39 +26857,31 @@
       "player_id": "00-0040878",
       "position": "RB",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 12.3,
+        "estimate": null,
         "field": "carries",
-        "last": 6.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          6.0,
-          25.0
-        ],
-        "recent_average": 12.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Coach's Decision",
-        "observed_at": "2026-11-15T20:33:56.646751+00:00",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
         "practice": null,
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-15T19:59Z",
-        "source": "https://www.espn.com/nfl/injuries",
-        "status": "Out"
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
+        "report_updated_at": null,
+        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+        "status": "unknown"
       },
       "game_id": "2026_10_SEA_LV",
       "kickoff": "2026-11-15T21:05:00+00:00",
@@ -27334,26 +26890,18 @@
       "player_id": "00-0040894",
       "position": "WR",
       "starter": {
-        "rank": 6,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
-        "estimate": 1.7,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          4.0
-        ],
-        "recent_average": 1.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 7,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27375,26 +26923,18 @@
       "player_id": "00-0041512",
       "position": "RB",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SEA",
       "usage": {
-        "estimate": 8.0,
+        "estimate": null,
         "field": "carries",
-        "last": 9.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          5.0,
-          10.0
-        ],
-        "recent_average": 8.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27416,18 +26956,18 @@
       "player_id": "00-0041562",
       "position": "QB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "LV",
       "usage": {
         "estimate": null,
         "field": "attempts",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27449,10 +26989,10 @@
       "player_id": "00-0030279",
       "position": "WR",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
@@ -27460,20 +27000,20 @@
         "estimate": null,
         "field": "targets",
         "samples": 0,
-        "status": "insufficient_history",
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Coach's Decision",
-        "observed_at": "2026-11-15T20:33:56.646751+00:00",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
         "practice": null,
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-15T20:14Z",
-        "source": "https://www.espn.com/nfl/injuries",
-        "status": "Out"
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
+        "report_updated_at": null,
+        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+        "status": "unknown"
       },
       "game_id": "2026_10_SF_DAL",
       "kickoff": "2026-11-15T21:25:00+00:00",
@@ -27482,39 +27022,31 @@
       "player_id": "00-0031236",
       "position": "WR",
       "starter": {
-        "rank": 6,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 2.3,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          3.0
-        ],
-        "recent_average": 2.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Achilles",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
+        "status": "unknown"
       },
       "game_id": "2026_10_SF_DAL",
       "kickoff": "2026-11-15T21:25:00+00:00",
@@ -27523,36 +27055,28 @@
       "player_id": "00-0031408",
       "position": "WR",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 7.7,
+        "estimate": null,
         "field": "targets",
-        "last": 5.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          5.0,
-          10.0
-        ],
-        "recent_average": 7.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 6,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Ankle",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -27564,26 +27088,18 @@
       "player_id": "00-0032775",
       "position": "WR",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 3.3,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          3.0,
-          4.0
-        ],
-        "recent_average": 3.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27605,36 +27121,28 @@
       "player_id": "00-0033077",
       "position": "QB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 30.0,
+        "estimate": null,
         "field": "attempts",
-        "last": 34.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          27.0,
-          34.0
-        ],
-        "recent_average": 30.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -27646,26 +27154,18 @@
       "player_id": "00-0033280",
       "position": "RB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 13.7,
+        "estimate": null,
         "field": "carries",
-        "last": 18.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          7.0,
-          18.0
-        ],
-        "recent_average": 13.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27687,26 +27187,18 @@
       "player_id": "00-0033288",
       "position": "TE",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 8.3,
+        "estimate": null,
         "field": "targets",
-        "last": 7.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          7.0,
-          10.0
-        ],
-        "recent_average": 8.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27736,28 +27228,20 @@
       },
       "team": "SF",
       "usage": {
-        "estimate": 0.7,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          1.0
-        ],
-        "recent_average": 0.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Hamstring",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -27769,26 +27253,18 @@
       "player_id": "00-0035719",
       "position": "WR",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 3.0,
+        "estimate": null,
         "field": "targets",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          6.0
-        ],
-        "recent_average": 3.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 5,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27810,26 +27286,18 @@
       "player_id": "00-0036358",
       "position": "WR",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 13.0,
+        "estimate": null,
         "field": "targets",
-        "last": 16.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          11.0,
-          16.0
-        ],
-        "recent_average": 13.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27851,26 +27319,18 @@
       "player_id": "00-0036887",
       "position": "TE",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 0.7,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          1.0
-        ],
-        "recent_average": 0.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27892,18 +27352,18 @@
       "player_id": "00-0036972",
       "position": "QB",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
         "estimate": null,
         "field": "attempts",
-        "samples": 2,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -27925,39 +27385,31 @@
       "player_id": "00-0036997",
       "position": "RB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 23.0,
+        "estimate": null,
         "field": "carries",
-        "last": 20.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          20.0,
-          25.0
-        ],
-        "recent_average": 23.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Ankle",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
+        "status": "unknown"
       },
       "game_id": "2026_10_SF_DAL",
       "kickoff": "2026-11-15T21:25:00+00:00",
@@ -27966,36 +27418,28 @@
       "player_id": "00-0037120",
       "position": "RB",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 9.7,
+        "estimate": null,
         "field": "carries",
-        "last": 12.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          7.0,
-          12.0
-        ],
-        "recent_average": 9.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Hamstring",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -28007,26 +27451,18 @@
       "player_id": "00-0037247",
       "position": "WR",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 7.0,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          4.0,
-          11.0
-        ],
-        "recent_average": 7.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28048,28 +27484,28 @@
       "player_id": "00-0037282",
       "position": "TE",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
         "estimate": null,
         "field": "targets",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Ribs",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -28081,26 +27517,18 @@
       "player_id": "00-0037801",
       "position": "WR",
       "starter": {
-        "rank": 4,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 1.3,
+        "estimate": null,
         "field": "targets",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          4.0
-        ],
-        "recent_average": 1.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 6,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28122,39 +27550,31 @@
       "player_id": "00-0037834",
       "position": "QB",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 31.3,
+        "estimate": null,
         "field": "attempts",
-        "last": 25.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          25.0,
-          40.0
-        ],
-        "recent_average": 31.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Knee",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
+        "status": "unknown"
       },
       "game_id": "2026_10_SF_DAL",
       "kickoff": "2026-11-15T21:25:00+00:00",
@@ -28163,36 +27583,28 @@
       "player_id": "00-0038041",
       "position": "TE",
       "starter": {
-        "rank": 1,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 2.0,
+        "estimate": null,
         "field": "targets",
-        "last": 2.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          3.0
-        ],
-        "recent_average": 2.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Groin",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -28204,26 +27616,18 @@
       "player_id": "00-0038547",
       "position": "TE",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 1.0,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          1.0
-        ],
-        "recent_average": 1.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 5,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28245,26 +27649,18 @@
       "player_id": "00-0038643",
       "position": "TE",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 0.0,
+        "estimate": null,
         "field": "targets",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          0.0
-        ],
-        "recent_average": 0.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28294,31 +27690,23 @@
       },
       "team": "DAL",
       "usage": {
-        "estimate": 0.3,
+        "estimate": null,
         "field": "carries",
-        "last": 0.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          1.0
-        ],
-        "recent_average": 0.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 8,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Ankle",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
+        "status": "unknown"
       },
       "game_id": "2026_10_SF_DAL",
       "kickoff": "2026-11-15T21:25:00+00:00",
@@ -28327,26 +27715,18 @@
       "player_id": "00-0039062",
       "position": "WR",
       "starter": {
-        "rank": 5,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 1.3,
+        "estimate": null,
         "field": "targets",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          3.0
-        ],
-        "recent_average": 1.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28368,26 +27748,18 @@
       "player_id": "00-0039365",
       "position": "WR",
       "starter": {
-        "rank": 7,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 2.0,
+        "estimate": null,
         "field": "targets",
-        "last": 1.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          5.0
-        ],
-        "recent_average": 2.0,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28409,36 +27781,28 @@
       "player_id": "00-0039410",
       "position": "WR",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 3.7,
+        "estimate": null,
         "field": "targets",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          3.0,
-          4.0
-        ],
-        "recent_average": 3.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
     {
       "availability": {
         "blocked": false,
-        "injury": "Shoulder",
-        "observed_at": "2026-11-15T20:33:55.616993+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
+        "injury": null,
+        "observed_at": null,
+        "practice": null,
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
         "report_updated_at": null,
         "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
         "status": "unknown"
@@ -28450,26 +27814,18 @@
       "player_id": "00-0039530",
       "position": "TE",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
-        "estimate": 3.3,
+        "estimate": null,
         "field": "targets",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          2.0,
-          5.0
-        ],
-        "recent_average": 3.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28491,26 +27847,18 @@
       "player_id": "00-0040172",
       "position": "WR",
       "starter": {
-        "rank": 5,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 3.7,
+        "estimate": null,
         "field": "targets",
-        "last": 4.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          1.0,
-          6.0
-        ],
-        "recent_average": 3.67,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28532,26 +27880,18 @@
       "player_id": "00-0040177",
       "position": "RB",
       "starter": {
-        "rank": 3,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 1.3,
+        "estimate": null,
         "field": "carries",
-        "last": 3.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          0.0,
-          3.0
-        ],
-        "recent_average": 1.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28573,18 +27913,18 @@
       "player_id": "00-0040930",
       "position": "WR",
       "starter": {
-        "rank": 6,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "DAL",
       "usage": {
         "estimate": null,
         "field": "targets",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28616,8 +27956,8 @@
       "usage": {
         "estimate": null,
         "field": "targets",
-        "samples": 1,
-        "status": "insufficient_history",
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -28639,26 +27979,18 @@
       "player_id": "00-0041052",
       "position": "RB",
       "starter": {
-        "rank": 2,
+        "rank": null,
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
+        "status": "unknown",
         "updated_at": "2026-11-15T14:41:31Z"
       },
       "team": "SF",
       "usage": {
-        "estimate": 10.3,
+        "estimate": null,
         "field": "carries",
-        "last": 11.0,
-        "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
-        "observed_range": [
-          8.0,
-          12.0
-        ],
-        "recent_average": 10.33,
-        "samples": 3,
-        "status": "estimated",
-        "through_week": 9,
+        "samples": 0,
+        "status": "game_started",
         "version": "recent-opportunities-mean-v1"
       }
     },
@@ -30055,19 +29387,19 @@
   "sources": {
     "depth_charts": {
       "latest_report_at": "2026-11-15T14:41:31Z",
-      "observed_at": "2026-11-15T20:33:55.616993+00:00",
+      "observed_at": "2026-11-15T21:54:11.404620+00:00",
       "rows": 2350,
       "status": "available"
     },
     "espn_injuries": {
-      "observed_at": "2026-11-15T20:33:56.646751+00:00",
-      "rows": 48,
+      "observed_at": "2026-11-15T21:54:13.290977+00:00",
+      "rows": 52,
       "source": "https://www.espn.com/nfl/injuries",
       "status": "available"
     },
     "injuries": {
       "latest_report_at": null,
-      "observed_at": "2026-11-15T20:33:55.616993+00:00",
+      "observed_at": "2026-11-15T21:54:11.404620+00:00",
       "rows": 3168,
       "status": "available"
     }

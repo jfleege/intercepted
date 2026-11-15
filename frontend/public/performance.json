@@ -60245,11 +60245,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 12,
-            "lower": 0.2537781703934222,
-            "observed": 0.5,
-            "predicted": 0.5406993887928965,
-            "upper": 0.7462218296065778
+            "games": 13,
+            "lower": 0.2914343243183205,
+            "observed": 0.5384615384615384,
+            "predicted": 0.542120012933278,
+            "upper": 0.7679424569851186
           },
           {
             "bin": "60\u201370%",
@@ -62206,21 +62206,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 10,
             "away_team": "NE",
-            "brier": null,
+            "brier": 0.19433329074817685,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_NE_DET",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 35,
             "home_team": "DET",
             "kickoff": "2026-11-15T14:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.5813062038108496,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DET",
             "probability": 0.5591675026178573,
             "provenance": {
@@ -62230,7 +62230,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 10
           },
@@ -62352,14 +62352,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6206896551724138,
-          "brier": 0.23146384609177534,
+          "accuracy": 0.6271186440677966,
+          "brier": 0.23083451464527366,
           "cancelled": 0,
-          "correct": 36,
-          "games": 58,
+          "correct": 37,
+          "games": 59,
           "incorrect": 22,
-          "log_loss": 0.6527230183189685,
-          "pending": 13,
+          "log_loss": 0.65151256383578,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -63000,6 +63000,17 @@
             "game_number": 58,
             "label": "WAS @ NYG",
             "log_loss": 0.6527230183189685
+          },
+          {
+            "accuracy": 0.6271186440677966,
+            "brier": 0.23083451464527366,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.19433329074817685,
+            "game_id": "2026_10_NE_DET",
+            "game_number": 59,
+            "label": "NE @ DET",
+            "log_loss": 0.65151256383578
           }
         ],
         "weekly": [
@@ -63056,14 +63067,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.0,
-            "brier": 0.3400739945185877,
+            "accuracy": 0.5,
+            "brier": 0.26720364263338225,
             "cancelled": 0,
-            "correct": 0,
-            "games": 1,
+            "correct": 1,
+            "games": 2,
             "incorrect": 1,
-            "log_loss": 0.8750495511662536,
-            "pending": 13,
+            "log_loss": 0.7281778774885517,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -63098,11 +63109,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 9,
-            "lower": 0.188775429471914,
-            "observed": 0.4444444444444444,
-            "predicted": 0.5540818512238462,
-            "upper": 0.7333526542559703
+            "games": 10,
+            "lower": 0.23658959361548731,
+            "observed": 0.5,
+            "predicted": 0.5564491436474591,
+            "upper": 0.7634104063845126
           },
           {
             "bin": "60\u201370%",
@@ -65059,21 +65070,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 10,
             "away_team": "NE",
-            "brier": null,
+            "brier": 0.17829102964685548,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_NE_DET",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 35,
             "home_team": "DET",
             "kickoff": "2026-11-15T14:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.5486057642452327,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DET",
             "probability": 0.5777547754599758,
             "provenance": {
@@ -65083,7 +65094,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 10
           },
@@ -65205,14 +65216,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6379310344827587,
-          "brier": 0.23049958711164562,
+          "accuracy": 0.6440677966101694,
+          "brier": 0.22961469630715767,
           "cancelled": 0,
-          "correct": 37,
-          "games": 58,
+          "correct": 38,
+          "games": 59,
           "incorrect": 21,
-          "log_loss": 0.6508990937648194,
-          "pending": 13,
+          "log_loss": 0.6491653085187247,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -65853,6 +65864,17 @@
             "game_number": 58,
             "label": "WAS @ NYG",
             "log_loss": 0.6508990937648194
+          },
+          {
+            "accuracy": 0.6440677966101694,
+            "brier": 0.22961469630715767,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.17829102964685548,
+            "game_id": "2026_10_NE_DET",
+            "game_number": 59,
+            "label": "NE @ DET",
+            "log_loss": 0.6491653085187247
           }
         ],
         "weekly": [
@@ -65909,14 +65931,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.0,
-            "brier": 0.29953870550251444,
+            "accuracy": 0.5,
+            "brier": 0.23891486757468494,
             "cancelled": 0,
-            "correct": 0,
-            "games": 1,
+            "correct": 1,
+            "games": 2,
             "incorrect": 1,
-            "log_loss": 0.7925284811098505,
-            "pending": 13,
+            "log_loss": 0.6705671226775416,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -65959,11 +65981,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 8,
-            "lower": 0.21521252682444186,
-            "observed": 0.5,
-            "predicted": 0.6567323930369058,
-            "upper": 0.7847874731755582
+            "games": 9,
+            "lower": 0.2666473457440297,
+            "observed": 0.5555555555555556,
+            "predicted": 0.6534460725364613,
+            "upper": 0.811224570528086
           },
           {
             "bin": "70\u201380%",
@@ -67492,21 +67514,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 10,
             "away_team": "NE",
-            "brier": null,
+            "brier": 0.1390130148173569,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_NE_DET",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 35,
             "home_team": "DET",
             "kickoff": "2026-11-15T14:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4665607491124054,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DET",
             "probability": 0.6271555085329047,
             "provenance": {
@@ -67516,7 +67538,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 10
           },
@@ -67638,14 +67660,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6363636363636364,
-          "brier": 0.2227927295484431,
+          "accuracy": 0.6444444444444445,
+          "brier": 0.2209309581099745,
           "cancelled": 0,
-          "correct": 28,
-          "games": 44,
+          "correct": 29,
+          "games": 45,
           "incorrect": 16,
-          "log_loss": 0.6349979142093444,
-          "pending": 13,
+          "log_loss": 0.6312548660960791,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -68132,6 +68154,17 @@
             "game_number": 44,
             "label": "WAS @ NYG",
             "log_loss": 0.6349979142093444
+          },
+          {
+            "accuracy": 0.6444444444444445,
+            "brier": 0.2209309581099745,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.1390130148173569,
+            "game_id": "2026_10_NE_DET",
+            "game_number": 45,
+            "label": "NE @ DET",
+            "log_loss": 0.6312548660960791
           }
         ],
         "weekly": [
@@ -68175,14 +68208,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.0,
-            "brier": 0.3016815553226647,
+            "accuracy": 0.5,
+            "brier": 0.2203472850700108,
             "cancelled": 0,
-            "correct": 0,
-            "games": 1,
+            "correct": 1,
+            "games": 2,
             "incorrect": 1,
-            "log_loss": 0.796854519984209,
-            "pending": 13,
+            "log_loss": 0.6317076345483073,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -68217,11 +68250,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 4,
-            "lower": 0.3006360524426366,
-            "observed": 0.75,
-            "predicted": 0.5608690765675087,
-            "upper": 0.9544139373553637
+            "games": 5,
+            "lower": 0.3755282641185388,
+            "observed": 0.8,
+            "predicted": 0.5637786508120594,
+            "upper": 0.9637768390302125
           },
           {
             "bin": "60\u201370%",
@@ -69758,21 +69791,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 10,
             "away_team": "NE",
-            "brier": null,
+            "brier": 0.1802707682237373,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_NE_DET",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 35,
             "home_team": "DET",
             "kickoff": "2026-11-15T14:30:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.5526603743702906,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DET",
             "probability": 0.5754169477902618,
             "provenance": {
@@ -69782,7 +69815,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 10
           },
@@ -69904,14 +69937,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.7272727272727273,
-          "brier": 0.20950958299502853,
+          "accuracy": 0.7333333333333333,
+          "brier": 0.20885983155566656,
           "cancelled": 0,
-          "correct": 32,
-          "games": 44,
+          "correct": 33,
+          "games": 45,
           "incorrect": 12,
-          "log_loss": 0.6071735376107198,
-          "pending": 13,
+          "log_loss": 0.6059621339831547,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -70398,6 +70431,17 @@
             "game_number": 44,
             "label": "WAS @ NYG",
             "log_loss": 0.6071735376107198
+          },
+          {
+            "accuracy": 0.7333333333333333,
+            "brier": 0.20885983155566656,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.1802707682237373,
+            "game_id": "2026_10_NE_DET",
+            "game_number": 45,
+            "label": "NE @ DET",
+            "log_loss": 0.6059621339831547
           }
         ],
         "weekly": [
@@ -70441,14 +70485,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.0,
-            "brier": 0.30845603907306823,
+            "accuracy": 0.5,
+            "brier": 0.24436340364840275,
             "cancelled": 0,
-            "correct": 0,
-            "games": 1,
+            "correct": 1,
+            "games": 2,
             "incorrect": 1,
-            "log_loss": 0.810553709502565,
-            "pending": 13,
+            "log_loss": 0.6816070419364277,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -70459,7 +70503,7 @@
   },
   "policy": "First verified pregame snapshot per game and model; ties excluded from binary metrics; historical experiments separate.",
   "schema_version": 1,
-  "snapshot_count": 59,
+  "snapshot_count": 60,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-15T14:59:11.677589+00:00"
+  "updated_at": "2026-11-15T19:23:59.044654+00:00"
 }

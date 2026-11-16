@@ -60237,11 +60237,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 14,
-            "lower": 0.11721187910109099,
-            "observed": 0.2857142857142857,
-            "predicted": 0.3562330735449698,
-            "upper": 0.5464954117248438
+            "games": 15,
+            "lower": 0.1089727610318281,
+            "observed": 0.26666666666666666,
+            "predicted": 0.35341624022881735,
+            "upper": 0.5195088965768675
           },
           {
             "bin": "40\u201350%",
@@ -60261,11 +60261,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 18,
-            "lower": 0.2903070395897999,
-            "observed": 0.5,
-            "predicted": 0.6455747660993675,
-            "upper": 0.7096929604102
+            "games": 19,
+            "lower": 0.31707482511825114,
+            "observed": 0.5263157894736842,
+            "predicted": 0.6439546472495493,
+            "upper": 0.7267049451255145
           },
           {
             "bin": "70\u201380%",
@@ -62243,21 +62243,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 18,
             "away_team": "PIT",
-            "brier": null,
+            "brier": 0.1483848119292765,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_PIT_CIN",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "CIN",
             "kickoff": "2026-11-16T01:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4864704535454577,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "CIN",
             "probability": 0.6147925079528223,
             "provenance": {
@@ -62267,7 +62267,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 10
           },
@@ -62301,21 +62301,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 46,
             "away_team": "SF",
-            "brier": null,
+            "brier": 0.09858380072546197,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_SF_DAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 40,
             "home_team": "DAL",
             "kickoff": "2026-11-15T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.37684933358531,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "SF",
             "probability": 0.31398057380268285,
             "provenance": {
@@ -62325,7 +62325,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 10
           },
@@ -62360,14 +62360,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6470588235294118,
-          "brier": 0.22410252203715209,
+          "accuracy": 0.6571428571428571,
+          "brier": 0.22122771587401543,
           "cancelled": 0,
-          "correct": 44,
-          "games": 68,
+          "correct": 46,
+          "games": 70,
           "incorrect": 24,
-          "log_loss": 0.6370439069861151,
-          "pending": 3,
+          "log_loss": 0.6311757923169513,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -63118,6 +63118,28 @@
             "game_number": 68,
             "label": "SEA @ LV",
             "log_loss": 0.6370439069861151
+          },
+          {
+            "accuracy": 0.6521739130434783,
+            "brier": 0.22228341013408412,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.09858380072546197,
+            "game_id": "2026_10_SF_DAL",
+            "game_number": 69,
+            "label": "SF @ DAL",
+            "log_loss": 0.6332729711397266
+          },
+          {
+            "accuracy": 0.6571428571428571,
+            "brier": 0.22122771587401543,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.1483848119292765,
+            "game_id": "2026_10_PIT_CIN",
+            "game_number": 70,
+            "label": "PIT @ CIN",
+            "log_loss": 0.6311757923169513
           }
         ],
         "weekly": [
@@ -63174,14 +63196,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.7272727272727273,
-            "brier": 0.19583112906563274,
+            "accuracy": 0.7692307692307693,
+            "brier": 0.18470084864436143,
             "cancelled": 0,
-            "correct": 8,
-            "games": 11,
+            "correct": 10,
+            "games": 13,
             "incorrect": 3,
-            "log_loss": 0.5760091057929005,
-            "pending": 3,
+            "log_loss": 0.5538015346809749,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -63208,11 +63230,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 13,
-            "lower": 0.12680497161618087,
-            "observed": 0.3076923076923077,
-            "predicted": 0.3585562986322791,
-            "upper": 0.5763111218666236
+            "games": 14,
+            "lower": 0.11721187910109099,
+            "observed": 0.2857142857142857,
+            "predicted": 0.3559457852695545,
+            "upper": 0.5464954117248438
           },
           {
             "bin": "40\u201350%",
@@ -63232,11 +63254,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 16,
-            "lower": 0.33178195606776517,
-            "observed": 0.5625,
-            "predicted": 0.6528313230865578,
-            "upper": 0.7690163666481448
+            "games": 17,
+            "lower": 0.36005074385515545,
+            "observed": 0.5882352941176471,
+            "predicted": 0.6506055691119761,
+            "upper": 0.7838921396086862
           },
           {
             "bin": "70\u201380%",
@@ -65214,21 +65236,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 18,
             "away_team": "PIT",
-            "brier": null,
+            "brier": 0.1482300007928021,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_PIT_CIN",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "CIN",
             "kickoff": "2026-11-16T01:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4861435713636211,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "CIN",
             "probability": 0.6149935055186704,
             "provenance": {
@@ -65238,7 +65260,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 10
           },
@@ -65272,21 +65294,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 46,
             "away_team": "SF",
-            "brier": null,
+            "brier": 0.10368986792388324,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_SF_DAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 40,
             "home_team": "DAL",
             "kickoff": "2026-11-15T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.38862143000244925,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "SF",
             "probability": 0.3220091115541348,
             "provenance": {
@@ -65296,7 +65318,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 10
           },
@@ -65331,14 +65353,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6617647058823529,
-          "brier": 0.2215982464314176,
+          "accuracy": 0.6714285714285714,
+          "brier": 0.21886572322932973,
           "cancelled": 0,
-          "correct": 45,
-          "games": 68,
+          "correct": 47,
+          "games": 70,
           "incorrect": 23,
-          "log_loss": 0.6318366771838587,
-          "pending": 3,
+          "log_loss": 0.6262808435695495,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -66089,6 +66111,28 @@
             "game_number": 68,
             "label": "SEA @ LV",
             "log_loss": 0.6318366771838587
+          },
+          {
+            "accuracy": 0.6666666666666666,
+            "brier": 0.21988942935159825,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.10368986792388324,
+            "game_id": "2026_10_SF_DAL",
+            "game_number": 69,
+            "label": "SF @ DAL",
+            "log_loss": 0.6283118185290557
+          },
+          {
+            "accuracy": 0.6714285714285714,
+            "brier": 0.21886572322932973,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.1482300007928021,
+            "game_id": "2026_10_PIT_CIN",
+            "game_number": 70,
+            "label": "PIT @ CIN",
+            "log_loss": 0.6262808435695495
           }
         ],
         "weekly": [
@@ -66145,14 +66189,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.7272727272727273,
-            "brier": 0.1817494009421331,
+            "accuracy": 0.7692307692307693,
+            "brier": 0.1731664060830884,
             "cancelled": 0,
-            "correct": 8,
-            "games": 11,
+            "correct": 10,
+            "games": 13,
             "incorrect": 3,
-            "log_loss": 0.5459340992047931,
-            "pending": 3,
+            "log_loss": 0.5292338532783687,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -66171,11 +66215,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 10,
-            "lower": 0.10778928748621183,
-            "observed": 0.3,
-            "predicted": 0.3544788960443918,
-            "upper": 0.6032267800204347
+            "games": 11,
+            "lower": 0.09745880573921467,
+            "observed": 0.2727272727272727,
+            "predicted": 0.350616608635707,
+            "upper": 0.5656502930102463
           },
           {
             "bin": "40\u201350%",
@@ -66203,11 +66247,11 @@
           },
           {
             "bin": "70\u201380%",
-            "games": 5,
-            "lower": 0.3755282641185388,
-            "observed": 0.8,
-            "predicted": 0.7547035022356247,
-            "upper": 0.9637768390302125
+            "games": 6,
+            "lower": 0.43649056343635395,
+            "observed": 0.8333333333333334,
+            "predicted": 0.7479512436709793,
+            "upper": 0.9699474141282697
           },
           {
             "bin": "80\u201390%",
@@ -67757,21 +67801,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 18,
             "away_team": "PIT",
-            "brier": null,
+            "brier": 0.08168738419641039,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_PIT_CIN",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "CIN",
             "kickoff": "2026-11-16T01:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.33660631442238675,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "CIN",
             "probability": 0.714189950847752,
             "provenance": {
@@ -67781,7 +67825,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 10
           },
@@ -67815,21 +67859,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 46,
             "away_team": "SF",
-            "brier": null,
+            "brier": 0.0973400903977436,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_SF_DAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 40,
             "home_team": "DAL",
             "kickoff": "2026-11-15T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.3739573343298797,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "SF",
             "probability": 0.31199373454885854,
             "provenance": {
@@ -67839,7 +67883,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 10
           },
@@ -67874,14 +67918,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6666666666666666,
-          "brier": 0.21340047833161066,
+          "accuracy": 0.6785714285714286,
+          "brier": 0.2089759518660916,
           "cancelled": 0,
-          "correct": 36,
-          "games": 54,
+          "correct": 38,
+          "games": 56,
           "incorrect": 18,
-          "log_loss": 0.6150796206472191,
-          "pending": 3,
+          "log_loss": 0.6058011279232518,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -68478,6 +68522,28 @@
             "game_number": 54,
             "label": "SEA @ LV",
             "log_loss": 0.6150796206472191
+          },
+          {
+            "accuracy": 0.6727272727272727,
+            "brier": 0.21129028946008582,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.0973400903977436,
+            "game_id": "2026_10_SF_DAL",
+            "game_number": 55,
+            "label": "SF @ DAL",
+            "log_loss": 0.6106955790778129
+          },
+          {
+            "accuracy": 0.6785714285714286,
+            "brier": 0.2089759518660916,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.08168738419641039,
+            "game_id": "2026_10_PIT_CIN",
+            "game_number": 56,
+            "label": "PIT @ CIN",
+            "log_loss": 0.6058011279232518
           }
         ],
         "weekly": [
@@ -68521,14 +68587,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.7272727272727273,
-            "brier": 0.1838570259180132,
+            "accuracy": 0.7692307692307693,
+            "brier": 0.16934267382248452,
             "cancelled": 0,
-            "correct": 8,
-            "games": 11,
+            "correct": 10,
+            "games": 13,
             "incorrect": 3,
-            "log_loss": 0.551931437247535,
-            "pending": 3,
+            "log_loss": 0.5216776506519347,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -68555,11 +68621,11 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 11,
-            "lower": 0.09745880573921467,
-            "observed": 0.2727272727272727,
-            "predicted": 0.3564969537669152,
-            "upper": 0.5656502930102463
+            "games": 12,
+            "lower": 0.08894003962896138,
+            "observed": 0.25,
+            "predicted": 0.3540925050363335,
+            "upper": 0.53231033912066
           },
           {
             "bin": "40\u201350%",
@@ -68579,11 +68645,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 16,
-            "lower": 0.33178195606776517,
-            "observed": 0.5625,
-            "predicted": 0.6496904707113378,
-            "upper": 0.7690163666481448
+            "games": 17,
+            "lower": 0.36005074385515545,
+            "observed": 0.5882352941176471,
+            "predicted": 0.6485099571377874,
+            "upper": 0.7838921396086862
           },
           {
             "bin": "70\u201380%",
@@ -70141,21 +70207,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 18,
             "away_team": "PIT",
-            "brier": null,
+            "brier": 0.13718005550953197,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_PIT_CIN",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "CIN",
             "kickoff": "2026-11-16T01:20:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4626360526768306,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "CIN",
             "probability": 0.6296217399609799,
             "provenance": {
@@ -70165,7 +70231,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 10
           },
@@ -70199,21 +70265,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 46,
             "away_team": "SF",
-            "brier": null,
+            "brier": 0.10735030830701543,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-15",
             "game_id": "2026_10_SF_DAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 40,
             "home_team": "DAL",
             "kickoff": "2026-11-15T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.3969666757991791,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "SF",
             "probability": 0.3276435689999354,
             "provenance": {
@@ -70223,7 +70289,7 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 10
           },
@@ -70258,14 +70324,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.7407407407407407,
-          "brier": 0.2023390216734411,
+          "accuracy": 0.75,
+          "brier": 0.19947924168182798,
           "cancelled": 0,
-          "correct": 40,
-          "games": 54,
+          "correct": 42,
+          "games": 56,
           "incorrect": 14,
-          "log_loss": 0.5915570321358179,
-          "pending": 3,
+          "log_loss": 0.5857800439966102,
+          "pending": 1,
           "ties": 0
         },
         "trend": [
@@ -70862,6 +70928,28 @@
             "game_number": 54,
             "label": "SEA @ LV",
             "log_loss": 0.5915570321358179
+          },
+          {
+            "accuracy": 0.7454545454545455,
+            "brier": 0.2006119541576879,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.10735030830701543,
+            "game_id": "2026_10_SF_DAL",
+            "game_number": 55,
+            "label": "SF @ DAL",
+            "log_loss": 0.5880190256569698
+          },
+          {
+            "accuracy": 0.75,
+            "brier": 0.19947924168182798,
+            "correct": true,
+            "date": "2026-11-15",
+            "game_brier": 0.13718005550953197,
+            "game_id": "2026_10_PIT_CIN",
+            "game_number": 56,
+            "label": "PIT @ CIN",
+            "log_loss": 0.5857800439966102
           }
         ],
         "weekly": [
@@ -70905,14 +70993,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.7272727272727273,
-            "brier": 0.1833037779688755,
+            "accuracy": 0.7692307692307693,
+            "brier": 0.1739132247287829,
             "cancelled": 0,
-            "correct": 8,
-            "games": 11,
+            "correct": 10,
+            "games": 13,
             "incorrect": 3,
-            "log_loss": 0.5489997990877327,
-            "pending": 3,
+            "log_loss": 0.5306615783416206,
+            "pending": 1,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -70925,5 +71013,5 @@
   "schema_version": 1,
   "snapshot_count": 60,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-16T00:20:57.388853+00:00"
+  "updated_at": "2026-11-16T07:12:34.887128+00:00"
 }

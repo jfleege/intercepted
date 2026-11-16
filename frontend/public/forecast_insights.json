@@ -12836,21 +12836,9 @@
       "week": 10
     }
   ],
-  "exported_at": "2026-11-16T00:20:59.916024+00:00",
+  "exported_at": "2026-11-16T07:12:36.800272+00:00",
   "monitoring": {
     "alerts": [
-      {
-        "game_id": "2026_10_PIT_CIN",
-        "id": "availability_watch:2026_10_PIT_CIN:00-0038619",
-        "message": "Andrei Iosivas: Doubtful (Thumb). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_PIT_CIN",
-        "id": "reported_out:2026_10_PIT_CIN:00-0041490",
-        "message": "Eli Heidenreich is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
       {
         "game_id": "2026_10_LAC_BAL",
         "id": "availability_watch:2026_10_LAC_BAL:00-0033885",
@@ -12871,20 +12859,20 @@
       },
       {
         "id": "availability_coverage",
-        "message": "12 of 484 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "8 of 484 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 12,
+      "reported": 8,
       "tracked": 484
     },
     "calibration": [
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 189,
+        "samples": 263,
         "status": "sample_building",
         "target": "any_td",
         "version": "1b2023548dbd5cee",
@@ -12911,7 +12899,7 @@
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 1,
+        "samples": 2,
         "status": "sample_building",
         "target": "any_td",
         "version": "ab96044d0f5806a1",
@@ -12929,7 +12917,7 @@
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 15,
+        "samples": 21,
         "status": "sample_building",
         "target": "pass_td",
         "version": "1b2023548dbd5cee",
@@ -12965,7 +12953,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 54,
+        "samples": 56,
         "status": "sample_building",
         "target": "winner:v4_a",
         "version": "ac161c2fa5d3",
@@ -12983,7 +12971,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 54,
+        "samples": 56,
         "status": "sample_building",
         "target": "winner:v4_qb_plus",
         "version": "ac161c2fa5d3",
@@ -13001,7 +12989,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 54,
+        "samples": 56,
         "status": "sample_building",
         "target": "winner:v5_boosted",
         "version": "ac161c2fa5d3",
@@ -13010,14 +12998,14 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 54,
+        "samples": 56,
         "status": "sample_building",
         "target": "winner:v5_qb_plus",
         "version": "ac161c2fa5d3",
         "windows": []
       }
     ],
-    "checked_at": "2026-11-16T00:20:59.916024+00:00",
+    "checked_at": "2026-11-16T07:12:36.800272+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,

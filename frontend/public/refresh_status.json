@@ -2,13 +2,13 @@
   "active_season": 2026,
   "active_week": 10,
   "attempt": {
-    "completed_at": "2026-11-16T00:21:00.273652+00:00",
-    "mode": "pregame",
-    "started_at": "2026-11-16T00:20:51.857250+00:00",
+    "completed_at": "2026-11-16T07:12:37.046449+00:00",
+    "mode": "results",
+    "started_at": "2026-11-16T07:12:32.508419+00:00",
     "state": "success",
     "steps": {
       "directory": "skipped",
-      "forecast": "success",
+      "forecast": "skipped",
       "history": "success",
       "insights": "success",
       "markets": "success",
@@ -33,12 +33,12 @@
     "target_season": 2026,
     "target_week": 10
   },
-  "last_results_refresh_at": "2026-11-16T00:21:00.273652+00:00",
+  "last_results_refresh_at": "2026-11-16T07:12:37.046449+00:00",
   "last_successful_refresh_at": "2026-11-15T21:54:38.308603+00:00",
   "next_forecast_check_at": "2026-11-16T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-17T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-16T00:21:00.273652+00:00",
+  "snapshot_at": "2026-11-16T07:12:37.046449+00:00",
   "sources": [
     {
       "features_through_week": 9,
@@ -78,20 +78,20 @@
       "id": "results",
       "label": "Game results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-16T00:20:57.388853+00:00"
+      "updated_at": "2026-11-16T07:12:34.887128+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-16T00:20:58.080348+00:00"
+      "updated_at": "2026-11-16T07:12:35.459852+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-16T00:20:59.916024+00:00",
+      "updated_at": "2026-11-16T07:12:36.800272+00:00",
       "week": 10
     },
     {
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-15T19:24:43.676617+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43779722373"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43822085485"
 }

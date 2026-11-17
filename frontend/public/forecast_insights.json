@@ -12878,49 +12878,25 @@
       "week": 10
     }
   ],
-  "exported_at": "2026-11-17T00:52:07.452696+00:00",
+  "exported_at": "2026-11-17T09:05:13.180380+00:00",
   "monitoring": {
     "alerts": [
       {
-        "game_id": "2026_10_LAC_BAL",
-        "id": "availability_watch:2026_10_LAC_BAL:00-0033885",
-        "message": "David Njoku: Questionable (Fibula). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_LAC_BAL",
-        "id": "availability_watch:2026_10_LAC_BAL:00-0039915",
-        "message": "Ladd McConkey: Questionable (Back). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_LAC_BAL",
-        "id": "reported_out:2026_10_LAC_BAL:00-0040876",
-        "message": "Elijah Sarratt is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
-      {
-        "game_id": "2026_10_LAC_BAL",
-        "id": "availability_watch:2026_10_LAC_BAL:00-0041550",
-        "message": "Brenen Thompson: Doubtful (Hamstring). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
-        "severity": "watch"
-      },
-      {
         "id": "availability_coverage",
-        "message": "9 of 484 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "0 of 484 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 9,
+      "reported": 0,
       "tracked": 484
     },
     "calibration": [
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 263,
+        "samples": 282,
         "status": "sample_building",
         "target": "any_td",
         "version": "1b2023548dbd5cee",
@@ -12947,7 +12923,7 @@
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 2,
+        "samples": 3,
         "status": "sample_building",
         "target": "any_td",
         "version": "ab96044d0f5806a1",
@@ -12965,7 +12941,7 @@
       {
         "family": "touchdowns",
         "minimum": 500,
-        "samples": 21,
+        "samples": 22,
         "status": "sample_building",
         "target": "pass_td",
         "version": "1b2023548dbd5cee",
@@ -12992,6 +12968,15 @@
       {
         "family": "touchdowns",
         "minimum": 500,
+        "samples": 1,
+        "status": "sample_building",
+        "target": "pass_td",
+        "version": "ab96044d0f5806a1",
+        "windows": []
+      },
+      {
+        "family": "touchdowns",
+        "minimum": 500,
         "samples": 24,
         "status": "sample_building",
         "target": "pass_td",
@@ -13001,7 +12986,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 56,
+        "samples": 57,
         "status": "sample_building",
         "target": "winner:v4_a",
         "version": "ac161c2fa5d3",
@@ -13019,7 +13004,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 56,
+        "samples": 57,
         "status": "sample_building",
         "target": "winner:v4_qb_plus",
         "version": "ac161c2fa5d3",
@@ -13037,7 +13022,7 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 56,
+        "samples": 57,
         "status": "sample_building",
         "target": "winner:v5_boosted",
         "version": "ac161c2fa5d3",
@@ -13046,14 +13031,14 @@
       {
         "family": "winners",
         "minimum": 100,
-        "samples": 56,
+        "samples": 57,
         "status": "sample_building",
         "target": "winner:v5_qb_plus",
         "version": "ac161c2fa5d3",
         "windows": []
       }
     ],
-    "checked_at": "2026-11-17T00:52:07.452696+00:00",
+    "checked_at": "2026-11-17T09:05:13.180380+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,

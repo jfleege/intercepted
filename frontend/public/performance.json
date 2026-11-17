@@ -60269,11 +60269,11 @@
           },
           {
             "bin": "70\u201380%",
-            "games": 5,
-            "lower": 0.23071993220883708,
-            "observed": 0.6,
-            "predicted": 0.7512361198920958,
-            "upper": 0.8823817688407467
+            "games": 6,
+            "lower": 0.18761280689940868,
+            "observed": 0.5,
+            "predicted": 0.7497467469918438,
+            "upper": 0.8123871931005913
           },
           {
             "bin": "80\u201390%",
@@ -62330,21 +62330,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 23,
             "away_team": "LAC",
-            "brier": null,
+            "brier": 0.5510091155455343,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-16",
             "game_id": "2026_10_LAC_BAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 20,
             "home_team": "BAL",
             "kickoff": "2026-11-17T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.355958705330843,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "BAL",
             "probability": 0.7422998824905837,
             "provenance": {
@@ -62354,20 +62354,20 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 10
           }
         ],
         "summary": {
-          "accuracy": 0.6571428571428571,
-          "brier": 0.22122771587401543,
+          "accuracy": 0.647887323943662,
+          "brier": 0.22587252432009314,
           "cancelled": 0,
           "correct": 46,
-          "games": 70,
-          "incorrect": 24,
-          "log_loss": 0.6311757923169513,
-          "pending": 1,
+          "games": 71,
+          "incorrect": 25,
+          "log_loss": 0.6413840023594005,
+          "pending": 0,
           "ties": 0
         },
         "trend": [
@@ -63140,6 +63140,17 @@
             "game_number": 70,
             "label": "PIT @ CIN",
             "log_loss": 0.6311757923169513
+          },
+          {
+            "accuracy": 0.647887323943662,
+            "brier": 0.22587252432009314,
+            "correct": false,
+            "date": "2026-11-16",
+            "game_brier": 0.5510091155455343,
+            "game_id": "2026_10_LAC_BAL",
+            "game_number": 71,
+            "label": "LAC @ BAL",
+            "log_loss": 0.6413840023594005
           }
         ],
         "weekly": [
@@ -63196,14 +63207,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.7692307692307693,
-            "brier": 0.18470084864436143,
+            "accuracy": 0.7142857142857143,
+            "brier": 0.21086572485158808,
             "cancelled": 0,
             "correct": 10,
-            "games": 13,
-            "incorrect": 3,
-            "log_loss": 0.5538015346809749,
-            "pending": 1,
+            "games": 14,
+            "incorrect": 4,
+            "log_loss": 0.6110984754416798,
+            "pending": 0,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -63254,11 +63265,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 17,
-            "lower": 0.36005074385515545,
-            "observed": 0.5882352941176471,
-            "predicted": 0.6506055691119761,
-            "upper": 0.7838921396086862
+            "games": 18,
+            "lower": 0.3371606942825164,
+            "observed": 0.5555555555555556,
+            "predicted": 0.6486222496561607,
+            "upper": 0.7544076889861088
           },
           {
             "bin": "70\u201380%",
@@ -65323,21 +65334,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 23,
             "away_team": "LAC",
-            "brier": null,
+            "brier": 0.3781091661260559,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-16",
             "game_id": "2026_10_LAC_BAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 20,
             "home_team": "BAL",
             "kickoff": "2026-11-17T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.9542673483956585,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "BAL",
             "probability": 0.6149058189072989,
             "provenance": {
@@ -65347,20 +65358,20 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 10
           }
         ],
         "summary": {
-          "accuracy": 0.6714285714285714,
-          "brier": 0.21886572322932973,
+          "accuracy": 0.6619718309859155,
+          "brier": 0.22110858862224136,
           "cancelled": 0,
           "correct": 47,
-          "games": 70,
-          "incorrect": 23,
-          "log_loss": 0.6262808435695495,
-          "pending": 1,
+          "games": 71,
+          "incorrect": 24,
+          "log_loss": 0.630900371806537,
+          "pending": 0,
           "ties": 0
         },
         "trend": [
@@ -66133,6 +66144,17 @@
             "game_number": 70,
             "label": "PIT @ CIN",
             "log_loss": 0.6262808435695495
+          },
+          {
+            "accuracy": 0.6619718309859155,
+            "brier": 0.22110858862224136,
+            "correct": false,
+            "date": "2026-11-16",
+            "game_brier": 0.3781091661260559,
+            "game_id": "2026_10_LAC_BAL",
+            "game_number": 71,
+            "label": "LAC @ BAL",
+            "log_loss": 0.630900371806537
           }
         ],
         "weekly": [
@@ -66189,14 +66211,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.7692307692307693,
-            "brier": 0.1731664060830884,
+            "accuracy": 0.7142857142857143,
+            "brier": 0.18780517465758612,
             "cancelled": 0,
             "correct": 10,
-            "games": 13,
-            "incorrect": 3,
-            "log_loss": 0.5292338532783687,
-            "pending": 1,
+            "games": 14,
+            "incorrect": 4,
+            "log_loss": 0.5595933886438894,
+            "pending": 0,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -66239,11 +66261,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 10,
-            "lower": 0.23658959361548731,
-            "observed": 0.5,
-            "predicted": 0.6535405715495688,
-            "upper": 0.7634104063845126
+            "games": 11,
+            "lower": 0.21270957543988045,
+            "observed": 0.45454545454545453,
+            "predicted": 0.6524380320111228,
+            "upper": 0.7199122443100118
           },
           {
             "bin": "70\u201380%",
@@ -67888,21 +67910,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 23,
             "away_team": "LAC",
-            "brier": null,
+            "brier": 0.4114101704243692,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-16",
             "game_id": "2026_10_LAC_BAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 20,
             "home_team": "BAL",
             "kickoff": "2026-11-17T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.0255829572124406,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "BAL",
             "probability": 0.6414126366266643,
             "provenance": {
@@ -67912,20 +67934,20 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 10
           }
         ],
         "summary": {
-          "accuracy": 0.6785714285714286,
-          "brier": 0.2089759518660916,
+          "accuracy": 0.6666666666666666,
+          "brier": 0.21252742938465788,
           "cancelled": 0,
           "correct": 38,
-          "games": 56,
-          "incorrect": 18,
-          "log_loss": 0.6058011279232518,
-          "pending": 1,
+          "games": 57,
+          "incorrect": 19,
+          "log_loss": 0.6131657214195533,
+          "pending": 0,
           "ties": 0
         },
         "trend": [
@@ -68544,6 +68566,17 @@
             "game_number": 56,
             "label": "PIT @ CIN",
             "log_loss": 0.6058011279232518
+          },
+          {
+            "accuracy": 0.6666666666666666,
+            "brier": 0.21252742938465788,
+            "correct": false,
+            "date": "2026-11-16",
+            "game_brier": 0.4114101704243692,
+            "game_id": "2026_10_LAC_BAL",
+            "game_number": 57,
+            "label": "LAC @ BAL",
+            "log_loss": 0.6131657214195533
           }
         ],
         "weekly": [
@@ -68587,14 +68620,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.7692307692307693,
-            "brier": 0.16934267382248452,
+            "accuracy": 0.7142857142857143,
+            "brier": 0.18663320929404772,
             "cancelled": 0,
             "correct": 10,
-            "games": 13,
-            "incorrect": 3,
-            "log_loss": 0.5216776506519347,
-            "pending": 1,
+            "games": 14,
+            "incorrect": 4,
+            "log_loss": 0.557670886834828,
+            "pending": 0,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -68645,11 +68678,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 17,
-            "lower": 0.36005074385515545,
-            "observed": 0.5882352941176471,
-            "predicted": 0.6485099571377874,
-            "upper": 0.7838921396086862
+            "games": 18,
+            "lower": 0.3371606942825164,
+            "observed": 0.5555555555555556,
+            "predicted": 0.6477919416891516,
+            "upper": 0.7544076889861088
           },
           {
             "bin": "70\u201380%",
@@ -70294,21 +70327,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 23,
             "away_team": "LAC",
-            "brier": null,
+            "brier": 0.4039691554291409,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-16",
             "game_id": "2026_10_LAC_BAL",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 20,
             "home_team": "BAL",
             "kickoff": "2026-11-17T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.0094638143201082,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "BAL",
             "probability": 0.635585679062344,
             "provenance": {
@@ -70318,20 +70351,20 @@
             "saved_at": "2026-11-10T18:27:04.787960+00:00",
             "season": 2026,
             "snapshot_id": "5c93ee8af2e3d72377b16683046ee4b05f5f7517fc2829caba44f79860d07261",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 10
           }
         ],
         "summary": {
-          "accuracy": 0.75,
-          "brier": 0.19947924168182798,
+          "accuracy": 0.7368421052631579,
+          "brier": 0.20306678402827208,
           "cancelled": 0,
           "correct": 42,
-          "games": 56,
-          "incorrect": 14,
-          "log_loss": 0.5857800439966102,
-          "pending": 1,
+          "games": 57,
+          "incorrect": 15,
+          "log_loss": 0.5932130925987769,
+          "pending": 0,
           "ties": 0
         },
         "trend": [
@@ -70950,6 +70983,17 @@
             "game_number": 56,
             "label": "PIT @ CIN",
             "log_loss": 0.5857800439966102
+          },
+          {
+            "accuracy": 0.7368421052631579,
+            "brier": 0.20306678402827208,
+            "correct": false,
+            "date": "2026-11-16",
+            "game_brier": 0.4039691554291409,
+            "game_id": "2026_10_LAC_BAL",
+            "game_number": 57,
+            "label": "LAC @ BAL",
+            "log_loss": 0.5932130925987769
           }
         ],
         "weekly": [
@@ -70993,14 +71037,14 @@
             "week": 9
           },
           {
-            "accuracy": 0.7692307692307693,
-            "brier": 0.1739132247287829,
+            "accuracy": 0.7142857142857143,
+            "brier": 0.1903457912073799,
             "cancelled": 0,
             "correct": 10,
-            "games": 13,
-            "incorrect": 3,
-            "log_loss": 0.5306615783416206,
-            "pending": 1,
+            "games": 14,
+            "incorrect": 4,
+            "log_loss": 0.5648617380543698,
+            "pending": 0,
             "season": 2026,
             "ties": 0,
             "week": 10
@@ -71013,5 +71057,5 @@
   "schema_version": 1,
   "snapshot_count": 61,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-17T00:51:50.278789+00:00"
+  "updated_at": "2026-11-17T09:05:10.351352+00:00"
 }

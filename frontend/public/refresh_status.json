@@ -2,9 +2,9 @@
   "active_season": 2026,
   "active_week": 10,
   "attempt": {
-    "completed_at": "2026-11-16T22:56:00.087504+00:00",
+    "completed_at": "2026-11-17T00:52:22.586526+00:00",
     "mode": "full",
-    "started_at": "2026-11-16T22:55:22.176111+00:00",
+    "started_at": "2026-11-17T00:51:40.946030+00:00",
     "state": "success",
     "steps": {
       "directory": "success",
@@ -12,7 +12,7 @@
       "history": "success",
       "insights": "success",
       "markets": "success",
-      "odds": "success",
+      "odds": "skipped",
       "players": "success",
       "position_defense": "success",
       "pre_rollover": "skipped",
@@ -27,25 +27,25 @@
   "forecast_check": {
     "active_season": 2026,
     "active_week": 10,
-    "checked_at": "2026-11-16T22:55:25.980734+00:00",
+    "checked_at": "2026-11-17T00:51:49.118428+00:00",
     "message": "Published slate uses limited QB tracking inputs. LV: Fernando Mendoza has insufficient NFL tracking history. Missing QB inputs use the trained model treatment.",
     "state": "current_limited_qb",
     "target_season": 2026,
     "target_week": 10
   },
   "last_results_refresh_at": "2026-11-16T17:29:41.644282+00:00",
-  "last_successful_refresh_at": "2026-11-16T22:56:00.087504+00:00",
+  "last_successful_refresh_at": "2026-11-17T00:52:22.586526+00:00",
   "next_forecast_check_at": "2026-11-17T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-17T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-16T22:56:00.087504+00:00",
+  "snapshot_at": "2026-11-17T00:52:22.586526+00:00",
   "sources": [
     {
       "features_through_week": 9,
       "id": "forecasts",
       "label": "Game forecasts",
       "season": 2026,
-      "updated_at": "2026-11-16T00:20:55.867318+00:00",
+      "updated_at": "2026-11-17T00:51:49.111891+00:00",
       "week": 10
     },
     {
@@ -53,7 +53,7 @@
       "label": "Player cards",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-16T22:55:29.139281+00:00",
+      "updated_at": "2026-11-17T00:51:51.507516+00:00",
       "week": 10
     },
     {
@@ -62,7 +62,7 @@
       "refresh_outcome": "success",
       "season": 2026,
       "through_week": 9,
-      "updated_at": "2026-11-16T22:55:33.000356+00:00",
+      "updated_at": "2026-11-17T00:52:04.130598+00:00",
       "week": 10
     },
     {
@@ -71,27 +71,27 @@
       "label": "Matchup projections",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-16T17:29:15.917357+00:00",
+      "updated_at": "2026-11-17T00:52:02.178259+00:00",
       "week": 10
     },
     {
       "id": "results",
       "label": "Game results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-16T22:55:27.609363+00:00"
+      "updated_at": "2026-11-17T00:51:50.278789+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-16T22:55:34.338511+00:00"
+      "updated_at": "2026-11-17T00:52:05.175551+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-16T22:55:37.230266+00:00",
+      "updated_at": "2026-11-17T00:52:07.452696+00:00",
       "week": 10
     },
     {
@@ -99,15 +99,15 @@
       "label": "Defense vs positions",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-16T22:55:33.880177+00:00",
+      "updated_at": "2026-11-17T00:52:04.865275+00:00",
       "week": 10
     },
     {
       "id": "odds",
       "label": "Sportsbook lines",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "updated_at": "2026-11-16T22:55:59.865300+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43974494327"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/43990932059"
 }

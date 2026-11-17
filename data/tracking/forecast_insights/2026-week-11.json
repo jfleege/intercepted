@@ -1,5 +1,27 @@
 {
-  "events": [],
+  "events": [
+    {
+      "after": 0.47675066316467124,
+      "before": 0.47675066316467135,
+      "delta": -1.1102230246251565e-16,
+      "field": "home_win_prob_v5_qb_plus",
+      "game_id": "2026_11_NYJ_LAC",
+      "id": "c6febc99c1ec5220457ee07a",
+      "label": "v5_qb_plus home win",
+      "matchup": "NYJ @ LAC",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-17T18:30:06.479845+00:00",
+      "reasons": [
+        "Saved value changed; no cause was provided by the source."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-17T18:30:10.497267+00:00",
+      "unit": "probability",
+      "week": 11
+    }
+  ],
   "games": {
     "2026_11_ARI_KC": {
       "away_team": "ARI",
@@ -7,7 +29,7 @@
       "home_team": "KC",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0041561",
         "00-0033873"
@@ -740,7 +762,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038134:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Kenneth Walker III game status",
           "player_id": "00-0038134",
           "source": "https://www.espn.com/nfl/injuries",
@@ -756,7 +778,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038134:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Kenneth Walker III practice",
           "player_id": "00-0038134",
           "unit": "status",
@@ -1387,7 +1409,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040959:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jaydn Ott game status",
           "player_id": "00-0040959",
           "source": "https://www.espn.com/nfl/injuries",
@@ -1395,7 +1417,7 @@
           "value": "Questionable"
         },
         "00-0040959:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jaydn Ott practice",
           "player_id": "00-0040959",
           "unit": "status",
@@ -1661,25 +1683,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.7895462129002402
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.880952032075188
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.8079763039618187
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.8733909408246417
@@ -1699,7 +1721,7 @@
       "home_team": "CAR",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0033119",
         "00-0039150"
@@ -3325,25 +3347,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.5098233156814239
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.5326059864021134
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.571214237493642
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.5174041840157703
@@ -3363,7 +3385,7 @@
       "home_team": "WAS",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-24T01:15:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0036442",
         "00-0039910"
@@ -4402,7 +4424,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039686:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Colson Yankoff game status",
           "player_id": "00-0039686",
           "source": "https://www.espn.com/nfl/injuries",
@@ -4418,7 +4440,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039686:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Colson Yankoff practice",
           "player_id": "00-0039686",
           "unit": "status",
@@ -4686,7 +4708,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040242:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jacory Croskey-Merritt game status",
           "player_id": "00-0040242",
           "source": "https://www.espn.com/nfl/injuries",
@@ -4702,7 +4724,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040242:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jacory Croskey-Merritt practice",
           "player_id": "00-0040242",
           "unit": "status",
@@ -5037,25 +5059,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.34378790923089625
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.30187444310813766
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.304887365019123
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.3012163338120441
@@ -5075,7 +5097,7 @@
       "home_team": "HOU",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-20T01:15:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0035710",
         "00-0039163"
@@ -5645,7 +5667,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036556:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Brevin Jordan game status",
           "player_id": "00-0036556",
           "source": "https://www.espn.com/nfl/injuries",
@@ -5661,7 +5683,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036556:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Brevin Jordan practice",
           "player_id": "00-0036556",
           "unit": "status",
@@ -5799,7 +5821,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038394:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Will Mallory game status",
           "player_id": "00-0038394",
           "source": "https://www.espn.com/nfl/injuries",
@@ -5815,7 +5837,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038394:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Will Mallory practice",
           "player_id": "00-0038394",
           "unit": "status",
@@ -6255,7 +6277,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039816:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Anthony Gould game status",
           "player_id": "00-0039816",
           "source": "https://www.espn.com/nfl/injuries",
@@ -6271,7 +6293,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039816:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Anthony Gould practice",
           "player_id": "00-0039816",
           "unit": "status",
@@ -6301,7 +6323,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039849:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Marvin Harrison Jr. game status",
           "player_id": "00-0039849",
           "source": "https://www.espn.com/nfl/injuries",
@@ -6317,7 +6339,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039849:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Marvin Harrison Jr. practice",
           "player_id": "00-0039849",
           "unit": "status",
@@ -6478,7 +6500,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040583:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Woody Marks game status",
           "player_id": "00-0040583",
           "source": "https://www.espn.com/nfl/injuries",
@@ -6494,7 +6516,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040583:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Woody Marks practice",
           "player_id": "00-0040583",
           "unit": "status",
@@ -6698,25 +6720,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.6242967626917258
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.5676203158761037
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.7001804553518806
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.591251922533171
@@ -6736,7 +6758,7 @@
       "home_team": "NYG",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0036971",
         "00-0039923"
@@ -8318,25 +8340,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.2962308899262806
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.28639344095982333
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.32573065591154454
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.279127774160213
@@ -8356,7 +8378,7 @@
       "home_team": "DEN",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T21:25:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0041562",
         "00-0039732"
@@ -9102,7 +9124,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039338:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Brock Bowers game status",
           "player_id": "00-0039338",
           "source": "https://www.espn.com/nfl/injuries",
@@ -9118,7 +9140,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039338:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Brock Bowers practice",
           "player_id": "00-0039338",
           "unit": "status",
@@ -9737,25 +9759,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.669724369223704
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.7498696499392152
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.7048066684355755
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.7484013542297324
@@ -9775,7 +9797,7 @@
       "home_team": "BUF",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0040014",
         "00-0034857"
@@ -10360,7 +10382,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0038128:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Malik Willis game status",
           "player_id": "00-0038128",
           "source": "https://www.espn.com/nfl/injuries",
@@ -10368,7 +10390,7 @@
           "value": "Injured Reserve"
         },
         "00-0038128:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Malik Willis practice",
           "player_id": "00-0038128",
           "unit": "status",
@@ -10398,7 +10420,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038728:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jared Wayne game status",
           "player_id": "00-0038728",
           "source": "https://www.espn.com/nfl/injuries",
@@ -10414,7 +10436,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038728:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jared Wayne practice",
           "player_id": "00-0038728",
           "unit": "status",
@@ -11173,7 +11195,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041525:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Chris Bell game status",
           "player_id": "00-0041525",
           "source": "https://www.espn.com/nfl/injuries",
@@ -11189,7 +11211,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041525:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Chris Bell practice",
           "player_id": "00-0041525",
           "unit": "status",
@@ -11347,25 +11369,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.8124958324436135
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.8732257558289355
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.8478569310578437
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.8698177554215962
@@ -11385,7 +11407,7 @@
       "home_team": "SF",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-23T01:20:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0029604",
         "00-0037834"
@@ -11534,7 +11556,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0031408:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Mike Evans game status",
           "player_id": "00-0031408",
           "source": "https://www.espn.com/nfl/injuries",
@@ -11550,7 +11572,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0031408:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Mike Evans practice",
           "player_id": "00-0031408",
           "unit": "status",
@@ -11832,7 +11854,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035228:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Kyler Murray game status",
           "player_id": "00-0035228",
           "source": "https://www.espn.com/nfl/injuries",
@@ -11840,7 +11862,7 @@
           "value": "Out"
         },
         "00-0035228:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Kyler Murray practice",
           "player_id": "00-0035228",
           "unit": "status",
@@ -11870,7 +11892,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0035229:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "T.J. Hockenson game status",
           "player_id": "00-0035229",
           "source": "https://www.espn.com/nfl/injuries",
@@ -11886,7 +11908,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0035229:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "T.J. Hockenson practice",
           "player_id": "00-0035229",
           "unit": "status",
@@ -12008,7 +12030,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036259:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jauan Jennings game status",
           "player_id": "00-0036259",
           "source": "https://www.espn.com/nfl/injuries",
@@ -12024,7 +12046,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036259:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jauan Jennings practice",
           "player_id": "00-0036259",
           "unit": "status",
@@ -12361,7 +12383,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038994:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jordan Addison game status",
           "player_id": "00-0038994",
           "source": "https://www.espn.com/nfl/injuries",
@@ -12377,7 +12399,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038994:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jordan Addison practice",
           "player_id": "00-0038994",
           "unit": "status",
@@ -12972,25 +12994,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.8005756309282206
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.7534399697667522
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.8008365755616543
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.774068291944335
@@ -13010,7 +13032,7 @@
       "home_team": "CHI",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0040743",
         "00-0039918"
@@ -14074,7 +14096,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040236:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Kyle Monangai game status",
           "player_id": "00-0040236",
           "source": "https://www.espn.com/nfl/injuries",
@@ -14090,7 +14112,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040236:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Kyle Monangai practice",
           "player_id": "00-0040236",
           "unit": "status",
@@ -14166,7 +14188,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040735:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Luther Burden III game status",
           "player_id": "00-0040735",
           "source": "https://www.espn.com/nfl/injuries",
@@ -14182,7 +14204,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040735:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Luther Burden III practice",
           "player_id": "00-0040735",
           "unit": "status",
@@ -14473,7 +14495,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041326:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "CJ Donaldson game status",
           "player_id": "00-0041326",
           "source": "https://www.espn.com/nfl/injuries",
@@ -14489,7 +14511,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041326:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "CJ Donaldson practice",
           "player_id": "00-0041326",
           "unit": "status",
@@ -14601,25 +14623,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.7155911959609116
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.732510662489005
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.7476803909798063
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.7373822399794404
@@ -14639,7 +14661,7 @@
       "home_team": "LAC",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T21:05:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0030565",
         "00-0036355"
@@ -14656,7 +14678,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0030565:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Geno Smith game status",
           "player_id": "00-0030565",
           "source": "https://www.espn.com/nfl/injuries",
@@ -14680,7 +14702,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0030565:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Geno Smith practice",
           "player_id": "00-0030565",
           "unit": "status",
@@ -15640,7 +15662,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039915:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Ladd McConkey game status",
           "player_id": "00-0039915",
           "source": "https://www.espn.com/nfl/injuries",
@@ -15656,7 +15678,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039915:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Ladd McConkey practice",
           "player_id": "00-0039915",
           "unit": "status",
@@ -16185,7 +16207,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041511:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Omar Cooper Jr. game status",
           "player_id": "00-0041511",
           "source": "https://www.espn.com/nfl/injuries",
@@ -16201,7 +16223,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041511:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Omar Cooper Jr. practice",
           "player_id": "00-0041511",
           "unit": "status",
@@ -16223,7 +16245,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0041550:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Brenen Thompson game status",
           "player_id": "00-0041550",
           "source": "https://www.espn.com/nfl/injuries",
@@ -16231,7 +16253,7 @@
           "value": "Questionable"
         },
         "00-0041550:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Brenen Thompson practice",
           "player_id": "00-0041550",
           "unit": "status",
@@ -16253,7 +16275,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "away_qb": {
-          "at": "2026-11-17T18:22:05.567825+00:00",
+          "at": "2026-11-17T18:30:10.389210+00:00",
           "display": "Geno Smith",
           "label": "NYJ projected QB",
           "source": "Latest prior-week primary passer; not a starter announcement",
@@ -16261,7 +16283,7 @@
           "value": "00-0030565"
         },
         "away_qb_status": {
-          "at": "2026-11-17T18:22:05.567825+00:00",
+          "at": "2026-11-17T18:30:10.389210+00:00",
           "label": "NYJ QB confirmation",
           "source": "Latest prior-week primary passer; not a starter announcement",
           "unit": "status",
@@ -16275,7 +16297,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "home_qb": {
-          "at": "2026-11-17T18:22:05.567825+00:00",
+          "at": "2026-11-17T18:30:10.389210+00:00",
           "display": "Justin Herbert",
           "label": "LAC projected QB",
           "source": "Latest prior-week primary passer; not a starter announcement",
@@ -16283,35 +16305,35 @@
           "value": "00-0036355"
         },
         "home_qb_status": {
-          "at": "2026-11-17T18:22:05.567825+00:00",
+          "at": "2026-11-17T18:30:10.389210+00:00",
           "label": "LAC QB confirmation",
           "source": "Latest prior-week primary passer; not a starter announcement",
           "unit": "status",
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.42121164638753306
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.4844109693438284
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.4934742071567141
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
-          "value": 0.47675066316467135
+          "value": 0.47675066316467124
         },
         "research_model_version": {
           "at": "2026-11-17T18:22:19.203409+00:00",
@@ -16328,7 +16350,7 @@
       "home_team": "PHI",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T21:25:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0023459",
         "00-0039398"
@@ -17119,7 +17141,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036912:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "DeVonta Smith game status",
           "player_id": "00-0036912",
           "source": "https://www.espn.com/nfl/injuries",
@@ -17135,7 +17157,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036912:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "DeVonta Smith practice",
           "player_id": "00-0036912",
           "unit": "status",
@@ -17250,7 +17272,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0037132:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Britain Covey game status",
           "player_id": "00-0037132",
           "source": "https://www.espn.com/nfl/injuries",
@@ -17266,7 +17288,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0037132:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Britain Covey practice",
           "player_id": "00-0037132",
           "unit": "status",
@@ -17427,7 +17449,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038393:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Dontayvion Wicks game status",
           "player_id": "00-0038393",
           "source": "https://www.espn.com/nfl/injuries",
@@ -17443,7 +17465,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038393:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Dontayvion Wicks practice",
           "player_id": "00-0038393",
           "unit": "status",
@@ -17773,7 +17795,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039739:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Roman Wilson game status",
           "player_id": "00-0039739",
           "source": "https://www.espn.com/nfl/injuries",
@@ -17789,7 +17811,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039739:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Roman Wilson practice",
           "player_id": "00-0039739",
           "unit": "status",
@@ -17819,7 +17841,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039746:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Will Shipley game status",
           "player_id": "00-0039746",
           "source": "https://www.espn.com/nfl/injuries",
@@ -17835,7 +17857,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039746:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Will Shipley practice",
           "player_id": "00-0039746",
           "unit": "status",
@@ -18193,25 +18215,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.3542870938470387
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.28280201189845683
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.30951139989796267
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.30797278882677404
@@ -18231,7 +18253,7 @@
       "home_team": "DET",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0034855",
         "00-0033106"
@@ -18463,7 +18485,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0034855:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Baker Mayfield game status",
           "player_id": "00-0034855",
           "source": "https://www.espn.com/nfl/injuries",
@@ -18487,7 +18509,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0034855:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Baker Mayfield practice",
           "player_id": "00-0034855",
           "unit": "status",
@@ -19675,7 +19697,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "away_qb": {
-          "at": "2026-11-17T18:22:05.567825+00:00",
+          "at": "2026-11-17T18:30:10.389210+00:00",
           "display": "Baker Mayfield",
           "label": "TB projected QB",
           "source": "Latest prior-week primary passer; not a starter announcement",
@@ -19683,7 +19705,7 @@
           "value": "00-0034855"
         },
         "away_qb_status": {
-          "at": "2026-11-17T18:22:05.567825+00:00",
+          "at": "2026-11-17T18:30:10.389210+00:00",
           "label": "TB QB confirmation",
           "source": "Latest prior-week primary passer; not a starter announcement",
           "unit": "status",
@@ -19697,7 +19719,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "home_qb": {
-          "at": "2026-11-17T18:22:05.567825+00:00",
+          "at": "2026-11-17T18:30:10.389210+00:00",
           "display": "Jared Goff",
           "label": "DET projected QB",
           "source": "Latest prior-week primary passer; not a starter announcement",
@@ -19705,32 +19727,32 @@
           "value": "00-0033106"
         },
         "home_qb_status": {
-          "at": "2026-11-17T18:22:05.567825+00:00",
+          "at": "2026-11-17T18:30:10.389210+00:00",
           "label": "DET QB confirmation",
           "source": "Latest prior-week primary passer; not a starter announcement",
           "unit": "status",
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.6995570040570894
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.709380048472038
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.6208043656549808
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.711381410421195
@@ -19750,7 +19772,7 @@
       "home_team": "DAL",
       "input_fingerprint": "8fc05010545f4ee53d7f2809a9b046caf94c611070270947ca78aee48d0d23d3",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-17T18:22:25.058938+00:00",
+      "observed_at": "2026-11-17T18:30:10.895448+00:00",
       "qb_ids": [
         "00-0040676",
         "00-0033077"
@@ -20306,7 +20328,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038041:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jake Ferguson game status",
           "player_id": "00-0038041",
           "source": "https://www.espn.com/nfl/injuries",
@@ -20322,7 +20344,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038041:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jake Ferguson practice",
           "player_id": "00-0038041",
           "unit": "status",
@@ -20398,7 +20420,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038117:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Wan'Dale Robinson game status",
           "player_id": "00-0038117",
           "source": "https://www.espn.com/nfl/injuries",
@@ -20414,7 +20436,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038117:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Wan'Dale Robinson practice",
           "player_id": "00-0038117",
           "unit": "status",
@@ -20621,7 +20643,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039062:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jonathan Mingo game status",
           "player_id": "00-0039062",
           "source": "https://www.espn.com/nfl/injuries",
@@ -20637,7 +20659,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039062:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Jonathan Mingo practice",
           "player_id": "00-0039062",
           "unit": "status",
@@ -21137,7 +21159,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041438:availability": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Carnell Tate game status",
           "player_id": "00-0041438",
           "source": "https://www.espn.com/nfl/injuries",
@@ -21153,7 +21175,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041438:practice": {
-          "at": "2026-11-17T18:22:25.049403+00:00",
+          "at": "2026-11-17T18:30:06.472398+00:00",
           "label": "Carnell Tate practice",
           "player_id": "00-0041438",
           "unit": "status",
@@ -21219,25 +21241,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.7144805488748486
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.705596370053175
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.754525666006901
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-17T18:22:05.668690+00:00",
+          "at": "2026-11-17T18:30:10.497267+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.7252387076272722
@@ -21252,7 +21274,7 @@
       "week": 11
     }
   },
-  "last_observed_at": "2026-11-17T18:22:25.058938+00:00",
+  "last_observed_at": "2026-11-17T18:30:10.895448+00:00",
   "schema_version": 1,
   "tracking_started_at": "2026-11-17T18:22:25.058938+00:00"
 }

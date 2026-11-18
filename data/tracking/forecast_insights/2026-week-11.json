@@ -1280,6 +1280,90 @@
       "source_at": "2026-11-18T16:44:19.363306+00:00",
       "unit": "probability",
       "week": 11
+    },
+    {
+      "after": "unknown",
+      "before": "Injured Reserve",
+      "delta": null,
+      "field": "00-0038128:availability",
+      "game_id": "2026_11_MIA_BUF",
+      "id": "d442224e893533ca10b697d7",
+      "label": "Malik Willis game status",
+      "matchup": "MIA @ BUF",
+      "observed_at": "2026-11-18T17:58:24.944462+00:00",
+      "player_id": "00-0038128",
+      "previous_observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+      "source_at": null,
+      "unit": "status",
+      "week": 11
+    },
+    {
+      "after": "Injured Reserve",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0034796:availability",
+      "game_id": "2026_11_BAL_CAR",
+      "id": "03c1abf91762c98028618105",
+      "label": "Lamar Jackson game status",
+      "matchup": "BAL @ CAR",
+      "observed_at": "2026-11-18T17:58:24.944462+00:00",
+      "player_id": "00-0034796",
+      "previous_observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-18T17:58:24.935714+00:00",
+      "unit": "status",
+      "week": 11
+    },
+    {
+      "after": 7.7,
+      "before": 7.3,
+      "delta": 0.40000000000000036,
+      "field": "00-0040735:usage",
+      "game_id": "2026_11_NO_CHI",
+      "id": "54008599f0945cbdeab222dd",
+      "label": "Luther Burden III expected targets",
+      "matchup": "NO @ CHI",
+      "observed_at": "2026-11-18T17:58:24.944462+00:00",
+      "player_id": "00-0040735",
+      "previous_observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "reasons": [
+        "Saved value changed; no cause was provided by the source."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": null,
+      "unit": "opportunities",
+      "week": 11
+    },
+    {
+      "after": "Questionable",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0039451:availability",
+      "game_id": "2026_11_NYJ_LAC",
+      "id": "ecfef33c17893da146e7154c",
+      "label": "Isaiah Williams game status",
+      "matchup": "NYJ @ LAC",
+      "observed_at": "2026-11-18T17:58:24.944462+00:00",
+      "player_id": "00-0039451",
+      "previous_observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-18T17:58:24.935714+00:00",
+      "unit": "status",
+      "week": 11
     }
   ],
   "games": {
@@ -1289,7 +1373,7 @@
       "home_team": "KC",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0041561",
         "00-0033873"
@@ -1329,7 +1413,7 @@
           "value": null
         },
         "00-0030506:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Travis Kelce depth / starter status",
           "player_id": "00-0030506",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1375,7 +1459,7 @@
           "value": null
         },
         "00-0033307:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kendrick Bourne depth / starter status",
           "player_id": "00-0033307",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1429,7 +1513,7 @@
           "value": null
         },
         "00-0033873:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Patrick Mahomes depth / starter status",
           "player_id": "00-0033873",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1537,7 +1621,7 @@
           "value": null
         },
         "00-0035289:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Gardner Minshew depth / starter status",
           "player_id": "00-0035289",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1576,7 +1660,7 @@
           "value": null
         },
         "00-0036331:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Devin Duvernay depth / starter status",
           "player_id": "00-0036331",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1661,7 +1745,7 @@
           "value": null
         },
         "00-0036637:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Noah Gray depth / starter status",
           "player_id": "00-0036637",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1707,7 +1791,7 @@
           "value": null
         },
         "00-0036646:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Simi Fehoko depth / starter status",
           "player_id": "00-0036646",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1737,7 +1821,7 @@
           "value": null
         },
         "00-0036945:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Justin Fields depth / starter status",
           "player_id": "00-0036945",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1776,7 +1860,7 @@
           "value": null
         },
         "00-0037004:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Hunter Long depth / starter status",
           "player_id": "00-0037004",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1822,7 +1906,7 @@
           "value": null
         },
         "00-0037157:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Bam Knight depth / starter status",
           "player_id": "00-0037157",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1868,7 +1952,7 @@
           "value": null
         },
         "00-0037263:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyler Allgeier depth / starter status",
           "player_id": "00-0037263",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1914,7 +1998,7 @@
           "value": null
         },
         "00-0037277:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Teagan Quitoriano depth / starter status",
           "player_id": "00-0037277",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1953,7 +2037,7 @@
           "value": null
         },
         "00-0037744:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Trey McBride depth / starter status",
           "player_id": "00-0037744",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -1999,7 +2083,7 @@
           "value": null
         },
         "00-0038104:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyquan Thornton depth / starter status",
           "player_id": "00-0038104",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2022,7 +2106,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038134:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Kenneth Walker III game status",
           "player_id": "00-0038134",
           "source": "https://www.espn.com/nfl/injuries",
@@ -2038,14 +2122,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038134:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Kenneth Walker III practice",
           "player_id": "00-0038134",
           "unit": "status",
           "value": null
         },
         "00-0038134:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kenneth Walker III depth / starter status",
           "player_id": "00-0038134",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2091,7 +2175,7 @@
           "value": null
         },
         "00-0038397:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Evan Hull depth / starter status",
           "player_id": "00-0038397",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2169,7 +2253,7 @@
           "value": null
         },
         "00-0038559:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Michael Wilson depth / starter status",
           "player_id": "00-0038559",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2215,7 +2299,7 @@
           "value": null
         },
         "00-0038640:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalen Brooks depth / starter status",
           "player_id": "00-0038640",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2261,7 +2345,7 @@
           "value": null
         },
         "00-0038997:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Josh Downs depth / starter status",
           "player_id": "00-0038997",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2300,7 +2384,7 @@
           "value": null
         },
         "00-0039041:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Elijah Higgins depth / starter status",
           "player_id": "00-0039041",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2346,7 +2430,7 @@
           "value": null
         },
         "00-0039067:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Rashee Rice depth / starter status",
           "player_id": "00-0039067",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2392,7 +2476,7 @@
           "value": null
         },
         "00-0039894:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Xavier Worthy depth / starter status",
           "player_id": "00-0039894",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2438,7 +2522,7 @@
           "value": null
         },
         "00-0040078:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brashard Smith depth / starter status",
           "player_id": "00-0040078",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2477,7 +2561,7 @@
           "value": null
         },
         "00-0040081:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jake Briningstool depth / starter status",
           "player_id": "00-0040081",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2523,7 +2607,7 @@
           "value": null
         },
         "00-0040298:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Andrew Armstrong depth / starter status",
           "player_id": "00-0040298",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2608,7 +2692,7 @@
           "value": null
         },
         "00-0040646:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalen Royals depth / starter status",
           "player_id": "00-0040646",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2654,7 +2738,7 @@
           "value": null
         },
         "00-0040890:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Cyrus Allen depth / starter status",
           "player_id": "00-0040890",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2669,7 +2753,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040959:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jaydn Ott game status",
           "player_id": "00-0040959",
           "source": "https://www.espn.com/nfl/injuries",
@@ -2677,14 +2761,14 @@
           "value": "Questionable"
         },
         "00-0040959:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jaydn Ott practice",
           "player_id": "00-0040959",
           "unit": "status",
           "value": null
         },
         "00-0040959:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jaydn Ott depth / starter status",
           "player_id": "00-0040959",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2746,7 +2830,7 @@
           "value": null
         },
         "00-0041013:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Emmett Johnson depth / starter status",
           "player_id": "00-0041013",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2792,7 +2876,7 @@
           "value": null
         },
         "00-0041027:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jeremiyah Love depth / starter status",
           "player_id": "00-0041027",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2838,7 +2922,7 @@
           "value": null
         },
         "00-0041070:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Reggie Virgil depth / starter status",
           "player_id": "00-0041070",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2868,7 +2952,7 @@
           "value": null
         },
         "00-0041368:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Harrison Wallace III depth / starter status",
           "player_id": "00-0041368",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2891,7 +2975,7 @@
           "value": null
         },
         "00-0041561:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Carson Beck depth / starter status",
           "player_id": "00-0041561",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -2943,25 +3027,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.7895462129002402
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.880952032075188
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.8079763039618187
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.8733909408246417
@@ -2981,7 +3065,7 @@
       "home_team": "CAR",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0033119",
         "00-0039150"
@@ -3021,7 +3105,7 @@
           "value": null
         },
         "00-0031610:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Darren Waller depth / starter status",
           "player_id": "00-0031610",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3113,7 +3197,7 @@
           "value": null
         },
         "00-0032764:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Derrick Henry depth / starter status",
           "player_id": "00-0032764",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3167,7 +3251,7 @@
           "value": null
         },
         "00-0033119:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jacoby Brissett depth / starter status",
           "player_id": "00-0033119",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3252,7 +3336,7 @@
           "value": null
         },
         "00-0034753:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mark Andrews depth / starter status",
           "player_id": "00-0034753",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3267,22 +3351,22 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0034796:availability": {
-          "at": null,
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Lamar Jackson game status",
           "player_id": "00-0034796",
-          "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+          "source": "https://www.espn.com/nfl/injuries",
           "unit": "status",
-          "value": "unknown"
+          "value": "Injured Reserve"
         },
         "00-0034796:practice": {
-          "at": null,
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Lamar Jackson practice",
           "player_id": "00-0034796",
           "unit": "status",
           "value": null
         },
         "00-0034796:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Lamar Jackson depth / starter status",
           "player_id": "00-0034796",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3328,7 +3412,7 @@
           "value": null
         },
         "00-0034798:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Durham Smythe depth / starter status",
           "player_id": "00-0034798",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3374,7 +3458,7 @@
           "value": null
         },
         "00-0034975:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Justice Hill depth / starter status",
           "player_id": "00-0034975",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3404,7 +3488,7 @@
           "value": null
         },
         "00-0035993:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyler Huntley depth / starter status",
           "player_id": "00-0035993",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3450,7 +3534,7 @@
           "value": null
         },
         "00-0036265:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "AJ Dillon depth / starter status",
           "player_id": "00-0036265",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3496,7 +3580,7 @@
           "value": null
         },
         "00-0036550:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Rashod Bateman depth / starter status",
           "player_id": "00-0036550",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3542,7 +3626,7 @@
           "value": null
         },
         "00-0036555:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Chuba Hubbard depth / starter status",
           "player_id": "00-0036555",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3588,7 +3672,7 @@
           "value": null
         },
         "00-0036825:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Feleipe Franks depth / starter status",
           "player_id": "00-0036825",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3634,7 +3718,7 @@
           "value": null
         },
         "00-0037005:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tommy Tremble depth / starter status",
           "player_id": "00-0037005",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3680,7 +3764,7 @@
           "value": null
         },
         "00-0037614:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "John Metchie III depth / starter status",
           "player_id": "00-0037614",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3710,7 +3794,7 @@
           "value": null
         },
         "00-0038102:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kenny Pickett depth / starter status",
           "player_id": "00-0038102",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3756,7 +3840,7 @@
           "value": null
         },
         "00-0038840:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brycen Tremayne depth / starter status",
           "player_id": "00-0038840",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3802,7 +3886,7 @@
           "value": null
         },
         "00-0039064:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Zay Flowers depth / starter status",
           "player_id": "00-0039064",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3856,7 +3940,7 @@
           "value": null
         },
         "00-0039150:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Bryce Young depth / starter status",
           "player_id": "00-0039150",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3902,7 +3986,7 @@
           "value": null
         },
         "00-0039342:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Xavier Legette depth / starter status",
           "player_id": "00-0039342",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3941,7 +4025,7 @@
           "value": null
         },
         "00-0039344:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jonathon Brooks depth / starter status",
           "player_id": "00-0039344",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -3980,7 +4064,7 @@
           "value": null
         },
         "00-0039491:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalen Coker depth / starter status",
           "player_id": "00-0039491",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4026,7 +4110,7 @@
           "value": null
         },
         "00-0039792:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Devontez Walker depth / starter status",
           "player_id": "00-0039792",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4072,7 +4156,7 @@
           "value": null
         },
         "00-0039796:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Rasheen Ali depth / starter status",
           "player_id": "00-0039796",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4118,7 +4202,7 @@
           "value": null
         },
         "00-0040075:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "LaJohntay Wester depth / starter status",
           "player_id": "00-0040075",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4164,7 +4248,7 @@
           "value": null
         },
         "00-0040124:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tetairoa McMillan depth / starter status",
           "player_id": "00-0040124",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4210,7 +4294,7 @@
           "value": null
         },
         "00-0040187:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mitchell Evans depth / starter status",
           "player_id": "00-0040187",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4318,7 +4402,7 @@
           "value": null
         },
         "00-0040394:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Anthony Tyus III depth / starter status",
           "player_id": "00-0040394",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4364,7 +4448,7 @@
           "value": null
         },
         "00-0040644:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Trevor Etienne depth / starter status",
           "player_id": "00-0040644",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4410,7 +4494,7 @@
           "value": null
         },
         "00-0040870:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ja'Kobi Lane depth / starter status",
           "player_id": "00-0040870",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4440,7 +4524,7 @@
           "value": null
         },
         "00-0040876:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Elijah Sarratt depth / starter status",
           "player_id": "00-0040876",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4479,7 +4563,7 @@
           "value": null
         },
         "00-0040879:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Matthew Hibner depth / starter status",
           "player_id": "00-0040879",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4525,7 +4609,7 @@
           "value": null
         },
         "00-0040887:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Josh Cuevas depth / starter status",
           "player_id": "00-0040887",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4555,7 +4639,7 @@
           "value": null
         },
         "00-0040981:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Joe Fagnano depth / starter status",
           "player_id": "00-0040981",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4607,25 +4691,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.5098233156814239
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.5326059864021134
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.571214237493642
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.5174041840157703
@@ -4645,7 +4729,7 @@
       "home_team": "WAS",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-24T01:15:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0036442",
         "00-0039910"
@@ -4685,7 +4769,7 @@
           "value": null
         },
         "00-0031588:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Stefon Diggs depth / starter status",
           "player_id": "00-0031588",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4715,7 +4799,7 @@
           "value": null
         },
         "00-0032268:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Marcus Mariota depth / starter status",
           "player_id": "00-0032268",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4761,7 +4845,7 @@
           "value": null
         },
         "00-0033526:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Samaje Perine depth / starter status",
           "player_id": "00-0033526",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4807,7 +4891,7 @@
           "value": null
         },
         "00-0033699:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Austin Ekeler depth / starter status",
           "player_id": "00-0033699",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4853,7 +4937,7 @@
           "value": null
         },
         "00-0033955:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jeremy McNichols depth / starter status",
           "player_id": "00-0033955",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4892,7 +4976,7 @@
           "value": null
         },
         "00-0034613:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tanner Hudson depth / starter status",
           "player_id": "00-0034613",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -4938,7 +5022,7 @@
           "value": null
         },
         "00-0034829:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mike Gesicki depth / starter status",
           "player_id": "00-0034829",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5023,7 +5107,7 @@
           "value": null
         },
         "00-0035631:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Drew Sample depth / starter status",
           "player_id": "00-0035631",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5069,7 +5153,7 @@
           "value": null
         },
         "00-0035659:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Terry McLaurin depth / starter status",
           "player_id": "00-0035659",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5115,7 +5199,7 @@
           "value": null
         },
         "00-0036410:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tee Higgins depth / starter status",
           "player_id": "00-0036410",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5161,7 +5245,7 @@
           "value": null
         },
         "00-0036415:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Van Jefferson depth / starter status",
           "player_id": "00-0036415",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5208,7 +5292,7 @@
           "value": null
         },
         "00-0036442:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Joe Burrow depth / starter status",
           "player_id": "00-0036442",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5254,7 +5338,7 @@
           "value": null
         },
         "00-0036626:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dyami Brown depth / starter status",
           "player_id": "00-0036626",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5300,7 +5384,7 @@
           "value": null
         },
         "00-0036628:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "John Bates depth / starter status",
           "player_id": "00-0036628",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5346,7 +5430,7 @@
           "value": null
         },
         "00-0036900:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ja'Marr Chase depth / starter status",
           "player_id": "00-0036900",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5392,7 +5476,7 @@
           "value": null
         },
         "00-0037256:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Rachaad White depth / starter status",
           "player_id": "00-0037256",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5438,7 +5522,7 @@
           "value": null
         },
         "00-0037742:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Treylon Burks depth / starter status",
           "player_id": "00-0037742",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5484,7 +5568,7 @@
           "value": null
         },
         "00-0037809:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Chig Okonkwo depth / starter status",
           "player_id": "00-0037809",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5530,7 +5614,7 @@
           "value": null
         },
         "00-0038597:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Chase Brown depth / starter status",
           "player_id": "00-0038597",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5576,7 +5660,7 @@
           "value": null
         },
         "00-0038619:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Andrei Iosivas depth / starter status",
           "player_id": "00-0038619",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5615,7 +5699,7 @@
           "value": null
         },
         "00-0038839:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mitchell Tinsley depth / starter status",
           "player_id": "00-0038839",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5661,7 +5745,7 @@
           "value": null
         },
         "00-0039355:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Luke McCaffrey depth / starter status",
           "player_id": "00-0039355",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5684,7 +5768,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039686:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Colson Yankoff game status",
           "player_id": "00-0039686",
           "source": "https://www.espn.com/nfl/injuries",
@@ -5700,14 +5784,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039686:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Colson Yankoff practice",
           "player_id": "00-0039686",
           "unit": "status",
           "value": null
         },
         "00-0039686:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Colson Yankoff depth / starter status",
           "player_id": "00-0039686",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5753,7 +5837,7 @@
           "value": null
         },
         "00-0039814:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Erick All depth / starter status",
           "player_id": "00-0039814",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5807,7 +5891,7 @@
           "value": null
         },
         "00-0039910:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jayden Daniels depth / starter status",
           "player_id": "00-0039910",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5853,7 +5937,7 @@
           "value": null
         },
         "00-0039912:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ben Sinnott depth / starter status",
           "player_id": "00-0039912",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5899,7 +5983,7 @@
           "value": null
         },
         "00-0040164:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jaylin Lane depth / starter status",
           "player_id": "00-0040164",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5945,7 +6029,7 @@
           "value": null
         },
         "00-0040208:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tahj Brooks depth / starter status",
           "player_id": "00-0040208",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -5968,7 +6052,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040242:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jacory Croskey-Merritt game status",
           "player_id": "00-0040242",
           "source": "https://www.espn.com/nfl/injuries",
@@ -5984,14 +6068,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040242:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jacory Croskey-Merritt practice",
           "player_id": "00-0040242",
           "unit": "status",
           "value": null
         },
         "00-0040242:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jacory Croskey-Merritt depth / starter status",
           "player_id": "00-0040242",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6076,7 +6160,7 @@
           "value": null
         },
         "00-0040785:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dohnte Meyers depth / starter status",
           "player_id": "00-0040785",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6122,7 +6206,7 @@
           "value": null
         },
         "00-0041040:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Antonio Williams depth / starter status",
           "player_id": "00-0041040",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6152,7 +6236,7 @@
           "value": null
         },
         "00-0041069:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Colbie Young depth / starter status",
           "player_id": "00-0041069",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6191,7 +6275,7 @@
           "value": null
         },
         "00-0041116:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jack Endries depth / starter status",
           "player_id": "00-0041116",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6221,7 +6305,7 @@
           "value": null
         },
         "00-0041117:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Athan Kaliakmanis depth / starter status",
           "player_id": "00-0041117",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6267,7 +6351,7 @@
           "value": null
         },
         "00-0041178:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Robert Henry Jr. depth / starter status",
           "player_id": "00-0041178",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6319,25 +6403,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.34523562102565714
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.3033716975739809
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.304887365019123
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.3026372132197323
@@ -6357,7 +6441,7 @@
       "home_team": "HOU",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-20T01:15:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0035710",
         "00-0039163"
@@ -6397,7 +6481,7 @@
           "value": null
         },
         "00-0032951:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Laquon Treadwell depth / starter status",
           "player_id": "00-0032951",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6443,7 +6527,7 @@
           "value": null
         },
         "00-0033217:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mo Alie-Cox depth / starter status",
           "player_id": "00-0033217",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6489,7 +6573,7 @@
           "value": null
         },
         "00-0033439:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Pharaoh Brown depth / starter status",
           "player_id": "00-0033439",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6574,7 +6658,7 @@
           "value": null
         },
         "00-0034383:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dalton Schultz depth / starter status",
           "player_id": "00-0034383",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6620,7 +6704,7 @@
           "value": null
         },
         "00-0034981:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Foster Moreau depth / starter status",
           "player_id": "00-0034981",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6666,7 +6750,7 @@
           "value": null
         },
         "00-0035021:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ashton Dulin depth / starter status",
           "player_id": "00-0035021",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6689,7 +6773,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0035685:availability": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "David Montgomery game status",
           "player_id": "00-0035685",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -6705,14 +6789,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0035685:practice": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "David Montgomery practice",
           "player_id": "00-0035685",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0035685:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "David Montgomery depth / starter status",
           "player_id": "00-0035685",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6766,7 +6850,7 @@
           "value": null
         },
         "00-0035710:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Daniel Jones depth / starter status",
           "player_id": "00-0035710",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6812,7 +6896,7 @@
           "value": null
         },
         "00-0036182:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Nick Westbrook-Ikhine depth / starter status",
           "player_id": "00-0036182",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6858,7 +6942,7 @@
           "value": null
         },
         "00-0036223:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jonathan Taylor depth / starter status",
           "player_id": "00-0036223",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6904,7 +6988,7 @@
           "value": null
         },
         "00-0036554:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Nico Collins depth / starter status",
           "player_id": "00-0036554",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6927,7 +7011,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036556:availability": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Brevin Jordan game status",
           "player_id": "00-0036556",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -6943,14 +7027,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036556:practice": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Brevin Jordan practice",
           "player_id": "00-0036556",
           "unit": "status",
           "value": "Did Not Participate In Practice"
         },
         "00-0036556:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brevin Jordan depth / starter status",
           "player_id": "00-0036556",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -6980,7 +7064,7 @@
           "value": null
         },
         "00-0036898:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Davis Mills depth / starter status",
           "player_id": "00-0036898",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7019,7 +7103,7 @@
           "value": null
         },
         "00-0037292:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Andrew Ogletree depth / starter status",
           "player_id": "00-0037292",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7065,7 +7149,7 @@
           "value": null
         },
         "00-0037664:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Alec Pierce depth / starter status",
           "player_id": "00-0037664",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7081,7 +7165,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038394:availability": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Will Mallory game status",
           "player_id": "00-0038394",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -7097,14 +7181,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038394:practice": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Will Mallory practice",
           "player_id": "00-0038394",
           "unit": "status",
           "value": "Did Not Participate In Practice"
         },
         "00-0038394:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Will Mallory depth / starter status",
           "player_id": "00-0038394",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7143,7 +7227,7 @@
           "value": null
         },
         "00-0038519:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Nikko Remigio depth / starter status",
           "player_id": "00-0038519",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7182,7 +7266,7 @@
           "value": null
         },
         "00-0038608:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kayshon Boutte depth / starter status",
           "player_id": "00-0038608",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7228,7 +7312,7 @@
           "value": null
         },
         "00-0038618:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Xavier Hutchinson depth / starter status",
           "player_id": "00-0038618",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7274,7 +7358,7 @@
           "value": null
         },
         "00-0038705:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Emari Demercado depth / starter status",
           "player_id": "00-0038705",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7290,7 +7374,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038977:availability": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Tank Dell game status",
           "player_id": "00-0038977",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -7306,14 +7390,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038977:practice": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Tank Dell practice",
           "player_id": "00-0038977",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0038977:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tank Dell depth / starter status",
           "player_id": "00-0038977",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7367,7 +7451,7 @@
           "value": null
         },
         "00-0039163:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "C.J. Stroud depth / starter status",
           "player_id": "00-0039163",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7397,7 +7481,7 @@
           "value": null
         },
         "00-0039164:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Anthony Richardson depth / starter status",
           "player_id": "00-0039164",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7436,7 +7520,7 @@
           "value": null
         },
         "00-0039359:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Cade Stover depth / starter status",
           "player_id": "00-0039359",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7521,7 +7605,7 @@
           "value": null
         },
         "00-0039603:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "British Brooks depth / starter status",
           "player_id": "00-0039603",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7537,7 +7621,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039816:availability": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Anthony Gould game status",
           "player_id": "00-0039816",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -7553,14 +7637,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039816:practice": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Anthony Gould practice",
           "player_id": "00-0039816",
           "unit": "status",
           "value": "Limited Participation in Practice"
         },
         "00-0039816:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Anthony Gould depth / starter status",
           "player_id": "00-0039816",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7583,7 +7667,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039849:availability": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Marvin Harrison Jr. game status",
           "player_id": "00-0039849",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -7599,14 +7683,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039849:practice": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Marvin Harrison Jr. practice",
           "player_id": "00-0039849",
           "unit": "status",
           "value": "Did Not Participate In Practice"
         },
         "00-0039849:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Marvin Harrison Jr. depth / starter status",
           "player_id": "00-0039849",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7652,7 +7736,7 @@
           "value": null
         },
         "00-0040128:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyler Warren depth / starter status",
           "player_id": "00-0040128",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7698,7 +7782,7 @@
           "value": null
         },
         "00-0040138:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jaylin Noel depth / starter status",
           "player_id": "00-0040138",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7744,7 +7828,7 @@
           "value": null
         },
         "00-0040179:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "DJ Giddens depth / starter status",
           "player_id": "00-0040179",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7760,7 +7844,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040583:availability": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Woody Marks game status",
           "player_id": "00-0040583",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -7776,14 +7860,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040583:practice": {
-          "at": "2026-11-18T09:04:07.955910+00:00",
+          "at": "2026-11-18T17:58:24.052065+00:00",
           "label": "Woody Marks practice",
           "player_id": "00-0040583",
           "unit": "status",
           "value": "Did Not Participate In Practice"
         },
         "00-0040583:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Woody Marks depth / starter status",
           "player_id": "00-0040583",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7829,7 +7913,7 @@
           "value": null
         },
         "00-0041125:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Seth McGowan depth / starter status",
           "player_id": "00-0041125",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7875,7 +7959,7 @@
           "value": null
         },
         "00-0041132:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Deion Burks depth / starter status",
           "player_id": "00-0041132",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7928,7 +8012,7 @@
           "value": null
         },
         "00-0041472:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Marlin Klein depth / starter status",
           "player_id": "00-0041472",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -7980,25 +8064,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.6250828664427039
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.5684219925681852
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.7001804553518806
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.5919715830476622
@@ -8018,7 +8102,7 @@
       "home_team": "NYG",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0036971",
         "00-0039923"
@@ -8127,7 +8211,7 @@
           "value": null
         },
         "00-0031503:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jameis Winston depth / starter status",
           "player_id": "00-0031503",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8173,7 +8257,7 @@
           "value": null
         },
         "00-0032104:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ameer Abdullah depth / starter status",
           "player_id": "00-0032104",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8281,7 +8365,7 @@
           "value": null
         },
         "00-0034419:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Braxton Berrios depth / starter status",
           "player_id": "00-0034419",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8327,7 +8411,7 @@
           "value": null
         },
         "00-0034960:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jakobi Meyers depth / starter status",
           "player_id": "00-0034960",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8373,7 +8457,7 @@
           "value": null
         },
         "00-0035250:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Devin Singletary depth / starter status",
           "player_id": "00-0035250",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8419,7 +8503,7 @@
           "value": null
         },
         "00-0036309:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Darnell Mooney depth / starter status",
           "player_id": "00-0036309",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8465,7 +8549,7 @@
           "value": null
         },
         "00-0036590:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Quintin Morris depth / starter status",
           "player_id": "00-0036590",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8565,7 +8649,7 @@
           "value": null
         },
         "00-0036971:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Trevor Lawrence depth / starter status",
           "player_id": "00-0036971",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8611,7 +8695,7 @@
           "value": null
         },
         "00-0037838:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Isaiah Likely depth / starter status",
           "player_id": "00-0037838",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8703,7 +8787,7 @@
           "value": null
         },
         "00-0038606:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Parker Washington depth / starter status",
           "player_id": "00-0038606",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8749,7 +8833,7 @@
           "value": null
         },
         "00-0038611:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Chris Rodriguez Jr. depth / starter status",
           "player_id": "00-0038611",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8795,7 +8879,7 @@
           "value": null
         },
         "00-0038935:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brenton Strange depth / starter status",
           "player_id": "00-0038935",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8841,7 +8925,7 @@
           "value": null
         },
         "00-0038938:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalin Hyatt depth / starter status",
           "player_id": "00-0038938",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8880,7 +8964,7 @@
           "value": null
         },
         "00-0039337:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Malik Nabers depth / starter status",
           "player_id": "00-0039337",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8926,7 +9010,7 @@
           "value": null
         },
         "00-0039384:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyrone Tracy Jr. depth / starter status",
           "player_id": "00-0039384",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -8972,7 +9056,7 @@
           "value": null
         },
         "00-0039847:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Theo Johnson depth / starter status",
           "player_id": "00-0039847",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9018,7 +9102,7 @@
           "value": null
         },
         "00-0039893:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brian Thomas Jr. depth / starter status",
           "player_id": "00-0039893",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9072,7 +9156,7 @@
           "value": null
         },
         "00-0039923:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "J.J. McCarthy depth / starter status",
           "player_id": "00-0039923",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9118,7 +9202,7 @@
           "value": null
         },
         "00-0040225:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Thomas Fidone II depth / starter status",
           "player_id": "00-0040225",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9141,7 +9225,7 @@
           "value": null
         },
         "00-0040234:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Quinn Ewers depth / starter status",
           "player_id": "00-0040234",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9180,7 +9264,7 @@
           "value": null
         },
         "00-0040238:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "LeQuint Allen Jr. depth / starter status",
           "player_id": "00-0040238",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9249,7 +9333,7 @@
           "value": null
         },
         "00-0040691:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jaxson Dart depth / starter status",
           "player_id": "00-0040691",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9288,7 +9372,7 @@
           "value": null
         },
         "00-0040715:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Cam Skattebo depth / starter status",
           "player_id": "00-0040715",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9334,7 +9418,7 @@
           "value": null
         },
         "00-0040719:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Bhayshul Tuten depth / starter status",
           "player_id": "00-0040719",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9380,7 +9464,7 @@
           "value": null
         },
         "00-0041042:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Malachi Fields depth / starter status",
           "player_id": "00-0041042",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9426,7 +9510,7 @@
           "value": null
         },
         "00-0041084:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tanner Koziol depth / starter status",
           "player_id": "00-0041084",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9472,7 +9556,7 @@
           "value": null
         },
         "00-0041100:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Josh Cameron depth / starter status",
           "player_id": "00-0041100",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9541,7 +9625,7 @@
           "value": null
         },
         "00-0041503:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Nate Boerkircher depth / starter status",
           "player_id": "00-0041503",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9600,25 +9684,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.2962308899262806
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.28639344095982333
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.32573065591154454
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.279127774160213
@@ -9638,7 +9722,7 @@
       "home_team": "DEN",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T21:25:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0041562",
         "00-0039732"
@@ -9678,7 +9762,7 @@
           "value": null
         },
         "00-0033881:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Evan Engram depth / starter status",
           "player_id": "00-0033881",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9724,7 +9808,7 @@
           "value": null
         },
         "00-0034348:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Courtland Sutton depth / starter status",
           "player_id": "00-0034348",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9770,7 +9854,7 @@
           "value": null
         },
         "00-0034365:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ian Thomas depth / starter status",
           "player_id": "00-0034365",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9816,7 +9900,7 @@
           "value": null
         },
         "00-0035406:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Lil'Jordan Humphrey depth / starter status",
           "player_id": "00-0035406",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9862,7 +9946,7 @@
           "value": null
         },
         "00-0035891:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Cody White depth / starter status",
           "player_id": "00-0035891",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9908,7 +9992,7 @@
           "value": null
         },
         "00-0036158:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "J.K. Dobbins depth / starter status",
           "player_id": "00-0036158",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -9954,7 +10038,7 @@
           "value": null
         },
         "00-0036422:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Adam Trautman depth / starter status",
           "player_id": "00-0036422",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10000,7 +10084,7 @@
           "value": null
         },
         "00-0036613:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jaylen Waddle depth / starter status",
           "player_id": "00-0036613",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10046,7 +10130,7 @@
           "value": null
         },
         "00-0037085:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyler Badie depth / starter status",
           "player_id": "00-0037085",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10092,7 +10176,7 @@
           "value": null
         },
         "00-0037093:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dareke Young depth / starter status",
           "player_id": "00-0037093",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10138,7 +10222,7 @@
           "value": null
         },
         "00-0037291:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalen Nailor depth / starter status",
           "player_id": "00-0037291",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10223,7 +10307,7 @@
           "value": null
         },
         "00-0038563:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tre Tucker depth / starter status",
           "player_id": "00-0038563",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10269,7 +10353,7 @@
           "value": null
         },
         "00-0038783:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Nate Adkins depth / starter status",
           "player_id": "00-0038783",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10315,7 +10399,7 @@
           "value": null
         },
         "00-0038976:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Marvin Mims Jr. depth / starter status",
           "player_id": "00-0038976",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10361,7 +10445,7 @@
           "value": null
         },
         "00-0039066:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Michael Mayer depth / starter status",
           "player_id": "00-0039066",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10384,7 +10468,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039338:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Brock Bowers game status",
           "player_id": "00-0039338",
           "source": "https://www.espn.com/nfl/injuries",
@@ -10400,14 +10484,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039338:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Brock Bowers practice",
           "player_id": "00-0039338",
           "unit": "status",
           "value": null
         },
         "00-0039338:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brock Bowers depth / starter status",
           "player_id": "00-0039338",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10453,7 +10537,7 @@
           "value": null
         },
         "00-0039407:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dylan Laube depth / starter status",
           "player_id": "00-0039407",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10546,7 +10630,7 @@
           "value": null
         },
         "00-0039732:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Bo Nix depth / starter status",
           "player_id": "00-0039732",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10592,7 +10676,7 @@
           "value": null
         },
         "00-0039868:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Troy Franklin depth / starter status",
           "player_id": "00-0039868",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10638,7 +10722,7 @@
           "value": null
         },
         "00-0040122:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ashton Jeanty depth / starter status",
           "player_id": "00-0040122",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10684,7 +10768,7 @@
           "value": null
         },
         "00-0040134:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Pat Bryant depth / starter status",
           "player_id": "00-0040134",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10730,7 +10814,7 @@
           "value": null
         },
         "00-0040729:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jack Bech depth / starter status",
           "player_id": "00-0040729",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10776,7 +10860,7 @@
           "value": null
         },
         "00-0040730:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "RJ Harvey depth / starter status",
           "player_id": "00-0040730",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10822,7 +10906,7 @@
           "value": null
         },
         "00-0040878:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mike Washington Jr. depth / starter status",
           "player_id": "00-0040878",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10868,7 +10952,7 @@
           "value": null
         },
         "00-0040894:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Malik Benson depth / starter status",
           "player_id": "00-0040894",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10937,7 +11021,7 @@
           "value": null
         },
         "00-0041496:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jonah Coleman depth / starter status",
           "player_id": "00-0041496",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -10967,7 +11051,7 @@
           "value": null
         },
         "00-0041562:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Fernando Mendoza depth / starter status",
           "player_id": "00-0041562",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11019,25 +11103,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.669724369223704
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.7498696499392152
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.7048066684355755
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.7484013542297324
@@ -11057,7 +11141,7 @@
       "home_team": "BUF",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0040014",
         "00-0034857"
@@ -11120,7 +11204,7 @@
           "value": null
         },
         "00-0034577:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kyle Allen depth / starter status",
           "player_id": "00-0034577",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11166,7 +11250,7 @@
           "value": null
         },
         "00-0034827:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "DJ Moore depth / starter status",
           "player_id": "00-0034827",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11220,7 +11304,7 @@
           "value": null
         },
         "00-0034857:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Josh Allen depth / starter status",
           "player_id": "00-0034857",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11266,7 +11350,7 @@
           "value": null
         },
         "00-0035500:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Greg Dortch depth / starter status",
           "player_id": "00-0035500",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11312,7 +11396,7 @@
           "value": null
         },
         "00-0035537:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ty Johnson depth / starter status",
           "player_id": "00-0035537",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11358,7 +11442,7 @@
           "value": null
         },
         "00-0035689:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dawson Knox depth / starter status",
           "player_id": "00-0035689",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11443,7 +11527,7 @@
           "value": null
         },
         "00-0036988:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Josh Palmer depth / starter status",
           "player_id": "00-0036988",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11489,7 +11573,7 @@
           "value": null
         },
         "00-0037248:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "James Cook depth / starter status",
           "player_id": "00-0037248",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11535,7 +11619,7 @@
           "value": null
         },
         "00-0037252:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Greg Dulcich depth / starter status",
           "player_id": "00-0037252",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11581,7 +11665,7 @@
           "value": null
         },
         "00-0037261:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Khalil Shakir depth / starter status",
           "player_id": "00-0037261",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11627,7 +11711,7 @@
           "value": null
         },
         "00-0037666:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalen Tolbert depth / starter status",
           "player_id": "00-0037666",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11642,22 +11726,22 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0038128:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": null,
           "label": "Malik Willis game status",
           "player_id": "00-0038128",
-          "source": "https://www.espn.com/nfl/injuries",
+          "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
           "unit": "status",
-          "value": "Injured Reserve"
+          "value": "unknown"
         },
         "00-0038128:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": null,
           "label": "Malik Willis practice",
           "player_id": "00-0038128",
           "unit": "status",
           "value": null
         },
         "00-0038128:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Malik Willis depth / starter status",
           "player_id": "00-0038128",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11680,7 +11764,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038728:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jared Wayne game status",
           "player_id": "00-0038728",
           "source": "https://www.espn.com/nfl/injuries",
@@ -11696,14 +11780,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038728:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jared Wayne practice",
           "player_id": "00-0038728",
           "unit": "status",
           "value": null
         },
         "00-0038728:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jared Wayne depth / starter status",
           "player_id": "00-0038728",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11811,7 +11895,7 @@
           "value": null
         },
         "00-0038933:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dalton Kincaid depth / starter status",
           "player_id": "00-0038933",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11857,7 +11941,7 @@
           "value": null
         },
         "00-0039040:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "De'Von Achane depth / starter status",
           "player_id": "00-0039040",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11926,7 +12010,7 @@
           "value": null
         },
         "00-0039874:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jaylen Wright depth / starter status",
           "player_id": "00-0039874",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -11972,7 +12056,7 @@
           "value": null
         },
         "00-0039875:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ray Davis depth / starter status",
           "player_id": "00-0039875",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12018,7 +12102,7 @@
           "value": null
         },
         "00-0039880:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Malik Washington depth / starter status",
           "player_id": "00-0039880",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12064,7 +12148,7 @@
           "value": null
         },
         "00-0039901:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Keon Coleman depth / starter status",
           "player_id": "00-0039901",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12094,7 +12178,7 @@
           "value": null
         },
         "00-0040014:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kyle McCord depth / starter status",
           "player_id": "00-0040014",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12133,7 +12217,7 @@
           "value": null
         },
         "00-0040194:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jackson Hawes depth / starter status",
           "player_id": "00-0040194",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12179,7 +12263,7 @@
           "value": null
         },
         "00-0040198:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ollie Gordon II depth / starter status",
           "player_id": "00-0040198",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12225,7 +12309,7 @@
           "value": null
         },
         "00-0040363:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Keleki Latu depth / starter status",
           "player_id": "00-0040363",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12271,7 +12355,7 @@
           "value": null
         },
         "00-0041096:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kaytron Allen depth / starter status",
           "player_id": "00-0041096",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12347,7 +12431,7 @@
           "value": null
         },
         "00-0041443:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Skyler Bell depth / starter status",
           "player_id": "00-0041443",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12386,7 +12470,7 @@
           "value": null
         },
         "00-0041523:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Caleb Douglas depth / starter status",
           "player_id": "00-0041523",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12432,7 +12516,7 @@
           "value": null
         },
         "00-0041524:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Will Kacmarek depth / starter status",
           "player_id": "00-0041524",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12455,7 +12539,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041525:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Chris Bell game status",
           "player_id": "00-0041525",
           "source": "https://www.espn.com/nfl/injuries",
@@ -12471,14 +12555,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041525:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Chris Bell practice",
           "player_id": "00-0041525",
           "unit": "status",
           "value": null
         },
         "00-0041525:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Chris Bell depth / starter status",
           "player_id": "00-0041525",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12524,7 +12608,7 @@
           "value": null
         },
         "00-0041529:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kevin Coleman Jr. depth / starter status",
           "player_id": "00-0041529",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12570,7 +12654,7 @@
           "value": null
         },
         "00-0041579:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Seydou Traore depth / starter status",
           "player_id": "00-0041579",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12629,25 +12713,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.8124958324436135
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.8732257558289355
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.8478569310578437
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.8698177554215962
@@ -12667,7 +12751,7 @@
       "home_team": "SF",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-23T01:20:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0029604",
         "00-0037834"
@@ -12715,7 +12799,7 @@
           "value": null
         },
         "00-0029604:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kirk Cousins depth / starter status",
           "player_id": "00-0029604",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12754,7 +12838,7 @@
           "value": null
         },
         "00-0030279:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Keenan Allen depth / starter status",
           "player_id": "00-0030279",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12793,7 +12877,7 @@
           "value": null
         },
         "00-0031236:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brandin Cooks depth / starter status",
           "player_id": "00-0031236",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12816,7 +12900,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0031408:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Mike Evans game status",
           "player_id": "00-0031408",
           "source": "https://www.espn.com/nfl/injuries",
@@ -12832,14 +12916,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0031408:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Mike Evans practice",
           "player_id": "00-0031408",
           "unit": "status",
           "value": null
         },
         "00-0031408:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mike Evans depth / starter status",
           "player_id": "00-0031408",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12885,7 +12969,7 @@
           "value": null
         },
         "00-0032775:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Demarcus Robinson depth / starter status",
           "player_id": "00-0032775",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12915,7 +12999,7 @@
           "value": null
         },
         "00-0032950:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Carson Wentz depth / starter status",
           "player_id": "00-0032950",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12961,7 +13045,7 @@
           "value": null
         },
         "00-0033280:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Christian McCaffrey depth / starter status",
           "player_id": "00-0033280",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13007,7 +13091,7 @@
           "value": null
         },
         "00-0033288:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "George Kittle depth / starter status",
           "player_id": "00-0033288",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13053,7 +13137,7 @@
           "value": null
         },
         "00-0033293:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Aaron Jones depth / starter status",
           "player_id": "00-0033293",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13114,7 +13198,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035228:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Kyler Murray game status",
           "player_id": "00-0035228",
           "source": "https://www.espn.com/nfl/injuries",
@@ -13122,14 +13206,14 @@
           "value": "Out"
         },
         "00-0035228:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Kyler Murray practice",
           "player_id": "00-0035228",
           "unit": "status",
           "value": null
         },
         "00-0035228:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kyler Murray depth / starter status",
           "player_id": "00-0035228",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13152,7 +13236,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0035229:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "T.J. Hockenson game status",
           "player_id": "00-0035229",
           "source": "https://www.espn.com/nfl/injuries",
@@ -13168,14 +13252,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0035229:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "T.J. Hockenson practice",
           "player_id": "00-0035229",
           "unit": "status",
           "value": null
         },
         "00-0035229:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "T.J. Hockenson depth / starter status",
           "player_id": "00-0035229",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13221,7 +13305,7 @@
           "value": null
         },
         "00-0035249:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Josh Oliver depth / starter status",
           "player_id": "00-0035249",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13267,7 +13351,7 @@
           "value": null
         },
         "00-0035719:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Deebo Samuel Sr. depth / starter status",
           "player_id": "00-0035719",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13290,7 +13374,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036259:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jauan Jennings game status",
           "player_id": "00-0036259",
           "source": "https://www.espn.com/nfl/injuries",
@@ -13306,14 +13390,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036259:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jauan Jennings practice",
           "player_id": "00-0036259",
           "unit": "status",
           "value": null
         },
         "00-0036259:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jauan Jennings depth / starter status",
           "player_id": "00-0036259",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13359,7 +13443,7 @@
           "value": null
         },
         "00-0036322:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Justin Jefferson depth / starter status",
           "player_id": "00-0036322",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13405,7 +13489,7 @@
           "value": null
         },
         "00-0036425:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "DeeJay Dallas depth / starter status",
           "player_id": "00-0036425",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13451,7 +13535,7 @@
           "value": null
         },
         "00-0036887:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Luke Farrell depth / starter status",
           "player_id": "00-0036887",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13481,7 +13565,7 @@
           "value": null
         },
         "00-0036972:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mac Jones depth / starter status",
           "player_id": "00-0036972",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13520,7 +13604,7 @@
           "value": null
         },
         "00-0037525:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jordan Mason depth / starter status",
           "player_id": "00-0037525",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13574,7 +13658,7 @@
           "value": null
         },
         "00-0037834:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brock Purdy depth / starter status",
           "player_id": "00-0037834",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13620,7 +13704,7 @@
           "value": null
         },
         "00-0038643:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brayden Willis depth / starter status",
           "player_id": "00-0038643",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13643,7 +13727,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038994:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jordan Addison game status",
           "player_id": "00-0038994",
           "source": "https://www.espn.com/nfl/injuries",
@@ -13659,14 +13743,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038994:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jordan Addison practice",
           "player_id": "00-0038994",
           "unit": "status",
           "value": null
         },
         "00-0038994:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jordan Addison depth / starter status",
           "player_id": "00-0038994",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13712,7 +13796,7 @@
           "value": null
         },
         "00-0039365:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jacob Cowing depth / starter status",
           "player_id": "00-0039365",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13804,7 +13888,7 @@
           "value": null
         },
         "00-0040154:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tai Felton depth / starter status",
           "player_id": "00-0040154",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13850,7 +13934,7 @@
           "value": null
         },
         "00-0040172:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jordan Watkins depth / starter status",
           "player_id": "00-0040172",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13896,7 +13980,7 @@
           "value": null
         },
         "00-0040177:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jordan James depth / starter status",
           "player_id": "00-0040177",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13942,7 +14026,7 @@
           "value": null
         },
         "00-0040215:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Gavin Bartholomew depth / starter status",
           "player_id": "00-0040215",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13972,7 +14056,7 @@
           "value": null
         },
         "00-0040494:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Max Brosmer depth / starter status",
           "player_id": "00-0040494",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14011,7 +14095,7 @@
           "value": null
         },
         "00-0040506:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Myles Price depth / starter status",
           "player_id": "00-0040506",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14057,7 +14141,7 @@
           "value": null
         },
         "00-0040509:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ben Yurosek depth / starter status",
           "player_id": "00-0040509",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14103,7 +14187,7 @@
           "value": null
         },
         "00-0041052:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kaelon Black depth / starter status",
           "player_id": "00-0041052",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14195,7 +14279,7 @@
           "value": null
         },
         "00-0041104:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Demond Claiborne depth / starter status",
           "player_id": "00-0041104",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14254,25 +14338,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.8005756309282206
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.7534399697667522
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.8008365755616543
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.774068291944335
@@ -14292,7 +14376,7 @@
       "home_team": "CHI",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0040743",
         "00-0039918"
@@ -14316,7 +14400,7 @@
           "value": null
         },
         "00-0028986:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Case Keenum depth / starter status",
           "player_id": "00-0028986",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14355,7 +14439,7 @@
           "value": null
         },
         "00-0032464:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kalif Raymond depth / starter status",
           "player_id": "00-0032464",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14401,7 +14485,7 @@
           "value": null
         },
         "00-0033906:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Alvin Kamara depth / starter status",
           "player_id": "00-0033906",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14447,7 +14531,7 @@
           "value": null
         },
         "00-0035039:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Stephen Carlson depth / starter status",
           "player_id": "00-0035039",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14486,7 +14570,7 @@
           "value": null
         },
         "00-0035644:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Noah Fant depth / starter status",
           "player_id": "00-0035644",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14571,7 +14655,7 @@
           "value": null
         },
         "00-0036040:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Juwan Johnson depth / starter status",
           "player_id": "00-0036040",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14617,7 +14701,7 @@
           "value": null
         },
         "00-0036275:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "D'Andre Swift depth / starter status",
           "player_id": "00-0036275",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14663,7 +14747,7 @@
           "value": null
         },
         "00-0036290:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Cole Kmet depth / starter status",
           "player_id": "00-0036290",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14709,7 +14793,7 @@
           "value": null
         },
         "00-0036973:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Travis Etienne depth / starter status",
           "player_id": "00-0036973",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14794,7 +14878,7 @@
           "value": null
         },
         "00-0037239:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Chris Olave depth / starter status",
           "player_id": "00-0037239",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14902,7 +14986,7 @@
           "value": null
         },
         "00-0038416:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyson Bagent depth / starter status",
           "player_id": "00-0038416",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14948,7 +15032,7 @@
           "value": null
         },
         "00-0038440:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Zavier Scott depth / starter status",
           "player_id": "00-0038440",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15079,7 +15163,7 @@
           "value": null
         },
         "00-0039021:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Roschon Johnson depth / starter status",
           "player_id": "00-0039021",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15125,7 +15209,7 @@
           "value": null
         },
         "00-0039373:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Audric Estime depth / starter status",
           "player_id": "00-0039373",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15164,7 +15248,7 @@
           "value": null
         },
         "00-0039424:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Devaughn Vele depth / starter status",
           "player_id": "00-0039424",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15241,7 +15325,7 @@
           "value": null
         },
         "00-0039918:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Caleb Williams depth / starter status",
           "player_id": "00-0039918",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15287,7 +15371,7 @@
           "value": null
         },
         "00-0039919:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Rome Odunze depth / starter status",
           "player_id": "00-0039919",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15333,7 +15417,7 @@
           "value": null
         },
         "00-0040126:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Colston Loveland depth / starter status",
           "player_id": "00-0040126",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15356,7 +15440,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040236:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Kyle Monangai game status",
           "player_id": "00-0040236",
           "source": "https://www.espn.com/nfl/injuries",
@@ -15372,14 +15456,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0040236:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Kyle Monangai practice",
           "player_id": "00-0040236",
           "unit": "status",
           "value": null
         },
         "00-0040236:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kyle Monangai depth / starter status",
           "player_id": "00-0040236",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15425,7 +15509,7 @@
           "value": null
         },
         "00-0040277:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jahdae Walker depth / starter status",
           "player_id": "00-0040277",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15471,7 +15555,7 @@
           "value": null
         },
         "00-0040735:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Luther Burden III depth / starter status",
           "player_id": "00-0040735",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15482,7 +15566,7 @@
           "label": "Luther Burden III expected targets",
           "player_id": "00-0040735",
           "unit": "opportunities",
-          "value": 7.3,
+          "value": 7.7,
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040743:anytime_td_probability": {
@@ -15525,7 +15609,7 @@
           "value": null
         },
         "00-0040743:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyler Shough depth / starter status",
           "player_id": "00-0040743",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15555,7 +15639,7 @@
           "value": null
         },
         "00-0041029:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jordyn Tyson depth / starter status",
           "player_id": "00-0041029",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15594,7 +15678,7 @@
           "value": null
         },
         "00-0041041:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Oscar Delp depth / starter status",
           "player_id": "00-0041041",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15640,7 +15724,7 @@
           "value": null
         },
         "00-0041051:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Zavion Thomas depth / starter status",
           "player_id": "00-0041051",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15686,7 +15770,7 @@
           "value": null
         },
         "00-0041067:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Bryce Lance depth / starter status",
           "player_id": "00-0041067",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15732,7 +15816,7 @@
           "value": null
         },
         "00-0041099:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Barion Brown depth / starter status",
           "player_id": "00-0041099",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15755,7 +15839,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041326:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "CJ Donaldson game status",
           "player_id": "00-0041326",
           "source": "https://www.espn.com/nfl/injuries",
@@ -15771,14 +15855,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041326:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "CJ Donaldson practice",
           "player_id": "00-0041326",
           "unit": "status",
           "value": null
         },
         "00-0041326:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "CJ Donaldson depth / starter status",
           "player_id": "00-0041326",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15824,7 +15908,7 @@
           "value": null
         },
         "00-0041558:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Sam Roush depth / starter status",
           "player_id": "00-0041558",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -15883,25 +15967,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.7141775214102632
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.7314719235872379
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.7476803909798063
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.736100931091665
@@ -15921,7 +16005,7 @@
       "home_team": "LAC",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T21:05:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0030565",
         "00-0036355"
@@ -15938,7 +16022,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0030565:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Geno Smith game status",
           "player_id": "00-0030565",
           "source": "https://www.espn.com/nfl/injuries",
@@ -15962,14 +16046,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0030565:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Geno Smith practice",
           "player_id": "00-0030565",
           "unit": "status",
           "value": null
         },
         "00-0030565:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Geno Smith depth / starter status",
           "player_id": "00-0030565",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16054,7 +16138,7 @@
           "value": null
         },
         "00-0033375:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tim Patrick depth / starter status",
           "player_id": "00-0033375",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16093,7 +16177,7 @@
           "value": null
         },
         "00-0033885:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "David Njoku depth / starter status",
           "player_id": "00-0033885",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16186,7 +16270,7 @@
           "value": null
         },
         "00-0036355:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Justin Herbert depth / starter status",
           "player_id": "00-0036355",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16232,7 +16316,7 @@
           "value": null
         },
         "00-0036842:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kene Nwangwu depth / starter status",
           "player_id": "00-0036842",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16278,7 +16362,7 @@
           "value": null
         },
         "00-0037740:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Garrett Wilson depth / starter status",
           "player_id": "00-0037740",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16324,7 +16408,7 @@
           "value": null
         },
         "00-0037755:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jelani Woods depth / starter status",
           "player_id": "00-0037755",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16370,7 +16454,7 @@
           "value": null
         },
         "00-0037805:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jeremy Ruckert depth / starter status",
           "player_id": "00-0037805",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16416,7 +16500,7 @@
           "value": null
         },
         "00-0038046:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Charlie Kolar depth / starter status",
           "player_id": "00-0038046",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16462,7 +16546,7 @@
           "value": null
         },
         "00-0038120:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Breece Hall depth / starter status",
           "player_id": "00-0038120",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16508,7 +16592,7 @@
           "value": null
         },
         "00-0038454:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Keaton Mitchell depth / starter status",
           "player_id": "00-0038454",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16554,7 +16638,7 @@
           "value": null
         },
         "00-0038544:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Quentin Johnston depth / starter status",
           "player_id": "00-0038544",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16600,7 +16684,7 @@
           "value": null
         },
         "00-0038573:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Derius Davis depth / starter status",
           "player_id": "00-0038573",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16669,7 +16753,7 @@
           "value": null
         },
         "00-0039391:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kimani Vidal depth / starter status",
           "player_id": "00-0039391",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16692,12 +16776,12 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039451:availability": {
-          "at": null,
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Isaiah Williams game status",
           "player_id": "00-0039451",
-          "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+          "source": "https://www.espn.com/nfl/injuries",
           "unit": "status",
-          "value": "unknown"
+          "value": "Questionable"
         },
         "00-0039451:expected_yards": {
           "at": "2026-11-18T16:44:19.363306+00:00",
@@ -16708,14 +16792,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039451:practice": {
-          "at": null,
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Isaiah Williams practice",
           "player_id": "00-0039451",
           "unit": "status",
           "value": null
         },
         "00-0039451:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Isaiah Williams depth / starter status",
           "player_id": "00-0039451",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16807,7 +16891,7 @@
           "value": null
         },
         "00-0039794:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Braelon Allen depth / starter status",
           "player_id": "00-0039794",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16853,7 +16937,7 @@
           "value": null
         },
         "00-0039798:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Isaiah Davis depth / starter status",
           "player_id": "00-0039798",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16899,7 +16983,7 @@
           "value": null
         },
         "00-0039890:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Adonai Mitchell depth / starter status",
           "player_id": "00-0039890",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16922,7 +17006,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039915:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Ladd McConkey game status",
           "player_id": "00-0039915",
           "source": "https://www.espn.com/nfl/injuries",
@@ -16938,14 +17022,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039915:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Ladd McConkey practice",
           "player_id": "00-0039915",
           "unit": "status",
           "value": null
         },
         "00-0039915:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ladd McConkey depth / starter status",
           "player_id": "00-0039915",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -16991,7 +17075,7 @@
           "value": null
         },
         "00-0040184:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "KeAndre Lambert-Smith depth / starter status",
           "player_id": "00-0040184",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17037,7 +17121,7 @@
           "value": null
         },
         "00-0040189:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Oronde Gadsden II depth / starter status",
           "player_id": "00-0040189",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17083,7 +17167,7 @@
           "value": null
         },
         "00-0040311:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Theo Wease Jr. depth / starter status",
           "player_id": "00-0040311",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17159,7 +17243,7 @@
           "value": null
         },
         "00-0040464:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "DJ Uiagalelei depth / starter status",
           "player_id": "00-0040464",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17198,7 +17282,7 @@
           "value": null
         },
         "00-0040582:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Arian Smith depth / starter status",
           "player_id": "00-0040582",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17237,7 +17321,7 @@
           "value": null
         },
         "00-0040666:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Omarion Hampton depth / starter status",
           "player_id": "00-0040666",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17283,7 +17367,7 @@
           "value": null
         },
         "00-0040727:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tre Harris depth / starter status",
           "player_id": "00-0040727",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17329,7 +17413,7 @@
           "value": null
         },
         "00-0040736:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mason Taylor depth / starter status",
           "player_id": "00-0040736",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17375,7 +17459,7 @@
           "value": null
         },
         "00-0041032:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kenyon Sadiq depth / starter status",
           "player_id": "00-0041032",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17405,7 +17489,7 @@
           "value": null
         },
         "00-0041056:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Cade Klubnik depth / starter status",
           "player_id": "00-0041056",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17444,7 +17528,7 @@
           "value": null
         },
         "00-0041267:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Malik McClain depth / starter status",
           "player_id": "00-0041267",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17467,7 +17551,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041511:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Omar Cooper Jr. game status",
           "player_id": "00-0041511",
           "source": "https://www.espn.com/nfl/injuries",
@@ -17483,14 +17567,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041511:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Omar Cooper Jr. practice",
           "player_id": "00-0041511",
           "unit": "status",
           "value": null
         },
         "00-0041511:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Omar Cooper Jr. depth / starter status",
           "player_id": "00-0041511",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17505,7 +17589,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0041550:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Brenen Thompson game status",
           "player_id": "00-0041550",
           "source": "https://www.espn.com/nfl/injuries",
@@ -17513,14 +17597,14 @@
           "value": "Questionable"
         },
         "00-0041550:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Brenen Thompson practice",
           "player_id": "00-0041550",
           "unit": "status",
           "value": null
         },
         "00-0041550:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brenen Thompson depth / starter status",
           "player_id": "00-0041550",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17572,25 +17656,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.42121164638753306
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.4844109693438284
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.4934742071567141
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.47675066316467124
@@ -17610,7 +17694,7 @@
       "home_team": "PHI",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T21:25:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0023459",
         "00-0039398"
@@ -17658,7 +17742,7 @@
           "value": null
         },
         "00-0023459:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Aaron Rodgers depth / starter status",
           "player_id": "00-0023459",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17727,7 +17811,7 @@
           "value": null
         },
         "00-0030061:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Zach Ertz depth / starter status",
           "player_id": "00-0030061",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17773,7 +17857,7 @@
           "value": null
         },
         "00-0033246:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Johnny Mundt depth / starter status",
           "player_id": "00-0033246",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17819,7 +17903,7 @@
           "value": null
         },
         "00-0033757:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Robert Tonyan depth / starter status",
           "player_id": "00-0033757",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17858,7 +17942,7 @@
           "value": null
         },
         "00-0034351:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dallas Goedert depth / starter status",
           "player_id": "00-0034351",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17888,7 +17972,7 @@
           "value": null
         },
         "00-0034771:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Mason Rudolph depth / starter status",
           "player_id": "00-0034771",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17934,7 +18018,7 @@
           "value": null
         },
         "00-0034844:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Saquon Barkley depth / starter status",
           "player_id": "00-0034844",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -17980,7 +18064,7 @@
           "value": null
         },
         "00-0035594:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Travis Homer depth / starter status",
           "player_id": "00-0035594",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18026,7 +18110,7 @@
           "value": null
         },
         "00-0035640:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "DK Metcalf depth / starter status",
           "player_id": "00-0035640",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18118,7 +18202,7 @@
           "value": null
         },
         "00-0036139:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Rico Dowdle depth / starter status",
           "player_id": "00-0036139",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18164,7 +18248,7 @@
           "value": null
         },
         "00-0036252:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Michael Pittman depth / starter status",
           "player_id": "00-0036252",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18194,7 +18278,7 @@
           "value": null
         },
         "00-0036389:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalen Hurts depth / starter status",
           "player_id": "00-0036389",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18286,7 +18370,7 @@
           "value": null
         },
         "00-0036775:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brandon Smith depth / starter status",
           "player_id": "00-0036775",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18332,7 +18416,7 @@
           "value": null
         },
         "00-0036862:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ben Skowronek depth / starter status",
           "player_id": "00-0036862",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18378,7 +18462,7 @@
           "value": null
         },
         "00-0036894:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Pat Freiermuth depth / starter status",
           "player_id": "00-0036894",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18401,7 +18485,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036912:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "DeVonta Smith game status",
           "player_id": "00-0036912",
           "source": "https://www.espn.com/nfl/injuries",
@@ -18417,14 +18501,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0036912:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "DeVonta Smith practice",
           "player_id": "00-0036912",
           "unit": "status",
           "value": null
         },
         "00-0036912:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "DeVonta Smith depth / starter status",
           "player_id": "00-0036912",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18470,7 +18554,7 @@
           "value": null
         },
         "00-0036980:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Elijah Moore depth / starter status",
           "player_id": "00-0036980",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18516,7 +18600,7 @@
           "value": null
         },
         "00-0037086:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Grant Calcaterra depth / starter status",
           "player_id": "00-0037086",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18532,7 +18616,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0037132:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Britain Covey game status",
           "player_id": "00-0037132",
           "source": "https://www.espn.com/nfl/injuries",
@@ -18548,14 +18632,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0037132:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Britain Covey practice",
           "player_id": "00-0037132",
           "unit": "status",
           "value": null
         },
         "00-0037132:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Britain Covey depth / starter status",
           "player_id": "00-0037132",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18601,7 +18685,7 @@
           "value": null
         },
         "00-0037228:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jaylen Warren depth / starter status",
           "player_id": "00-0037228",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18709,7 +18793,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038393:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Dontayvion Wicks game status",
           "player_id": "00-0038393",
           "source": "https://www.espn.com/nfl/injuries",
@@ -18725,14 +18809,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038393:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Dontayvion Wicks practice",
           "player_id": "00-0038393",
           "unit": "status",
           "value": null
         },
         "00-0038393:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dontayvion Wicks depth / starter status",
           "player_id": "00-0038393",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18762,7 +18846,7 @@
           "value": null
         },
         "00-0038400:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tanner McKee depth / starter status",
           "player_id": "00-0038400",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18808,7 +18892,7 @@
           "value": null
         },
         "00-0038409:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Lew Nichols III depth / starter status",
           "player_id": "00-0038409",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18900,7 +18984,7 @@
           "value": null
         },
         "00-0038555:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tank Bigsby depth / starter status",
           "player_id": "00-0038555",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -18946,7 +19030,7 @@
           "value": null
         },
         "00-0038558:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Darnell Washington depth / starter status",
           "player_id": "00-0038558",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19039,7 +19123,7 @@
           "value": null
         },
         "00-0039398:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Joe Milton III depth / starter status",
           "player_id": "00-0039398",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19055,7 +19139,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039739:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Roman Wilson game status",
           "player_id": "00-0039739",
           "source": "https://www.espn.com/nfl/injuries",
@@ -19071,14 +19155,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039739:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Roman Wilson practice",
           "player_id": "00-0039739",
           "unit": "status",
           "value": null
         },
         "00-0039739:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Roman Wilson depth / starter status",
           "player_id": "00-0039739",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19101,7 +19185,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039746:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Will Shipley game status",
           "player_id": "00-0039746",
           "source": "https://www.espn.com/nfl/injuries",
@@ -19117,14 +19201,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039746:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Will Shipley practice",
           "player_id": "00-0039746",
           "unit": "status",
           "value": null
         },
         "00-0039746:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Will Shipley depth / starter status",
           "player_id": "00-0039746",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19170,7 +19254,7 @@
           "value": null
         },
         "00-0040024:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Darius Cooper depth / starter status",
           "player_id": "00-0040024",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19216,7 +19300,7 @@
           "value": null
         },
         "00-0040586:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jaydon Blue depth / starter status",
           "player_id": "00-0040586",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19255,7 +19339,7 @@
           "value": null
         },
         "00-0040867:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Makai Lemon depth / starter status",
           "player_id": "00-0040867",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19301,7 +19385,7 @@
           "value": null
         },
         "00-0041397:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kaden Wetjen depth / starter status",
           "player_id": "00-0041397",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19347,7 +19431,7 @@
           "value": null
         },
         "00-0041483:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Eli Stowers depth / starter status",
           "player_id": "00-0041483",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19393,7 +19477,7 @@
           "value": null
         },
         "00-0041489:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Germie Bernard depth / starter status",
           "player_id": "00-0041489",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19423,7 +19507,7 @@
           "value": null
         },
         "00-0041490:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Eli Heidenreich depth / starter status",
           "player_id": "00-0041490",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19475,25 +19559,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.3542870938470387
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.28280201189845683
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.30951139989796267
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.30797278882677404
@@ -19513,7 +19597,7 @@
       "home_team": "DET",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0034855",
         "00-0033106"
@@ -19553,7 +19637,7 @@
           "value": null
         },
         "00-0031763:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "DeAndre Carter depth / starter status",
           "player_id": "00-0031763",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19607,7 +19691,7 @@
           "value": null
         },
         "00-0033106:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jared Goff depth / starter status",
           "player_id": "00-0033106",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19653,7 +19737,7 @@
           "value": null
         },
         "00-0033921:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Chris Godwin Jr. depth / starter status",
           "player_id": "00-0033921",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19683,7 +19767,7 @@
           "value": null
         },
         "00-0033949:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Joshua Dobbs depth / starter status",
           "player_id": "00-0033949",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19722,7 +19806,7 @@
           "value": null
         },
         "00-0034270:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyler Conklin depth / starter status",
           "player_id": "00-0034270",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19745,7 +19829,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0034855:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Baker Mayfield game status",
           "player_id": "00-0034855",
           "source": "https://www.espn.com/nfl/injuries",
@@ -19769,14 +19853,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0034855:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Baker Mayfield practice",
           "player_id": "00-0034855",
           "unit": "status",
           "value": null
         },
         "00-0034855:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Baker Mayfield depth / starter status",
           "player_id": "00-0034855",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19861,7 +19945,7 @@
           "value": null
         },
         "00-0035544:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tom Kennedy depth / starter status",
           "player_id": "00-0035544",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19907,7 +19991,7 @@
           "value": null
         },
         "00-0036754:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brock Wright depth / starter status",
           "player_id": "00-0036754",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19953,7 +20037,7 @@
           "value": null
         },
         "00-0036919:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kenny Gainwell depth / starter status",
           "player_id": "00-0036919",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -19999,7 +20083,7 @@
           "value": null
         },
         "00-0036963:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Amon-Ra St. Brown depth / starter status",
           "player_id": "00-0036963",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20045,7 +20129,7 @@
           "value": null
         },
         "00-0037240:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jameson Williams depth / starter status",
           "player_id": "00-0037240",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20091,7 +20175,7 @@
           "value": null
         },
         "00-0037311:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ko Kieft depth / starter status",
           "player_id": "00-0037311",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20137,7 +20221,7 @@
           "value": null
         },
         "00-0037524:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tay Martin depth / starter status",
           "player_id": "00-0037524",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20183,7 +20267,7 @@
           "value": null
         },
         "00-0038129:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Cade Otton depth / starter status",
           "player_id": "00-0038129",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20229,7 +20313,7 @@
           "value": null
         },
         "00-0038896:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jacob Saylors depth / starter status",
           "player_id": "00-0038896",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20275,7 +20359,7 @@
           "value": null
         },
         "00-0038951:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Sean Tucker depth / starter status",
           "player_id": "00-0038951",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20321,7 +20405,7 @@
           "value": null
         },
         "00-0039050:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Payne Durham depth / starter status",
           "player_id": "00-0039050",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20367,7 +20451,7 @@
           "value": null
         },
         "00-0039065:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Sam LaPorta depth / starter status",
           "player_id": "00-0039065",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20413,7 +20497,7 @@
           "value": null
         },
         "00-0039139:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jahmyr Gibbs depth / starter status",
           "player_id": "00-0039139",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20459,7 +20543,7 @@
           "value": null
         },
         "00-0039361:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Bucky Irving depth / starter status",
           "player_id": "00-0039361",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20505,7 +20589,7 @@
           "value": null
         },
         "00-0039364:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Sione Vaki depth / starter status",
           "player_id": "00-0039364",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20551,7 +20635,7 @@
           "value": null
         },
         "00-0039589:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kameron Johnson depth / starter status",
           "player_id": "00-0039589",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20620,7 +20704,7 @@
           "value": null
         },
         "00-0039855:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalen McMillan depth / starter status",
           "player_id": "00-0039855",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20659,7 +20743,7 @@
           "value": null
         },
         "00-0040129:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Emeka Egbuka depth / starter status",
           "player_id": "00-0040129",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20705,7 +20789,7 @@
           "value": null
         },
         "00-0040237:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tez Johnson depth / starter status",
           "player_id": "00-0040237",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20813,7 +20897,7 @@
           "value": null
         },
         "00-0040669:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Isaac TeSlaa depth / starter status",
           "player_id": "00-0040669",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20859,7 +20943,7 @@
           "value": null
         },
         "00-0041048:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ted Hurst III depth / starter status",
           "player_id": "00-0041048",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20905,7 +20989,7 @@
           "value": null
         },
         "00-0041094:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Bauer Sharp depth / starter status",
           "player_id": "00-0041094",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20935,7 +21019,7 @@
           "value": null
         },
         "00-0041251:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jalon Daniels depth / starter status",
           "player_id": "00-0041251",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -20994,25 +21078,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.6945944833306469
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.704923193486534
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.6208043656549808
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.7066608076927112
@@ -21032,7 +21116,7 @@
       "home_team": "DAL",
       "input_fingerprint": "a329a5c63d6e7851a0cc68d70ce9faaa7d36df83c86d53df53bb75783e3a646e",
       "kickoff": "2026-11-22T18:00:00+00:00",
-      "observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "observed_at": "2026-11-18T17:58:25.773205+00:00",
       "qb_ids": [
         "00-0040676",
         "00-0033077"
@@ -21080,7 +21164,7 @@
           "value": null
         },
         "00-0033077:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Dak Prescott depth / starter status",
           "player_id": "00-0033077",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21126,7 +21210,7 @@
           "value": null
         },
         "00-0034837:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Calvin Ridley depth / starter status",
           "player_id": "00-0034837",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21172,7 +21256,7 @@
           "value": null
         },
         "00-0035261:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tony Pollard depth / starter status",
           "player_id": "00-0035261",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21218,7 +21302,7 @@
           "value": null
         },
         "00-0036358:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "CeeDee Lamb depth / starter status",
           "player_id": "00-0036358",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21264,7 +21348,7 @@
           "value": null
         },
         "00-0036876:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Kylen Granson depth / starter status",
           "player_id": "00-0036876",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21342,7 +21426,7 @@
           "value": null
         },
         "00-0036997:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Javonte Williams depth / starter status",
           "player_id": "00-0036997",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21388,7 +21472,7 @@
           "value": null
         },
         "00-0037120:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyler Goodson depth / starter status",
           "player_id": "00-0037120",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21434,7 +21518,7 @@
           "value": null
         },
         "00-0037247:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "George Pickens depth / starter status",
           "player_id": "00-0037247",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21480,7 +21564,7 @@
           "value": null
         },
         "00-0037282:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "James Mitchell depth / starter status",
           "player_id": "00-0037282",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21519,7 +21603,7 @@
           "value": null
         },
         "00-0037594:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Julius Chestnut depth / starter status",
           "player_id": "00-0037594",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21565,7 +21649,7 @@
           "value": null
         },
         "00-0037801:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "KaVontae Turpin depth / starter status",
           "player_id": "00-0037801",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21588,7 +21672,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038041:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jake Ferguson game status",
           "player_id": "00-0038041",
           "source": "https://www.espn.com/nfl/injuries",
@@ -21604,14 +21688,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038041:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jake Ferguson practice",
           "player_id": "00-0038041",
           "unit": "status",
           "value": null
         },
         "00-0038041:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jake Ferguson depth / starter status",
           "player_id": "00-0038041",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21657,7 +21741,7 @@
           "value": null
         },
         "00-0038115:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Daniel Bellinger depth / starter status",
           "player_id": "00-0038115",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21680,7 +21764,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038117:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Wan'Dale Robinson game status",
           "player_id": "00-0038117",
           "source": "https://www.espn.com/nfl/injuries",
@@ -21696,14 +21780,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0038117:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Wan'Dale Robinson practice",
           "player_id": "00-0038117",
           "unit": "status",
           "value": null
         },
         "00-0038117:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Wan'Dale Robinson depth / starter status",
           "player_id": "00-0038117",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21788,7 +21872,7 @@
           "value": null
         },
         "00-0038547:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Luke Schoonmaker depth / starter status",
           "player_id": "00-0038547",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21880,7 +21964,7 @@
           "value": null
         },
         "00-0039032:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Tyjae Spears depth / starter status",
           "player_id": "00-0039032",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21903,7 +21987,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039062:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jonathan Mingo game status",
           "player_id": "00-0039062",
           "source": "https://www.espn.com/nfl/injuries",
@@ -21919,14 +22003,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0039062:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Jonathan Mingo practice",
           "player_id": "00-0039062",
           "unit": "status",
           "value": null
         },
         "00-0039062:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Jonathan Mingo depth / starter status",
           "player_id": "00-0039062",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -21972,7 +22056,7 @@
           "value": null
         },
         "00-0039410:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Ryan Flournoy depth / starter status",
           "player_id": "00-0039410",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22018,7 +22102,7 @@
           "value": null
         },
         "00-0039530:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Brevyn Spann-Ford depth / starter status",
           "player_id": "00-0039530",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22064,7 +22148,7 @@
           "value": null
         },
         "00-0039648:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "David Martin-Robinson depth / starter status",
           "player_id": "00-0039648",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22103,7 +22187,7 @@
           "value": null
         },
         "00-0040170:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Elic Ayomanor depth / starter status",
           "player_id": "00-0040170",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22188,7 +22272,7 @@
           "value": null
         },
         "00-0040522:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Xavier Restrepo depth / starter status",
           "player_id": "00-0040522",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22227,7 +22311,7 @@
           "value": null
         },
         "00-0040584:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Gunnar Helm depth / starter status",
           "player_id": "00-0040584",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22281,7 +22365,7 @@
           "value": null
         },
         "00-0040676:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Cam Ward depth / starter status",
           "player_id": "00-0040676",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22327,7 +22411,7 @@
           "value": null
         },
         "00-0040705:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Chimere Dike depth / starter status",
           "player_id": "00-0040705",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22357,7 +22441,7 @@
           "value": null
         },
         "00-0040886:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Nicholas Singleton depth / starter status",
           "player_id": "00-0040886",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22380,7 +22464,7 @@
           "value": null
         },
         "00-0040930:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Camden Brown depth / starter status",
           "player_id": "00-0040930",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22419,7 +22503,7 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041438:availability": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Carnell Tate game status",
           "player_id": "00-0041438",
           "source": "https://www.espn.com/nfl/injuries",
@@ -22435,14 +22519,14 @@
           "version": "b867b3a7ba9f7a79"
         },
         "00-0041438:practice": {
-          "at": "2026-11-18T09:04:08.800034+00:00",
+          "at": "2026-11-18T17:58:24.935714+00:00",
           "label": "Carnell Tate practice",
           "player_id": "00-0041438",
           "unit": "status",
           "value": null
         },
         "00-0041438:starter": {
-          "at": "2026-11-18T07:02:26Z",
+          "at": "2026-11-18T16:23:40Z",
           "label": "Carnell Tate depth / starter status",
           "player_id": "00-0041438",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -22501,25 +22585,25 @@
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_a home win",
           "unit": "probability",
           "value": 0.709824545135547
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
           "value": 0.7017594477189776
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
           "value": 0.754525666006901
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-18T09:04:09.438210+00:00",
+          "at": "2026-11-18T17:58:25.515779+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
           "value": 0.7209107129829508
@@ -22534,7 +22618,7 @@
       "week": 11
     }
   },
-  "last_observed_at": "2026-11-18T16:44:24.399950+00:00",
+  "last_observed_at": "2026-11-18T17:58:25.773205+00:00",
   "schema_version": 1,
   "tracking_started_at": "2026-11-17T18:22:25.058938+00:00"
 }

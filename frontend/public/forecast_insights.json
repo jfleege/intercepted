@@ -1,6 +1,90 @@
 {
   "changes": [
     {
+      "after": "Questionable",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0039451:availability",
+      "game_id": "2026_11_NYJ_LAC",
+      "id": "ecfef33c17893da146e7154c",
+      "label": "Isaiah Williams game status",
+      "matchup": "NYJ @ LAC",
+      "observed_at": "2026-11-18T17:58:24.944462+00:00",
+      "player_id": "00-0039451",
+      "previous_observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-18T17:58:24.935714+00:00",
+      "unit": "status",
+      "week": 11
+    },
+    {
+      "after": 7.7,
+      "before": 7.3,
+      "delta": 0.40000000000000036,
+      "field": "00-0040735:usage",
+      "game_id": "2026_11_NO_CHI",
+      "id": "54008599f0945cbdeab222dd",
+      "label": "Luther Burden III expected targets",
+      "matchup": "NO @ CHI",
+      "observed_at": "2026-11-18T17:58:24.944462+00:00",
+      "player_id": "00-0040735",
+      "previous_observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "reasons": [
+        "Saved value changed; no cause was provided by the source."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": null,
+      "unit": "opportunities",
+      "week": 11
+    },
+    {
+      "after": "Injured Reserve",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0034796:availability",
+      "game_id": "2026_11_BAL_CAR",
+      "id": "03c1abf91762c98028618105",
+      "label": "Lamar Jackson game status",
+      "matchup": "BAL @ CAR",
+      "observed_at": "2026-11-18T17:58:24.944462+00:00",
+      "player_id": "00-0034796",
+      "previous_observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-18T17:58:24.935714+00:00",
+      "unit": "status",
+      "week": 11
+    },
+    {
+      "after": "unknown",
+      "before": "Injured Reserve",
+      "delta": null,
+      "field": "00-0038128:availability",
+      "game_id": "2026_11_MIA_BUF",
+      "id": "d442224e893533ca10b697d7",
+      "label": "Malik Willis game status",
+      "matchup": "MIA @ BUF",
+      "observed_at": "2026-11-18T17:58:24.944462+00:00",
+      "player_id": "00-0038128",
+      "previous_observed_at": "2026-11-18T16:44:24.399950+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+      "source_at": null,
+      "unit": "status",
+      "week": 11
+    },
+    {
       "after": 0.4009,
       "before": 0.3998,
       "delta": 0.0010999999999999899,
@@ -1282,15 +1366,9 @@
       "week": 11
     }
   ],
-  "exported_at": "2026-11-18T16:44:24.399950+00:00",
+  "exported_at": "2026-11-18T17:58:25.773205+00:00",
   "monitoring": {
     "alerts": [
-      {
-        "game_id": "2026_11_MIA_BUF",
-        "id": "reported_out:2026_11_MIA_BUF:00-0038128",
-        "message": "Malik Willis is reported out. Saved projections remain conditional; current recommendations exclude this player.",
-        "severity": "watch"
-      },
       {
         "game_id": "2026_11_MIA_BUF",
         "id": "availability_watch:2026_11_MIA_BUF:00-0038728",
@@ -1301,6 +1379,12 @@
         "game_id": "2026_11_MIA_BUF",
         "id": "availability_watch:2026_11_MIA_BUF:00-0041525",
         "message": "Chris Bell: Questionable (Knee). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
+        "severity": "watch"
+      },
+      {
+        "game_id": "2026_11_BAL_CAR",
+        "id": "reported_out:2026_11_BAL_CAR:00-0034796",
+        "message": "Lamar Jackson is reported out. Saved projections remain conditional; current recommendations exclude this player.",
         "severity": "watch"
       },
       {
@@ -1361,6 +1445,12 @@
         "game_id": "2026_11_NYJ_LAC",
         "id": "availability_watch:2026_11_NYJ_LAC:00-0030565",
         "message": "Geno Smith: Questionable (Ankle). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
+        "severity": "watch"
+      },
+      {
+        "game_id": "2026_11_NYJ_LAC",
+        "id": "availability_watch:2026_11_NYJ_LAC:00-0039451",
+        "message": "Isaiah Williams: Questionable (Ribs). Forecasts remain conditional on the displayed starters; review backup scenarios where available.",
         "severity": "watch"
       },
       {
@@ -1461,13 +1551,13 @@
       },
       {
         "id": "availability_coverage",
-        "message": "36 of 470 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
+        "message": "37 of 470 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
       }
     ],
     "automatic_retraining": false,
     "availability_coverage": {
-      "reported": 36,
+      "reported": 37,
       "tracked": 470
     },
     "calibration": [
@@ -1616,7 +1706,7 @@
         "windows": []
       }
     ],
-    "checked_at": "2026-11-18T16:44:24.399950+00:00",
+    "checked_at": "2026-11-18T17:58:25.773205+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,
@@ -1656,7 +1746,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -1697,7 +1787,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -1738,7 +1828,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -1845,7 +1935,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -1878,7 +1968,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -1952,7 +2042,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -1993,7 +2083,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2034,7 +2124,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2067,7 +2157,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2108,7 +2198,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2149,7 +2239,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2190,7 +2280,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2223,7 +2313,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2264,7 +2354,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2287,7 +2377,7 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -2305,7 +2395,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2346,7 +2436,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2412,7 +2502,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2453,7 +2543,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2494,7 +2584,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2527,7 +2617,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -2568,7 +2658,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2609,7 +2699,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2650,7 +2740,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2683,7 +2773,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2724,7 +2814,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2798,7 +2888,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2839,7 +2929,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2862,7 +2952,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -2880,7 +2970,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2946,7 +3036,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "KC",
       "usage": {
@@ -2987,7 +3077,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -3028,7 +3118,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -3069,7 +3159,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -3102,7 +3192,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "ARI",
       "usage": {
@@ -3135,7 +3225,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3217,7 +3307,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3258,7 +3348,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3332,7 +3422,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3353,14 +3443,14 @@
     },
     {
       "availability": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "blocked": true,
+        "injury": "Thumb",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-18T15:52Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Injured Reserve"
       },
       "game_id": "2026_11_BAL_CAR",
       "kickoff": "2026-11-22T18:00:00+00:00",
@@ -3373,7 +3463,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3414,7 +3504,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3455,7 +3545,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3496,7 +3586,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3537,7 +3627,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3578,7 +3668,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3619,7 +3709,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3660,7 +3750,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3701,7 +3791,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3742,7 +3832,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3783,7 +3873,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3824,7 +3914,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3865,7 +3955,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -3906,7 +3996,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3947,7 +4037,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -3980,7 +4070,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -4013,7 +4103,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -4054,7 +4144,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -4095,7 +4185,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -4136,7 +4226,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -4177,7 +4267,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -4218,7 +4308,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -4325,7 +4415,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -4366,7 +4456,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CAR",
       "usage": {
@@ -4407,7 +4497,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -4448,7 +4538,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -4481,7 +4571,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -4522,7 +4612,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -4563,7 +4653,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BAL",
       "usage": {
@@ -4596,7 +4686,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -4637,7 +4727,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -4678,7 +4768,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -4719,7 +4809,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -4760,7 +4850,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -4793,7 +4883,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -4834,7 +4924,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -4908,7 +4998,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -4949,7 +5039,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -4990,7 +5080,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5031,7 +5121,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5064,7 +5154,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5105,7 +5195,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5146,7 +5236,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5187,7 +5277,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5228,7 +5318,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5269,7 +5359,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5310,7 +5400,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5351,7 +5441,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5392,7 +5482,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5425,7 +5515,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5466,7 +5556,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5489,7 +5579,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -5507,7 +5597,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5548,7 +5638,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5589,7 +5679,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5630,7 +5720,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5671,7 +5761,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5712,7 +5802,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5735,7 +5825,7 @@
       "availability": {
         "blocked": true,
         "injury": "Groin",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T19:02Z",
@@ -5753,7 +5843,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5827,7 +5917,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5868,7 +5958,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -5909,7 +5999,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5942,7 +6032,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CIN",
       "usage": {
@@ -5983,7 +6073,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -6049,7 +6139,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "WAS",
       "usage": {
@@ -6082,7 +6172,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6123,7 +6213,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6164,7 +6254,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6238,7 +6328,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6279,7 +6369,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6320,7 +6410,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6343,7 +6433,7 @@
       "availability": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-18T09:04:07.955910+00:00",
+        "observed_at": "2026-11-18T17:58:24.052065+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6361,7 +6451,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6402,7 +6492,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6443,7 +6533,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6484,7 +6574,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6525,7 +6615,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6548,7 +6638,7 @@
       "availability": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-18T09:04:07.955910+00:00",
+        "observed_at": "2026-11-18T17:58:24.052065+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6566,7 +6656,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6607,7 +6697,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6640,7 +6730,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6681,7 +6771,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6696,7 +6786,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-18T09:04:07.955910+00:00",
+        "observed_at": "2026-11-18T17:58:24.052065+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6714,7 +6804,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -6747,7 +6837,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6780,7 +6870,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6821,7 +6911,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6862,7 +6952,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6877,7 +6967,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-18T09:04:07.955910+00:00",
+        "observed_at": "2026-11-18T17:58:24.052065+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6895,7 +6985,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6936,7 +7026,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -6977,7 +7067,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -7010,7 +7100,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -7084,7 +7174,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -7099,7 +7189,7 @@
       "availability": {
         "blocked": false,
         "injury": "Toe",
-        "observed_at": "2026-11-18T09:04:07.955910+00:00",
+        "observed_at": "2026-11-18T17:58:24.052065+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7117,7 +7207,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -7140,7 +7230,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-18T09:04:07.955910+00:00",
+        "observed_at": "2026-11-18T17:58:24.052065+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7158,7 +7248,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -7199,7 +7289,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -7240,7 +7330,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -7281,7 +7371,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -7296,7 +7386,7 @@
       "availability": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-18T09:04:07.955910+00:00",
+        "observed_at": "2026-11-18T17:58:24.052065+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7314,7 +7404,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -7355,7 +7445,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -7396,7 +7486,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "IND",
       "usage": {
@@ -7470,7 +7560,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "HOU",
       "usage": {
@@ -7577,7 +7667,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -7618,7 +7708,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -7725,7 +7815,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -7766,7 +7856,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -7807,7 +7897,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -7848,7 +7938,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -7889,7 +7979,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -7971,7 +8061,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8012,7 +8102,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8094,7 +8184,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8135,7 +8225,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8176,7 +8266,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8217,7 +8307,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8250,7 +8340,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8291,7 +8381,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8332,7 +8422,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8373,7 +8463,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8414,7 +8504,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8455,7 +8545,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8488,7 +8578,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8521,7 +8611,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8595,7 +8685,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8628,7 +8718,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8669,7 +8759,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8710,7 +8800,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYG",
       "usage": {
@@ -8751,7 +8841,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8792,7 +8882,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8866,7 +8956,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "JAX",
       "usage": {
@@ -8907,7 +8997,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -8948,7 +9038,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -8989,7 +9079,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9030,7 +9120,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9071,7 +9161,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9112,7 +9202,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9153,7 +9243,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9194,7 +9284,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9235,7 +9325,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9276,7 +9366,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9317,7 +9407,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9391,7 +9481,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9432,7 +9522,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9473,7 +9563,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9514,7 +9604,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9537,7 +9627,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-16T21:00Z",
@@ -9555,7 +9645,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9596,7 +9686,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9670,7 +9760,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9711,7 +9801,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9752,7 +9842,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9793,7 +9883,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9834,7 +9924,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9875,7 +9965,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -9916,7 +10006,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -9957,7 +10047,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -10031,7 +10121,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DEN",
       "usage": {
@@ -10072,7 +10162,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LV",
       "usage": {
@@ -10138,7 +10228,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10179,7 +10269,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10220,7 +10310,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10261,7 +10351,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10302,7 +10392,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10343,7 +10433,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10417,7 +10507,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10458,7 +10548,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10499,7 +10589,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -10540,7 +10630,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10581,7 +10671,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -10602,14 +10692,14 @@
     },
     {
       "availability": {
-        "blocked": true,
-        "injury": "Abdomen",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
         "practice": null,
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-16T17:27Z",
-        "source": "https://www.espn.com/nfl/injuries",
-        "status": "Injured Reserve"
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
+        "report_updated_at": null,
+        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+        "status": "unknown"
       },
       "game_id": "2026_11_MIA_BUF",
       "kickoff": "2026-11-22T18:00:00+00:00",
@@ -10622,7 +10712,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -10645,7 +10735,7 @@
       "availability": {
         "blocked": false,
         "injury": "Quadriceps",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -10663,7 +10753,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -10770,7 +10860,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10811,7 +10901,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -10885,7 +10975,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -10926,7 +11016,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -10967,7 +11057,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11008,7 +11098,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -11049,7 +11139,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11082,7 +11172,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -11123,7 +11213,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11164,7 +11254,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -11205,7 +11295,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11287,7 +11377,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "BUF",
       "usage": {
@@ -11320,7 +11410,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11361,7 +11451,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11384,10 +11474,10 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-17T12:19Z",
+        "report_updated_at": "2026-11-18T16:58Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -11402,7 +11492,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11443,7 +11533,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11484,7 +11574,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIA",
       "usage": {
@@ -11525,7 +11615,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -11558,7 +11648,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -11591,7 +11681,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -11614,7 +11704,7 @@
       "availability": {
         "blocked": false,
         "injury": "Achilles",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-16T22:05Z",
@@ -11632,7 +11722,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -11673,7 +11763,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -11714,7 +11804,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -11755,7 +11845,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -11796,7 +11886,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -11837,7 +11927,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -11901,7 +11991,7 @@
       "availability": {
         "blocked": true,
         "injury": "Hamstring",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-16T18:39Z",
@@ -11919,7 +12009,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -11942,7 +12032,7 @@
       "availability": {
         "blocked": false,
         "injury": "Wrist",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-16T18:43Z",
@@ -11960,7 +12050,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12001,7 +12091,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12042,7 +12132,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12065,7 +12155,7 @@
       "availability": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -12083,7 +12173,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12124,7 +12214,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12165,7 +12255,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12206,7 +12296,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12247,7 +12337,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12280,7 +12370,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12321,7 +12411,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12362,7 +12452,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12385,7 +12475,7 @@
       "availability": {
         "blocked": true,
         "injury": "Thumb",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-16T18:45Z",
@@ -12403,7 +12493,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12444,7 +12534,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12526,7 +12616,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12567,7 +12657,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12608,7 +12698,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12649,7 +12739,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12690,7 +12780,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12723,7 +12813,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12764,7 +12854,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12805,7 +12895,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "SF",
       "usage": {
@@ -12887,7 +12977,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "MIN",
       "usage": {
@@ -12928,7 +13018,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -12961,7 +13051,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13002,7 +13092,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -13043,7 +13133,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13076,7 +13166,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -13150,7 +13240,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -13191,7 +13281,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13232,7 +13322,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13273,7 +13363,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -13347,7 +13437,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -13454,7 +13544,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13495,7 +13585,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13610,7 +13700,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13651,7 +13741,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -13684,7 +13774,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -13758,7 +13848,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13799,7 +13889,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13840,7 +13930,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13863,7 +13953,7 @@
       "availability": {
         "blocked": false,
         "injury": "Toe",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T21:01Z",
@@ -13881,7 +13971,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13922,7 +14012,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -13963,19 +14053,19 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
-        "estimate": 7.3,
+        "estimate": 7.7,
         "field": "targets",
-        "last": 9.0,
+        "last": 10.0,
         "method": "Unweighted mean of the prior three same-team appearances; conditional on appearing. Not adjusted for injury or a new role. Observed range is not a prediction interval.",
         "observed_range": [
           4.0,
-          9.0
+          10.0
         ],
-        "recent_average": 7.33,
+        "recent_average": 7.67,
         "samples": 3,
         "status": "estimated",
         "through_week": 9,
@@ -14004,7 +14094,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -14045,7 +14135,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -14078,7 +14168,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -14119,7 +14209,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -14160,7 +14250,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -14201,7 +14291,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -14224,7 +14314,7 @@
       "availability": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -14242,7 +14332,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NO",
       "usage": {
@@ -14283,7 +14373,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "CHI",
       "usage": {
@@ -14306,10 +14396,10 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-17T00:15Z",
+        "report_updated_at": "2026-11-18T17:01Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -14324,7 +14414,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -14398,7 +14488,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -14431,7 +14521,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -14505,7 +14595,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -14546,7 +14636,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -14587,7 +14677,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -14628,7 +14718,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -14669,7 +14759,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -14710,7 +14800,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -14751,7 +14841,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -14792,7 +14882,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -14833,7 +14923,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -14874,7 +14964,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -14948,7 +15038,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -14970,13 +15060,13 @@
     {
       "availability": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Ribs",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-18T17:07Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "game_id": "2026_11_NYJ_LAC",
       "kickoff": "2026-11-22T21:05:00+00:00",
@@ -14989,7 +15079,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15071,7 +15161,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15112,7 +15202,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15153,7 +15243,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15176,7 +15266,7 @@
       "availability": {
         "blocked": false,
         "injury": "Back",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -15194,7 +15284,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -15235,7 +15325,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -15276,7 +15366,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -15317,7 +15407,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -15424,7 +15514,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -15457,7 +15547,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15490,7 +15580,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -15531,7 +15621,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -15572,7 +15662,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15613,7 +15703,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15654,7 +15744,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15687,7 +15777,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15710,10 +15800,10 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-16T14:55Z",
+        "report_updated_at": "2026-11-18T17:06Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -15728,7 +15818,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "NYJ",
       "usage": {
@@ -15751,7 +15841,7 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T00:13Z",
@@ -15769,7 +15859,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "LAC",
       "usage": {
@@ -15802,7 +15892,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -15876,7 +15966,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -15917,7 +16007,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -15958,7 +16048,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -15991,7 +16081,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16032,7 +16122,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16073,7 +16163,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16114,7 +16204,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16155,7 +16245,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16237,7 +16327,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16278,7 +16368,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16319,7 +16409,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16401,7 +16491,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16442,7 +16532,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16483,7 +16573,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16506,10 +16596,10 @@
       "availability": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-17T12:19Z",
+        "report_updated_at": "2026-11-18T17:43Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -16524,7 +16614,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16565,7 +16655,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16606,7 +16696,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16621,7 +16711,7 @@
       "availability": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -16639,7 +16729,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16680,7 +16770,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16777,10 +16867,10 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-17T12:19Z",
+        "report_updated_at": "2026-11-18T17:49Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -16795,7 +16885,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16836,7 +16926,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -16877,7 +16967,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -16959,7 +17049,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -17000,7 +17090,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -17074,7 +17164,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -17089,7 +17179,7 @@
       "availability": {
         "blocked": true,
         "injury": "Finger",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-16T20:37Z",
@@ -17107,7 +17197,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -17130,7 +17220,7 @@
       "availability": {
         "blocked": true,
         "injury": "Foot",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-16T20:55Z",
@@ -17148,7 +17238,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -17189,7 +17279,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -17230,7 +17320,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -17263,7 +17353,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -17304,7 +17394,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -17345,7 +17435,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PHI",
       "usage": {
@@ -17386,7 +17476,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -17427,7 +17517,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "PIT",
       "usage": {
@@ -17460,7 +17550,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -17501,7 +17591,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -17542,7 +17632,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -17583,7 +17673,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -17616,7 +17706,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -17639,10 +17729,10 @@
       "availability": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-17T22:48Z",
+        "report_updated_at": "2026-11-18T17:17Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -17657,7 +17747,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -17731,7 +17821,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -17772,7 +17862,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -17813,7 +17903,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -17854,7 +17944,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -17895,7 +17985,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -17936,7 +18026,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -17977,7 +18067,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -18018,7 +18108,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18059,7 +18149,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -18100,7 +18190,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18141,7 +18231,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18182,7 +18272,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -18223,7 +18313,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -18264,7 +18354,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18305,7 +18395,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -18346,7 +18436,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18420,7 +18510,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18453,7 +18543,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18494,7 +18584,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18601,7 +18691,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DET",
       "usage": {
@@ -18642,7 +18732,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18683,7 +18773,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18724,7 +18814,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TB",
       "usage": {
@@ -18765,7 +18855,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -18806,7 +18896,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -18847,7 +18937,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -18888,7 +18978,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -18929,7 +19019,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -18995,7 +19085,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19036,7 +19126,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19077,7 +19167,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19118,7 +19208,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19151,7 +19241,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19192,7 +19282,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19215,7 +19305,7 @@
       "availability": {
         "blocked": true,
         "injury": "Knee",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-16T19:09Z",
@@ -19233,7 +19323,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19274,7 +19364,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19297,10 +19387,10 @@
       "availability": {
         "blocked": true,
         "injury": "Ankle",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-17T21:26Z",
+        "report_updated_at": "2026-11-18T17:29Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Injured Reserve"
       },
@@ -19315,7 +19405,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19389,7 +19479,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19471,7 +19561,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19494,7 +19584,7 @@
       "availability": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-17T12:19Z",
@@ -19512,7 +19602,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19553,7 +19643,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19594,7 +19684,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19635,7 +19725,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19668,7 +19758,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19742,7 +19832,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19775,7 +19865,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19816,7 +19906,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19857,7 +19947,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19898,7 +19988,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -19931,7 +20021,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_reserve",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "DAL",
       "usage": {
@@ -19979,10 +20069,10 @@
       "availability": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-18T09:04:08.800034+00:00",
+        "observed_at": "2026-11-18T17:58:24.935714+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-16T14:23Z",
+        "report_updated_at": "2026-11-18T17:25Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -19997,7 +20087,7 @@
         "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
         "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
         "status": "listed_first_unit",
-        "updated_at": "2026-11-18T07:02:26Z"
+        "updated_at": "2026-11-18T16:23:40Z"
       },
       "team": "TEN",
       "usage": {
@@ -20022,20 +20112,20 @@
   "season": 2026,
   "sources": {
     "depth_charts": {
-      "latest_report_at": "2026-11-18T07:02:26Z",
-      "observed_at": "2026-11-18T09:04:07.955910+00:00",
+      "latest_report_at": "2026-11-18T16:23:40Z",
+      "observed_at": "2026-11-18T17:58:24.052065+00:00",
       "rows": 2332,
       "status": "available"
     },
     "espn_injuries": {
-      "observed_at": "2026-11-18T09:04:08.800034+00:00",
+      "observed_at": "2026-11-18T17:58:24.935714+00:00",
       "rows": 40,
       "source": "https://www.espn.com/nfl/injuries",
       "status": "available"
     },
     "injuries": {
       "latest_report_at": null,
-      "observed_at": "2026-11-18T09:04:07.955910+00:00",
+      "observed_at": "2026-11-18T17:58:24.052065+00:00",
       "rows": 3194,
       "status": "available"
     }
@@ -20064,11 +20154,11 @@
     },
     {
       "active_method": "Unweighted prior-three mean",
-      "baseline_mae": 1.909,
+      "baseline_mae": 1.91,
       "candidate_method": "20% / 30% / 50% recent weighting; not promoted",
       "evaluation": "Retrospective walk-forward on current-season directory appearances; not a verified live record.",
       "field": "targets",
-      "mae": 1.916,
+      "mae": 1.917,
       "samples": 933,
       "version": "recent-opportunities-mean-v1"
     }

@@ -2,25 +2,25 @@
   "active_season": 2026,
   "active_week": 11,
   "attempt": {
-    "completed_at": "2026-11-18T09:04:10.014661+00:00",
-    "mode": "pregame",
-    "started_at": "2026-11-18T09:04:05.669443+00:00",
+    "completed_at": "2026-11-18T16:44:43.010160+00:00",
+    "mode": "results",
+    "started_at": "2026-11-18T16:44:03.371000+00:00",
     "state": "success",
     "steps": {
-      "directory": "skipped",
-      "forecast": "success",
+      "directory": "success",
+      "forecast": "skipped",
       "history": "success",
       "insights": "success",
-      "markets": "skipped",
+      "markets": "success",
       "odds": "skipped",
-      "players": "skipped",
-      "position_defense": "skipped",
+      "players": "success",
+      "position_defense": "success",
       "pre_rollover": "skipped",
       "props": "skipped",
-      "research": "skipped",
-      "research_results": "skipped",
-      "results": "skipped",
-      "teams": "skipped",
+      "research": "success",
+      "research_results": "success",
+      "results": "success",
+      "teams": "success",
       "verify": "success"
     }
   },
@@ -33,12 +33,12 @@
     "target_season": 2026,
     "target_week": 11
   },
-  "last_results_refresh_at": "2026-11-17T17:06:47.405333+00:00",
+  "last_results_refresh_at": "2026-11-18T16:44:43.010160+00:00",
   "last_successful_refresh_at": "2026-11-18T00:47:39.676173+00:00",
-  "next_forecast_check_at": "2026-11-18T13:17:00+00:00",
+  "next_forecast_check_at": "2026-11-19T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-24T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-18T09:04:10.014661+00:00",
+  "snapshot_at": "2026-11-18T16:44:43.010160+00:00",
   "sources": [
     {
       "features_through_week": 10,
@@ -51,55 +51,55 @@
     {
       "id": "players",
       "label": "Player cards",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-18T00:47:16.343408+00:00",
+      "updated_at": "2026-11-18T16:44:08.042238+00:00",
       "week": 11
     },
     {
       "id": "directory",
       "label": "Player history",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
       "through_week": 10,
-      "updated_at": "2026-11-18T00:47:19.302117+00:00",
+      "updated_at": "2026-11-18T16:44:21.718385+00:00",
       "week": 11
     },
     {
       "features_through_week": 10,
       "id": "research",
       "label": "Matchup projections",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-17T23:53:15.944503+00:00",
+      "updated_at": "2026-11-18T16:44:19.363306+00:00",
       "week": 11
     },
     {
       "id": "results",
       "label": "Game results",
-      "refresh_outcome": "skipped",
-      "updated_at": "2026-11-18T00:47:15.097145+00:00"
+      "refresh_outcome": "success",
+      "updated_at": "2026-11-18T16:44:06.682431+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
-      "refresh_outcome": "skipped",
-      "updated_at": "2026-11-18T00:47:20.294016+00:00"
+      "refresh_outcome": "success",
+      "updated_at": "2026-11-18T16:44:22.814489+00:00"
     },
     {
       "id": "insights",
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-18T09:04:09.788301+00:00",
+      "updated_at": "2026-11-18T16:44:24.399950+00:00",
       "week": 11
     },
     {
       "id": "position_defense",
       "label": "Defense vs positions",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-18T00:47:19.991107+00:00",
+      "updated_at": "2026-11-18T16:44:22.484003+00:00",
       "week": 11
     },
     {
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-17T21:49:57.948536+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/44272278640"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/44350494838"
 }

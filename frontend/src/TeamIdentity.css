@@ -20,12 +20,12 @@
 .market-board{margin:18px 0;border:1px solid var(--ud-border);border-radius:12px;overflow:hidden}
 .market-board-row{display:grid;grid-template-columns:minmax(130px,1fr) 1fr 1fr;gap:12px;align-items:center;padding:20px;border-top:1px solid var(--ud-border)}
 .market-board-row:first-child{border:0;background:#091b28;color:var(--ud-muted);font-size:11px;letter-spacing:1px;padding-block:12px}
-.market-board-row strong{display:block;font:600 28px 'Barlow Condensed',sans-serif;color:var(--team-highlight)}
+.market-board-row strong{display:block;font:600 28px var(--font-display);color:var(--team-highlight)}
 .market-board-row>div:first-child{font-weight:600}
 .market-reading{border-left:3px solid #80d5ff;background:#142e3c;padding:18px 20px;margin:18px 0;border-radius:0 9px 9px 0}
-.market-reading h4{margin:0 0 8px;font:600 23px 'Barlow Condensed',sans-serif}
+.market-reading h4{margin:0 0 8px;font:600 23px var(--font-display)}
 .market-reading p{color:var(--ud-muted);font-size:12px;line-height:1.7;margin:0}
 .market-total{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--ud-border);padding:15px 20px;color:var(--ud-muted);font-size:12px}
-.market-total b{font:600 27px 'Barlow Condensed',sans-serif;color:var(--ud-text)}
+.market-total b{font:600 27px var(--font-display);color:var(--ud-text)}
 @media(max-width:600px){.market-board-row{grid-template-columns:minmax(85px,1fr) 1fr 1fr;padding:15px 10px;gap:7px}.market-board-row strong{font-size:24px}.market-board-row .team-mark{gap:4px}.market-board-row .team-mark img{width:23px}.team-mark img{width:23px;height:22px}}
 @media(max-width:650px){.dashboard-shell .mx-eff-row>div{grid-template-columns:1fr}.dashboard-shell .mr-period-chart{gap:7px;padding-inline:0}.dashboard-shell .mr-period-group>div{gap:5px}.dashboard-shell .mr-period-column .team-mark img{width:20px;height:19px}.dashboard-shell .mr-chart-heading{flex-wrap:wrap;gap:12px}}

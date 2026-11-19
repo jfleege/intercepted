@@ -18,7 +18,7 @@
 .refresh-status-last b{color:var(--ud-text);font-weight:400;font-variant-numeric:tabular-nums}
 .refresh-status-body{padding:18px;border-top:1px solid var(--ud-border)}
 .refresh-status-explanation{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
-.refresh-status-explanation h2{font:600 22px/1.2 'Barlow Condensed',sans-serif;margin:0 0 6px;color:var(--ud-text)}
+.refresh-status-explanation h2{font:600 22px/1.2 var(--font-display);margin:0 0 6px;color:var(--ud-text)}
 .refresh-status-body p{font-size:12px;line-height:1.5;color:var(--ud-muted);margin:0}
 .refresh-status-explanation a{color:var(--ud-blue);font-size:12px;flex-shrink:0}
 .refresh-status-body .refresh-status-check{display:grid;gap:5px;margin:18px 0 10px;padding-left:12px;border-left:2px solid #456779;overflow-wrap:anywhere}

@@ -7,7 +7,7 @@
 .hp-field { width:100%; height:100%; overflow:visible; transform:perspective(850px) rotateX(25deg) rotateZ(-13deg); }
 .hp-boundary { stroke:#65a5c2; stroke-width:1; fill:#0b202b55; }
 .hp-yard-line { stroke:#537b9055; stroke-width:1; }
-.hp-yard-line text { stroke:none; fill:#65899c; font:600 14px Barlow,sans-serif; }
+.hp-yard-line text { stroke:none; fill:#65899c; font:600 14px var(--font-ui); }
 .hp-hash { stroke:#6e9ab166; stroke-width:1; }
 .hp-scrimmage { stroke:#80d5ff55; stroke-width:1; stroke-dasharray:3 5; }
 .hp-routes { visibility:hidden; }
@@ -15,29 +15,29 @@
 .hp-route { stroke:#80d5ff; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; filter:drop-shadow(0 0 3px #80d5ff77); }
 .hp-block { stroke:#8eafc1; stroke-width:1; }
 .hp-player circle { fill:#123b50; stroke:#95e0ff; stroke-width:1.5; }
-.hp-player .hp-number { fill:#effaff; font:600 8px Barlow,sans-serif; }
-.hp-player .hp-role { fill:#abd5e8; font:600 8px Barlow,sans-serif; letter-spacing:.5px; }
+.hp-player .hp-number { fill:#effaff; font:600 8px var(--font-ui); }
+.hp-player .hp-role { fill:#abd5e8; font:600 8px var(--font-ui); letter-spacing:.5px; }
 .hp-lineman circle { fill:#122a38; stroke:#6a8c9f; stroke-width:1; }
 .hp-defender { fill:none; stroke:#f5c56e; stroke-width:2.5; stroke-linecap:round; filter:drop-shadow(0 0 3px #f5c56e55); }
 .hp-insight { position:absolute; width:184px; padding:12px; background:linear-gradient(125deg,#122e3ef2,#0b1e29f5); border:1px solid var(--glass-soft-edge); border-radius:9px; box-shadow:0 8px 24px #050e1740; box-sizing:border-box; }
-.hp-insight p { color:#80d5ff; font:600 9px/1.3 Barlow,sans-serif; letter-spacing:1.2px; margin:0 0 8px; }
-.hp-insight small { display:block; color:#a5bdcc; font:400 10px/1.4 Barlow,sans-serif; }
+.hp-insight p { color:#80d5ff; font:600 9px/1.3 var(--font-ui); letter-spacing:1.2px; margin:0 0 8px; }
+.hp-insight small { display:block; color:#a5bdcc; font:400 10px/1.4 var(--font-ui); }
 .hp-matchup { top:32px; right:0; }
-.hp-teams { display:flex; align-items:center; justify-content:space-between; gap:8px; font:600 14px Barlow,sans-serif; }
+.hp-teams { display:flex; align-items:center; justify-content:space-between; gap:8px; font:600 14px var(--font-ui); }
 .hp-teams span { display:flex; align-items:center; gap:4px; }
 .hp-teams img { width:23px; height:23px; object-fit:contain; }
-.hp-probabilities { display:flex; justify-content:space-between; margin:6px 0; font:600 21px/1 Barlow,sans-serif; font-variant-numeric:tabular-nums; }
+.hp-probabilities { display:flex; justify-content:space-between; margin:6px 0; font:600 21px/1 var(--font-ui); font-variant-numeric:tabular-nums; }
 .hp-probabilities strong { font-weight:600; }
 .hp-probabilities strong:last-child { color:#80d5ff; }
 .hp-probability-track { height:5px; border-radius:5px; background:#80d5ff; overflow:hidden; margin-bottom:8px; }
 .hp-probability-track i { display:block; height:100%; background:#53768b; }
 .hp-trend { bottom:32px; left:0; width:196px; }
-.hp-player-name { display:block; font:600 18px/1.15 'Barlow Condensed',sans-serif; margin-bottom:3px; }
-.hp-form-row { display:grid; grid-template-columns:38px minmax(0,1fr) 32px; gap:6px; align-items:center; margin-top:8px; font:400 10px/1.2 Barlow,sans-serif; color:#a5bdcc; }
+.hp-player-name { display:block; font:600 18px/1.15 var(--font-display); margin-bottom:3px; }
+.hp-form-row { display:grid; grid-template-columns:38px minmax(0,1fr) 32px; gap:6px; align-items:center; margin-top:8px; font:400 10px/1.2 var(--font-ui); color:#a5bdcc; }
 .hp-form-row i { display:block; width:var(--hp-bar); height:4px; background:#53768b; border-radius:3px; }
 .hp-form-row b { color:#edf5fa; text-align:right; font-weight:600; }
 .hp-form-row.is-recent i { background:#80d5ff; }
-.hp-empty { display:block; color:#a5bdcc; font:400 11px/1.4 Barlow,sans-serif; }
+.hp-empty { display:block; color:#a5bdcc; font:400 11px/1.4 var(--font-ui); }
 @media(max-width:1100px) {
  .dashboard-shell .ud-hero { gap:18px; padding:24px; }
  .hp-insight { width:165px; padding:10px; }

@@ -37,8 +37,8 @@ export function SameGameBadge({board}: {board?:Board}) {
   const signal = stale(board, Date.now()) ? 'none' : board.signal;
   const label = started ? 'SGP archived' : labels[signal];
   const reason = signal !== board.signal ? 'Pregame player projections have aged out.' : board.reason;
-  return <span className={`sgp-badge sgp-${started ? 'archived' : signal}`} title={reason}>
-    <b aria-hidden="true">{started ? '·' : symbols[signal]}</b><span>{label}</span>
+  return <span className={`sgp-badge sgp-${started ? 'archived' : signal}`} title={`${label} · ${reason}`}>
+    <b aria-hidden="true">{started ? '·' : symbols[signal]}</b><span className="sgp-status-text">{label}</span>
   </span>;
 }
 

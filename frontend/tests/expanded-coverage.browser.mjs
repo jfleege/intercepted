@@ -48,16 +48,17 @@ try{for(const width of [375,650,900,1440]){
  await page.locator('.mb-offer').filter({has:page.getByRole('heading',{name:extra.name,exact:true})}).getByRole('button').click();
  assert.ok((await page.locator('.mb-slip').textContent()).includes(extra.name));
  await page.screenshot({path:`qa/expanded-coverage/${width}-markets.png`,fullPage:true});
- await page.locator('.dash-nav a[href="#matchups"]').click();await page.locator('.mx-slate button').filter({hasText:game.away_team}).filter({hasText:game.home_team}).click();await page.getByText('Individual player outlook & model validation',{exact:true}).click();
+ await page.locator('.dash-nav a[href="#matchups"]').click();await page.locator('.mx-slate button').filter({hasText:game.away_team}).filter({hasText:game.home_team}).click();
  await page.locator('.mr-team-column').first().waitFor();
  for(const side of ['away','home']){
   const team=game[`${side}_team`],column=page.getByRole('region',{name:`${team} player outlooks`,exact:true});
-  assert.equal(await column.locator('.mr-player').count(),8);
-  await column.getByRole('button',{name:`Show all 12 ${team} players`,exact:true}).click();assert.equal(await column.locator('.mr-player').count(),12);
+  assert.equal(await column.locator('button.mr-player-row').count(),4);
+  await column.getByRole('button',{name:`View all 12 ${team} players`,exact:true}).click();assert.equal(await page.locator('.mr-outlook-drawer button.mr-player-row').count(),12);
+  await page.getByRole('button',{name:'Close',exact:true}).click();
  }
- await page.getByLabel('Matchup player position').selectOption('TE');
- assert.equal(await page.locator('.mr-player').count(),report.players.filter(p=>p.position==='TE').length);
- await page.getByLabel('Matchup player position').selectOption('all');
+ await page.locator('[aria-label="Matchup player position"]').getByRole('button',{name:'TE',exact:true}).click();
+ assert.equal(await page.locator('.mr-team-column button.mr-player-row').count(),report.players.filter(p=>p.position==='TE').length);
+ await page.locator('[aria-label="Matchup player position"]').getByRole('button',{name:'All',exact:true}).click();
  await page.screenshot({path:`qa/expanded-coverage/${width}-matchups.png`,fullPage:true});
  const audit=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();audits.push({width,violations:audit.violations});assert.deepEqual(audit.violations.map(v=>v.id),[]);
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));assert.deepEqual(errors,[]);

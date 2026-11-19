@@ -1,3 +1,4 @@
+import Segmented from './Segmented';
 import InterfaceIcon from './InterfaceIcon';
 import { fetchSnapshot } from "./snapshotCache";
 import { filterGames } from "./matchupFilters";
@@ -252,11 +253,11 @@ const focusedGame =
       <option value="closest">Closest matchups</option>
     </select>
 
-    <div className="model-switch" aria-label="Forecast model">
+    <Segmented className="model-switch" aria-label="Forecast model">
       {modelOptions.map(option => <button key={option} type="button"
         className={model === option ? "active" : ""} aria-pressed={model === option}
         onClick={() => setModel(option)}>{MODEL_LABELS[option]}</button>)}
-    </div>
+    </Segmented>
   </div>
 </div>
 

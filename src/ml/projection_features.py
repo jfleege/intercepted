@@ -9,6 +9,9 @@ KINDS = {'QB': 'passing', 'RB': 'rushing', 'WR': 'receiving', 'TE': 'receiving'}
 USAGE = {'passing': 'attempts', 'rushing': 'carries', 'receiving': 'targets'}
 SCORE_FEATURES = ['own_points_recent', 'own_points_season', 'opp_points_recent', 'opp_points_season', 'own_pass', 'own_rush', 'opp_pass', 'opp_rush', 'home', 'rest', 'opp_rest', 'season_games', 'week']
 PLAYER_FEATURES = ['recent_yards', 'season_yards', 'last10_yards', 'recent_usage', 'season_usage', 'yards_per_opportunity', 'recent_any_td', 'recent_pass_td', 'season_any_td', 'season_pass_td', 'appearances', 'season_appearances', 'opp_pass', 'opp_rush', 'opp_points', 'team_points', 'home', 'rest', 'week', 'is_qb', 'is_rb', 'is_wr', 'is_te']
+RECEPTION_FEATURES = PLAYER_FEATURES + ['recent_receptions', 'season_receptions', 'recent_targets', 'season_targets']
+TWO_TD_FEATURES = PLAYER_FEATURES + ['recent_two_pass_td', 'season_pass_two_td']
+
 
 
 def num(value, default=0.0):
@@ -68,7 +71,16 @@ def player_features(records, kind, position, season, own, opponent, home, week):
               sum(r[field] for r in recent) / max(1, opportunities), avg(recent, 'any_td'), avg(recent, 'pass_td'), any_rate, passing_rate,
               min(100, len(records)), len([r for r in records if r['season'] == season]), opponent['pass_allowed'], opponent['rush_allowed'],
               opponent['allowed'], own['points'], int(home), own['rest'], week, *[int(position == p) for p in ('QB', 'RB', 'WR', 'TE')]]
-    return dict(zip(PLAYER_FEATURES, values))
+    features = dict(zip(PLAYER_FEATURES, values))
+    features.update(
+        recent_receptions=mean([r.get('receptions', 0) for r in recent]),
+        season_receptions=mean([r.get('receptions', 0) for r in current]),
+        recent_targets=avg(recent, 'targets'),
+        season_targets=avg(current, 'targets'),
+        recent_two_pass_td=mean([r.get('pass_two_td', 0) for r in recent]),
+        season_pass_two_td=(sum(r.get('pass_two_td', 0) for r in last10) + 1) / (len(last10) + 3),
+    )
+    return features
 
 
 def build_history(schedules, player_rows, season, week, now):
@@ -107,13 +119,15 @@ def build_history(schedules, player_rows, season, week, now):
             if team not in (home, away):
                 continue
             other = away if team == home else home
-            record = {key: num(row.get(key)) for key in ['passing_yards', 'rushing_yards', 'receiving_yards', 'attempts', 'carries', 'targets']}
-            record.update(season=year, week=game_week, date=when, any_td=int(num(row.get('rushing_tds')) + num(row.get('receiving_tds')) > 0), pass_td=int(num(row.get('passing_tds')) > 0))
+            record = {key: num(row.get(key)) for key in ['passing_yards', 'rushing_yards', 'receiving_yards', 'attempts', 'carries', 'targets', 'receptions']}
+            record.update(season=year, week=game_week, date=when, any_td=int(num(row.get('rushing_tds')) + num(row.get('receiving_tds')) > 0), pass_td=int(num(row.get('passing_tds')) > 0),
+                          pass_two_td=int(num(row.get('passing_tds')) >= 2))
             history = player_history[row['player_id']]
             features = player_features(history, KINDS[position], position, year, summaries[team], summaries[other], team == home, game_week)
             if features:
                 players.append({'game_id': game['game_id'], 'player_id': row['player_id'], 'season': year, 'week': game_week, 'position': position, 'kind': KINDS[position],
-                                'x': features, 'yards': record[f'{KINDS[position]}_yards'], 'any_td': record['any_td'], 'pass_td': record['pass_td'], 'baseline': features['recent_yards']})
+                                'x': features, 'yards': record[f'{KINDS[position]}_yards'], 'any_td': record['any_td'], 'pass_td': record['pass_td'],
+                                'pass_two_td': record['pass_two_td'], 'receptions': record['receptions'], 'baseline': features['recent_yards']})
             history.append(record)
         for side, team, other, opposing in [('home', home, away, 'away'), ('away', away, home, 'home')]:
             team_history[team].append({'season': year, 'week': game_week, 'date': when, 'points': num(game[f'{side}_score']), 'allowed': num(game[f'{opposing}_score']),

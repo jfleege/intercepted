@@ -1,3 +1,4 @@
+import Segmented from './Segmented';
 import TeamMark from './TeamMark';
 import { teamStyle } from './teamPalette';
 import { marketScoreShape } from './marketScoreShape';
@@ -253,7 +254,7 @@ export default function MatchupModal({
           </strong>
         </div>
 
-        <div className="ic-tabs" role="tablist" aria-label="Matchup details" onKeyDown={event => {
+        <Segmented className="ic-tabs" role="tablist" aria-label="Matchup details" onKeyDown={event => {
           if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
           const tabs = [...event.currentTarget.querySelectorAll<HTMLButtonElement>('[role="tab"]:not(:disabled)')];
           const index = tabs.indexOf(document.activeElement as HTMLButtonElement);
@@ -292,7 +293,7 @@ export default function MatchupModal({
 >
   Players to Watch
 </button>
-        </div>
+        </Segmented>
 
         <div className="ic-content" role="tabpanel">
           {archived && <p className="ic-footnote">Archived prediction. Research is shown only when a saved pregame snapshot exists for this week; current player cards and sportsbook lines are excluded.</p>}

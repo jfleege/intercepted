@@ -11,7 +11,7 @@ from pathlib import Path
 from datetime import datetime, timezone
 
 from src.ml.refresh_performance import ROOT, kickoff, stamp, write_json
-from src.ml.projection_features import (SCORE_FEATURES, PLAYER_FEATURES, KINDS, build_history, final_games, player_features, team_summary, score_features, team_name, day)
+from src.ml.projection_features import (SCORE_FEATURES, PLAYER_FEATURES, RECEPTION_FEATURES, TWO_TD_FEATURES, KINDS, build_history, final_games, player_features, team_summary, score_features, team_name, day)
 from src.features.quarter_trends import quarter_trends
 from src.features.player_pool import matchup_pool
 
@@ -80,7 +80,13 @@ def validate_export(payload):
                 valid_range(player['range_80'])
                 if not math.isfinite(player['expected_yards']) or player['expected_yards'] < 0:
                     raise ValueError('Invalid yardage forecast')
-                for key in ('anytime_td_probability', 'passing_td_probability'):
+                if 'expected_receptions' in player:
+                    if not math.isfinite(player['expected_receptions']) or player['expected_receptions'] < 0:
+                        raise ValueError('Invalid reception forecast')
+                    valid_range(player['receptions_range_80'])
+                if 'passing_two_td_probability' in player and player['passing_two_td_probability'] > player['passing_td_probability']:
+                    raise ValueError('2+ passing TD probability exceeds 1+')
+                for key in ('anytime_td_probability', 'passing_td_probability', 'passing_two_td_probability'):
                     if key in player and not 0 <= player[key] <= 1:
                         raise ValueError('Invalid touchdown probability')
     for team in payload['period_trends']['teams'].values():
@@ -124,11 +130,15 @@ def export(reuse=False, force=False):
     tasks = [('scoring', scoring, SCORE_FEATURES, 'y')]
     tasks += [(f'{kind}_yards', [r for r in player_data if r['kind'] == kind], PLAYER_FEATURES, 'yards') for kind in ['passing', 'rushing', 'receiving']]
     tasks += [('anytime_td', player_data, PLAYER_FEATURES, 'any_td'), ('passing_td', [r for r in player_data if r['position'] == 'QB'], PLAYER_FEATURES, 'pass_td')]
+    tasks += [
+        ('receptions', [r for r in player_data if r['position'] != 'QB'], RECEPTION_FEATURES, 'receptions'),
+        ('passing_two_td', [r for r in player_data if r['position'] == 'QB'], TWO_TD_FEATURES, 'pass_two_td'),
+    ]
     score_widths = None
     for name, rows, columns, target in tasks:
-        event = target if target in ('any_td', 'pass_td') else None
+        event = target if target in ('any_td', 'pass_td', 'pass_two_td') else None
         train, calibration = production_split(rows, season, minimum=40 if name != 'anytime_td' else 100, event=event)
-        model = fit_event(train, calibration, target) if event else fit_regression(train, calibration, columns, target)
+        model = fit_event(train, calibration, target, columns) if event else fit_regression(train, calibration, columns, target)
         fitted[name] = model
         if name == 'scoring':
             score_widths = score_intervals(model, calibration)
@@ -179,6 +189,14 @@ def export(reuse=False, force=False):
                     if position == 'QB':
                         card['baseline_passing_td_probability'] = round(x['season_pass_td'], 6)
                         card['passing_td_probability'] = round(float(predict_event(fitted['passing_td'], [{'x': x}])[0]), 4)
+                        p_two = float(predict_event(fitted['passing_two_td'], [{'x': x}])[0])
+                        card['passing_two_td_probability'] = round(min(p_two, card['passing_td_probability']), 4)
+                    else:
+                        receptions = fitted['receptions']
+                        expected = float(predict_regression(receptions, [{'x': x}])[0])
+                        width = receptions['radius']
+                        card['expected_receptions'] = round(expected, 1)
+                        card['receptions_range_80'] = [round(max(0, expected - width), 1), round(expected + width, 1)]
                 cards.append(card)
         games[game['game_id']] = {'game_id': game['game_id'], 'model_version': version, 'generated_at': generated_at, 'kickoff': kickoff(source),
                                   'scoring': {**sides, 'home_margin': round(margin, 1), 'total': round(total, 1),

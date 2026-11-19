@@ -129,3 +129,98 @@
 .mr-player>header>div{min-width:0}.mr-player h4{overflow-wrap:anywhere}.mr-defense label{flex-wrap:wrap}.mr-defense select{min-width:0}
 
 .mr-pool-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:12px 0;font-size:12px;color:#9cb5c6}.mr-pool-controls select,.mr-show-players{font:inherit;background:#102a3a;color:#d8e8f1;border:1px solid #36596c;border-radius:7px;padding:8px;max-width:100%}.mr-show-players{width:100%;margin-top:12px;cursor:pointer}.mr-pool-controls select:focus-visible,.mr-show-players:focus-visible{outline:2px solid #69dce8;outline-offset:3px}
+
+.ic-segmented {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: stretch;
+  gap: 3px;
+  padding: 3px;
+  border: 1px solid #426477;
+  border-radius: 8px;
+  background: #0c1d2a;
+  max-width: 100%;
+  overflow: auto;
+}
+.ic-segmented::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  width: var(--selection-width, 0);
+  height: var(--selection-height, 0);
+  transform: translate(var(--selection-left, 0), var(--selection-top, 0));
+  border-radius: 5px;
+  background: #2a495e;
+  box-shadow: inset 0 0 0 1px #527489;
+  transition: transform 220ms cubic-bezier(.2,.8,.2,1), width 220ms ease, height 220ms ease;
+  pointer-events: none;
+}
+.ic-segmented > button {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+  color: #adbfcd !important;
+  border-radius: 5px;
+  padding: 6px 10px;
+  white-space: nowrap;
+}
+.ic-segmented > button[aria-pressed="true"],
+.ic-segmented > button[aria-selected="true"] { color: #f3faff !important; }
+.ic-segmented > button:focus-visible { outline: 2px solid #8bdcff; outline-offset: -2px; }
+@media (prefers-reduced-motion: reduce) {
+  .ic-segmented::before { transition: none; }
+}
+
+.mr-team-columns { margin-top: 10px; }
+.mr-player-row {
+  width: 100%;
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr) minmax(0, 1fr) 12px;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 5px;
+  border: 0;
+  border-bottom: 1px solid #304b5b;
+  color: #e4eff8;
+  background: transparent;
+  text-align: left;
+  font: inherit;
+}
+button.mr-player-row { cursor: pointer; }
+button.mr-player-row:hover { background: #163347; }
+.mr-player-row:focus-visible { outline: 2px solid #8bdcff; outline-offset: -2px; }
+.mr-player-head { color: #a5bdcc; font-size: 12px; }
+.mr-player-row strong { color: #8bdcff; font-size: 20px; font-variant-numeric: tabular-nums; }
+.mr-player-row small { display: block; color: #a5bdcc; line-height: 1.2; }
+.mr-player-name { display: flex; align-items: center; gap: 8px; min-width: 0; overflow-wrap: anywhere; }
+.mr-player-name b { font: 600 19px/1.1 'Barlow Condensed', sans-serif; }
+.mr-player-row .mr-avatar { width: 40px; height: 44px; flex: 0 0 40px; }
+.mr-defense-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+.mr-defense-controls h4 { margin: 0; }
+.mr-defense table small { display: block; color: #a5bdcc; font-weight: normal; }
+.mr-defense table td { color: #8bdcff; font-variant-numeric: tabular-nums; }
+.mr-outlook-drawer {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  padding: 0;
+  width: min(520px, 100vw);
+  max-width: 100vw;
+  max-height: 100dvh;
+  height: 100dvh;
+  overflow: auto;
+  border: 1px solid #426477;
+  background: #102532;
+  color: #e4eff8;
+}
+.mr-outlook-drawer::backdrop { background: #030a10aa; }
+.mr-drawer-content { padding: 20px; }
+.mr-drawer-content > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mr-player-measures > div { display: flex; gap: 12px; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #304b5b; }
+.mr-player-measures dd { margin: 0; text-align: right; color: #8bdcff; }
+@media (max-width: 650px) {
+  .mr-outlook-drawer { inset: auto 0 0; width: 100%; height: auto; max-height: 85dvh; border-radius: 14px 14px 0 0; }
+}

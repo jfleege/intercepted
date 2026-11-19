@@ -40,7 +40,7 @@ try{
   await page.getByRole('button',{name:'Quarters',exact:true}).click();
   await page.locator('.mx-slate>button').nth(1).click();
   assert.equal(await page.locator('.mx-slate>button[aria-pressed=true]').count(),1);
-  assert.ok(await page.locator('.mx-player-detail').count());await page.locator('.mx-player-detail>summary').click();await page.locator('.mr-player').first().waitFor();
+  assert.ok(await page.locator('.mx-player-detail').count());await page.locator('.mr-team-column button.mr-player-row').first().waitFor();
   assert.equal(await page.locator('.mr-score-grid').count(),0,'Scoring is shown once, not repeated with players');
   await page.locator('.mx-player-detail>summary').click();
   const overflow=await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth);assert.equal(overflow,false,`No page overflow at ${width}`);

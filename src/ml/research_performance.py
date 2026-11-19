@@ -6,6 +6,7 @@ from collections import defaultdict
 from statistics import mean
 from src.ml.refresh_performance import ROOT, stamp, digest, git, write_json, utcnow, kickoff, normalize_result
 from src.ml.projection_features import team_name
+from src.ml.same_game import grade_saved
 
 POLICY = {'label': 'Provisional review heuristic, not a statistical significance test', 'relative_error': .10,
           'minimum': {'winners': 100, 'scoring': 100, 'yardage': 300, 'touchdowns': 500},
@@ -271,6 +272,7 @@ def main():
             history['revisions'].append({'observed_at':now,'previous':previous,'result':r});history['records'][key]=r
     write_json(path,observed);write_json(revisions_path,history)
     write_json(ROOT/'frontend/public/research_performance.json',result)
+    grade_saved(by_id, stats, now)
     print('Research evaluation:',{name:sum(r['status']=='graded' for r in v['rows']) for name,v in result['datasets'].items()})
 
 if __name__=='__main__':main()

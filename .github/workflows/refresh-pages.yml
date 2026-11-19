@@ -22,6 +22,7 @@ on:
       - src/ml/projection_models.py
       - src/ml/refresh_research.py
       - src/ml/research_performance.py
+      - src/ml/same_game.py
       - src/features/quarter_trends.py
       - models/model_metadata.json
       - frontend/src/**
@@ -245,6 +246,9 @@ jobs:
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && steps.research.outcome == 'success' && steps.insights.outcome == 'success'
         continue-on-error: true
         run: python -m src.ml.player_extensions
+      - name: Publish pregame same-game combinations
+        if: inputs.results_only != true
+        run: python -m src.ml.same_game
       - name: Refresh odds
         id: odds
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)
@@ -332,6 +336,7 @@ jobs:
           git add frontend/public/forecast_insights.json frontend/public/research_performance.json
           if [ -f frontend/public/player_extensions.json ]; then git add frontend/public/player_extensions.json; fi
           if [ -f frontend/public/game_schedule.json ]; then git add frontend/public/game_schedule.json; fi
+          if [ -d frontend/public/same_game ]; then git add frontend/public/same_game; fi
           if [ -d frontend/public/position_defense ]; then git add frontend/public/position_defense; fi
           git add frontend/public/team_insights data/tracking frontend/public/predictions frontend/public/prediction_weeks.json frontend/public/performance.json frontend/public/predictions.json frontend/public/markets.json frontend/public/odds.json frontend/public/odds_usage.json frontend/public/player_props.json frontend/public/players_watch.json frontend/public/player_intelligence.json frontend/public/matchup_research.json frontend/public/research models/research docs/research-validation.json
           if ! git diff --cached --quiet; then

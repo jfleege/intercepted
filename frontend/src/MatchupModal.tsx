@@ -12,6 +12,7 @@ import { probability, MODEL_LABELS } from "./predictionModels";
 import type { Model, PredictionFields } from "./predictionModels";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import SameGamePicks from "./SameGamePicks";
 import MatchupProjections from "./MatchupProjections";
 import "./MatchupReport.css";
 import PlayersToWatch from "./PlayersToWatch";
@@ -45,7 +46,7 @@ type OddsData = {
   games: Record<string, GameOdds>;
 };
 
-type Tab = "overview" | "odds" | "players" | "periods";
+type Tab = "overview" | "odds" | "players" | "periods" | "same-game";
 
 type Props = {
   game: Matchup;
@@ -270,6 +271,7 @@ export default function MatchupModal({
           >
             Projections
           </button>
+          <button type="button" role="tab" aria-selected={tab === "same-game"} onClick={() => setTab("same-game")}>Same-game picks</button>
           <button type="button" role="tab" aria-selected={tab === "periods"} className={tab === "periods" ? "ic-active" : ""} onClick={() => setTab("periods")}>Quarter & half</button>
 
           <button
@@ -297,6 +299,7 @@ export default function MatchupModal({
 
         <div className="ic-content" role="tabpanel">
           {archived && <p className="ic-footnote">Archived prediction. Research is shown only when a saved pregame snapshot exists for this week; current player cards and sportsbook lines are excluded.</p>}
+          {tab === "same-game" && <SameGamePicks key={game.game_id} gameId={game.game_id} season={game.season} week={game.week}/>}
           {tab === "overview" && <AvailabilityImpact game={game} model={model}/>}
           {(tab === "overview" || tab === "periods") && <MatchupProjections game={game} mode={tab === "periods" ? "periods" : "forecasts"}/>}
           {tab === "overview" && <details className="mr-method ic-model-details"><summary>Compare saved winner models</summary>{(["v5_qb_plus", "v5_boosted", "v4_a", "v4_qb_plus"] as Model[]).map(option => {

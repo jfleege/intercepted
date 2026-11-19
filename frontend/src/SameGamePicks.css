@@ -35,7 +35,7 @@
 .sgp-panel .sgp-count { margin-bottom: 8px; }
 .sgp-options { display:grid; grid-template-columns: repeat(auto-fit,minmax(min(100%, 220px),1fr)); gap:12px; }
 .sgp-options article { padding: 12px; border: 1px solid #304b5b; border-radius: 10px; background: #102532; }
-.sgp-options article strong { color: #8bdcff; font-variant-numeric: tabular-nums; }
+.sgp-options article strong { color: var(--ud-text); font-weight: 600; font-variant-numeric: tabular-nums; }
 .sgp-options ul { padding: 0; margin: 10px 0 0; list-style: none; }
 .sgp-options li { border-top: 1px solid #304b5b; padding: 7px 0; }
 .sgp-options li small { display: block; }

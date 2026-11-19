@@ -178,30 +178,34 @@
 .mr-player-row {
   width: 100%;
   display: grid;
-  grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr) minmax(0, 1fr) 12px;
+  grid-template-columns: minmax(0, 1fr) minmax(3.6rem, .45fr) minmax(4.25rem, .5fr) 8px;
   align-items: center;
   gap: 8px;
-  padding: 7px 5px;
+  padding: 9px 4px;
   border: 0;
-  border-bottom: 1px solid #304b5b;
-  color: #e4eff8;
+  border-bottom: 1px solid var(--ud-border);
+  color: var(--ud-text);
   background: transparent;
   text-align: left;
-  font: inherit;
+  font: 400 .875rem/1.25 var(--font-ui);
 }
 button.mr-player-row { cursor: pointer; }
-button.mr-player-row:hover { background: #163347; }
+@media (hover: hover) {
+  button.mr-player-row:hover { background: #163347; }
+}
 .mr-player-row:focus-visible { outline: 2px solid #8bdcff; outline-offset: -2px; }
-.mr-player-head { color: #a5bdcc; font-size: 12px; }
-.mr-player-row strong { color: #8bdcff; font-size: 20px; font-variant-numeric: tabular-nums; }
-.mr-player-row small { display: block; color: #a5bdcc; line-height: 1.2; }
-.mr-player-name { display: flex; align-items: center; gap: 8px; min-width: 0; overflow-wrap: anywhere; }
-.mr-player-name b { font: 600 19px/1.1 var(--font-display); }
-.mr-player-row .mr-avatar { width: 40px; height: 44px; flex: 0 0 40px; }
+.mr-player-row > :last-child { color: var(--ud-muted); text-align: right; }
+.mr-player-head { color: var(--ud-muted); font-size: .75rem; }
+.mr-row-stat { text-align: right; }
+.mr-row-stat strong { font-weight: 600; font-variant-numeric: tabular-nums; }
+.mr-player-row small { display: block; margin-top: 2px; color: var(--ud-muted); font-size: .75rem; }
+.mr-player-name { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.mr-player-name b { font-weight: 600; overflow-wrap: anywhere; }
+.mr-player-row .mr-avatar { width: 34px; height: 38px; flex: 0 0 34px; }
 .mr-defense-controls { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
 .mr-defense-controls h4 { margin: 0; }
 .mr-defense table small { display: block; color: #a5bdcc; font-weight: normal; }
-.mr-defense table td { color: #8bdcff; font-variant-numeric: tabular-nums; }
+.mr-defense table td { color: var(--ud-text); font-variant-numeric: tabular-nums; }
 .mr-outlook-drawer {
   position: fixed;
   inset: 0 0 0 auto;
@@ -214,13 +218,33 @@ button.mr-player-row:hover { background: #163347; }
   overflow: auto;
   border: 1px solid #426477;
   background: #102532;
-  color: #e4eff8;
+  color: var(--ud-text);
+  font: 400 .875rem/1.4 var(--font-ui);
 }
 .mr-outlook-drawer::backdrop { background: #030a10aa; }
-.mr-drawer-content { padding: 20px; }
-.mr-drawer-content > header { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-.mr-player-measures > div { display: flex; gap: 12px; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #304b5b; }
-.mr-player-measures dd { margin: 0; text-align: right; color: #8bdcff; }
+.mr-drawer-content { padding: 16px 20px 20px; }
+.mr-drawer-content > header { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+.mr-drawer-content > header h3 { margin: 0; font: 600 var(--type-panel-title)/1.15 var(--font-display); }
+.mr-drawer-close {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  margin-inline-start: auto;
+  padding: 0;
+  border: 1px solid var(--ud-border);
+  border-radius: 7px;
+  background: #1a3443;
+  color: var(--ud-text);
+  font: 500 1.25rem/1 var(--font-ui);
+  cursor: pointer;
+}
+.mr-drawer-close:focus-visible { outline: 2px solid #8bdcff; outline-offset: 2px; }
+.mr-player-measures > div { display: flex; gap: 12px; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid var(--ud-border); }
+.mr-player-measures dt { color: var(--ud-muted); }
+.mr-player-measures dd { margin: 0; text-align: right; color: var(--ud-text); font-weight: 600; font-variant-numeric: tabular-nums; }
 @media (max-width: 650px) {
-  .mr-outlook-drawer { inset: auto 0 0; width: 100%; height: auto; max-height: 85dvh; border-radius: 14px 14px 0 0; }
+  .mr-outlook-drawer { inset: auto 0 0; width: 100%; height: auto; max-height: 85dvh; border-radius: 14px 14px 0 0; box-sizing: border-box; }
+  .mr-drawer-content { padding-inline: 14px; padding-bottom: max(16px, env(safe-area-inset-bottom)); }
 }

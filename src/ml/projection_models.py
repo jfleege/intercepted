@@ -6,7 +6,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_absolute_error, brier_score_loss, log_loss
-from src.ml.projection_features import SCORE_FEATURES, PLAYER_FEATURES
+from src.ml.projection_features import SCORE_FEATURES, PLAYER_FEATURES, RECEPTION_FEATURES, TWO_TD_FEATURES
 
 REGRESSION_CONFIG = dict(max_iter=140, learning_rate=.06, max_leaf_nodes=15, min_samples_leaf=35, l2_regularization=10, random_state=42)
 
@@ -40,7 +40,7 @@ def predict_regression(fitted, rows):
 def regression_metrics(fitted, rows):
     pred = predict_regression(fitted, rows)
     y = np.array([r[fitted['target']] for r in rows])
-    baseline = np.array([r['baseline'] for r in rows])
+    baseline = np.array([r['x']['recent_receptions'] if fitted['target'] == 'receptions' else r['baseline'] for r in rows])
     mae, base = float(mean_absolute_error(y, pred)), float(mean_absolute_error(y, baseline))
     return {'samples': len(rows), 'mae': round(mae, 3), 'baseline_mae': round(base, 3), 'beats_baseline': mae < base,
             'interval_80_coverage': round(float(np.mean(np.abs(y - pred) <= fitted['radius'])), 4), 'interval_radius': round(fitted['radius'], 2)}
@@ -95,10 +95,12 @@ def predict_event(fitted, rows):
     return fitted['calibrator'].predict_proba(logits(raw))[:, 1]
 
 
-def event_metrics(fitted, rows):
+def event_metrics(fitted, rows, ceiling=None):
     y = np.array([r[fitted['target']] for r in rows])
     p = predict_event(fitted, rows)
-    baseline_key = 'season_any_td' if fitted['target'] == 'any_td' else 'season_pass_td'
+    if ceiling is not None:
+        p = np.minimum(p, predict_event(ceiling, rows))
+    baseline_key = {'any_td': 'season_any_td', 'pass_td': 'season_pass_td', 'pass_two_td': 'season_pass_two_td'}[fitted['target']]
     baseline = np.array([r['x'][baseline_key] for r in rows])
     brier, base = float(brier_score_loss(y, p)), float(brier_score_loss(y, baseline))
     bins = []
@@ -123,10 +125,19 @@ def benchmark(scoring, players):
         train, calibration, test = [r for r in rows if r['season'] <= 2023], split(rows, 2024), split(rows, 2025)
         fitted = fit_regression(train, calibration, PLAYER_FEATURES, 'yards')
         report['yardage'][kind] = regression_metrics(fitted, test)
-    for target in ['any_td', 'pass_td']:
-        rows = [r for r in players if target == 'any_td' or r['position'] == 'QB']
-        fitted = fit_event([r for r in rows if r['season'] <= 2023], split(rows, 2024), target)
-        report['touchdowns'][target] = event_metrics(fitted, split(rows, 2025))
+    receptions = [r for r in players if r['position'] != 'QB' and 'receptions' in r]
+    if receptions:
+        fitted = fit_regression([r for r in receptions if r['season'] <= 2023], split(receptions, 2024), RECEPTION_FEATURES, 'receptions')
+        report['receptions'] = regression_metrics(fitted, split(receptions, 2025))
+    event_models = {}
+    for target, columns in [('any_td', PLAYER_FEATURES), ('pass_td', PLAYER_FEATURES), ('pass_two_td', TWO_TD_FEATURES)]:
+        rows = [r for r in players if target in r and (target == 'any_td' or r['position'] == 'QB')]
+        if not rows:
+            continue
+        fitted = fit_event([r for r in rows if r['season'] <= 2023], split(rows, 2024), target, columns)
+        event_models[target] = fitted
+        ceiling = event_models['pass_td'] if target == 'pass_two_td' else None
+        report['touchdowns'][target] = event_metrics(fitted, split(rows, 2025), ceiling)
     return report
 
 

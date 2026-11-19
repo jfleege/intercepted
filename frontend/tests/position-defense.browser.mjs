@@ -12,13 +12,29 @@ try{for(const width of [375,650,900,1440]){
  const verify=async()=>{
   const columns=page.locator('.mr-team-column');assert.equal(await columns.count(),2);
   for(const column of await columns.all()){
-   const team=(await column.getAttribute('aria-label')).split(' ')[0];const identities=await column.locator('.mr-player header small:first-child').allTextContents();assert.ok(identities.every(t=>t.startsWith(team+' ·')));
-   const positions=await column.locator('.mr-player').evaluateAll(cards=>cards.map(e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,left:e.getBoundingClientRect().left})));
+   assert.ok(await column.locator('button.mr-player-row').count() <= 4);
+   const positions=await column.locator('button.mr-player-row').evaluateAll(cards=>cards.map(e=>({top:e.getBoundingClientRect().top,bottom:e.getBoundingClientRect().bottom,left:e.getBoundingClientRect().left})));
    for(let i=1;i<positions.length;i++){assert.ok(positions[i].top>=positions[i-1].bottom);assert.ok(Math.abs(positions[i].left-positions[i-1].left)<2);}
   }
   const rects=await columns.evaluateAll(els=>els.map(e=>{const r=e.getBoundingClientRect();return {left:r.left,right:r.right,top:r.top,bottom:r.bottom};}));if(width>650)assert.ok(rects[0].right<=rects[1].left);else assert.ok(rects[0].bottom<=rects[1].top);
  };
- await verify();const defense=page.locator('.mr-defense').first();await defense.locator('dl').waitFor();assert.ok((await defense.textContent()).includes('Passing TDs / game'));await defense.locator('select').selectOption('last5');assert.equal(await defense.locator('select').inputValue(),'last5');await defense.screenshot({path:`qa/position-defense/${width}-allowances.png`});
- await page.getByRole('button',{name:'Close matchup',exact:true}).click();await page.locator('.dash-nav a[href="#matchups"]').click();await page.getByText('Individual player outlook & model validation',{exact:true}).click();await page.locator('.mr-team-column').first().waitFor();await verify();
- const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();assert.deepEqual(result.violations.map(v=>v.id),[]);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));assert.deepEqual(errors,[]);await page.locator('.mr-team-columns').screenshot({path:`qa/position-defense/${width}-teams.png`});await context.close();console.log(`PASS position defense ${width}px: modal and Matchups team columns, vertical cards, position totals, windows, accessibility`);
+ await verify();
+ const defense=page.locator('.mr-defense');await defense.locator('table').waitFor();
+ assert.equal(await defense.count(),1);
+ assert.ok((await defense.textContent()).includes('Passing TDs'));
+ const last5=defense.getByRole('button',{name:'Last 5',exact:true});
+ await last5.click();assert.equal(await last5.getAttribute('aria-pressed'),'true');
+ assert.equal(await last5.evaluate(button=>getComputedStyle(button.parentElement,'::before').transitionDuration),'0s');
+ const player=page.locator('.mr-team-column button.mr-player-row').first();
+ await player.click();
+ const drawer=page.locator('.mr-outlook-drawer');
+ await drawer.waitFor();
+ assert.ok((await drawer.textContent()).includes('80% yardage range'));
+ await page.keyboard.press('Escape');await drawer.waitFor({state:'hidden'});
+ assert.equal(await player.evaluate(button=>button===document.activeElement),true);
+ await defense.screenshot({path:`qa/position-defense/${width}-allowances.png`});
+ await page.getByRole('button',{name:'Close matchup',exact:true}).click();
+ await page.locator('.dash-nav a[href="#matchups"]').click();
+ await page.locator('.mr-team-column').first().waitFor();await verify();
+ const result=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa']).analyze();assert.deepEqual(result.violations.map(v=>v.id),[]);assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1));assert.deepEqual(errors,[]);await page.locator('.mr-team-columns').screenshot({path:`qa/position-defense/${width}-teams.png`});await context.close();console.log(`PASS position defense ${width}px: modal and Matchups team columns, compact rows, position totals, windows, accessibility`);
 }}finally{await browser.close();}

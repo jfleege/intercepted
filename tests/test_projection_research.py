@@ -14,7 +14,7 @@ def game(week, home_score=21, away_score=14):
 
 def player(week, team):
     return {'player_id': team, 'season': 2026, 'week': week, 'season_type': 'REG', 'team': team, 'position': 'QB', 'passing_yards': week * 100,
-            'attempts': 30, 'passing_tds': 2, 'rushing_yards': 10, 'carries': 2, 'receiving_yards': 0}
+            'attempts': 30, 'passing_tds': 2, 'receptions': week, 'rushing_yards': 10, 'carries': 2, 'receiving_yards': 0}
 
 
 class PregameFeaturesTests(unittest.TestCase):
@@ -30,12 +30,15 @@ class PregameFeaturesTests(unittest.TestCase):
         altered = copy.deepcopy(rows)
         for row in altered:
             if row['week'] == 4:
-                row.update(passing_yards=9999, attempts=999, passing_tds=99)
+                row.update(passing_yards=9999, attempts=999, passing_tds=0, receptions=99)
         games[3].update(home_score=70, away_score=0, result=70)
         second = self.build(games, altered)
         self.assertEqual([r['x'] for r in first[0]], [r['x'] for r in second[0]])
         self.assertEqual([r['x'] for r in first[1]], [r['x'] for r in second[1]])
         self.assertNotEqual([r['y'] for r in first[0]], [r['y'] for r in second[0]])
+        self.assertEqual([r['pass_two_td'] for r in first[1]], [1, 1])
+        self.assertEqual([r['pass_two_td'] for r in second[1]], [0, 0])
+        self.assertTrue(all(r['x']['recent_receptions'] == 2 for r in first[1]))
 
     def test_player_prior_appearances_and_td_event_definitions(self):
         _, rows, _, _ = self.build()

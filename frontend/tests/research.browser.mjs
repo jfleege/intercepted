@@ -20,13 +20,15 @@ try{
   await page.locator('.mr-score-card').first().waitFor();
   const saved=report.games[game.game_id];assert.ok(saved);
   assert.deepEqual(await page.locator('.mr-score-card > strong').allTextContents(),[saved.scoring.away.expected_points.toFixed(1),saved.scoring.home.expected_points.toFixed(1),saved.scoring.total.toFixed(1),`${saved.scoring.home_margin>0?'+':''}${saved.scoring.home_margin.toFixed(1)}`]);
-  assert.equal(await page.locator('.mr-player').count(),saved.players.length);
-  for(const [i,player] of saved.players.entries()){
-   const card=page.locator('.mr-player').nth(i);
-   assert.equal(await card.locator('h4').textContent(),player.name);
+  const playerRows = page.locator('.mr-team-column button.mr-player-row');
+  assert.ok(await playerRows.count() <= 8);
+  for(const row of await playerRows.all()){
+   const name=await row.locator('.mr-player-name b').textContent();
+   const player=saved.players.find(p=>p.name===name);
+   assert.ok(player);
    if(player.status==='available'){
-    assert.equal(await card.locator('.mr-yardage strong').textContent(),player.expected_yards.toFixed(1));
-    assert.equal(await card.locator('.mr-td-row strong').textContent(),`${(player.anytime_td_probability*100).toFixed(1)}%`);
+    const td=player.position==='QB'?player.passing_td_probability:player.anytime_td_probability;
+    assert.deepEqual(await row.locator('strong').allTextContents(),[player.expected_yards.toFixed(1),td==null?'—':`${(td*100).toFixed(1)}%`]);
    }
   }
   assert.ok((await page.locator('.ic-dialog').evaluate(e=>getComputedStyle(e).fontFamily)).includes('Barlow'));
@@ -45,8 +47,9 @@ try{
   assert.equal(await page.locator('.mr-periods > .mr-panel').last().locator('tbody tr').count(),history.length);
   await page.locator('.ic-dialog').evaluate(e=>e.scrollTop=0);await page.screenshot({path:`qa/research/${width}-halves.png`});
   await page.getByRole('tab',{name:'Projections',exact:true}).click();
-  await page.getByText('Model validation & data provenance',{exact:true}).click();
+  await page.getByRole('button',{name:'Model validation',exact:true}).click();
   assert.ok(await page.locator('.mr-method table').count()>=2);
+  await page.getByRole('button',{name:'Close',exact:true}).click();
   await page.getByRole('tab',{name:'Vegas Odds',exact:true}).click();await page.locator('.ic-odds-grid').waitFor();
   await page.getByRole('tab',{name:'Players to Watch',exact:true}).click();await page.locator('.pw-card').first().waitFor();
   assert.ok(await page.locator('.ic-dialog').evaluate(e=>e.scrollWidth<=e.clientWidth+1),'Dialog must not overflow horizontally');

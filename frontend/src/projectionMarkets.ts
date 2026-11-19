@@ -3,7 +3,7 @@ import { availableModels, MODEL_LABELS, probability } from './predictionModels.t
 import type { Model } from './predictionModels.ts';
 import { decimalOdds, freshQuote } from './marketResearch.ts';
 import type { Line } from './marketResearch.ts';
-export type PlayerForecast={player_id:string;name:string;team:string;opponent:string;position:string;headshot?:string|null;status:string;stat?:string;expected_yards?:number;range_80?:number[];anytime_td_probability?:number;passing_td_probability?:number};
+export type PlayerForecast={player_id:string;name:string;team:string;opponent:string;position:string;headshot?:string|null;status:string;stat?:string;expected_yards?:number;range_80?:number[];anytime_td_probability?:number;passing_td_probability?:number;passing_two_td_probability?:number;expected_receptions?:number};
 export type Research={season:number;week:number;games:Record<string,{kickoff:string;generated_at:string;model_version:string;players:PlayerForecast[];scoring:{away:{team:string;expected_points:number};home:{team:string;expected_points:number};total:number;home_margin:number;total_range_80:number[];margin_range_80:number[]}}>};
 export type Quote={bookmaker:string;commence_time:string;last_update:string|null;moneyline_last_update?:string;spreads_last_update?:string;totals_last_update?:string;home_moneyline:number|null;away_moneyline:number|null;home_spread:number|null;away_spread:number|null;home_spread_price?:number;away_spread_price?:number;over_under:number|null;over_price?:number;under_price?:number};
 export type Odds={exported_at:string;games:Record<string,Quote>};

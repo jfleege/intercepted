@@ -1,6 +1,8 @@
 import {useEffect, useState} from 'react';
 import {fetchSnapshot} from './snapshotCache';
 import Segmented from './Segmented';
+import InterfaceIcon from './InterfaceIcon';
+import {sameGameSignal} from './sameGameSignal';
 import './SameGamePicks.css';
 
 type Signal = 'strong' | 'limited' | 'none';
@@ -8,8 +10,6 @@ type Leg = {player_id:string; name:string; team:string; label:string; probabilit
 type Option = {legs:Leg[]; lower:number; upper:number; result:'pending' | 'hit' | 'miss' | 'incomplete' | 'cancelled'};
 type Board = {signal:Signal; reason:string; options:Record<string, Option[]>; kickoff:string; forecast_at?:string; saved_at:string};
 type Snapshot = {season:number; week:number; games:Record<string, Board>};
-const labels:Record<Signal,string> = {strong:'Strong signal', limited:'Limited confidence', none:'No qualifying combo'};
-const symbols:Record<Signal,string> = {strong:'✓', limited:'⚠', none:'×'};
 const statusLabels = {pending:'Pending', hit:'All legs hit', miss:'Did not hit', incomplete:'Stats incomplete', cancelled:'Cancelled'};
 const pct = (p:number) => `${(p * 100).toFixed(1)}%`;
 const maxAge = 72 * 60 * 60 * 1000;
@@ -33,12 +33,16 @@ function stale(board:Board, now:number) {
 
 export function SameGameBadge({board}: {board?:Board}) {
   if (!board) return null;
-  const started = Date.now() >= Date.parse(board.kickoff);
-  const signal = stale(board, Date.now()) ? 'none' : board.signal;
-  const label = started ? 'SGP archived' : labels[signal];
-  const reason = signal !== board.signal ? 'Pregame player projections have aged out.' : board.reason;
-  return <span className={`sgp-badge sgp-${started ? 'archived' : signal}`} title={`${label} · ${reason}`}>
-    <b aria-hidden="true">{started ? '·' : symbols[signal]}</b><span className="sgp-status-text">{label}</span>
+  const now = Date.now();
+  const started = now >= Date.parse(board.kickoff);
+  const expired = stale(board, now);
+  const option = board.options['2']?.[0];
+  const {color, label} = started ? {color:'archived', label:'SGP archived'} : sameGameSignal(expired ? undefined : option?.lower);
+  const reason = expired ? 'Pregame player projections have aged out.' : option
+    ? `${pct(option.lower)}–${pct(option.upper)} all-hit model bounds for the leading two-leg combo.` : board.reason;
+  const description = `${label} · ${reason}`;
+  return <span className={`sgp-badge sgp-${color}`} title={description}>
+    <InterfaceIcon name="poker-chips" size={22}/><span className="sgp-status-text">{description}</span>
   </span>;
 }
 
@@ -49,12 +53,13 @@ export default function SameGamePicks({season, week, gameId}: {season:number; we
   return <section className="sgp-panel" aria-label="Same-game picks">
     <header><div><h3>Same-game picks</h3><p>Ranked by the lower all-hit bound for the selected leg count.</p></div><SameGameBadge board={board}/></header>
     {!board ? <p className="sgp-muted">No saved same-game board for this matchup.</p> : <>
-      <p className="sgp-muted">{stale(board,Date.now()) ? 'Pregame projections have aged out. The saved options are shown for reference.' : board.reason}</p>
+      {stale(board,Date.now()) ? <p className="sgp-muted">Pregame projections have aged out. The saved options are shown for reference.</p>
+        : !board.options['2'] && <p className="sgp-muted">{board.reason}</p>}
       {board.options['2'] && <>
         <Segmented className="sgp-count" role="group" aria-label="Same-game leg count">
           {[2,5,6,7,8,9,10].map(n => <button key={n} type="button" aria-pressed={count===n} onClick={() => setCount(n)}>{n} legs</button>)}
         </Segmented>
-        {count > 2 && <p className="sgp-muted">The slate badge grades the leading two-leg option. Longer combinations have their own bounds.</p>}
+        <p className="sgp-muted">Chip color uses the leading two-leg option’s lower bound. Green starts at 80%, amber at 70%, and red is below 70% or has no available combo. Longer combinations have their own bounds.</p>
         <div className="sgp-options">{options.map((option, i) => <article key={option.legs.map(leg => leg.player_id).join(':')}>
           <header><h4>Option {i+1}</h4><strong>{pct(option.lower)}–{pct(option.upper)}</strong></header>
           <small>All-hit bounds given model probabilities</small>

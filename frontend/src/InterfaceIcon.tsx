@@ -1,4 +1,4 @@
-type IconName = 'dashboard' | 'matchups' | 'performance' | 'players' | 'markets' | 'right' | 'left' | 'up' | 'down' | 'chevron-left' | 'chevron-right' | 'chevron-down' | 'external';
+type IconName = 'dashboard' | 'matchups' | 'performance' | 'players' | 'markets' | 'right' | 'left' | 'up' | 'down' | 'chevron-left' | 'chevron-right' | 'chevron-down' | 'external' | 'poker-chips';
 
 export default function InterfaceIcon({ name, size = 22 }: { name: IconName; size?: number | string }) {
   const helmet = <><path d="M2 12a8 8 0 0 1 16 0l-6 2v5H8l-2-3H3z"/><path d="M12 14h8v6h-8m4-6v6m-4-3h8"/><circle cx="8" cy="12" r="1"/></>;
@@ -15,6 +15,10 @@ export default function InterfaceIcon({ name, size = 22 }: { name: IconName; siz
     {name === 'chevron-left' && <path d="m15 5-7 7 7 7"/>}
     {name === 'chevron-right' && <path d="m9 5 7 7-7 7"/>}
     {name === 'chevron-down' && <path d="m5 9 7 7 7-7"/>}
+    {name === 'poker-chips' && <>
+      <ellipse cx="12" cy="6" rx="9" ry="3.5"/>
+      <path d="M3 6v12c0 2 4 3.5 9 3.5s9-1.5 9-3.5V6M3 10c0 2 4 3.5 9 3.5s9-1.5 9-3.5M3 14c0 2 4 3.5 9 3.5s9-1.5 9-3.5M8 9.2v3.9m8 .1v3.9m-8 .1v3.9"/>
+    </>}
     {name === 'external' && <path d="m4 20 16-16M9 4h11v11"/>}
   </svg>;
 }

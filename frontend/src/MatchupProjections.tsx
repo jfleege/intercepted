@@ -32,7 +32,7 @@ const positions = ['QB', 'RB', 'WR', 'TE'];
 const fmt = (value?: number) => value?.toFixed(1) ?? '—';
 
 function Photo({player}: {player:PlayerProjection}) {
-  return <span className="mr-avatar">{player.name.split(' ').map(p => p[0]).slice(0, 2).join('')}
+  return <span className="mr-avatar" aria-hidden="true">{player.name.split(' ').map(p => p[0]).slice(0, 2).join('')}
     {player.headshot && <img src={player.headshot} alt="" loading="lazy" referrerPolicy="no-referrer" onError={e => {e.currentTarget.style.display = 'none';}}/>}
   </span>;
 }
@@ -42,8 +42,8 @@ function PlayerRow({player, onOpen}: {player:PlayerProjection; onOpen:(trigger:H
   const td = qb ? player.passing_td_probability : player.anytime_td_probability;
   return <button className="mr-player-row" type="button" onClick={event => onOpen(event.currentTarget)}>
     <span className="mr-player-name"><Photo player={player}/><span><b>{player.name}</b><small>{player.position}</small></span></span>
-    <span><strong>{fmt(player.expected_yards)}</strong><small>{player.stat ? `${player.stat} yds` : 'No projection'}</small></span>
-    <span><strong>{td == null ? '—' : pct(td)}</strong><small>{qb ? '1+ pass TD' : '1+ rush/rec TD'}</small></span>
+    <span className="mr-row-stat"><strong>{fmt(player.expected_yards)}</strong><small>{player.stat ? `${player.stat} yds` : 'No projection'}</small></span>
+    <span className="mr-row-stat"><strong>{td == null ? '—' : pct(td)}</strong><small>{qb ? '1+ pass TD' : '1+ rush/rec TD'}</small></span>
     <span aria-hidden="true">›</span>
   </button>;
 }
@@ -126,7 +126,7 @@ export default function MatchupProjections({ game, mode = 'forecasts' }: {game: 
       const pool = roster.filter(p => playerPosition === 'all' || p.position === playerPosition);
       return <section className="mr-team-column" key={team} aria-label={`${team} player outlooks`}>
         <h4 className="mr-team-title"><TeamMark team={team}/><small>{index === 0 ? 'Away' : 'Home'} · {roster.length} players</small></h4>
-        <div className="mr-player-row mr-player-head" aria-hidden="true"><span>Player</span><span>Projected yards</span><span>TD probability</span><span/></div>
+        <div className="mr-player-row mr-player-head" aria-hidden="true"><span>Player</span><span className="mr-row-stat">Projected yards</span><span className="mr-row-stat">TD probability</span><span/></div>
         {pool.slice(0,4).map(player => <PlayerRow key={player.player_id} player={player} onOpen={trigger => open({player}, trigger)}/>)}
         {!pool.length && <p className="mr-muted">No saved player outlooks for this position.</p>}
         {roster.length > 0 && <button className="mr-show-players" type="button" onClick={e => open({team},e.currentTarget)}>View all {roster.length} {team} players</button>}
@@ -138,7 +138,7 @@ export default function MatchupProjections({ game, mode = 'forecasts' }: {game: 
       onClose={() => {setDrawer(null); opener.current?.focus();}}
       onClick={event => {if (event.target === event.currentTarget) dialog.current?.close();}}>
       <div className="mr-drawer-content">
-      <header>{drawer?.player && <Photo player={drawer.player}/>}<h3 id={drawerTitle}>{drawer?.player?.name ?? (drawer?.validation ? 'Model validation & data provenance' : `${drawer?.team ?? ''} player outlooks`)}</h3><button className="mr-show-players" type="button" onClick={() => dialog.current?.close()}>Close</button></header>
+      <header>{drawer?.player && <Photo player={drawer.player}/>}<h3 id={drawerTitle}>{drawer?.player?.name ?? (drawer?.validation ? 'Model validation & data provenance' : `${drawer?.team ?? ''} player outlooks`)}</h3><button className="mr-drawer-close" type="button" aria-label="Close" onClick={() => dialog.current?.close()}><span aria-hidden="true">×</span></button></header>
       {drawer?.player && <>{drawer.team && <button className="mr-show-players" type="button" onClick={() => setDrawer({team:drawer.team})}>Back to {drawer.team} roster</button>}<p>{drawer.player.position} · {drawer.player.team} vs {drawer.player.opponent}</p><PlayerDetails player={drawer.player}/></>}
       {drawer?.team && !drawer.player && prediction.players.filter(p => p.team === drawer.team).map(player => <PlayerRow key={player.player_id} player={player} onOpen={() => setDrawer({team:drawer.team, player})}/>)}
       {drawer?.validation && <div className="mr-method">

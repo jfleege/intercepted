@@ -1,6 +1,6 @@
 
 :root {
-  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-family: var(--font-ui);
   color: #edf3ef;
   background: #0d1314;
   font-synthesis: none;
@@ -40,7 +40,7 @@ button {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1.5px;
   font-size: 17px;
 }
@@ -53,12 +53,12 @@ button {
   background: #4da3ff;
   color: #081829;
   border-radius: 6px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .eyebrow {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -82,7 +82,7 @@ button {
   line-height: 1.02;
   letter-spacing: -3px;
   margin: 18px 0 24px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 .hero h1 span {
@@ -116,7 +116,7 @@ button {
 .stat span {
   font-size: 10px;
   color: #91a49a;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
@@ -157,7 +157,7 @@ button {
   border-radius: 6px;
   color: #a5b6ad;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .model-switch button.active {
@@ -213,7 +213,7 @@ button {
   font-size: 10px;
   color: #8fa39a;
   letter-spacing: 1px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .card-footer {
@@ -340,7 +340,7 @@ button {
 .ic-eyebrow {
   color: #4da3ff;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 2px;
 }
 
@@ -373,7 +373,7 @@ button {
 .ic-abbr {
   color: #edf3ef;
   font-size: clamp(34px, 5vw, 48px);
-  font-weight: 900;
+  font-weight: 700;
   line-height: 1.1;
 }
 
@@ -405,7 +405,7 @@ button {
 .ic-probs > div {
   color: #c9d6d0;
   font-size: 30px;
-  font-weight: 850;
+  font-weight: 700;
 }
 
 .ic-probs > div:last-child {
@@ -428,7 +428,7 @@ button {
 .ic-probs-label {
   color: #90a49a;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1.2px;
   text-align: center;
 }
@@ -480,7 +480,7 @@ button {
   background: transparent;
   color: #9eafa8;
   font-size: 12px !important;
-  font-weight: 750 !important;
+  font-weight: 700 !important;
 }
 
 .ic-tabs button.ic-active {
@@ -567,7 +567,7 @@ button {
 .ic-odds-tile span {
   color: #9dafa7;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
@@ -650,7 +650,7 @@ button {
   margin-top: 8px;
   color: #70baff;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
@@ -677,7 +677,7 @@ button {
 
 .pw-name {
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 700;
   color: #edf3ef;
 }
 
@@ -708,7 +708,7 @@ button {
   justify-content: center;
   color: #a9cfff;
   font-size: 16px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .pw-stats {
@@ -757,7 +757,7 @@ button {
 .pw-stats span {
   color: #9fb2ab;
   font-size: 10px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .pw-stats strong {
@@ -804,7 +804,7 @@ button {
   display: inline-block;
   color: #edf3ef;
   font-style: italic;
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: -0.7px;
   line-height: 1;
   white-space: nowrap;

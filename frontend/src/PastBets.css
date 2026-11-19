@@ -2,8 +2,8 @@
 .mb-page .pb-page h2,
 .mb-page .pb-page h3,
 .mb-page .pb-page h4 { margin: 0; overflow-wrap: anywhere; }
-.pb-page h2 { font: 700 32px/1.1 'Barlow Condensed', sans-serif; }
-.pb-page h3 { font: 600 23px/1.15 'Barlow Condensed', sans-serif; }
+.pb-page h2 { font:600 var(--type-section-title)/1.15 var(--font-display); }
+.pb-page h3 { font:600 var(--type-panel-title)/1.15 var(--font-display); }
 .pb-page h4 { font-size: 14px; }
 .pb-page .mb-note { margin: 5px 0; }
 .pb-toolbar {

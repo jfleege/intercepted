@@ -12,7 +12,7 @@
   border: 1px solid transparent;
   border-radius: 12px;
   text-align: left;
-  font: 400 12px/1.4 Barlow, sans-serif;
+  font: 400 12px/1.4 var(--font-ui);
   cursor: pointer;
 }
 
@@ -61,7 +61,7 @@ body:has(.status-dialog[open]) { overflow: hidden; }
 }
 .status-dialog-header h2 {
   margin: 0;
-  font: 600 24px/1.2 'Barlow Condensed', sans-serif;
+  font: 600 24px/1.2 var(--font-display);
 }
 .status-dialog-header .ic-close { flex-shrink: 0; }
 .status-dialog > .fi-content,

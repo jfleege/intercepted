@@ -1,10 +1,38 @@
+@import '@fontsource/barlow/latin-400.css';
+@import '@fontsource/barlow/latin-500.css';
+@import '@fontsource/barlow/latin-600.css';
+@import '@fontsource/barlow/latin-600-italic.css';
+@import '@fontsource/barlow/latin-700.css';
+@import '@fontsource/barlow-condensed/latin-600.css';
+@import '@fontsource/barlow-condensed/latin-700.css';
 
-html {
-  scroll-behavior: smooth;
+:root {
+  --font-ui: 'Barlow', system-ui, sans-serif;
+  --font-display: 'Barlow Condensed', var(--font-ui);
+  --type-page-title: clamp(1.875rem, 3vw, 2.5rem);
+  --type-section-title: clamp(1.375rem, 2vw, 1.875rem);
+  --type-panel-title: 1.3125rem;
 }
 
 body {
   margin: 0;
+  font-family: var(--font-ui);
+}
+
+:where(button, input, select, textarea, optgroup) {
+  font-family: inherit;
+}
+
+:where(h1, h2, h3, h4) {
+  font-family: var(--font-display);
+}
+
+:where(table, output) {
+  font-variant-numeric: tabular-nums;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 #root {

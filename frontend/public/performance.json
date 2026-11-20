@@ -60261,11 +60261,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 19,
-            "lower": 0.31707482511825114,
-            "observed": 0.5263157894736842,
-            "predicted": 0.6439546472495493,
-            "upper": 0.7267049451255145
+            "games": 20,
+            "lower": 0.3420820083075997,
+            "observed": 0.55,
+            "predicted": 0.6429717530216582,
+            "upper": 0.7418049791429071
           },
           {
             "bin": "70\u201380%",
@@ -62359,21 +62359,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 3,
             "away_team": "IND",
-            "brier": null,
+            "brier": 0.14115292252391737,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-19",
             "game_id": "2026_11_IND_HOU",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 26,
             "home_team": "HOU",
             "kickoff": "2026-11-20T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.47112944242888316,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "HOU",
             "probability": 0.6242967626917258,
             "provenance": {
@@ -62383,7 +62383,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 11
           },
@@ -62737,14 +62737,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.647887323943662,
-          "brier": 0.22587252432009314,
+          "accuracy": 0.6527777777777778,
+          "brier": 0.22469586318403514,
           "cancelled": 0,
-          "correct": 46,
-          "games": 71,
+          "correct": 47,
+          "games": 72,
           "incorrect": 25,
-          "log_loss": 0.6413840023594005,
-          "pending": 13,
+          "log_loss": 0.6390193556936989,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -63528,6 +63528,17 @@
             "game_number": 71,
             "label": "LAC @ BAL",
             "log_loss": 0.6413840023594005
+          },
+          {
+            "accuracy": 0.6527777777777778,
+            "brier": 0.22469586318403514,
+            "correct": true,
+            "date": "2026-11-19",
+            "game_brier": 0.14115292252391737,
+            "game_id": "2026_11_IND_HOU",
+            "game_number": 72,
+            "label": "IND @ HOU",
+            "log_loss": 0.6390193556936989
           }
         ],
         "weekly": [
@@ -63597,14 +63608,14 @@
             "week": 10
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.14115292252391737,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 13,
+            "log_loss": 0.47112944242888316,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 11
@@ -63647,11 +63658,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 10,
-            "lower": 0.23658959361548731,
-            "observed": 0.5,
-            "predicted": 0.5564491436474591,
-            "upper": 0.7634104063845126
+            "games": 11,
+            "lower": 0.28008775568998817,
+            "observed": 0.5454545454545454,
+            "predicted": 0.5574647047591541,
+            "upper": 0.7872904245601196
           },
           {
             "bin": "60\u201370%",
@@ -65753,21 +65764,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 3,
             "away_team": "IND",
-            "brier": null,
+            "brier": 0.18695219124308032,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-19",
             "game_id": "2026_11_IND_HOU",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 26,
             "home_team": "HOU",
             "kickoff": "2026-11-20T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.5663025417432307,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "HOU",
             "probability": 0.5676203158761037,
             "provenance": {
@@ -65777,7 +65788,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 11
           },
@@ -66131,14 +66142,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6619718309859155,
-          "brier": 0.22110858862224136,
+          "accuracy": 0.6666666666666666,
+          "brier": 0.22063419421419747,
           "cancelled": 0,
-          "correct": 47,
-          "games": 71,
+          "correct": 48,
+          "games": 72,
           "incorrect": 24,
-          "log_loss": 0.630900371806537,
-          "pending": 13,
+          "log_loss": 0.6300031797223243,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -66922,6 +66933,17 @@
             "game_number": 71,
             "label": "LAC @ BAL",
             "log_loss": 0.630900371806537
+          },
+          {
+            "accuracy": 0.6666666666666666,
+            "brier": 0.22063419421419747,
+            "correct": true,
+            "date": "2026-11-19",
+            "game_brier": 0.18695219124308032,
+            "game_id": "2026_11_IND_HOU",
+            "game_number": 72,
+            "label": "IND @ HOU",
+            "log_loss": 0.6300031797223243
           }
         ],
         "weekly": [
@@ -66991,14 +67013,14 @@
             "week": 10
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.18695219124308032,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 13,
+            "log_loss": 0.5663025417432307,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 11
@@ -67049,11 +67071,11 @@
           },
           {
             "bin": "70\u201380%",
-            "games": 6,
-            "lower": 0.43649056343635395,
-            "observed": 0.8333333333333334,
-            "predicted": 0.7479512436709793,
-            "upper": 0.9699474141282697
+            "games": 7,
+            "lower": 0.48686549668097007,
+            "observed": 0.8571428571428571,
+            "predicted": 0.7411268453396794,
+            "upper": 0.9743210440510253
           },
           {
             "bin": "80\u201390%",
@@ -68719,21 +68741,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 3,
             "away_team": "IND",
-            "brier": null,
+            "brier": 0.08989175935300568,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-19",
             "game_id": "2026_11_IND_HOU",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 26,
             "home_team": "HOU",
             "kickoff": "2026-11-20T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.3564171838019015,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "HOU",
             "probability": 0.7001804553518806,
             "provenance": {
@@ -68743,7 +68765,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 11
           },
@@ -69097,14 +69119,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6666666666666666,
-          "brier": 0.21252742938465788,
+          "accuracy": 0.6724137931034483,
+          "brier": 0.2104130212806639,
           "cancelled": 0,
-          "correct": 38,
-          "games": 57,
+          "correct": 39,
+          "games": 58,
           "incorrect": 19,
-          "log_loss": 0.6131657214195533,
-          "pending": 13,
+          "log_loss": 0.608739022495111,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -69734,6 +69756,17 @@
             "game_number": 57,
             "label": "LAC @ BAL",
             "log_loss": 0.6131657214195533
+          },
+          {
+            "accuracy": 0.6724137931034483,
+            "brier": 0.2104130212806639,
+            "correct": true,
+            "date": "2026-11-19",
+            "game_brier": 0.08989175935300568,
+            "game_id": "2026_11_IND_HOU",
+            "game_number": 58,
+            "label": "IND @ HOU",
+            "log_loss": 0.608739022495111
           }
         ],
         "weekly": [
@@ -69790,14 +69823,14 @@
             "week": 10
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.08989175935300568,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 13,
+            "log_loss": 0.3564171838019015,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 11
@@ -69840,11 +69873,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 5,
-            "lower": 0.3755282641185388,
-            "observed": 0.8,
-            "predicted": 0.5637786508120594,
-            "upper": 0.9637768390302125
+            "games": 6,
+            "lower": 0.43649056343635395,
+            "observed": 0.8333333333333334,
+            "predicted": 0.5683575294322446,
+            "upper": 0.9699474141282697
           },
           {
             "bin": "60\u201370%",
@@ -71526,21 +71559,21 @@
             "week": 10
           },
           {
-            "away_score": null,
+            "away_score": 3,
             "away_team": "IND",
-            "brier": null,
+            "brier": 0.1670749908328288,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-19",
             "game_id": "2026_11_IND_HOU",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 26,
             "home_team": "HOU",
             "kickoff": "2026-11-20T01:15:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.525513087539554,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "HOU",
             "probability": 0.591251922533171,
             "provenance": {
@@ -71550,7 +71583,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 11
           },
@@ -71904,14 +71937,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.7368421052631579,
-          "brier": 0.20306678402827208,
+          "accuracy": 0.7413793103448276,
+          "brier": 0.20244623586972993,
           "cancelled": 0,
-          "correct": 42,
-          "games": 57,
+          "correct": 43,
+          "games": 58,
           "incorrect": 15,
-          "log_loss": 0.5932130925987769,
-          "pending": 13,
+          "log_loss": 0.5920458511322385,
+          "pending": 12,
           "ties": 0
         },
         "trend": [
@@ -72541,6 +72574,17 @@
             "game_number": 57,
             "label": "LAC @ BAL",
             "log_loss": 0.5932130925987769
+          },
+          {
+            "accuracy": 0.7413793103448276,
+            "brier": 0.20244623586972993,
+            "correct": true,
+            "date": "2026-11-19",
+            "game_brier": 0.1670749908328288,
+            "game_id": "2026_11_IND_HOU",
+            "game_number": 58,
+            "label": "IND @ HOU",
+            "log_loss": 0.5920458511322385
           }
         ],
         "weekly": [
@@ -72597,14 +72641,14 @@
             "week": 10
           },
           {
-            "accuracy": null,
-            "brier": null,
+            "accuracy": 1.0,
+            "brier": 0.1670749908328288,
             "cancelled": 0,
-            "correct": 0,
-            "games": 0,
+            "correct": 1,
+            "games": 1,
             "incorrect": 0,
-            "log_loss": null,
-            "pending": 13,
+            "log_loss": 0.525513087539554,
+            "pending": 12,
             "season": 2026,
             "ties": 0,
             "week": 11
@@ -72617,5 +72661,5 @@
   "schema_version": 1,
   "snapshot_count": 72,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-20T00:20:13.480014+00:00"
+  "updated_at": "2026-11-20T05:26:38.748329+00:00"
 }

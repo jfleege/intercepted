@@ -4,6 +4,10 @@ import Segmented from './Segmented';
 import InterfaceIcon from './InterfaceIcon';
 import ParlayLegs from './ParlayLegs';
 import {sameGameSignal} from './sameGameSignal';
+import {BookControls, BookPicks, LegPrice, TicketPayout, bookKeys, useQuoteFeeds} from './SportsbookPricing';
+import type {Stake} from './SportsbookPricing';
+import {quoteFor} from './sportsbookQuotes';
+import type {Book, Leg as PriceLeg} from './sportsbookQuotes';
 import './SameGamePicks.css';
 
 type Signal = 'strong' | 'limited' | 'none';
@@ -47,10 +51,23 @@ export function SameGameBadge({board}: {board?:Board}) {
   </span>;
 }
 
+function quoteLeg(leg:Leg, gameId:string, kickoff:string):PriceLeg {
+  const targets:Record<string,string> = {attempts:'attempts',passing_yards:'passing',rushing_yards:'rushing',receiving_yards:'receiving',scoring_tds:'scoring_td',passing_tds:'passing_td'};
+  const touchdown = leg.stat==='scoring_tds' || leg.stat==='passing_tds';
+  return {game_id:gameId,team:leg.team,name:leg.name,target:targets[leg.stat]??leg.stat,
+    direction:touchdown?'yes':'over',line:leg.stat==='scoring_tds'?null:leg.threshold-.5,kickoff};
+}
+
 export default function SameGamePicks({season, week, gameId}: {season:number; week:number; gameId:string}) {
   const board = useSameGame(season,week)?.[gameId];
   const [count,setCount] = useState(2);
+  const [book,setBook] = useState<Book>('draftkings');
+  const [stake,setStake] = useState<Stake>(1);
+  const feeds = useQuoteFeeds();
+  const now = Date.now();
   const options = board?.options[count] ?? [];
+  const ranked = options.map((option,index)=>({option,index,legs:option.legs.map(leg=>quoteLeg(leg,gameId,board!.kickoff))}));
+  const byBook = bookKeys.map(key=>({key,pick:ranked.find(({legs})=>legs.every(leg=>quoteFor(leg,key,feeds,now)))}));
   return <section className="sgp-panel" aria-label="Same-game picks">
     <header><div><h3>Same-game picks</h3><p>Ranked by the lower all-hit bound for the selected leg count.</p></div><SameGameBadge board={board}/></header>
     {!board ? <p className="sgp-muted">No saved same-game board for this matchup.</p> : <>
@@ -61,10 +78,13 @@ export default function SameGamePicks({season, week, gameId}: {season:number; we
           {[2,5,6,7,8,9,10].map(n => <button key={n} type="button" aria-pressed={count===n} onClick={() => setCount(n)}>{n} legs</button>)}
         </Segmented>
         <p className="sgp-muted">Chip color uses the leading two-leg option’s lower bound. Green starts at 80%, amber at 70%, and red is below 70% or has no available combo. Longer combinations have their own bounds.</p>
-        <div className="sgp-options">{options.map((option, i) => <article key={option.legs.map(leg => leg.player_id).join(':')}>
-          <header><h4>Option {i+1}</h4><strong>{pct(option.lower)}–{pct(option.upper)}</strong></header>
+        <BookControls {...{book,stake,setBook,setStake}}/>
+        {now<Date.parse(board.kickoff) && !!ranked.length && <BookPicks picks={byBook.map(({key,pick})=>({key,index:pick?.index}))} setBook={setBook}/>}
+        <div className="sgp-options">{ranked.map(({option,index,legs}) => <article key={option.legs.map(leg => leg.player_id).join(':')}>
+          <header><h4>Option {index+1}{index===0?' · Best model':''}</h4><strong>{pct(option.lower)}–{pct(option.upper)}</strong></header>
           <small>All-hit bounds given model probabilities</small>
-          <ParlayLegs legs={option.legs.map(leg => ({id:leg.player_id,context:leg.team,name:leg.name,market:leg.label,probability:leg.probability,conditional:true,actual:leg.actual}))}/>
+          <ParlayLegs legs={option.legs.map((leg,i) => ({id:leg.player_id,context:leg.team,name:leg.name,market:leg.label,probability:leg.probability,actual:leg.actual,quote:now<Date.parse(board.kickoff)?<LegPrice leg={legs[i]} {...{book,feeds,now}}/>:undefined}))}/>
+          <TicketPayout {...{legs,book,stake,feeds,now}}/>
           <small className="sgp-result">{statusLabels[option.result]}</small>
         </article>)}</div>
         {!options.length && <p className="sgp-muted">Fewer than {count} distinct players have usable forecasts.</p>}

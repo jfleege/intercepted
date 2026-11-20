@@ -1,0 +1,10 @@
+.book-controls { display:flex; flex-wrap:wrap; gap:8px; margin:8px 0 12px; }
+.book-controls > div { max-width:100%; }
+.book-leg-price { display:block; color:var(--ud-muted); font-variant-numeric:tabular-nums; }
+.book-payout { display:grid; gap:5px; margin:8px 0; color:var(--ud-muted); }
+.book-payout label { display:flex; gap:6px; align-items:center; flex-wrap:wrap; font-size:.8rem; }
+.book-payout input { width:6rem; max-width:100%; padding:4px 6px; color:var(--ud-text); background:#0c192a; border:1px solid #365061; border-radius:5px; }
+.parlay-leg-meta, .book-picks > div { display:flex; flex-wrap:wrap; gap:4px 10px; align-items:baseline; justify-content:space-between; }
+.book-picks { display:grid; gap:5px; margin:6px 0 12px; color:var(--ud-muted); }
+.book-picks > div { justify-content:flex-start; }
+.book-picks button { padding:5px 7px; border:1px solid #365061; border-radius:5px; color:var(--ud-text); background:#102532; font:inherit; font-size:.8rem; cursor:pointer; }

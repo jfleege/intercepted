@@ -15,6 +15,11 @@ class OddsError(RuntimeError):
     pass
 
 
+def comparison_books():
+    books = ('draftkings', 'fanduel', 'betmgm')
+    return (*books, 'williamhill_us') if os.getenv('ODDS_INCLUDE_CAESARS') == '1' else books
+
+
 def nonnegative(value):
     try:
         number = int(value)

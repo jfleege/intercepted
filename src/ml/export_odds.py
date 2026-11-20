@@ -8,7 +8,7 @@ from urllib.parse import urlencode
 from urllib.request import urlopen
 from zoneinfo import ZoneInfo
 from src.ml.refresh_markets import archive_odds
-from src.ml.odds_client import TEAMS, record_usage
+from src.ml.odds_client import TEAMS, record_usage, comparison_books
 
 
 # configuration
@@ -43,7 +43,7 @@ params = urlencode({
     "regions": "us",
     "markets": "h2h,spreads,totals",
     "oddsFormat": "american",
-    "bookmakers": "draftkings",
+    "bookmakers": ",".join(comparison_books()),
 })
 
 try:
@@ -119,6 +119,44 @@ def select_bookmaker(event):
     )
 
 
+def normalize_book(bookmaker, event, home_name, away_name):
+    moneyline = get_market(bookmaker, "h2h")
+    spreads = get_market(bookmaker, "spreads")
+    totals = get_market(bookmaker, "totals")
+
+    home_ml = get_outcome(moneyline, home_name)
+    away_ml = get_outcome(moneyline, away_name)
+
+    home_spread = get_outcome(spreads, home_name)
+    away_spread = get_outcome(spreads, away_name)
+
+    over = get_outcome(totals, "Over")
+    under = get_outcome(totals, "Under")
+
+    return {
+        "bookmaker": bookmaker["title"],
+        "bookmaker_key": bookmaker["key"],
+        "event_id": event["id"],
+        "moneyline_last_update": moneyline.get("last_update") if moneyline else None,
+        "spreads_last_update": spreads.get("last_update") if spreads else None,
+        "totals_last_update": totals.get("last_update") if totals else None,
+        "home_spread_price": get_price(home_spread),
+        "away_spread_price": get_price(away_spread),
+        "over_price": get_price(over),
+        "under_price": get_price(under),
+        "last_update": bookmaker.get("last_update"),
+        "commence_time": event["commence_time"],
+        "home_moneyline": get_price(home_ml),
+        "away_moneyline": get_price(away_ml),
+        "home_spread": get_point(home_spread),
+        "away_spread": get_point(away_spread),
+        "over_under": get_point(over) if over else get_point(under),
+        "over_line": get_point(over),
+        "under_line": get_point(under),
+    }
+
+
+
 # match odds to intercepted games
 output = {}
 
@@ -157,38 +195,11 @@ for game in predictions:
     if bookmaker is None:
         continue
 
-    moneyline = get_market(bookmaker, "h2h")
-    spreads = get_market(bookmaker, "spreads")
-    totals = get_market(bookmaker, "totals")
-
-    home_ml = get_outcome(moneyline, home_name)
-    away_ml = get_outcome(moneyline, away_name)
-
-    home_spread = get_outcome(spreads, home_name)
-    away_spread = get_outcome(spreads, away_name)
-
-    over = get_outcome(totals, "Over")
-    under = get_outcome(totals, "Under")
-
-    output[game["game_id"]] = {
-        "bookmaker": bookmaker["title"],
-        "bookmaker_key": bookmaker["key"],
-        "event_id": event["id"],
-        "moneyline_last_update": moneyline.get("last_update") if moneyline else None,
-        "spreads_last_update": spreads.get("last_update") if spreads else None,
-        "totals_last_update": totals.get("last_update") if totals else None,
-        "home_spread_price": get_price(home_spread),
-        "away_spread_price": get_price(away_spread),
-        "over_price": get_price(over),
-        "under_price": get_price(under),
-        "last_update": bookmaker.get("last_update"),
-        "commence_time": event["commence_time"],
-        "home_moneyline": get_price(home_ml),
-        "away_moneyline": get_price(away_ml),
-        "home_spread": get_point(home_spread),
-        "away_spread": get_point(away_spread),
-        "over_under": get_point(over) or get_point(under),
+    quotes = {
+        book["key"]: normalize_book(book, event, home_name, away_name)
+        for book in event["bookmakers"] if book.get("key") in comparison_books()
     }
+    output[game["game_id"]] = {**normalize_book(bookmaker, event, home_name, away_name), "by_book": quotes}
 
 
 # save exported odds

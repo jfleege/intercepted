@@ -254,6 +254,7 @@ jobs:
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && ((github.event_name == 'schedule' && github.event.schedule == '17 13 * * *') || inputs.refresh_odds)
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_INCLUDE_CAESARS: ${{ vars.ODDS_INCLUDE_CAESARS }}
         run: |
           if [ -z "$ODDS_API_KEY" ]; then
             echo "::warning::ODDS_API_KEY is missing; keeping committed odds snapshot."
@@ -265,6 +266,7 @@ jobs:
         if: inputs.results_only != true && github.event.schedule != '7,37 * * * *' && inputs.refresh_props == true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_INCLUDE_CAESARS: ${{ vars.ODDS_INCLUDE_CAESARS }}
           REFRESH_PROPS_NOW: ${{ inputs.refresh_props && '1' || '0' }}
         run: |
           if [ "$REFRESH_PROPS_NOW" = "1" ]; then

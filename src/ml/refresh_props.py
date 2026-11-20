@@ -1,4 +1,4 @@
-"""Cache each game's DraftKings props once per slate, with fail-closed quota guards."""
+"""Cache each game's sportsbook props once per slate, with fail-closed quota guards."""
 import argparse
 import json
 import math
@@ -6,10 +6,13 @@ import os
 import re
 from datetime import datetime
 from zoneinfo import ZoneInfo
-from src.ml.odds_client import OddsClient, OddsError, TEAMS
+from src.ml.odds_client import OddsClient, OddsError, TEAMS, comparison_books
 from src.ml.refresh_performance import ROOT, stamp, utcnow, write_json
 
-MARKETS = ('player_pass_yds', 'player_rush_yds', 'player_reception_yds', 'player_anytime_td')
+MARKETS = ('player_pass_yds', 'player_rush_yds', 'player_reception_yds', 'player_anytime_td',
+           'player_pass_yds_alternate', 'player_rush_yds_alternate',
+           'player_reception_yds_alternate', 'player_pass_attempts_alternate', 'player_pass_tds_alternate')
+QUOTE_COST = len(MARKETS)
 MAX_WEEKLY = 64
 MAX_MONTHLY = 320  # App cap by Central calendar month, not a claim about billing reset dates.
 RESERVE = 100  # Enough for 31 daily 3-credit requests plus a small margin.
@@ -38,7 +41,17 @@ def event_matches(event, game, report):
 def normalize(event, game, report, observed_at):
     if not event_matches(event, game, report):
         raise ValueError('Event identity or kickoff changed; quote rejected.')
-    book = next((b for b in event.get('bookmakers', []) if b.get('key') == 'draftkings'), {})
+    books = {}
+    for book in event.get('bookmakers', []):
+        key = book.get('key')
+        if key in comparison_books():
+            books[key] = normalized_markets(book, observed_at)
+    return {'event_id': event['id'], 'home_team': game['home_team'], 'away_team': game['away_team'],
+            'kickoff': report['kickoff'], 'observed_at': observed_at, 'bookmaker': 'DraftKings',
+            'markets': books.get('draftkings', []), 'by_book': books}
+
+
+def normalized_markets(book, observed_at):
     markets = []
     for market in book.get('markets', []):
         key = market.get('key')
@@ -62,8 +75,7 @@ def normalize(event, game, report, observed_at):
                 outcomes.append({'name': name, 'description': person.strip(), 'price': price, 'point': outcome['point']})
         if outcomes:
             markets.append({'key': key, 'last_update': market['last_update'], 'outcomes': outcomes})
-    return {'event_id': event['id'], 'home_team': game['home_team'], 'away_team': game['away_team'],
-            'kickoff': report['kickoff'], 'observed_at': observed_at, 'bookmaker': 'DraftKings', 'markets': markets}
+    return markets
 
 
 def can_request(usage, weekly_reserved, monthly_reserved):
@@ -100,7 +112,7 @@ def refresh(root=ROOT, client=None, now=None, allow_early=False):
         raise ValueError('Prop quota ledger is unreadable; no requests made.')
     attempts = state['attempts']
     # Validate the ledger before spending credits, including reservations made before a failed request.
-    if any(not isinstance(a, dict) or a.get('reserved') != 4 or not isinstance(a.get('month'), str)
+    if any(not isinstance(a, dict) or a.get('reserved') not in (4, QUOTE_COST) or not isinstance(a.get('month'), str)
            or not isinstance(a.get('slate'), str) or not re.fullmatch(r'\d{4}-\d{2}', a['month'])
            or not re.fullmatch(r'\d{4}:\d{1,2}', a['slate']) for a in attempts.values()):
         raise ValueError('Prop quota ledger is unreadable; no requests made.')
@@ -140,20 +152,20 @@ def refresh(root=ROOT, client=None, now=None, allow_early=False):
         event = matches[0]
         key = f"{slate}:{game['game_id']}"
         # Reserve before the network request. Failed/empty attempts are never automatically repeated.
-        attempt = {'slate': slate, 'month': month, 'reserved': 4, 'at': now, 'status': 'requested'}
+        attempt = {'slate': slate, 'month': month, 'reserved': QUOTE_COST, 'at': now, 'status': 'requested'}
         attempts[key] = attempt
-        weekly += 4
-        monthly += 4
+        weekly += QUOTE_COST
+        monthly += QUOTE_COST
         write_json(root / STATE, state)
         try:
             response, usage = client.request(f"sports/americanfootball_nfl/events/{event['id']}/odds/",
-                                            {'bookmakers': 'draftkings', 'regions': 'us', 'markets': ','.join(MARKETS), 'oddsFormat': 'american'}, kind='player_props')
+                                            {'bookmakers': ','.join(comparison_books()), 'regions': 'us', 'markets': ','.join(MARKETS), 'oddsFormat': 'american'}, kind='player_props')
             observed = usage.get('observed_at', now)
             quote = normalize(response, game, r, observed)
             cached[game['game_id']] = quote
-            attempt.update(status='cached' if quote['markets'] else 'empty', reported_cost=usage.get('last_cost'))
+            attempt.update(status='cached' if any(quote['by_book'].values()) else 'empty', reported_cost=usage.get('last_cost'))
             output['status'] = 'cached'
-            if not isinstance(usage.get('last_cost'), int) or isinstance(usage.get('last_cost'), bool) or not 0 <= usage['last_cost'] <= 4:
+            if not isinstance(usage.get('last_cost'), int) or isinstance(usage.get('last_cost'), bool) or not 0 <= usage['last_cost'] <= QUOTE_COST:
                 output['status'] = 'usage_unverified'
                 break
         except (OddsError, ValueError, TypeError):

@@ -2,7 +2,7 @@
   "games": {
     "2026_11_ARI_KC": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T18:00:00+00:00",
       "options": {
         "10": [
@@ -1578,12 +1578,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_BAL_CAR": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T18:00:00+00:00",
       "options": {
         "10": [
@@ -3159,12 +3159,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_CIN_WAS": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-24T01:15:00+00:00",
       "options": {
         "10": [
@@ -4740,7 +4740,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_IND_HOU": {
@@ -6467,7 +6467,7 @@
     },
     "2026_11_JAX_NYG": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T18:00:00+00:00",
       "options": {
         "10": [
@@ -6535,16 +6535,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Jakobi Meyers",
                 "player_id": "00-0034960",
                 "probability": 0.63131,
@@ -6571,103 +6561,6 @@
                 "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "JAX",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.552953
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.935344,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Cam Skattebo",
-                "player_id": "00-0040715",
-                "probability": 0.9041,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.900167,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "JAX",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Malik Nabers",
-                "player_id": "00-0039337",
-                "probability": 0.881445,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Parker Washington",
-                "player_id": "00-0038606",
-                "probability": 0.851154,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "J.J. McCarthy",
-                "player_id": "00-0039923",
-                "probability": 0.833558,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NYG",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.63131,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Malachi Fields",
-                "player_id": "00-0041042",
-                "probability": 0.600974,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "NYG",
                 "threshold": 25
               },
               {
@@ -6749,22 +6642,22 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Jakobi Meyers",
                 "player_id": "00-0034960",
                 "probability": 0.63131,
                 "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Malachi Fields",
+                "player_id": "00-0041042",
+                "probability": 0.600974,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "NYG",
                 "threshold": 25
               },
               {
@@ -6779,6 +6672,103 @@
               },
               {
                 "label": "25+ rushing yards",
+                "name": "Devin Singletary",
+                "player_id": "00-0035250",
+                "probability": 0.381853,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "NYG",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.381853
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.935344,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Cam Skattebo",
+                "player_id": "00-0040715",
+                "probability": 0.9041,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NYG",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.900167,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "JAX",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Malik Nabers",
+                "player_id": "00-0039337",
+                "probability": 0.881445,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NYG",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.851154,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "J.J. McCarthy",
+                "player_id": "00-0039923",
+                "probability": 0.833558,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NYG",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.63131,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Malachi Fields",
+                "player_id": "00-0041042",
+                "probability": 0.600974,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "NYG",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
                 "name": "Chris Rodriguez Jr.",
                 "player_id": "00-0038611",
                 "probability": 0.532592,
@@ -6786,11 +6776,21 @@
                 "stat": "rushing_yards",
                 "team": "JAX",
                 "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Devin Singletary",
+                "player_id": "00-0035250",
+                "probability": 0.381853,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "NYG",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.532592
+            "upper": 0.381853
           }
         ],
         "2": [
@@ -7171,18 +7171,18 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.63131,
+                "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "NYG",
+                "team": "JAX",
                 "threshold": 25
               }
             ],
-            "lower": 0.259902,
+            "lower": 0.10352,
             "result": "pending",
-            "upper": 0.787692
+            "upper": 0.63131
           },
           {
             "legs": [
@@ -7238,18 +7238,18 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.63131,
+                "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "NYG",
+                "team": "JAX",
                 "threshold": 25
               }
             ],
-            "lower": 0.242306,
+            "lower": 0.085924,
             "result": "pending",
-            "upper": 0.787692
+            "upper": 0.63131
           }
         ],
         "7": [
@@ -7317,18 +7317,18 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.63131,
+                "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "NYG",
+                "team": "JAX",
                 "threshold": 25
               }
             ],
-            "lower": 0.09346,
+            "lower": 0,
             "result": "pending",
-            "upper": 0.787692
+            "upper": 0.63131
           },
           {
             "legs": [
@@ -7394,18 +7394,18 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.63131,
+                "name": "Malachi Fields",
+                "player_id": "00-0041042",
+                "probability": 0.600974,
                 "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "JAX",
+                "team": "NYG",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.63131
+            "upper": 0.600974
           },
           {
             "legs": [
@@ -7461,16 +7461,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Jakobi Meyers",
                 "player_id": "00-0034960",
                 "probability": 0.63131,
@@ -7478,11 +7468,21 @@
                 "stat": "receiving_yards",
                 "team": "JAX",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Malachi Fields",
+                "player_id": "00-0041042",
+                "probability": 0.600974,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "NYG",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.63131
+            "upper": 0.600974
           }
         ],
         "8": [
@@ -7550,99 +7550,12 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Jakobi Meyers",
                 "player_id": "00-0034960",
                 "probability": 0.63131,
                 "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "JAX",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.63131
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.935344,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Cam Skattebo",
-                "player_id": "00-0040715",
-                "probability": 0.9041,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.900167,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "JAX",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Malik Nabers",
-                "player_id": "00-0039337",
-                "probability": 0.881445,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Parker Washington",
-                "player_id": "00-0038606",
-                "probability": 0.851154,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "J.J. McCarthy",
-                "player_id": "00-0039923",
-                "probability": 0.833558,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NYG",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
                 "threshold": 25
               },
               {
@@ -7734,6 +7647,83 @@
               },
               {
                 "label": "25+ receiving yards",
+                "name": "Brenton Strange",
+                "player_id": "00-0038935",
+                "probability": 0.552953,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.552953
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.935344,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Cam Skattebo",
+                "player_id": "00-0040715",
+                "probability": 0.9041,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NYG",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.900167,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "JAX",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Malik Nabers",
+                "player_id": "00-0039337",
+                "probability": 0.881445,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NYG",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.851154,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "J.J. McCarthy",
+                "player_id": "00-0039923",
+                "probability": 0.833558,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NYG",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
                 "name": "Malachi Fields",
                 "player_id": "00-0041042",
                 "probability": 0.600974,
@@ -7741,11 +7731,21 @@
                 "stat": "receiving_yards",
                 "team": "NYG",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Brenton Strange",
+                "player_id": "00-0038935",
+                "probability": 0.552953,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.600974
+            "upper": 0.552953
           }
         ],
         "9": [
@@ -7813,16 +7813,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Jakobi Meyers",
                 "player_id": "00-0034960",
                 "probability": 0.63131,
@@ -7839,93 +7829,6 @@
                 "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "NYG",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.600974
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.935344,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Cam Skattebo",
-                "player_id": "00-0040715",
-                "probability": 0.9041,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.900167,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "JAX",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Malik Nabers",
-                "player_id": "00-0039337",
-                "probability": 0.881445,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Parker Washington",
-                "player_id": "00-0038606",
-                "probability": 0.851154,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "J.J. McCarthy",
-                "player_id": "00-0039923",
-                "probability": 0.833558,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NYG",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NYG",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.63131,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
                 "threshold": 25
               },
               {
@@ -8007,12 +7910,12 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Isaiah Likely",
-                "player_id": "00-0037838",
-                "probability": 0.787692,
-                "role_verified": true,
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.63131,
+                "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "NYG",
+                "team": "JAX",
                 "threshold": 25
               },
               {
@@ -8026,6 +7929,93 @@
                 "threshold": 25
               },
               {
+                "label": "25+ rushing yards",
+                "name": "Chris Rodriguez Jr.",
+                "player_id": "00-0038611",
+                "probability": 0.532592,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.532592
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.935344,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Cam Skattebo",
+                "player_id": "00-0040715",
+                "probability": 0.9041,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NYG",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.900167,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "JAX",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Malik Nabers",
+                "player_id": "00-0039337",
+                "probability": 0.881445,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NYG",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.851154,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "J.J. McCarthy",
+                "player_id": "00-0039923",
+                "probability": 0.833558,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NYG",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.63131,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ receiving yards",
                 "name": "Brenton Strange",
                 "player_id": "00-0038935",
@@ -8034,21 +8024,31 @@
                 "stat": "receiving_yards",
                 "team": "JAX",
                 "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chris Rodriguez Jr.",
+                "player_id": "00-0038611",
+                "probability": 0.532592,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.552953
+            "upper": 0.532592
           }
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_LV_DEN": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T21:25:00+00:00",
       "options": {
         "10": [
@@ -9624,12 +9624,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_MIA_BUF": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T18:00:00+00:00",
       "options": {
         "10": [
@@ -11205,12 +11205,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_MIN_SF": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-23T01:20:00+00:00",
       "options": {
         "10": [
@@ -12786,12 +12786,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_NO_CHI": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T18:00:00+00:00",
       "options": {
         "10": [
@@ -14367,12 +14367,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_NYJ_LAC": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T21:05:00+00:00",
       "options": {
         "10": [
@@ -15948,12 +15948,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_PIT_PHI": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T21:25:00+00:00",
       "options": {
         "10": [
@@ -17529,12 +17529,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_TB_DET": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T18:00:00+00:00",
       "options": {
         "10": [
@@ -19110,12 +19110,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     },
     "2026_11_TEN_DAL": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-20T16:23:52.536460+00:00",
+      "forecast_at": "2026-11-20T21:11:02.919330+00:00",
       "kickoff": "2026-11-22T18:00:00+00:00",
       "options": {
         "10": [
@@ -20691,7 +20691,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-20T16:24:23.553629+00:00",
+      "saved_at": "2026-11-20T21:11:32.088532+00:00",
       "signal": "limited"
     }
   },

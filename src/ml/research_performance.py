@@ -127,6 +127,8 @@ def grade(records, schedules, player_rows, now):
                 matches=indexed.get((r['season'],r['week'],r['team'],r['player_id']),[])
                 if len(matches)>1:raise ValueError('Duplicate player team/week stats')
                 stats=matches[0] if matches else {}
+                if r['family']=='yardage' and r['target']=='passing' and finite(stats.get('attempts')):
+                    r['actual_attempts']=stats['attempts']
                 if r['family']=='yardage':r['actual']=stats.get(f'{r["target"]}_yards')
                 elif r['target']=='pass_td':
                     v=stats.get('passing_tds');r['actual']=int(v>0) if finite(v) else None

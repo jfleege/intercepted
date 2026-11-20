@@ -67,10 +67,14 @@ def legs_for(game, report, extensions, contexts):
                    if stat != 'passing_tds' or player['position'] == 'QB']
         kind = extension.get('kind')
         if kind in ('passing', 'rushing', 'receiving'):
-            for row in extension.get('thresholds', []):
-                line = row['threshold']
-                if number(line) and line > 0 and row['basis'] in ('role_aware', 'conditional_baseline'):
-                    options.append((f'{kind}_yards', line, f'{line:g}+ {kind} yards', row['probability']))
+            markets = [('thresholds', f'{kind}_yards', f'{kind} yards')]
+            if player['position'] == 'QB' and kind == 'passing':
+                markets.append(('attempt_thresholds', 'attempts', 'passing attempts'))
+            for field, stat, unit in markets:
+                for row in extension.get(field, []):
+                    line = row['threshold']
+                    if number(line) and line > 0 and row['basis'] in ('role_aware', 'conditional_baseline'):
+                        options.append((stat, line, f'{line:g}+ {unit}', row['probability']))
         for stat, line, label, probability in options:
             if number(probability) and 0 < probability <= 1:
                 candidates.append(dict(player_id=player_id, name=player['name'], team=team, stat=stat, threshold=line,

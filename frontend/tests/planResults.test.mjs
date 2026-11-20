@@ -12,3 +12,13 @@ test('plan results retain boundaries and refuse ambiguous or postgame evidence',
  assert.equal(gradeSelection(offer,'2026-10-24',[row,{...row,actual:80}]).status,'conflicting_results');
  assert.equal(gradeSelection(offer,'2026-10-24',[{...row,player_id:'other'}]).status,'pending');
 });
+
+test('passing attempts settle against the count, including exact threshold hits', () => {
+ const attempts = {...offer, category:'attempts', target:'attempts', team:'HOU', line:29.5};
+ const passing = {...row, target:'passing', team:'HOU', actual:240};
+ const savedAt = '2026-10-24';
+ assert.equal(gradeSelection(attempts,savedAt,[passing]).status,'pending');
+ assert.equal(gradeSelection(attempts,savedAt,[{...passing,actual_attempts:29}]).status,'miss');
+ assert.equal(gradeSelection(attempts,savedAt,[{...passing,actual_attempts:30}]).status,'hit');
+ assert.equal(gradeSelection(attempts,savedAt,[{...passing,actual_attempts:30,team:'IND'}]).status,'pending');
+});

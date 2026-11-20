@@ -1,3 +1,4 @@
+import {ExtendedUsage} from './ForecastInsightPanels';
 import Segmented from './Segmented';
 import TeamMark from './TeamMark';
 import { teamStyle } from './teamPalette';
@@ -139,7 +140,7 @@ export default function MatchupProjections({ game, mode = 'forecasts' }: {game: 
       onClick={event => {if (event.target === event.currentTarget) dialog.current?.close();}}>
       <div className="mr-drawer-content">
       <header>{drawer?.player && <Photo player={drawer.player}/>}<h3 id={drawerTitle}>{drawer?.player?.name ?? (drawer?.validation ? 'Model validation & data provenance' : `${drawer?.team ?? ''} player outlooks`)}</h3><button className="mr-drawer-close" type="button" aria-label="Close" onClick={() => dialog.current?.close()}><span aria-hidden="true">×</span></button></header>
-      {drawer?.player && <>{drawer.team && <button className="mr-show-players" type="button" onClick={() => setDrawer({team:drawer.team})}>Back to {drawer.team} roster</button>}<p>{drawer.player.position} · {drawer.player.team} vs {drawer.player.opponent}</p><PlayerDetails player={drawer.player}/></>}
+      {drawer?.player && <>{drawer.team && <button className="mr-show-players" type="button" onClick={() => setDrawer({team:drawer.team})}>Back to {drawer.team} roster</button>}<p>{drawer.player.position} · {drawer.player.team} vs {drawer.player.opponent}</p><PlayerDetails player={drawer.player}/>{drawer.player.position==='QB' && <ExtendedUsage player={{...drawer.player,game_id:game.game_id}} slate={game}/>}</>}
       {drawer?.team && !drawer.player && prediction.players.filter(p => p.team === drawer.team).map(player => <PlayerRow key={player.player_id} player={player} onOpen={() => setDrawer({team:drawer.team, player})}/>)}
       {drawer?.validation && <div className="mr-method">
       <p>Development benchmark: fit 2018–2023, calibrate 2024, test 2025. This is retrospective evaluation, separate from the live winner-model record. Lower error and lower Brier scores are better.</p>

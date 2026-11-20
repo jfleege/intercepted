@@ -13,6 +13,28 @@ from src.features.player_pool import matchup_pool
 
 THRESHOLDS={'passing':[150,200,250,300], 'rushing':[25,50,60,75,100], 'receiving':[25,50,60,75,100]}
 
+PASS_ATTEMPT_THRESHOLDS = (20, 25, 30, 35, 40)
+
+
+def threshold_specs(kind):
+ specs = [(kind, line, 'yards') for line in THRESHOLDS[kind]]
+ if kind == 'passing':
+  specs.extend(('passing_attempts', line, 'opportunities') for line in PASS_ATTEMPT_THRESHOLDS)
+ return specs
+
+
+def predict_thresholds(kind, fitted, role_models, x, role_x):
+ rows = []
+ for line in THRESHOLDS.get(kind, PASS_ATTEMPT_THRESHOLDS):
+  role = role_models.get((kind,line)) if role_x else None
+  model = role or fitted.get((kind,line))
+  if model:
+   probability = float(predict_event(model,[{'x':role_x if role else x}])[0])
+   rows.append({'threshold':line,'probability':round(probability,6),'basis':'role_aware' if role else 'conditional_baseline'})
+ # Separate classifiers can cross. Keep coherent curves only.
+ return rows if all(b['probability'] <= a['probability'] for a,b in zip(rows,rows[1:])) else []
+
+
 def run(cache):
  import polars as pl
  now=datetime.now(timezone.utc).isoformat()
@@ -71,16 +93,17 @@ def run(cache):
    promoted=error<min(regular_error,recent_error,blind_error)
    role_fitted[kind]=candidate if promoted else None
    validation.append({'kind':kind,'target':'role_usage','samples':len(role_test),'mae':error,'baseline_mae':recent_error,'regular_usage_mae':regular_error,'role_blind_mae':blind_error,'promoted':promoted,'fit':'2025 through W12','calibration':'2025 W13–18','evaluation':f'{slate["season"]} completed weeks; development gate, not prospective validation'})
-  for threshold in THRESHOLDS[kind]:
-   for r in group:r['threshold_event']=int(r['yards']>=threshold)
+  for stat,threshold,actual_field in threshold_specs(kind):
+   for r in group:r['threshold_event']=int(r[actual_field]>=threshold)
+   if any(len({r['threshold_event'] for r in subset})<2 for subset in (train,cal)):continue
    model=fit_event(train,cal,'threshold_event');p=predict_event(model,test)
    actual=np.array([r['threshold_event'] for r in test]);rate=np.mean([r['threshold_event'] for r in cal])
    brier=float(np.mean((p-actual)**2));baseline=float(np.mean((rate-actual)**2))
-   validation.append({'kind':kind,'target':threshold,'samples':len(test),'brier':brier,'baseline_brier':baseline,'promoted':brier<baseline})
-   fitted[(kind,threshold)]=model if brier<baseline else None
+   validation.append({'kind':stat,'target':threshold,'samples':len(test),'brier':brier,'baseline_brier':baseline,'promoted':brier<baseline})
+   fitted[(stat,threshold)]=model if brier<baseline else None
    if min(len(role_train),len(role_cal),len(role_test))>=40:
     for subset in [role_train,role_cal,role_test]:
-     for r in subset:r['threshold_event']=int(r['yards']>=threshold)
+     for r in subset:r['threshold_event']=int(r[actual_field]>=threshold)
     if all(len({r['threshold_event'] for r in subset})==2 for subset in [role_train,role_cal]):
      candidate=fit_event(role_train,role_cal,'threshold_event',role_columns)
      role_blind=fit_event(role_train,role_cal,'threshold_event')
@@ -89,8 +112,8 @@ def run(cache):
      standard=predict_event(model,[{**r,'x':{k:r['x'][k] for k in PLAYER_FEATURES}} for r in role_test])
      error=float(np.mean((rp-actual)**2));standard_error=float(np.mean((standard-actual)**2));rate=np.mean([r['threshold_event'] for r in role_cal]);baseline_error=float(np.mean((rate-actual)**2))
      promoted=error<min(standard_error,baseline_error,blind_error)
-     role_thresholds[(kind,threshold)]=candidate if promoted else None
-     validation.append({'kind':kind,'target':f'role_threshold_{threshold}','samples':len(role_test),'brier':error,'baseline_brier':baseline_error,'regular_brier':standard_error,'role_blind_brier':blind_error,'promoted':promoted})
+     role_thresholds[(stat,threshold)]=candidate if promoted else None
+     validation.append({'kind':stat,'target':f'role_threshold_{threshold}','samples':len(role_test),'brier':error,'baseline_brier':baseline_error,'regular_brier':standard_error,'role_blind_brier':blind_error,'promoted':promoted})
  now=datetime.now(timezone.utc).isoformat()
  games={r['game_id']:r for r in schedules};output=[]
  slate_games={g['game_id']:g for g in slate['games']}
@@ -119,18 +142,12 @@ def run(cache):
     role_rank=1 if role_current and c['starter'].get('status')=='confirmed' else c['starter']['rank'] if role_current else None
     role_x={**x,'depth_rank':role_rank} if role_current else None
     role_usage=float(predict_regression(role_model,[{'x':role_x}])[0]) if role_model and role_x else None
-    thresholds=[]
-    for threshold in THRESHOLDS[kind]:
-     m=fitted.get((kind,threshold))
-     rm=role_thresholds.get((kind,threshold)) if role_current else None
-     if rm:thresholds.append({'threshold':threshold,'probability':round(float(predict_event(rm,[{'x':role_x}])[0]),6),'basis':'role_aware'})
-     elif m:thresholds.append({'threshold':threshold,'probability':round(float(predict_event(m,[{'x':x}])[0]),6),'basis':'conditional_baseline'})
-    # Separate classifiers can cross; withhold incoherent curves rather than silently repair them.
-    if any(b['probability']>a['probability'] for a,b in zip(thresholds,thresholds[1:])):thresholds=[]
-    output.append({'game_id':gid,'player_id':player['player_id'],'team':team,'opponent':opp,'kickoff':kickoff(g),'kind':kind,'usage_field':USAGE[kind], 'usage':0 if out else round(role_usage,1) if role_usage is not None else round(float(predict_regression(model,[{'x':x}])[0]),1) if model else None,'usage_status':'reported_out' if out else 'role_aware_conditional' if role_usage is not None else 'conditional_model' if model else 'baseline_not_beaten','baseline_usage':x['recent_usage'],'thresholds':[] if out else thresholds,'role_adjustment':'Timestamped depth-rank model passed development gate' if role_usage is not None else 'Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained', 'role_rank':role_rank,'role_evidence':c['starter'] if role_current else None,'availability_evidence':c['availability'] if c else None})
+    thresholds=predict_thresholds(kind,fitted,role_thresholds,x,role_x) if not out else []
+    attempt_thresholds=predict_thresholds('passing_attempts',fitted,role_thresholds,x,role_x) if kind=='passing' and not out else []
+    output.append({'game_id':gid,'player_id':player['player_id'],'team':team,'opponent':opp,'kickoff':kickoff(g),'kind':kind,'usage_field':USAGE[kind], 'usage':0 if out else round(role_usage,1) if role_usage is not None else round(float(predict_regression(model,[{'x':x}])[0]),1) if model else None,'usage_status':'reported_out' if out else 'role_aware_conditional' if role_usage is not None else 'conditional_model' if model else 'baseline_not_beaten','baseline_usage':x['recent_usage'],'thresholds':thresholds,**({'attempt_thresholds':attempt_thresholds} if kind=='passing' else {}),'role_adjustment':'Timestamped depth-rank model passed development gate' if role_usage is not None else 'Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained', 'role_rank':role_rank,'role_evidence':c['starter'] if role_current else None,'availability_evidence':c['availability'] if c else None})
  now=datetime.now(timezone.utc).isoformat()
  output=[p for p in output if stamp(p['kickoff'])>stamp(now)]
- report={'schema_version':1,'season':slate['season'],'week':slate['week'],'generated_at':now,'version':'player-extensions:'+hashlib.sha256(Path(__file__).read_bytes()+(ROOT/'src/features/pregame_roles.py').read_bytes()+(ROOT/'src/ml/projection_models.py').read_bytes()+json.dumps(validation,sort_keys=True).encode()).hexdigest()[:16],'policy':'Experimental conditional-on-appearing estimates. Base models fit through 2023, calibrate 2024, evaluate 2025. Timestamped role candidates fit 2025 through W12, calibrate W13–18, evaluate completed current-season appearances. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.','validation':validation,'players':output}
+ report={'schema_version':1,'season':slate['season'],'week':slate['week'],'generated_at':now,'version':'player-extensions:'+hashlib.sha256(Path(__file__).read_bytes()+(ROOT/'src/features/pregame_roles.py').read_bytes()+(ROOT/'src/ml/projection_models.py').read_bytes()+json.dumps(validation,sort_keys=True).encode()).hexdigest()[:16],'policy':'Experimental conditional-on-appearing estimates. Base models fit through 2023, calibrate 2024, evaluate 2025. Timestamped role candidates fit 2025 through W12, calibrate W13–18, evaluate completed current-season appearances. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Thresholds use the observed yardage or passing-attempt count >= target; unsupported targets unavailable.','validation':validation,'players':output}
  archive=ROOT/'data/tracking/player_extensions'/f"{hashlib.sha256(json.dumps(report,sort_keys=True).encode()).hexdigest()}.json"
  if not archive.exists():write_json(archive,report)
  write_json(ROOT/'frontend/public/player_extensions.json',report)

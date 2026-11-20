@@ -3,7 +3,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from src.ml.same_game import board, combinations, grade_saved, publish, stamp, write_json
+from src.ml.same_game import board, combinations, grade_saved, legs_for, publish, stamp, write_json
 
 
 class SameGameTests(unittest.TestCase):
@@ -32,6 +32,20 @@ class SameGameTests(unittest.TestCase):
         self.assertEqual(result['signal'], 'strong')
         self.assertEqual([leg['player_id'] for leg in result['options']['2'][0]['legs']], ['a', 'b'])
         self.assertEqual(board(game, report, extensions, stamp('2026-11-23T18:00:00+00:00'), True)['signal'], 'none')
+
+    def test_passing_attempts_are_candidate_legs_for_the_selected_qb(self):
+        start = '2026-11-20T01:15:00+00:00'
+        game = dict(game_id='g', home_team='HOU', away_team='IND',
+                    home_qb_selection={'player_id':'qb', 'status':'confirmed'})
+        report = dict(kickoff=start, players=[
+            dict(player_id='qb', name='QB', team='HOU', opponent='IND', position='QB', status='available'),
+        ])
+        extension = dict(kickoff=start, kind='passing', attempt_thresholds=[
+            dict(threshold=30, probability=.7, basis='conditional_baseline'),
+        ])
+        legs = legs_for(game, report, {('g','qb','HOU','IND'):extension}, {})
+        self.assertEqual([(leg['stat'], leg['threshold'], leg['label']) for leg in legs],
+                         [('attempts', 30, '30+ passing attempts')])
 
     def test_freeze_and_grade_without_treating_missing_stats_as_zero(self):
         with tempfile.TemporaryDirectory() as tmp:

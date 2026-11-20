@@ -1,0 +1,26 @@
+.parlay-legs {
+  display: grid;
+  gap: 6px;
+  padding: 0;
+  margin: 8px 0 0;
+  list-style: none;
+}
+.parlay-legs > li {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  padding: 7px 9px;
+  border-inline-start: 2px solid #4ccfe2;
+  background: #0c192a;
+  overflow-wrap: anywhere;
+  line-height: 1.25;
+}
+.parlay-legs > li strong {
+  color: var(--ud-text);
+  font: 600 .875rem/1.25 var(--font-ui);
+}
+.parlay-legs > li small {
+  color: var(--ud-muted);
+  font-size: .75rem;
+  font-variant-numeric: tabular-nums;
+}

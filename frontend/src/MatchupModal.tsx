@@ -15,7 +15,6 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import SameGamePicks from "./SameGamePicks";
 import MatchupProjections from "./MatchupProjections";
 import "./MatchupReport.css";
-import PlayersToWatch from "./PlayersToWatch";
 import draftkingsLogo from "./assets/draftkings.png";
 
 export type Matchup = PredictionFields & AvailabilityImpactFields & {
@@ -46,7 +45,7 @@ type OddsData = {
   games: Record<string, GameOdds>;
 };
 
-type Tab = "overview" | "odds" | "players" | "periods" | "same-game";
+type Tab = "overview" | "odds" | "periods" | "same-game";
 
 type Props = {
   game: Matchup;
@@ -285,20 +284,10 @@ export default function MatchupModal({
             Vegas Odds
           </button>
 
-          <button
-  type="button"
-  role="tab"
-  aria-selected={tab === "players"}
-  className={tab === "players" ? "ic-active" : ""}
-  disabled={archived}
-  onClick={() => setTab("players")}
->
-  Players to Watch
-</button>
         </Segmented>
 
         <div className="ic-content" role="tabpanel">
-          {archived && <p className="ic-footnote">Archived prediction. Research is shown only when a saved pregame snapshot exists for this week; current player cards and sportsbook lines are excluded.</p>}
+          {archived && <p className="ic-footnote">Archived prediction. Research is shown only when a saved pregame snapshot exists for this week; current sportsbook lines are excluded.</p>}
           {tab === "same-game" && <SameGamePicks key={game.game_id} gameId={game.game_id} season={game.season} week={game.week}/>}
           {tab === "overview" && <AvailabilityImpact game={game} model={model}/>}
           {(tab === "overview" || tab === "periods") && <MatchupProjections game={game} mode={tab === "periods" ? "periods" : "forecasts"}/>}
@@ -354,9 +343,6 @@ export default function MatchupModal({
             </>
           )}
 
-{tab === "players" && (
-  <PlayersToWatch gameId={game.game_id} />
-)}
         </div>
 
         <div className="ic-bottom">

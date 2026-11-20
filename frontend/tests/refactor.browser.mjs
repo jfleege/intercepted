@@ -63,8 +63,6 @@ try{
   await compare(pages,'modal-overview',width);
   await Promise.all(pages.map(p=>p.getByRole('tab',{name:'Vegas Odds'}).click()));
   await compare(pages,'modal-odds',width);
-  await Promise.all(pages.map(p=>p.getByRole('tab',{name:'Players to Watch'}).click()));
-  await compare(pages,'modal-players',width);
   await Promise.all(pages.map(p=>p.getByRole('button',{name:'Close matchup'}).click()));
   await Promise.all(pages.map(p=>p.getByLabel('Prediction week').selectOption('2026-6')));
   await Promise.all(pages.map(p=>p.getByRole('button',{name:'QB+ (original)',exact:true}).waitFor()));

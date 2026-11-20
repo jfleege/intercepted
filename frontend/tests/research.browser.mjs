@@ -51,7 +51,9 @@ try{
   assert.ok(await page.locator('.mr-method table').count()>=2);
   await page.getByRole('button',{name:'Close',exact:true}).click();
   await page.getByRole('tab',{name:'Vegas Odds',exact:true}).click();await page.locator('.ic-odds-grid').waitFor();
-  await page.getByRole('tab',{name:'Players to Watch',exact:true}).click();await page.locator('.pw-card').first().waitFor();
+  assert.equal(await page.getByRole('tab',{name:'Players to Watch',exact:true}).count(),0);
+  await page.getByRole('tab',{name:'Same-game picks',exact:true}).click();
+  await page.getByRole('region',{name:'Same-game picks',exact:true}).waitFor();
   assert.ok(await page.locator('.ic-dialog').evaluate(e=>e.scrollWidth<=e.clientWidth+1),'Dialog must not overflow horizontally');
   await page.getByRole('button',{name:'Close matchup',exact:true}).click();
   assert.equal(await page.evaluate(()=>document.body.style.overflow),'');

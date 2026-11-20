@@ -17,7 +17,7 @@ export default function InterfaceIcon({ name, size = 22 }: { name: IconName; siz
     {name === 'chevron-down' && <path d="m5 9 7 7 7-7"/>}
     {name === 'poker-chips' && <g stroke="none">
       <circle cx="12" cy="12" r="11" fill="currentColor"/>
-      <circle cx="12" cy="12" r="8.7" fill="none" stroke="#f4eee1" strokeWidth="3.2" strokeDasharray="4 5.11" transform="rotate(-13 12 12)"/>
+      <circle cx="12" cy="12" r="8.7" fill="none" stroke="#e8f1f5" strokeWidth="2.75" strokeDasharray="2.8 6.31" transform="rotate(-13 12 12)"/>
       <circle cx="12" cy="12" r="10.45" fill="none" stroke="#fff" strokeOpacity=".28" strokeWidth=".65"/>
       <circle cx="12" cy="12" r="7.15" fill="#0a1824"/>
       <circle cx="12" cy="12" r="6.25" fill="#142d40" stroke="#2a4b5c" strokeWidth=".65"/>

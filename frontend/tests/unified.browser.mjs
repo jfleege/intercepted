@@ -65,7 +65,9 @@ try {
   await page.getByRole('button',{name:'Full matchup analysis',exact:false}).click();
   await page.getByRole('button',{name:'Close matchup'}).waitFor();
   await page.getByRole('tab',{name:'Vegas Odds'}).click();
-  await page.getByRole('tab',{name:'Players to Watch'}).click();
+  assert.equal(await page.getByRole('tab',{name:'Players to Watch',exact:true}).count(),0);
+  await page.getByRole('tab',{name:'Same-game picks',exact:true}).click();
+  await page.getByRole('region',{name:'Same-game picks',exact:true}).waitFor();
   await page.getByRole('button',{name:'Close matchup'}).click();
   await page.getByRole('button',{name:'Gradient Boosted',exact:true}).click();
   await page.getByRole('button',{name:'Base',exact:true}).click();

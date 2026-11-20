@@ -31,13 +31,13 @@ export function ForecastChanges({season,week,gameId,playerId,maxVisible,dialog=f
  </details>;
 }
 
-function ExtendedUsage({player,slate}:{player:{player_id:string;game_id:string;team:string;opponent:string};slate:{season:number;week:number}}){
+export function ExtendedUsage({player,slate}:{player:{player_id:string;game_id:string;team:string;opponent:string};slate:{season:number;week:number}}){
  const {now}=useForecastInsights();
- const [report,setReport]=useState<{season:number;week:number;generated_at:string;players:{player_id:string;game_id:string;team:string;opponent:string;kickoff:string;usage:number|null;usage_field:string;usage_status:string;role_adjustment:string}[]}|null>(null);
+ const [report,setReport]=useState<{season:number;week:number;generated_at:string;players:{player_id:string;game_id:string;team:string;opponent:string;kickoff:string;usage:number|null;usage_field:string;usage_status:string;role_adjustment:string;attempt_thresholds?:{threshold:number;probability:number}[]}[]}|null>(null);
  useEffect(()=>{let active=true;fetchSnapshot(`${import.meta.env.BASE_URL}player_extensions.json`).then(r=>r.ok?r.json():null).then(r=>{if(active)setReport(r);}).catch(()=>{});return()=>{active=false;};},[]);
  const rows=report?.season===slate.season&&report.week===slate.week&&fresh(report.generated_at,now)?report.players.filter(p=>p.player_id===player.player_id&&p.game_id===player.game_id&&p.team===player.team&&p.opponent===player.opponent&&Date.parse(p.kickoff)>now&&Date.parse(report.generated_at)<Date.parse(p.kickoff)):[];
  const result=rows?.length===1?rows[0]:null;
- return result?<div className="fi-extension-usage"><h3>Expected usage model · experimental</h3><p className="fi-muted">{result.usage===null?'Estimate unavailable':`${result.usage.toFixed(1)} ${result.usage_field}`} · {result.usage_status.replaceAll('_',' ')} · forecast {date(report?.generated_at)}.</p><p className="fi-muted">{result.role_adjustment}. Conditional on appearing unless reported out; practice participation alone does not set a workload penalty. The prior-three baseline remains above for comparison.</p></div>:null;
+ return result?<div className="fi-extension-usage"><h3>{result.usage_field==='attempts'?'Passing attempts model':'Expected usage model'} · experimental</h3><p className="fi-muted">{result.usage===null?'Estimate unavailable':`${result.usage.toFixed(1)} ${result.usage_field==='attempts'?'passing attempts':result.usage_field}`} · {result.usage_status.replaceAll('_',' ')} · forecast {date(report?.generated_at)}.</p><p className="fi-muted">{result.role_adjustment}. Conditional on appearing unless reported out; practice participation alone does not set a workload penalty. Compare with the prior-three baseline.</p>{!!result.attempt_thresholds?.length && <dl className="fi-attempt-thresholds">{result.attempt_thresholds.map(t=><div key={t.threshold}><dt>{t.threshold}+ attempts</dt><dd>{(t.probability*100).toFixed(1)}%</dd></div>)}</dl>}</div>:null;
 }
 
 export function PlayerContextPanel({player,slate}:{player:{player_id:string;game_id:string;team:string;opponent:string};slate:{season:number;week:number}}){

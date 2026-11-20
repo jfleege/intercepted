@@ -15,10 +15,13 @@ export default function InterfaceIcon({ name, size = 22 }: { name: IconName; siz
     {name === 'chevron-left' && <path d="m15 5-7 7 7 7"/>}
     {name === 'chevron-right' && <path d="m9 5 7 7-7 7"/>}
     {name === 'chevron-down' && <path d="m5 9 7 7 7-7"/>}
-    {name === 'poker-chips' && <>
-      <ellipse cx="12" cy="6" rx="9" ry="3.5"/>
-      <path d="M3 6v12c0 2 4 3.5 9 3.5s9-1.5 9-3.5V6M3 10c0 2 4 3.5 9 3.5s9-1.5 9-3.5M3 14c0 2 4 3.5 9 3.5s9-1.5 9-3.5M8 9.2v3.9m8 .1v3.9m-8 .1v3.9"/>
-    </>}
+    {name === 'poker-chips' && <g stroke="none">
+      <circle cx="12" cy="12" r="11" fill="currentColor"/>
+      <circle cx="12" cy="12" r="8.7" fill="none" stroke="#f4eee1" strokeWidth="3.2" strokeDasharray="4 5.11" transform="rotate(-13 12 12)"/>
+      <circle cx="12" cy="12" r="10.45" fill="none" stroke="#fff" strokeOpacity=".28" strokeWidth=".65"/>
+      <circle cx="12" cy="12" r="7.15" fill="#0a1824"/>
+      <circle cx="12" cy="12" r="6.25" fill="#142d40" stroke="#2a4b5c" strokeWidth=".65"/>
+    </g>}
     {name === 'external' && <path d="m4 20 16-16M9 4h11v11"/>}
   </svg>;
 }

@@ -42,7 +42,7 @@ export function SameGameBadge({board}: {board?:Board}) {
     ? `${pct(option.lower)}–${pct(option.upper)} all-hit model bounds for the leading two-leg combo.` : board.reason;
   const description = `${label} · ${reason}`;
   return <span className={`sgp-badge sgp-${color}`} title={description}>
-    <InterfaceIcon name="poker-chips" size={22}/><span className="sgp-status-text">{description}</span>
+    <InterfaceIcon name="poker-chips" size={25}/><span className="sgp-status-text">{description}</span>
   </span>;
 }
 

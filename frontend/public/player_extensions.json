@@ -1,7 +1,34 @@
 {
-  "generated_at": "2026-11-19T23:38:47.590328+00:00",
+  "generated_at": "2026-11-20T00:09:13.398901+00:00",
   "players": [
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.902555,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.760842,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.621475,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.377536,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.165776,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -58,7 +85,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Concussion",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -142,7 +169,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -342,7 +369,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -632,7 +659,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Hamstring",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -838,7 +865,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Foot",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -925,6 +952,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.905804,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.805374,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.592048,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.329859,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.138964,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -1198,7 +1252,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Toe",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -1488,7 +1542,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Hamstring",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -1691,6 +1745,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.90149,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.684922,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.502155,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.265172,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.105917,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -1805,7 +1886,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -1863,7 +1944,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -2095,7 +2176,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -2263,7 +2344,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Thumb",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -2437,7 +2518,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -2701,7 +2782,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -2927,7 +3008,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -3043,7 +3124,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Quadricep",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -3324,10 +3405,37 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.92069,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.774492,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.64717,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.406584,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.19549,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -3380,7 +3488,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -3438,7 +3546,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -4012,7 +4120,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -4070,7 +4178,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -4186,7 +4294,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Wrist",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -4241,6 +4349,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.927068,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.790267,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.631044,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.364396,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.171276,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -4903,7 +5038,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -5016,6 +5151,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.899684,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.731579,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.608271,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.367743,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.158392,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -5072,7 +5234,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Toe",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -5304,7 +5466,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -5823,6 +5985,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.947727,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.853812,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.635663,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.405511,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.187761,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -6021,7 +6210,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6053,7 +6242,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6618,6 +6807,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.910827,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.758915,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.725662,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.478609,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.22445,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -7126,7 +7342,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7242,7 +7458,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7300,7 +7516,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Illness",
-        "observed_at": "2026-11-19T23:38:26.955395+00:00",
+        "observed_at": "2026-11-20T00:08:46.085370+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-19T21:39Z",
@@ -7413,6 +7629,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.869654,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.736921,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.526234,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.29007,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.118825,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -7501,7 +7744,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7753,7 +7996,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7869,7 +8112,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.955395+00:00",
+        "observed_at": "2026-11-20T00:08:46.085370+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-18T17:29Z",
@@ -8159,7 +8402,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -8272,6 +8515,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.918349,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.723605,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.653482,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.393324,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.17824,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -8386,7 +8656,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -9021,10 +9291,37 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.846074,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.566275,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.487627,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.249465,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.10269,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -9625,7 +9922,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Thumb",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -9854,10 +10151,37 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.898104,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.74836,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.633492,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.338632,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.127654,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": "Elbow",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -9910,7 +10234,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -10194,7 +10518,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -10594,7 +10918,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -11597,6 +11921,33 @@
       "usage_status": "conditional_model"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.833558,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.63026,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.434675,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.24175,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.09626,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -11653,7 +12004,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -11821,7 +12172,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Hamstring",
-        "observed_at": "2026-11-19T23:38:26.955395+00:00",
+        "observed_at": "2026-11-20T00:08:46.085370+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-18T20:16Z",
@@ -12516,6 +12867,33 @@
       "usage_status": "conditional_model"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.900167,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.72128,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.589401,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.309488,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.123801,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -12572,7 +12950,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -12630,7 +13008,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -12746,7 +13124,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -12862,7 +13240,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -13207,6 +13585,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.820284,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.552568,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.471518,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.229068,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.092572,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -13495,7 +13900,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Back",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -13953,7 +14358,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -14060,10 +14465,37 @@
       "usage_status": "conditional_model"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.896852,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.719091,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.572084,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.293538,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.122759,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -14296,7 +14728,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -14528,7 +14960,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ribs",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -14983,6 +15415,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.863956,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.673939,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.532369,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.302735,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.125844,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -15303,7 +15762,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -15361,7 +15820,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16341,7 +16800,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16457,7 +16916,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16512,6 +16971,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.820411,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.572939,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.414513,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.238951,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.098768,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -16547,7 +17033,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16741,7 +17227,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16883,7 +17369,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -16999,7 +17485,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -17225,7 +17711,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -17564,6 +18050,33 @@
       "usage_status": "conditional_model"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.903856,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.759584,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.609601,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.331746,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.146408,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -17826,7 +18339,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -17942,7 +18455,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -18226,7 +18739,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -18397,6 +18910,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.916348,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.74955,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.569605,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.333506,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.142777,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -18511,7 +19051,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -18568,13 +19108,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Calf",
+        "observed_at": "2026-11-20T00:08:46.085370+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-19T23:35Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 1.3333333333333333,
       "game_id": "2026_11_MIN_SF",
@@ -18627,7 +19167,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Achilles",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19256,6 +19796,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.943691,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.839145,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.676523,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.389554,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.168278,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -19576,7 +20143,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Thumb",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19750,7 +20317,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19808,7 +20375,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -19866,7 +20433,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Wrist",
-        "observed_at": "2026-11-19T23:38:26.076740+00:00",
+        "observed_at": "2026-11-20T00:08:45.064700+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -20095,6 +20662,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.879839,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.709476,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.519399,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.29376,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.113374,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -20151,7 +20745,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Groin",
-        "observed_at": "2026-11-19T23:38:26.955395+00:00",
+        "observed_at": "2026-11-20T00:08:46.085370+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-19T21:09Z",
@@ -21050,6 +21644,33 @@
       "usage_status": "role_aware_conditional"
     },
     {
+      "attempt_thresholds": [
+        {
+          "basis": "role_aware",
+          "probability": 0.949536,
+          "threshold": 20
+        },
+        {
+          "basis": "role_aware",
+          "probability": 0.844726,
+          "threshold": 25
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.748591,
+          "threshold": 30
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.48517,
+          "threshold": 35
+        },
+        {
+          "basis": "conditional_baseline",
+          "probability": 0.218059,
+          "threshold": 40
+        }
+      ],
       "availability_evidence": {
         "blocked": false,
         "injury": null,
@@ -21512,7 +22133,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Thumb",
-        "observed_at": "2026-11-19T23:38:26.955395+00:00",
+        "observed_at": "2026-11-20T00:08:46.085370+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-19T21:37Z",
@@ -21851,7 +22472,7 @@
       "usage_status": "role_aware_conditional"
     }
   ],
-  "policy": "Experimental conditional-on-appearing estimates. Base models fit through 2023, calibrate 2024, evaluate 2025. Timestamped role candidates fit 2025 through W12, calibrate W13\u201318, evaluate completed current-season appearances. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Threshold means yards >= target; unsupported targets unavailable.",
+  "policy": "Experimental conditional-on-appearing estimates. Base models fit through 2023, calibrate 2024, evaluate 2025. Timestamped role candidates fit 2025 through W12, calibrate W13\u201318, evaluate completed current-season appearances. Development gates, not independent prospective validation. No heuristic injury penalties or inferred participation probabilities. Original forecasts unchanged. Thresholds use the observed yardage or passing-attempt count >= target; unsupported targets unavailable.",
   "schema_version": 1,
   "season": 2026,
   "validation": [
@@ -21878,7 +22499,7 @@
     },
     {
       "baseline_brier": 0.20500222991962624,
-      "brier": 0.15186247807588396,
+      "brier": 0.15186247807588457,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
@@ -21889,14 +22510,14 @@
       "brier": 0.14654872218066448,
       "kind": "passing",
       "promoted": true,
-      "regular_brier": 0.15211533692650941,
-      "role_blind_brier": 0.17074748428621545,
+      "regular_brier": 0.15211533692651008,
+      "role_blind_brier": 0.1707474842862154,
       "samples": 337,
       "target": "role_threshold_150"
     },
     {
       "baseline_brier": 0.2497961418479442,
-      "brier": 0.21556142038524956,
+      "brier": 0.21556142038524997,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
@@ -21907,7 +22528,7 @@
       "brier": 0.20971769997900627,
       "kind": "passing",
       "promoted": true,
-      "regular_brier": 0.21715303506440614,
+      "regular_brier": 0.21715303506440625,
       "role_blind_brier": 0.2220627960032254,
       "samples": 337,
       "target": "role_threshold_200"
@@ -21922,10 +22543,10 @@
     },
     {
       "baseline_brier": 0.2263453605181089,
-      "brier": 0.21671737460147872,
+      "brier": 0.2167173746014788,
       "kind": "passing",
       "promoted": false,
-      "regular_brier": 0.20062905451680893,
+      "regular_brier": 0.2006290545168089,
       "role_blind_brier": 0.2181321085948199,
       "samples": 337,
       "target": "role_threshold_250"
@@ -21947,6 +22568,96 @@
       "role_blind_brier": 0.12243560194584968,
       "samples": 337,
       "target": "role_threshold_300"
+    },
+    {
+      "baseline_brier": 0.16474435066889961,
+      "brier": 0.11534260545822306,
+      "kind": "passing_attempts",
+      "promoted": true,
+      "samples": 622,
+      "target": 20
+    },
+    {
+      "baseline_brier": 0.14618403791553203,
+      "brier": 0.08687929649114055,
+      "kind": "passing_attempts",
+      "promoted": true,
+      "regular_brier": 0.10149983478135242,
+      "role_blind_brier": 0.10549210765959963,
+      "samples": 337,
+      "target": "role_threshold_20"
+    },
+    {
+      "baseline_brier": 0.22426507248240388,
+      "brier": 0.17802634385136143,
+      "kind": "passing_attempts",
+      "promoted": true,
+      "samples": 622,
+      "target": 25
+    },
+    {
+      "baseline_brier": 0.2137560609771693,
+      "brier": 0.1448535194653772,
+      "kind": "passing_attempts",
+      "promoted": true,
+      "regular_brier": 0.14958690078643214,
+      "role_blind_brier": 0.16425801589954175,
+      "samples": 337,
+      "target": "role_threshold_25"
+    },
+    {
+      "baseline_brier": 0.24993674793075027,
+      "brier": 0.22570569308646088,
+      "kind": "passing_attempts",
+      "promoted": true,
+      "samples": 622,
+      "target": 30
+    },
+    {
+      "baseline_brier": 0.25812074003588964,
+      "brier": 0.23826259902603877,
+      "kind": "passing_attempts",
+      "promoted": false,
+      "regular_brier": 0.2263237896131127,
+      "role_blind_brier": 0.24375866386967762,
+      "samples": 337,
+      "target": "role_threshold_30"
+    },
+    {
+      "baseline_brier": 0.20219517192670783,
+      "brier": 0.18743864854856276,
+      "kind": "passing_attempts",
+      "promoted": true,
+      "samples": 622,
+      "target": 35
+    },
+    {
+      "baseline_brier": 0.20060422520523574,
+      "brier": 0.19069757881970711,
+      "kind": "passing_attempts",
+      "promoted": false,
+      "regular_brier": 0.18619769838425634,
+      "role_blind_brier": 0.19246626405947956,
+      "samples": 337,
+      "target": "role_threshold_35"
+    },
+    {
+      "baseline_brier": 0.12309775582262444,
+      "brier": 0.12022743992855738,
+      "kind": "passing_attempts",
+      "promoted": true,
+      "samples": 622,
+      "target": 40
+    },
+    {
+      "baseline_brier": 0.13414842382682624,
+      "brier": 0.13005954929628735,
+      "kind": "passing_attempts",
+      "promoted": false,
+      "regular_brier": 0.12655410848711898,
+      "role_blind_brier": 0.13071854974384184,
+      "samples": 337,
+      "target": "role_threshold_40"
     },
     {
       "baseline_mae": 3.439476061427281,
@@ -21979,7 +22690,7 @@
     },
     {
       "baseline_brier": 0.2500718711079031,
-      "brier": 0.15839596599431657,
+      "brier": 0.15839596599431655,
       "kind": "rushing",
       "promoted": true,
       "regular_brier": 0.16370667239239836,
@@ -21997,11 +22708,11 @@
     },
     {
       "baseline_brier": 0.2043756175889328,
-      "brier": 0.13903431499763091,
+      "brier": 0.1390343149976309,
       "kind": "rushing",
       "promoted": true,
       "regular_brier": 0.14288749271135684,
-      "role_blind_brier": 0.14260539186903934,
+      "role_blind_brier": 0.1426053918690393,
       "samples": 759,
       "target": "role_threshold_50"
     },
@@ -22019,13 +22730,13 @@
       "kind": "rushing",
       "promoted": true,
       "regular_brier": 0.12594407400768728,
-      "role_blind_brier": 0.12768022539921484,
+      "role_blind_brier": 0.1276802253992148,
       "samples": 759,
       "target": "role_threshold_60"
     },
     {
       "baseline_brier": 0.11788431373734377,
-      "brier": 0.10065128045441213,
+      "brier": 0.10065128045441084,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
@@ -22036,14 +22747,14 @@
       "brier": 0.10500305289904126,
       "kind": "rushing",
       "promoted": false,
-      "regular_brier": 0.10120154292655811,
-      "role_blind_brier": 0.10591473888520063,
+      "regular_brier": 0.1012015429265556,
+      "role_blind_brier": 0.10591473888520066,
       "samples": 759,
       "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.05982664566877521,
-      "brier": 0.057202874273952334,
+      "brier": 0.05720287427395235,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
@@ -22051,11 +22762,11 @@
     },
     {
       "baseline_brier": 0.06496438490072258,
-      "brier": 0.05967653843840963,
+      "brier": 0.05967653843840955,
       "kind": "rushing",
       "promoted": false,
       "regular_brier": 0.05775092118949997,
-      "role_blind_brier": 0.05959825356279283,
+      "role_blind_brier": 0.05959825356279282,
       "samples": 759,
       "target": "role_threshold_100"
     },
@@ -22108,17 +22819,17 @@
     },
     {
       "baseline_brier": 0.17614486656753275,
-      "brier": 0.13527136899545303,
+      "brier": 0.1352713689954531,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.1317957637961059,
+      "regular_brier": 0.13179576379610594,
       "role_blind_brier": 0.137353059697375,
       "samples": 1966,
       "target": "role_threshold_50"
     },
     {
       "baseline_brier": 0.1291842325385742,
-      "brier": 0.10449801426483987,
+      "brier": 0.10449801426483986,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
@@ -22126,11 +22837,11 @@
     },
     {
       "baseline_brier": 0.13940127752968134,
-      "brier": 0.11073244491512775,
+      "brier": 0.1107324449151277,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.10993013710916733,
-      "role_blind_brier": 0.11230053987053584,
+      "regular_brier": 0.10993013710916735,
+      "role_blind_brier": 0.11230053987053594,
       "samples": 1966,
       "target": "role_threshold_60"
     },
@@ -22147,14 +22858,14 @@
       "brier": 0.07902826457792085,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.07824624681580943,
+      "regular_brier": 0.07824624681580941,
       "role_blind_brier": 0.08007804514763343,
       "samples": 1966,
       "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.03884607426654325,
-      "brier": 0.03500280073976826,
+      "brier": 0.03500280073976827,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
@@ -22165,12 +22876,12 @@
       "brier": 0.036033263858776234,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.035846484926743104,
+      "regular_brier": 0.03584648492674312,
       "role_blind_brier": 0.0362634568080482,
       "samples": 1966,
       "target": "role_threshold_100"
     }
   ],
-  "version": "player-extensions:411e5fa48bc17993",
+  "version": "player-extensions:acbd2ba1da2ae69e",
   "week": 11
 }

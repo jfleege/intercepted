@@ -2,34 +2,34 @@
   "active_season": 2026,
   "active_week": 11,
   "attempt": {
-    "completed_at": "2026-11-22T21:42:29.477359+00:00",
-    "mode": "results",
-    "started_at": "2026-11-22T21:42:21.751031+00:00",
+    "completed_at": "2026-11-22T22:31:03.703086+00:00",
+    "mode": "full",
+    "started_at": "2026-11-22T22:30:30.745353+00:00",
     "state": "partial",
     "steps": {
-      "directory": "skipped",
-      "forecast": "skipped",
+      "directory": "success",
+      "forecast": "success",
       "history": "success",
       "insights": "success",
       "markets": "success",
       "odds": "skipped",
-      "players": "skipped",
-      "position_defense": "skipped",
+      "players": "success",
+      "position_defense": "success",
       "pre_rollover": "skipped",
       "props": "skipped",
-      "research": "skipped",
+      "research": "success",
       "research_results": "failure",
       "results": "success",
-      "teams": "skipped",
+      "teams": "success",
       "verify": "success"
     }
   },
   "forecast_check": {
     "active_season": 2026,
     "active_week": 11,
-    "checked_at": "2026-11-22T20:23:25.105639+00:00",
-    "message": "Published forecast slate is current.",
-    "state": "current",
+    "checked_at": "2026-11-22T22:30:33.855047+00:00",
+    "message": "5 game(s) still awaiting final results in Week 11.",
+    "state": "waiting_games",
     "target_season": 2026,
     "target_week": 11
   },
@@ -38,7 +38,7 @@
   "next_forecast_check_at": "2026-11-23T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-11-24T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-22T21:42:29.477359+00:00",
+  "snapshot_at": "2026-11-22T22:31:03.703086+00:00",
   "sources": [
     {
       "features_through_week": 10,
@@ -51,25 +51,25 @@
     {
       "id": "players",
       "label": "Player cards",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-22T20:23:28.372596+00:00",
+      "updated_at": "2026-11-22T22:30:37.083904+00:00",
       "week": 11
     },
     {
       "id": "directory",
       "label": "Player history",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
       "through_week": 10,
-      "updated_at": "2026-11-22T20:23:46.099099+00:00",
+      "updated_at": "2026-11-22T22:30:40.847909+00:00",
       "week": 11
     },
     {
       "features_through_week": 10,
       "id": "research",
       "label": "Matchup projections",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
       "updated_at": "2026-11-22T20:23:42.952879+00:00",
       "week": 11
@@ -78,7 +78,7 @@
       "id": "results",
       "label": "Game results",
       "refresh_outcome": "success",
-      "updated_at": "2026-11-22T21:42:25.994678+00:00"
+      "updated_at": "2026-11-22T22:30:35.669991+00:00"
     },
     {
       "id": "research_results",
@@ -91,15 +91,15 @@
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-22T21:42:28.952388+00:00",
+      "updated_at": "2026-11-22T22:30:44.834506+00:00",
       "week": 11
     },
     {
       "id": "position_defense",
       "label": "Defense vs positions",
-      "refresh_outcome": "skipped",
+      "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-22T20:23:47.023316+00:00",
+      "updated_at": "2026-11-22T22:30:41.710490+00:00",
       "week": 11
     },
     {
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-22T20:24:13.831974+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/45073517986"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/45078040641"
 }

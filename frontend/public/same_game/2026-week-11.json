@@ -3164,7 +3164,7 @@
     },
     "2026_11_CIN_WAS": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-21T15:39:01.624544+00:00",
+      "forecast_at": "2026-11-22T20:23:42.952879+00:00",
       "kickoff": "2026-11-24T01:15:00+00:00",
       "options": {
         "10": [
@@ -3231,16 +3231,6 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
                 "label": "25+ receiving yards",
                 "name": "Antonio Williams",
                 "player_id": "00-0041040",
@@ -3268,103 +3258,6 @@
                 "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "CIN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.492364
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.966529,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.949536,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CIN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.906462,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Jayden Daniels",
-                "player_id": "00-0039910",
-                "probability": 0.879839,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "WAS",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.847285,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Stefon Diggs",
-                "player_id": "00-0031588",
-                "probability": 0.777303,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Antonio Williams",
-                "player_id": "00-0041040",
-                "probability": 0.591821,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chig Okonkwo",
-                "player_id": "00-0037809",
-                "probability": 0.571699,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "WAS",
                 "threshold": 25
               },
               {
@@ -3445,21 +3338,21 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
                 "label": "25+ receiving yards",
                 "name": "Antonio Williams",
                 "player_id": "00-0041040",
                 "probability": 0.591821,
                 "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chig Okonkwo",
+                "player_id": "00-0037809",
+                "probability": 0.571699,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
@@ -3476,6 +3369,103 @@
               },
               {
                 "label": "25+ receiving yards",
+                "name": "Treylon Burks",
+                "player_id": "00-0037742",
+                "probability": 0.457391,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.457391
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.966529,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.949536,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CIN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tee Higgins",
+                "player_id": "00-0036410",
+                "probability": 0.906462,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Jayden Daniels",
+                "player_id": "00-0039910",
+                "probability": 0.879839,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "WAS",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.847285,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Stefon Diggs",
+                "player_id": "00-0031588",
+                "probability": 0.777303,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Antonio Williams",
+                "player_id": "00-0041040",
+                "probability": 0.591821,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chig Okonkwo",
+                "player_id": "00-0037809",
+                "probability": 0.571699,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
                 "name": "Dohnte Meyers",
                 "player_id": "00-0040785",
                 "probability": 0.478897,
@@ -3483,11 +3473,21 @@
                 "stat": "receiving_yards",
                 "team": "CIN",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Treylon Burks",
+                "player_id": "00-0037742",
+                "probability": 0.457391,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.478897
+            "upper": 0.457391
           }
         ],
         "2": [
@@ -3867,19 +3867,19 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
+                "label": "25+ receiving yards",
+                "name": "Antonio Williams",
+                "player_id": "00-0041040",
+                "probability": 0.591821,
+                "role_verified": false,
+                "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
               }
             ],
-            "lower": 0.244156,
+            "lower": 0.141472,
             "result": "pending",
-            "upper": 0.694505
+            "upper": 0.591821
           },
           {
             "legs": [
@@ -3934,19 +3934,19 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
+                "label": "25+ receiving yards",
+                "name": "Antonio Williams",
+                "player_id": "00-0041040",
+                "probability": 0.591821,
+                "role_verified": false,
+                "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
               }
             ],
-            "lower": 0.174174,
+            "lower": 0.07149,
             "result": "pending",
-            "upper": 0.694505
+            "upper": 0.591821
           }
         ],
         "7": [
@@ -4013,19 +4013,19 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
+                "label": "25+ receiving yards",
+                "name": "Antonio Williams",
+                "player_id": "00-0041040",
+                "probability": 0.591821,
+                "role_verified": false,
+                "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
               }
             ],
-            "lower": 0.021459,
+            "lower": 0,
             "result": "pending",
-            "upper": 0.694505
+            "upper": 0.591821
           },
           {
             "legs": [
@@ -4091,10 +4091,10 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Antonio Williams",
-                "player_id": "00-0041040",
-                "probability": 0.591821,
-                "role_verified": false,
+                "name": "Chig Okonkwo",
+                "player_id": "00-0037809",
+                "probability": 0.571699,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
@@ -4102,7 +4102,7 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.591821
+            "upper": 0.571699
           },
           {
             "legs": [
@@ -4157,16 +4157,6 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
                 "label": "25+ receiving yards",
                 "name": "Antonio Williams",
                 "player_id": "00-0041040",
@@ -4175,11 +4165,21 @@
                 "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chig Okonkwo",
+                "player_id": "00-0037809",
+                "probability": 0.571699,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.591821
+            "upper": 0.571699
           }
         ],
         "8": [
@@ -4246,99 +4246,12 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
                 "label": "25+ receiving yards",
                 "name": "Antonio Williams",
                 "player_id": "00-0041040",
                 "probability": 0.591821,
                 "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.591821
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.966529,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.949536,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CIN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.906462,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Jayden Daniels",
-                "player_id": "00-0039910",
-                "probability": 0.879839,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "WAS",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.847285,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Stefon Diggs",
-                "player_id": "00-0031588",
-                "probability": 0.777303,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
                 "team": "WAS",
                 "threshold": 25
               },
@@ -4431,6 +4344,83 @@
               },
               {
                 "label": "25+ receiving yards",
+                "name": "Mike Gesicki",
+                "player_id": "00-0034829",
+                "probability": 0.492364,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.492364
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.966529,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.949536,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CIN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tee Higgins",
+                "player_id": "00-0036410",
+                "probability": 0.906462,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Jayden Daniels",
+                "player_id": "00-0039910",
+                "probability": 0.879839,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "WAS",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.847285,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Stefon Diggs",
+                "player_id": "00-0031588",
+                "probability": 0.777303,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
                 "name": "Chig Okonkwo",
                 "player_id": "00-0037809",
                 "probability": 0.571699,
@@ -4438,11 +4428,21 @@
                 "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mike Gesicki",
+                "player_id": "00-0034829",
+                "probability": 0.492364,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.571699
+            "upper": 0.492364
           }
         ],
         "9": [
@@ -4509,16 +4509,6 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
                 "label": "25+ receiving yards",
                 "name": "Antonio Williams",
                 "player_id": "00-0041040",
@@ -4534,93 +4524,6 @@
                 "player_id": "00-0037809",
                 "probability": 0.571699,
                 "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.571699
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.966529,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.949536,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CIN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.906462,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Jayden Daniels",
-                "player_id": "00-0039910",
-                "probability": 0.879839,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "WAS",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.847285,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Stefon Diggs",
-                "player_id": "00-0031588",
-                "probability": 0.777303,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Antonio Williams",
-                "player_id": "00-0041040",
-                "probability": 0.591821,
-                "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
@@ -4703,12 +4606,12 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Rachaad White",
-                "player_id": "00-0037256",
-                "probability": 0.694505,
-                "role_verified": true,
-                "stat": "rushing_yards",
+                "label": "25+ receiving yards",
+                "name": "Antonio Williams",
+                "player_id": "00-0041040",
+                "probability": 0.591821,
+                "role_verified": false,
+                "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
               },
@@ -4724,10 +4627,10 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Mike Gesicki",
-                "player_id": "00-0034829",
-                "probability": 0.492364,
-                "role_verified": true,
+                "name": "Dohnte Meyers",
+                "player_id": "00-0040785",
+                "probability": 0.478897,
+                "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "CIN",
                 "threshold": 25
@@ -4735,12 +4638,109 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.492364
+            "upper": 0.478897
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.966529,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.949536,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CIN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tee Higgins",
+                "player_id": "00-0036410",
+                "probability": 0.906462,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Jayden Daniels",
+                "player_id": "00-0039910",
+                "probability": 0.879839,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "WAS",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.847285,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Stefon Diggs",
+                "player_id": "00-0031588",
+                "probability": 0.777303,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Antonio Williams",
+                "player_id": "00-0041040",
+                "probability": 0.591821,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mike Gesicki",
+                "player_id": "00-0034829",
+                "probability": 0.492364,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dohnte Meyers",
+                "player_id": "00-0040785",
+                "probability": 0.478897,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.478897
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-22T15:42:41.148270+00:00",
+      "saved_at": "2026-11-22T20:24:13.587852+00:00",
       "signal": "limited"
     },
     "2026_11_IND_HOU": {
@@ -8048,7 +8048,7 @@
     },
     "2026_11_LV_DEN": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-21T15:39:01.624544+00:00",
+      "forecast_at": "2026-11-22T20:23:42.952879+00:00",
       "kickoff": "2026-11-22T21:25:00+00:00",
       "options": {
         "10": [
@@ -9624,7 +9624,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-22T15:42:41.148270+00:00",
+      "saved_at": "2026-11-22T20:24:13.587852+00:00",
       "signal": "limited"
     },
     "2026_11_MIA_BUF": {
@@ -11210,7 +11210,7 @@
     },
     "2026_11_MIN_SF": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-21T15:39:01.624544+00:00",
+      "forecast_at": "2026-11-22T20:23:42.952879+00:00",
       "kickoff": "2026-11-23T01:20:00+00:00",
       "options": {
         "10": [
@@ -12786,7 +12786,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-22T15:42:41.148270+00:00",
+      "saved_at": "2026-11-22T20:24:13.587852+00:00",
       "signal": "limited"
     },
     "2026_11_NO_CHI": {
@@ -14372,7 +14372,7 @@
     },
     "2026_11_NYJ_LAC": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-21T15:39:01.624544+00:00",
+      "forecast_at": "2026-11-22T20:23:42.952879+00:00",
       "kickoff": "2026-11-22T21:05:00+00:00",
       "options": {
         "10": [
@@ -15948,7 +15948,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-22T15:42:41.148270+00:00",
+      "saved_at": "2026-11-22T20:24:13.587852+00:00",
       "signal": "limited"
     },
     "2026_11_PIT_PHI": {
@@ -15960,1576 +15960,1576 @@
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Dallas Goedert",
-                "player_id": "00-0034351",
-                "probability": 0.585793,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Germie Bernard",
-                "player_id": "00-0041489",
-                "probability": 0.575965,
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Dameon Pierce",
                 "player_id": "00-0037258",
-                "probability": 0.538864,
+                "probability": 0.2378,
                 "role_verified": false,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dallas Goedert",
+                "player_id": "00-0034351",
+                "probability": 0.2263,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DK Metcalf",
+                "player_id": "00-0035640",
+                "probability": 0.2175,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Darnell Washington",
+                "player_id": "00-0038558",
+                "probability": 0.2159,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.538864
+            "upper": 0.2159
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.2378,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Dallas Goedert",
                 "player_id": "00-0034351",
-                "probability": 0.585793,
+                "probability": 0.2263,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Germie Bernard",
-                "player_id": "00-0041489",
-                "probability": 0.575965,
-                "role_verified": false,
-                "stat": "receiving_yards",
+                "label": "1+ rush/receiving TD",
+                "name": "DK Metcalf",
+                "player_id": "00-0035640",
+                "probability": 0.2175,
+                "role_verified": true,
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Rico Dowdle",
                 "player_id": "00-0036139",
-                "probability": 0.522935,
+                "probability": 0.2057,
                 "role_verified": false,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.522935
+            "upper": 0.2057
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Dallas Goedert",
-                "player_id": "00-0034351",
-                "probability": 0.585793,
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Dameon Pierce",
                 "player_id": "00-0037258",
-                "probability": 0.538864,
+                "probability": 0.2378,
                 "role_verified": false,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
+                "name": "Dallas Goedert",
+                "player_id": "00-0034351",
+                "probability": 0.2263,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Darnell Washington",
+                "player_id": "00-0038558",
+                "probability": 0.2159,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Rico Dowdle",
                 "player_id": "00-0036139",
-                "probability": 0.522935,
+                "probability": 0.2057,
                 "role_verified": false,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.522935
+            "upper": 0.2057
           }
         ],
         "2": [
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Saquon Barkley",
+                "player_id": "00-0034844",
+                "probability": 0.3566,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
               }
             ],
-            "lower": 0.818505,
+            "lower": 0.1781,
             "result": "pending",
-            "upper": 0.903856
+            "upper": 0.3566
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
+                "label": "1+ passing TD",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.8215,
+                "role_verified": false,
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
               }
             ],
-            "lower": 0.782122,
+            "lower": 0.1614,
             "result": "pending",
-            "upper": 0.867473
+            "upper": 0.3399
           },
           {
             "legs": [
               {
-                "label": "20+ passing attempts",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.903856,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PIT",
-                "threshold": 20
+                "label": "1+ rush/receiving TD",
+                "name": "Saquon Barkley",
+                "player_id": "00-0034844",
+                "probability": 0.3566,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
               }
             ],
-            "lower": 0.771329,
+            "lower": 0,
             "result": "pending",
-            "upper": 0.867473
+            "upper": 0.3399
           }
         ],
         "5": [
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
               }
             ],
-            "lower": 0.284977,
+            "lower": 0,
             "result": "pending",
-            "upper": 0.778588
+            "upper": 0.2976
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
+                "label": "1+ rush/receiving TD",
+                "name": "Saquon Barkley",
+                "player_id": "00-0034844",
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "20+ passing attempts",
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
                 "name": "Joe Milton III",
                 "player_id": "00-0039398",
-                "probability": 0.820411,
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
                 "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PIT",
-                "threshold": 25
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
               }
             ],
-            "lower": 0.274866,
+            "lower": 0,
             "result": "pending",
-            "upper": 0.768477
+            "upper": 0.2459
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
               }
             ],
-            "lower": 0.233043,
+            "lower": 0,
             "result": "pending",
-            "upper": 0.768477
+            "upper": 0.2459
           }
         ],
         "6": [
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PIT",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.053454,
-            "result": "pending",
-            "upper": 0.768477
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Jaylen Warren",
                 "player_id": "00-0037228",
-                "probability": 0.914649,
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "20+ passing attempts",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.903856,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PIT",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Joe Milton III",
                 "player_id": "00-0039398",
-                "probability": 0.820411,
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Saquon Barkley",
-                "player_id": "00-0034844",
-                "probability": 0.778588,
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.643951
+            "upper": 0.2459
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
+                "label": "1+ rush/receiving TD",
+                "name": "Saquon Barkley",
+                "player_id": "00-0034844",
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "20+ passing attempts",
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
                 "name": "Joe Milton III",
                 "player_id": "00-0039398",
-                "probability": 0.820411,
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
-                "role_verified": true,
-                "stat": "receiving_yards",
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ rush/receiving TD",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.2378,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.643951
+            "upper": 0.2378
+          },
+          {
+            "legs": [
+              {
+                "label": "1+ passing TD",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.8215,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Saquon Barkley",
+                "player_id": "00-0034844",
+                "probability": 0.3566,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.2378,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2378
           }
         ],
         "7": [
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.2378,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.643951
+            "upper": 0.2378
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Dallas Goedert",
                 "player_id": "00-0034351",
-                "probability": 0.585793,
+                "probability": 0.2263,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.585793
+            "upper": 0.2263
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.2378,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Dallas Goedert",
                 "player_id": "00-0034351",
-                "probability": 0.585793,
+                "probability": 0.2263,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.585793
+            "upper": 0.2263
           }
         ],
         "8": [
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.2378,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Dallas Goedert",
                 "player_id": "00-0034351",
-                "probability": 0.585793,
+                "probability": 0.2263,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.585793
+            "upper": 0.2263
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.2378,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "DK Metcalf",
                 "player_id": "00-0035640",
-                "probability": 0.768477,
+                "probability": 0.2175,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Germie Bernard",
-                "player_id": "00-0041489",
-                "probability": 0.575965,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.575965
+            "upper": 0.2175
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Dallas Goedert",
                 "player_id": "00-0034351",
-                "probability": 0.585793,
+                "probability": 0.2263,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Germie Bernard",
-                "player_id": "00-0041489",
-                "probability": 0.575965,
-                "role_verified": false,
-                "stat": "receiving_yards",
+                "label": "1+ rush/receiving TD",
+                "name": "DK Metcalf",
+                "player_id": "00-0035640",
+                "probability": 0.2175,
+                "role_verified": true,
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.575965
+            "upper": 0.2175
           }
         ],
         "9": [
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.2378,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Dallas Goedert",
                 "player_id": "00-0034351",
-                "probability": 0.585793,
+                "probability": 0.2263,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Germie Bernard",
-                "player_id": "00-0041489",
-                "probability": 0.575965,
-                "role_verified": false,
-                "stat": "receiving_yards",
+                "label": "1+ rush/receiving TD",
+                "name": "DK Metcalf",
+                "player_id": "00-0035640",
+                "probability": 0.2175,
+                "role_verified": true,
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.575965
+            "upper": 0.2175
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Dallas Goedert",
-                "player_id": "00-0034351",
-                "probability": 0.585793,
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Dameon Pierce",
                 "player_id": "00-0037258",
-                "probability": 0.538864,
+                "probability": 0.2378,
                 "role_verified": false,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Dallas Goedert",
+                "player_id": "00-0034351",
+                "probability": 0.2263,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Darnell Washington",
+                "player_id": "00-0038558",
+                "probability": 0.2159,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.538864
+            "upper": 0.2159
           },
           {
             "legs": [
               {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.914649,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
+                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.903856,
+                "probability": 0.8215,
                 "role_verified": false,
-                "stat": "attempts",
+                "stat": "passing_tds",
                 "team": "PIT",
-                "threshold": 20
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DeVonta Smith",
-                "player_id": "00-0036912",
-                "probability": 0.867473,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.820411,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "PHI",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
                 "name": "Saquon Barkley",
                 "player_id": "00-0034844",
-                "probability": 0.778588,
+                "probability": 0.3566,
                 "role_verified": true,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.768477,
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3399,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Makai Lemon",
-                "player_id": "00-0040867",
-                "probability": 0.643951,
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3372,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "passing_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Germie Bernard",
-                "player_id": "00-0041489",
-                "probability": 0.575965,
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.2976,
                 "role_verified": false,
-                "stat": "receiving_yards",
+                "stat": "scoring_tds",
                 "team": "PIT",
-                "threshold": 25
+                "threshold": 1
               },
               {
-                "label": "25+ rushing yards",
+                "label": "1+ rush/receiving TD",
+                "name": "DeVonta Smith",
+                "player_id": "00-0036912",
+                "probability": 0.2459,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "Dameon Pierce",
                 "player_id": "00-0037258",
-                "probability": 0.538864,
+                "probability": 0.2378,
                 "role_verified": false,
-                "stat": "rushing_yards",
+                "stat": "scoring_tds",
                 "team": "PHI",
-                "threshold": 25
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DK Metcalf",
+                "player_id": "00-0035640",
+                "probability": 0.2175,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Darnell Washington",
+                "player_id": "00-0038558",
+                "probability": 0.2159,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.538864
+            "upper": 0.2159
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-22T15:42:41.148270+00:00",
+      "saved_at": "2026-11-22T20:24:13.587852+00:00",
       "signal": "limited"
     },
     "2026_11_TB_DET": {

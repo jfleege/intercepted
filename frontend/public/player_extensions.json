@@ -1,1726 +1,6 @@
 {
-  "generated_at": "2026-11-22T22:31:02.855619+00:00",
+  "generated_at": "2026-11-23T19:31:02.924324+00:00",
   "players": [
-    {
-      "attempt_thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.916348,
-          "threshold": 20
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.74955,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.569605,
-          "threshold": 30
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.333506,
-          "threshold": 35
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.142777,
-          "threshold": 40
-        }
-      ],
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 31.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "passing",
-      "opponent": "MIN",
-      "player_id": "00-0037834",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 1,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.870578,
-          "threshold": 150
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.653752,
-          "threshold": 200
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.427682,
-          "threshold": 250
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.187842,
-          "threshold": 300
-        }
-      ],
-      "usage": 33.9,
-      "usage_field": "attempts",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 11.333333333333334,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "rushing",
-      "opponent": "MIN",
-      "player_id": "00-0041052",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 2,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.711127,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.373571,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.23535,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.164917,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.067584,
-          "threshold": 100
-        }
-      ],
-      "usage": 9.9,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-22T22:30:43.752482+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 12.666666666666666,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "rushing",
-      "opponent": "MIN",
-      "player_id": "00-0033280",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 1,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.873177,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.599717,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.478192,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.185792,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.083252,
-          "threshold": 100
-        }
-      ],
-      "usage": 12.3,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Calf",
-        "observed_at": "2026-11-22T22:30:43.752482+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Questionable"
-      },
-      "baseline_usage": 1.3333333333333333,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "rushing",
-      "opponent": "MIN",
-      "player_id": "00-0040177",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 3,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.135474,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.069308,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.048051,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.023214,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.009914,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.0,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Achilles",
-        "observed_at": "2026-11-22T22:30:43.752482+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Questionable"
-      },
-      "baseline_usage": 7.666666666666667,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0031408",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 1,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.778968,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.537371,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.405673,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.27222,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.112281,
-          "threshold": 100
-        }
-      ],
-      "usage": 6.3,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 4.333333333333333,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0040172",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 4,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 4,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.422729,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.203244,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.134694,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.081677,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.033551,
-          "threshold": 100
-        }
-      ],
-      "usage": 3.3,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 7.333333333333333,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0030279",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 3,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.644349,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.462224,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.344866,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.186694,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.071545,
-          "threshold": 100
-        }
-      ],
-      "usage": 3.6,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 3.3333333333333335,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0032775",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 5,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 5,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.202746,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.127434,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.078136,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.04599,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.017583,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.7,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 4.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0035719",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 2,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.454361,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.22568,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.14421,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.08717,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.039162,
-          "threshold": 100
-        }
-      ],
-      "usage": 4.2,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.3333333333333335,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0031236",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": null,
-      "role_rank": null,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.216904,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.095922,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.059502,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.034663,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.01388,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.2,
-      "usage_field": "targets",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0039365",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 6,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 6,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.124477,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.072841,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.048295,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.02822,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.012137,
-          "threshold": 100
-        }
-      ],
-      "usage": 0.9,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 0.6666666666666666,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0034854",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": null,
-      "role_rank": null,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.137842,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.062249,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.038665,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.021725,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.008316,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.2,
-      "usage_field": "targets",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 8.666666666666666,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0033288",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 1,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.744436,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.483053,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.333285,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.192039,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.072136,
-          "threshold": 100
-        }
-      ],
-      "usage": 6.3,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 0.6666666666666666,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0036887",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 2,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.154816,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.036432,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.021406,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.011533,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.004763,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.0,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 0.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "MIN",
-      "player_id": "00-0038643",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 3,
-      "team": "SF",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.079768,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.018955,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.011181,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.00698,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.003062,
-          "threshold": 100
-        }
-      ],
-      "usage": 0.5,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "attempt_thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.943691,
-          "threshold": 20
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.839145,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.676523,
-          "threshold": 30
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.389554,
-          "threshold": 35
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.168278,
-          "threshold": 40
-        }
-      ],
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 29.666666666666668,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "passing",
-      "opponent": "SF",
-      "player_id": "00-0029604",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 1,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.794945,
-          "threshold": 150
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.599149,
-          "threshold": 200
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.385525,
-          "threshold": 250
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.163029,
-          "threshold": 300
-        }
-      ],
-      "usage": 31.7,
-      "usage_field": "attempts",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 10.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "rushing",
-      "opponent": "SF",
-      "player_id": "00-0037525",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 1,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.723516,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.38023,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.23436,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.083758,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.031151,
-          "threshold": 100
-        }
-      ],
-      "usage": 9.9,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 7.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "rushing",
-      "opponent": "SF",
-      "player_id": "00-0033293",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 2,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.645866,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.243929,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.137797,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.09604,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.032288,
-          "threshold": 100
-        }
-      ],
-      "usage": 11.5,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "rushing",
-      "opponent": "SF",
-      "player_id": "00-0041104",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 4,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 4,
-      "team": "MIN",
-      "thresholds": [],
-      "usage": 2.6,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 0.3333333333333333,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "rushing",
-      "opponent": "SF",
-      "player_id": "00-0036425",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 3,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.10312,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.033286,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.017572,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.008553,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.002769,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.5,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 11.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0036322",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 1,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.865283,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.652637,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.508319,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.315838,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.124411,
-          "threshold": 100
-        }
-      ],
-      "usage": 7.7,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": true,
-        "injury": "Thumb",
-        "observed_at": "2026-11-22T22:30:43.752482+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
-      },
-      "baseline_usage": 4.666666666666667,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0038994",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 2,
-      "team": "MIN",
-      "thresholds": [],
-      "usage": 0,
-      "usage_field": "targets",
-      "usage_status": "reported_out"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 3.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0040154",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 5,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 5,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.177931,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.07205,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.046198,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.026966,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.009509,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.1,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.6666666666666665,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0040506",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 4,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 4,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.23559,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.079954,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.051599,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.02947,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.011719,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.9,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Calf",
-        "observed_at": "2026-11-22T22:30:43.752482+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0036259",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 3,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.275612,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.109576,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.068872,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.04283,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.016509,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.8,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Shoulder",
-        "observed_at": "2026-11-22T22:30:43.752482+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 0.3333333333333333,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0039710",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 6,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 6,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.198191,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.092761,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.056793,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.029299,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.011117,
-          "threshold": 100
-        }
-      ],
-      "usage": 0.7,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Wrist",
-        "observed_at": "2026-11-22T22:30:43.752482+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 5.666666666666667,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0035229",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 1,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.610605,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.244019,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.148681,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.070601,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.025025,
-          "threshold": 100
-        }
-      ],
-      "usage": 5.4,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 3.6666666666666665,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0040215",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 2,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.378597,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.086713,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.046926,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.025295,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.010327,
-          "threshold": 100
-        }
-      ],
-      "usage": 3.4,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 1.6666666666666667,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0035249",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 4,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 4,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.141156,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.047898,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.026931,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.014798,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.004968,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.7,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 1.0,
-      "game_id": "2026_11_MIN_SF",
-      "kickoff": "2026-11-23T01:20:00+00:00",
-      "kind": "receiving",
-      "opponent": "SF",
-      "player_id": "00-0040509",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-22T15:12:52Z"
-      },
-      "role_rank": 3,
-      "team": "MIN",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.145953,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.0333,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.019713,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.01089,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.003761,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.0,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
     {
       "attempt_thresholds": [
         {
@@ -3559,7 +1839,7 @@
     },
     {
       "baseline_brier": 0.20500222991962624,
-      "brier": 0.15186247807588396,
+      "brier": 0.15186247807588457,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
@@ -3570,14 +1850,14 @@
       "brier": 0.14654872218066448,
       "kind": "passing",
       "promoted": true,
-      "regular_brier": 0.15211533692650941,
-      "role_blind_brier": 0.17074748428621545,
+      "regular_brier": 0.15211533692651008,
+      "role_blind_brier": 0.1707474842862154,
       "samples": 337,
       "target": "role_threshold_150"
     },
     {
       "baseline_brier": 0.2497961418479442,
-      "brier": 0.21556142038524956,
+      "brier": 0.21556142038524997,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
@@ -3588,7 +1868,7 @@
       "brier": 0.20971769997900627,
       "kind": "passing",
       "promoted": true,
-      "regular_brier": 0.21715303506440614,
+      "regular_brier": 0.21715303506440625,
       "role_blind_brier": 0.2220627960032254,
       "samples": 337,
       "target": "role_threshold_200"
@@ -3603,10 +1883,10 @@
     },
     {
       "baseline_brier": 0.2263453605181089,
-      "brier": 0.21671737460147872,
+      "brier": 0.2167173746014788,
       "kind": "passing",
       "promoted": false,
-      "regular_brier": 0.20062905451680893,
+      "regular_brier": 0.2006290545168089,
       "role_blind_brier": 0.2181321085948199,
       "samples": 337,
       "target": "role_threshold_250"
@@ -3631,7 +1911,7 @@
     },
     {
       "baseline_brier": 0.16474435066889961,
-      "brier": 0.11534260545822303,
+      "brier": 0.11534260545822306,
       "kind": "passing_attempts",
       "promoted": true,
       "samples": 622,
@@ -3649,7 +1929,7 @@
     },
     {
       "baseline_brier": 0.22426507248240388,
-      "brier": 0.17802634385136162,
+      "brier": 0.17802634385136143,
       "kind": "passing_attempts",
       "promoted": true,
       "samples": 622,
@@ -3660,14 +1940,14 @@
       "brier": 0.1448535194653772,
       "kind": "passing_attempts",
       "promoted": true,
-      "regular_brier": 0.14958690078643228,
-      "role_blind_brier": 0.1642580158995417,
+      "regular_brier": 0.14958690078643214,
+      "role_blind_brier": 0.16425801589954175,
       "samples": 337,
       "target": "role_threshold_25"
     },
     {
       "baseline_brier": 0.24993674793075027,
-      "brier": 0.2257056930864609,
+      "brier": 0.22570569308646088,
       "kind": "passing_attempts",
       "promoted": true,
       "samples": 622,
@@ -3678,7 +1958,7 @@
       "brier": 0.23826259902603877,
       "kind": "passing_attempts",
       "promoted": false,
-      "regular_brier": 0.2263237896131126,
+      "regular_brier": 0.2263237896131127,
       "role_blind_brier": 0.24375866386967762,
       "samples": 337,
       "target": "role_threshold_30"
@@ -3693,7 +1973,7 @@
     },
     {
       "baseline_brier": 0.20060422520523574,
-      "brier": 0.19069757881970628,
+      "brier": 0.19069757881970711,
       "kind": "passing_attempts",
       "promoted": false,
       "regular_brier": 0.18619769838425634,
@@ -3703,7 +1983,7 @@
     },
     {
       "baseline_brier": 0.12309775582262444,
-      "brier": 0.1202274399285574,
+      "brier": 0.12022743992855738,
       "kind": "passing_attempts",
       "promoted": true,
       "samples": 622,
@@ -3750,7 +2030,7 @@
     },
     {
       "baseline_brier": 0.2500718711079031,
-      "brier": 0.15839596599431657,
+      "brier": 0.15839596599431655,
       "kind": "rushing",
       "promoted": true,
       "regular_brier": 0.16370667239239836,
@@ -3768,11 +2048,11 @@
     },
     {
       "baseline_brier": 0.2043756175889328,
-      "brier": 0.13903431499763091,
+      "brier": 0.1390343149976309,
       "kind": "rushing",
       "promoted": true,
       "regular_brier": 0.14288749271135684,
-      "role_blind_brier": 0.14260539186903934,
+      "role_blind_brier": 0.1426053918690393,
       "samples": 759,
       "target": "role_threshold_50"
     },
@@ -3790,13 +2070,13 @@
       "kind": "rushing",
       "promoted": true,
       "regular_brier": 0.12594407400768728,
-      "role_blind_brier": 0.12768022539921484,
+      "role_blind_brier": 0.1276802253992148,
       "samples": 759,
       "target": "role_threshold_60"
     },
     {
       "baseline_brier": 0.11788431373734377,
-      "brier": 0.10065128045441213,
+      "brier": 0.10065128045441084,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
@@ -3807,14 +2087,14 @@
       "brier": 0.10500305289904126,
       "kind": "rushing",
       "promoted": false,
-      "regular_brier": 0.10120154292655811,
-      "role_blind_brier": 0.10591473888520063,
+      "regular_brier": 0.1012015429265556,
+      "role_blind_brier": 0.10591473888520066,
       "samples": 759,
       "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.05982664566877521,
-      "brier": 0.057202874273952334,
+      "brier": 0.05720287427395235,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
@@ -3822,11 +2102,11 @@
     },
     {
       "baseline_brier": 0.06496438490072258,
-      "brier": 0.05967653843840963,
+      "brier": 0.05967653843840955,
       "kind": "rushing",
       "promoted": false,
       "regular_brier": 0.05775092118949997,
-      "role_blind_brier": 0.05959825356279283,
+      "role_blind_brier": 0.05959825356279282,
       "samples": 759,
       "target": "role_threshold_100"
     },
@@ -3879,17 +2159,17 @@
     },
     {
       "baseline_brier": 0.17614486656753275,
-      "brier": 0.13527136899545303,
+      "brier": 0.1352713689954531,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.1317957637961059,
+      "regular_brier": 0.13179576379610594,
       "role_blind_brier": 0.137353059697375,
       "samples": 1966,
       "target": "role_threshold_50"
     },
     {
       "baseline_brier": 0.1291842325385742,
-      "brier": 0.10449801426483987,
+      "brier": 0.10449801426483986,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
@@ -3897,11 +2177,11 @@
     },
     {
       "baseline_brier": 0.13940127752968134,
-      "brier": 0.11073244491512775,
+      "brier": 0.1107324449151277,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.10993013710916733,
-      "role_blind_brier": 0.11230053987053584,
+      "regular_brier": 0.10993013710916735,
+      "role_blind_brier": 0.11230053987053594,
       "samples": 1966,
       "target": "role_threshold_60"
     },
@@ -3918,14 +2198,14 @@
       "brier": 0.07902826457792085,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.07824624681580943,
+      "regular_brier": 0.07824624681580941,
       "role_blind_brier": 0.08007804514763343,
       "samples": 1966,
       "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.03884607426654325,
-      "brier": 0.03500280073976826,
+      "brier": 0.03500280073976827,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
@@ -3936,12 +2216,12 @@
       "brier": 0.036033263858776234,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.035846484926743104,
+      "regular_brier": 0.03584648492674312,
       "role_blind_brier": 0.0362634568080482,
       "samples": 1966,
       "target": "role_threshold_100"
     }
   ],
-  "version": "player-extensions:ad51ea55bac4b276",
+  "version": "player-extensions:acbd2ba1da2ae69e",
   "week": 11
 }

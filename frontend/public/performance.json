@@ -60229,11 +60229,11 @@
           },
           {
             "bin": "20\u201330%",
-            "games": 7,
-            "lower": 0.0822171657090155,
-            "observed": 0.2857142857142857,
-            "predicted": 0.2823631264990515,
-            "upper": 0.6410709098517873
+            "games": 8,
+            "lower": 0.13684175946152105,
+            "observed": 0.375,
+            "predicted": 0.2840965969274551,
+            "upper": 0.6942621454161981
           },
           {
             "bin": "30\u201340%",
@@ -60245,11 +60245,11 @@
           },
           {
             "bin": "40\u201350%",
-            "games": 7,
-            "lower": 0.02567895594897479,
-            "observed": 0.14285714285714285,
-            "predicted": 0.45199234945540245,
-            "upper": 0.51313450331903
+            "games": 8,
+            "lower": 0.02241690886329617,
+            "observed": 0.125,
+            "predicted": 0.44814476157191874,
+            "upper": 0.4708948057698615
           },
           {
             "bin": "50\u201360%",
@@ -60261,11 +60261,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 21,
-            "lower": 0.3654621629703244,
-            "observed": 0.5714285714285714,
-            "predicted": 0.6456662887852501,
-            "upper": 0.7553030051347894
+            "games": 22,
+            "lower": 0.38734477382893806,
+            "observed": 0.5909090909090909,
+            "predicted": 0.6467598378960889,
+            "upper": 0.7674444033117963
           },
           {
             "bin": "70\u201380%",
@@ -62446,21 +62446,21 @@
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 18,
             "away_team": "JAX",
-            "brier": null,
+            "brier": 0.49529096029395486,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_JAX_NYG",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 23,
             "home_team": "NYG",
             "kickoff": "2026-11-22T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.2166160951913907,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "JAX",
             "probability": 0.2962308899262806,
             "provenance": {
@@ -62470,26 +62470,26 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 24,
             "away_team": "LV",
-            "brier": null,
+            "brier": 0.10908199228468017,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_LV_DEN",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "DEN",
             "kickoff": "2026-11-22T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.4008890404592371,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DEN",
             "probability": 0.669724369223704,
             "provenance": {
@@ -62499,7 +62499,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 11
           },
@@ -62591,21 +62591,21 @@
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 27,
             "away_team": "NYJ",
-            "brier": null,
+            "brier": 0.1774192510524962,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_NYJ_LAC",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 24,
             "home_team": "LAC",
             "kickoff": "2026-11-22T21:05:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.5468184060366719,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "NYJ",
             "probability": 0.42121164638753306,
             "provenance": {
@@ -62615,7 +62615,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 11
           },
@@ -62737,14 +62737,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6708860759493671,
-          "brier": 0.21730942805348272,
+          "accuracy": 0.6707317073170732,
+          "brier": 0.21889313438849106,
           "cancelled": 0,
-          "correct": 53,
-          "games": 79,
-          "incorrect": 26,
-          "log_loss": 0.6226940189391328,
-          "pending": 5,
+          "correct": 55,
+          "games": 82,
+          "incorrect": 27,
+          "log_loss": 0.6263067199741316,
+          "pending": 2,
           "ties": 0
         },
         "trend": [
@@ -63616,6 +63616,39 @@
             "game_number": 79,
             "label": "TEN @ DAL",
             "log_loss": 0.6226940189391328
+          },
+          {
+            "accuracy": 0.675,
+            "brier": 0.21681080084097043,
+            "correct": true,
+            "date": "2026-11-22",
+            "game_brier": 0.1774192510524962,
+            "game_id": "2026_11_NYJ_LAC",
+            "game_number": 80,
+            "label": "NYJ @ LAC",
+            "log_loss": 0.621745573777852
+          },
+          {
+            "accuracy": 0.6666666666666666,
+            "brier": 0.2202488275008838,
+            "correct": false,
+            "date": "2026-11-22",
+            "game_brier": 0.49529096029395486,
+            "game_id": "2026_11_JAX_NYG",
+            "game_number": 81,
+            "label": "JAX @ NYG",
+            "log_loss": 0.6290896542891303
+          },
+          {
+            "accuracy": 0.6707317073170732,
+            "brier": 0.21889313438849106,
+            "correct": true,
+            "date": "2026-11-22",
+            "game_brier": 0.10908199228468017,
+            "game_id": "2026_11_LV_DEN",
+            "game_number": 82,
+            "label": "LV @ DEN",
+            "log_loss": 0.6263067199741316
           }
         ],
         "weekly": [
@@ -63685,14 +63718,14 @@
             "week": 10
           },
           {
-            "accuracy": 0.875,
-            "brier": 0.14131194868731525,
+            "accuracy": 0.8181818181818182,
+            "brier": 0.17384434482996847,
             "cancelled": 0,
-            "correct": 7,
-            "games": 8,
-            "incorrect": 1,
-            "log_loss": 0.45682041608425666,
-            "pending": 5,
+            "correct": 9,
+            "games": 11,
+            "incorrect": 2,
+            "log_loss": 0.5289897154873957,
+            "pending": 2,
             "season": 2026,
             "ties": 0,
             "week": 11
@@ -63711,11 +63744,11 @@
           },
           {
             "bin": "20\u201330%",
-            "games": 10,
-            "lower": 0.10778928748621183,
-            "observed": 0.3,
-            "predicted": 0.2642889636326868,
-            "upper": 0.6032267800204347
+            "games": 11,
+            "lower": 0.15166223614131383,
+            "observed": 0.36363636363636365,
+            "predicted": 0.2662984615715174,
+            "upper": 0.6462032231083628
           },
           {
             "bin": "30\u201340%",
@@ -63727,11 +63760,11 @@
           },
           {
             "bin": "40\u201350%",
-            "games": 9,
-            "lower": 0.06322376231222723,
-            "observed": 0.2222222222222222,
-            "predicted": 0.4706497141176327,
-            "upper": 0.5474166563271946
+            "games": 10,
+            "lower": 0.056680947980693314,
+            "observed": 0.2,
+            "predicted": 0.47202583964025224,
+            "upper": 0.5098431532792765
           },
           {
             "bin": "50\u201360%",
@@ -63751,11 +63784,11 @@
           },
           {
             "bin": "70\u201380%",
-            "games": 10,
-            "lower": 0.39677321997956516,
-            "observed": 0.7,
-            "predicted": 0.7388199142257013,
-            "upper": 0.892210712513788
+            "games": 11,
+            "lower": 0.4343497069897537,
+            "observed": 0.7272727272727273,
+            "predicted": 0.7398244356542025,
+            "upper": 0.9025411942607853
           },
           {
             "bin": "80\u201390%",
@@ -65928,21 +65961,21 @@
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 18,
             "away_team": "JAX",
-            "brier": null,
+            "brier": 0.5092343211051612,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_JAX_NYG",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 23,
             "home_team": "NYG",
             "kickoff": "2026-11-22T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.2503887458344884,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "JAX",
             "probability": 0.28639344095982333,
             "provenance": {
@@ -65952,26 +65985,26 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 24,
             "away_team": "LV",
-            "brier": null,
+            "brier": 0.06256519202153073,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_LV_DEN",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "DEN",
             "kickoff": "2026-11-22T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.28785588763781156,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DEN",
             "probability": 0.7498696499392152,
             "provenance": {
@@ -65981,7 +66014,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 11
           },
@@ -66073,21 +66106,21 @@
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 27,
             "away_team": "NYJ",
-            "brier": null,
+            "brier": 0.23465398722062744,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_NYJ_LAC",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 24,
             "home_team": "LAC",
             "kickoff": "2026-11-22T21:05:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6624452830538694,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "NYJ",
             "probability": 0.4844109693438284,
             "provenance": {
@@ -66097,7 +66130,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 11
           },
@@ -66219,14 +66252,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6835443037974683,
-          "brier": 0.21381544592901883,
+          "accuracy": 0.6829268292682927,
+          "brier": 0.2158277283992659,
           "cancelled": 0,
-          "correct": 54,
-          "games": 79,
-          "incorrect": 25,
-          "log_loss": 0.6141629994837267,
-          "pending": 5,
+          "correct": 56,
+          "games": 82,
+          "incorrect": 26,
+          "log_loss": 0.6185313033626899,
+          "pending": 2,
           "ties": 0
         },
         "trend": [
@@ -67098,6 +67131,39 @@
             "game_number": 79,
             "label": "TEN @ DAL",
             "log_loss": 0.6141629994837267
+          },
+          {
+            "accuracy": 0.6875,
+            "brier": 0.2140759276951639,
+            "correct": true,
+            "date": "2026-11-22",
+            "game_brier": 0.23465398722062744,
+            "game_id": "2026_11_NYJ_LAC",
+            "game_number": 80,
+            "label": "NYJ @ LAC",
+            "log_loss": 0.6147665280283535
+          },
+          {
+            "accuracy": 0.6790123456790124,
+            "brier": 0.21771985847800338,
+            "correct": false,
+            "date": "2026-11-22",
+            "game_brier": 0.5092343211051612,
+            "game_id": "2026_11_JAX_NYG",
+            "game_number": 81,
+            "label": "JAX @ NYG",
+            "log_loss": 0.6226137159025033
+          },
+          {
+            "accuracy": 0.6829268292682927,
+            "brier": 0.2158277283992659,
+            "correct": true,
+            "date": "2026-11-22",
+            "game_brier": 0.06256519202153073,
+            "game_id": "2026_11_LV_DEN",
+            "game_number": 82,
+            "label": "LV @ DEN",
+            "log_loss": 0.6185313033626899
           }
         ],
         "weekly": [
@@ -67167,14 +67233,14 @@
             "week": 10
           },
           {
-            "accuracy": 0.875,
-            "brier": 0.14908880452666848,
+            "accuracy": 0.8181818181818182,
+            "brier": 0.18174217605096973,
             "cancelled": 0,
-            "correct": 7,
-            "games": 8,
-            "incorrect": 1,
-            "log_loss": 0.46561882011878547,
-            "pending": 5,
+            "correct": 9,
+            "games": 11,
+            "incorrect": 2,
+            "log_loss": 0.5386945888614958,
+            "pending": 2,
             "season": 2026,
             "ties": 0,
             "week": 11
@@ -67193,19 +67259,19 @@
           },
           {
             "bin": "30\u201340%",
-            "games": 12,
-            "lower": 0.13811783989736134,
-            "observed": 0.3333333333333333,
-            "predicted": 0.34719117457422827,
-            "upper": 0.609382412602386
+            "games": 13,
+            "lower": 0.17709446581236818,
+            "observed": 0.38461538461538464,
+            "predicted": 0.34554036544632954,
+            "upper": 0.6447751902773146
           },
           {
             "bin": "40\u201350%",
-            "games": 9,
-            "lower": 0.12058159868274293,
-            "observed": 0.3333333333333333,
-            "predicted": 0.45974300011479613,
-            "upper": 0.6458026525009102
+            "games": 10,
+            "lower": 0.10778928748621183,
+            "observed": 0.3,
+            "predicted": 0.4631161208189879,
+            "upper": 0.6032267800204347
           },
           {
             "bin": "50\u201360%",
@@ -67225,11 +67291,11 @@
           },
           {
             "bin": "70\u201380%",
-            "games": 9,
-            "lower": 0.5649937852319399,
-            "observed": 0.8888888888888888,
-            "predicted": 0.7433437749293847,
-            "upper": 0.9801096286728695
+            "games": 10,
+            "lower": 0.5958436145024278,
+            "observed": 0.9,
+            "predicted": 0.7394900642800039,
+            "upper": 0.9821242504842788
           },
           {
             "bin": "80\u201390%",
@@ -68982,21 +69048,21 @@
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 18,
             "away_team": "JAX",
-            "brier": null,
+            "brier": 0.45463914837747604,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_JAX_NYG",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 23,
             "home_team": "NYG",
             "kickoff": "2026-11-22T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.121684447974375,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "JAX",
             "probability": 0.32573065591154454,
             "provenance": {
@@ -69006,26 +69072,26 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 24,
             "away_team": "LV",
-            "brier": null,
+            "brier": 0.08713910300010426,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_LV_DEN",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "DEN",
             "kickoff": "2026-11-22T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.3498317429469591,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DEN",
             "probability": 0.7048066684355755,
             "provenance": {
@@ -69035,7 +69101,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 11
           },
@@ -69127,21 +69193,21 @@
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 27,
             "away_team": "NYJ",
-            "brier": null,
+            "brier": 0.24351679312894756,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_NYJ_LAC",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 24,
             "home_team": "LAC",
             "kickoff": "2026-11-22T21:05:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6801800329112174,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "NYJ",
             "probability": 0.4934742071567141,
             "provenance": {
@@ -69151,7 +69217,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 11
           },
@@ -69273,14 +69339,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6923076923076923,
-          "brier": 0.20295876534456334,
+          "accuracy": 0.6911764705882353,
+          "brier": 0.205553158704458,
           "cancelled": 0,
-          "correct": 45,
-          "games": 65,
-          "incorrect": 20,
-          "log_loss": 0.5918010070643915,
-          "pending": 5,
+          "correct": 47,
+          "games": 68,
+          "incorrect": 21,
+          "log_loss": 0.5973347306326177,
+          "pending": 2,
           "ties": 0
         },
         "trend": [
@@ -69998,6 +70064,39 @@
             "game_number": 65,
             "label": "TEN @ DAL",
             "log_loss": 0.5918010070643915
+          },
+          {
+            "accuracy": 0.696969696969697,
+            "brier": 0.20357328091705404,
+            "correct": true,
+            "date": "2026-11-22",
+            "game_brier": 0.24351679312894756,
+            "game_id": "2026_11_NYJ_LAC",
+            "game_number": 66,
+            "label": "NYJ @ LAC",
+            "log_loss": 0.5931400832135858
+          },
+          {
+            "accuracy": 0.6865671641791045,
+            "brier": 0.20732053267019465,
+            "correct": false,
+            "date": "2026-11-22",
+            "game_brier": 0.45463914837747604,
+            "game_id": "2026_11_JAX_NYG",
+            "game_number": 67,
+            "label": "JAX @ NYG",
+            "log_loss": 0.6010288050756871
+          },
+          {
+            "accuracy": 0.6911764705882353,
+            "brier": 0.205553158704458,
+            "correct": true,
+            "date": "2026-11-22",
+            "game_brier": 0.08713910300010426,
+            "game_id": "2026_11_LV_DEN",
+            "game_number": 68,
+            "label": "LV @ DEN",
+            "log_loss": 0.5973347306326177
           }
         ],
         "weekly": [
@@ -70054,14 +70153,14 @@
             "week": 10
           },
           {
-            "accuracy": 0.875,
-            "brier": 0.13478203405888972,
+            "accuracy": 0.8181818181818182,
+            "brier": 0.16941375608887688,
             "cancelled": 0,
-            "correct": 7,
-            "games": 8,
-            "incorrect": 1,
-            "log_loss": 0.4395774172838637,
-            "pending": 5,
+            "correct": 9,
+            "games": 11,
+            "incorrect": 2,
+            "log_loss": 0.5153014147366783,
+            "pending": 2,
             "season": 2026,
             "ties": 0,
             "week": 11
@@ -70080,11 +70179,11 @@
           },
           {
             "bin": "20\u201330%",
-            "games": 7,
-            "lower": 0.02567895594897479,
-            "observed": 0.14285714285714285,
-            "predicted": 0.2622272219946417,
-            "upper": 0.51313450331903
+            "games": 8,
+            "lower": 0.07147768885802763,
+            "observed": 0.25,
+            "predicted": 0.26433979101533817,
+            "upper": 0.5907301208974108
           },
           {
             "bin": "30\u201340%",
@@ -70096,11 +70195,11 @@
           },
           {
             "bin": "40\u201350%",
-            "games": 8,
-            "lower": 0.02241690886329617,
-            "observed": 0.125,
-            "predicted": 0.46451087685956133,
-            "upper": 0.4708948057698615
+            "games": 9,
+            "lower": 0.019890371327130535,
+            "observed": 0.1111111111111111,
+            "predicted": 0.46587085311568466,
+            "upper": 0.4350062147680601
           },
           {
             "bin": "50\u201360%",
@@ -70120,11 +70219,11 @@
           },
           {
             "bin": "70\u201380%",
-            "games": 6,
-            "lower": 0.43649056343635395,
-            "observed": 0.8333333333333334,
-            "predicted": 0.7275671315320379,
-            "upper": 0.9699474141282697
+            "games": 7,
+            "lower": 0.48686549668097007,
+            "observed": 0.8571428571428571,
+            "predicted": 0.7305434490602801,
+            "upper": 0.9743210440510253
           },
           {
             "bin": "80\u201390%",
@@ -71877,21 +71976,21 @@
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 18,
             "away_team": "JAX",
-            "brier": null,
+            "brier": 0.5196567659872089,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_JAX_NYG",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 23,
             "home_team": "NYG",
             "kickoff": "2026-11-22T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.27608563009749,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "JAX",
             "probability": 0.279127774160213,
             "provenance": {
@@ -71901,26 +72000,26 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 24,
             "away_team": "LV",
-            "brier": null,
+            "brier": 0.06330187855343258,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_LV_DEN",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 38,
             "home_team": "DEN",
             "kickoff": "2026-11-22T21:25:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.2898158750839299,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "DEN",
             "probability": 0.7484013542297324,
             "provenance": {
@@ -71930,7 +72029,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 11
           },
@@ -72022,21 +72121,21 @@
             "week": 11
           },
           {
-            "away_score": null,
+            "away_score": 27,
             "away_team": "NYJ",
-            "brier": null,
+            "brier": 0.22729119482795393,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-22",
             "game_id": "2026_11_NYJ_LAC",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 24,
             "home_team": "LAC",
             "kickoff": "2026-11-22T21:05:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6476971850522852,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "NYJ",
             "probability": 0.47675066316467135,
             "provenance": {
@@ -72046,7 +72145,7 @@
             "saved_at": "2026-11-17T18:22:05.668690+00:00",
             "season": 2026,
             "snapshot_id": "613d914eb89152c4f77442c7fab2592485323b95025e7d3858dad55985d881ea",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 11
           },
@@ -72168,14 +72267,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.7538461538461538,
-          "brier": 0.19560649045596554,
+          "accuracy": 0.75,
+          "brier": 0.19889223116185817,
           "cancelled": 0,
-          "correct": 49,
-          "games": 65,
-          "incorrect": 16,
-          "log_loss": 0.5756404241172235,
-          "pending": 5,
+          "correct": 51,
+          "games": 68,
+          "incorrect": 17,
+          "log_loss": 0.58279744496843,
+          "pending": 2,
           "ties": 0
         },
         "trend": [
@@ -72893,6 +72992,39 @@
             "game_number": 65,
             "label": "TEN @ DAL",
             "log_loss": 0.5756404241172235
+          },
+          {
+            "accuracy": 0.7575757575757576,
+            "brier": 0.196086561734329,
+            "correct": true,
+            "date": "2026-11-22",
+            "game_brier": 0.22729119482795393,
+            "game_id": "2026_11_NYJ_LAC",
+            "game_number": 66,
+            "label": "NYJ @ LAC",
+            "log_loss": 0.5767321932223002
+          },
+          {
+            "accuracy": 0.746268656716418,
+            "brier": 0.20091596776795406,
+            "correct": false,
+            "date": "2026-11-22",
+            "game_brier": 0.5196567659872089,
+            "game_id": "2026_11_JAX_NYG",
+            "game_number": 67,
+            "label": "JAX @ NYG",
+            "log_loss": 0.5871703042204374
+          },
+          {
+            "accuracy": 0.75,
+            "brier": 0.19889223116185817,
+            "correct": true,
+            "date": "2026-11-22",
+            "game_brier": 0.06330187855343258,
+            "game_id": "2026_11_LV_DEN",
+            "game_number": 68,
+            "label": "LV @ DEN",
+            "log_loss": 0.58279744496843
           }
         ],
         "weekly": [
@@ -72949,14 +73081,14 @@
             "week": 10
           },
           {
-            "accuracy": 0.875,
-            "brier": 0.14245189875328165,
+            "accuracy": 0.8181818181818182,
+            "brier": 0.17726045721771352,
             "cancelled": 0,
-            "correct": 7,
-            "games": 8,
-            "incorrect": 1,
-            "log_loss": 0.4504351611861563,
-            "pending": 5,
+            "correct": 9,
+            "games": 11,
+            "incorrect": 2,
+            "log_loss": 0.5288254527020869,
+            "pending": 2,
             "season": 2026,
             "ties": 0,
             "week": 11
@@ -72969,5 +73101,5 @@
   "schema_version": 1,
   "snapshot_count": 74,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-22T22:30:35.669991+00:00"
+  "updated_at": "2026-11-23T02:34:09.518506+00:00"
 }

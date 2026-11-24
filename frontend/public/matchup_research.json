@@ -1743,7 +1743,7 @@
     },
     "2026_11_CIN_WAS": {
       "game_id": "2026_11_CIN_WAS",
-      "generated_at": "2026-11-22T20:23:42.952879+00:00",
+      "generated_at": "2026-11-24T00:57:01.483444+00:00",
       "kickoff": "2026-11-24T01:15:00+00:00",
       "model_version": "0a797b9e9e0cc191",
       "players": [
@@ -11056,11 +11056,11 @@
       }
     }
   },
-  "generated_at": "2026-11-22T20:23:42.952879+00:00",
-  "input_fingerprint": "223d6e1bd1f938366e2dc087f4a971f69419542b516e7b2effd51b0c49b1b29f",
+  "generated_at": "2026-11-24T00:57:01.483444+00:00",
+  "input_fingerprint": "ba453e4fde1cecca095505fc70f9c602209b64d4040f3ad3bc75b0e1411a72dd",
   "model_versions": {
     "0a797b9e9e0cc191": {
-      "created_at": "2026-11-22T20:23:30.762451+00:00",
+      "created_at": "2026-11-24T00:56:50.177940+00:00",
       "models": {
         "anytime_td": {
           "calibration_cutoff": [
@@ -11373,10 +11373,10 @@
       },
       "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
       "source_sha256": {
-        "pbp_current": "b85f6faba508a81d4a8b105fe45e184ebe17304d5bde03bd3841c390994c5ef6",
-        "players_current": "38bf22398c52619985b201297432af9a876eb898d86f37e465100e98b1895be0",
+        "pbp_current": "13700fa34dbd56189346697c0e8c4513200eda847f1edd3734b52e34866c087b",
+        "players_current": "f04cab5dbda30d3d9e61676acef55a4820b55d5c60c0f1e845b03d05f78c1bac",
         "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
-        "schedules_current": "0e7d098ee85939b2818038d3e85c6b2925889b26b5c93aa4ac33b6ce0ca1cb83",
+        "schedules_current": "d96ba4e5c2804cb6aa55a88b40a7611dcd518d3609ca7e20bfa9a1f613342612",
         "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
       },
       "status": "experimental"
@@ -12116,29 +12116,29 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": -0.027,
+            "off_epa_per_play": 0.002,
             "period": "Q1",
             "points_against": 4.3,
             "points_for": 4.0,
             "recent_games": 3,
             "recent_points_against": 3.33,
             "recent_points_for": 3.0,
-            "success_rate": 0.439
+            "success_rate": 0.446
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.175,
+            "off_epa_per_play": -0.188,
             "period": "Q2",
             "points_against": 9.8,
             "points_for": 3.7,
             "recent_games": 3,
             "recent_points_against": 11.67,
             "recent_points_for": 1.0,
-            "success_rate": 0.341
+            "success_rate": 0.335
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.023,
+            "off_epa_per_play": 0.038,
             "period": "Q3",
             "points_against": 7.9,
             "points_for": 4.1,
@@ -12149,18 +12149,18 @@
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.014,
+            "off_epa_per_play": -0.013,
             "period": "Q4",
             "points_against": 6.9,
             "points_for": 6.3,
             "recent_games": 3,
             "recent_points_against": 5.33,
             "recent_points_for": 6.67,
-            "success_rate": 0.472
+            "success_rate": 0.466
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.103,
+            "off_epa_per_play": -0.096,
             "period": "H1",
             "points_against": 14.1,
             "points_for": 7.7,
@@ -12171,14 +12171,14 @@
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.003,
+            "off_epa_per_play": 0.01,
             "period": "H2",
             "points_against": 14.8,
             "points_for": 10.4,
             "recent_games": 3,
             "recent_points_against": 12.0,
             "recent_points_for": 9.0,
-            "success_rate": 0.48
+            "success_rate": 0.477
           }
         ]
       },
@@ -12589,18 +12589,18 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": -0.256,
+            "off_epa_per_play": -0.217,
             "period": "Q1",
             "points_against": 6.4,
             "points_for": 4.8,
             "recent_games": 3,
             "recent_points_against": 6.67,
             "recent_points_for": 3.33,
-            "success_rate": 0.379
+            "success_rate": 0.371
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.029,
+            "off_epa_per_play": 0.016,
             "period": "Q2",
             "points_against": 7.4,
             "points_for": 4.9,
@@ -12611,14 +12611,14 @@
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.062,
+            "off_epa_per_play": -0.051,
             "period": "Q3",
             "points_against": 5.1,
             "points_for": 3.4,
             "recent_games": 3,
             "recent_points_against": 7.0,
             "recent_points_for": 2.33,
-            "success_rate": 0.434
+            "success_rate": 0.469
           },
           {
             "games": 10,
@@ -12629,29 +12629,29 @@
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 3.33,
-            "success_rate": 0.41
+            "success_rate": 0.417
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.094,
+            "off_epa_per_play": -0.084,
             "period": "H1",
             "points_against": 13.8,
             "points_for": 9.7,
             "recent_games": 3,
             "recent_points_against": 15.67,
             "recent_points_for": 4.33,
-            "success_rate": 0.42
+            "success_rate": 0.417
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.062,
+            "off_epa_per_play": -0.057,
             "period": "H2",
             "points_against": 11.3,
             "points_for": 10.4,
             "recent_games": 3,
             "recent_points_against": 12.67,
             "recent_points_for": 5.67,
-            "success_rate": 0.422
+            "success_rate": 0.442
           }
         ]
       },
@@ -13062,69 +13062,69 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": 0.113,
+            "off_epa_per_play": 0.118,
             "period": "Q1",
             "points_against": 6.0,
             "points_for": 6.5,
             "recent_games": 3,
             "recent_points_against": 10.0,
             "recent_points_for": 3.33,
-            "success_rate": 0.486
+            "success_rate": 0.5
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.053,
+            "off_epa_per_play": 0.04,
             "period": "Q2",
             "points_against": 4.3,
             "points_for": 7.3,
             "recent_games": 3,
             "recent_points_against": 6.67,
             "recent_points_for": 3.33,
-            "success_rate": 0.437
+            "success_rate": 0.464
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.176,
+            "off_epa_per_play": -0.148,
             "period": "Q3",
             "points_against": 5.0,
             "points_for": 2.2,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 2.0,
-            "success_rate": 0.319
+            "success_rate": 0.353
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.082,
+            "off_epa_per_play": -0.095,
             "period": "Q4",
             "points_against": 10.6,
             "points_for": 4.2,
             "recent_games": 3,
             "recent_points_against": 9.67,
             "recent_points_for": 4.67,
-            "success_rate": 0.481
+            "success_rate": 0.467
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.079,
+            "off_epa_per_play": 0.074,
             "period": "H1",
             "points_against": 10.3,
             "points_for": 13.8,
             "recent_games": 3,
             "recent_points_against": 16.67,
             "recent_points_for": 6.67,
-            "success_rate": 0.458
+            "success_rate": 0.48
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.126,
+            "off_epa_per_play": -0.12,
             "period": "H2",
             "points_against": 15.6,
             "points_for": 6.4,
             "recent_games": 3,
             "recent_points_against": 14.0,
             "recent_points_for": 6.67,
-            "success_rate": 0.406
+            "success_rate": 0.413
           }
         ]
       },
@@ -13495,40 +13495,40 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.084,
+            "off_epa_per_play": -0.061,
             "period": "Q1",
             "points_against": 4.22,
             "points_for": 5.11,
             "recent_games": 3,
             "recent_points_against": 2.33,
             "recent_points_for": 6.67,
-            "success_rate": 0.388
+            "success_rate": 0.421
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.238,
+            "off_epa_per_play": 0.212,
             "period": "Q2",
             "points_against": 6.22,
             "points_for": 10.44,
             "recent_games": 3,
             "recent_points_against": 4.0,
             "recent_points_for": 5.33,
-            "success_rate": 0.547
+            "success_rate": 0.533
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.135,
+            "off_epa_per_play": 0.164,
             "period": "Q3",
             "points_against": 3.67,
             "points_for": 5.56,
             "recent_games": 3,
             "recent_points_against": 3.0,
             "recent_points_for": 8.0,
-            "success_rate": 0.444
+            "success_rate": 0.463
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.28,
+            "off_epa_per_play": 0.283,
             "period": "Q4",
             "points_against": 8.0,
             "points_for": 10.44,
@@ -13546,18 +13546,18 @@
             "recent_games": 3,
             "recent_points_against": 6.33,
             "recent_points_for": 12.0,
-            "success_rate": 0.464
+            "success_rate": 0.474
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.219,
+            "off_epa_per_play": 0.233,
             "period": "H2",
             "points_against": 11.67,
             "points_for": 16.0,
             "recent_games": 3,
             "recent_points_against": 3.0,
             "recent_points_for": 18.0,
-            "success_rate": 0.492
+            "success_rate": 0.5
           }
         ]
       },
@@ -13928,62 +13928,62 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.057,
+            "off_epa_per_play": -0.034,
             "period": "Q1",
             "points_against": 4.44,
             "points_for": 3.33,
             "recent_games": 3,
             "recent_points_against": 5.33,
             "recent_points_for": 1.0,
-            "success_rate": 0.386
+            "success_rate": 0.412
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.077,
+            "off_epa_per_play": 0.065,
             "period": "Q2",
             "points_against": 10.33,
             "points_for": 8.11,
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 7.0,
-            "success_rate": 0.387
+            "success_rate": 0.413
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.006,
+            "off_epa_per_play": 0.006,
             "period": "Q3",
             "points_against": 3.78,
             "points_for": 6.22,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 4.33,
-            "success_rate": 0.453
+            "success_rate": 0.465
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.084,
+            "off_epa_per_play": 0.075,
             "period": "Q4",
             "points_against": 7.67,
             "points_for": 6.67,
             "recent_games": 3,
             "recent_points_against": 7.67,
             "recent_points_for": 7.67,
-            "success_rate": 0.425
+            "success_rate": 0.412
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.019,
+            "off_epa_per_play": 0.022,
             "period": "H1",
             "points_against": 14.78,
             "points_for": 11.44,
             "recent_games": 3,
             "recent_points_against": 11.0,
             "recent_points_for": 8.0,
-            "success_rate": 0.386
+            "success_rate": 0.413
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.036,
+            "off_epa_per_play": 0.038,
             "period": "H2",
             "points_against": 11.44,
             "points_for": 12.89,
@@ -14361,69 +14361,69 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": 0.222,
+            "off_epa_per_play": 0.229,
             "period": "Q1",
             "points_against": 1.89,
             "points_for": 8.44,
             "recent_games": 3,
             "recent_points_against": 0.0,
             "recent_points_for": 10.33,
-            "success_rate": 0.5
+            "success_rate": 0.507
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.035,
+            "off_epa_per_play": -0.051,
             "period": "Q2",
             "points_against": 8.11,
             "points_for": 6.56,
             "recent_games": 3,
             "recent_points_against": 9.67,
             "recent_points_for": 6.33,
-            "success_rate": 0.454
+            "success_rate": 0.42
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.029,
+            "off_epa_per_play": 0.041,
             "period": "Q3",
             "points_against": 3.67,
             "points_for": 6.56,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 7.0,
-            "success_rate": 0.533
+            "success_rate": 0.556
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.04,
+            "off_epa_per_play": -0.041,
             "period": "Q4",
             "points_against": 6.78,
             "points_for": 5.22,
             "recent_games": 3,
             "recent_points_against": 7.33,
             "recent_points_for": 6.67,
-            "success_rate": 0.407
+            "success_rate": 0.401
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.083,
+            "off_epa_per_play": 0.077,
             "period": "H1",
             "points_against": 10.0,
             "points_for": 15.0,
             "recent_games": 3,
             "recent_points_against": 9.67,
             "recent_points_for": 16.67,
-            "success_rate": 0.475
+            "success_rate": 0.46
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.009,
+            "off_epa_per_play": -0.004,
             "period": "H2",
             "points_against": 10.44,
             "points_for": 11.78,
             "recent_games": 3,
             "recent_points_against": 12.0,
             "recent_points_for": 13.67,
-            "success_rate": 0.464
+            "success_rate": 0.47
           }
         ]
       },
@@ -14794,69 +14794,69 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": 0.105,
+            "off_epa_per_play": 0.119,
             "period": "Q1",
             "points_against": 6.33,
             "points_for": 4.22,
             "recent_games": 3,
             "recent_points_against": 7.67,
             "recent_points_for": 3.33,
-            "success_rate": 0.492
+            "success_rate": 0.517
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.254,
+            "off_epa_per_play": 0.242,
             "period": "Q2",
             "points_against": 3.56,
             "points_for": 10.67,
             "recent_games": 3,
             "recent_points_against": 1.0,
             "recent_points_for": 17.33,
-            "success_rate": 0.524
+            "success_rate": 0.543
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.16,
+            "off_epa_per_play": 0.169,
             "period": "Q3",
             "points_against": 4.56,
             "points_for": 7.44,
             "recent_games": 3,
             "recent_points_against": 5.0,
             "recent_points_for": 7.67,
-            "success_rate": 0.5
+            "success_rate": 0.516
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.058,
+            "off_epa_per_play": 0.06,
             "period": "Q4",
             "points_against": 7.0,
             "points_for": 7.78,
             "recent_games": 3,
             "recent_points_against": 10.0,
             "recent_points_for": 7.67,
-            "success_rate": 0.485
+            "success_rate": 0.478
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.192,
+            "off_epa_per_play": 0.191,
             "period": "H1",
             "points_against": 9.89,
             "points_for": 14.89,
             "recent_games": 3,
             "recent_points_against": 8.67,
             "recent_points_for": 20.67,
-            "success_rate": 0.511
+            "success_rate": 0.532
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.107,
+            "off_epa_per_play": 0.112,
             "period": "H2",
             "points_against": 11.56,
             "points_for": 15.22,
             "recent_games": 3,
             "recent_points_against": 15.0,
             "recent_points_for": 15.33,
-            "success_rate": 0.492
+            "success_rate": 0.496
           }
         ]
       },
@@ -15267,29 +15267,29 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": -0.325,
+            "off_epa_per_play": -0.304,
             "period": "Q1",
             "points_against": 7.8,
             "points_for": 1.3,
             "recent_games": 3,
             "recent_points_against": 6.67,
             "recent_points_for": 0.0,
-            "success_rate": 0.283
+            "success_rate": 0.3
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.044,
+            "off_epa_per_play": 0.029,
             "period": "Q2",
             "points_against": 3.9,
             "points_for": 6.6,
             "recent_games": 3,
             "recent_points_against": 6.67,
             "recent_points_for": 6.33,
-            "success_rate": 0.453
+            "success_rate": 0.459
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.073,
+            "off_epa_per_play": -0.062,
             "period": "Q3",
             "points_against": 3.3,
             "points_for": 2.9,
@@ -15300,14 +15300,14 @@
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.027,
+            "off_epa_per_play": 0.017,
             "period": "Q4",
             "points_against": 6.3,
             "points_for": 7.4,
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 5.67,
-            "success_rate": 0.436
+            "success_rate": 0.441
           },
           {
             "games": 10,
@@ -15318,18 +15318,18 @@
             "recent_games": 3,
             "recent_points_against": 13.33,
             "recent_points_for": 6.33,
-            "success_rate": 0.38
+            "success_rate": 0.391
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.011,
+            "off_epa_per_play": -0.013,
             "period": "H2",
             "points_against": 9.6,
             "points_for": 10.3,
             "recent_games": 3,
             "recent_points_against": 9.0,
             "recent_points_for": 10.0,
-            "success_rate": 0.44
+            "success_rate": 0.443
           }
         ]
       },
@@ -15740,69 +15740,69 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": 0.051,
+            "off_epa_per_play": 0.058,
             "period": "Q1",
             "points_against": 5.2,
             "points_for": 6.0,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 6.67,
-            "success_rate": 0.453
+            "success_rate": 0.466
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.033,
+            "off_epa_per_play": 0.022,
             "period": "Q2",
             "points_against": 7.0,
             "points_for": 6.0,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 9.0,
-            "success_rate": 0.472
+            "success_rate": 0.479
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.092,
+            "off_epa_per_play": 0.107,
             "period": "Q3",
             "points_against": 8.2,
             "points_for": 6.3,
             "recent_games": 3,
             "recent_points_against": 10.33,
             "recent_points_for": 3.0,
-            "success_rate": 0.49
+            "success_rate": 0.497
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.204,
+            "off_epa_per_play": 0.197,
             "period": "Q4",
             "points_against": 7.5,
             "points_for": 10.3,
             "recent_games": 3,
             "recent_points_against": 13.67,
             "recent_points_for": 13.67,
-            "success_rate": 0.477
+            "success_rate": 0.487
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.042,
+            "off_epa_per_play": 0.039,
             "period": "H1",
             "points_against": 12.2,
             "points_for": 12.0,
             "recent_games": 3,
             "recent_points_against": 9.0,
             "recent_points_for": 15.67,
-            "success_rate": 0.463
+            "success_rate": 0.473
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.155,
+            "off_epa_per_play": 0.158,
             "period": "H2",
             "points_against": 15.7,
             "points_for": 16.6,
             "recent_games": 3,
             "recent_points_against": 24.0,
             "recent_points_for": 16.67,
-            "success_rate": 0.483
+            "success_rate": 0.491
           }
         ]
       },
@@ -16173,18 +16173,18 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.02,
+            "off_epa_per_play": -0.007,
             "period": "Q1",
             "points_against": 2.67,
             "points_for": 4.0,
             "recent_games": 3,
             "recent_points_against": 2.33,
             "recent_points_for": 6.33,
-            "success_rate": 0.385
+            "success_rate": 0.393
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.054,
+            "off_epa_per_play": -0.056,
             "period": "Q2",
             "points_against": 6.11,
             "points_for": 4.44,
@@ -16195,7 +16195,7 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.045,
+            "off_epa_per_play": -0.027,
             "period": "Q3",
             "points_against": 6.11,
             "points_for": 4.0,
@@ -16206,36 +16206,36 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.092,
+            "off_epa_per_play": 0.089,
             "period": "Q4",
             "points_against": 5.78,
             "points_for": 9.22,
             "recent_games": 3,
             "recent_points_against": 3.33,
             "recent_points_for": 10.33,
-            "success_rate": 0.438
+            "success_rate": 0.431
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.037,
+            "off_epa_per_play": -0.031,
             "period": "H1",
             "points_against": 8.78,
             "points_for": 8.44,
             "recent_games": 3,
             "recent_points_against": 10.0,
             "recent_points_for": 13.0,
-            "success_rate": 0.37
+            "success_rate": 0.374
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.036,
+            "off_epa_per_play": 0.041,
             "period": "H2",
             "points_against": 11.89,
             "points_for": 13.22,
             "recent_games": 3,
             "recent_points_against": 10.33,
             "recent_points_for": 15.0,
-            "success_rate": 0.418
+            "success_rate": 0.414
           }
         ]
       },
@@ -16606,7 +16606,7 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.036,
+            "off_epa_per_play": 0.003,
             "period": "Q1",
             "points_against": 4.56,
             "points_for": 3.33,
@@ -16617,7 +16617,7 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.076,
+            "off_epa_per_play": 0.084,
             "period": "Q2",
             "points_against": 4.0,
             "points_for": 8.89,
@@ -16628,29 +16628,29 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.269,
+            "off_epa_per_play": 0.288,
             "period": "Q3",
             "points_against": 6.0,
             "points_for": 8.33,
             "recent_games": 3,
             "recent_points_against": 1.0,
             "recent_points_for": 7.67,
-            "success_rate": 0.564
+            "success_rate": 0.594
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.089,
+            "off_epa_per_play": 0.087,
             "period": "Q4",
             "points_against": 6.89,
             "points_for": 7.22,
             "recent_games": 3,
             "recent_points_against": 6.0,
             "recent_points_for": 5.67,
-            "success_rate": 0.461
+            "success_rate": 0.489
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.032,
+            "off_epa_per_play": 0.052,
             "period": "H1",
             "points_against": 8.56,
             "points_for": 12.22,
@@ -16661,14 +16661,14 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.176,
+            "off_epa_per_play": 0.184,
             "period": "H2",
             "points_against": 12.89,
             "points_for": 15.56,
             "recent_games": 3,
             "recent_points_against": 7.0,
             "recent_points_for": 13.33,
-            "success_rate": 0.511
+            "success_rate": 0.54
           }
         ]
       },
@@ -17079,40 +17079,40 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": 0.156,
+            "off_epa_per_play": 0.17,
             "period": "Q1",
             "points_against": 3.0,
             "points_for": 5.7,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 6.67,
-            "success_rate": 0.404
+            "success_rate": 0.417
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.026,
+            "off_epa_per_play": -0.04,
             "period": "Q2",
             "points_against": 6.9,
             "points_for": 6.8,
             "recent_games": 3,
             "recent_points_against": 9.33,
             "recent_points_for": 8.0,
-            "success_rate": 0.368
+            "success_rate": 0.361
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.112,
+            "off_epa_per_play": 0.126,
             "period": "Q3",
             "points_against": 4.8,
             "points_for": 6.4,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 11.67,
-            "success_rate": 0.497
+            "success_rate": 0.51
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.222,
+            "off_epa_per_play": -0.232,
             "period": "Q4",
             "points_against": 7.4,
             "points_for": 3.4,
@@ -17130,18 +17130,18 @@
             "recent_games": 3,
             "recent_points_against": 13.67,
             "recent_points_for": 14.67,
-            "success_rate": 0.386
+            "success_rate": 0.389
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.047,
+            "off_epa_per_play": -0.044,
             "period": "H2",
             "points_against": 12.2,
             "points_for": 9.8,
             "recent_games": 3,
             "recent_points_against": 11.67,
             "recent_points_for": 12.67,
-            "success_rate": 0.425
+            "success_rate": 0.431
           }
         ]
       },
@@ -17512,40 +17512,40 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": 0.076,
+            "off_epa_per_play": 0.086,
             "period": "Q1",
             "points_against": 2.44,
             "points_for": 5.56,
             "recent_games": 3,
             "recent_points_against": 3.33,
             "recent_points_for": 7.67,
-            "success_rate": 0.445
+            "success_rate": 0.429
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.092,
+            "off_epa_per_play": 0.075,
             "period": "Q2",
             "points_against": 8.67,
             "points_for": 9.0,
             "recent_games": 3,
             "recent_points_against": 7.67,
             "recent_points_for": 10.67,
-            "success_rate": 0.413
+            "success_rate": 0.433
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.019,
+            "off_epa_per_play": 0.038,
             "period": "Q3",
             "points_against": 4.89,
             "points_for": 4.22,
             "recent_games": 3,
             "recent_points_against": 3.33,
             "recent_points_for": 2.33,
-            "success_rate": 0.386
+            "success_rate": 0.402
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.023,
+            "off_epa_per_play": 0.025,
             "period": "Q4",
             "points_against": 7.67,
             "points_for": 7.11,
@@ -17556,25 +17556,25 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.085,
+            "off_epa_per_play": 0.08,
             "period": "H1",
             "points_against": 11.11,
             "points_for": 14.56,
             "recent_games": 3,
             "recent_points_against": 11.0,
             "recent_points_for": 18.33,
-            "success_rate": 0.428
+            "success_rate": 0.431
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.021,
+            "off_epa_per_play": 0.03,
             "period": "H2",
             "points_against": 12.56,
             "points_for": 11.33,
             "recent_games": 3,
             "recent_points_against": 12.33,
             "recent_points_for": 11.33,
-            "success_rate": 0.414
+            "success_rate": 0.421
           }
         ]
       },
@@ -17985,69 +17985,69 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": -0.115,
+            "off_epa_per_play": -0.099,
             "period": "Q1",
             "points_against": 4.7,
             "points_for": 3.6,
             "recent_games": 3,
             "recent_points_against": 3.33,
             "recent_points_for": 2.33,
-            "success_rate": 0.422
+            "success_rate": 0.415
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.021,
+            "off_epa_per_play": -0.028,
             "period": "Q2",
             "points_against": 8.9,
             "points_for": 7.7,
             "recent_games": 3,
             "recent_points_against": 14.0,
             "recent_points_for": 4.67,
-            "success_rate": 0.432
+            "success_rate": 0.421
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.135,
+            "off_epa_per_play": -0.117,
             "period": "Q3",
             "points_against": 5.3,
             "points_for": 4.6,
             "recent_games": 3,
             "recent_points_against": 8.67,
             "recent_points_for": 9.0,
-            "success_rate": 0.422
+            "success_rate": 0.429
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.175,
+            "off_epa_per_play": -0.174,
             "period": "Q4",
             "points_against": 7.6,
             "points_for": 4.6,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 2.0,
-            "success_rate": 0.421
+            "success_rate": 0.447
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.061,
+            "off_epa_per_play": -0.058,
             "period": "H1",
             "points_against": 13.6,
             "points_for": 11.3,
             "recent_games": 3,
             "recent_points_against": 17.33,
             "recent_points_for": 7.0,
-            "success_rate": 0.428
+            "success_rate": 0.418
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.156,
+            "off_epa_per_play": -0.147,
             "period": "H2",
             "points_against": 12.9,
             "points_for": 9.2,
             "recent_games": 3,
             "recent_points_against": 13.0,
             "recent_points_for": 11.0,
-            "success_rate": 0.422
+            "success_rate": 0.438
           }
         ]
       },
@@ -18418,29 +18418,29 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": 0.146,
+            "off_epa_per_play": 0.16,
             "period": "Q1",
             "points_against": 1.44,
             "points_for": 5.33,
             "recent_games": 3,
             "recent_points_against": 2.0,
             "recent_points_for": 8.0,
-            "success_rate": 0.49
+            "success_rate": 0.531
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.166,
+            "off_epa_per_play": 0.156,
             "period": "Q2",
             "points_against": 4.44,
             "points_for": 10.56,
             "recent_games": 3,
             "recent_points_against": 2.33,
             "recent_points_for": 12.33,
-            "success_rate": 0.507
+            "success_rate": 0.5
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.142,
+            "off_epa_per_play": 0.148,
             "period": "Q3",
             "points_against": 4.44,
             "points_for": 7.11,
@@ -18451,36 +18451,36 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.103,
+            "off_epa_per_play": 0.1,
             "period": "Q4",
             "points_against": 5.67,
             "points_for": 6.89,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 10.0,
-            "success_rate": 0.415
+            "success_rate": 0.423
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.157,
+            "off_epa_per_play": 0.158,
             "period": "H1",
             "points_against": 5.89,
             "points_for": 15.89,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 20.33,
-            "success_rate": 0.498
+            "success_rate": 0.515
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.122,
+            "off_epa_per_play": 0.123,
             "period": "H2",
             "points_against": 10.11,
             "points_for": 14.0,
             "recent_games": 3,
             "recent_points_against": 9.0,
             "recent_points_for": 18.0,
-            "success_rate": 0.448
+            "success_rate": 0.452
           }
         ]
       },
@@ -18851,29 +18851,29 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": 0.171,
+            "off_epa_per_play": 0.19,
             "period": "Q1",
             "points_against": 4.44,
             "points_for": 6.0,
             "recent_games": 3,
             "recent_points_against": 3.0,
             "recent_points_for": 4.67,
-            "success_rate": 0.496
+            "success_rate": 0.529
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.088,
+            "off_epa_per_play": 0.068,
             "period": "Q2",
             "points_against": 5.33,
             "points_for": 7.22,
             "recent_games": 3,
             "recent_points_against": 6.33,
             "recent_points_for": 10.33,
-            "success_rate": 0.507
+            "success_rate": 0.514
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.112,
+            "off_epa_per_play": 0.126,
             "period": "Q3",
             "points_against": 1.33,
             "points_for": 5.33,
@@ -18884,36 +18884,36 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.123,
+            "off_epa_per_play": 0.118,
             "period": "Q4",
             "points_against": 5.89,
             "points_for": 7.11,
             "recent_games": 3,
             "recent_points_against": 8.33,
             "recent_points_for": 7.0,
-            "success_rate": 0.468
+            "success_rate": 0.482
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.127,
+            "off_epa_per_play": 0.124,
             "period": "H1",
             "points_against": 9.78,
             "points_for": 13.22,
             "recent_games": 3,
             "recent_points_against": 9.33,
             "recent_points_for": 15.0,
-            "success_rate": 0.502
+            "success_rate": 0.521
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.118,
+            "off_epa_per_play": 0.122,
             "period": "H2",
             "points_against": 7.22,
             "points_for": 12.44,
             "recent_games": 3,
             "recent_points_against": 8.33,
             "recent_points_for": 16.33,
-            "success_rate": 0.461
+            "success_rate": 0.469
           }
         ]
       },
@@ -19324,69 +19324,69 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": 0.006,
+            "off_epa_per_play": 0.027,
             "period": "Q1",
             "points_against": 3.0,
             "points_for": 3.6,
             "recent_games": 3,
             "recent_points_against": 4.0,
             "recent_points_for": 3.0,
-            "success_rate": 0.439
+            "success_rate": 0.455
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.114,
+            "off_epa_per_play": 0.115,
             "period": "Q2",
             "points_against": 5.6,
             "points_for": 8.8,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 8.0,
-            "success_rate": 0.465
+            "success_rate": 0.492
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.06,
+            "off_epa_per_play": 0.086,
             "period": "Q3",
             "points_against": 3.8,
             "points_for": 4.9,
             "recent_games": 3,
             "recent_points_against": 1.0,
             "recent_points_for": 11.67,
-            "success_rate": 0.481
+            "success_rate": 0.519
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.081,
+            "off_epa_per_play": 0.084,
             "period": "Q4",
             "points_against": 6.0,
             "points_for": 7.5,
             "recent_games": 3,
             "recent_points_against": 0.0,
             "recent_points_for": 3.33,
-            "success_rate": 0.533
+            "success_rate": 0.544
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.069,
+            "off_epa_per_play": 0.079,
             "period": "H1",
             "points_against": 8.6,
             "points_for": 12.4,
             "recent_games": 3,
             "recent_points_against": 8.33,
             "recent_points_for": 11.0,
-            "success_rate": 0.455
+            "success_rate": 0.476
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.071,
+            "off_epa_per_play": 0.085,
             "period": "H2",
             "points_against": 9.8,
             "points_for": 12.4,
             "recent_games": 3,
             "recent_points_against": 1.0,
             "recent_points_for": 15.0,
-            "success_rate": 0.509
+            "success_rate": 0.532
           }
         ]
       },
@@ -19757,18 +19757,18 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.225,
+            "off_epa_per_play": -0.19,
             "period": "Q1",
             "points_against": 4.78,
             "points_for": 4.33,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 5.33,
-            "success_rate": 0.341
+            "success_rate": 0.364
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.128,
+            "off_epa_per_play": -0.145,
             "period": "Q2",
             "points_against": 9.22,
             "points_for": 3.56,
@@ -19779,47 +19779,47 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.002,
+            "off_epa_per_play": 0.03,
             "period": "Q3",
             "points_against": 4.89,
             "points_for": 4.89,
             "recent_games": 3,
             "recent_points_against": 8.0,
             "recent_points_for": 1.0,
-            "success_rate": 0.372
+            "success_rate": 0.434
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.337,
+            "off_epa_per_play": -0.328,
             "period": "Q4",
             "points_against": 7.67,
             "points_for": 3.22,
             "recent_games": 3,
             "recent_points_against": 6.67,
             "recent_points_for": 5.33,
-            "success_rate": 0.301
+            "success_rate": 0.329
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.173,
+            "off_epa_per_play": -0.166,
             "period": "H1",
             "points_against": 14.0,
             "points_for": 7.89,
             "recent_games": 3,
             "recent_points_against": 14.67,
             "recent_points_for": 11.67,
-            "success_rate": 0.366
+            "success_rate": 0.377
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.178,
+            "off_epa_per_play": -0.16,
             "period": "H2",
             "points_against": 12.56,
             "points_for": 8.11,
             "recent_games": 3,
             "recent_points_against": 14.67,
             "recent_points_for": 6.33,
-            "success_rate": 0.335
+            "success_rate": 0.378
           }
         ]
       },
@@ -20230,69 +20230,69 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": 0.075,
+            "off_epa_per_play": 0.098,
             "period": "Q1",
             "points_against": 6.4,
             "points_for": 4.8,
             "recent_games": 3,
             "recent_points_against": 9.0,
             "recent_points_for": 4.67,
-            "success_rate": 0.496
+            "success_rate": 0.521
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.004,
+            "off_epa_per_play": 0.013,
             "period": "Q2",
             "points_against": 8.5,
             "points_for": 6.8,
             "recent_games": 3,
             "recent_points_against": 8.0,
             "recent_points_for": 6.67,
-            "success_rate": 0.409
+            "success_rate": 0.434
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.15,
+            "off_epa_per_play": -0.113,
             "period": "Q3",
             "points_against": 8.7,
             "points_for": 4.7,
             "recent_games": 3,
             "recent_points_against": 11.67,
             "recent_points_for": 7.0,
-            "success_rate": 0.384
+            "success_rate": 0.409
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.007,
+            "off_epa_per_play": 0.015,
             "period": "Q4",
             "points_against": 5.3,
             "points_for": 8.8,
             "recent_games": 3,
             "recent_points_against": 2.0,
             "recent_points_for": 4.33,
-            "success_rate": 0.398
+            "success_rate": 0.392
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.034,
+            "off_epa_per_play": 0.049,
             "period": "H1",
             "points_against": 14.9,
             "points_for": 11.6,
             "recent_games": 3,
             "recent_points_against": 17.0,
             "recent_points_for": 11.33,
-            "success_rate": 0.446
+            "success_rate": 0.471
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.071,
+            "off_epa_per_play": -0.049,
             "period": "H2",
             "points_against": 14.0,
             "points_for": 13.5,
             "recent_games": 3,
             "recent_points_against": 13.67,
             "recent_points_for": 11.33,
-            "success_rate": 0.391
+            "success_rate": 0.4
           }
         ]
       },
@@ -20663,51 +20663,51 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": 0.029,
+            "off_epa_per_play": 0.037,
             "period": "Q1",
             "points_against": 4.89,
             "points_for": 3.78,
             "recent_games": 3,
             "recent_points_against": 2.0,
             "recent_points_for": 2.0,
-            "success_rate": 0.358
+            "success_rate": 0.367
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.013,
+            "off_epa_per_play": -0.019,
             "period": "Q2",
             "points_against": 6.78,
             "points_for": 4.0,
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 5.67,
-            "success_rate": 0.472
+            "success_rate": 0.465
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.217,
+            "off_epa_per_play": -0.191,
             "period": "Q3",
             "points_against": 9.11,
             "points_for": 3.89,
             "recent_games": 3,
             "recent_points_against": 11.33,
             "recent_points_for": 4.0,
-            "success_rate": 0.298
+            "success_rate": 0.307
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.064,
+            "off_epa_per_play": -0.074,
             "period": "Q4",
             "points_against": 4.11,
             "points_for": 4.78,
             "recent_games": 3,
             "recent_points_against": 3.33,
             "recent_points_for": 5.0,
-            "success_rate": 0.376
+            "success_rate": 0.383
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.006,
+            "off_epa_per_play": 0.007,
             "period": "H1",
             "points_against": 11.67,
             "points_for": 7.78,
@@ -20718,14 +20718,14 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.134,
+            "off_epa_per_play": -0.128,
             "period": "H2",
             "points_against": 13.22,
             "points_for": 8.67,
             "recent_games": 3,
             "recent_points_against": 14.67,
             "recent_points_for": 9.0,
-            "success_rate": 0.34
+            "success_rate": 0.348
           }
         ]
       },
@@ -21096,18 +21096,18 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.195,
+            "off_epa_per_play": -0.168,
             "period": "Q1",
             "points_against": 3.56,
             "points_for": 3.56,
             "recent_games": 3,
             "recent_points_against": 2.0,
             "recent_points_for": 3.33,
-            "success_rate": 0.326
+            "success_rate": 0.379
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.047,
+            "off_epa_per_play": -0.049,
             "period": "Q2",
             "points_against": 3.67,
             "points_for": 5.78,
@@ -21118,14 +21118,14 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.276,
+            "off_epa_per_play": -0.242,
             "period": "Q3",
             "points_against": 4.56,
             "points_for": 2.22,
             "recent_games": 3,
             "recent_points_against": 6.33,
             "recent_points_for": 1.0,
-            "success_rate": 0.34
+            "success_rate": 0.36
           },
           {
             "games": 9,
@@ -21136,29 +21136,29 @@
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 6.0,
-            "success_rate": 0.415
+            "success_rate": 0.451
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.12,
+            "off_epa_per_play": -0.107,
             "period": "H1",
             "points_against": 7.22,
             "points_for": 9.33,
             "recent_games": 3,
             "recent_points_against": 5.33,
             "recent_points_for": 10.0,
-            "success_rate": 0.368
+            "success_rate": 0.394
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.078,
+            "off_epa_per_play": -0.064,
             "period": "H2",
             "points_against": 6.78,
             "points_for": 10.22,
             "recent_games": 3,
             "recent_points_against": 12.0,
             "recent_points_for": 7.0,
-            "success_rate": 0.384
+            "success_rate": 0.413
           }
         ]
       },
@@ -21569,51 +21569,51 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": -0.04,
+            "off_epa_per_play": -0.023,
             "period": "Q1",
             "points_against": 4.4,
             "points_for": 4.1,
             "recent_games": 3,
             "recent_points_against": 8.0,
             "recent_points_for": 2.0,
-            "success_rate": 0.389
+            "success_rate": 0.405
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.037,
+            "off_epa_per_play": 0.017,
             "period": "Q2",
             "points_against": 7.8,
             "points_for": 6.5,
             "recent_games": 3,
             "recent_points_against": 11.33,
             "recent_points_for": 4.67,
-            "success_rate": 0.491
+            "success_rate": 0.478
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.075,
+            "off_epa_per_play": 0.089,
             "period": "Q3",
             "points_against": 6.2,
             "points_for": 5.5,
             "recent_games": 3,
             "recent_points_against": 8.33,
             "recent_points_for": 7.0,
-            "success_rate": 0.494
+            "success_rate": 0.506
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.022,
+            "off_epa_per_play": -0.02,
             "period": "Q4",
             "points_against": 5.8,
             "points_for": 6.0,
             "recent_games": 3,
             "recent_points_against": 5.33,
             "recent_points_for": 6.67,
-            "success_rate": 0.388
+            "success_rate": 0.408
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.002,
+            "off_epa_per_play": -0.001,
             "period": "H1",
             "points_against": 12.2,
             "points_for": 10.6,
@@ -21624,14 +21624,14 @@
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.029,
+            "off_epa_per_play": 0.037,
             "period": "H2",
             "points_against": 12.0,
             "points_for": 11.5,
             "recent_games": 3,
             "recent_points_against": 13.67,
             "recent_points_for": 13.67,
-            "success_rate": 0.444
+            "success_rate": 0.46
           }
         ]
       },
@@ -22002,69 +22002,69 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.202,
+            "off_epa_per_play": -0.176,
             "period": "Q1",
             "points_against": 4.89,
             "points_for": 1.0,
             "recent_games": 3,
             "recent_points_against": 1.0,
             "recent_points_for": 1.0,
-            "success_rate": 0.385
+            "success_rate": 0.394
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.033,
+            "off_epa_per_play": -0.034,
             "period": "Q2",
             "points_against": 6.22,
             "points_for": 5.22,
             "recent_games": 3,
             "recent_points_against": 6.67,
             "recent_points_for": 3.33,
-            "success_rate": 0.353
+            "success_rate": 0.373
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.014,
+            "off_epa_per_play": 0.015,
             "period": "Q3",
             "points_against": 5.11,
             "points_for": 7.44,
             "recent_games": 3,
             "recent_points_against": 3.0,
             "recent_points_for": 3.33,
-            "success_rate": 0.43
+            "success_rate": 0.465
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.036,
+            "off_epa_per_play": -0.04,
             "period": "Q4",
             "points_against": 8.56,
             "points_for": 7.33,
             "recent_games": 3,
             "recent_points_against": 6.67,
             "recent_points_for": 6.67,
-            "success_rate": 0.424
+            "success_rate": 0.436
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.102,
+            "off_epa_per_play": -0.092,
             "period": "H1",
             "points_against": 11.11,
             "points_for": 6.22,
             "recent_games": 3,
             "recent_points_against": 7.67,
             "recent_points_for": 4.33,
-            "success_rate": 0.366
+            "success_rate": 0.382
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.026,
+            "off_epa_per_play": -0.015,
             "period": "H2",
             "points_against": 13.67,
             "points_for": 14.78,
             "recent_games": 3,
             "recent_points_against": 9.67,
             "recent_points_for": 10.0,
-            "success_rate": 0.427
+            "success_rate": 0.449
           }
         ]
       },
@@ -22435,18 +22435,18 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.029,
+            "off_epa_per_play": -0.019,
             "period": "Q1",
             "points_against": 4.22,
             "points_for": 4.0,
             "recent_games": 3,
             "recent_points_against": 3.67,
             "recent_points_for": 4.33,
-            "success_rate": 0.324
+            "success_rate": 0.345
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.072,
+            "off_epa_per_play": -0.092,
             "period": "Q2",
             "points_against": 6.0,
             "points_for": 5.44,
@@ -22457,47 +22457,47 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.075,
+            "off_epa_per_play": 0.084,
             "period": "Q3",
             "points_against": 5.78,
             "points_for": 5.0,
             "recent_games": 3,
             "recent_points_against": 2.33,
             "recent_points_for": 4.67,
-            "success_rate": 0.473
+            "success_rate": 0.481
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.069,
+            "off_epa_per_play": 0.053,
             "period": "Q4",
             "points_against": 5.78,
             "points_for": 7.44,
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 6.67,
-            "success_rate": 0.446
+            "success_rate": 0.459
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.051,
+            "off_epa_per_play": -0.056,
             "period": "H1",
             "points_against": 10.22,
             "points_for": 9.44,
             "recent_games": 3,
             "recent_points_against": 10.67,
             "recent_points_for": 9.0,
-            "success_rate": 0.366
+            "success_rate": 0.376
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.072,
+            "off_epa_per_play": 0.067,
             "period": "H2",
             "points_against": 11.56,
             "points_for": 12.44,
             "recent_games": 3,
             "recent_points_against": 8.0,
             "recent_points_for": 11.33,
-            "success_rate": 0.458
+            "success_rate": 0.469
           }
         ]
       },
@@ -22908,40 +22908,40 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": 0.008,
+            "off_epa_per_play": 0.021,
             "period": "Q1",
             "points_against": 4.8,
             "points_for": 3.6,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 4.0,
-            "success_rate": 0.437
+            "success_rate": 0.467
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.021,
+            "off_epa_per_play": -0.029,
             "period": "Q2",
             "points_against": 6.7,
             "points_for": 4.9,
             "recent_games": 3,
             "recent_points_against": 8.0,
             "recent_points_for": 9.67,
-            "success_rate": 0.458
+            "success_rate": 0.47
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.101,
+            "off_epa_per_play": 0.117,
             "period": "Q3",
             "points_against": 5.6,
             "points_for": 5.3,
             "recent_games": 3,
             "recent_points_against": 14.0,
             "recent_points_for": 4.33,
-            "success_rate": 0.496
+            "success_rate": 0.512
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.089,
+            "off_epa_per_play": -0.095,
             "period": "Q4",
             "points_against": 8.0,
             "points_for": 5.6,
@@ -22952,25 +22952,25 @@
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.008,
+            "off_epa_per_play": -0.006,
             "period": "H1",
             "points_against": 11.5,
             "points_for": 8.5,
             "recent_games": 3,
             "recent_points_against": 12.67,
             "recent_points_for": 13.67,
-            "success_rate": 0.449
+            "success_rate": 0.469
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.003,
+            "off_epa_per_play": 0.0,
             "period": "H2",
             "points_against": 13.6,
             "points_for": 10.9,
             "recent_games": 3,
             "recent_points_against": 22.0,
             "recent_points_for": 5.33,
-            "success_rate": 0.453
+            "success_rate": 0.46
           }
         ]
       },
@@ -23341,69 +23341,69 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.14,
+            "off_epa_per_play": -0.119,
             "period": "Q1",
             "points_against": 5.44,
             "points_for": 3.11,
             "recent_games": 3,
             "recent_points_against": 6.33,
             "recent_points_for": 8.33,
-            "success_rate": 0.366
+            "success_rate": 0.374
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.106,
+            "off_epa_per_play": 0.084,
             "period": "Q2",
             "points_against": 5.11,
             "points_for": 8.89,
             "recent_games": 3,
             "recent_points_against": 6.67,
             "recent_points_for": 2.33,
-            "success_rate": 0.434
+            "success_rate": 0.421
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.362,
+            "off_epa_per_play": -0.336,
             "period": "Q3",
             "points_against": 4.56,
             "points_for": 1.44,
             "recent_games": 3,
             "recent_points_against": 6.0,
             "recent_points_for": 2.33,
-            "success_rate": 0.227
+            "success_rate": 0.235
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.088,
+            "off_epa_per_play": -0.1,
             "period": "Q4",
             "points_against": 9.44,
             "points_for": 3.0,
             "recent_games": 3,
             "recent_points_against": 9.0,
             "recent_points_for": 1.0,
-            "success_rate": 0.373
+            "success_rate": 0.387
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.004,
+            "off_epa_per_play": -0.007,
             "period": "H1",
             "points_against": 10.56,
             "points_for": 12.0,
             "recent_games": 3,
             "recent_points_against": 13.0,
             "recent_points_for": 10.67,
-            "success_rate": 0.404
+            "success_rate": 0.4
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.21,
+            "off_epa_per_play": -0.204,
             "period": "H2",
             "points_against": 14.0,
             "points_for": 4.44,
             "recent_games": 3,
             "recent_points_against": 15.0,
             "recent_points_for": 3.33,
-            "success_rate": 0.309
+            "success_rate": 0.32
           }
         ]
       },
@@ -23774,18 +23774,18 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": 0.056,
+            "off_epa_per_play": 0.075,
             "period": "Q1",
             "points_against": 3.67,
             "points_for": 4.56,
             "recent_games": 3,
             "recent_points_against": 1.0,
             "recent_points_for": 3.33,
-            "success_rate": 0.475
+            "success_rate": 0.484
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.023,
+            "off_epa_per_play": -0.03,
             "period": "Q2",
             "points_against": 9.78,
             "points_for": 6.44,
@@ -23796,18 +23796,18 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.179,
+            "off_epa_per_play": -0.151,
             "period": "Q3",
             "points_against": 2.78,
             "points_for": 2.67,
             "recent_games": 3,
             "recent_points_against": 2.33,
             "recent_points_for": 3.33,
-            "success_rate": 0.337
+            "success_rate": 0.356
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.024,
+            "off_epa_per_play": 0.022,
             "period": "Q4",
             "points_against": 4.0,
             "points_for": 7.56,
@@ -23818,25 +23818,25 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.011,
+            "off_epa_per_play": 0.015,
             "period": "H1",
             "points_against": 13.44,
             "points_for": 11.0,
             "recent_games": 3,
             "recent_points_against": 13.33,
             "recent_points_for": 12.0,
-            "success_rate": 0.408
+            "success_rate": 0.411
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.057,
+            "off_epa_per_play": -0.047,
             "period": "H2",
             "points_against": 6.78,
             "points_for": 10.22,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 8.33,
-            "success_rate": 0.423
+            "success_rate": 0.431
           }
         ]
       },
@@ -24247,69 +24247,69 @@
         "summary": [
           {
             "games": 10,
-            "off_epa_per_play": -0.111,
+            "off_epa_per_play": -0.085,
             "period": "Q1",
             "points_against": 3.4,
             "points_for": 3.1,
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 2.33,
-            "success_rate": 0.427
+            "success_rate": 0.46
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.08,
+            "off_epa_per_play": -0.1,
             "period": "Q2",
             "points_against": 6.4,
             "points_for": 6.2,
             "recent_games": 3,
             "recent_points_against": 3.0,
             "recent_points_for": 7.67,
-            "success_rate": 0.391
+            "success_rate": 0.385
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.082,
+            "off_epa_per_play": 0.1,
             "period": "Q3",
             "points_against": 2.7,
             "points_for": 6.3,
             "recent_games": 3,
             "recent_points_against": 2.33,
             "recent_points_for": 5.67,
-            "success_rate": 0.388
+            "success_rate": 0.429
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.057,
+            "off_epa_per_play": 0.048,
             "period": "Q4",
             "points_against": 4.7,
             "points_for": 6.7,
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 2.67,
-            "success_rate": 0.475
+            "success_rate": 0.487
           },
           {
             "games": 10,
-            "off_epa_per_play": -0.093,
+            "off_epa_per_play": -0.094,
             "period": "H1",
             "points_against": 9.8,
             "points_for": 9.3,
             "recent_games": 3,
             "recent_points_against": 8.67,
             "recent_points_for": 10.0,
-            "success_rate": 0.406
+            "success_rate": 0.416
           },
           {
             "games": 10,
-            "off_epa_per_play": 0.069,
+            "off_epa_per_play": 0.073,
             "period": "H2",
             "points_against": 7.4,
             "points_for": 13.0,
             "recent_games": 3,
             "recent_points_against": 8.0,
             "recent_points_for": 8.33,
-            "success_rate": 0.433
+            "success_rate": 0.459
           }
         ]
       },
@@ -24680,40 +24680,40 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": 0.245,
+            "off_epa_per_play": 0.254,
             "period": "Q1",
             "points_against": 2.89,
             "points_for": 7.22,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 9.33,
-            "success_rate": 0.521
+            "success_rate": 0.529
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.185,
+            "off_epa_per_play": 0.18,
             "period": "Q2",
             "points_against": 5.56,
             "points_for": 8.0,
             "recent_games": 3,
             "recent_points_against": 8.33,
             "recent_points_for": 8.0,
-            "success_rate": 0.553
+            "success_rate": 0.574
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.193,
+            "off_epa_per_play": 0.204,
             "period": "Q3",
             "points_against": 4.89,
             "points_for": 8.0,
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 9.33,
-            "success_rate": 0.527
+            "success_rate": 0.545
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.158,
+            "off_epa_per_play": 0.154,
             "period": "Q4",
             "points_against": 8.44,
             "points_for": 8.0,
@@ -24724,25 +24724,25 @@
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.215,
+            "off_epa_per_play": 0.217,
             "period": "H1",
             "points_against": 8.44,
             "points_for": 15.22,
             "recent_games": 3,
             "recent_points_against": 12.67,
             "recent_points_for": 17.33,
-            "success_rate": 0.537
+            "success_rate": 0.552
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.173,
+            "off_epa_per_play": 0.177,
             "period": "H2",
             "points_against": 13.33,
             "points_for": 16.0,
             "recent_games": 3,
             "recent_points_against": 16.0,
             "recent_points_for": 17.33,
-            "success_rate": 0.51
+            "success_rate": 0.518
           }
         ]
       },
@@ -25113,69 +25113,69 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.168,
+            "off_epa_per_play": -0.155,
             "period": "Q1",
             "points_against": 5.33,
             "points_for": 3.56,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 4.33,
-            "success_rate": 0.366
+            "success_rate": 0.359
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.012,
+            "off_epa_per_play": -0.031,
             "period": "Q2",
             "points_against": 5.0,
             "points_for": 8.0,
             "recent_games": 3,
             "recent_points_against": 3.0,
             "recent_points_for": 11.67,
-            "success_rate": 0.461
+            "success_rate": 0.442
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.045,
+            "off_epa_per_play": -0.017,
             "period": "Q3",
             "points_against": 3.0,
             "points_for": 6.33,
             "recent_games": 3,
             "recent_points_against": 2.33,
             "recent_points_for": 5.67,
-            "success_rate": 0.365
+            "success_rate": 0.397
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.108,
+            "off_epa_per_play": -0.126,
             "period": "Q4",
             "points_against": 5.67,
             "points_for": 4.56,
             "recent_games": 3,
             "recent_points_against": 3.33,
             "recent_points_for": 6.0,
-            "success_rate": 0.43
+            "success_rate": 0.452
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.084,
+            "off_epa_per_play": -0.088,
             "period": "H1",
             "points_against": 10.33,
             "points_for": 11.56,
             "recent_games": 3,
             "recent_points_against": 7.67,
             "recent_points_for": 16.0,
-            "success_rate": 0.418
+            "success_rate": 0.404
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.077,
+            "off_epa_per_play": -0.073,
             "period": "H2",
             "points_against": 8.67,
             "points_for": 10.89,
             "recent_games": 3,
             "recent_points_against": 5.67,
             "recent_points_for": 11.67,
-            "success_rate": 0.398
+            "success_rate": 0.425
           }
         ]
       },
@@ -25546,69 +25546,69 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.076,
+            "off_epa_per_play": -0.06,
             "period": "Q1",
             "points_against": 3.78,
             "points_for": 5.56,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 10.0,
-            "success_rate": 0.421
+            "success_rate": 0.46
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.239,
+            "off_epa_per_play": -0.257,
             "period": "Q2",
             "points_against": 10.56,
             "points_for": 1.11,
             "recent_games": 3,
             "recent_points_against": 11.0,
             "recent_points_for": 2.33,
-            "success_rate": 0.313
+            "success_rate": 0.333
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.166,
+            "off_epa_per_play": -0.145,
             "period": "Q3",
             "points_against": 4.33,
             "points_for": 3.33,
             "recent_games": 3,
             "recent_points_against": 5.33,
             "recent_points_for": 4.67,
-            "success_rate": 0.378
+            "success_rate": 0.387
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.133,
+            "off_epa_per_play": 0.124,
             "period": "Q4",
             "points_against": 7.11,
             "points_for": 8.56,
             "recent_games": 3,
             "recent_points_against": 13.33,
             "recent_points_for": 10.67,
-            "success_rate": 0.509
+            "success_rate": 0.522
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.148,
+            "off_epa_per_play": -0.146,
             "period": "H1",
             "points_against": 14.33,
             "points_for": 6.67,
             "recent_games": 3,
             "recent_points_against": 15.67,
             "recent_points_for": 12.33,
-            "success_rate": 0.373
+            "success_rate": 0.404
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.006,
+            "off_epa_per_play": 0.01,
             "period": "H2",
             "points_against": 11.44,
             "points_for": 11.89,
             "recent_games": 3,
             "recent_points_against": 18.67,
             "recent_points_for": 15.33,
-            "success_rate": 0.454
+            "success_rate": 0.464
           }
         ]
       },
@@ -25979,69 +25979,69 @@
         "summary": [
           {
             "games": 9,
-            "off_epa_per_play": -0.073,
+            "off_epa_per_play": -0.062,
             "period": "Q1",
             "points_against": 4.33,
             "points_for": 3.44,
             "recent_games": 3,
             "recent_points_against": 4.33,
             "recent_points_for": 2.0,
-            "success_rate": 0.385
+            "success_rate": 0.402
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.017,
+            "off_epa_per_play": 0.005,
             "period": "Q2",
             "points_against": 6.44,
             "points_for": 6.56,
             "recent_games": 3,
             "recent_points_against": 3.33,
             "recent_points_for": 9.0,
-            "success_rate": 0.429
+            "success_rate": 0.435
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.042,
+            "off_epa_per_play": -0.031,
             "period": "Q3",
             "points_against": 6.33,
             "points_for": 4.89,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 4.33,
-            "success_rate": 0.38
+            "success_rate": 0.398
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.035,
+            "off_epa_per_play": 0.032,
             "period": "Q4",
             "points_against": 7.67,
             "points_for": 6.89,
             "recent_games": 3,
             "recent_points_against": 4.67,
             "recent_points_for": 6.0,
-            "success_rate": 0.479
+            "success_rate": 0.462
           },
           {
             "games": 9,
-            "off_epa_per_play": -0.024,
+            "off_epa_per_play": -0.025,
             "period": "H1",
             "points_against": 10.78,
             "points_for": 10.0,
             "recent_games": 3,
             "recent_points_against": 7.67,
             "recent_points_for": 11.0,
-            "success_rate": 0.409
+            "success_rate": 0.42
           },
           {
             "games": 9,
-            "off_epa_per_play": 0.005,
+            "off_epa_per_play": 0.007,
             "period": "H2",
             "points_against": 14.0,
             "points_for": 11.78,
             "recent_games": 3,
             "recent_points_against": 9.33,
             "recent_points_for": 10.33,
-            "success_rate": 0.44
+            "success_rate": 0.437
           }
         ]
       }

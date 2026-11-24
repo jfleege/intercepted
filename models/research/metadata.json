@@ -1,12 +1,12 @@
 {
-  "created_at": "2026-11-24T00:56:50.177940+00:00",
+  "created_at": "2026-11-24T23:03:00.799258+00:00",
   "models": {
     "anytime_td": {
       "calibration_cutoff": [
         2026,
-        10
+        11
       ],
-      "calibration_samples": 3096,
+      "calibration_samples": 3382,
       "features": [
         "recent_yards",
         "season_yards",
@@ -33,7 +33,7 @@
         "is_te"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "d5554d77907dc49544427ef6ffca11d8bc444f7c65ee057e8fa7050f150b669d",
+      "sha256": "f7ac51d16faa3c57ba0c9fd46914c78656e370976b409a877ad4bb9a1eda955c",
       "training_cutoff": [
         2025,
         18
@@ -43,9 +43,9 @@
     "passing_td": {
       "calibration_cutoff": [
         2026,
-        10
+        11
       ],
-      "calibration_samples": 337,
+      "calibration_samples": 367,
       "features": [
         "recent_yards",
         "season_yards",
@@ -72,7 +72,7 @@
         "is_te"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "f65bf79f9a2950f432e369bf7fdef2b75b3594443019241e83e1201d970869d1",
+      "sha256": "21594d94d3f1032f10fa89120c16004236deacd9e36a6eddaa9e17ea98ac25ee",
       "training_cutoff": [
         2025,
         18
@@ -82,9 +82,9 @@
     "passing_two_td": {
       "calibration_cutoff": [
         2026,
-        10
+        11
       ],
-      "calibration_samples": 337,
+      "calibration_samples": 367,
       "features": [
         "recent_yards",
         "season_yards",
@@ -113,7 +113,7 @@
         "season_pass_two_td"
       ],
       "method": "standardized logistic regression + held-out sigmoid calibration",
-      "sha256": "723620c95e29fe8ce55b2d27a8f79936410514725bc3adc781e9bb9a78c96627",
+      "sha256": "5f3ac5708a988b1d134e17f9691193d594db1ca246ab7c18a71e4ee91d8e2a42",
       "training_cutoff": [
         2025,
         18
@@ -123,9 +123,9 @@
     "passing_yards": {
       "calibration_cutoff": [
         2026,
-        10
+        11
       ],
-      "calibration_samples": 337,
+      "calibration_samples": 367,
       "features": [
         "recent_yards",
         "season_yards",
@@ -152,7 +152,7 @@
         "is_te"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "32d92d41104f717044084f5b14bab759c5f968c20b23c8fdf30526afdcde7d80",
+      "sha256": "12cab028e03a188931e78fb02ed73e180be8eca6b934b186a9996db716844c30",
       "training_cutoff": [
         2025,
         18
@@ -162,9 +162,9 @@
     "receiving_yards": {
       "calibration_cutoff": [
         2026,
-        10
+        11
       ],
-      "calibration_samples": 1976,
+      "calibration_samples": 2157,
       "features": [
         "recent_yards",
         "season_yards",
@@ -191,7 +191,7 @@
         "is_te"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "febda09ffa6ebd34b6772aa1347ef52cc2ab70bd6e3e61c551d3c983b3a06b04",
+      "sha256": "f7e3be089a245a55b1e81dfa6ceac5fbedad157f565740185ad13d05f1e32f74",
       "training_cutoff": [
         2025,
         18
@@ -201,9 +201,9 @@
     "receptions": {
       "calibration_cutoff": [
         2026,
-        10
+        11
       ],
-      "calibration_samples": 2759,
+      "calibration_samples": 3015,
       "features": [
         "recent_yards",
         "season_yards",
@@ -234,7 +234,7 @@
         "season_targets"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "c1633406d439a030f596ae32641b080d9facd05f5ca8aa67f793d4142de21907",
+      "sha256": "03ee050efea5c6e97115edf9e051b8ab1359a3265babe7d05331d86e503d80e7",
       "training_cutoff": [
         2025,
         18
@@ -244,9 +244,9 @@
     "rushing_yards": {
       "calibration_cutoff": [
         2026,
-        10
+        11
       ],
-      "calibration_samples": 783,
+      "calibration_samples": 858,
       "features": [
         "recent_yards",
         "season_yards",
@@ -273,7 +273,7 @@
         "is_te"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "3926515ff91d89e087d2c0f853036449db96736a0685c7a23e7877cf94438e0f",
+      "sha256": "326cf2b83ae946e7f6047f3a27e23f84b321bb05f4160c611780f22b8999b98c",
       "training_cutoff": [
         2025,
         18
@@ -283,9 +283,9 @@
     "scoring": {
       "calibration_cutoff": [
         2026,
-        10
+        11
       ],
-      "calibration_samples": 300,
+      "calibration_samples": 326,
       "features": [
         "own_points_recent",
         "own_points_season",
@@ -302,7 +302,7 @@
         "week"
       ],
       "method": "histogram gradient boosting + held-out absolute-residual intervals",
-      "sha256": "21dd20ddf00f91ad848051b9bc68e7adbbe09f9c649627961d363ce68596dcf2",
+      "sha256": "79d594b3077be96ce16380335159a47e3becfc413c8813b7bd570e6a54a6cba8",
       "training_cutoff": [
         2025,
         18
@@ -312,10 +312,10 @@
   },
   "notes": "Player estimates are conditional on appearing in the game, not an availability model. Anytime TD means rushing/receiving TD; passing TD is a separate QB event. Ranges target 80% coverage, not guarantees.",
   "source_sha256": {
-    "pbp_current": "13700fa34dbd56189346697c0e8c4513200eda847f1edd3734b52e34866c087b",
-    "players_current": "f04cab5dbda30d3d9e61676acef55a4820b55d5c60c0f1e845b03d05f78c1bac",
+    "pbp_current": "1515dafd258492aacedf1f171715c4edbecada8db6fdd4ae3e16e5920dbf3c80",
+    "players_current": "0c54807b1b128aa8dddcd63ccfca3f8e2186440ca6ce3185a5d2b62c4bc74fec",
     "players_historical": "f198cfe1a734cd1946aa12a857c52209e70a11376288cb63a4dc71a0fcc9543c",
-    "schedules_current": "d96ba4e5c2804cb6aa55a88b40a7611dcd518d3609ca7e20bfa9a1f613342612",
+    "schedules_current": "9634af69fede7cfdad7a961ed4c831bd99e724398b71c48b6622fc3f6f0f9fb8",
     "schedules_historical": "9cd42f6c4b09527de338db17383a0e170530e6a34065036ab17b0566daf1778e"
   },
   "status": "experimental",
@@ -637,5 +637,5 @@
       }
     }
   },
-  "version": "0a797b9e9e0cc191"
+  "version": "2183374f442ea971"
 }

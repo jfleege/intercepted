@@ -9029,6 +9029,132 @@
       "source_at": "2026-11-22T20:23:42.952879+00:00",
       "unit": "version",
       "week": 11
+    },
+    {
+      "after": "Out",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0041117:availability",
+      "game_id": "2026_11_CIN_WAS",
+      "id": "ce368beb886f5018e60e9c18",
+      "label": "Athan Kaliakmanis game status",
+      "matchup": "CIN @ WAS",
+      "observed_at": "2026-11-24T00:56:39.391678+00:00",
+      "player_id": "00-0041117",
+      "previous_observed_at": "2026-11-23T19:30:37.854267+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-24T00:56:39.374993+00:00",
+      "unit": "status",
+      "week": 11
+    },
+    {
+      "after": "Out",
+      "before": "unknown",
+      "delta": null,
+      "field": "00-0041178:availability",
+      "game_id": "2026_11_CIN_WAS",
+      "id": "dd35989de972d4433408cc77",
+      "label": "Robert Henry Jr. game status",
+      "matchup": "CIN @ WAS",
+      "observed_at": "2026-11-24T00:56:39.391678+00:00",
+      "player_id": "00-0041178",
+      "previous_observed_at": "2026-11-23T19:30:37.854267+00:00",
+      "reasons": [
+        "Source-backed availability/depth evidence changed; no causal adjustment to yardage is assumed."
+      ],
+      "season": 2026,
+      "source": "https://www.espn.com/nfl/injuries",
+      "source_at": "2026-11-24T00:56:39.374993+00:00",
+      "unit": "status",
+      "week": 11
+    },
+    {
+      "after": 0.33833327086514414,
+      "before": 0.3452356207257919,
+      "delta": -0.00690234986064775,
+      "field": "home_win_prob_v4_a",
+      "game_id": "2026_11_CIN_WAS",
+      "id": "cb1f103799d01b6416d08a3d",
+      "label": "v4_a home win",
+      "matchup": "CIN @ WAS",
+      "observed_at": "2026-11-24T00:57:08.766758+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-24T00:56:39.391678+00:00",
+      "reasons": [
+        "Saved research input fingerprint changed; individual cause is not attributed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-24T00:56:43.708693+00:00",
+      "unit": "probability",
+      "week": 11
+    },
+    {
+      "after": 0.29804338912240097,
+      "before": 0.30337169731192026,
+      "delta": -0.005328308189519293,
+      "field": "home_win_prob_v4_qb_plus",
+      "game_id": "2026_11_CIN_WAS",
+      "id": "dee645971dafbb25faa0cf3c",
+      "label": "v4_qb_plus home win",
+      "matchup": "CIN @ WAS",
+      "observed_at": "2026-11-24T00:57:08.766758+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-24T00:56:39.391678+00:00",
+      "reasons": [
+        "Saved research input fingerprint changed; individual cause is not attributed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-24T00:56:43.708693+00:00",
+      "unit": "probability",
+      "week": 11
+    },
+    {
+      "after": 0.2802092485004154,
+      "before": 0.304887365019123,
+      "delta": -0.024678116518707605,
+      "field": "home_win_prob_v5_boosted",
+      "game_id": "2026_11_CIN_WAS",
+      "id": "c51042b611ac2eb54f376d04",
+      "label": "v5_boosted home win",
+      "matchup": "CIN @ WAS",
+      "observed_at": "2026-11-24T00:57:08.766758+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-24T00:56:39.391678+00:00",
+      "reasons": [
+        "Saved research input fingerprint changed; individual cause is not attributed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-24T00:56:43.708693+00:00",
+      "unit": "probability",
+      "week": 11
+    },
+    {
+      "after": 0.29722245392599095,
+      "before": 0.3026372129936619,
+      "delta": -0.005414759067670971,
+      "field": "home_win_prob_v5_qb_plus",
+      "game_id": "2026_11_CIN_WAS",
+      "id": "3c9878346631cb9f2472bed4",
+      "label": "v5_qb_plus home win",
+      "matchup": "CIN @ WAS",
+      "observed_at": "2026-11-24T00:57:08.766758+00:00",
+      "player_id": null,
+      "previous_observed_at": "2026-11-24T00:56:39.391678+00:00",
+      "reasons": [
+        "Saved research input fingerprint changed; individual cause is not attributed."
+      ],
+      "season": 2026,
+      "source": null,
+      "source_at": "2026-11-24T00:56:43.708693+00:00",
+      "unit": "probability",
+      "week": 11
     }
   ],
   "games": {
@@ -12392,9 +12518,9 @@
       "away_team": "CIN",
       "game_id": "2026_11_CIN_WAS",
       "home_team": "WAS",
-      "input_fingerprint": "223d6e1bd1f938366e2dc087f4a971f69419542b516e7b2effd51b0c49b1b29f",
+      "input_fingerprint": "ba453e4fde1cecca095505fc70f9c602209b64d4040f3ad3bc75b0e1411a72dd",
       "kickoff": "2026-11-24T01:15:00+00:00",
-      "observed_at": "2026-11-23T19:30:37.854267+00:00",
+      "observed_at": "2026-11-24T00:57:08.766758+00:00",
       "qb_ids": [
         "00-0036442",
         "00-0039910"
@@ -12403,7 +12529,7 @@
       "season": 2026,
       "values": {
         "00-0031588:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Stefon Diggs \u00b7 anytime td probability",
           "player_id": "00-0031588",
           "unit": "probability",
@@ -12411,7 +12537,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0031588:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Stefon Diggs game status",
           "player_id": "00-0031588",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12419,7 +12545,7 @@
           "value": "unknown"
         },
         "00-0031588:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Stefon Diggs \u00b7 expected yards",
           "player_id": "00-0031588",
           "unit": "yards",
@@ -12427,14 +12553,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0031588:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Stefon Diggs practice",
           "player_id": "00-0031588",
           "unit": "status",
           "value": "Did Not Participate In Practice"
         },
         "00-0031588:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Stefon Diggs depth / starter status",
           "player_id": "00-0031588",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12464,7 +12590,7 @@
           "value": null
         },
         "00-0032268:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Marcus Mariota depth / starter status",
           "player_id": "00-0032268",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12479,7 +12605,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0033526:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Samaje Perine \u00b7 anytime td probability",
           "player_id": "00-0033526",
           "unit": "probability",
@@ -12495,7 +12621,7 @@
           "value": "unknown"
         },
         "00-0033526:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Samaje Perine \u00b7 expected yards",
           "player_id": "00-0033526",
           "unit": "yards",
@@ -12510,7 +12636,7 @@
           "value": null
         },
         "00-0033526:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Samaje Perine depth / starter status",
           "player_id": "00-0033526",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12525,7 +12651,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0033699:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Austin Ekeler \u00b7 anytime td probability",
           "player_id": "00-0033699",
           "unit": "probability",
@@ -12541,7 +12667,7 @@
           "value": "unknown"
         },
         "00-0033699:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Austin Ekeler \u00b7 expected yards",
           "player_id": "00-0033699",
           "unit": "yards",
@@ -12556,7 +12682,7 @@
           "value": null
         },
         "00-0033699:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Austin Ekeler depth / starter status",
           "player_id": "00-0033699",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12571,7 +12697,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0033955:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jeremy McNichols \u00b7 anytime td probability",
           "player_id": "00-0033955",
           "unit": "probability",
@@ -12587,7 +12713,7 @@
           "value": "unknown"
         },
         "00-0033955:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jeremy McNichols \u00b7 expected yards",
           "player_id": "00-0033955",
           "unit": "yards",
@@ -12602,7 +12728,7 @@
           "value": null
         },
         "00-0033955:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Jeremy McNichols depth / starter status",
           "player_id": "00-0033955",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12610,7 +12736,7 @@
           "value": "listed_reserve"
         },
         "00-0034613:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Tanner Hudson \u00b7 anytime td probability",
           "player_id": "00-0034613",
           "unit": "probability",
@@ -12626,7 +12752,7 @@
           "value": "unknown"
         },
         "00-0034613:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Tanner Hudson \u00b7 expected yards",
           "player_id": "00-0034613",
           "unit": "yards",
@@ -12641,7 +12767,7 @@
           "value": null
         },
         "00-0034613:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Tanner Hudson depth / starter status",
           "player_id": "00-0034613",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12656,7 +12782,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0034829:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Mike Gesicki \u00b7 anytime td probability",
           "player_id": "00-0034829",
           "unit": "probability",
@@ -12672,7 +12798,7 @@
           "value": "unknown"
         },
         "00-0034829:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Mike Gesicki \u00b7 expected yards",
           "player_id": "00-0034829",
           "unit": "yards",
@@ -12687,7 +12813,7 @@
           "value": null
         },
         "00-0034829:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Mike Gesicki depth / starter status",
           "player_id": "00-0034829",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12702,7 +12828,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035567:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Craig Reynolds \u00b7 anytime td probability",
           "player_id": "00-0035567",
           "unit": "probability",
@@ -12718,7 +12844,7 @@
           "value": "unknown"
         },
         "00-0035567:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Craig Reynolds \u00b7 expected yards",
           "player_id": "00-0035567",
           "unit": "yards",
@@ -12741,7 +12867,7 @@
           "value": "unknown"
         },
         "00-0035631:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Drew Sample \u00b7 anytime td probability",
           "player_id": "00-0035631",
           "unit": "probability",
@@ -12757,7 +12883,7 @@
           "value": "unknown"
         },
         "00-0035631:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Drew Sample \u00b7 expected yards",
           "player_id": "00-0035631",
           "unit": "yards",
@@ -12772,7 +12898,7 @@
           "value": null
         },
         "00-0035631:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Drew Sample depth / starter status",
           "player_id": "00-0035631",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12787,7 +12913,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0035659:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Terry McLaurin \u00b7 anytime td probability",
           "player_id": "00-0035659",
           "unit": "probability",
@@ -12803,7 +12929,7 @@
           "value": "unknown"
         },
         "00-0035659:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Terry McLaurin \u00b7 expected yards",
           "player_id": "00-0035659",
           "unit": "yards",
@@ -12818,7 +12944,7 @@
           "value": null
         },
         "00-0035659:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Terry McLaurin depth / starter status",
           "player_id": "00-0035659",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12833,7 +12959,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036410:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Tee Higgins \u00b7 anytime td probability",
           "player_id": "00-0036410",
           "unit": "probability",
@@ -12841,7 +12967,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0036410:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Tee Higgins game status",
           "player_id": "00-0036410",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12849,7 +12975,7 @@
           "value": "unknown"
         },
         "00-0036410:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Tee Higgins \u00b7 expected yards",
           "player_id": "00-0036410",
           "unit": "yards",
@@ -12857,14 +12983,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0036410:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Tee Higgins practice",
           "player_id": "00-0036410",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0036410:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Tee Higgins depth / starter status",
           "player_id": "00-0036410",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12879,7 +13005,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036415:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Van Jefferson \u00b7 anytime td probability",
           "player_id": "00-0036415",
           "unit": "probability",
@@ -12895,7 +13021,7 @@
           "value": "unknown"
         },
         "00-0036415:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Van Jefferson \u00b7 expected yards",
           "player_id": "00-0036415",
           "unit": "yards",
@@ -12910,7 +13036,7 @@
           "value": null
         },
         "00-0036415:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Van Jefferson depth / starter status",
           "player_id": "00-0036415",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12918,7 +13044,7 @@
           "value": "listed_reserve"
         },
         "00-0036442:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Joe Burrow \u00b7 anytime td probability",
           "player_id": "00-0036442",
           "unit": "probability",
@@ -12926,7 +13052,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0036442:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Joe Burrow game status",
           "player_id": "00-0036442",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -12934,7 +13060,7 @@
           "value": "unknown"
         },
         "00-0036442:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Joe Burrow \u00b7 expected yards",
           "player_id": "00-0036442",
           "unit": "yards",
@@ -12942,7 +13068,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0036442:passing_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Joe Burrow \u00b7 passing td probability",
           "player_id": "00-0036442",
           "unit": "probability",
@@ -12950,14 +13076,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0036442:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Joe Burrow practice",
           "player_id": "00-0036442",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0036442:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Joe Burrow depth / starter status",
           "player_id": "00-0036442",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -12972,7 +13098,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036626:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Dyami Brown \u00b7 anytime td probability",
           "player_id": "00-0036626",
           "unit": "probability",
@@ -12988,7 +13114,7 @@
           "value": "unknown"
         },
         "00-0036626:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Dyami Brown \u00b7 expected yards",
           "player_id": "00-0036626",
           "unit": "yards",
@@ -13003,7 +13129,7 @@
           "value": null
         },
         "00-0036626:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Dyami Brown depth / starter status",
           "player_id": "00-0036626",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13018,7 +13144,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036628:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "John Bates \u00b7 anytime td probability",
           "player_id": "00-0036628",
           "unit": "probability",
@@ -13026,7 +13152,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0036628:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "John Bates game status",
           "player_id": "00-0036628",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13034,7 +13160,7 @@
           "value": "unknown"
         },
         "00-0036628:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "John Bates \u00b7 expected yards",
           "player_id": "00-0036628",
           "unit": "yards",
@@ -13042,14 +13168,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0036628:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "John Bates practice",
           "player_id": "00-0036628",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0036628:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "John Bates depth / starter status",
           "player_id": "00-0036628",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13064,7 +13190,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0036900:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Ja'Marr Chase \u00b7 anytime td probability",
           "player_id": "00-0036900",
           "unit": "probability",
@@ -13080,7 +13206,7 @@
           "value": "unknown"
         },
         "00-0036900:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Ja'Marr Chase \u00b7 expected yards",
           "player_id": "00-0036900",
           "unit": "yards",
@@ -13095,7 +13221,7 @@
           "value": null
         },
         "00-0036900:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Ja'Marr Chase depth / starter status",
           "player_id": "00-0036900",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13110,7 +13236,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0037256:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Rachaad White \u00b7 anytime td probability",
           "player_id": "00-0037256",
           "unit": "probability",
@@ -13118,7 +13244,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0037256:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Rachaad White game status",
           "player_id": "00-0037256",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13126,7 +13252,7 @@
           "value": "Questionable"
         },
         "00-0037256:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Rachaad White \u00b7 expected yards",
           "player_id": "00-0037256",
           "unit": "yards",
@@ -13134,14 +13260,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0037256:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Rachaad White practice",
           "player_id": "00-0037256",
           "unit": "status",
           "value": "Did Not Participate In Practice"
         },
         "00-0037256:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Rachaad White depth / starter status",
           "player_id": "00-0037256",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13156,7 +13282,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0037742:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Treylon Burks \u00b7 anytime td probability",
           "player_id": "00-0037742",
           "unit": "probability",
@@ -13164,7 +13290,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0037742:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Treylon Burks game status",
           "player_id": "00-0037742",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13172,7 +13298,7 @@
           "value": "unknown"
         },
         "00-0037742:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Treylon Burks \u00b7 expected yards",
           "player_id": "00-0037742",
           "unit": "yards",
@@ -13180,14 +13306,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0037742:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Treylon Burks practice",
           "player_id": "00-0037742",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0037742:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Treylon Burks depth / starter status",
           "player_id": "00-0037742",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13202,7 +13328,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0037809:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Chig Okonkwo \u00b7 anytime td probability",
           "player_id": "00-0037809",
           "unit": "probability",
@@ -13210,7 +13336,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0037809:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Chig Okonkwo game status",
           "player_id": "00-0037809",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13218,7 +13344,7 @@
           "value": "unknown"
         },
         "00-0037809:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Chig Okonkwo \u00b7 expected yards",
           "player_id": "00-0037809",
           "unit": "yards",
@@ -13226,14 +13352,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0037809:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Chig Okonkwo practice",
           "player_id": "00-0037809",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0037809:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Chig Okonkwo depth / starter status",
           "player_id": "00-0037809",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13248,7 +13374,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0038597:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Chase Brown \u00b7 anytime td probability",
           "player_id": "00-0038597",
           "unit": "probability",
@@ -13264,7 +13390,7 @@
           "value": "unknown"
         },
         "00-0038597:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Chase Brown \u00b7 expected yards",
           "player_id": "00-0038597",
           "unit": "yards",
@@ -13279,7 +13405,7 @@
           "value": null
         },
         "00-0038597:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Chase Brown depth / starter status",
           "player_id": "00-0038597",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13294,7 +13420,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0038619:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Andrei Iosivas \u00b7 anytime td probability",
           "player_id": "00-0038619",
           "unit": "probability",
@@ -13302,7 +13428,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0038619:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Andrei Iosivas game status",
           "player_id": "00-0038619",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13310,7 +13436,7 @@
           "value": "Doubtful"
         },
         "00-0038619:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Andrei Iosivas \u00b7 expected yards",
           "player_id": "00-0038619",
           "unit": "yards",
@@ -13318,14 +13444,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0038619:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Andrei Iosivas practice",
           "player_id": "00-0038619",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0038619:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Andrei Iosivas depth / starter status",
           "player_id": "00-0038619",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13333,7 +13459,7 @@
           "value": "listed_reserve"
         },
         "00-0038839:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Mitchell Tinsley \u00b7 anytime td probability",
           "player_id": "00-0038839",
           "unit": "probability",
@@ -13349,7 +13475,7 @@
           "value": "unknown"
         },
         "00-0038839:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Mitchell Tinsley \u00b7 expected yards",
           "player_id": "00-0038839",
           "unit": "yards",
@@ -13364,7 +13490,7 @@
           "value": null
         },
         "00-0038839:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Mitchell Tinsley depth / starter status",
           "player_id": "00-0038839",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13379,7 +13505,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039355:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Luke McCaffrey \u00b7 anytime td probability",
           "player_id": "00-0039355",
           "unit": "probability",
@@ -13395,7 +13521,7 @@
           "value": "unknown"
         },
         "00-0039355:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Luke McCaffrey \u00b7 expected yards",
           "player_id": "00-0039355",
           "unit": "yards",
@@ -13410,7 +13536,7 @@
           "value": null
         },
         "00-0039355:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Luke McCaffrey depth / starter status",
           "player_id": "00-0039355",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13425,7 +13551,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039686:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Colson Yankoff \u00b7 anytime td probability",
           "player_id": "00-0039686",
           "unit": "probability",
@@ -13433,7 +13559,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0039686:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Colson Yankoff game status",
           "player_id": "00-0039686",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13441,7 +13567,7 @@
           "value": "unknown"
         },
         "00-0039686:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Colson Yankoff \u00b7 expected yards",
           "player_id": "00-0039686",
           "unit": "yards",
@@ -13449,14 +13575,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0039686:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Colson Yankoff practice",
           "player_id": "00-0039686",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0039686:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Colson Yankoff depth / starter status",
           "player_id": "00-0039686",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13471,7 +13597,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039814:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Erick All \u00b7 anytime td probability",
           "player_id": "00-0039814",
           "unit": "probability",
@@ -13487,7 +13613,7 @@
           "value": "unknown"
         },
         "00-0039814:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Erick All \u00b7 expected yards",
           "player_id": "00-0039814",
           "unit": "yards",
@@ -13502,7 +13628,7 @@
           "value": null
         },
         "00-0039814:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Erick All depth / starter status",
           "player_id": "00-0039814",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13517,7 +13643,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039910:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jayden Daniels \u00b7 anytime td probability",
           "player_id": "00-0039910",
           "unit": "probability",
@@ -13525,7 +13651,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0039910:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Jayden Daniels game status",
           "player_id": "00-0039910",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13533,7 +13659,7 @@
           "value": "unknown"
         },
         "00-0039910:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jayden Daniels \u00b7 expected yards",
           "player_id": "00-0039910",
           "unit": "yards",
@@ -13541,7 +13667,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0039910:passing_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jayden Daniels \u00b7 passing td probability",
           "player_id": "00-0039910",
           "unit": "probability",
@@ -13549,14 +13675,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0039910:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Jayden Daniels practice",
           "player_id": "00-0039910",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0039910:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Jayden Daniels depth / starter status",
           "player_id": "00-0039910",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13571,7 +13697,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0039912:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Ben Sinnott \u00b7 anytime td probability",
           "player_id": "00-0039912",
           "unit": "probability",
@@ -13587,7 +13713,7 @@
           "value": "unknown"
         },
         "00-0039912:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Ben Sinnott \u00b7 expected yards",
           "player_id": "00-0039912",
           "unit": "yards",
@@ -13602,7 +13728,7 @@
           "value": null
         },
         "00-0039912:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Ben Sinnott depth / starter status",
           "player_id": "00-0039912",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13617,7 +13743,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040164:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jaylin Lane \u00b7 anytime td probability",
           "player_id": "00-0040164",
           "unit": "probability",
@@ -13633,7 +13759,7 @@
           "value": "unknown"
         },
         "00-0040164:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jaylin Lane \u00b7 expected yards",
           "player_id": "00-0040164",
           "unit": "yards",
@@ -13648,7 +13774,7 @@
           "value": null
         },
         "00-0040164:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Jaylin Lane depth / starter status",
           "player_id": "00-0040164",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13663,7 +13789,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040208:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Tahj Brooks \u00b7 anytime td probability",
           "player_id": "00-0040208",
           "unit": "probability",
@@ -13679,7 +13805,7 @@
           "value": "unknown"
         },
         "00-0040208:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Tahj Brooks \u00b7 expected yards",
           "player_id": "00-0040208",
           "unit": "yards",
@@ -13694,7 +13820,7 @@
           "value": null
         },
         "00-0040208:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Tahj Brooks depth / starter status",
           "player_id": "00-0040208",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13709,7 +13835,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040242:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jacory Croskey-Merritt \u00b7 anytime td probability",
           "player_id": "00-0040242",
           "unit": "probability",
@@ -13717,7 +13843,7 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0040242:availability": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Jacory Croskey-Merritt game status",
           "player_id": "00-0040242",
           "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
@@ -13725,7 +13851,7 @@
           "value": "Questionable"
         },
         "00-0040242:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jacory Croskey-Merritt \u00b7 expected yards",
           "player_id": "00-0040242",
           "unit": "yards",
@@ -13733,14 +13859,14 @@
           "version": "0a797b9e9e0cc191"
         },
         "00-0040242:practice": {
-          "at": "2026-11-22T22:30:43.752482+00:00",
+          "at": "2026-11-24T00:57:07.604593+00:00",
           "label": "Jacory Croskey-Merritt practice",
           "player_id": "00-0040242",
           "unit": "status",
           "value": "Full Participation in Practice"
         },
         "00-0040242:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Jacory Croskey-Merritt depth / starter status",
           "player_id": "00-0040242",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13755,7 +13881,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0040534:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Ke'Shawn Williams \u00b7 anytime td probability",
           "player_id": "00-0040534",
           "unit": "probability",
@@ -13771,7 +13897,7 @@
           "value": "unknown"
         },
         "00-0040534:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Ke'Shawn Williams \u00b7 expected yards",
           "player_id": "00-0040534",
           "unit": "yards",
@@ -13794,7 +13920,7 @@
           "value": "unknown"
         },
         "00-0040785:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Dohnte Meyers \u00b7 anytime td probability",
           "player_id": "00-0040785",
           "unit": "probability",
@@ -13810,7 +13936,7 @@
           "value": "unknown"
         },
         "00-0040785:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Dohnte Meyers \u00b7 expected yards",
           "player_id": "00-0040785",
           "unit": "yards",
@@ -13825,7 +13951,7 @@
           "value": null
         },
         "00-0040785:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Dohnte Meyers depth / starter status",
           "player_id": "00-0040785",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13840,7 +13966,7 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0041040:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Antonio Williams \u00b7 anytime td probability",
           "player_id": "00-0041040",
           "unit": "probability",
@@ -13856,7 +13982,7 @@
           "value": "unknown"
         },
         "00-0041040:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Antonio Williams \u00b7 expected yards",
           "player_id": "00-0041040",
           "unit": "yards",
@@ -13871,7 +13997,7 @@
           "value": null
         },
         "00-0041040:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Antonio Williams depth / starter status",
           "player_id": "00-0041040",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13901,7 +14027,7 @@
           "value": null
         },
         "00-0041069:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Colbie Young depth / starter status",
           "player_id": "00-0041069",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13909,7 +14035,7 @@
           "value": "listed_reserve"
         },
         "00-0041116:anytime_td_probability": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jack Endries \u00b7 anytime td probability",
           "player_id": "00-0041116",
           "unit": "probability",
@@ -13925,7 +14051,7 @@
           "value": "unknown"
         },
         "00-0041116:expected_yards": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Jack Endries \u00b7 expected yards",
           "player_id": "00-0041116",
           "unit": "yards",
@@ -13940,7 +14066,7 @@
           "value": null
         },
         "00-0041116:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Jack Endries depth / starter status",
           "player_id": "00-0041116",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -13955,22 +14081,22 @@
           "version": "recent-opportunities-mean-v1"
         },
         "00-0041117:availability": {
-          "at": null,
+          "at": "2026-11-24T00:57:08.754988+00:00",
           "label": "Athan Kaliakmanis game status",
           "player_id": "00-0041117",
-          "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+          "source": "https://www.espn.com/nfl/injuries",
           "unit": "status",
-          "value": "unknown"
+          "value": "Out"
         },
         "00-0041117:practice": {
-          "at": null,
+          "at": "2026-11-24T00:57:08.754988+00:00",
           "label": "Athan Kaliakmanis practice",
           "player_id": "00-0041117",
           "unit": "status",
           "value": null
         },
         "00-0041117:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Athan Kaliakmanis depth / starter status",
           "player_id": "00-0041117",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14001,22 +14127,22 @@
           "value": "unknown"
         },
         "00-0041178:availability": {
-          "at": null,
+          "at": "2026-11-24T00:57:08.754988+00:00",
           "label": "Robert Henry Jr. game status",
           "player_id": "00-0041178",
-          "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+          "source": "https://www.espn.com/nfl/injuries",
           "unit": "status",
-          "value": "unknown"
+          "value": "Out"
         },
         "00-0041178:practice": {
-          "at": null,
+          "at": "2026-11-24T00:57:08.754988+00:00",
           "label": "Robert Henry Jr. practice",
           "player_id": "00-0041178",
           "unit": "status",
           "value": null
         },
         "00-0041178:starter": {
-          "at": "2026-11-22T15:12:52Z",
+          "at": "2026-11-23T19:11:07Z",
           "label": "Robert Henry Jr. depth / starter status",
           "player_id": "00-0041178",
           "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
@@ -14024,14 +14150,14 @@
           "value": "listed_reserve"
         },
         "away_points": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "CIN projected points",
           "unit": "points",
           "value": 29.0,
           "version": "0a797b9e9e0cc191"
         },
         "away_qb": {
-          "at": "2026-11-19T23:38:07.252553+00:00",
+          "at": "2026-11-24T00:56:43.571040+00:00",
           "display": "Joe Burrow",
           "label": "CIN projected QB",
           "source": "Latest prior-week primary passer; not a starter announcement",
@@ -14039,21 +14165,21 @@
           "value": "00-0036442"
         },
         "away_qb_status": {
-          "at": "2026-11-19T23:38:07.252553+00:00",
+          "at": "2026-11-24T00:56:43.571040+00:00",
           "label": "CIN QB confirmation",
           "source": "Latest prior-week primary passer; not a starter announcement",
           "unit": "status",
           "value": "unconfirmed_proxy"
         },
         "home_points": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "WAS projected points",
           "unit": "points",
           "value": 23.8,
           "version": "0a797b9e9e0cc191"
         },
         "home_qb": {
-          "at": "2026-11-19T23:38:07.252553+00:00",
+          "at": "2026-11-24T00:56:43.571040+00:00",
           "display": "Jayden Daniels",
           "label": "WAS projected QB",
           "source": "Latest prior-week primary passer; not a starter announcement",
@@ -14061,38 +14187,38 @@
           "value": "00-0039910"
         },
         "home_qb_status": {
-          "at": "2026-11-19T23:38:07.252553+00:00",
+          "at": "2026-11-24T00:56:43.571040+00:00",
           "label": "WAS QB confirmation",
           "source": "Latest prior-week primary passer; not a starter announcement",
           "unit": "status",
           "value": "unconfirmed_proxy"
         },
         "home_win_prob_v4_a": {
-          "at": "2026-11-22T20:23:25.097137+00:00",
+          "at": "2026-11-24T00:56:43.708693+00:00",
           "label": "v4_a home win",
           "unit": "probability",
-          "value": 0.3452356207257919
+          "value": 0.33833327086514414
         },
         "home_win_prob_v4_qb_plus": {
-          "at": "2026-11-22T20:23:25.097137+00:00",
+          "at": "2026-11-24T00:56:43.708693+00:00",
           "label": "v4_qb_plus home win",
           "unit": "probability",
-          "value": 0.30337169731192026
+          "value": 0.29804338912240097
         },
         "home_win_prob_v5_boosted": {
-          "at": "2026-11-22T20:23:25.097137+00:00",
+          "at": "2026-11-24T00:56:43.708693+00:00",
           "label": "v5_boosted home win",
           "unit": "probability",
-          "value": 0.304887365019123
+          "value": 0.2802092485004154
         },
         "home_win_prob_v5_qb_plus": {
-          "at": "2026-11-22T20:23:25.097137+00:00",
+          "at": "2026-11-24T00:56:43.708693+00:00",
           "label": "v5_qb_plus home win",
           "unit": "probability",
-          "value": 0.3026372129936619
+          "value": 0.29722245392599095
         },
         "research_model_version": {
-          "at": "2026-11-22T20:23:42.952879+00:00",
+          "at": "2026-11-24T00:57:01.483444+00:00",
           "label": "Research model version",
           "unit": "version",
           "value": "0a797b9e9e0cc191"
@@ -30283,7 +30409,7 @@
       "week": 11
     }
   },
-  "last_observed_at": "2026-11-23T19:30:37.854267+00:00",
+  "last_observed_at": "2026-11-24T00:57:08.766758+00:00",
   "schema_version": 1,
   "tracking_started_at": "2026-11-17T18:22:25.058938+00:00"
 }

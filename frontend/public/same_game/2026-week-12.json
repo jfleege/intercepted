@@ -1578,7 +1578,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_BAL_HOU": {
@@ -3159,7 +3159,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_CAR_TB": {
@@ -4740,7 +4740,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_CHI_DET": {
@@ -6321,7 +6321,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_DEN_PIT": {
@@ -6394,6 +6394,16 @@
               },
               {
                 "label": "1+ rush/receiving TD",
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "RJ Harvey",
                 "player_id": "00-0040730",
                 "probability": 0.2165,
@@ -6421,6 +6431,103 @@
                 "stat": "receiving_yards",
                 "team": "PIT",
                 "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.205581
+          },
+          {
+            "legs": [
+              {
+                "label": "1+ passing TD",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.8482,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Bo Nix",
+                "player_id": "00-0039732",
+                "probability": 0.7505,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jonah Coleman",
+                "player_id": "00-0041496",
+                "probability": 0.4121,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3278,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.3165,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Darnell Washington",
+                "player_id": "00-0038558",
+                "probability": 0.2191,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "RJ Harvey",
+                "player_id": "00-0040730",
+                "probability": 0.2165,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DK Metcalf",
+                "player_id": "00-0035640",
+                "probability": 0.2134,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -6501,9 +6608,9 @@
               },
               {
                 "label": "1+ rush/receiving TD",
-                "name": "RJ Harvey",
-                "player_id": "00-0040730",
-                "probability": 0.2165,
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
                 "role_verified": false,
                 "stat": "scoring_tds",
                 "team": "DEN",
@@ -6511,12 +6618,12 @@
               },
               {
                 "label": "1+ rush/receiving TD",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.2134,
-                "role_verified": true,
+                "name": "RJ Harvey",
+                "player_id": "00-0040730",
+                "probability": 0.2165,
+                "role_verified": false,
                 "stat": "scoring_tds",
-                "team": "PIT",
+                "team": "DEN",
                 "threshold": 1
               },
               {
@@ -6530,103 +6637,6 @@
                 "threshold": 25
               },
               {
-                "label": "1+ rush/receiving TD",
-                "name": "Roman Wilson",
-                "player_id": "00-0039739",
-                "probability": 0.1956,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.1956
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Bo Nix",
-                "player_id": "00-0039732",
-                "probability": 0.7505,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.4121,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.3278,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Pat Freiermuth",
-                "player_id": "00-0036894",
-                "probability": 0.3165,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Darnell Washington",
-                "player_id": "00-0038558",
-                "probability": 0.2191,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "RJ Harvey",
-                "player_id": "00-0040730",
-                "probability": 0.2165,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.2134,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
                 "label": "25+ receiving yards",
                 "name": "Michael Pittman",
                 "player_id": "00-0036252",
@@ -6635,21 +6645,11 @@
                 "stat": "receiving_yards",
                 "team": "PIT",
                 "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Roman Wilson",
-                "player_id": "00-0039739",
-                "probability": 0.1956,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.1956
+            "upper": 0.19773
           }
         ],
         "2": [
@@ -7030,9 +7030,9 @@
               },
               {
                 "label": "1+ rush/receiving TD",
-                "name": "RJ Harvey",
-                "player_id": "00-0040730",
-                "probability": 0.2165,
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
                 "role_verified": false,
                 "stat": "scoring_tds",
                 "team": "DEN",
@@ -7041,7 +7041,7 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.2165
+            "upper": 0.2187
           },
           {
             "legs": [
@@ -7097,9 +7097,9 @@
               },
               {
                 "label": "1+ rush/receiving TD",
-                "name": "RJ Harvey",
-                "player_id": "00-0040730",
-                "probability": 0.2165,
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
                 "role_verified": false,
                 "stat": "scoring_tds",
                 "team": "DEN",
@@ -7108,7 +7108,7 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.2165
+            "upper": 0.2187
           }
         ],
         "7": [
@@ -7176,6 +7176,249 @@
               },
               {
                 "label": "1+ rush/receiving TD",
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2187
+          },
+          {
+            "legs": [
+              {
+                "label": "1+ passing TD",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.8482,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Bo Nix",
+                "player_id": "00-0039732",
+                "probability": 0.7505,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jonah Coleman",
+                "player_id": "00-0041496",
+                "probability": 0.4121,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3278,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.3165,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Darnell Washington",
+                "player_id": "00-0038558",
+                "probability": 0.2191,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "RJ Harvey",
+                "player_id": "00-0040730",
+                "probability": 0.2165,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2165
+          },
+          {
+            "legs": [
+              {
+                "label": "1+ passing TD",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.8482,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Bo Nix",
+                "player_id": "00-0039732",
+                "probability": 0.7505,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jonah Coleman",
+                "player_id": "00-0041496",
+                "probability": 0.4121,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3278,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.3165,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "RJ Harvey",
+                "player_id": "00-0040730",
+                "probability": 0.2165,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2165
+          }
+        ],
+        "8": [
+          {
+            "legs": [
+              {
+                "label": "1+ passing TD",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.8482,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Bo Nix",
+                "player_id": "00-0039732",
+                "probability": 0.7505,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jonah Coleman",
+                "player_id": "00-0041496",
+                "probability": 0.4121,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3278,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.3165,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Darnell Washington",
+                "player_id": "00-0038558",
+                "probability": 0.2191,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "RJ Harvey",
                 "player_id": "00-0040730",
                 "probability": 0.2165,
@@ -7253,165 +7496,9 @@
               },
               {
                 "label": "1+ rush/receiving TD",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.2134,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.2134
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Bo Nix",
-                "player_id": "00-0039732",
-                "probability": 0.7505,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.4121,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.3278,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Pat Freiermuth",
-                "player_id": "00-0036894",
-                "probability": 0.3165,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "RJ Harvey",
-                "player_id": "00-0040730",
-                "probability": 0.2165,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.2134,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.2134
-          }
-        ],
-        "8": [
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Bo Nix",
-                "player_id": "00-0039732",
-                "probability": 0.7505,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.4121,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.3278,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Pat Freiermuth",
-                "player_id": "00-0036894",
-                "probability": 0.3165,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Darnell Washington",
-                "player_id": "00-0038558",
-                "probability": 0.2191,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "RJ Harvey",
-                "player_id": "00-0040730",
-                "probability": 0.2165,
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
                 "role_verified": false,
                 "stat": "scoring_tds",
                 "team": "DEN",
@@ -7505,83 +7592,6 @@
                 "threshold": 1
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Brandon Johnson",
-                "player_id": "00-0037382",
-                "probability": 0.205581,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "PIT",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.205581
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Bo Nix",
-                "player_id": "00-0039732",
-                "probability": 0.7505,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.4121,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.3278,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Pat Freiermuth",
-                "player_id": "00-0036894",
-                "probability": 0.3165,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Darnell Washington",
-                "player_id": "00-0038558",
-                "probability": 0.2191,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
                 "label": "1+ rush/receiving TD",
                 "name": "DK Metcalf",
                 "player_id": "00-0035640",
@@ -7590,21 +7600,11 @@
                 "stat": "scoring_tds",
                 "team": "PIT",
                 "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Brandon Johnson",
-                "player_id": "00-0037382",
-                "probability": 0.205581,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "PIT",
-                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.205581
+            "upper": 0.2134
           }
         ],
         "9": [
@@ -7672,6 +7672,16 @@
               },
               {
                 "label": "1+ rush/receiving TD",
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
                 "name": "RJ Harvey",
                 "player_id": "00-0040730",
                 "probability": 0.2165,
@@ -7688,6 +7698,93 @@
                 "role_verified": true,
                 "stat": "scoring_tds",
                 "team": "PIT",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2134
+          },
+          {
+            "legs": [
+              {
+                "label": "1+ passing TD",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.8482,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Bo Nix",
+                "player_id": "00-0039732",
+                "probability": 0.7505,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jonah Coleman",
+                "player_id": "00-0041496",
+                "probability": 0.4121,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.3278,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Pat Freiermuth",
+                "player_id": "00-0036894",
+                "probability": 0.3165,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Darnell Washington",
+                "player_id": "00-0038558",
+                "probability": 0.2191,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "PIT",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "RJ Harvey",
+                "player_id": "00-0040730",
+                "probability": 0.2165,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DEN",
                 "threshold": 1
               },
               {
@@ -7769,9 +7866,9 @@
               },
               {
                 "label": "1+ rush/receiving TD",
-                "name": "RJ Harvey",
-                "player_id": "00-0040730",
-                "probability": 0.2165,
+                "name": "J.K. Dobbins",
+                "player_id": "00-0036158",
+                "probability": 0.2187,
                 "role_verified": false,
                 "stat": "scoring_tds",
                 "team": "DEN",
@@ -7789,93 +7886,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Michael Pittman",
-                "player_id": "00-0036252",
-                "probability": 0.19773,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "PIT",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.19773
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Bo Nix",
-                "player_id": "00-0039732",
-                "probability": 0.7505,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.4121,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.3278,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Pat Freiermuth",
-                "player_id": "00-0036894",
-                "probability": 0.3165,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Darnell Washington",
-                "player_id": "00-0038558",
-                "probability": 0.2191,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "RJ Harvey",
-                "player_id": "00-0040730",
-                "probability": 0.2165,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "DEN",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Brandon Johnson",
                 "player_id": "00-0037382",
                 "probability": 0.205581,
@@ -7883,26 +7893,16 @@
                 "stat": "receiving_yards",
                 "team": "PIT",
                 "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Michael Pittman",
-                "player_id": "00-0036252",
-                "probability": 0.19773,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "PIT",
-                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.19773
+            "upper": 0.205581
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_GB_LA": {
@@ -9483,7 +9483,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_KC_BUF": {
@@ -9495,6 +9495,16 @@
           {
             "legs": [
               {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
                 "label": "1+ passing TD",
                 "name": "Patrick Mahomes",
                 "player_id": "00-0033873",
@@ -9523,6 +9533,16 @@
                 "stat": "scoring_tds",
                 "team": "BUF",
                 "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
               },
               {
                 "label": "1+ rush/receiving TD",
@@ -9563,6 +9583,210 @@
                 "stat": "receiving_yards",
                 "team": "KC",
                 "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Rashee Rice",
+                "player_id": "00-0039067",
+                "probability": 0.2184,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2184
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Travis Kelce",
+                "player_id": "00-0030506",
+                "probability": 0.303,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DJ Moore",
+                "player_id": "00-0034827",
+                "probability": 0.2975,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tyquan Thornton",
+                "player_id": "00-0038104",
+                "probability": 0.251893,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Josh Downs",
+                "player_id": "00-0038997",
+                "probability": 0.214,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.214
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Travis Kelce",
+                "player_id": "00-0030506",
+                "probability": 0.303,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DJ Moore",
+                "player_id": "00-0034827",
+                "probability": 0.2975,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
               },
               {
                 "label": "1+ rush/receiving TD",
@@ -9583,238 +9807,68 @@
                 "stat": "scoring_tds",
                 "team": "KC",
                 "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Keon Coleman",
-                "player_id": "00-0039901",
-                "probability": 0.2116,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.2116
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Rashee Rice",
-                "player_id": "00-0039067",
-                "probability": 0.2184,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Josh Downs",
-                "player_id": "00-0038997",
-                "probability": 0.214,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Khalil Shakir",
-                "player_id": "00-0037261",
-                "probability": 0.1943,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.1943
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Rashee Rice",
-                "player_id": "00-0039067",
-                "probability": 0.2184,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Keon Coleman",
-                "player_id": "00-0039901",
-                "probability": 0.2116,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Khalil Shakir",
-                "player_id": "00-0037261",
-                "probability": 0.1943,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.1943
+            "upper": 0.214
           }
         ],
         "2": [
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              }
+            ],
+            "lower": 0.830101,
+            "result": "pending",
+            "upper": 0.8838
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              }
+            ],
+            "lower": 0.822801,
+            "result": "pending",
+            "upper": 0.8765
+          },
           {
             "legs": [
               {
@@ -9841,9 +9895,21 @@
             "lower": 0.7603,
             "result": "pending",
             "upper": 0.8765
-          },
+          }
+        ],
+        "5": [
           {
             "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
               {
                 "label": "1+ passing TD",
                 "name": "Patrick Mahomes",
@@ -9854,23 +9920,6 @@
                 "team": "KC",
                 "threshold": 1
               },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              }
-            ],
-            "lower": 0.7054,
-            "result": "pending",
-            "upper": 0.8216
-          },
-          {
-            "legs": [
               {
                 "label": "1+ passing TD",
                 "name": "Josh Allen",
@@ -9890,16 +9939,284 @@
                 "stat": "scoring_tds",
                 "team": "BUF",
                 "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
               }
             ],
-            "lower": 0.6981,
+            "lower": 0.169571,
             "result": "pending",
-            "upper": 0.8216
-          }
-        ],
-        "5": [
+            "upper": 0.64137
+          },
           {
             "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.3652
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.3652
+          }
+        ],
+        "6": [
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.3652
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Travis Kelce",
+                "player_id": "00-0030506",
+                "probability": 0.303,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.303
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
               {
                 "label": "1+ passing TD",
                 "name": "Patrick Mahomes",
@@ -9954,329 +10271,22 @@
             "lower": 0,
             "result": "pending",
             "upper": 0.303
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.2975
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.2975
-          }
-        ],
-        "6": [
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.2975
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.251893
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.251893
           }
         ],
         "7": [
           {
             "legs": [
               {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
                 "label": "1+ passing TD",
                 "name": "Patrick Mahomes",
                 "player_id": "00-0033873",
@@ -10305,6 +10315,512 @@
                 "stat": "scoring_tds",
                 "team": "BUF",
                 "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Travis Kelce",
+                "player_id": "00-0030506",
+                "probability": 0.303,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.303
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DJ Moore",
+                "player_id": "00-0034827",
+                "probability": 0.2975,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2975
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Travis Kelce",
+                "player_id": "00-0030506",
+                "probability": 0.303,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DJ Moore",
+                "player_id": "00-0034827",
+                "probability": 0.2975,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2975
+          }
+        ],
+        "8": [
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Travis Kelce",
+                "player_id": "00-0030506",
+                "probability": 0.303,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DJ Moore",
+                "player_id": "00-0034827",
+                "probability": 0.2975,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.2975
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Travis Kelce",
+                "player_id": "00-0030506",
+                "probability": 0.303,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tyquan Thornton",
+                "player_id": "00-0038104",
+                "probability": 0.251893,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "KC",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.251893
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Emmett Johnson",
+                "player_id": "00-0041013",
+                "probability": 0.3652,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "DJ Moore",
+                "player_id": "00-0034827",
+                "probability": 0.2975,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tyquan Thornton",
+                "player_id": "00-0038104",
+                "probability": 0.251893,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "KC",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.251893
+          }
+        ],
+        "9": [
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Patrick Mahomes",
+                "player_id": "00-0033873",
+                "probability": 0.8838,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "KC",
+                "threshold": 1
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Allen",
+                "player_id": "00-0034857",
+                "probability": 0.8765,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "James Cook",
+                "player_id": "00-0037248",
+                "probability": 0.8216,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "BUF",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
               },
               {
                 "label": "1+ rush/receiving TD",
@@ -10354,6 +10870,16 @@
           {
             "legs": [
               {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
                 "label": "1+ passing TD",
                 "name": "Patrick Mahomes",
                 "player_id": "00-0033873",
@@ -10382,6 +10908,16 @@
                 "stat": "scoring_tds",
                 "team": "BUF",
                 "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
               },
               {
                 "label": "1+ rush/receiving TD",
@@ -10431,6 +10967,16 @@
           {
             "legs": [
               {
+                "label": "25+ rushing yards",
+                "name": "Kenneth Walker III",
+                "player_id": "00-0038134",
+                "probability": 0.946301,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "KC",
+                "threshold": 25
+              },
+              {
                 "label": "1+ passing TD",
                 "name": "Patrick Mahomes",
                 "player_id": "00-0033873",
@@ -10459,6 +11005,16 @@
                 "stat": "scoring_tds",
                 "team": "BUF",
                 "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Kincaid",
+                "player_id": "00-0038933",
+                "probability": 0.64137,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BUF",
+                "threshold": 25
               },
               {
                 "label": "1+ rush/receiving TD",
@@ -10504,567 +11060,11 @@
             "lower": 0,
             "result": "pending",
             "upper": 0.2184
-          }
-        ],
-        "8": [
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Rashee Rice",
-                "player_id": "00-0039067",
-                "probability": 0.2184,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.2184
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Josh Downs",
-                "player_id": "00-0038997",
-                "probability": 0.214,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.214
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Rashee Rice",
-                "player_id": "00-0039067",
-                "probability": 0.2184,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Josh Downs",
-                "player_id": "00-0038997",
-                "probability": 0.214,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.214
-          }
-        ],
-        "9": [
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Rashee Rice",
-                "player_id": "00-0039067",
-                "probability": 0.2184,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Josh Downs",
-                "player_id": "00-0038997",
-                "probability": 0.214,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.214
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Rashee Rice",
-                "player_id": "00-0039067",
-                "probability": 0.2184,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Keon Coleman",
-                "player_id": "00-0039901",
-                "probability": 0.2116,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.2116
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Patrick Mahomes",
-                "player_id": "00-0033873",
-                "probability": 0.8838,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Allen",
-                "player_id": "00-0034857",
-                "probability": 0.8765,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "James Cook",
-                "player_id": "00-0037248",
-                "probability": 0.8216,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Emmett Johnson",
-                "player_id": "00-0041013",
-                "probability": 0.3652,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Travis Kelce",
-                "player_id": "00-0030506",
-                "probability": 0.303,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "DJ Moore",
-                "player_id": "00-0034827",
-                "probability": 0.2975,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tyquan Thornton",
-                "player_id": "00-0038104",
-                "probability": 0.251893,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "KC",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Josh Downs",
-                "player_id": "00-0038997",
-                "probability": 0.214,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "KC",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Keon Coleman",
-                "player_id": "00-0039901",
-                "probability": 0.2116,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "BUF",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.2116
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_LV_CLE": {
@@ -12645,7 +12645,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_NE_LAC": {
@@ -14226,7 +14226,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_NO_CIN": {
@@ -15807,7 +15807,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_NYG_IND": {
@@ -17388,7 +17388,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_NYJ_MIA": {
@@ -18969,7 +18969,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_PHI_DAL": {
@@ -18978,6 +18978,113 @@
       "kickoff": "2026-11-26T21:30:00+00:00",
       "options": {
         "10": [
+          {
+            "legs": [
+              {
+                "label": "1+ passing TD",
+                "name": "Dak Prescott",
+                "player_id": "00-0033077",
+                "probability": 0.9377,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "DAL",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Javonte Williams",
+                "player_id": "00-0036997",
+                "probability": 0.705,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "DAL",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Dameon Pierce",
+                "player_id": "00-0037258",
+                "probability": 0.630513,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "PHI",
+                "threshold": 25
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "CeeDee Lamb",
+                "player_id": "00-0036358",
+                "probability": 0.6234,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "DAL",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "Saquon Barkley",
+                "player_id": "00-0034844",
+                "probability": 0.4409,
+                "role_verified": true,
+                "stat": "scoring_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "1+ rush/receiving TD",
+                "name": "George Pickens",
+                "player_id": "00-0037247",
+                "probability": 0.4324,
+                "role_verified": false,
+                "stat": "scoring_tds",
+                "team": "DAL",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tyler Goodson",
+                "player_id": "00-0037120",
+                "probability": 0.432007,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "DAL",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Milton III",
+                "player_id": "00-0039398",
+                "probability": 0.3606,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "PHI",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dontayvion Wicks",
+                "player_id": "00-0038393",
+                "probability": 0.342731,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "PHI",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jake Ferguson",
+                "player_id": "00-0038041",
+                "probability": 0.319056,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "DAL",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.319056
+          },
           {
             "legs": [
               {
@@ -19169,110 +19276,13 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Dontayvion Wicks",
-                "player_id": "00-0038393",
-                "probability": 0.342731,
-                "role_verified": false,
+                "name": "Jake Ferguson",
+                "player_id": "00-0038041",
+                "probability": 0.319056,
+                "role_verified": true,
                 "stat": "receiving_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Ryan Flournoy",
-                "player_id": "00-0039410",
-                "probability": 0.301,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "DAL",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.301
-          },
-          {
-            "legs": [
-              {
-                "label": "1+ passing TD",
-                "name": "Dak Prescott",
-                "player_id": "00-0033077",
-                "probability": 0.9377,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "DAL",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Javonte Williams",
-                "player_id": "00-0036997",
-                "probability": 0.705,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "DAL",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Dameon Pierce",
-                "player_id": "00-0037258",
-                "probability": 0.630513,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "PHI",
-                "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "CeeDee Lamb",
-                "player_id": "00-0036358",
-                "probability": 0.6234,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "DAL",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Saquon Barkley",
-                "player_id": "00-0034844",
-                "probability": 0.4409,
-                "role_verified": true,
-                "stat": "scoring_tds",
-                "team": "PHI",
-                "threshold": 1
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "George Pickens",
-                "player_id": "00-0037247",
-                "probability": 0.4324,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "DAL",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tyler Goodson",
-                "player_id": "00-0037120",
-                "probability": 0.432007,
-                "role_verified": false,
-                "stat": "rushing_yards",
                 "team": "DAL",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Joe Milton III",
-                "player_id": "00-0039398",
-                "probability": 0.3606,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PHI",
-                "threshold": 1
               },
               {
                 "label": "25+ rushing yards",
@@ -19283,21 +19293,11 @@
                 "stat": "rushing_yards",
                 "team": "PHI",
                 "threshold": 25
-              },
-              {
-                "label": "1+ rush/receiving TD",
-                "name": "Ryan Flournoy",
-                "player_id": "00-0039410",
-                "probability": 0.301,
-                "role_verified": false,
-                "stat": "scoring_tds",
-                "team": "DAL",
-                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.301
+            "upper": 0.311608
           }
         ],
         "2": [
@@ -20436,19 +20436,19 @@
                 "threshold": 1
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Elijah Mitchell",
-                "player_id": "00-0036567",
-                "probability": 0.311608,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "PHI",
+                "label": "25+ receiving yards",
+                "name": "Jake Ferguson",
+                "player_id": "00-0038041",
+                "probability": 0.319056,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "DAL",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.311608
+            "upper": 0.319056
           },
           {
             "legs": [
@@ -20533,24 +20533,24 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Elijah Mitchell",
-                "player_id": "00-0036567",
-                "probability": 0.311608,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "PHI",
+                "label": "25+ receiving yards",
+                "name": "Jake Ferguson",
+                "player_id": "00-0038041",
+                "probability": 0.319056,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "DAL",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.311608
+            "upper": 0.319056
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_SEA_SF": {
@@ -22131,7 +22131,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_TEN_JAX": {
@@ -23712,7 +23712,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     },
     "2026_12_WAS_ARI": {
@@ -25293,7 +25293,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T02:04:52.981183+00:00",
+      "saved_at": "2026-11-25T12:39:08.378298+00:00",
       "signal": "limited"
     }
   },

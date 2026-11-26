@@ -2,7 +2,7 @@
   "games": {
     "2026_12_ATL_MIN": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -1578,12 +1578,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_BAL_HOU": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -3159,12 +3159,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_CAR_TB": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-12-01T01:15:00+00:00",
       "options": {
         "10": [
@@ -4740,12 +4740,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_CHI_DET": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-26T18:00:00+00:00",
       "options": {
         "10": [
@@ -6321,17 +6321,27 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_DEN_PIT": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-27T20:00:00+00:00",
       "options": {
         "10": [
           {
             "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
               {
                 "label": "20+ passing attempts",
                 "name": "Bo Nix",
@@ -6361,16 +6371,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -6441,6 +6441,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -6468,16 +6478,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -6548,6 +6548,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -6575,16 +6585,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -6657,6 +6657,60 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bo Nix",
+                "player_id": "00-0039732",
+                "probability": 0.932326,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "DEN",
+                "threshold": 20
+              }
+            ],
+            "lower": 0.866513,
+            "result": "pending",
+            "upper": 0.932326
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.90145,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "PIT",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.835637,
+            "result": "pending",
+            "upper": 0.90145
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -6679,60 +6733,6 @@
             "lower": 0.833776,
             "result": "pending",
             "upper": 0.90145
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Bo Nix",
-                "player_id": "00-0039732",
-                "probability": 0.932326,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "DEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.855391,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "DEN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.787717,
-            "result": "pending",
-            "upper": 0.855391
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.90145,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.855391,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "DEN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.756841,
-            "result": "pending",
-            "upper": 0.855391
           }
         ],
         "5": [
@@ -6740,6 +6740,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -6769,16 +6779,6 @@
                 "threshold": 25
               },
               {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
-              },
-              {
                 "label": "25+ receiving yards",
                 "name": "DK Metcalf",
                 "player_id": "00-0035640",
@@ -6789,7 +6789,7 @@
                 "threshold": 25
               }
             ],
-            "lower": 0.263593,
+            "lower": 0.34958,
             "result": "pending",
             "upper": 0.726226
           },
@@ -6797,61 +6797,14 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
-                "name": "Bo Nix",
-                "player_id": "00-0039732",
-                "probability": 0.932326,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "DEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.90145,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.855391,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "DEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.8482,
+                "probability": 0.934187,
                 "role_verified": false,
-                "stat": "passing_tds",
+                "stat": "attempts",
                 "team": "PIT",
-                "threshold": 1
+                "threshold": 20
               },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaylen Waddle",
-                "player_id": "00-0036613",
-                "probability": 0.697416,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "DEN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.234783,
-            "result": "pending",
-            "upper": 0.697416
-          },
-          {
-            "legs": [
               {
                 "label": "20+ passing attempts",
                 "name": "Bo Nix",
@@ -6884,6 +6837,53 @@
               },
               {
                 "label": "25+ receiving yards",
+                "name": "Jaylen Waddle",
+                "player_id": "00-0036613",
+                "probability": 0.697416,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "DEN",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.32077,
+            "result": "pending",
+            "upper": 0.697416
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bo Nix",
+                "player_id": "00-0039732",
+                "probability": 0.932326,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "DEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.90145,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "PIT",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
                 "name": "DK Metcalf",
                 "player_id": "00-0035640",
                 "probability": 0.726226,
@@ -6903,7 +6903,7 @@
                 "threshold": 25
               }
             ],
-            "lower": 0.112809,
+            "lower": 0.191605,
             "result": "pending",
             "upper": 0.697416
           }
@@ -6913,71 +6913,14 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
-                "name": "Bo Nix",
-                "player_id": "00-0039732",
-                "probability": 0.932326,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "DEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jaylen Warren",
-                "player_id": "00-0037228",
-                "probability": 0.90145,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jonah Coleman",
-                "player_id": "00-0041496",
-                "probability": 0.855391,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "DEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.8482,
+                "probability": 0.934187,
                 "role_verified": false,
-                "stat": "passing_tds",
+                "stat": "attempts",
                 "team": "PIT",
-                "threshold": 1
+                "threshold": 20
               },
-              {
-                "label": "25+ receiving yards",
-                "name": "DK Metcalf",
-                "player_id": "00-0035640",
-                "probability": 0.726226,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "PIT",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaylen Waddle",
-                "player_id": "00-0036613",
-                "probability": 0.697416,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "DEN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.697416
-          },
-          {
-            "legs": [
               {
                 "label": "20+ passing attempts",
                 "name": "Bo Nix",
@@ -7009,14 +6952,71 @@
                 "threshold": 25
               },
               {
-                "label": "1+ passing TD",
+                "label": "25+ receiving yards",
+                "name": "DK Metcalf",
+                "player_id": "00-0035640",
+                "probability": 0.726226,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "PIT",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jaylen Waddle",
+                "player_id": "00-0036613",
+                "probability": 0.697416,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "DEN",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.046996,
+            "result": "pending",
+            "upper": 0.697416
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
                 "name": "Aaron Rodgers",
                 "player_id": "00-0023459",
-                "probability": 0.8482,
+                "probability": 0.934187,
                 "role_verified": false,
-                "stat": "passing_tds",
+                "stat": "attempts",
                 "team": "PIT",
-                "threshold": 1
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bo Nix",
+                "player_id": "00-0039732",
+                "probability": 0.932326,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "DEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jaylen Warren",
+                "player_id": "00-0037228",
+                "probability": 0.90145,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "PIT",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jonah Coleman",
+                "player_id": "00-0041496",
+                "probability": 0.855391,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "DEN",
+                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -7047,6 +7047,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7074,16 +7084,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7116,6 +7116,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7143,16 +7153,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7193,6 +7193,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7220,16 +7230,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7270,6 +7270,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7297,16 +7307,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7349,6 +7349,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7376,16 +7386,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7436,6 +7436,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7463,16 +7473,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7523,6 +7523,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7550,16 +7560,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7612,6 +7612,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7639,16 +7649,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7709,6 +7709,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7736,16 +7746,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7806,6 +7806,16 @@
             "legs": [
               {
                 "label": "20+ passing attempts",
+                "name": "Aaron Rodgers",
+                "player_id": "00-0023459",
+                "probability": 0.934187,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "PIT",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
                 "name": "Bo Nix",
                 "player_id": "00-0039732",
                 "probability": 0.932326,
@@ -7833,16 +7843,6 @@
                 "stat": "rushing_yards",
                 "team": "DEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Aaron Rodgers",
-                "player_id": "00-0023459",
-                "probability": 0.8482,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "PIT",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -7902,7 +7902,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_GB_LA": {
@@ -9488,7 +9488,7 @@
     },
     "2026_12_KC_BUF": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-27T01:20:00+00:00",
       "options": {
         "10": [
@@ -11064,12 +11064,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_LV_CLE": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-30T01:20:00+00:00",
       "options": {
         "10": [
@@ -12645,12 +12645,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_NE_LAC": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T21:05:00+00:00",
       "options": {
         "10": [
@@ -14226,12 +14226,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_NO_CIN": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -15807,12 +15807,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_NYG_IND": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -17388,12 +17388,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_NYJ_MIA": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -18969,12 +18969,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_PHI_DAL": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-26T21:30:00+00:00",
       "options": {
         "10": [
@@ -20550,12 +20550,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_SEA_SF": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T21:25:00+00:00",
       "options": {
         "10": [
@@ -22131,12 +22131,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_TEN_JAX": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -23712,12 +23712,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     },
     "2026_12_WAS_ARI": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
+      "forecast_at": "2026-11-26T17:55:05.383135+00:00",
       "kickoff": "2026-11-29T21:25:00+00:00",
       "options": {
         "10": [
@@ -25293,7 +25293,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-26T14:21:03.903818+00:00",
+      "saved_at": "2026-11-26T17:55:46.369562+00:00",
       "signal": "limited"
     }
   },

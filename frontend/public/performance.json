@@ -60261,11 +60261,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 22,
-            "lower": 0.38734477382893806,
-            "observed": 0.5909090909090909,
-            "predicted": 0.6467598378960889,
-            "upper": 0.7674444033117963
+            "games": 23,
+            "lower": 0.3681104930501695,
+            "observed": 0.5652173913043478,
+            "predicted": 0.6452479256988923,
+            "upper": 0.7436563166780135
           },
           {
             "bin": "70\u201380%",
@@ -62765,21 +62765,21 @@
             "week": 12
           },
           {
-            "away_score": null,
+            "away_score": 39,
             "away_team": "CHI",
-            "brier": null,
+            "brier": 0.374526689609348,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-26",
             "game_id": "2026_12_CHI_DET",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 35,
             "home_team": "DET",
             "kickoff": "2026-11-26T18:00:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.9467134899215204,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "DET",
             "probability": 0.6119858573605668,
             "provenance": {
@@ -62789,7 +62789,7 @@
             "saved_at": "2026-11-24T23:02:54.409777+00:00",
             "season": 2026,
             "snapshot_id": "b0c761622aea640c8323e6de313d68d180c690a1db89be1c6ac378ad337c8669",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 12
           },
@@ -63201,14 +63201,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6705882352941176,
-          "brier": 0.21744358341026146,
+          "accuracy": 0.6627906976744186,
+          "brier": 0.2192701311567625,
           "cancelled": 0,
           "correct": 57,
-          "games": 85,
-          "incorrect": 28,
-          "log_loss": 0.6227828292346194,
-          "pending": 15,
+          "games": 86,
+          "incorrect": 29,
+          "log_loss": 0.626549464824002,
+          "pending": 14,
           "ties": 0
         },
         "trend": [
@@ -64146,6 +64146,17 @@
             "game_number": 85,
             "label": "GB @ LA",
             "log_loss": 0.6227828292346194
+          },
+          {
+            "accuracy": 0.6627906976744186,
+            "brier": 0.2192701311567625,
+            "correct": false,
+            "date": "2026-11-26",
+            "game_brier": 0.374526689609348,
+            "game_id": "2026_12_CHI_DET",
+            "game_number": 86,
+            "label": "CHI @ DET",
+            "log_loss": 0.626549464824002
           }
         ],
         "weekly": [
@@ -64228,14 +64239,14 @@
             "week": 11
           },
           {
-            "accuracy": 1.0,
-            "brier": 0.0630831829647224,
+            "accuracy": 0.5,
+            "brier": 0.21880493628703518,
             "cancelled": 0,
             "correct": 1,
-            "games": 1,
-            "incorrect": 0,
-            "log_loss": 0.28923482098315834,
-            "pending": 15,
+            "games": 2,
+            "incorrect": 1,
+            "log_loss": 0.6179741554523394,
+            "pending": 14,
             "season": 2026,
             "ties": 0,
             "week": 12
@@ -64286,11 +64297,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 18,
-            "lower": 0.3371606942825164,
-            "observed": 0.5555555555555556,
-            "predicted": 0.6486222496561607,
-            "upper": 0.7544076889861088
+            "games": 19,
+            "lower": 0.31707482511825114,
+            "observed": 0.5263157894736842,
+            "predicted": 0.648482702653431,
+            "upper": 0.7267049451255145
           },
           {
             "bin": "70\u201380%",
@@ -66790,21 +66801,21 @@
             "week": 12
           },
           {
-            "away_score": null,
+            "away_score": 39,
             "away_team": "CHI",
-            "brier": null,
+            "brier": 0.41727834758208693,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-26",
             "game_id": "2026_12_CHI_DET",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 35,
             "home_team": "DET",
             "kickoff": "2026-11-26T18:00:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.0383760432603926,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "DET",
             "probability": 0.6459708566042952,
             "provenance": {
@@ -66814,7 +66825,7 @@
             "saved_at": "2026-11-24T23:02:54.409777+00:00",
             "season": 2026,
             "snapshot_id": "b0c761622aea640c8323e6de313d68d180c690a1db89be1c6ac378ad337c8669",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 12
           },
@@ -67226,14 +67237,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6823529411764706,
-          "brier": 0.2153382740775674,
+          "accuracy": 0.6744186046511628,
+          "brier": 0.21768641446715484,
           "cancelled": 0,
           "correct": 58,
-          "games": 85,
-          "incorrect": 27,
-          "log_loss": 0.6173547162192654,
-          "pending": 15,
+          "games": 86,
+          "incorrect": 28,
+          "log_loss": 0.6222503130453251,
+          "pending": 14,
           "ties": 0
         },
         "trend": [
@@ -68171,6 +68182,17 @@
             "game_number": 85,
             "label": "GB @ LA",
             "log_loss": 0.6173547162192654
+          },
+          {
+            "accuracy": 0.6744186046511628,
+            "brier": 0.21768641446715484,
+            "correct": false,
+            "date": "2026-11-26",
+            "game_brier": 0.41727834758208693,
+            "game_id": "2026_12_CHI_DET",
+            "game_number": 86,
+            "label": "CHI @ DET",
+            "log_loss": 0.6222503130453251
           }
         ],
         "weekly": [
@@ -68253,14 +68275,14 @@
             "week": 11
           },
           {
-            "accuracy": 1.0,
-            "brier": 0.057708426159229796,
+            "accuracy": 0.5,
+            "brier": 0.23749338687065835,
             "cancelled": 0,
             "correct": 1,
-            "games": 1,
-            "incorrect": 0,
-            "log_loss": 0.27473397092978513,
-            "pending": 15,
+            "games": 2,
+            "incorrect": 1,
+            "log_loss": 0.6565550070950888,
+            "pending": 14,
             "season": 2026,
             "ties": 0,
             "week": 12
@@ -68303,11 +68325,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 12,
-            "lower": 0.2537781703934222,
-            "observed": 0.5,
-            "predicted": 0.649801893148111,
-            "upper": 0.7462218296065778
+            "games": 13,
+            "lower": 0.2320575430148814,
+            "observed": 0.46153846153846156,
+            "predicted": 0.6496597556674263,
+            "upper": 0.7085656756816796
           },
           {
             "bin": "70\u201380%",
@@ -70387,21 +70409,21 @@
             "week": 12
           },
           {
-            "away_score": null,
+            "away_score": 39,
             "away_team": "CHI",
-            "brier": null,
+            "brier": 0.41984452335164274,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-26",
             "game_id": "2026_12_CHI_DET",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 35,
             "home_team": "DET",
             "kickoff": "2026-11-26T18:00:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.0439937309147422,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "DET",
             "probability": 0.6479541058992085,
             "provenance": {
@@ -70411,7 +70433,7 @@
             "saved_at": "2026-11-24T23:02:54.409777+00:00",
             "season": 2026,
             "snapshot_id": "b0c761622aea640c8323e6de313d68d180c690a1db89be1c6ac378ad337c8669",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 12
           },
@@ -70823,14 +70845,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6901408450704225,
-          "brier": 0.20496367371478977,
+          "accuracy": 0.6805555555555556,
+          "brier": 0.20794812995974604,
           "cancelled": 0,
           "correct": 49,
-          "games": 71,
-          "incorrect": 22,
-          "log_loss": 0.5955967735218268,
-          "pending": 15,
+          "games": 72,
+          "incorrect": 23,
+          "log_loss": 0.6018245090411729,
+          "pending": 14,
           "ties": 0
         },
         "trend": [
@@ -71614,6 +71636,17 @@
             "game_number": 71,
             "label": "GB @ LA",
             "log_loss": 0.5955967735218268
+          },
+          {
+            "accuracy": 0.6805555555555556,
+            "brier": 0.20794812995974604,
+            "correct": false,
+            "date": "2026-11-26",
+            "game_brier": 0.41984452335164274,
+            "game_id": "2026_12_CHI_DET",
+            "game_number": 72,
+            "label": "CHI @ DET",
+            "log_loss": 0.6018245090411729
           }
         ],
         "weekly": [
@@ -71683,14 +71716,14 @@
             "week": 11
           },
           {
-            "accuracy": 1.0,
-            "brier": 0.05195839690286131,
+            "accuracy": 0.5,
+            "brier": 0.23590146012725202,
             "cancelled": 0,
             "correct": 1,
-            "games": 1,
-            "incorrect": 0,
-            "log_loss": 0.2586979931856611,
-            "pending": 15,
+            "games": 2,
+            "incorrect": 1,
+            "log_loss": 0.6513458620502017,
+            "pending": 14,
             "season": 2026,
             "ties": 0,
             "week": 12
@@ -71741,11 +71774,11 @@
           },
           {
             "bin": "60\u201370%",
-            "games": 18,
-            "lower": 0.3371606942825164,
-            "observed": 0.5555555555555556,
-            "predicted": 0.6477919416891516,
-            "upper": 0.7544076889861088
+            "games": 19,
+            "lower": 0.31707482511825114,
+            "observed": 0.5263157894736842,
+            "predicted": 0.6475329839103947,
+            "upper": 0.7267049451255145
           },
           {
             "bin": "70\u201380%",
@@ -73825,21 +73858,21 @@
             "week": 12
           },
           {
-            "away_score": null,
+            "away_score": 39,
             "away_team": "CHI",
-            "brier": null,
+            "brier": 0.4132840790957327,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-26",
             "game_id": "2026_12_CHI_DET",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "incorrect",
+            "home_score": 35,
             "home_team": "DET",
             "kickoff": "2026-11-26T18:00:00+00:00",
-            "log_loss": null,
+            "log_loss": 1.0296603009166458,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 0,
             "pick": "DET",
             "probability": 0.6428717438927711,
             "provenance": {
@@ -73849,7 +73882,7 @@
             "saved_at": "2026-11-24T23:02:54.409777+00:00",
             "season": 2026,
             "snapshot_id": "b0c761622aea640c8323e6de313d68d180c690a1db89be1c6ac378ad337c8669",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 12
           },
@@ -74261,14 +74294,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.7464788732394366,
-          "brier": 0.19884520518957582,
+          "accuracy": 0.7361111111111112,
+          "brier": 0.20182352288271688,
           "cancelled": 0,
           "correct": 53,
-          "games": 71,
-          "incorrect": 18,
-          "log_loss": 0.582404093125067,
-          "pending": 15,
+          "games": 72,
+          "incorrect": 19,
+          "log_loss": 0.58861598489995,
+          "pending": 14,
           "ties": 0
         },
         "trend": [
@@ -75052,6 +75085,17 @@
             "game_number": 71,
             "label": "GB @ LA",
             "log_loss": 0.582404093125067
+          },
+          {
+            "accuracy": 0.7361111111111112,
+            "brier": 0.20182352288271688,
+            "correct": false,
+            "date": "2026-11-26",
+            "game_brier": 0.4132840790957327,
+            "game_id": "2026_12_CHI_DET",
+            "game_number": 72,
+            "label": "CHI @ DET",
+            "log_loss": 0.58861598489995
           }
         ],
         "weekly": [
@@ -75121,14 +75165,14 @@
             "week": 11
           },
           {
-            "accuracy": 1.0,
-            "brier": 0.0539941006174971,
+            "accuracy": 0.5,
+            "brier": 0.2336390898566149,
             "cancelled": 0,
             "correct": 1,
-            "games": 1,
-            "incorrect": 0,
-            "log_loss": 0.264442621824984,
-            "pending": 15,
+            "games": 2,
+            "incorrect": 1,
+            "log_loss": 0.6470514613708149,
+            "pending": 14,
             "season": 2026,
             "ties": 0,
             "week": 12
@@ -75139,7 +75183,7 @@
   },
   "policy": "First verified pregame snapshot per game and model; ties excluded from binary metrics; historical experiments separate.",
   "schema_version": 1,
-  "snapshot_count": 80,
+  "snapshot_count": 81,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-26T17:54:48.859165+00:00"
+  "updated_at": "2026-11-26T22:23:37.629438+00:00"
 }

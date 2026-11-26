@@ -1,1752 +1,6 @@
 {
-  "generated_at": "2026-11-25T22:36:33.246470+00:00",
+  "generated_at": "2026-11-26T01:02:25.224006+00:00",
   "players": [
-    {
-      "attempt_thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.915167,
-          "threshold": 20
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.789631,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.664286,
-          "threshold": 30
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.380061,
-          "threshold": 35
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.166722,
-          "threshold": 40
-        }
-      ],
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Elbow",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 31.333333333333332,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "passing",
-      "opponent": "GB",
-      "player_id": "00-0026498",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 1,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.850536,
-          "threshold": 150
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.781916,
-          "threshold": 200
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.454506,
-          "threshold": 250
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.192257,
-          "threshold": 300
-        }
-      ],
-      "usage": 36.2,
-      "usage_field": "attempts",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 13.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "GB",
-      "player_id": "00-0039738",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 2,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.754773,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.397313,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.284913,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.225815,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.112673,
-          "threshold": 100
-        }
-      ],
-      "usage": 12.8,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Toe",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 14.333333333333334,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "GB",
-      "player_id": "00-0037840",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 1,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.869931,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.615095,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.525674,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.259607,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.12028,
-          "threshold": 100
-        }
-      ],
-      "usage": 12.7,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 6.666666666666667,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "GB",
-      "player_id": "00-0037557",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 3,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.194511,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.086799,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.055655,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.047324,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.017764,
-          "threshold": 100
-        }
-      ],
-      "usage": 6.3,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 13.666666666666666,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0039075",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 7,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 7,
-      "team": "LA",
-      "thresholds": [],
-      "usage": 7.4,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 6.666666666666667,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0031381",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 5,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 5,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.648254,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.594224,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.459419,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.299031,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.13061,
-          "threshold": 100
-        }
-      ],
-      "usage": 7.1,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.6666666666666665,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0040590",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 1,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.509507,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.160522,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.112403,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.064508,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.0255,
-          "threshold": 100
-        }
-      ],
-      "usage": 4.8,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 3.6666666666666665,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0036849",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 3,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.335965,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.126499,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.081227,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.04641,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.017448,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.6,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 1.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0038359",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 4,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 4,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.210884,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.091463,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.060708,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.035905,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.014969,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.7,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 0.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0035602",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": null,
-      "role_rank": null,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.070416,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.026875,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.016979,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.011818,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.005205,
-          "threshold": 100
-        }
-      ],
-      "usage": 0.7,
-      "usage_field": "targets",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 0.3333333333333333,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0039751",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 6,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 6,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.075931,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.035551,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.022572,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.014867,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.006492,
-          "threshold": 100
-        }
-      ],
-      "usage": 0.6,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Ribs",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 4.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0036244",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 2,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.333885,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.115028,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.067678,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.036497,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.013877,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.6,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": true,
-        "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Did Not Participate In Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Out"
-      },
-      "baseline_usage": 4.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0040737",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 5,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 5,
-      "team": "LA",
-      "thresholds": [],
-      "usage": 0,
-      "usage_field": "targets",
-      "usage_status": "reported_out"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Oblique",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.6666666666666665,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0039074",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 3,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.219141,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.06556,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.038585,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.020815,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.009071,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.9,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Not injury related - resting player",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Full Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 3.6666666666666665,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "GB",
-      "player_id": "00-0033110",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 1,
-      "team": "LA",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.51826,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.20683,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.126515,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.064617,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.026496,
-          "threshold": 100
-        }
-      ],
-      "usage": 5.3,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "attempt_thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.956825,
-          "threshold": 20
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.850789,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.678285,
-          "threshold": 30
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.39958,
-          "threshold": 35
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.174088,
-          "threshold": 40
-        }
-      ],
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 32.333333333333336,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "passing",
-      "opponent": "LA",
-      "player_id": "00-0036264",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 1,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.862372,
-          "threshold": 150
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.550634,
-          "threshold": 200
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.428506,
-          "threshold": 250
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.183666,
-          "threshold": 300
-        }
-      ],
-      "usage": 35.2,
-      "usage_field": "attempts",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 8.333333333333334,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "LA",
-      "player_id": "00-0040142",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 2,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.456092,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.20193,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.106122,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.054835,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.019547,
-          "threshold": 100
-        }
-      ],
-      "usage": 6.8,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Finger",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Questionable"
-      },
-      "baseline_usage": 12.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "LA",
-      "player_id": "00-0035700",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 1,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.724469,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.352277,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.231375,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.077928,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.029255,
-          "threshold": 100
-        }
-      ],
-      "usage": 10.2,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 6.666666666666667,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "LA",
-      "player_id": "00-0038098",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": null,
-      "role_rank": null,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.214218,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.057,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.036449,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.025725,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.008731,
-          "threshold": 100
-        }
-      ],
-      "usage": 4.9,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 4.333333333333333,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "LA",
-      "player_id": "00-0039811",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 3,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.211207,
-          "threshold": 25
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.089092,
-          "threshold": 50
-        },
-        {
-          "basis": "role_aware",
-          "probability": 0.05243,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.037048,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.013573,
-          "threshold": 100
-        }
-      ],
-      "usage": 4.6,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "rushing",
-      "opponent": "LA",
-      "player_id": "00-0038685",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": {
-        "rank": 4,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 4,
-      "team": "GB",
-      "thresholds": [],
-      "usage": 4.0,
-      "usage_field": "carries",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 7.666666666666667,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0038124",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 1,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.905399,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.736568,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.643459,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.469981,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.222466,
-          "threshold": 100
-        }
-      ],
-      "usage": 10.5,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 10.666666666666666,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0040667",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 2,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 2,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.912609,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.80811,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.734842,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.552655,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.282832,
-          "threshold": 100
-        }
-      ],
-      "usage": 10.1,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 2.6666666666666665,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0040009",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 3,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.257414,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.08332,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.054501,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.032077,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.012406,
-          "threshold": 100
-        }
-      ],
-      "usage": 3.0,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 1.6666666666666667,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0040948",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 6,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 6,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.131328,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.0654,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.043275,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.025336,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.010749,
-          "threshold": 100
-        }
-      ],
-      "usage": 0.9,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 4.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0039146",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 7,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 7,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.156953,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.151468,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.10371,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.058472,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.020928,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.7,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Thigh",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Questionable"
-      },
-      "baseline_usage": 0.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0037091",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 5,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 5,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.103873,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.037925,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.024792,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.015027,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.006543,
-          "threshold": 100
-        }
-      ],
-      "usage": 0.9,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 0.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0040352",
-      "role_adjustment": "Role candidate not promoted or fresh unambiguous role evidence unavailable; base estimate retained",
-      "role_evidence": null,
-      "role_rank": null,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.061851,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.021669,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.013082,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.009129,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.004161,
-          "threshold": 100
-        }
-      ],
-      "usage": 0.7,
-      "usage_field": "targets",
-      "usage_status": "conditional_model"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
-        "practice": "Limited Participation in Practice",
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "Questionable"
-      },
-      "baseline_usage": 1.0,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0038090",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 4,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 4,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.127937,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.044367,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.028436,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.016821,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.006714,
-          "threshold": 100
-        }
-      ],
-      "usage": 2.1,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 4.333333333333333,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0038996",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 1,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_first_unit",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 1,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.533579,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.203709,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.13172,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.065522,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.025207,
-          "threshold": 100
-        }
-      ],
-      "usage": 5.4,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
-    {
-      "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
-        "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
-      },
-      "baseline_usage": 1.6666666666666667,
-      "game_id": "2026_12_GB_LA",
-      "kickoff": "2026-11-26T01:00:00+00:00",
-      "kind": "receiving",
-      "opponent": "LA",
-      "player_id": "00-0033858",
-      "role_adjustment": "Timestamped depth-rank model passed development gate",
-      "role_evidence": {
-        "rank": 3,
-        "reason": "Depth-chart listing, package dependent; not a game-day starter confirmation.",
-        "source": "https://nflreadr.nflverse.com/reference/load_depth_charts.html",
-        "status": "listed_reserve",
-        "updated_at": "2026-11-25T17:56:34Z"
-      },
-      "role_rank": 3,
-      "team": "GB",
-      "thresholds": [
-        {
-          "basis": "role_aware",
-          "probability": 0.150789,
-          "threshold": 25
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.044749,
-          "threshold": 50
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.024419,
-          "threshold": 60
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.013362,
-          "threshold": 75
-        },
-        {
-          "basis": "conditional_baseline",
-          "probability": 0.004639,
-          "threshold": 100
-        }
-      ],
-      "usage": 1.6,
-      "usage_field": "targets",
-      "usage_status": "role_aware_conditional"
-    },
     {
       "attempt_thresholds": [
         {
@@ -2353,7 +607,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -2775,7 +1029,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -3414,7 +1668,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hand",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -3913,7 +2167,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -4145,7 +2399,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -4320,7 +2574,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Neck",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -4514,7 +2768,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -4682,7 +2936,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -5024,7 +3278,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -5082,7 +3336,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shin",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -5562,7 +3816,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6020,7 +4274,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Thumb",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6194,7 +4448,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Shoulder",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6279,7 +4533,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6390,7 +4644,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Limited Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6500,7 +4754,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -6668,7 +4922,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Knee",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7126,7 +5380,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Rib",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7539,7 +5793,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -7765,7 +6019,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Calf",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -8225,7 +6479,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Not injury related - personal matter",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Did Not Participate In Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -8283,7 +6537,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Thumb",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -8393,7 +6647,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:12.789651+00:00",
+        "observed_at": "2026-11-26T01:01:49.374591+00:00",
         "practice": "Full Participation in Practice",
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": null,
@@ -10475,7 +8729,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T21:32Z",
@@ -10845,7 +9099,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Hip",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-24T15:58Z",
@@ -10935,10 +9189,10 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Quadriceps",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-25T22:24Z",
+        "report_updated_at": "2026-11-25T18:16Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -11283,10 +9537,10 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-25T22:19Z",
+        "report_updated_at": "2026-11-25T22:30Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -11340,13 +9594,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Hip",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T22:39Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 1.0,
       "game_id": "2026_12_LV_CLE",
@@ -12025,7 +10279,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T21:29Z",
@@ -12331,10 +10585,10 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-25T19:00Z",
+        "report_updated_at": "2026-11-25T23:16Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -12698,13 +10952,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Hip",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T23:50Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 2.6666666666666665,
       "game_id": "2026_12_BAL_HOU",
@@ -12931,10 +11185,10 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-25T19:07Z",
+        "report_updated_at": "2026-11-25T23:34Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -13163,7 +11417,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-24T12:39Z",
@@ -13359,7 +11613,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T19:55Z",
@@ -13532,13 +11786,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Ankle",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T23:25Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 8.0,
       "game_id": "2026_12_BAL_HOU",
@@ -13590,13 +11844,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Groin",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T23:42Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 4.333333333333333,
       "game_id": "2026_12_BAL_HOU",
@@ -14407,7 +12661,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Heel",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T18:36Z",
@@ -14787,7 +13041,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-24T12:39Z",
@@ -15855,7 +14109,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Groin",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T21:14Z",
@@ -16565,7 +14819,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Quadriceps",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-24T12:39Z",
@@ -17193,7 +15447,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T17:05Z",
@@ -17425,7 +15679,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ribs",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T21:09Z",
@@ -18227,7 +16481,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Thumb",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T19:37Z",
@@ -18284,13 +16538,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Knee",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T23:05Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 3.3333333333333335,
       "game_id": "2026_12_ATL_MIN",
@@ -18342,13 +16596,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Hip",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T22:57Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 6.0,
       "game_id": "2026_12_ATL_MIN",
@@ -19009,7 +17263,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T22:19Z",
@@ -19183,10 +17437,10 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-24T23:21Z",
+        "report_updated_at": "2026-11-25T22:30Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Questionable"
       },
@@ -19611,7 +17865,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T21:25Z",
@@ -19875,7 +18129,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T21:19Z",
@@ -21168,7 +19422,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T19:50Z",
@@ -22396,7 +20650,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Personal",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T20:25Z",
@@ -22511,13 +20765,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Foot",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T22:58Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 3.6666666666666665,
       "game_id": "2026_12_WAS_ARI",
@@ -23061,7 +21315,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Ankle",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T19:57Z",
@@ -23288,7 +21542,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Achilles",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T20:07Z",
@@ -23914,13 +22168,13 @@
       "attempt_thresholds": [],
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Elbow",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-26T00:28Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 23.666666666666668,
       "game_id": "2026_12_SEA_SF",
@@ -24145,14 +22399,14 @@
     },
     {
       "availability_evidence": {
-        "blocked": true,
-        "injury": "Knee - MCL",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "blocked": false,
+        "injury": null,
+        "observed_at": null,
         "practice": null,
-        "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-23T23:11Z",
-        "source": "https://www.espn.com/nfl/injuries",
-        "status": "Injured Reserve"
+        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
+        "report_updated_at": null,
+        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
+        "status": "unknown"
       },
       "baseline_usage": 2.0,
       "game_id": "2026_12_SEA_SF",
@@ -24230,13 +22484,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Ankle",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T23:36Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 10.333333333333334,
       "game_id": "2026_12_SEA_SF",
@@ -24722,7 +22976,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Concussion",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T20:27Z",
@@ -24890,13 +23144,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Knee",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T23:44Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 3.3333333333333335,
       "game_id": "2026_12_NE_LAC",
@@ -25342,13 +23596,13 @@
     {
       "availability_evidence": {
         "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "injury": "Shoulder",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T23:45Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Questionable"
       },
       "baseline_usage": 4.0,
       "game_id": "2026_12_NE_LAC",
@@ -26023,10 +24277,10 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Shoulder",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
-        "report_updated_at": "2026-11-25T19:41Z",
+        "report_updated_at": "2026-11-25T23:47Z",
         "source": "https://www.espn.com/nfl/injuries",
         "status": "Injured Reserve"
       },
@@ -26081,7 +24335,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Hamstring",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T19:47Z",
@@ -27025,7 +25279,7 @@
       "availability_evidence": {
         "blocked": true,
         "injury": "Knee - PCL",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T15:55Z",
@@ -27451,14 +25705,14 @@
     },
     {
       "availability_evidence": {
-        "blocked": false,
-        "injury": null,
-        "observed_at": null,
+        "blocked": true,
+        "injury": "Groin",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
-        "reason": "No unique, current, pregame injury report row. Availability is unknown.",
-        "report_updated_at": null,
-        "source": "https://nflreadr.nflverse.com/reference/load_injuries.html",
-        "status": "unknown"
+        "reason": "Current-week source row; observation time is not the report update time.",
+        "report_updated_at": "2026-11-25T22:54Z",
+        "source": "https://www.espn.com/nfl/injuries",
+        "status": "Injured Reserve"
       },
       "baseline_usage": 3.3333333333333335,
       "game_id": "2026_12_CAR_TB",
@@ -27633,7 +25887,7 @@
       "availability_evidence": {
         "blocked": false,
         "injury": "Foot",
-        "observed_at": "2026-11-25T22:36:13.759946+00:00",
+        "observed_at": "2026-11-26T01:01:50.701323+00:00",
         "practice": null,
         "reason": "Current-week source row; observation time is not the report update time.",
         "report_updated_at": "2026-11-25T20:18Z",
@@ -28283,7 +26537,7 @@
     },
     {
       "baseline_brier": 0.20500222991962624,
-      "brier": 0.15186247807588396,
+      "brier": 0.15186247807588457,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
@@ -28291,17 +26545,17 @@
     },
     {
       "baseline_brier": 0.20348391693851592,
-      "brier": 0.14263898211808768,
+      "brier": 0.14263898211808765,
       "kind": "passing",
       "promoted": true,
-      "regular_brier": 0.14879893610271233,
-      "role_blind_brier": 0.16592624148399332,
+      "regular_brier": 0.14879893610271294,
+      "role_blind_brier": 0.1659262414839933,
       "samples": 367,
       "target": "role_threshold_150"
     },
     {
       "baseline_brier": 0.2497961418479442,
-      "brier": 0.21556142038524956,
+      "brier": 0.21556142038524997,
       "kind": "passing",
       "promoted": true,
       "samples": 622,
@@ -28312,8 +26566,8 @@
       "brier": 0.20618382597334628,
       "kind": "passing",
       "promoted": true,
-      "regular_brier": 0.2114136027086887,
-      "role_blind_brier": 0.21696617679825575,
+      "regular_brier": 0.21141360270868895,
+      "role_blind_brier": 0.21696617679825572,
       "samples": 367,
       "target": "role_threshold_200"
     },
@@ -28327,11 +26581,11 @@
     },
     {
       "baseline_brier": 0.22617418213559312,
-      "brier": 0.21300759567032782,
+      "brier": 0.2130075956703278,
       "kind": "passing",
       "promoted": false,
       "regular_brier": 0.1967268428328376,
-      "role_blind_brier": 0.21455059557013217,
+      "role_blind_brier": 0.21455059557013212,
       "samples": 367,
       "target": "role_threshold_250"
     },
@@ -28348,14 +26602,14 @@
       "brier": 0.12279868300207396,
       "kind": "passing",
       "promoted": false,
-      "regular_brier": 0.11902560653089819,
+      "regular_brier": 0.11902560653089816,
       "role_blind_brier": 0.12267332118393999,
       "samples": 367,
       "target": "role_threshold_300"
     },
     {
       "baseline_brier": 0.16474435066889961,
-      "brier": 0.11534260545822303,
+      "brier": 0.11534260545822306,
       "kind": "passing_attempts",
       "promoted": true,
       "samples": 622,
@@ -28363,17 +26617,17 @@
     },
     {
       "baseline_brier": 0.14762018812390712,
-      "brier": 0.0826519416353544,
+      "brier": 0.08265194163535439,
       "kind": "passing_attempts",
       "promoted": true,
-      "regular_brier": 0.09864008081974839,
+      "regular_brier": 0.09864008081974836,
       "role_blind_brier": 0.10259376857455181,
       "samples": 367,
       "target": "role_threshold_20"
     },
     {
       "baseline_brier": 0.22426507248240388,
-      "brier": 0.17802634385136162,
+      "brier": 0.17802634385136143,
       "kind": "passing_attempts",
       "promoted": true,
       "samples": 622,
@@ -28384,14 +26638,14 @@
       "brier": 0.14296943884517715,
       "kind": "passing_attempts",
       "promoted": true,
-      "regular_brier": 0.1490049635341772,
-      "role_blind_brier": 0.16195875770872248,
+      "regular_brier": 0.14900496353417697,
+      "role_blind_brier": 0.1619587577087225,
       "samples": 367,
       "target": "role_threshold_25"
     },
     {
       "baseline_brier": 0.24993674793075027,
-      "brier": 0.2257056930864609,
+      "brier": 0.22570569308646088,
       "kind": "passing_attempts",
       "promoted": true,
       "samples": 622,
@@ -28417,17 +26671,17 @@
     },
     {
       "baseline_brier": 0.20434480065159794,
-      "brier": 0.19471948836396769,
+      "brier": 0.1947194883639665,
       "kind": "passing_attempts",
       "promoted": false,
       "regular_brier": 0.18835108818006138,
-      "role_blind_brier": 0.19634831398946426,
+      "role_blind_brier": 0.1963483139894643,
       "samples": 367,
       "target": "role_threshold_35"
     },
     {
       "baseline_brier": 0.12309775582262444,
-      "brier": 0.1202274399285574,
+      "brier": 0.12022743992855738,
       "kind": "passing_attempts",
       "promoted": true,
       "samples": 622,
@@ -28439,7 +26693,7 @@
       "kind": "passing_attempts",
       "promoted": false,
       "regular_brier": 0.12703633058083927,
-      "role_blind_brier": 0.13213579018269656,
+      "role_blind_brier": 0.13213579018269658,
       "samples": 367,
       "target": "role_threshold_40"
     },
@@ -28477,8 +26731,8 @@
       "brier": 0.1599258975948482,
       "kind": "rushing",
       "promoted": true,
-      "regular_brier": 0.16430587174793335,
-      "role_blind_brier": 0.16481750865019068,
+      "regular_brier": 0.16430587174793337,
+      "role_blind_brier": 0.16481750865019065,
       "samples": 832,
       "target": "role_threshold_25"
     },
@@ -28492,7 +26746,7 @@
     },
     {
       "baseline_brier": 0.20402644230769232,
-      "brier": 0.1379060917611783,
+      "brier": 0.13790609176117827,
       "kind": "rushing",
       "promoted": true,
       "regular_brier": 0.14146457314436692,
@@ -28510,7 +26764,7 @@
     },
     {
       "baseline_brier": 0.17268723707932693,
-      "brier": 0.12462986372188792,
+      "brier": 0.12462986372188795,
       "kind": "rushing",
       "promoted": true,
       "regular_brier": 0.12634106616486082,
@@ -28520,7 +26774,7 @@
     },
     {
       "baseline_brier": 0.11788431373734377,
-      "brier": 0.10065128045441213,
+      "brier": 0.10065128045441084,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
@@ -28531,14 +26785,14 @@
       "brier": 0.1061956878560771,
       "kind": "rushing",
       "promoted": false,
-      "regular_brier": 0.10360815187698276,
-      "role_blind_brier": 0.10741429914091238,
+      "regular_brier": 0.10360815187698078,
+      "role_blind_brier": 0.10741429914091237,
       "samples": 832,
       "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.05982664566877521,
-      "brier": 0.057202874273952334,
+      "brier": 0.05720287427395235,
       "kind": "rushing",
       "promoted": true,
       "samples": 1476,
@@ -28546,7 +26800,7 @@
     },
     {
       "baseline_brier": 0.06486276479867789,
-      "brier": 0.05963132432774301,
+      "brier": 0.05963132432774294,
       "kind": "rushing",
       "promoted": false,
       "regular_brier": 0.0585219815044952,
@@ -28585,7 +26839,7 @@
     },
     {
       "baseline_brier": 0.24468696052548292,
-      "brier": 0.1682439017700793,
+      "brier": 0.16824390177007928,
       "kind": "receiving",
       "promoted": true,
       "regular_brier": 0.16997877882256926,
@@ -28603,17 +26857,17 @@
     },
     {
       "baseline_brier": 0.17452233505371664,
-      "brier": 0.13433269184823984,
+      "brier": 0.13433269184823995,
       "kind": "receiving",
       "promoted": false,
       "regular_brier": 0.1313323880110799,
-      "role_blind_brier": 0.13647137195546546,
+      "role_blind_brier": 0.1364713719554655,
       "samples": 2146,
       "target": "role_threshold_50"
     },
     {
       "baseline_brier": 0.1291842325385742,
-      "brier": 0.10449801426483987,
+      "brier": 0.10449801426483986,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
@@ -28621,11 +26875,11 @@
     },
     {
       "baseline_brier": 0.1374040091560976,
-      "brier": 0.10980816072886362,
+      "brier": 0.10980816072886358,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.10950399470808132,
-      "role_blind_brier": 0.11136803152642283,
+      "regular_brier": 0.10950399470808135,
+      "role_blind_brier": 0.11136803152642291,
       "samples": 2146,
       "target": "role_threshold_60"
     },
@@ -28643,13 +26897,13 @@
       "kind": "receiving",
       "promoted": false,
       "regular_brier": 0.07707193208088028,
-      "role_blind_brier": 0.07877381805340194,
+      "role_blind_brier": 0.07877381805340196,
       "samples": 2146,
       "target": "role_threshold_75"
     },
     {
       "baseline_brier": 0.03884607426654325,
-      "brier": 0.03500280073976826,
+      "brier": 0.03500280073976827,
       "kind": "receiving",
       "promoted": true,
       "samples": 3588,
@@ -28660,12 +26914,12 @@
       "brier": 0.035609513397865916,
       "kind": "receiving",
       "promoted": false,
-      "regular_brier": 0.03535728338034083,
+      "regular_brier": 0.03535728338034084,
       "role_blind_brier": 0.03583322909656372,
       "samples": 2146,
       "target": "role_threshold_100"
     }
   ],
-  "version": "player-extensions:510a8e0f5de00920",
+  "version": "player-extensions:4e011881b01b2ad2",
   "week": 12
 }

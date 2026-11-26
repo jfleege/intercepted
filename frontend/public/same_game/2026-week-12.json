@@ -2,7 +2,7 @@
   "games": {
     "2026_12_ATL_MIN": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -1578,12 +1578,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_BAL_HOU": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -1611,16 +1611,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Nico Collins",
                 "player_id": "00-0036554",
                 "probability": 0.862817,
@@ -1647,230 +1637,6 @@
                 "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Dalton Schultz",
-                "player_id": "00-0034383",
-                "probability": 0.590646,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Kayshon Boutte",
-                "player_id": "00-0038608",
-                "probability": 0.567657,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Mark Andrews",
-                "player_id": "00-0034753",
-                "probability": 0.54973,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.54973
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Jacoby Brissett",
-                "player_id": "00-0033119",
-                "probability": 0.93674,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "BAL",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "C.J. Stroud",
-                "player_id": "00-0039163",
-                "probability": 0.916869,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "HOU",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Nico Collins",
-                "player_id": "00-0036554",
-                "probability": 0.862817,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "David Montgomery",
-                "player_id": "00-0035685",
-                "probability": 0.751202,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Xavier Hutchinson",
-                "player_id": "00-0038618",
-                "probability": 0.661544,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Dalton Schultz",
-                "player_id": "00-0034383",
-                "probability": 0.590646,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Kayshon Boutte",
-                "player_id": "00-0038608",
-                "probability": 0.567657,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tank Dell",
-                "player_id": "00-0038977",
-                "probability": 0.518907,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.518907
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Jacoby Brissett",
-                "player_id": "00-0033119",
-                "probability": 0.93674,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "BAL",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "C.J. Stroud",
-                "player_id": "00-0039163",
-                "probability": 0.916869,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "HOU",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Nico Collins",
-                "player_id": "00-0036554",
-                "probability": 0.862817,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "David Montgomery",
-                "player_id": "00-0035685",
-                "probability": 0.751202,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Xavier Hutchinson",
-                "player_id": "00-0038618",
-                "probability": 0.661544,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
                 "threshold": 25
               },
               {
@@ -1902,11 +1668,245 @@
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Justice Hill",
+                "player_id": "00-0034975",
+                "probability": 0.49619,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jawhar Jordan",
+                "player_id": "00-0039405",
+                "probability": 0.444513,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.518907
+            "upper": 0.444513
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Jacoby Brissett",
+                "player_id": "00-0033119",
+                "probability": 0.93674,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "BAL",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "C.J. Stroud",
+                "player_id": "00-0039163",
+                "probability": 0.916869,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "HOU",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "David Montgomery",
+                "player_id": "00-0035685",
+                "probability": 0.751202,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Xavier Hutchinson",
+                "player_id": "00-0038618",
+                "probability": 0.661544,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tank Dell",
+                "player_id": "00-0038977",
+                "probability": 0.518907,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Justice Hill",
+                "player_id": "00-0034975",
+                "probability": 0.49619,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Kobi Lane",
+                "player_id": "00-0040870",
+                "probability": 0.421715,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.421715
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Jacoby Brissett",
+                "player_id": "00-0033119",
+                "probability": 0.93674,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "BAL",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "C.J. Stroud",
+                "player_id": "00-0039163",
+                "probability": 0.916869,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "HOU",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "David Montgomery",
+                "player_id": "00-0035685",
+                "probability": 0.751202,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Xavier Hutchinson",
+                "player_id": "00-0038618",
+                "probability": 0.661544,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tank Dell",
+                "player_id": "00-0038977",
+                "probability": 0.518907,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jawhar Jordan",
+                "player_id": "00-0039405",
+                "probability": 0.444513,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Kobi Lane",
+                "player_id": "00-0040870",
+                "probability": 0.421715,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.421715
           }
         ],
         "2": [
@@ -1951,18 +1951,18 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
                 "role_verified": true,
                 "stat": "receiving_yards",
-                "team": "BAL",
+                "team": "HOU",
                 "threshold": 25
               }
             ],
-            "lower": 0.827285,
+            "lower": 0.799557,
             "result": "pending",
-            "upper": 0.890545
+            "upper": 0.862817
           },
           {
             "legs": [
@@ -1978,18 +1978,18 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
                 "role_verified": true,
                 "stat": "receiving_yards",
-                "team": "BAL",
+                "team": "HOU",
                 "threshold": 25
               }
             ],
-            "lower": 0.807414,
+            "lower": 0.779686,
             "result": "pending",
-            "upper": 0.890545
+            "upper": 0.862817
           }
         ],
         "5": [
@@ -2017,16 +2017,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Nico Collins",
                 "player_id": "00-0036554",
                 "probability": 0.862817,
@@ -2044,53 +2034,6 @@
                 "stat": "rushing_yards",
                 "team": "HOU",
                 "threshold": 25
-              }
-            ],
-            "lower": 0.358173,
-            "result": "pending",
-            "upper": 0.751202
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Jacoby Brissett",
-                "player_id": "00-0033119",
-                "probability": 0.93674,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "BAL",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "C.J. Stroud",
-                "player_id": "00-0039163",
-                "probability": 0.916869,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "HOU",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Nico Collins",
-                "player_id": "00-0036554",
-                "probability": 0.862817,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -2103,7 +2046,7 @@
                 "threshold": 25
               }
             ],
-            "lower": 0.268515,
+            "lower": 0.129172,
             "result": "pending",
             "upper": 0.661544
           },
@@ -2131,12 +2074,12 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
                 "role_verified": true,
                 "stat": "receiving_yards",
-                "team": "BAL",
+                "team": "HOU",
                 "threshold": 25
               },
               {
@@ -2151,6 +2094,53 @@
               },
               {
                 "label": "25+ receiving yards",
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.058274,
+            "result": "pending",
+            "upper": 0.590646
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Jacoby Brissett",
+                "player_id": "00-0033119",
+                "probability": 0.93674,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "BAL",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "C.J. Stroud",
+                "player_id": "00-0039163",
+                "probability": 0.916869,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "HOU",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
                 "name": "Xavier Hutchinson",
                 "player_id": "00-0038618",
                 "probability": 0.661544,
@@ -2158,11 +2148,21 @@
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
               }
             ],
-            "lower": 0.1569,
+            "lower": 0,
             "result": "pending",
-            "upper": 0.661544
+            "upper": 0.590646
           }
         ],
         "6": [
@@ -2190,13 +2190,70 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
                 "role_verified": true,
                 "stat": "receiving_yards",
-                "team": "BAL",
+                "team": "HOU",
                 "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "David Montgomery",
+                "player_id": "00-0035685",
+                "probability": 0.751202,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Xavier Hutchinson",
+                "player_id": "00-0038618",
+                "probability": 0.661544,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.590646
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Jacoby Brissett",
+                "player_id": "00-0033119",
+                "probability": 0.93674,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "BAL",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "C.J. Stroud",
+                "player_id": "00-0039163",
+                "probability": 0.916869,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "HOU",
+                "threshold": 20
               },
               {
                 "label": "25+ receiving yards",
@@ -2227,11 +2284,21 @@
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
               }
             ],
-            "lower": 0.019717,
+            "lower": 0,
             "result": "pending",
-            "upper": 0.661544
+            "upper": 0.54973
           },
           {
             "legs": [
@@ -2254,16 +2321,6 @@
                 "stat": "attempts",
                 "team": "HOU",
                 "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -2287,56 +2344,9 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.599465
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Jacoby Brissett",
-                "player_id": "00-0033119",
-                "probability": 0.93674,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "BAL",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "C.J. Stroud",
-                "player_id": "00-0039163",
-                "probability": 0.916869,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "HOU",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Nico Collins",
-                "player_id": "00-0036554",
-                "probability": 0.862817,
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
                 "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "HOU",
@@ -2344,20 +2354,10 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Xavier Hutchinson",
-                "player_id": "00-0038618",
-                "probability": 0.661544,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "BAL",
                 "threshold": 25
@@ -2365,7 +2365,7 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.599465
+            "upper": 0.54973
           }
         ],
         "7": [
@@ -2393,16 +2393,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Nico Collins",
                 "player_id": "00-0036554",
                 "probability": 0.862817,
@@ -2433,10 +2423,20 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "BAL",
                 "threshold": 25
@@ -2444,7 +2444,7 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.599465
+            "upper": 0.54973
           },
           {
             "legs": [
@@ -2467,16 +2467,6 @@
                 "stat": "attempts",
                 "team": "HOU",
                 "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -2517,11 +2507,21 @@
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tank Dell",
+                "player_id": "00-0038977",
+                "probability": 0.518907,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.590646
+            "upper": 0.518907
           },
           {
             "legs": [
@@ -2547,16 +2547,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Nico Collins",
                 "player_id": "00-0036554",
                 "probability": 0.862817,
@@ -2577,20 +2567,30 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
+                "name": "Xavier Hutchinson",
+                "player_id": "00-0038618",
+                "probability": 0.661544,
                 "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "BAL",
                 "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Dalton Schultz",
-                "player_id": "00-0034383",
-                "probability": 0.590646,
-                "role_verified": true,
+                "name": "Tank Dell",
+                "player_id": "00-0038977",
+                "probability": 0.518907,
+                "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
@@ -2598,7 +2598,7 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.590646
+            "upper": 0.518907
           }
         ],
         "8": [
@@ -2626,16 +2626,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Nico Collins",
                 "player_id": "00-0036554",
                 "probability": 0.862817,
@@ -2662,16 +2652,6 @@
                 "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
                 "threshold": 25
               },
               {
@@ -2683,11 +2663,31 @@
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tank Dell",
+                "player_id": "00-0038977",
+                "probability": 0.518907,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.590646
+            "upper": 0.518907
           },
           {
             "legs": [
@@ -2710,103 +2710,6 @@
                 "stat": "attempts",
                 "team": "HOU",
                 "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Nico Collins",
-                "player_id": "00-0036554",
-                "probability": 0.862817,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "David Montgomery",
-                "player_id": "00-0035685",
-                "probability": 0.751202,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Xavier Hutchinson",
-                "player_id": "00-0038618",
-                "probability": 0.661544,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Kayshon Boutte",
-                "player_id": "00-0038608",
-                "probability": 0.567657,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.567657
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Jacoby Brissett",
-                "player_id": "00-0033119",
-                "probability": 0.93674,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "BAL",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "C.J. Stroud",
-                "player_id": "00-0039163",
-                "probability": 0.916869,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "HOU",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -2850,18 +2753,115 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Kayshon Boutte",
-                "player_id": "00-0038608",
-                "probability": 0.567657,
-                "role_verified": false,
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
                 "stat": "receiving_yards",
-                "team": "HOU",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Justice Hill",
+                "player_id": "00-0034975",
+                "probability": 0.49619,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "BAL",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.567657
+            "upper": 0.49619
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Jacoby Brissett",
+                "player_id": "00-0033119",
+                "probability": 0.93674,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "BAL",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "C.J. Stroud",
+                "player_id": "00-0039163",
+                "probability": 0.916869,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "HOU",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "David Montgomery",
+                "player_id": "00-0035685",
+                "probability": 0.751202,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Xavier Hutchinson",
+                "player_id": "00-0038618",
+                "probability": 0.661544,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tank Dell",
+                "player_id": "00-0038977",
+                "probability": 0.518907,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Justice Hill",
+                "player_id": "00-0034975",
+                "probability": 0.49619,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "BAL",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.49619
           }
         ],
         "9": [
@@ -2889,16 +2889,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Nico Collins",
                 "player_id": "00-0036554",
                 "probability": 0.862817,
@@ -2929,16 +2919,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Dalton Schultz",
                 "player_id": "00-0034383",
                 "probability": 0.590646,
@@ -2949,18 +2929,38 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Kayshon Boutte",
-                "player_id": "00-0038608",
-                "probability": 0.567657,
+                "name": "Mark Andrews",
+                "player_id": "00-0034753",
+                "probability": 0.54973,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tank Dell",
+                "player_id": "00-0038977",
+                "probability": 0.518907,
                 "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Justice Hill",
+                "player_id": "00-0034975",
+                "probability": 0.49619,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "BAL",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.567657
+            "upper": 0.49619
           },
           {
             "legs": [
@@ -2986,16 +2986,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Nico Collins",
                 "player_id": "00-0036554",
                 "probability": 0.862817,
@@ -3026,16 +3016,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Dalton Schultz",
                 "player_id": "00-0034383",
                 "probability": 0.590646,
@@ -3053,11 +3033,31 @@
                 "stat": "receiving_yards",
                 "team": "BAL",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tank Dell",
+                "player_id": "00-0038977",
+                "probability": 0.518907,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jawhar Jordan",
+                "player_id": "00-0039405",
+                "probability": 0.444513,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.54973
+            "upper": 0.444513
           },
           {
             "legs": [
@@ -3083,16 +3083,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Nico Collins",
                 "player_id": "00-0036554",
                 "probability": 0.862817,
@@ -3123,20 +3113,10 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Kayshon Boutte",
-                "player_id": "00-0038608",
-                "probability": 0.567657,
-                "role_verified": false,
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
@@ -3150,21 +3130,41 @@
                 "stat": "receiving_yards",
                 "team": "BAL",
                 "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Justice Hill",
+                "player_id": "00-0034975",
+                "probability": 0.49619,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jawhar Jordan",
+                "player_id": "00-0039405",
+                "probability": 0.444513,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.54973
+            "upper": 0.444513
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_CAR_TB": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-12-01T01:15:00+00:00",
       "options": {
         "10": [
@@ -4740,12 +4740,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_CHI_DET": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-26T18:00:00+00:00",
       "options": {
         "10": [
@@ -6321,12 +6321,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_DEN_PIT": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-27T20:00:00+00:00",
       "options": {
         "10": [
@@ -7902,7 +7902,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_GB_LA": {
@@ -9488,7 +9488,7 @@
     },
     "2026_12_KC_BUF": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-27T01:20:00+00:00",
       "options": {
         "10": [
@@ -11064,12 +11064,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_LV_CLE": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-30T01:20:00+00:00",
       "options": {
         "10": [
@@ -12645,12 +12645,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_NE_LAC": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T21:05:00+00:00",
       "options": {
         "10": [
@@ -14226,12 +14226,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_NO_CIN": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -15807,12 +15807,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_NYG_IND": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -17388,12 +17388,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_NYJ_MIA": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -18969,12 +18969,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_PHI_DAL": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-26T21:30:00+00:00",
       "options": {
         "10": [
@@ -20550,28 +20550,18 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_SEA_SF": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T21:25:00+00:00",
       "options": {
         "10": [
           {
             "legs": [
               {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
                 "player_id": "00-0033280",
@@ -20620,16 +20610,6 @@
                 "stat": "rushing_yards",
                 "team": "SF",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
               },
               {
                 "label": "25+ rushing yards",
@@ -20660,24 +20640,34 @@
                 "stat": "receiving_yards",
                 "team": "SEA",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jordan Watkins",
+                "player_id": "00-0040172",
+                "probability": 0.414973,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Rashid Shaheed",
+                "player_id": "00-0037545",
+                "probability": 0.413675,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SEA",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.434407
+            "upper": 0.413675
           },
           {
             "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -20727,16 +20717,6 @@
                 "stat": "rushing_yards",
                 "team": "SF",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
               },
               {
                 "label": "25+ rushing yards",
@@ -20760,6 +20740,16 @@
               },
               {
                 "label": "25+ receiving yards",
+                "name": "AJ Barner",
+                "player_id": "00-0039793",
+                "probability": 0.434407,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
                 "name": "Jordan Watkins",
                 "player_id": "00-0040172",
                 "probability": 0.414973,
@@ -20767,24 +20757,24 @@
                 "stat": "receiving_yards",
                 "team": "SF",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Cooper Kupp",
+                "player_id": "00-0033908",
+                "probability": 0.403072,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SEA",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.414973
+            "upper": 0.403072
           },
           {
             "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -20836,16 +20826,6 @@
                 "threshold": 25
               },
               {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Jadarian Price",
                 "player_id": "00-0041512",
@@ -20853,6 +20833,16 @@
                 "role_verified": false,
                 "stat": "rushing_yards",
                 "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Deebo Samuel Sr.",
+                "player_id": "00-0035719",
+                "probability": 0.463117,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
                 "threshold": 25
               },
               {
@@ -20867,75 +20857,31 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Jordan Watkins",
-                "player_id": "00-0040172",
-                "probability": 0.414973,
+                "name": "Rashid Shaheed",
+                "player_id": "00-0037545",
+                "probability": 0.413675,
                 "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "SF",
+                "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Cooper Kupp",
+                "player_id": "00-0033908",
+                "probability": 0.403072,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SEA",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.414973
+            "upper": 0.403072
           }
         ],
         "2": [
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Christian McCaffrey",
-                "player_id": "00-0033280",
-                "probability": 0.879224,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SF",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.848129,
-            "result": "pending",
-            "upper": 0.879224
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Zach Charbonnet",
-                "player_id": "00-0039165",
-                "probability": 0.743455,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SEA",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.71236,
-            "result": "pending",
-            "upper": 0.743455
-          },
           {
             "legs": [
               {
@@ -20962,21 +20908,122 @@
             "lower": 0.622679,
             "result": "pending",
             "upper": 0.743455
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Christian McCaffrey",
+                "player_id": "00-0033280",
+                "probability": 0.879224,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "George Kittle",
+                "player_id": "00-0033288",
+                "probability": 0.726268,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.605492,
+            "result": "pending",
+            "upper": 0.726268
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Zach Charbonnet",
+                "player_id": "00-0039165",
+                "probability": 0.743455,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "George Kittle",
+                "player_id": "00-0033288",
+                "probability": 0.726268,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.469723,
+            "result": "pending",
+            "upper": 0.726268
           }
         ],
         "5": [
           {
             "legs": [
               {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
+                "label": "25+ rushing yards",
+                "name": "Christian McCaffrey",
+                "player_id": "00-0033280",
+                "probability": 0.879224,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Zach Charbonnet",
+                "player_id": "00-0039165",
+                "probability": 0.743455,
+                "role_verified": true,
+                "stat": "rushing_yards",
                 "team": "SEA",
                 "threshold": 25
               },
+              {
+                "label": "25+ receiving yards",
+                "name": "George Kittle",
+                "player_id": "00-0033288",
+                "probability": 0.726268,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Keenan Allen",
+                "player_id": "00-0030279",
+                "probability": 0.647845,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kaelon Black",
+                "player_id": "00-0041052",
+                "probability": 0.642776,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.642776
+          },
+          {
+            "legs": [
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -21016,24 +21063,24 @@
                 "stat": "receiving_yards",
                 "team": "SF",
                 "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jadarian Price",
+                "player_id": "00-0041512",
+                "probability": 0.475013,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "SEA",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.647845
+            "upper": 0.475013
           },
           {
             "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -21073,83 +21120,93 @@
                 "stat": "rushing_yards",
                 "team": "SF",
                 "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.642776
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
               },
               {
                 "label": "25+ rushing yards",
-                "name": "Christian McCaffrey",
-                "player_id": "00-0033280",
-                "probability": 0.879224,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Zach Charbonnet",
-                "player_id": "00-0039165",
-                "probability": 0.743455,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Keenan Allen",
-                "player_id": "00-0030279",
-                "probability": 0.647845,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kaelon Black",
-                "player_id": "00-0041052",
-                "probability": 0.642776,
+                "name": "Jadarian Price",
+                "player_id": "00-0041512",
+                "probability": 0.475013,
                 "role_verified": false,
                 "stat": "rushing_yards",
-                "team": "SF",
+                "team": "SEA",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.642776
+            "upper": 0.475013
           }
         ],
         "6": [
           {
             "legs": [
               {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
+                "label": "25+ rushing yards",
+                "name": "Christian McCaffrey",
+                "player_id": "00-0033280",
+                "probability": 0.879224,
                 "role_verified": true,
-                "stat": "receiving_yards",
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Zach Charbonnet",
+                "player_id": "00-0039165",
+                "probability": 0.743455,
+                "role_verified": true,
+                "stat": "rushing_yards",
                 "team": "SEA",
                 "threshold": 25
               },
+              {
+                "label": "25+ receiving yards",
+                "name": "George Kittle",
+                "player_id": "00-0033288",
+                "probability": 0.726268,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Keenan Allen",
+                "player_id": "00-0030279",
+                "probability": 0.647845,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kaelon Black",
+                "player_id": "00-0041052",
+                "probability": 0.642776,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jadarian Price",
+                "player_id": "00-0041512",
+                "probability": 0.475013,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "SEA",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.475013
+          },
+          {
+            "legs": [
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -21199,24 +21256,24 @@
                 "stat": "rushing_yards",
                 "team": "SF",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Deebo Samuel Sr.",
+                "player_id": "00-0035719",
+                "probability": 0.463117,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.642776
+            "upper": 0.463117
           },
           {
             "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -21258,102 +21315,35 @@
                 "threshold": 25
               },
               {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
+                "label": "25+ rushing yards",
+                "name": "Jadarian Price",
+                "player_id": "00-0041512",
+                "probability": 0.475013,
                 "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.6208
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Christian McCaffrey",
-                "player_id": "00-0033280",
-                "probability": 0.879224,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Zach Charbonnet",
-                "player_id": "00-0039165",
-                "probability": 0.743455,
-                "role_verified": true,
                 "stat": "rushing_yards",
                 "team": "SEA",
                 "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
-                "name": "George Kittle",
-                "player_id": "00-0033288",
-                "probability": 0.726268,
-                "role_verified": true,
+                "name": "Deebo Samuel Sr.",
+                "player_id": "00-0035719",
+                "probability": 0.463117,
+                "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "SF",
                 "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kaelon Black",
-                "player_id": "00-0041052",
-                "probability": 0.642776,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.6208
+            "upper": 0.463117
           }
         ],
         "7": [
           {
             "legs": [
               {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
                 "player_id": "00-0033280",
@@ -21404,32 +21394,32 @@
                 "threshold": 25
               },
               {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
+                "label": "25+ rushing yards",
+                "name": "Jadarian Price",
+                "player_id": "00-0041512",
+                "probability": 0.475013,
                 "role_verified": false,
-                "stat": "passing_tds",
+                "stat": "rushing_yards",
                 "team": "SEA",
-                "threshold": 1
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Deebo Samuel Sr.",
+                "player_id": "00-0035719",
+                "probability": 0.463117,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.6208
+            "upper": 0.463117
           },
           {
             "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -21489,24 +21479,24 @@
                 "stat": "rushing_yards",
                 "team": "SEA",
                 "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.475013
-          },
-          {
-            "legs": [
+              },
               {
                 "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
+                "name": "AJ Barner",
+                "player_id": "00-0039793",
+                "probability": 0.434407,
                 "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "SEA",
                 "threshold": 25
-              },
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.434407
+          },
+          {
+            "legs": [
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -21548,45 +21538,45 @@
                 "threshold": 25
               },
               {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
-              },
-              {
                 "label": "25+ rushing yards",
-                "name": "Jadarian Price",
-                "player_id": "00-0041512",
-                "probability": 0.475013,
+                "name": "Kaelon Black",
+                "player_id": "00-0041052",
+                "probability": 0.642776,
                 "role_verified": false,
                 "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Deebo Samuel Sr.",
+                "player_id": "00-0035719",
+                "probability": 0.463117,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "AJ Barner",
+                "player_id": "00-0039793",
+                "probability": 0.434407,
+                "role_verified": true,
+                "stat": "receiving_yards",
                 "team": "SEA",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.475013
+            "upper": 0.434407
           }
         ],
         "8": [
           {
             "legs": [
               {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
                 "player_id": "00-0033280",
@@ -21635,16 +21625,6 @@
                 "stat": "rushing_yards",
                 "team": "SF",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
               },
               {
                 "label": "25+ rushing yards",
@@ -21655,83 +21635,6 @@
                 "stat": "rushing_yards",
                 "team": "SEA",
                 "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.475013
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Christian McCaffrey",
-                "player_id": "00-0033280",
-                "probability": 0.879224,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Zach Charbonnet",
-                "player_id": "00-0039165",
-                "probability": 0.743455,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "George Kittle",
-                "player_id": "00-0033288",
-                "probability": 0.726268,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Keenan Allen",
-                "player_id": "00-0030279",
-                "probability": 0.647845,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kaelon Black",
-                "player_id": "00-0041052",
-                "probability": 0.642776,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -21742,24 +21645,24 @@
                 "stat": "receiving_yards",
                 "team": "SF",
                 "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.463117
-          },
-          {
-            "legs": [
+              },
               {
                 "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
+                "name": "AJ Barner",
+                "player_id": "00-0039793",
+                "probability": 0.434407,
                 "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "SEA",
                 "threshold": 25
-              },
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.434407
+          },
+          {
+            "legs": [
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -21829,27 +21732,114 @@
                 "stat": "receiving_yards",
                 "team": "SF",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jordan Watkins",
+                "player_id": "00-0040172",
+                "probability": 0.414973,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.463117
+            "upper": 0.414973
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Christian McCaffrey",
+                "player_id": "00-0033280",
+                "probability": 0.879224,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Zach Charbonnet",
+                "player_id": "00-0039165",
+                "probability": 0.743455,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "George Kittle",
+                "player_id": "00-0033288",
+                "probability": 0.726268,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Keenan Allen",
+                "player_id": "00-0030279",
+                "probability": 0.647845,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kaelon Black",
+                "player_id": "00-0041052",
+                "probability": 0.642776,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jadarian Price",
+                "player_id": "00-0041512",
+                "probability": 0.475013,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "AJ Barner",
+                "player_id": "00-0039793",
+                "probability": 0.434407,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jordan Watkins",
+                "player_id": "00-0040172",
+                "probability": 0.414973,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.414973
           }
         ],
         "9": [
           {
             "legs": [
               {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
                 "player_id": "00-0033280",
@@ -21898,16 +21888,6 @@
                 "stat": "rushing_yards",
                 "team": "SF",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
               },
               {
                 "label": "25+ rushing yards",
@@ -21928,93 +21908,6 @@
                 "stat": "receiving_yards",
                 "team": "SF",
                 "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.463117
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Christian McCaffrey",
-                "player_id": "00-0033280",
-                "probability": 0.879224,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Zach Charbonnet",
-                "player_id": "00-0039165",
-                "probability": 0.743455,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "George Kittle",
-                "player_id": "00-0033288",
-                "probability": 0.726268,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Keenan Allen",
-                "player_id": "00-0030279",
-                "probability": 0.647845,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kaelon Black",
-                "player_id": "00-0041052",
-                "probability": 0.642776,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "SF",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "SEA",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jadarian Price",
-                "player_id": "00-0041512",
-                "probability": 0.475013,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "SEA",
-                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -22025,24 +21918,24 @@
                 "stat": "receiving_yards",
                 "team": "SEA",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jordan Watkins",
+                "player_id": "00-0040172",
+                "probability": 0.414973,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.434407
+            "upper": 0.414973
           },
           {
             "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Jaxon Smith-Njigba",
-                "player_id": "00-0038543",
-                "probability": 0.968905,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "SEA",
-                "threshold": 25
-              },
               {
                 "label": "25+ rushing yards",
                 "name": "Christian McCaffrey",
@@ -22094,14 +21987,14 @@
                 "threshold": 25
               },
               {
-                "label": "1+ passing TD",
-                "name": "Drew Lock",
-                "player_id": "00-0035704",
-                "probability": 0.6208,
+                "label": "25+ rushing yards",
+                "name": "Jadarian Price",
+                "player_id": "00-0041512",
+                "probability": 0.475013,
                 "role_verified": false,
-                "stat": "passing_tds",
+                "stat": "rushing_yards",
                 "team": "SEA",
-                "threshold": 1
+                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -22122,21 +22015,128 @@
                 "stat": "receiving_yards",
                 "team": "SEA",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Rashid Shaheed",
+                "player_id": "00-0037545",
+                "probability": 0.413675,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SEA",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.434407
+            "upper": 0.413675
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Christian McCaffrey",
+                "player_id": "00-0033280",
+                "probability": 0.879224,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Zach Charbonnet",
+                "player_id": "00-0039165",
+                "probability": 0.743455,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "George Kittle",
+                "player_id": "00-0033288",
+                "probability": 0.726268,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Keenan Allen",
+                "player_id": "00-0030279",
+                "probability": 0.647845,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kaelon Black",
+                "player_id": "00-0041052",
+                "probability": 0.642776,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jadarian Price",
+                "player_id": "00-0041512",
+                "probability": 0.475013,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "SEA",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Deebo Samuel Sr.",
+                "player_id": "00-0035719",
+                "probability": 0.463117,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jordan Watkins",
+                "player_id": "00-0040172",
+                "probability": 0.414973,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SF",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Rashid Shaheed",
+                "player_id": "00-0037545",
+                "probability": 0.413675,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "SEA",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.413675
           }
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_TEN_JAX": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -23712,12 +23712,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     },
     "2026_12_WAS_ARI": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-25T22:36:07.254591+00:00",
+      "forecast_at": "2026-11-26T01:01:41.562361+00:00",
       "kickoff": "2026-11-29T21:25:00+00:00",
       "options": {
         "10": [
@@ -23794,16 +23794,6 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
                 "label": "1+ passing TD",
                 "name": "Josh Johnson",
                 "player_id": "00-0026300",
@@ -23822,103 +23812,6 @@
                 "stat": "rushing_yards",
                 "team": "WAS",
                 "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.43446
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Jayden Daniels",
-                "player_id": "00-0039910",
-                "probability": 0.888686,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "WAS",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Trey McBride",
-                "player_id": "00-0037744",
-                "probability": 0.862926,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "ARI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jacory Croskey-Merritt",
-                "player_id": "00-0040242",
-                "probability": 0.827106,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Michael Wilson",
-                "player_id": "00-0038559",
-                "probability": 0.791356,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "ARI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Antonio Williams",
-                "player_id": "00-0041040",
-                "probability": 0.727354,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tyler Allgeier",
-                "player_id": "00-0037263",
-                "probability": 0.723388,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "ARI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chig Okonkwo",
-                "player_id": "00-0037809",
-                "probability": 0.655227,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Josh Johnson",
-                "player_id": "00-0026300",
-                "probability": 0.4424,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "ARI",
-                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -24008,14 +23901,14 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
+                "label": "1+ passing TD",
+                "name": "Josh Johnson",
+                "player_id": "00-0026300",
+                "probability": 0.4424,
                 "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
+                "stat": "passing_tds",
+                "team": "ARI",
+                "threshold": 1
               },
               {
                 "label": "25+ rushing yards",
@@ -24028,6 +23921,103 @@
                 "threshold": 25
               },
               {
+                "label": "25+ rushing yards",
+                "name": "Bam Knight",
+                "player_id": "00-0037157",
+                "probability": 0.383624,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "ARI",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.383624
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Jayden Daniels",
+                "player_id": "00-0039910",
+                "probability": 0.888686,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "WAS",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Trey McBride",
+                "player_id": "00-0037744",
+                "probability": 0.862926,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "ARI",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jacory Croskey-Merritt",
+                "player_id": "00-0040242",
+                "probability": 0.827106,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Michael Wilson",
+                "player_id": "00-0038559",
+                "probability": 0.791356,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "ARI",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Antonio Williams",
+                "player_id": "00-0041040",
+                "probability": 0.727354,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tyler Allgeier",
+                "player_id": "00-0037263",
+                "probability": 0.723388,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "ARI",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chig Okonkwo",
+                "player_id": "00-0037809",
+                "probability": 0.655227,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Josh Johnson",
+                "player_id": "00-0026300",
+                "probability": 0.4424,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "ARI",
+                "threshold": 1
+              },
+              {
                 "label": "25+ receiving yards",
                 "name": "Terry McLaurin",
                 "player_id": "00-0035659",
@@ -24036,11 +24026,21 @@
                 "stat": "receiving_yards",
                 "team": "WAS",
                 "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Bam Knight",
+                "player_id": "00-0037157",
+                "probability": 0.383624,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "ARI",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.391071
+            "upper": 0.383624
           }
         ],
         "2": [
@@ -24643,19 +24643,19 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
+                "label": "1+ passing TD",
+                "name": "Josh Johnson",
+                "player_id": "00-0026300",
+                "probability": 0.4424,
                 "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
+                "stat": "passing_tds",
+                "team": "ARI",
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.491545
+            "upper": 0.4424
           },
           {
             "legs": [
@@ -24720,19 +24720,19 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
+                "label": "1+ passing TD",
+                "name": "Josh Johnson",
+                "player_id": "00-0026300",
+                "probability": 0.4424,
                 "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
+                "stat": "passing_tds",
+                "team": "ARI",
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.491545
+            "upper": 0.4424
           }
         ],
         "8": [
@@ -24809,19 +24809,19 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
+                "label": "1+ passing TD",
+                "name": "Josh Johnson",
+                "player_id": "00-0026300",
+                "probability": 0.4424,
                 "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
+                "stat": "passing_tds",
+                "team": "ARI",
+                "threshold": 1
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.491545
+            "upper": 0.4424
           },
           {
             "legs": [
@@ -24896,19 +24896,19 @@
                 "threshold": 25
               },
               {
-                "label": "1+ passing TD",
-                "name": "Josh Johnson",
-                "player_id": "00-0026300",
-                "probability": 0.4424,
+                "label": "25+ rushing yards",
+                "name": "Rachaad White",
+                "player_id": "00-0037256",
+                "probability": 0.43446,
                 "role_verified": false,
-                "stat": "passing_tds",
-                "team": "ARI",
-                "threshold": 1
+                "stat": "rushing_yards",
+                "team": "WAS",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.4424
+            "upper": 0.43446
           },
           {
             "legs": [
@@ -24973,16 +24973,6 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
                 "label": "1+ passing TD",
                 "name": "Josh Johnson",
                 "player_id": "00-0026300",
@@ -24991,11 +24981,21 @@
                 "stat": "passing_tds",
                 "team": "ARI",
                 "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Rachaad White",
+                "player_id": "00-0037256",
+                "probability": 0.43446,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "WAS",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.4424
+            "upper": 0.43446
           }
         ],
         "9": [
@@ -25072,16 +25072,6 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
                 "label": "1+ passing TD",
                 "name": "Josh Johnson",
                 "player_id": "00-0026300",
@@ -25090,93 +25080,6 @@
                 "stat": "passing_tds",
                 "team": "ARI",
                 "threshold": 1
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.4424
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Jayden Daniels",
-                "player_id": "00-0039910",
-                "probability": 0.888686,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "WAS",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Trey McBride",
-                "player_id": "00-0037744",
-                "probability": 0.862926,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "ARI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Jacory Croskey-Merritt",
-                "player_id": "00-0040242",
-                "probability": 0.827106,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Michael Wilson",
-                "player_id": "00-0038559",
-                "probability": 0.791356,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "ARI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Antonio Williams",
-                "player_id": "00-0041040",
-                "probability": 0.727354,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tyler Allgeier",
-                "player_id": "00-0037263",
-                "probability": 0.723388,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "ARI",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chig Okonkwo",
-                "player_id": "00-0037809",
-                "probability": 0.655227,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Treylon Burks",
-                "player_id": "00-0037742",
-                "probability": 0.491545,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "WAS",
-                "threshold": 25
               },
               {
                 "label": "25+ rushing yards",
@@ -25276,6 +25179,93 @@
                 "threshold": 1
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Terry McLaurin",
+                "player_id": "00-0035659",
+                "probability": 0.391071,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.391071
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Jayden Daniels",
+                "player_id": "00-0039910",
+                "probability": 0.888686,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "WAS",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Trey McBride",
+                "player_id": "00-0037744",
+                "probability": 0.862926,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "ARI",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Jacory Croskey-Merritt",
+                "player_id": "00-0040242",
+                "probability": 0.827106,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Michael Wilson",
+                "player_id": "00-0038559",
+                "probability": 0.791356,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "ARI",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Antonio Williams",
+                "player_id": "00-0041040",
+                "probability": 0.727354,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tyler Allgeier",
+                "player_id": "00-0037263",
+                "probability": 0.723388,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "ARI",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chig Okonkwo",
+                "player_id": "00-0037809",
+                "probability": 0.655227,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Rachaad White",
                 "player_id": "00-0037256",
@@ -25284,16 +25274,26 @@
                 "stat": "rushing_yards",
                 "team": "WAS",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Terry McLaurin",
+                "player_id": "00-0035659",
+                "probability": 0.391071,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "WAS",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.43446
+            "upper": 0.391071
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-25T22:36:33.720690+00:00",
+      "saved_at": "2026-11-26T01:02:25.992125+00:00",
       "signal": "limited"
     }
   },

@@ -2,24 +2,24 @@
   "active_season": 2026,
   "active_week": 12,
   "attempt": {
-    "completed_at": "2026-11-27T05:19:04.990716+00:00",
-    "mode": "results",
-    "started_at": "2026-11-27T05:18:57.048928+00:00",
-    "state": "partial",
+    "completed_at": "2026-11-27T15:32:06.309710+00:00",
+    "mode": "pregame",
+    "started_at": "2026-11-27T15:32:00.601137+00:00",
+    "state": "success",
     "steps": {
       "directory": "skipped",
-      "forecast": "skipped",
+      "forecast": "success",
       "history": "success",
       "insights": "success",
-      "markets": "success",
+      "markets": "skipped",
       "odds": "skipped",
       "players": "skipped",
       "position_defense": "skipped",
       "pre_rollover": "skipped",
       "props": "skipped",
       "research": "skipped",
-      "research_results": "failure",
-      "results": "success",
+      "research_results": "skipped",
+      "results": "skipped",
       "teams": "skipped",
       "verify": "success"
     }
@@ -27,7 +27,7 @@
   "forecast_check": {
     "active_season": 2026,
     "active_week": 12,
-    "checked_at": "2026-11-27T01:02:39.627452+00:00",
+    "checked_at": "2026-11-27T15:32:05.332396+00:00",
     "message": "Published forecast slate is current.",
     "state": "current",
     "target_season": 2026,
@@ -35,17 +35,17 @@
   },
   "last_results_refresh_at": "2026-11-22T15:42:41.450904+00:00",
   "last_successful_refresh_at": "2026-11-21T22:14:05.255176+00:00",
-  "next_forecast_check_at": "2026-11-27T13:17:00+00:00",
+  "next_forecast_check_at": "2026-11-28T13:17:00+00:00",
   "next_weekly_refresh_at": "2026-12-01T18:00:00+00:00",
   "schema_version": 1,
-  "snapshot_at": "2026-11-27T05:19:04.990716+00:00",
+  "snapshot_at": "2026-11-27T15:32:06.309710+00:00",
   "sources": [
     {
       "features_through_week": 11,
       "id": "forecasts",
       "label": "Game forecasts",
       "season": 2026,
-      "updated_at": "2026-11-27T01:02:39.620023+00:00",
+      "updated_at": "2026-11-27T15:32:05.322954+00:00",
       "week": 12
     },
     {
@@ -77,13 +77,13 @@
     {
       "id": "results",
       "label": "Game results",
-      "refresh_outcome": "success",
+      "refresh_outcome": "skipped",
       "updated_at": "2026-11-27T05:19:01.189208+00:00"
     },
     {
       "id": "research_results",
       "label": "Projection results",
-      "refresh_outcome": "failure",
+      "refresh_outcome": "skipped",
       "updated_at": "2026-11-22T15:42:07.719966+00:00"
     },
     {
@@ -91,7 +91,7 @@
       "label": "Forecast context & checks",
       "refresh_outcome": "success",
       "season": 2026,
-      "updated_at": "2026-11-27T05:19:04.486659+00:00",
+      "updated_at": "2026-11-27T15:32:05.915839+00:00",
       "week": 12
     },
     {
@@ -109,5 +109,5 @@
       "updated_at": "2026-11-26T22:24:27.562764+00:00"
     }
   ],
-  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/45944990974"
+  "workflow_url": "https://github.com/jfleege/intercepted/actions/runs/46025625763"
 }

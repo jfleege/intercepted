@@ -7477,7 +7477,7 @@
       "week": 12
     }
   ],
-  "exported_at": "2026-11-27T15:32:05.915839+00:00",
+  "exported_at": "2026-11-27T17:40:34.396986+00:00",
   "monitoring": {
     "alerts": [
       {
@@ -7532,6 +7532,11 @@
         "id": "availability_coverage",
         "message": "82 of 581 tracked player/game identities have a unique current-week pregame injury/practice row. Missing rows do not mean healthy.",
         "severity": "info"
+      },
+      {
+        "id": "pipeline:research_results",
+        "message": "research_results input refresh failed; older data may have been retained.",
+        "severity": "review"
       },
       {
         "id": "results_age",
@@ -7708,7 +7713,7 @@
         "windows": []
       }
     ],
-    "checked_at": "2026-11-27T15:32:05.915839+00:00",
+    "checked_at": "2026-11-27T17:40:34.396986+00:00",
     "policy": {
       "automatic_retraining": false,
       "calibration_gap": 0.1,

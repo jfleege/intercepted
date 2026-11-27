@@ -60253,11 +60253,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 14,
-            "lower": 0.3259026690286936,
-            "observed": 0.5714285714285714,
-            "predicted": 0.5398131059867171,
-            "upper": 0.7861949006959948
+            "games": 15,
+            "lower": 0.357464427565077,
+            "observed": 0.6,
+            "predicted": 0.5401826409049839,
+            "upper": 0.8017577191740534
           },
           {
             "bin": "60\u201370%",
@@ -62852,21 +62852,21 @@
             "week": 12
           },
           {
-            "away_score": null,
+            "away_score": 5,
             "away_team": "DEN",
-            "brier": null,
+            "brier": 0.20670104874615094,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-27",
             "game_id": "2026_12_DEN_PIT",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "PIT",
             "kickoff": "2026-11-27T20:00:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6063162486215573,
             "model": "v4_a",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "PIT",
             "probability": 0.5453561297607203,
             "provenance": {
@@ -62876,7 +62876,7 @@
             "saved_at": "2026-11-24T23:02:54.409777+00:00",
             "season": 2026,
             "snapshot_id": "b0c761622aea640c8323e6de313d68d180c690a1db89be1c6ac378ad337c8669",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 12
           },
@@ -63201,14 +63201,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6477272727272727,
-          "brier": 0.2237254012197245,
+          "accuracy": 0.651685393258427,
+          "brier": 0.22353411636047088,
           "cancelled": 0,
-          "correct": 57,
-          "games": 88,
+          "correct": 58,
+          "games": 89,
           "incorrect": 31,
-          "log_loss": 0.6364375817931021,
-          "pending": 12,
+          "log_loss": 0.6360991398473543,
+          "pending": 11,
           "ties": 0
         },
         "trend": [
@@ -64179,6 +64179,17 @@
             "game_number": 88,
             "label": "KC @ BUF",
             "log_loss": 0.6364375817931021
+          },
+          {
+            "accuracy": 0.651685393258427,
+            "brier": 0.22353411636047088,
+            "correct": true,
+            "date": "2026-11-27",
+            "game_brier": 0.20670104874615094,
+            "game_id": "2026_12_DEN_PIT",
+            "game_number": 89,
+            "label": "DEN @ PIT",
+            "log_loss": 0.6360991398473543
           }
         ],
         "weekly": [
@@ -64261,14 +64272,14 @@
             "week": 11
           },
           {
-            "accuracy": 0.25,
-            "brier": 0.31705347510706305,
+            "accuracy": 0.4,
+            "brier": 0.29498298983488064,
             "cancelled": 0,
-            "correct": 1,
-            "games": 4,
+            "correct": 2,
+            "games": 5,
             "incorrect": 3,
-            "log_loss": 0.8398003834583734,
-            "pending": 12,
+            "log_loss": 0.7931035564910102,
+            "pending": 11,
             "season": 2026,
             "ties": 0,
             "week": 12
@@ -64311,11 +64322,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 12,
-            "lower": 0.3195073356553728,
-            "observed": 0.5833333333333334,
-            "predicted": 0.5553931448960674,
-            "upper": 0.8067425380947535
+            "games": 13,
+            "lower": 0.35522480972268555,
+            "observed": 0.6153846153846154,
+            "predicted": 0.554057116636374,
+            "upper": 0.8229055341876319
           },
           {
             "bin": "60\u201370%",
@@ -66910,21 +66921,21 @@
             "week": 12
           },
           {
-            "away_score": null,
+            "away_score": 5,
             "away_team": "DEN",
-            "brier": null,
+            "brier": 0.21342110618539586,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-27",
             "game_id": "2026_12_DEN_PIT",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "PIT",
             "kickoff": "2026-11-27T20:00:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6198506650108573,
             "model": "v4_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "PIT",
             "probability": 0.5380247775200537,
             "provenance": {
@@ -66934,7 +66945,7 @@
             "saved_at": "2026-11-24T23:02:54.409777+00:00",
             "season": 2026,
             "snapshot_id": "b0c761622aea640c8323e6de313d68d180c690a1db89be1c6ac378ad337c8669",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W5",
             "week": 12
           },
@@ -67259,14 +67270,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6590909090909091,
-          "brier": 0.22334843422518402,
+          "accuracy": 0.6629213483146067,
+          "brier": 0.22323689121350104,
           "cancelled": 0,
-          "correct": 58,
-          "games": 88,
+          "correct": 59,
+          "games": 89,
           "incorrect": 30,
-          "log_loss": 0.6355104713470102,
-          "pending": 12,
+          "log_loss": 0.6353345184668288,
+          "pending": 11,
           "ties": 0
         },
         "trend": [
@@ -68237,6 +68248,17 @@
             "game_number": 88,
             "label": "KC @ BUF",
             "log_loss": 0.6355104713470102
+          },
+          {
+            "accuracy": 0.6629213483146067,
+            "brier": 0.22323689121350104,
+            "correct": true,
+            "date": "2026-11-27",
+            "game_brier": 0.21342110618539586,
+            "game_id": "2026_12_DEN_PIT",
+            "game_number": 89,
+            "label": "DEN @ PIT",
+            "log_loss": 0.6353345184668288
           }
         ],
         "weekly": [
@@ -68319,14 +68341,14 @@
             "week": 11
           },
           {
-            "accuracy": 0.25,
-            "brier": 0.3521543353455494,
+            "accuracy": 0.4,
+            "brier": 0.32440768951351867,
             "cancelled": 0,
-            "correct": 1,
-            "games": 4,
+            "correct": 2,
+            "games": 5,
             "incorrect": 3,
-            "log_loss": 0.9311261427072818,
-            "pending": 12,
+            "log_loss": 0.8688710471679968,
+            "pending": 11,
             "season": 2026,
             "ties": 0,
             "week": 12
@@ -68361,11 +68383,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 12,
-            "lower": 0.3195073356553728,
-            "observed": 0.5833333333333334,
-            "predicted": 0.5513369570549682,
-            "upper": 0.8067425380947535
+            "games": 13,
+            "lower": 0.35522480972268555,
+            "observed": 0.6153846153846154,
+            "predicted": 0.5483125325239949,
+            "upper": 0.8229055341876319
           },
           {
             "bin": "60\u201370%",
@@ -70540,21 +70562,21 @@
             "week": 12
           },
           {
-            "away_score": null,
+            "away_score": 5,
             "away_team": "DEN",
-            "brier": null,
+            "brier": 0.2381250287411818,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-27",
             "game_id": "2026_12_DEN_PIT",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "PIT",
             "kickoff": "2026-11-27T20:00:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6693926895220457,
             "model": "v5_boosted",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "PIT",
             "probability": 0.5120194381523155,
             "provenance": {
@@ -70564,7 +70586,7 @@
             "saved_at": "2026-11-24T23:02:54.409777+00:00",
             "season": 2026,
             "snapshot_id": "b0c761622aea640c8323e6de313d68d180c690a1db89be1c6ac378ad337c8669",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 12
           },
@@ -70889,14 +70911,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.6756756756756757,
-          "brier": 0.21360466973260184,
+          "accuracy": 0.68,
+          "brier": 0.21393160785271623,
           "cancelled": 0,
-          "correct": 50,
-          "games": 74,
+          "correct": 51,
+          "games": 75,
           "incorrect": 24,
-          "log_loss": 0.6144779148094438,
-          "pending": 12,
+          "log_loss": 0.6152101118056118,
+          "pending": 11,
           "ties": 0
         },
         "trend": [
@@ -71713,6 +71735,17 @@
             "game_number": 74,
             "label": "KC @ BUF",
             "log_loss": 0.6144779148094438
+          },
+          {
+            "accuracy": 0.68,
+            "brier": 0.21393160785271623,
+            "correct": true,
+            "date": "2026-11-27",
+            "game_brier": 0.2381250287411818,
+            "game_id": "2026_12_DEN_PIT",
+            "game_number": 75,
+            "label": "DEN @ PIT",
+            "log_loss": 0.6152101118056118
           }
         ],
         "weekly": [
@@ -71782,14 +71815,14 @@
             "week": 11
           },
           {
-            "accuracy": 0.5,
-            "brier": 0.3265707808413309,
+            "accuracy": 0.6,
+            "brier": 0.30888163042130107,
             "cancelled": 0,
-            "correct": 2,
-            "games": 4,
+            "correct": 3,
+            "games": 5,
             "incorrect": 2,
-            "log_loss": 0.8606731922587002,
-            "pending": 12,
+            "log_loss": 0.8224170917113692,
+            "pending": 11,
             "season": 2026,
             "ties": 0,
             "week": 12
@@ -71832,11 +71865,11 @@
           },
           {
             "bin": "50\u201360%",
-            "games": 7,
-            "lower": 0.48686549668097007,
-            "observed": 0.8571428571428571,
-            "predicted": 0.561078480087034,
-            "upper": 0.9743210440510253
+            "games": 8,
+            "lower": 0.5291051942301386,
+            "observed": 0.875,
+            "predicted": 0.5578788389792322,
+            "upper": 0.9775830911367038
           },
           {
             "bin": "60\u201370%",
@@ -74011,21 +74044,21 @@
             "week": 12
           },
           {
-            "away_score": null,
+            "away_score": 5,
             "away_team": "DEN",
-            "brier": null,
+            "brier": 0.21577757506010511,
             "eligibility": "verified",
             "eligibility_reason": "Saved before kickoff with an earlier training cutoff",
             "game_date": "2026-11-27",
             "game_id": "2026_12_DEN_PIT",
-            "grade": "pending",
-            "home_score": null,
+            "grade": "correct",
+            "home_score": 27,
             "home_team": "PIT",
             "kickoff": "2026-11-27T20:00:00+00:00",
-            "log_loss": null,
+            "log_loss": 0.6245892146781047,
             "model": "v5_qb_plus",
             "model_version": "ac161c2fa5d3",
-            "outcome": null,
+            "outcome": 1,
             "pick": "PIT",
             "probability": 0.5354813512246197,
             "provenance": {
@@ -74035,7 +74068,7 @@
             "saved_at": "2026-11-24T23:02:54.409777+00:00",
             "season": 2026,
             "snapshot_id": "b0c761622aea640c8323e6de313d68d180c690a1db89be1c6ac378ad337c8669",
-            "status": "pending",
+            "status": "final",
             "training_cutoff": "2026 W6",
             "week": 12
           },
@@ -74360,14 +74393,14 @@
           }
         ],
         "summary": {
-          "accuracy": 0.7162162162162162,
-          "brier": 0.20855906046130945,
+          "accuracy": 0.72,
+          "brier": 0.20865530732262672,
           "cancelled": 0,
-          "correct": 53,
-          "games": 74,
+          "correct": 54,
+          "games": 75,
           "incorrect": 21,
-          "log_loss": 0.6042331365625814,
-          "pending": 12,
+          "log_loss": 0.604504550937455,
+          "pending": 11,
           "ties": 0
         },
         "trend": [
@@ -75184,6 +75217,17 @@
             "game_number": 74,
             "label": "KC @ BUF",
             "log_loss": 0.6042331365625814
+          },
+          {
+            "accuracy": 0.72,
+            "brier": 0.20865530732262672,
+            "correct": true,
+            "date": "2026-11-27",
+            "game_brier": 0.21577757506010511,
+            "game_id": "2026_12_DEN_PIT",
+            "game_number": 75,
+            "label": "DEN @ PIT",
+            "log_loss": 0.604504550937455
           }
         ],
         "weekly": [
@@ -75253,14 +75297,14 @@
             "week": 11
           },
           {
-            "accuracy": 0.25,
-            "brier": 0.3423387515736281,
+            "accuracy": 0.4,
+            "brier": 0.3170265162709235,
             "cancelled": 0,
-            "correct": 1,
-            "games": 4,
+            "correct": 2,
+            "games": 5,
             "incorrect": 3,
-            "log_loss": 0.9067510288940617,
-            "pending": 12,
+            "log_loss": 0.8503186660508704,
+            "pending": 11,
             "season": 2026,
             "ties": 0,
             "week": 12
@@ -75273,5 +75317,5 @@
   "schema_version": 1,
   "snapshot_count": 83,
   "source": "nflverse schedules / repository forecast archive",
-  "updated_at": "2026-11-27T22:00:30.979819+00:00"
+  "updated_at": "2026-11-27T23:42:11.301059+00:00"
 }

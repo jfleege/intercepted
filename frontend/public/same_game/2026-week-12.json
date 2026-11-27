@@ -2,7 +2,7 @@
   "games": {
     "2026_12_ATL_MIN": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -1578,12 +1578,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_BAL_HOU": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -3159,12 +3159,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_CAR_TB": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-12-01T01:15:00+00:00",
       "options": {
         "10": [
@@ -4740,7 +4740,7 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_CHI_DET": {
@@ -11069,7 +11069,7 @@
     },
     "2026_12_LV_CLE": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-30T01:20:00+00:00",
       "options": {
         "10": [
@@ -12645,12 +12645,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_NE_LAC": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T21:05:00+00:00",
       "options": {
         "10": [
@@ -14226,12 +14226,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_NO_CIN": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -14278,16 +14278,6 @@
                 "threshold": 20
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Chase Brown",
                 "player_id": "00-0038597",
@@ -14335,103 +14325,6 @@
                 "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "CIN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.508029
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.952444,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.9407,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "CIN",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Olave",
-                "player_id": "00-0037239",
-                "probability": 0.935412,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Tyler Shough",
-                "player_id": "00-0040743",
-                "probability": 0.929386,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NO",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.83784,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Travis Etienne",
-                "player_id": "00-0036973",
-                "probability": 0.726636,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Devaughn Vele",
-                "player_id": "00-0039424",
-                "probability": 0.59336,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kendre Miller",
-                "player_id": "00-0038551",
-                "probability": 0.557228,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "NO",
                 "threshold": 25
               },
               {
@@ -14492,14 +14385,111 @@
                 "threshold": 20
               },
               {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.83784,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Travis Etienne",
+                "player_id": "00-0036973",
+                "probability": 0.726636,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
                 "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
+                "name": "Devaughn Vele",
+                "player_id": "00-0039424",
+                "probability": 0.59336,
                 "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kendre Miller",
+                "player_id": "00-0038551",
+                "probability": 0.557228,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mike Gesicki",
+                "player_id": "00-0034829",
+                "probability": 0.508029,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "CIN",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Juwan Johnson",
+                "player_id": "00-0036040",
+                "probability": 0.473877,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.473877
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.952444,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.9407,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "CIN",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chris Olave",
+                "player_id": "00-0037239",
+                "probability": 0.935412,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Tyler Shough",
+                "player_id": "00-0040743",
+                "probability": 0.929386,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NO",
+                "threshold": 20
               },
               {
                 "label": "25+ rushing yards",
@@ -14532,13 +14522,13 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Mike Gesicki",
-                "player_id": "00-0034829",
-                "probability": 0.508029,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
+                "label": "25+ rushing yards",
+                "name": "Kendre Miller",
+                "player_id": "00-0038551",
+                "probability": 0.557228,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "NO",
                 "threshold": 25
               },
               {
@@ -14550,11 +14540,21 @@
                 "stat": "rushing_yards",
                 "team": "CIN",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Juwan Johnson",
+                "player_id": "00-0036040",
+                "probability": 0.473877,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.485994
+            "upper": 0.473877
           }
         ],
         "2": [
@@ -14684,63 +14684,6 @@
                 "threshold": 20
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.625532,
-            "result": "pending",
-            "upper": 0.86759
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.952444,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.9407,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "CIN",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Olave",
-                "player_id": "00-0037239",
-                "probability": 0.935412,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Tyler Shough",
-                "player_id": "00-0040743",
-                "probability": 0.929386,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NO",
-                "threshold": 20
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Chase Brown",
                 "player_id": "00-0038597",
@@ -14788,65 +14731,6 @@
                 "threshold": 25
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.83784,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.533986,
-            "result": "pending",
-            "upper": 0.83784
-          }
-        ],
-        "6": [
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.952444,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.9407,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "CIN",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Olave",
-                "player_id": "00-0037239",
-                "probability": 0.935412,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
                 "label": "20+ passing attempts",
                 "name": "Tyler Shough",
                 "player_id": "00-0040743",
@@ -14857,29 +14741,19 @@
                 "threshold": 20
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.83784,
+                "name": "Travis Etienne",
+                "player_id": "00-0036973",
+                "probability": 0.726636,
                 "role_verified": true,
                 "stat": "rushing_yards",
-                "team": "CIN",
+                "team": "NO",
                 "threshold": 25
               }
             ],
-            "lower": 0.463372,
+            "lower": 0.484578,
             "result": "pending",
-            "upper": 0.83784
+            "upper": 0.726636
           },
           {
             "legs": [
@@ -14914,22 +14788,12 @@
                 "threshold": 25
               },
               {
-                "label": "20+ passing attempts",
-                "name": "Tyler Shough",
-                "player_id": "00-0040743",
-                "probability": 0.929386,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NO",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.83784,
+                "role_verified": true,
+                "stat": "rushing_yards",
                 "team": "CIN",
                 "threshold": 25
               },
@@ -14944,10 +14808,12 @@
                 "threshold": 25
               }
             ],
-            "lower": 0.352168,
+            "lower": 0.393032,
             "result": "pending",
             "upper": 0.726636
-          },
+          }
+        ],
+        "6": [
           {
             "legs": [
               {
@@ -15014,6 +14880,140 @@
             "lower": 0.322418,
             "result": "pending",
             "upper": 0.726636
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.952444,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.9407,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "CIN",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chris Olave",
+                "player_id": "00-0037239",
+                "probability": 0.935412,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Tyler Shough",
+                "player_id": "00-0040743",
+                "probability": 0.929386,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NO",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.83784,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Devaughn Vele",
+                "player_id": "00-0039424",
+                "probability": 0.59336,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.189142,
+            "result": "pending",
+            "upper": 0.59336
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.952444,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.9407,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "CIN",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chris Olave",
+                "player_id": "00-0037239",
+                "probability": 0.935412,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Tyler Shough",
+                "player_id": "00-0040743",
+                "probability": 0.929386,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NO",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Travis Etienne",
+                "player_id": "00-0036973",
+                "probability": 0.726636,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Devaughn Vele",
+                "player_id": "00-0039424",
+                "probability": 0.59336,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.077938,
+            "result": "pending",
+            "upper": 0.59336
           }
         ],
         "7": [
@@ -15060,166 +15060,12 @@
                 "threshold": 20
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Chase Brown",
                 "player_id": "00-0038597",
                 "probability": 0.83784,
                 "role_verified": true,
                 "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Travis Etienne",
-                "player_id": "00-0036973",
-                "probability": 0.726636,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "NO",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.190008,
-            "result": "pending",
-            "upper": 0.726636
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.952444,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.9407,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "CIN",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Olave",
-                "player_id": "00-0037239",
-                "probability": 0.935412,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Tyler Shough",
-                "player_id": "00-0040743",
-                "probability": 0.929386,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NO",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.83784,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Devaughn Vele",
-                "player_id": "00-0039424",
-                "probability": 0.59336,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.056732,
-            "result": "pending",
-            "upper": 0.59336
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.952444,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.9407,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "CIN",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Olave",
-                "player_id": "00-0037239",
-                "probability": 0.935412,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Tyler Shough",
-                "player_id": "00-0040743",
-                "probability": 0.929386,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NO",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
                 "team": "CIN",
                 "threshold": 25
               },
@@ -15247,6 +15093,160 @@
             "lower": 0,
             "result": "pending",
             "upper": 0.59336
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.952444,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.9407,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "CIN",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chris Olave",
+                "player_id": "00-0037239",
+                "probability": 0.935412,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Tyler Shough",
+                "player_id": "00-0040743",
+                "probability": 0.929386,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NO",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.83784,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Travis Etienne",
+                "player_id": "00-0036973",
+                "probability": 0.726636,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kendre Miller",
+                "player_id": "00-0038551",
+                "probability": 0.557228,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.557228
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.952444,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.9407,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "CIN",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chris Olave",
+                "player_id": "00-0037239",
+                "probability": 0.935412,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Tyler Shough",
+                "player_id": "00-0040743",
+                "probability": 0.929386,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NO",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.83784,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Devaughn Vele",
+                "player_id": "00-0039424",
+                "probability": 0.59336,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kendre Miller",
+                "player_id": "00-0038551",
+                "probability": 0.557228,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.557228
           }
         ],
         "8": [
@@ -15293,16 +15293,6 @@
                 "threshold": 20
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Chase Brown",
                 "player_id": "00-0038597",
@@ -15329,83 +15319,6 @@
                 "probability": 0.59336,
                 "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.59336
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.952444,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.9407,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "CIN",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Olave",
-                "player_id": "00-0037239",
-                "probability": 0.935412,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Tyler Shough",
-                "player_id": "00-0040743",
-                "probability": 0.929386,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NO",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.83784,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Travis Etienne",
-                "player_id": "00-0036973",
-                "probability": 0.726636,
-                "role_verified": true,
-                "stat": "rushing_yards",
                 "team": "NO",
                 "threshold": 25
               },
@@ -15467,16 +15380,6 @@
                 "threshold": 20
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Chase Brown",
                 "player_id": "00-0038597",
@@ -15484,6 +15387,16 @@
                 "role_verified": true,
                 "stat": "rushing_yards",
                 "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Travis Etienne",
+                "player_id": "00-0036973",
+                "probability": 0.726636,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NO",
                 "threshold": 25
               },
               {
@@ -15497,6 +15410,83 @@
                 "threshold": 25
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Mike Gesicki",
+                "player_id": "00-0034829",
+                "probability": 0.508029,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.508029
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.952444,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.9407,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "CIN",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chris Olave",
+                "player_id": "00-0037239",
+                "probability": 0.935412,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Tyler Shough",
+                "player_id": "00-0040743",
+                "probability": 0.929386,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NO",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.83784,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Travis Etienne",
+                "player_id": "00-0036973",
+                "probability": 0.726636,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Kendre Miller",
                 "player_id": "00-0038551",
@@ -15505,11 +15495,21 @@
                 "stat": "rushing_yards",
                 "team": "NO",
                 "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Mike Gesicki",
+                "player_id": "00-0034829",
+                "probability": 0.508029,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CIN",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.557228
+            "upper": 0.508029
           }
         ],
         "9": [
@@ -15556,16 +15556,6 @@
                 "threshold": 20
               },
               {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
                 "label": "25+ rushing yards",
                 "name": "Chase Brown",
                 "player_id": "00-0038597",
@@ -15602,93 +15592,6 @@
                 "probability": 0.557228,
                 "role_verified": false,
                 "stat": "rushing_yards",
-                "team": "NO",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.557228
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ receiving yards",
-                "name": "Ja'Marr Chase",
-                "player_id": "00-0036900",
-                "probability": 0.952444,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Joe Burrow",
-                "player_id": "00-0036442",
-                "probability": 0.9407,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "CIN",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Olave",
-                "player_id": "00-0037239",
-                "probability": 0.935412,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Tyler Shough",
-                "player_id": "00-0040743",
-                "probability": 0.929386,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "NO",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chase Brown",
-                "player_id": "00-0038597",
-                "probability": 0.83784,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CIN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Travis Etienne",
-                "player_id": "00-0036973",
-                "probability": 0.726636,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "NO",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Devaughn Vele",
-                "player_id": "00-0039424",
-                "probability": 0.59336,
-                "role_verified": false,
-                "stat": "receiving_yards",
                 "team": "NO",
                 "threshold": 25
               },
@@ -15750,14 +15653,101 @@
                 "threshold": 20
               },
               {
+                "label": "25+ rushing yards",
+                "name": "Chase Brown",
+                "player_id": "00-0038597",
+                "probability": 0.83784,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Travis Etienne",
+                "player_id": "00-0036973",
+                "probability": 0.726636,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
                 "label": "25+ receiving yards",
-                "name": "Tee Higgins",
-                "player_id": "00-0036410",
-                "probability": 0.86759,
+                "name": "Devaughn Vele",
+                "player_id": "00-0039424",
+                "probability": 0.59336,
                 "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kendre Miller",
+                "player_id": "00-0038551",
+                "probability": 0.557228,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Samaje Perine",
+                "player_id": "00-0033526",
+                "probability": 0.485994,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.485994
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ receiving yards",
+                "name": "Ja'Marr Chase",
+                "player_id": "00-0036900",
+                "probability": 0.952444,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "CIN",
                 "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Joe Burrow",
+                "player_id": "00-0036442",
+                "probability": 0.9407,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "CIN",
+                "threshold": 1
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chris Olave",
+                "player_id": "00-0037239",
+                "probability": 0.935412,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "NO",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Tyler Shough",
+                "player_id": "00-0040743",
+                "probability": 0.929386,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "NO",
+                "threshold": 20
               },
               {
                 "label": "25+ rushing yards",
@@ -15780,12 +15770,12 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Kendre Miller",
-                "player_id": "00-0038551",
-                "probability": 0.557228,
+                "label": "25+ receiving yards",
+                "name": "Devaughn Vele",
+                "player_id": "00-0039424",
+                "probability": 0.59336,
                 "role_verified": false,
-                "stat": "rushing_yards",
+                "stat": "receiving_yards",
                 "team": "NO",
                 "threshold": 25
               },
@@ -15798,21 +15788,31 @@
                 "stat": "receiving_yards",
                 "team": "CIN",
                 "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Samaje Perine",
+                "player_id": "00-0033526",
+                "probability": 0.485994,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "CIN",
+                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.508029
+            "upper": 0.485994
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_NYG_IND": {
       "eligible_for_validation": true,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -17388,12 +17388,12 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_NYJ_MIA": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -18969,7 +18969,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_PHI_DAL": {
@@ -20555,7 +20555,7 @@
     },
     "2026_12_SEA_SF": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T21:25:00+00:00",
       "options": {
         "10": [
@@ -22131,12 +22131,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_TEN_JAX": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
@@ -23712,12 +23712,12 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     },
     "2026_12_WAS_ARI": {
       "eligible_for_validation": false,
-      "forecast_at": "2026-11-27T17:40:28.179030+00:00",
+      "forecast_at": "2026-11-27T22:00:49.076572+00:00",
       "kickoff": "2026-11-29T21:25:00+00:00",
       "options": {
         "10": [
@@ -25293,7 +25293,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T17:40:58.560392+00:00",
+      "saved_at": "2026-11-27T22:01:26.268993+00:00",
       "signal": "limited"
     }
   },

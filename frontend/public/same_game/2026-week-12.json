@@ -1578,7 +1578,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_BAL_HOU": {
@@ -1587,6 +1587,113 @@
       "kickoff": "2026-11-29T18:00:00+00:00",
       "options": {
         "10": [
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Jacoby Brissett",
+                "player_id": "00-0033119",
+                "probability": 0.93674,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "BAL",
+                "threshold": 20
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "C.J. Stroud",
+                "player_id": "00-0039163",
+                "probability": 0.916869,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "HOU",
+                "threshold": 20
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Derrick Henry",
+                "player_id": "00-0032764",
+                "probability": 0.902235,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Zay Flowers",
+                "player_id": "00-0039064",
+                "probability": 0.890545,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Nico Collins",
+                "player_id": "00-0036554",
+                "probability": 0.862817,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "David Montgomery",
+                "player_id": "00-0035685",
+                "probability": 0.751202,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Woody Marks",
+                "player_id": "00-0040583",
+                "probability": 0.70095,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Xavier Hutchinson",
+                "player_id": "00-0038618",
+                "probability": 0.661544,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Rashod Bateman",
+                "player_id": "00-0036550",
+                "probability": 0.599465,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "BAL",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "HOU",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.590646
+          },
           {
             "legs": [
               {
@@ -1778,107 +1885,10 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Rashod Bateman",
-                "player_id": "00-0036550",
-                "probability": 0.599465,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Mark Andrews",
-                "player_id": "00-0034753",
-                "probability": 0.54973,
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
                 "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.54973
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Jacoby Brissett",
-                "player_id": "00-0033119",
-                "probability": 0.93674,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "BAL",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "C.J. Stroud",
-                "player_id": "00-0039163",
-                "probability": 0.916869,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "HOU",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Derrick Henry",
-                "player_id": "00-0032764",
-                "probability": 0.902235,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Zay Flowers",
-                "player_id": "00-0039064",
-                "probability": 0.890545,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Nico Collins",
-                "player_id": "00-0036554",
-                "probability": 0.862817,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "David Montgomery",
-                "player_id": "00-0035685",
-                "probability": 0.751202,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Woody Marks",
-                "player_id": "00-0040583",
-                "probability": 0.70095,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "HOU",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Xavier Hutchinson",
-                "player_id": "00-0038618",
-                "probability": 0.661544,
-                "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
@@ -1892,21 +1902,11 @@
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Mark Andrews",
-                "player_id": "00-0034753",
-                "probability": 0.54973,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "BAL",
-                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.54973
+            "upper": 0.567657
           }
         ],
         "2": [
@@ -3046,10 +3046,10 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Kayshon Boutte",
-                "player_id": "00-0038608",
-                "probability": 0.567657,
-                "role_verified": false,
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
@@ -3057,7 +3057,7 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.567657
+            "upper": 0.590646
           },
           {
             "legs": [
@@ -3143,10 +3143,10 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Kayshon Boutte",
-                "player_id": "00-0038608",
-                "probability": 0.567657,
-                "role_verified": false,
+                "name": "Dalton Schultz",
+                "player_id": "00-0034383",
+                "probability": 0.590646,
+                "role_verified": true,
                 "stat": "receiving_yards",
                 "team": "HOU",
                 "threshold": 25
@@ -3154,12 +3154,12 @@
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.567657
+            "upper": 0.590646
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_CAR_TB": {
@@ -3201,6 +3201,230 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Baker Mayfield",
+                "player_id": "00-0034855",
+                "probability": 0.805467,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TB",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Emeka Egbuka",
+                "player_id": "00-0040129",
+                "probability": 0.73499,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jalen Coker",
+                "player_id": "00-0039491",
+                "probability": 0.682069,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenny Gainwell",
+                "player_id": "00-0036919",
+                "probability": 0.543252,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Darren Waller",
+                "player_id": "00-0031610",
+                "probability": 0.534274,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Cade Otton",
+                "player_id": "00-0038129",
+                "probability": 0.49676,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TB",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.49676
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bucky Irving",
+                "player_id": "00-0039361",
+                "probability": 0.966991,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chuba Hubbard",
+                "player_id": "00-0036555",
+                "probability": 0.95129,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bryce Young",
+                "player_id": "00-0039150",
+                "probability": 0.946781,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CAR",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Baker Mayfield",
+                "player_id": "00-0034855",
+                "probability": 0.805467,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TB",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Emeka Egbuka",
+                "player_id": "00-0040129",
+                "probability": 0.73499,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jalen Coker",
+                "player_id": "00-0039491",
+                "probability": 0.682069,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenny Gainwell",
+                "player_id": "00-0036919",
+                "probability": 0.543252,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Darren Waller",
+                "player_id": "00-0031610",
+                "probability": 0.534274,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Chris Godwin Jr.",
+                "player_id": "00-0033921",
+                "probability": 0.477922,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "TB",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.477922
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bucky Irving",
+                "player_id": "00-0039361",
+                "probability": 0.966991,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chuba Hubbard",
+                "player_id": "00-0036555",
+                "probability": 0.95129,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bryce Young",
+                "player_id": "00-0039150",
+                "probability": 0.946781,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CAR",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
                 "label": "20+ passing attempts",
                 "name": "Baker Mayfield",
                 "player_id": "00-0034855",
@@ -3259,235 +3483,11 @@
                 "stat": "receiving_yards",
                 "team": "TB",
                 "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Ted Hurst III",
-                "player_id": "00-0041048",
-                "probability": 0.41028,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.41028
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bucky Irving",
-                "player_id": "00-0039361",
-                "probability": 0.966991,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chuba Hubbard",
-                "player_id": "00-0036555",
-                "probability": 0.95129,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Bryce Young",
-                "player_id": "00-0039150",
-                "probability": 0.946781,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CAR",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Baker Mayfield",
-                "player_id": "00-0034855",
-                "probability": 0.805467,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TB",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Emeka Egbuka",
-                "player_id": "00-0040129",
-                "probability": 0.73499,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jalen Coker",
-                "player_id": "00-0039491",
-                "probability": 0.682069,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kenny Gainwell",
-                "player_id": "00-0036919",
-                "probability": 0.543252,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Cade Otton",
-                "player_id": "00-0038129",
-                "probability": 0.49676,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Godwin Jr.",
-                "player_id": "00-0033921",
-                "probability": 0.477922,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tez Johnson",
-                "player_id": "00-0040237",
-                "probability": 0.367696,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.367696
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bucky Irving",
-                "player_id": "00-0039361",
-                "probability": 0.966991,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chuba Hubbard",
-                "player_id": "00-0036555",
-                "probability": 0.95129,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Bryce Young",
-                "player_id": "00-0039150",
-                "probability": 0.946781,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CAR",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Baker Mayfield",
-                "player_id": "00-0034855",
-                "probability": 0.805467,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TB",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Emeka Egbuka",
-                "player_id": "00-0040129",
-                "probability": 0.73499,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jalen Coker",
-                "player_id": "00-0039491",
-                "probability": 0.682069,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kenny Gainwell",
-                "player_id": "00-0036919",
-                "probability": 0.543252,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Cade Otton",
-                "player_id": "00-0038129",
-                "probability": 0.49676,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Ted Hurst III",
-                "player_id": "00-0041048",
-                "probability": 0.41028,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Tez Johnson",
-                "player_id": "00-0040237",
-                "probability": 0.367696,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.367696
+            "upper": 0.477922
           }
         ],
         "2": [
@@ -3607,6 +3607,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
                 "label": "20+ passing attempts",
                 "name": "Baker Mayfield",
                 "player_id": "00-0034855",
@@ -3615,6 +3625,53 @@
                 "stat": "attempts",
                 "team": "TB",
                 "threshold": 20
+              }
+            ],
+            "lower": 0.558269,
+            "result": "pending",
+            "upper": 0.805467
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bucky Irving",
+                "player_id": "00-0039361",
+                "probability": 0.966991,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chuba Hubbard",
+                "player_id": "00-0036555",
+                "probability": 0.95129,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bryce Young",
+                "player_id": "00-0039150",
+                "probability": 0.946781,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CAR",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -3627,7 +3684,7 @@
                 "threshold": 25
               }
             ],
-            "lower": 0.405519,
+            "lower": 0.487792,
             "result": "pending",
             "upper": 0.73499
           },
@@ -3675,53 +3732,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Jalen Coker",
-                "player_id": "00-0039491",
-                "probability": 0.682069,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CAR",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.352598,
-            "result": "pending",
-            "upper": 0.682069
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bucky Irving",
-                "player_id": "00-0039361",
-                "probability": 0.966991,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chuba Hubbard",
-                "player_id": "00-0036555",
-                "probability": 0.95129,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Bryce Young",
-                "player_id": "00-0039150",
-                "probability": 0.946781,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CAR",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Emeka Egbuka",
                 "player_id": "00-0040129",
                 "probability": 0.73499,
@@ -3729,21 +3739,11 @@
                 "stat": "receiving_yards",
                 "team": "TB",
                 "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jalen Coker",
-                "player_id": "00-0039491",
-                "probability": 0.682069,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CAR",
-                "threshold": 25
               }
             ],
-            "lower": 0.282121,
+            "lower": 0.405519,
             "result": "pending",
-            "upper": 0.682069
+            "upper": 0.73499
           }
         ],
         "6": [
@@ -3780,6 +3780,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
                 "label": "20+ passing attempts",
                 "name": "Baker Mayfield",
                 "player_id": "00-0034855",
@@ -3798,6 +3808,63 @@
                 "stat": "receiving_yards",
                 "team": "TB",
                 "threshold": 25
+              }
+            ],
+            "lower": 0.293259,
+            "result": "pending",
+            "upper": 0.73499
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bucky Irving",
+                "player_id": "00-0039361",
+                "probability": 0.966991,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chuba Hubbard",
+                "player_id": "00-0036555",
+                "probability": 0.95129,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bryce Young",
+                "player_id": "00-0039150",
+                "probability": 0.946781,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CAR",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Baker Mayfield",
+                "player_id": "00-0034855",
+                "probability": 0.805467,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TB",
+                "threshold": 20
               },
               {
                 "label": "25+ receiving yards",
@@ -3810,7 +3877,7 @@
                 "threshold": 25
               }
             ],
-            "lower": 0.087588,
+            "lower": 0.240338,
             "result": "pending",
             "upper": 0.682069
           },
@@ -3847,14 +3914,14 @@
                 "threshold": 20
               },
               {
-                "label": "20+ passing attempts",
-                "name": "Baker Mayfield",
-                "player_id": "00-0034855",
-                "probability": 0.805467,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TB",
-                "threshold": 20
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -3867,63 +3934,6 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Kenny Gainwell",
-                "player_id": "00-0036919",
-                "probability": 0.543252,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.543252
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bucky Irving",
-                "player_id": "00-0039361",
-                "probability": 0.966991,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chuba Hubbard",
-                "player_id": "00-0036555",
-                "probability": 0.95129,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Bryce Young",
-                "player_id": "00-0039150",
-                "probability": 0.946781,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CAR",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Baker Mayfield",
-                "player_id": "00-0034855",
-                "probability": 0.805467,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TB",
-                "threshold": 20
-              },
-              {
                 "label": "25+ receiving yards",
                 "name": "Jalen Coker",
                 "player_id": "00-0039491",
@@ -3932,21 +3942,11 @@
                 "stat": "receiving_yards",
                 "team": "CAR",
                 "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kenny Gainwell",
-                "player_id": "00-0036919",
-                "probability": 0.543252,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
               }
             ],
-            "lower": 0,
+            "lower": 0.169861,
             "result": "pending",
-            "upper": 0.543252
+            "upper": 0.682069
           }
         ],
         "7": [
@@ -3983,6 +3983,249 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Baker Mayfield",
+                "player_id": "00-0034855",
+                "probability": 0.805467,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TB",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Emeka Egbuka",
+                "player_id": "00-0040129",
+                "probability": 0.73499,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jalen Coker",
+                "player_id": "00-0039491",
+                "probability": 0.682069,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.682069
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bucky Irving",
+                "player_id": "00-0039361",
+                "probability": 0.966991,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chuba Hubbard",
+                "player_id": "00-0036555",
+                "probability": 0.95129,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bryce Young",
+                "player_id": "00-0039150",
+                "probability": 0.946781,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CAR",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Baker Mayfield",
+                "player_id": "00-0034855",
+                "probability": 0.805467,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TB",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Emeka Egbuka",
+                "player_id": "00-0040129",
+                "probability": 0.73499,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenny Gainwell",
+                "player_id": "00-0036919",
+                "probability": 0.543252,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.543252
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bucky Irving",
+                "player_id": "00-0039361",
+                "probability": 0.966991,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chuba Hubbard",
+                "player_id": "00-0036555",
+                "probability": 0.95129,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bryce Young",
+                "player_id": "00-0039150",
+                "probability": 0.946781,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CAR",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Baker Mayfield",
+                "player_id": "00-0034855",
+                "probability": 0.805467,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TB",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jalen Coker",
+                "player_id": "00-0039491",
+                "probability": 0.682069,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenny Gainwell",
+                "player_id": "00-0036919",
+                "probability": 0.543252,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.543252
+          }
+        ],
+        "8": [
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bucky Irving",
+                "player_id": "00-0039361",
+                "probability": 0.966991,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chuba Hubbard",
+                "player_id": "00-0036555",
+                "probability": 0.95129,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bryce Young",
+                "player_id": "00-0039150",
+                "probability": 0.946781,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CAR",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
                 "label": "20+ passing attempts",
                 "name": "Baker Mayfield",
                 "player_id": "00-0034855",
@@ -4060,6 +4303,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
                 "label": "20+ passing attempts",
                 "name": "Baker Mayfield",
                 "player_id": "00-0034855",
@@ -4091,18 +4344,18 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Cade Otton",
-                "player_id": "00-0038129",
-                "probability": 0.49676,
-                "role_verified": true,
+                "name": "Darren Waller",
+                "player_id": "00-0031610",
+                "probability": 0.534274,
+                "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "TB",
+                "team": "CAR",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.49676
+            "upper": 0.534274
           },
           {
             "legs": [
@@ -4137,6 +4390,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
                 "label": "20+ passing attempts",
                 "name": "Baker Mayfield",
                 "player_id": "00-0034855",
@@ -4168,281 +4431,18 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Cade Otton",
-                "player_id": "00-0038129",
-                "probability": 0.49676,
-                "role_verified": true,
+                "name": "Darren Waller",
+                "player_id": "00-0031610",
+                "probability": 0.534274,
+                "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "TB",
+                "team": "CAR",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.49676
-          }
-        ],
-        "8": [
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bucky Irving",
-                "player_id": "00-0039361",
-                "probability": 0.966991,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chuba Hubbard",
-                "player_id": "00-0036555",
-                "probability": 0.95129,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Bryce Young",
-                "player_id": "00-0039150",
-                "probability": 0.946781,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CAR",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Baker Mayfield",
-                "player_id": "00-0034855",
-                "probability": 0.805467,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TB",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Emeka Egbuka",
-                "player_id": "00-0040129",
-                "probability": 0.73499,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jalen Coker",
-                "player_id": "00-0039491",
-                "probability": 0.682069,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kenny Gainwell",
-                "player_id": "00-0036919",
-                "probability": 0.543252,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Cade Otton",
-                "player_id": "00-0038129",
-                "probability": 0.49676,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.49676
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bucky Irving",
-                "player_id": "00-0039361",
-                "probability": 0.966991,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chuba Hubbard",
-                "player_id": "00-0036555",
-                "probability": 0.95129,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Bryce Young",
-                "player_id": "00-0039150",
-                "probability": 0.946781,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CAR",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Baker Mayfield",
-                "player_id": "00-0034855",
-                "probability": 0.805467,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TB",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Emeka Egbuka",
-                "player_id": "00-0040129",
-                "probability": 0.73499,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jalen Coker",
-                "player_id": "00-0039491",
-                "probability": 0.682069,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kenny Gainwell",
-                "player_id": "00-0036919",
-                "probability": 0.543252,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Godwin Jr.",
-                "player_id": "00-0033921",
-                "probability": 0.477922,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.477922
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bucky Irving",
-                "player_id": "00-0039361",
-                "probability": 0.966991,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chuba Hubbard",
-                "player_id": "00-0036555",
-                "probability": 0.95129,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Bryce Young",
-                "player_id": "00-0039150",
-                "probability": 0.946781,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CAR",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Baker Mayfield",
-                "player_id": "00-0034855",
-                "probability": 0.805467,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TB",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Emeka Egbuka",
-                "player_id": "00-0040129",
-                "probability": 0.73499,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jalen Coker",
-                "player_id": "00-0039491",
-                "probability": 0.682069,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Cade Otton",
-                "player_id": "00-0038129",
-                "probability": 0.49676,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Godwin Jr.",
-                "player_id": "00-0033921",
-                "probability": 0.477922,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.477922
+            "upper": 0.534274
           }
         ],
         "9": [
@@ -4479,6 +4479,113 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Baker Mayfield",
+                "player_id": "00-0034855",
+                "probability": 0.805467,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TB",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Emeka Egbuka",
+                "player_id": "00-0040129",
+                "probability": 0.73499,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jalen Coker",
+                "player_id": "00-0039491",
+                "probability": 0.682069,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Kenny Gainwell",
+                "player_id": "00-0036919",
+                "probability": 0.543252,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Darren Waller",
+                "player_id": "00-0031610",
+                "probability": 0.534274,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.534274
+          },
+          {
+            "legs": [
+              {
+                "label": "25+ rushing yards",
+                "name": "Bucky Irving",
+                "player_id": "00-0039361",
+                "probability": 0.966991,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TB",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chuba Hubbard",
+                "player_id": "00-0036555",
+                "probability": 0.95129,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
+                "label": "20+ passing attempts",
+                "name": "Bryce Young",
+                "player_id": "00-0039150",
+                "probability": 0.946781,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "CAR",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
                 "label": "20+ passing attempts",
                 "name": "Baker Mayfield",
                 "player_id": "00-0034855",
@@ -4527,21 +4634,11 @@
                 "stat": "receiving_yards",
                 "team": "TB",
                 "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Godwin Jr.",
-                "player_id": "00-0033921",
-                "probability": 0.477922,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.477922
+            "upper": 0.49676
           },
           {
             "legs": [
@@ -4576,6 +4673,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Tetairoa McMillan",
+                "player_id": "00-0040124",
+                "probability": 0.88774,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "CAR",
+                "threshold": 25
+              },
+              {
                 "label": "20+ passing attempts",
                 "name": "Baker Mayfield",
                 "player_id": "00-0034855",
@@ -4606,13 +4713,13 @@
                 "threshold": 25
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Kenny Gainwell",
-                "player_id": "00-0036919",
-                "probability": 0.543252,
+                "label": "25+ receiving yards",
+                "name": "Darren Waller",
+                "player_id": "00-0031610",
+                "probability": 0.534274,
                 "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "TB",
+                "stat": "receiving_yards",
+                "team": "CAR",
                 "threshold": 25
               },
               {
@@ -4624,123 +4731,16 @@
                 "stat": "receiving_yards",
                 "team": "TB",
                 "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Ted Hurst III",
-                "player_id": "00-0041048",
-                "probability": 0.41028,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.41028
-          },
-          {
-            "legs": [
-              {
-                "label": "25+ rushing yards",
-                "name": "Bucky Irving",
-                "player_id": "00-0039361",
-                "probability": 0.966991,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chuba Hubbard",
-                "player_id": "00-0036555",
-                "probability": 0.95129,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Bryce Young",
-                "player_id": "00-0039150",
-                "probability": 0.946781,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "CAR",
-                "threshold": 20
-              },
-              {
-                "label": "20+ passing attempts",
-                "name": "Baker Mayfield",
-                "player_id": "00-0034855",
-                "probability": 0.805467,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TB",
-                "threshold": 20
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Emeka Egbuka",
-                "player_id": "00-0040129",
-                "probability": 0.73499,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jalen Coker",
-                "player_id": "00-0039491",
-                "probability": 0.682069,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "CAR",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Kenny Gainwell",
-                "player_id": "00-0036919",
-                "probability": 0.543252,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chris Godwin Jr.",
-                "player_id": "00-0033921",
-                "probability": 0.477922,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Ted Hurst III",
-                "player_id": "00-0041048",
-                "probability": 0.41028,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TB",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.41028
+            "upper": 0.49676
           }
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_CHI_DET": {
@@ -7902,7 +7902,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_GB_LA": {
@@ -12645,7 +12645,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_NE_LAC": {
@@ -14226,7 +14226,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_NO_CIN": {
@@ -15807,7 +15807,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_NYG_IND": {
@@ -17388,7 +17388,7 @@
         ]
       },
       "reason": "The leading two-leg option needs more graded games to validate the signal.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_NYJ_MIA": {
@@ -18969,7 +18969,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_PHI_DAL": {
@@ -22131,7 +22131,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_TEN_JAX": {
@@ -22151,6 +22151,16 @@
                 "stat": "attempts",
                 "team": "TEN",
                 "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
               },
               {
                 "label": "25+ rushing yards",
@@ -22230,6 +22240,103 @@
                 "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "TEN",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.482699
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Cam Ward",
+                "player_id": "00-0040676",
+                "probability": 0.93526,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tony Pollard",
+                "player_id": "00-0035261",
+                "probability": 0.921956,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.9217,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "JAX",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.921522,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Carnell Tate",
+                "player_id": "00-0041438",
+                "probability": 0.790374,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.776717,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Brenton Strange",
+                "player_id": "00-0038935",
+                "probability": 0.593007,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chris Rodriguez Jr.",
+                "player_id": "00-0038611",
+                "probability": 0.488877,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "JAX",
                 "threshold": 25
               },
               {
@@ -22260,6 +22367,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -22316,16 +22433,6 @@
                 "probability": 0.593007,
                 "role_verified": true,
                 "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chris Rodriguez Jr.",
-                "player_id": "00-0038611",
-                "probability": 0.488877,
-                "role_verified": false,
-                "stat": "rushing_yards",
                 "team": "JAX",
                 "threshold": 25
               },
@@ -22341,19 +22448,21 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Brian Thomas Jr.",
-                "player_id": "00-0039893",
-                "probability": 0.432139,
+                "name": "Chimere Dike",
+                "player_id": "00-0040705",
+                "probability": 0.440927,
                 "role_verified": false,
                 "stat": "receiving_yards",
-                "team": "JAX",
+                "team": "TEN",
                 "threshold": 25
               }
             ],
             "lower": 0,
             "result": "pending",
-            "upper": 0.432139
-          },
+            "upper": 0.440927
+          }
+        ],
+        "2": [
           {
             "legs": [
               {
@@ -22367,102 +22476,20 @@
                 "threshold": 20
               },
               {
-                "label": "25+ rushing yards",
-                "name": "Tony Pollard",
-                "player_id": "00-0035261",
-                "probability": 0.921956,
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
                 "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.921522,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Carnell Tate",
-                "player_id": "00-0041438",
-                "probability": 0.790374,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.776717,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Brenton Strange",
-                "player_id": "00-0038935",
-                "probability": 0.593007,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chris Rodriguez Jr.",
-                "player_id": "00-0038611",
-                "probability": 0.488877,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chimere Dike",
-                "player_id": "00-0040705",
-                "probability": 0.440927,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Brian Thomas Jr.",
-                "player_id": "00-0039893",
-                "probability": 0.432139,
-                "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "JAX",
                 "threshold": 25
               }
             ],
-            "lower": 0,
+            "lower": 0.8685,
             "result": "pending",
-            "upper": 0.432139
-          }
-        ],
-        "2": [
+            "upper": 0.93324
+          },
           {
             "legs": [
               {
@@ -22493,32 +22520,15 @@
           {
             "legs": [
               {
-                "label": "20+ passing attempts",
-                "name": "Cam Ward",
-                "player_id": "00-0040676",
-                "probability": 0.93526,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TEN",
-                "threshold": 20
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
                 "team": "JAX",
-                "threshold": 1
-              }
-            ],
-            "lower": 0.85696,
-            "result": "pending",
-            "upper": 0.9217
-          },
-          {
-            "legs": [
+                "threshold": 25
+              },
               {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
@@ -22528,21 +22538,11 @@
                 "stat": "rushing_yards",
                 "team": "TEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
               }
             ],
-            "lower": 0.843656,
+            "lower": 0.855196,
             "result": "pending",
-            "upper": 0.9217
+            "upper": 0.921956
           }
         ],
         "5": [
@@ -22559,6 +22559,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -22587,6 +22597,53 @@
                 "stat": "rushing_yards",
                 "team": "JAX",
                 "threshold": 25
+              }
+            ],
+            "lower": 0.633678,
+            "result": "pending",
+            "upper": 0.921522
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Cam Ward",
+                "player_id": "00-0040676",
+                "probability": 0.93526,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tony Pollard",
+                "player_id": "00-0035261",
+                "probability": 0.921956,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.9217,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "JAX",
+                "threshold": 1
               },
               {
                 "label": "25+ receiving yards",
@@ -22599,7 +22656,7 @@
                 "threshold": 25
               }
             ],
-            "lower": 0.490812,
+            "lower": 0.50253,
             "result": "pending",
             "upper": 0.790374
           },
@@ -22616,6 +22673,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -22624,16 +22691,6 @@
                 "stat": "rushing_yards",
                 "team": "TEN",
                 "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
               },
               {
                 "label": "25+ rushing yards",
@@ -22647,53 +22704,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.776717,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.477155,
-            "result": "pending",
-            "upper": 0.776717
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Cam Ward",
-                "player_id": "00-0040676",
-                "probability": 0.93526,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tony Pollard",
-                "player_id": "00-0035261",
-                "probability": 0.921956,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Carnell Tate",
                 "player_id": "00-0041438",
                 "probability": 0.790374,
@@ -22701,21 +22711,11 @@
                 "stat": "receiving_yards",
                 "team": "TEN",
                 "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.776717,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
               }
             ],
-            "lower": 0.346007,
+            "lower": 0.502352,
             "result": "pending",
-            "upper": 0.776717
+            "upper": 0.790374
           }
         ],
         "6": [
@@ -22732,6 +22732,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -22770,6 +22780,63 @@
                 "stat": "receiving_yards",
                 "team": "TEN",
                 "threshold": 25
+              }
+            ],
+            "lower": 0.424052,
+            "result": "pending",
+            "upper": 0.790374
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Cam Ward",
+                "player_id": "00-0040676",
+                "probability": 0.93526,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tony Pollard",
+                "player_id": "00-0035261",
+                "probability": 0.921956,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.9217,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "JAX",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.921522,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -22782,7 +22849,7 @@
                 "threshold": 25
               }
             ],
-            "lower": 0.267529,
+            "lower": 0.410395,
             "result": "pending",
             "upper": 0.776717
           },
@@ -22799,6 +22866,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -22817,16 +22894,6 @@
                 "stat": "passing_tds",
                 "team": "JAX",
                 "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.921522,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
               },
               {
                 "label": "25+ receiving yards",
@@ -22840,63 +22907,6 @@
               },
               {
                 "label": "25+ receiving yards",
-                "name": "Brenton Strange",
-                "player_id": "00-0038935",
-                "probability": 0.593007,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              }
-            ],
-            "lower": 0.083819,
-            "result": "pending",
-            "upper": 0.593007
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Cam Ward",
-                "player_id": "00-0040676",
-                "probability": 0.93526,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tony Pollard",
-                "player_id": "00-0035261",
-                "probability": 0.921956,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.921522,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
                 "name": "Jakobi Meyers",
                 "player_id": "00-0034960",
                 "probability": 0.776717,
@@ -22904,21 +22914,11 @@
                 "stat": "receiving_yards",
                 "team": "JAX",
                 "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Brenton Strange",
-                "player_id": "00-0038935",
-                "probability": 0.593007,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
               }
             ],
-            "lower": 0.070162,
+            "lower": 0.279247,
             "result": "pending",
-            "upper": 0.593007
+            "upper": 0.776717
           }
         ],
         "7": [
@@ -22935,6 +22935,249 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tony Pollard",
+                "player_id": "00-0035261",
+                "probability": 0.921956,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.9217,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "JAX",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.921522,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Carnell Tate",
+                "player_id": "00-0041438",
+                "probability": 0.790374,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.776717,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.200769,
+            "result": "pending",
+            "upper": 0.776717
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Cam Ward",
+                "player_id": "00-0040676",
+                "probability": 0.93526,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tony Pollard",
+                "player_id": "00-0035261",
+                "probability": 0.921956,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.9217,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "JAX",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.921522,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Carnell Tate",
+                "player_id": "00-0041438",
+                "probability": 0.790374,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Brenton Strange",
+                "player_id": "00-0038935",
+                "probability": 0.593007,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.017059,
+            "result": "pending",
+            "upper": 0.593007
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Cam Ward",
+                "player_id": "00-0040676",
+                "probability": 0.93526,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tony Pollard",
+                "player_id": "00-0035261",
+                "probability": 0.921956,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.9217,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "JAX",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.921522,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.776717,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Brenton Strange",
+                "player_id": "00-0038935",
+                "probability": 0.593007,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              }
+            ],
+            "lower": 0.003402,
+            "result": "pending",
+            "upper": 0.593007
+          }
+        ],
+        "8": [
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Cam Ward",
+                "player_id": "00-0040676",
+                "probability": 0.93526,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -23012,6 +23255,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -23089,6 +23342,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -23152,269 +23415,6 @@
             "lower": 0,
             "result": "pending",
             "upper": 0.488877
-          }
-        ],
-        "8": [
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Cam Ward",
-                "player_id": "00-0040676",
-                "probability": 0.93526,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tony Pollard",
-                "player_id": "00-0035261",
-                "probability": 0.921956,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.921522,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Carnell Tate",
-                "player_id": "00-0041438",
-                "probability": 0.790374,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.776717,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Brenton Strange",
-                "player_id": "00-0038935",
-                "probability": 0.593007,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chris Rodriguez Jr.",
-                "player_id": "00-0038611",
-                "probability": 0.488877,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.488877
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Cam Ward",
-                "player_id": "00-0040676",
-                "probability": 0.93526,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tony Pollard",
-                "player_id": "00-0035261",
-                "probability": 0.921956,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.921522,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Carnell Tate",
-                "player_id": "00-0041438",
-                "probability": 0.790374,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.776717,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Brenton Strange",
-                "player_id": "00-0038935",
-                "probability": 0.593007,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Elic Ayomanor",
-                "player_id": "00-0040170",
-                "probability": 0.482699,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.482699
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Cam Ward",
-                "player_id": "00-0040676",
-                "probability": 0.93526,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tony Pollard",
-                "player_id": "00-0035261",
-                "probability": 0.921956,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.921522,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Carnell Tate",
-                "player_id": "00-0041438",
-                "probability": 0.790374,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.776717,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chris Rodriguez Jr.",
-                "player_id": "00-0038611",
-                "probability": 0.488877,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Elic Ayomanor",
-                "player_id": "00-0040170",
-                "probability": 0.482699,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.482699
           }
         ],
         "9": [
@@ -23431,6 +23431,16 @@
                 "threshold": 20
               },
               {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
                 "label": "25+ rushing yards",
                 "name": "Tony Pollard",
                 "player_id": "00-0035261",
@@ -23486,6 +23496,190 @@
                 "player_id": "00-0038935",
                 "probability": 0.593007,
                 "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Chris Rodriguez Jr.",
+                "player_id": "00-0038611",
+                "probability": 0.488877,
+                "role_verified": false,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.488877
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Cam Ward",
+                "player_id": "00-0040676",
+                "probability": 0.93526,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tony Pollard",
+                "player_id": "00-0035261",
+                "probability": 0.921956,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.9217,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "JAX",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.921522,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Carnell Tate",
+                "player_id": "00-0041438",
+                "probability": 0.790374,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.776717,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Brenton Strange",
+                "player_id": "00-0038935",
+                "probability": 0.593007,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Elic Ayomanor",
+                "player_id": "00-0040170",
+                "probability": 0.482699,
+                "role_verified": false,
+                "stat": "receiving_yards",
+                "team": "TEN",
+                "threshold": 25
+              }
+            ],
+            "lower": 0,
+            "result": "pending",
+            "upper": 0.482699
+          },
+          {
+            "legs": [
+              {
+                "label": "20+ passing attempts",
+                "name": "Cam Ward",
+                "player_id": "00-0040676",
+                "probability": 0.93526,
+                "role_verified": false,
+                "stat": "attempts",
+                "team": "TEN",
+                "threshold": 20
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Parker Washington",
+                "player_id": "00-0038606",
+                "probability": 0.93324,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Tony Pollard",
+                "player_id": "00-0035261",
+                "probability": 0.921956,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "1+ passing TD",
+                "name": "Trevor Lawrence",
+                "player_id": "00-0036971",
+                "probability": 0.9217,
+                "role_verified": false,
+                "stat": "passing_tds",
+                "team": "JAX",
+                "threshold": 1
+              },
+              {
+                "label": "25+ rushing yards",
+                "name": "Bhayshul Tuten",
+                "player_id": "00-0040719",
+                "probability": 0.921522,
+                "role_verified": true,
+                "stat": "rushing_yards",
+                "team": "JAX",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Carnell Tate",
+                "player_id": "00-0041438",
+                "probability": 0.790374,
+                "role_verified": true,
+                "stat": "receiving_yards",
+                "team": "TEN",
+                "threshold": 25
+              },
+              {
+                "label": "25+ receiving yards",
+                "name": "Jakobi Meyers",
+                "player_id": "00-0034960",
+                "probability": 0.776717,
+                "role_verified": false,
                 "stat": "receiving_yards",
                 "team": "JAX",
                 "threshold": 25
@@ -23514,205 +23708,11 @@
             "lower": 0,
             "result": "pending",
             "upper": 0.482699
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Cam Ward",
-                "player_id": "00-0040676",
-                "probability": 0.93526,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tony Pollard",
-                "player_id": "00-0035261",
-                "probability": 0.921956,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.921522,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Carnell Tate",
-                "player_id": "00-0041438",
-                "probability": 0.790374,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.776717,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Brenton Strange",
-                "player_id": "00-0038935",
-                "probability": 0.593007,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Chris Rodriguez Jr.",
-                "player_id": "00-0038611",
-                "probability": 0.488877,
-                "role_verified": false,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chimere Dike",
-                "player_id": "00-0040705",
-                "probability": 0.440927,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.440927
-          },
-          {
-            "legs": [
-              {
-                "label": "20+ passing attempts",
-                "name": "Cam Ward",
-                "player_id": "00-0040676",
-                "probability": 0.93526,
-                "role_verified": false,
-                "stat": "attempts",
-                "team": "TEN",
-                "threshold": 20
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Tony Pollard",
-                "player_id": "00-0035261",
-                "probability": 0.921956,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "1+ passing TD",
-                "name": "Trevor Lawrence",
-                "player_id": "00-0036971",
-                "probability": 0.9217,
-                "role_verified": false,
-                "stat": "passing_tds",
-                "team": "JAX",
-                "threshold": 1
-              },
-              {
-                "label": "25+ rushing yards",
-                "name": "Bhayshul Tuten",
-                "player_id": "00-0040719",
-                "probability": 0.921522,
-                "role_verified": true,
-                "stat": "rushing_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Carnell Tate",
-                "player_id": "00-0041438",
-                "probability": 0.790374,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Jakobi Meyers",
-                "player_id": "00-0034960",
-                "probability": 0.776717,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Brenton Strange",
-                "player_id": "00-0038935",
-                "probability": 0.593007,
-                "role_verified": true,
-                "stat": "receiving_yards",
-                "team": "JAX",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Elic Ayomanor",
-                "player_id": "00-0040170",
-                "probability": 0.482699,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              },
-              {
-                "label": "25+ receiving yards",
-                "name": "Chimere Dike",
-                "player_id": "00-0040705",
-                "probability": 0.440927,
-                "role_verified": false,
-                "stat": "receiving_yards",
-                "team": "TEN",
-                "threshold": 25
-              }
-            ],
-            "lower": 0,
-            "result": "pending",
-            "upper": 0.440927
           }
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     },
     "2026_12_WAS_ARI": {
@@ -25293,7 +25293,7 @@
         ]
       },
       "reason": "The leading two-leg option has a lower bound below 55% or a role without first-unit evidence.",
-      "saved_at": "2026-11-27T05:19:04.721734+00:00",
+      "saved_at": "2026-11-27T15:32:06.174524+00:00",
       "signal": "limited"
     }
   },
